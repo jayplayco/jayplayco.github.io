@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html  lang="kr">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 4.2.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>[스팀엔진] 스파와 토큰 파워 구분해서 업보팅 하기 - 제플코 제이의 블록체인</title>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-1-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="[스팀엔진] 스파와 토큰 파워 구분해서 업보팅 하기" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-end">
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-12 has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-image">
+        <span  class="image is-7by1">
+            <img class="thumbnail" src="https://cdn.steemitimages.com/DQmREGAQEhEFxPg1FnsmUGAJCjp1ZSphExahBsCMdb3j47n/image.png" alt="[스팀엔진] 스파와 토큰 파워 구분해서 업보팅 하기">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-07-20T15:40:51.000Z">2019-07-21</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B0%9C%EB%B0%9C/">개발</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    7 minutes membaca (Sekitar 1109 kata)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                [스팀엔진] 스파와 토큰 파워 구분해서 업보팅 하기
+            
+        </h1>
+        <div class="content">
+            <center>![](https://cdn.steemitimages.com/DQmREGAQEhEFxPg1FnsmUGAJCjp1ZSphExahBsCMdb3j47n/image.png)</center>
+
+<p>안녕하세요, @jayplayco 입니다.</p>
+<p>작일 스캇봇 개발자분인 @holger80분께서 매우 반가운 소식을 내놓았습니다. 이것은 스파대비 스팀엔진 토큰을 업보팅 할때 차등해서 업보팅이 가능하도록 하는 세팅이 개발되었습니다.</p>
+<p>방법은 custom json으로 세팅해서 쓰는 형식인데, 어렵게 들려도 툴이 있어서 비교적 쉽게 세팅이 가능합니다.<br>필자의 경우도 비개발자인데 현재 SCT의 업보팅을 스파의 10배로 해놔서, 스파는 10%만 업보팅이 되고 SCT는 100% 업보팅이 되도록 설정을 해두었습니다.</p>
+<p>이렇게 하면 스파 마나가 부족하는 현상은 없을것으로 예상됩니다. 하기와 같이 step by step으로 따라할 수 있는 설명서 첨부합니다.</p>
+<ul>
+<li>원본글: <a href="https://steemit.com/scot/@holger80/scotbot-it-is-now-possible-to-set-vote-downvote-weight-multiplier-to-balance-the-all-the-different-vote-power">https://steemit.com/scot/@holger80/scotbot-it-is-now-possible-to-set-vote-downvote-weight-multiplier-to-balance-the-all-the-different-vote-power</a></li>
+</ul>
+<h2 id="1-사용방법"><a href="#1-사용방법" class="headerlink" title="1. 사용방법"></a>1. 사용방법</h2><p>예) 큐레이션 계정에서 AAA의 업보팅은 100%가 되고 스파 마나는 10%만 써도 되도록 설정을 하고자 할때.</p>
+<h3 id="a-이동-링크"><a href="#a-이동-링크" class="headerlink" title="a.  이동 링크"></a>a.  이동 링크</h3><ul>
+<li><a href="https://eonwarped.github.io/steem/sk/main.html">https://eonwarped.github.io/steem/sk/main.html</a></li>
+<li>홈페이지를 보면 Custom_JSON 이라고 되어 있는 부분이 있습니다.<center>![](https://cdn.steemitimages.com/DQmSbQPqaSq6LpCQSCneFx7HKHjZLMXNPsHtPzZrqfa33SB/image.png)
+</center>
+
+</li>
+</ul>
+<h3 id="b-세팅"><a href="#b-세팅" class="headerlink" title="b. 세팅"></a>b. 세팅</h3><p>해당 Custom_JSON칸에는 총 5가지를 세팅할 수 있습니다. 다운보팅에 대한 설정값도 가능합니다. 여기서 필자는 업보팅, 다운보팅 둘다 같은 값으로 설정할 예정입니다.</p>
+<ul>
+<li>message: 그냥 비워둡니다.</li>
+<li>username: 설정을 변경하고자 하는 계정명</li>
+<li>Posting/Active: 이것은 그냥 posting으로 둡니다.</li>
+<li>id: <code>scot_set_vote</code>으로 꼭 해야합니다. (고정값)</li>
+<li>custom_json:  {“symbol”: “AAA”, “vote_weight_multiplier”: 10, “downvote_weight_multiplier”: 10}</li>
+</ul>
+<center>![](https://cdn.steemitimages.com/DQmeUe3nsQruxcubhNM7JCkTFeLAqc2EDeaPU3uP9o2ttAx/image.png)</center>
+
+<ul>
+<li>SEND 버튼을 누르면 키체인이 뜨면서 포스팅키를 요구하며 전송을 합니다.</li>
+<li>이제 jayplay.aaa 라는 계정으로 AAA를 업보팅할때는 업보팅시 10%만 해도 AAA는 100% 업보팅이 됩니다.</li>
+</ul>
+<h3 id="c-Custom-JSON-값-상세-설명"><a href="#c-Custom-JSON-값-상세-설명" class="headerlink" title="c. Custom_JSON 값 상세 설명"></a>c. Custom_JSON 값 상세 설명</h3><ul>
+<li>custom_json:  {“symbol”: “AAA”, “vote_weight_multiplier”: 10, “downvote_weight_multiplier”: 10}</li>
+</ul>
+<p>값을 넣어줄때 { 표시를 포함해서 싹다 복붙해서 넣어서 줘야합니다. 한계정에 여러 스팀엔진 스캇토큰을 쓰고 있다면 저 값들을 변경하면서 여러번 반복해줘야합니다.</p>
+<ul>
+<li>symbol : 토큰 명을 넣어야 합니다. AAA, SCT, ZZAN 등</li>
+<li>vote_weight_multiplier : 2로 했을때는 2배, 5로 했을때는 5배, 10으로 했을때는 10배로 업보팅이 됩니다. 즉, 2로 했을때는 50%로 업보팅시 AAA가 100% 업보팅이 되는것이고, 5로 했을때는 20%로 업보팅시 AAA는 100% 업보팅이 됩니다. 이렇게 세팅하고 10%이상으로 업보팅시 100%가 넘으면 예상으로는 AAA는 그냥 100% 업보팅이 될것으로 예상됩니다.</li>
+<li>downvote_weight_multiplier : 업보팅과 마찬가지입니다만, 차이는 다운보팅에 대한 설정값.</li>
+</ul>
+<h2 id="2-실사용테스트"><a href="#2-실사용테스트" class="headerlink" title="2. 실사용테스트"></a>2. 실사용테스트</h2><h3 id="a-TripleA-테스트"><a href="#a-TripleA-테스트" class="headerlink" title="a. TripleA 테스트"></a>a. TripleA 테스트</h3><center>![](https://cdn.steemitimages.com/DQmNvogamMewaJEyZTaybSD1mx1ZqsmP2oRzd333XYAjcPW/image.png)
+</center>
+
+<ul>
+<li>TripleA 홈페이지로 이동해서 아직 업보팅하지 않은 @hodolbak님의 글을 클릭합니다.</li>
+</ul>
+<center>![](https://cdn.steemitimages.com/DQmQNGt4nqvGFSrLi2ZxmtXRyqZVzYkHBPSxDQmdniBQF6m/image.png)</center>
+
+<ul>
+<li>10%의 보팅 마나로 업보팅 합니다. 업보팅이 반영되기를 잠깐 기다립니다.<center>![](https://cdn.steemitimages.com/DQmRViDuqnY4EdHR2N9kacUrrbADCNU71UsxAdBBkhpkQbd/image.png)</center></li>
+<li>10%로 업보팅시 보팅 밸류가 예상이 58AAA였는데 실제 찍힌것은 473AAA입니다. 즉, 100% 업보팅이 반영된 것입니다.</li>
+</ul>
+<h3 id="b-SCT-테스트"><a href="#b-SCT-테스트" class="headerlink" title="b. SCT 테스트"></a>b. SCT 테스트</h3><p>SCT로도 테스트를 했습니다만, @morning님의 글에 10%로 업보팅후 SCT는 100%가 찍힌것을 확인할 수 있습니다.</p>
+<center>![](https://cdn.steemitimages.com/DQmT9X3GV1oJHBASNVNNqW5KFgxKLLVJtvKHiPgFBgDJAR8/image.png)</center>
+<center>![](https://cdn.steemitimages.com/DQmaxEHe9eKqRjJ5jMo5ktufWsXF8Xb5pRc375ikjd5gUWT/image.png)</center>
+
+<h2 id="3-개인적인-생각"><a href="#3-개인적인-생각" class="headerlink" title="3. 개인적인 생각"></a>3. 개인적인 생각</h2><p>필자의 경우는 TripleA용 전용 부계정을 쓰고 있고, 큐레이션용 부계정에 많은 토큰을 넣어서 큐레이션을 하고 있습니다. 메인 계정에도 일부 토큰이 쌓여있는데, 이 설정을 활용하면 적당하게 차별을 두고 각 스팀엔진 토큰들이 업보팅 가능할것으로 보입니다.</p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/%EA%B0%9C%EB%B0%9C/" rel="tag">개발</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/07/22/jayplayco.coinnews-2-2-7/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">[Coinnews] 암호화폐 범죄 피해액 지난 2년간 2조7천억원</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/07/20/jayplayco.sct1004/">
+                <span class="level-item">[sct1004] 뉴비정착과 비홍보 계정 지원 임대 안내</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="[스팀엔진] 스파와 토큰 파워 구분해서 업보팅 하기" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 jayplayco&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("kr");</script>
+
+
+<script>
+var IcarusThemeSettings = {
+    site: {
+        url: 'http://jayplayco.github.io',
+        external_link: {"enable":true,"exclude":[]}
+    },
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'true'
+        }
+    }
+};
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+
+<script src="/js/main.js" defer></script>
+
+    
+</body>
+</html>

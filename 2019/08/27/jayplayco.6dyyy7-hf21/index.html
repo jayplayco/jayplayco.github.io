@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html  lang="kr">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 4.2.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>[HF21] 스팀 블록체인 아직은 이슈가 있음 - 제플코 제이의 블록체인</title>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-1-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="[HF21] 스팀 블록체인 아직은 이슈가 있음" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-end">
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-12 has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-image">
+        <span  class="image is-7by1">
+            <img class="thumbnail" src="https://ipfs.busy.org/ipfs/Qmc2WFHn5Vs4Tbfhqj6azPkfXP22SBf2HpgS9CTUMZviSg" alt="[HF21] 스팀 블록체인 아직은 이슈가 있음">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-27T11:52:48.000Z">2019-08-27</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/steem/">steem</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6 minutes membaca (Sekitar 911 kata)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                [HF21] 스팀 블록체인 아직은 이슈가 있음
+            
+        </h1>
+        <div class="content">
+            <center>![image.png](https://ipfs.busy.org/ipfs/Qmc2WFHn5Vs4Tbfhqj6azPkfXP22SBf2HpgS9CTUMZviSg)</center>
+
+<p>안녕하세요, @jayplayco입니다.</p>
+<p>개인적으로는 두번째 하드포크인데, 스팀잇의 글 올리기도 이미지가 안올라가고, 현재 이 글은 busy를 통해서 작성하고 있습니다.</p>
+<p>하드포크라는 것이 언제나 테스트를 한다고 해도 실제 블록체인에 적용할때에는 문제가 발생할 수 있는 것인 만큼 스팀의 트위터 계정을 보면서 업데이트 상황을 지켜보는 것이 좋을 것 같습니다.</p>
+<h2 id="1-현재-확인되고-있는-것들은"><a href="#1-현재-확인되고-있는-것들은" class="headerlink" title="1. 현재 확인되고 있는 것들은"></a>1. 현재 확인되고 있는 것들은</h2><ul>
+<li>이전 아예 블록 생성을 안함 (현재는 약 1시간전 임시로 고쳐짐)</li>
+<li>스팀잇에서 글 작성시 사진 업로드 안됨</li>
+<li>스팀픽은 아예 404에러나옴</li>
+</ul>
+<h2 id="2-일어났던-현상에-대한-설명"><a href="#2-일어났던-현상에-대한-설명" class="headerlink" title="2. 일어났던 현상에 대한 설명"></a>2. 일어났던 현상에 대한 설명</h2><ul>
+<li>기술적으로는 코드상 다운보팅풀에 대한 베스팅값이 에러가 나서 블록 생성이 안됨.</li>
+<li>이를 위해 임시적으로 uint64_t를 uint128_t로 상향조정해서 수정</li>
+<li>상세한 설명 링크 : <a href="https://busy.org/@netuoso/welcome-back-post-hf21">https://busy.org/@netuoso/welcome-back-post-hf21</a></li>
+</ul>
+<h2 id="3-현재-상황"><a href="#3-현재-상황" class="headerlink" title="3. 현재 상황"></a>3. 현재 상황</h2><ul>
+<li>블록 생성은 되고 있음</li>
+<li>임시로 코드 수정한 것이라서 아마 추가 수정 코드가 적용되어서 증인 서버에 소스 전달될 것으로 예상</li>
+<li>스팀 기반 댑이나 컨덴서들의 경우는 아직 사용에 어려움이 있을 수 있음 </li>
+<li>현재는 스팀잇보다는 busy를 쓰시는걸 추천드림.</li>
+</ul>
+<h2 id="4-오전-7-40분-업데이트"><a href="#4-오전-7-40분-업데이트" class="headerlink" title="4. 오전 7:40분 업데이트"></a>4. 오전 7:40분 업데이트</h2><ul>
+<li>대부분의 작동은 되는것으로 확인</li>
+<li>각종 nitrous기반 보팅봇들은 URL이 틀리다고 하면서 보팅금액 다시 반환</li>
+<li>스팀픽도 정상 작동</li>
+<li>스팀잇 Sg)</center></li>
+</ul>
+<p>안녕하세요, @jayplayco입니다.</p>
+<p>개인적으로는 두번째 하드포크인데, 스팀잇의 글 올리기도 이미지가 안올라가고, 현재 이 글은 busy를 통해서 작성하고 있습니다.</p>
+<p>하드포크라는 것이 언제나 테스트를 한다고 해도 실제 블록체인에 적용할때에는 문제가 발생할 수 있는 것인 만큼 스팀의 트위터 계정을 보면서 업데이트 상황을 지켜보는 것이 좋을 것 같습니다.</p>
+<h2 id="1-현재-확인되고-있는-것들은-1"><a href="#1-현재-확인되고-있는-것들은-1" class="headerlink" title="1. 현재 확인되고 있는 것들은"></a>1. 현재 확인되고 있는 것들은</h2><ul>
+<li>이전 아예 블록 생성을 안함 (현재는 약 1시간전 임시로 고쳐짐)</li>
+<li>스팀잇에서 글 작성시 사진 업로드 안됨</li>
+<li>스팀픽은 아예 404에러나옴</li>
+</ul>
+<h2 id="2-일어났던-현상에-대한-설명-1"><a href="#2-일어났던-현상에-대한-설명-1" class="headerlink" title="2. 일어났던 현상에 대한 설명"></a>2. 일어났던 현상에 대한 설명</h2><ul>
+<li>기술적으로는 코드상 다운보팅풀에 대한 베스팅값이 에러가 나서 블록 생성이 안됨.</li>
+<li>이를 위해 임시적으로 uint64_t를 uint128_t로 상향조정해서 수정</li>
+<li>상세한 설명 링크 : <a href="https://busy.org/@netuoso/welcome-back-post-hf21">https://busy.org/@netuoso/welcome-back-post-hf21</a></li>
+</ul>
+<h2 id="3-현재-상황-1"><a href="#3-현재-상황-1" class="headerlink" title="3. 현재 상황"></a>3. 현재 상황</h2><ul>
+<li>블록 생성은 되고 있음</li>
+<li>임시로 코드 수정한 것이라서 아마 추가 수정 코드가 적용되어서 증인 서버에 소스 전달될 것으로 예상</li>
+<li>스팀 기반 댑이나 컨덴서들의 경우는 아직 사용에 어려움이 있을 수 있음 </li>
+<li>현재는 스팀잇보다는 busy를 쓰시는걸 추천드림.</li>
+</ul>
+<h2 id="4-오전-7-40분-업데이트-1"><a href="#4-오전-7-40분-업데이트-1" class="headerlink" title="4. 오전 7:40분 업데이트"></a>4. 오전 7:40분 업데이트</h2><ul>
+<li>대부분의 작동은 되는것으로 확인</li>
+<li>각종 nitrous기반 보팅봇들은 URL이 틀리다고 하면서 보팅금액 다시 반환</li>
+<li>스팀픽도 정상 작동</li>
+<li>스팀잇 정상 작동 (업보팅 포함)</li>
+</ul>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/steem/" rel="tag">steem</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/08/28/jayplayco.hf21-5-5/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">[HF21] 저자보상 지급은 지금부터 5:5로 됩니다.</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/08/27/jayplayco.hf21-sps/">
+                <span class="level-item">[HF21] SPS를 스팀픽으로 이용하기</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="[HF21] 스팀 블록체인 아직은 이슈가 있음" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 jayplayco&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("kr");</script>
+
+
+<script>
+var IcarusThemeSettings = {
+    site: {
+        url: 'http://jayplayco.github.io',
+        external_link: {"enable":true,"exclude":[]}
+    },
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'true'
+        }
+    }
+};
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+
+<script src="/js/main.js" defer></script>
+
+    
+</body>
+</html>

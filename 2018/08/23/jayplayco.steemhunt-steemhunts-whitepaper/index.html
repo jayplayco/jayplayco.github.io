@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html  lang="kr">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 4.2.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>[Steemhunt] Steemhunts whitepaper - 제플코 제이의 블록체인</title>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-1-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="[Steemhunt] Steemhunts whitepaper" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-end">
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-12 has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-image">
+        <span  class="image is-7by1">
+            <img class="thumbnail" src="https://steemitimages.com/DQmNfeZGkKQJBrXDkZptuzunaHT6hZKXvcGQFyeiWW4VweN/LP-7-logo.jpg" alt="[Steemhunt] Steemhunts whitepaper">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-08-23T13:00:51.000Z">2018-08-23</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/steem/">steem</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    14 minutes membaca (Sekitar 2029 kata)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                [Steemhunt] Steemhunts whitepaper
+            
+        </h1>
+        <div class="content">
+            <p><img src="https://steemitimages.com/DQmNfeZGkKQJBrXDkZptuzunaHT6hZKXvcGQFyeiWW4VweN/LP-7-logo.jpg" alt=""></p>
+<p>Hi, @jayplayco here.<br>Steemhunt has now started its private token sale, and we can see a different kind of spirit when reading the announcements from Steemhunt.<br>Announcement <a href="https://steemit.com/steemhunt/@steemhunt/introducing-hunt-platform-front-page-for-product-influencers-and-makers-by-token-economy">here</a>.</p>
+<p>To all readers who are new to <a href="https://steemhunt.com/">Steemhunt</a>, Steemhunt is a service built on the Steem platform to enable Hunters to hunt new and cool products and get rewarded on a daily base.  If you are new to Steemhunt, you should try first this post. <a href="https://steemit.com/steemdev/@steemhunt/introducing-steemhunt-daily-ranking-of-effortlessly-cool-products-fueled-by-steem-blockchain">LINK</a></p>
+<p>In that mentioned announcement above, there is a part talking about the whitepaper, and here I would go in detail what Steemhunt is actually doing and what Steemhunt is thinking about their whitepaper. </p>
+<h2> 0. Repository </h2>
+https://github.com/Steemhunt/web
+
+<h2> 1. What is a whitepaper?</h2>
+![](https://cdn.steemitimages.com/DQmXGhK635UMHZAvtrB4ZmrhwR8MsXBKNSp8o6kvH1wzKwg/image.png)
+[Source: Kelly Sikkema](https://unsplash.com/photos/VBPzRgd7gfc)
+
+<blockquote>
+<p>.. white papers are long-form content designed to promote the products or services from a specific company. As a marketing tool, these papers use selected facts and logical arguments to build a case favorable to the company sponsoring the document. B2B (business-to-business) white papers are often used to generate sales leads, establish thought leadership, make a business case, or inform and persuade prospective customers, channel partners, journalists, analysts, or investors.<br><a href="https://en.wikipedia.org/wiki/White_paper">Source: wikipedia</a></p>
+</blockquote>
+<p>So in the end, it is a piece of paper explaining what you are trying to do to people or organizations who might be interested in your project. In the case of cryptocurrencies, starting with Bitcoin, which also had a whitepaper explaining the concept of cryptocurrencies, this whitepaper has become a reliable marketing tool for recent ICO’s.</p>
+<p>Unfortunately, there is a big difference in quality between whitepapers from <a href="https://bitcoin.org/bitcoin.pdf">Bitcoin</a>, <a href="https://github.com/ethereum/wiki/blob/master/drafts/%5Benglish%5D-old-ethereum-whitepaper.md">Ethereum</a> to most of the whitepapers from current ICO`s. Bitcoin and Ethereum’s whitepapers are explaining in technical detail about their philosophy and have set a real difference in the execution of their cryptocurrency environment. But compared to that, a lot of today’s cryptocurrency whitepapers are just drawing a picture of something or are just using it really like a pure marketing tool to fool the mass. Partly there are even debacles with <a href="https://coincentral.com/community-accuses-tron-plagiarizing-whitepaper/">plagiarism for whitepapers</a>, and here we are talking about a cryptocurrency with over one million coin holders. </p>
+<h2> 2. Why does an ICO need a whitepaper?</h2>
+
+<p>ICOs need a whitepaper as a marketing tool, so they can explain their vision to potential investors (who may not know too much about it) and collect the money for their project. </p>
+<p>Let’s try to point it down with an imaginary project. Imagine I want to …. hmmm. Revolutionize the drinking water supply with cryptocurrency. Sounds interesting and would help the world with a fair water supply.<br><img src="https://cdn.steemitimages.com/DQmQYX2iijYKLUCKMbuHtmjHygFkYGXstBAJiuGtxdGPWcn/image.png" alt=""><br><a href="https://unsplash.com/photos/DWA7AFbJGgI">Source: Christian Chen</a></p>
+<ol start="0">
+<li>Water distribution is not fair in the world.</li>
+<li>Issue Tokens for every 1l consumed of water to everybody in the delivery chain. (Manufacturer - Distributor - Wholesaler - Retailer - Consumer)</li>
+<li>That Token can be used to pay each one in the chain.</li>
+<li>Make a Token distribution system giving different values to each one in the chain. (Like a bad manufacturer who is hunting down the water resources of a country gets only a little or no Tokens and also the Consumer who drinks that kind of water) </li>
+<li>Empower the weak ones or good suppliers of water. </li>
+</ol>
+<p>So, now I have my story, a product, and an economy.  (After writing this story I googled water and cryptocurrency together, and there are projects based on water and please be informed that I am not referring to that projects.)</p>
+<p>There are tons of problems in realizing this project, and it is questionable if the tokens could solve the problem for water distribution at all, but the following is sure.</p>
+<ol>
+<li>It is not that difficult to make my Tokens. As an example with Tron, I need only 1024 Tron tokens (a value of about 30USD at the moment) to create my own “Watersupply Token.” It is done with the click of a button and some parameters input. </li>
+<li>I need to put easy to understand pictures and graphs into my whitepaper and also get some renowned names into my team or as an advisor (preferred then paid in my Tokens) and the market to recover a bit.</li>
+<li>With enough marketing efforts, I can then start my ICO.</li>
+</ol>
+<p><img src="https://cdn.steemitimages.com/DQmTm2N2WHL9YHWf9h8hV3HFjaKc9KU7MuefmHC5MUMqbsc/image.png" alt=""></p>
+<p>Sounds unrealistic? Of course, there are a lot of legit projects with grand visions, teams, and process. But unfortunately, there are over 1,800 cryptocurrencies listed at <a href="https://coinmarketcap.com/">Coinmarketcap</a> and still, more which did not make it into the list of Coinmarketcap. And a lot of these projects have nothing more than a piece of paper when collecting the money for their projects. And even more of them will probably fail to deliver what they have promised in their whitepaper. But when we have a bull market (may not in the current bearish situation) the mass jumps on everything that the keyword “crypto” on it. We had seen that with the IT wave for “www” and also last year when the market was bullish. </p>
+<h2> 3. So where can I find the whitepaper from Steemhunt?</h2>
+![](https://cdn.steemitimages.com/DQmRWDswL1PnzedwqdSibzTjhQ7SyqGLynjN4tSp3SKD9Xj/image.png)
+[Source: Sylvie Tittel](https://unsplash.com/photos/GpBkUtY-0dE)
+
+<p>To make it clear, there is no whitepaper from Steemhunt. And I don`t think that Steemhunt will decide shortly to make a whitepaper, or at all.</p>
+<p>Before getting into details why there is no whitepaper, I would also like to refer to a <a href="https://medium.com/loom-network/loom-network-wheres-your-whitepaper-5c5c9075af72">text from Loom Networks</a> where Dilanka McLovin explained why they have no whitepaper for Loom Networks. Long story short, there is no whitepaper because they decided to use their resources to ship code instead of writing long, meaningless marketing whitepapers. </p>
+<p>It is similar for Steemhunt and let’s dive into the details.</p>
+<ul>
+<li>Steemhunt has currently a small core team of two developers and a project manager who also acts as a designer. They have proven in the last three month that they can adapt their product fast to new circumstances and have continued to pivot the platform’s system to engage more users. </li>
+<li>This pivots includes the adaptation for Moderator roles, ABV, Diversity Score, ABV 2.0, Influencer Role and Hunter Levels. </li>
+<li>Additionally, a flourishing community with almost 30  members in a community role and over 200 Steem Power Sponsors backing the project. </li>
+<li>Steemhunt is building its service based on Steem and SMT, from the technical side it would be enough to refer to the <a href="https://steem.io/steem-whitepaper.pdf">Steem whitepaper</a> and <a href="https://smt.steem.io/smt-whitepaper.pdf">SMT whitepaper</a>. </li>
+<li>The vision itself is to create a Platform of three services called Steemhunt, Reviewhunt, and Ideahunt. (Also explained in detail <a href="https://steemit.com/steemhunt/@jayplayco/steemhunt-smt-and-steemhunts-relation">here</a>)</li>
+<li>To understand Steemhunt the best way you need to see the live product and interact as a Hunter. That is way better than an MVP (Minimum Viable Product), a prototype or a piece of paper. </li>
+</ul>
+<p>After meeting @tabris (Main Dev) in person a few times and talking with @project7 (Design), it is for sure that this team is laser-focusing their resources in developing the platform and community and nothing else. As Dilanka McLovin mentioned in his post, “Loom Networks is building a product more like the city of Paris looking like a spaghetti monster from the top than a modern and organized city like Brasilia to make a product that people like and want to use.”<a href="https://medium.com/loom-network/loom-network-wheres-your-whitepaper-5c5c9075af72">Source: Dilanka McLovin</a>  My conclusion is that Steemhunt is very similar and most likely too busy to ship out the code and take care of the community so that the user can enjoy the platform than to sit down and write a whitepaper.</p>
+<p>Although, as mentioned in the beginning, Steemhunt released a few days ago a subpage on Steemhunt as one-pager giving a fast and quick overlook into the numbers and vision of Steemhunt.</p>
+<p><img src="https://cdn.steemitimages.com/DQmc7CY2gQsG5sKTpES9Y9zLirtEXPRjCght2E7YD3EtLvQ/image.png" alt=""><br><a href="https://token.steemhunt.com/">Source: Steemhunt</a></p>
+<p>You can find the page under <a href="https://token.steemhunt.com/">https://token.steemhunt.com/</a> to understand what @tabris and @project7 are planning to ship out.</p>
+<h2>2. Conclusion</h2>
+We will still have a lot of fun with the HF-20 release soon and will get an own sign-up interface based on that. That will give Steemhunt the opportunity to attract users outside of Steem. This will have a huge impact not only for Steemhunt but also for Steem (as other projects will also start with HF-20 to have their own signup system) itself and in my humble opinion it is much better to have a live product running with a healthy community to get users and investors on board than a long piece of paper.
+
+<p><strong><a href="https://steemhunt.com/">“Keep the hunt on”</a></strong></p>
+<hr>
+<p>Thanks for reading!</p>
+<p>Other articles about Steemhunt.</p>
+<ul>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steem-start-here#@utopian-io/re-steem-start-here-20180712t080009z">Steemhunt- Start here</a></li>
+<li><a href="https://steemit.com/steemit/@jayplayco/what-is-steemhunt-and-why-should-i-care">What is Steemhunt and why should I care?</a></li>
+<li><a href="https://steemit.com/steemit/@jayplayco/biggest-airdrop-ever-hunt-token-and-how-to-participate">Biggest Airdrop ever - HUNT token and how to participate</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-abv-account-based-voting-in-development">[Steemhunt] ABV (Account based voting) in development</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-update-for-upvoting-review-comments-and-other-developments">Update for Upvoting Review Comments &amp; Other Developments</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-most-asked-questions-from-steemhunt-newbies">Most asked questions from Steemhunt Newbies.</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-how-to-get-your-hunt-verified-on-steemhunt">How to get your hunt verified on Steemhunt</a></li>
+<li>[Evolution of Steemhunt`s voting system](<a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-evolution-of-steemhunt-s-voting-system">https://steemit.com/utopian-io/@jayplayco/steemhunt-evolution-of-steemhunt-s-voting-system</a>)</li>
+<li><a href="https://steemit.com/steemhunt/@fknmayhem/understanding-steemhunt-and-how-to-craft-a-good-hunt">Understanding Steemhunt and How to Craft a Good Hunt -@fknmayhem</a></li>
+<li><a href="https://steemit.com/steemhunt/@fknmayhem/picking-apart-the-steemhunt-posting-guidelines-how-we-review-hunts">Picking Apart The Steemhunt Posting Guidelines - How We Review Hunts @fknmayhem</a></li>
+<li><a href="https://steemit.com/steemhunt/@fknmayhem/steemhunt-is-not-a-writing-curation-project">Steemhunt is NOT a Writing Curation Project- @fknmayhem</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-the-difficult-way-to-make-your-own-path-with-abv">The difficult way to make your own path with ABV</a></li>
+<li><a href="https://steemit.com/steemhunt/@fknmayhem/being-a-trailblazing-smt-on-steem-pre-smts-not-for-the-faint-hearted">Being a Trailblazing SMT on Steem Pre-SMTs - @fknmayhem</a></li>
+<li><a href="https://steemit.com/steemhunt/@fknmayhem/crowdfunded-products-are-validated-cool-products-for-steemhunt">Crowdfunded Products are Validated “Cool” Products For Steemhunt - @fknmayhem</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-open-source-and-community">[Steemhunt] Open Source and Community</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-abv-2-0">Steemhunt- ABV 2.0</a></li>
+<li><a href="https://steemit.com/steemhunt/@jayplayco/steemhunt-understanding-the-new-posting-guideline">Understanding the new posting guideline</a></li>
+<li><a href="https://steemit.com/steemhunt/@jayplayco/steemhunt-understanding-the-hunter-levels">Understanding the Hunter Levels</a></li>
+<li><a href="https://steemit.com/steemhunt/@jayplayco/steemhunt-smt-and-steemhunts-relation">SMT and Steemhunts relation</a></li>
+</ul>
+<p>Join our chat channels if you need more information as the community,  team, and the moderators are answering very fast on any question:</p>
+<p>Discord: <a href="https://discord.gg/mWXpgks">https://discord.gg/mWXpgks</a> (this is where the magic happens)<br>Telegram: <a href="https://t.me/joinchat/AzcqGxCV1FZ8lJHVgHOgGQ">https://t.me/joinchat/AzcqGxCV1FZ8lJHVgHOgGQ</a></p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/steem/" rel="tag">steem</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2018/08/25/jayplayco.severed-a-clash-based-light-rpg-adventure/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">Severed - A clash based light RPG adventure</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2018/08/17/jayplayco.steemhunt-smt-and-steemhunts-relation/">
+                <span class="level-item">[Steemhunt] SMT and Steemhunts relation</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="[Steemhunt] Steemhunts whitepaper" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 jayplayco&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("kr");</script>
+
+
+<script>
+var IcarusThemeSettings = {
+    site: {
+        url: 'http://jayplayco.github.io',
+        external_link: {"enable":true,"exclude":[]}
+    },
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'true'
+        }
+    }
+};
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+
+<script src="/js/main.js" defer></script>
+
+    
+</body>
+</html>

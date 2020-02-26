@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html  lang="kr">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 4.2.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>[스팀엔진] 스팀엔진과 SMT의 관계 - 제플코 제이의 블록체인</title>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-1-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="[스팀엔진] 스팀엔진과 SMT의 관계" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-end">
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-12 has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-image">
+        <span  class="image is-7by1">
+            <img class="thumbnail" src="https://files.steempeak.com/file/steempeak/jayplayco/Xz2sHwkI-image.png" alt="[스팀엔진] 스팀엔진과 SMT의 관계">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-30T17:54:03.000Z">2019-07-01</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B0%9C%EB%B0%9C/">개발</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    23 minutes membaca (Sekitar 3474 kata)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                [스팀엔진] 스팀엔진과 SMT의 관계
+            
+        </h1>
+        <div class="content">
+            <center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/Xz2sHwkI-image.png)</center>
+
+<p>안녕하세요, @jayplayco 입니다.</p>
+<p>제가 일반적으로 하루의 첫 행동은 해외 일반및 경제 뉴스를 훑고, 국내 뉴스를 스치듯 보고, 암호화폐 관련 해외 뉴스를 정독하고, 스팀에서 어떤 소식들이 보이는지를 확인하는것으로 시작합니다. 그러면서 제가 특히 따로 챙겨서 보는 것들은 스팀잇의 공식 뉴스나 피쳐뉴스와 스팀엔진과 스플린터랜드 사장인 @aggroed의 계정에서 나오는 정보입니다.</p>
+<p>그 이유는 일반적으로 스팀엔진 관련된 최신 정보나 방향들이 이 계정에서 나오고, 실질적으로 스팀엔진 기반 서비스들이 하나둘씩 공개될때에도 preview나 @aggroed의 생각들을 많이 엿볼 수 있기 때문에 그렇습니다.</p>
+<ul>
+<li>기사 원본: <a href="https://steemit.com/smt/@aggroed/hardfork-22-smts-let-s-burn-steem">https://steemit.com/smt/@aggroed/hardfork-22-smts-let-s-burn-steem</a></li>
+<li>번역 원본: <a href="https://www.steemcoinpan.com/sct/@sct.han/22-smt">https://www.steemcoinpan.com/sct/@sct.han/22-smt</a></li>
+</ul>
+<p>이번 포스팅에서는 현재 논의되고 있는 HF-21을 넘어 SMT가 적용될것으로 보일 HF-22에 대한 자신의 생각과 스팀엔진에서 얻은 경험을 바탕으로 제시사항들이 있었습니다. HF-22에 대한 제시사항도 잠시 소개를 하겠지만, 전반적으로는 스팀엔진과 SMT에 대한 @aggroed의 생각을 알고 가는 것이 스팀엔진상 스캇 서비스를 운영하는 운영자분들과 사용자분들, 그리고 스팀을 기반으로 활동하는 모든 분들이 어떤 방향으로 갈지가 잡힐 것으로 보입니다.</p>
+<h2 id="1-HF-22에-대한-aggroed의-제안"><a href="#1-HF-22에-대한-aggroed의-제안" class="headerlink" title="1. HF-22에 대한 @aggroed의 제안"></a>1. HF-22에 대한 @aggroed의 제안</h2><p>간단하게는 ETH나 EOS처럼 사용료를 만들어서 이를 소각하자는것입니다. 현재 스팀엔진의 경우는 토큰 생성및 기타 서비스(스테이킹, 임대등을 활성화할때마다 1000ENG씩 받고 있습니다.) 를 요청할 경우 이에 따른 ENG는 소각하면서 추가적으로 ENG에 대한 가치를 부여하고 지탱하고 있습니다. 이에 따라 어그로드의 제안은 EOS나 ETH처럼 매 거래시마다 수수료를 추가로 주는 방식이 아닌, SMT가 나오게 되면 이에 따른 서비스료로 Steem을 받고 이를 소각하자는 의견입니다. </p>
+<p>간단한 SMT는 조금만 받아서 소각하고, 갈수록 많은 기능이 필요한 SMT는 그만큼 Steem을 받아서 소각하면 생태계에 도움이 될것이라고 본다고 합니다. 이는 커뮤니티를 만드는 운영진들에게만 해당되는 관계로 일반 유저들에게는 해가 없는 방법으로 소각이 가능하다고 보는 것입니다.</p>
+<p>전반적으로 소각에 대한 필요성은 절실한것으로 보이긴 합니다. 현재 스팀에서는 홍보를 통해 @null 계정으로 보내는 기능을 제외하고는 실질적인 소각 기능이 없다고 봐도 무방한데, AAA의 업보팅봇을 이용한 소각방법이나, SCT의 홍보기능과 봇을 이용한 소각 방법들이 동원되면서 토큰의 가격형성 지탱과 성장에 도움이 되는 것을 보면 장치 마련이 필요한 것은 사실인것으로 판단됩니다.</p>
+<p>물론 저 사항들은 적용되거나 적용될 사항들이 아닌 단지 @aggroed가 개인적으로 제시하는 사항인 관계로, 추후 공식적인 offer 절차를 통해 스팀 재단의 적용및 증인들의 투표를 통한 적용까지는 멀고도 먼 길입니다.</p>
+<h2 id="2-스팀엔진과-SMT의-관계"><a href="#2-스팀엔진과-SMT의-관계" class="headerlink" title="2. 스팀엔진과 SMT의 관계"></a>2. 스팀엔진과 SMT의 관계</h2><blockquote>
+<ul>
+<li>Just to be clear I’m pretty agnostic. - @aggroed<a href="https://steemit.com/smt/@aggroed/hardfork-22-smts-let-s-burn-steem">소스</a><br>확실히 하자면 난 꽤 불가지론자다.</li>
+</ul>
+</blockquote>
+<p>불가지론이란 신의 존재를 부정하는 것이 아닌 진위 여부를 알 수 없다고 보는 철학적 관점이다. 불가지론자에게는 신이 있을 수도 없을 수도 있다. @aggroed이 여기서 agnostic을 언급한것은 신에 대한 것보다는 스팀잇 재단에 대한 것으로 볼 수 있다고 본다. 이는 결국 SMT에 대한 믿음은 있으나, 불확실성이 남아 있어 이에 대한 대비와 시스템적 준비를 한다는 것으로 필자는 해석합니다.</p>
+<p>우선 @aggroed측이 준비하고 하는 것은 다음과 같습니다.</p>
+<ul>
+<li>SMT를 쉬게 생성할 수 있는 인터페이스를 제공할 예정임.</li>
+<li>SMT를 만들었을때 스팀엔진상 상장을 도와줄 예정입니다. (즉, SMT도 스팀엔진상 거래가 가능하도록)</li>
+<li>Scot을 운영하면서 SMT를 만들면 상장은 무료이나 Scot 사용료 (ENG 스테이킹및 최초 세팅비)을 내야 합니다.</li>
+<li>Scot을 운영하지 않고 SMT만 만들어서 상장을 할 경우 스팀엔진 상장에 따른 비용을 청구할 예정입니다.</li>
+</ul>
+<p>SMT가 나오고 나서 총 3가지 시나리오가 가능해질 것으로 보입니다.</p>
+<ul>
+<li>SMT로 런칭된 프로젝트 (나 SMT로 전환된 프로젝트)</li>
+<li>Scot으로 현재 AAA,SCT, ZZAN과 같은 프로젝트로 Scotbot로 운영</li>
+<li>미래 스마트 컨트렉트로 fix된 Scotbot<br>(해당 부분 run off에 대한 해석 부분 @tradingideas님이 언급을 주셨으나, @aggroed와 확인결과, 연동의 뜻을 가짐을 확인했습니다.)</li>
+</ul>
+<h2 id="3-SMT과-스캇봇-서비스의-예상-장단점"><a href="#3-SMT과-스캇봇-서비스의-예상-장단점" class="headerlink" title="3. SMT과 스캇봇 서비스의 예상 장단점"></a>3. SMT과 스캇봇 서비스의 예상 장단점</h2><h3 id="a-SMT"><a href="#a-SMT" class="headerlink" title="a. SMT"></a>a. SMT</h3><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/xVoRhs6I-image.png)</center>
+SMT의 백서에 따르면 SMT는 아마도 현재 스캇봇이 제공하는 서비스의 일부를 가능하게 할 것으로 보입니다. 가장 큰 차이는 스팀 블록체인상에서 돌아가는 관계로, 현재 탑 증인들의 노드에서 자동적으로 처리가 되며, 실제로 스팀을 상장한 거래소에서는 약간의 추가 작업을 통해 기술적으로 상장이 가능하다는 점입니다. (물론 기술적으로 가능한것과 실제로 상장하는 것은 비용적인 면에서 큰 차이가 있습니다.)
+
+<p>SMT의 경우는 스팀엔진 코인을 만든 분들이라면 아시겠지만, 아마도 Frontend를 통해서 세팅값을 정하고, 한번 정한 세팅값은 다시는 수정이 불가합니다. (스마트 컨트렉트라서) 즉, 착오가 있거나, 아, 해보니까 이런 부분은 안좋더라.. 하는 것이 있어도, 하넌 세팅하면 진심으로 <strong>끝</strong> 입니다. 토큰을 포기하고 새로 만들지 않는 한은 변경 방법이 없습니다. 이것은 사실상 단점이라기 보다는 그냥 스마트 컨트렉트의 기본적인 기능이라는 것과 이를 인지해야한다는 것 정도입니다.</p>
+<p>장점으로는 스팀이 상장되어있는 거래소의 경우는 토큰 상장이 이론적으로는 가능하다는것입니다.</p>
+<p>단점으로는 현재 이미 Nitrous라던지 스캇튜브등 “템플릿”처럼 제공되는 스팀엔진상의 많은 SAAS서비스들은 사실상 따로 제공되어질 가능성은 희박합니다. 즉, 외부 자원의 도움으로 개발을 진행하던지, 직접적인 개발 리소스가 있어야지 가능합니다. 이는 예를 들어, 스팀헌트, 트립스팀, 테이스팀, 엔토파즈 같은 곳들입니다.</p>
+<h3 id="b-스팀엔진-스캇봇"><a href="#b-스팀엔진-스캇봇" class="headerlink" title="b. 스팀엔진 + 스캇봇"></a>b. 스팀엔진 + 스캇봇</h3><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/NucUxRJE-image.png)</center>
+현재 Triplea.reviews나 스코판, 금일 런칭한 스팀짱에서 쓰고 있는것과 같은 서비스와 동일합니다. 장점은 스팀엔진에서 자유로운 거래와 스팀 사용자들에게는 비교적 쉬운 접근성등이 있고, 운영자분들에게는 지금 당장 적용 가능한 서비스인 관계로, 커뮤니티와 함께 성장을 할 수 있는 기반이 된다는 것입니다.
+
+<p>장점이자 단점은 스마트 컨트렉트 기반이 아니라서, 사실상 코인 이코노미 관련 거의 모든 사항들이 수정이 가능합니다. 예를 들어, 스코판의 SCT의 경우는 초반 발행량을 대폭 줄인 것도 있었고, 추가 기능이 나오면서 전체 발권되는 %에 대한 조정도 있었습니다. 물론 스마트컨트렉트일 경우에도 이것이 불가능하지는 않습니다. 하드포크를 통해서 진행하면 되니까요. 하지만 하드포크의 경우는 결국 모든 메인 증인들이 찬성을 해야지만 진행 가능한것에 비해, 현재의 스팀엔진은 하루아침에 운영진이 결정할 경우 이론적으로는 변경이 가능합니다.</p>
+<p>여기서 현실적으로 알아야 할 것은 실제 블록체인상의 스마트컨트렉트가 아니라고 해서 운영진이 토큰 이코노미를 무리하게 변경할 경우 커뮤니티가 반발 할 수 도 있고, 실제로 토큰홀더들에게는 사실상 리스크로 다가올 수 있습니다. 즉, 스마트컨트렉트와 블록체인에 대한 신뢰가 아닌 운영진에 대한 신뢰로 토큰의 가격이 부분적으로 형성되고 있다는 것을 인지해야합니다.</p>
+<p>추가적인 장점은, 빠른 실행력과 비교적 “가벼운” 몸집인 관계로 스팀엔진 측에서 지속적으로 추가 기능을 런칭해서 각종 커뮤니티들이 입맛에 맛게 서비스들을 구축할 수 있는 환경을 줍니다.</p>
+<h2 id="c-스팀엔진-스캇봇-스마트-컨트렉트"><a href="#c-스팀엔진-스캇봇-스마트-컨트렉트" class="headerlink" title="c. 스팀엔진 + 스캇봇 + 스마트 컨트렉트"></a>c. 스팀엔진 + 스캇봇 + 스마트 컨트렉트</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/X6H2FyqR-image.png)</center>
+
+<p>아직 계획만 있고, 실제 정확한 구성은 나오지 않은 상황이나, 스팀엔진상 스캇봇 서비스를 스마트컨트렉트로 제공할 예정이라고 합니다. 즉, 실제 블록체인상에서 돌아가는 ScotBot이 한번 세팅한 값을 바탕으로 돌아간다는 것입니다.</p>
+<p>이를 위해 필요한 것은 현재처럼 중앙화된 노드운영이 되고 있는 스팀엔진이 컨센서스를 이루고 스캇봇 운영도 노드에서 운영되어야 하지 않을까 라는 생각을 합니다. (현재 실제 기술적으로 어떻게 구현하겠다는 이야기는 없어서)</p>
+<p>다만, 이런 경우에는 스캇봇의 세팅도 스마트컨트렉트에 의해 자동으로 계속 지속되는 관계로, 운영진이 마음대로 세팅값을 건들지도, 운영진이 부재하도라도 그 커뮤니티는 계속 지속될 수 있는 (마치 지금의 스팀과 같이. ^^;;) 환경이 주어집니다. 물론 이것은 SMT와도 마찬가지입니다.</p>
+<p>차이가 있다면 스캇봇을 쓰면서 기존에 썼떤 Nitrous 라던지 앞으로 나올 DTube와 같은 서비스들일 계속 쓸 수 있다는데 있습니다. 물론 이 경우에도 b.의 경우와 마찬가지로 외부 거래소 상장은 여전히쉽지 않은것도 사실입니다. </p>
+<p>[수정] 정확하게 여기도 스캇봇보다는 스캇이라고 하는것이 맞을것으로 보입니다. 즉, 스캇봇의 서비스가 스캇 자체적으로 스마트컨트렉트화되어서 연동되는 의미로 보면 될것 같습니다.</p>
+<h2 id="4-개인적인-생각"><a href="#4-개인적인-생각" class="headerlink" title="4. 개인적인 생각"></a>4. 개인적인 생각</h2><p>스팀엔진은 비교적 적은 비용으로 빠르고 간편하게 보상을 줄 수 있는 커뮤니티 생성이 가능한 서비스로 자리잡을 것으로 생각됩니다. SMT는 나와보고 실체가 자세히 보이겠지만, 현재 상태로 판단했을때에는 어느정도 자금력과 개발인력이 뒤따르지 않은 경우에는 쉽게 진입은 불가할것으로 조심스럽게 예상합니다.</p>
+<p>아마도 스팀엔진에서 커뮤니티를 우선 형성해서 만들어보고, 자원과 토큰 이코노미가 어느정도 확립적일때 이를 바탕으로 SMT로 진출할 수 있지 않을까 싶습니다. 다만, 현재의 스캇봇 토큰 이코노미의 경우는 이미 SMT의 개념을 넘어서는 부분이 많은 관계로 (예를 들어 mining 토큰과 같은), SMT 이상의 토큰이코노미를 적용한 커뮤니티의 경우는 SMT로의 전환이 생각보다 부드럽지는 못할것으로 예상되는 바입니다.</p>
+<p>스팀헌트, 트립스팀, 테이스팀, 엔토파즈만 해도 한국에서 뛰고 있는 SMT향 프로젝트들을 위해서라도 하루 빨리 SMT가 실현되었으면 하는 바램이며, AAA,SCT, ZZAN, PAL등의 커뮤니티들도 SMT전까지 유저풀 성장및 외부 자원 유입을 통한 다음 단계로의 도약을 준비하면 좋을것으로 사료됩니다.</p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/%EA%B0%9C%EB%B0%9C/" rel="tag">개발</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/07/01/jayplayco.managing-director-eli-powell-feat/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">[스팀잇] Managing Director인 Eli Powell 분의 업데이트 feat. 재무상황</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/06/30/jayplayco.6znmnv/">
+                <span class="level-item">[스팀짱] 출범을 축하드립니다.</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="[스팀엔진] 스팀엔진과 SMT의 관계" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 jayplayco&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("kr");</script>
+
+
+<script>
+var IcarusThemeSettings = {
+    site: {
+        url: 'http://jayplayco.github.io',
+        external_link: {"enable":true,"exclude":[]}
+    },
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'true'
+        }
+    }
+};
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+
+<script src="/js/main.js" defer></script>
+
+    
+</body>
+</html>

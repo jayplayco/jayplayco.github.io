@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html  lang="kr">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 4.2.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>[스팀엔진] 하드포크와 업보팅 가능한 토큰 시작 - 제플코 제이의 블록체인</title>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-1-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="[스팀엔진] 하드포크와 업보팅 가능한 토큰 시작" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-end">
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-12 has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-image">
+        <span  class="image is-7by1">
+            <img class="thumbnail" src="https://files.steempeak.com/file/steempeak/jayplayco/SRs8RKyc-image.png" alt="[스팀엔진] 하드포크와 업보팅 가능한 토큰 시작">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-05-02T20:01:12.000Z">2019-05-03</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B0%9C%EB%B0%9C/">개발</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    11 minutes membaca (Sekitar 1615 kata)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                [스팀엔진] 하드포크와 업보팅 가능한 토큰 시작
+            
+        </h1>
+        <div class="content">
+            <center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/SRs8RKyc-image.png)</center>
+안녕하세요 @jayplayco입니다.
+얼마전 스팀엔진측에서 큰것 한방(?)을 준비중이라고 언급해드렸는데요 (https://steempeak.com/scot/@jayplayco/scot) 이름하여 프로젝트 SCOT입니다.
+
+<p>스팀엔진 메인 프로젝트 리더인 @aggroed가 몇시간전에 추가적으로 좀더 확정적인 가이드라인과 일정을 공유했습니다. 곧 있으면 업보팅 가능한 스팀 “사이드체인” 기반 토큰들이 생성될 수 있습니다~!</p>
+<p>정리에 들어가기 전에, 우선 이 SCOT라는 것이 완벽하지는 않습니다. 아직 많은 허점이 있는것도 사실이구요. 하지만 이전에 언급드렸던 바와 같이, 필자는 1년 반 이상 백서만 있는 SMT 보다는 우선 시작이라도 해서 1달만에 만들어내서 시작부터 하는 SCOT가 더 좋습니다. ^^</p>
+<p>하기는 <a href="https://steempeak.com/steem-engine/@aggroed/scot-and-scotbot-going-live-part-1-se-node-hardfork">원본글의</a> 번역본이 아닌 축약 및 정리본입니다. </p>
+<h2 id="1-사용방법-및-일시"><a href="#1-사용방법-및-일시" class="headerlink" title="1. 사용방법 및 일시"></a>1. 사용방법 및 일시</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/BQxpVzBq-image.png)</center>
+
+<ul>
+<li>토큰을 스테이킹 해야 합니다. 이에 따라 스팀엔진에 UI가 추가됩니다.</li>
+<li>스팀상에서 글을 쓸때 지정된 태그를 겁니다. (예를 들어 <a href="https://steempeak.com/@jjm13/">JJM</a>)</li>
+<li>스테이킹이 되면 Scotbot이라는 bot이 와서 토큰을 업보팅합니다.</li>
+<li>일시 : Tuesday, May 7th 8pm EST, 한국은 수요일 5월 8일이 될 예정입니다.</li>
+</ul>
+<h3 id="1-비용"><a href="#1-비용" class="headerlink" title="1) 비용"></a>1) 비용</h3><ul>
+<li>Scotbot 세팅 = 1000 ENG (은 현재 그냥 1000스팀이라고 보심 됩니다.)</li>
+<li>Scotbot 월 사용료 = 활성 유저당 1 ENG </li>
+<li>예: 현재 JJM의 경우 약 200명의 활성유저가 있는데 이는 즉, 월 사용료가 200 ENG(=Steem)이 들어간다는 이야기입니다. 소규모 커뮤니티가 형성되어서 1만명이면 매달 1만 ENG, 현재 가격으로는 봇 사용료가 약 4백만원정도가 들어갑니다. 스팀과 ENG의 가격이 뛰면 뛸수록 이는 더욱도 큰 부담으로 다가올 것으로 예상됩니다. </li>
+</ul>
+<h3 id="2-추후-업데이트-예정인것들"><a href="#2-추후-업데이트-예정인것들" class="headerlink" title="2) 추후 업데이트 예정인것들"></a>2) 추후 업데이트 예정인것들</h3><ul>
+<li>한국 시간 5월 8일날 스팀엔진 하드포크 예정이라 사용시 문제가 있을 수 있으니 주의가 필요합니다.</li>
+<li>현재 SCOT은 스마트 컨트렉트가 아닙니다. 즉, 업보팅에 대한 설정을 한후 프로젝트에서 언제라도 수정이 가능합니다.</li>
+<li>추후 SCOT가 스마트컨트렉트로 돌아갈 수 있도록 추가 업데이트</li>
+<li>NO 스마트컨트렉트 SCOT과 스마트컨트렉트인 SCOT를 동시에 운영할 예정임. </li>
+<li>만약 SMT가 런칭해서 SMT도 갈아타고 싶을 경우 이에 대한 도움도 줄 예정이라고 함. (스팀엔진은 결국 스팀의 부흥을 위해 존재함)</li>
+<li>사용자 전용 인터페이스 지원 예정, 즉, 스팀픽이나 비지 처럼 따로 페이지에서 포스팅할 수 있도록 컨덴서를 복붙하는 기능을 지원할 예정.</li>
+</ul>
+<h2 id="2-토큰-홀더로-필요한-사항"><a href="#2-토큰-홀더로-필요한-사항" class="headerlink" title="2. 토큰 홀더로 필요한 사항"></a>2. 토큰 홀더로 필요한 사항</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/z4t9hPLr-image.png)</center>
+* 자기가 보유한 토큰이 업보팅이 되는지 확인.
+* 토큰을 스테이킹 한다.
+* 토큰 업보팅을 받기 위해 태그를 쓴다. (특수 사이트 접속이 필요할 수 도 있습니다)
+* 7일후 스팀과 함께 토큰 리워드도 클레임을 합니다.
+
+<h2 id="3-현재-상황-장단점"><a href="#3-현재-상황-장단점" class="headerlink" title="3. 현재 상황 (장단점)"></a>3. 현재 상황 (장단점)</h2><p>장점은 물론 지금 당장이라도 시작할 수 있다는 장점이 있습니다. 완벽하지는 않더라도 기능을 테스트해보고 커뮤니티를 만들어갈 수 있는 기능이 생긴다는 것이죠. 이미 스팀엔진하에서 수많은 토큰들이 발행되어서 @jjm13, @ssc-token, @minigame, @dramatoken 같은 프로젝트들이 활발하게 활동하고 있습니다. SCOT가 시작되면서 장단점도 있습니다만, 프로젝트 입장에서 다음과 같이 정리드립니다.</p>
+<h3 id="1-장점"><a href="#1-장점" class="headerlink" title="1) 장점"></a>1) 장점</h3><ul>
+<li>SMT 없이도 업보팅이 되는 토큰을 발행할 수 있다.</li>
+<li>스팀엔진 성격상 비교적 쉽게 할 수 있도록 세팅이 될것으로 예상됨</li>
+<li>업보팅시 이제 스팀뿐만 아니라 토큰도 업보팅받을 수 있게 된다.</li>
+<li>지금 당장 된다!!</li>
+</ul>
+<h3 id="2-단점"><a href="#2-단점" class="headerlink" title="2) 단점"></a>2) 단점</h3><ul>
+<li>세팅 비용은 그렇다고 치더라도 유저당 비용은 추후 조정이 필요할 것으로 생각된다.</li>
+<li>기존 토큰도 업보팅을 위해 등록되는 것이 가능한 것으로 봐서 인플레이션 기능은 없는 것으로 판단 (즉, 한정된 풀 내에서 계속 업보팅을 해야함, 결국은 리워드 풀 보다는 에어드랍에 가까운 느낌?)</li>
+<li>아직도 컨센서스를 이루지는 않은 상태라 블록체인이라기 보다는 스팀에 data를 기록하는 정도의 체인인것은 맞음.</li>
+</ul>
+<h2 id="4-결론"><a href="#4-결론" class="headerlink" title="4. 결론"></a>4. 결론</h2><p>부족할 수 있다. 정통이 아닐 수 있다. 하지만 적어도 무언가를 가지고 시작할 수 있는 기반은 된다라고 본다. 1년 반동안 페이퍼에만 존재하는 가상의 존재보다는 훨씬 좋다고 생각한다. 스팀엔진이 결국 SMT로 가는 잠깐의 건널목이 될지, SMT를 대처할지 아니면 사용성 문제로 사장될지는 아무도 모르는 것이지만, 적어도 지금도 이미 토큰 이코노미들이 스팀의 업보팅을 패깅으로 하나둘씩 생겨나고 있고 실제로 유저들에게 활력을 주고 있으며, 손쉬운 접근성으로 @dramatoken과 같은 재미있는 프로젝트들도 나올 수 있다고 생각한다.</p>
+<p>이더리움, 이오스등이 날개를 달고, 트론이 그 수많은 자원과 돈을 투자해서 댑외에도 토큰 체계인 TRX10,TRX20에 목을 매단 이유가 쉽게 토큰을 만들 수 있는 환경이야 말로 결론적으로는 자체적인 블록체인 이코노미에 활력이 되고 도움이 되기 때문이다. </p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/%EA%B0%9C%EB%B0%9C/" rel="tag">개발</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/05/07/jayplayco.mira/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">[스팀잇] Mira 도입 시작</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/05/02/jayplayco.3xckjy/">
+                <span class="level-item">[스팀잇] 플래그 대신 다운보팅 버튼</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="[스팀엔진] 하드포크와 업보팅 가능한 토큰 시작" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 jayplayco&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("kr");</script>
+
+
+<script>
+var IcarusThemeSettings = {
+    site: {
+        url: 'http://jayplayco.github.io',
+        external_link: {"enable":true,"exclude":[]}
+    },
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'true'
+        }
+    }
+};
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+
+<script src="/js/main.js" defer></script>
+
+    
+</body>
+</html>

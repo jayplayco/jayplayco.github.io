@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html  lang="kr">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 4.2.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>Tag: 미지정 - 제플코 제이의 블록체인</title>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-1-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="제플코 제이의 블록체인" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-end">
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-12 has-order-2 column-main"><div class="card">
+    <div class="card-content">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/tags">Tag</a></li>
+            <li class="is-active"><a href="#" aria-current="page">미지정</a></li>
+        </ul>
+        </nav>
+    </div>
+</div>
+
+    
+<div class="card">
+    
+    <div class="card-image">
+        <a href="/2019/11/07/jayplayco.67cnsn-smt-smt/" class="image is-7by1">
+            <img class="thumbnail" src="https://cdn.steemitimages.com/DQme4m5RnAE8VJtQPX18mLpqrFNNVh5nnRoGzNrRVeudk8m/image.png" alt="[SMT] SMT 생성하기">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-11-06T22:36:09.000Z">2019-11-07</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6 minutes membaca (Sekitar 931 kata)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/11/07/jayplayco.67cnsn-smt-smt/">[SMT] SMT 생성하기</a>
+            
+        </h1>
+        <div class="content">
+            <center>![](https://cdn.steemitimages.com/DQme4m5RnAE8VJtQPX18mLpqrFNNVh5nnRoGzNrRVeudk8m/image.png)</center>
+
+<p>안녕하세요, @jayplayco입니다.</p>
+<p>현재 실시간으로 스팀페스트에서 SMT를 세팅하는 프론트페이지를 보여주네요. 단계별로 보여주는 사항들과 값들이 보여지네요. 아직은 개발중이라서 변경도 많이 있을것으로 보이지만, 이미 수정 가능한 패러미터들이 하나둘 씩 보이네요. 이번 예시는 최소한의 세팅으로 만든 토큰입니다.</p>
+<h2 id="1-Token-Creation"><a href="#1-Token-Creation" class="headerlink" title="1. Token Creation"></a>1. Token Creation</h2><ul>
+<li>Control account - 모든것을 관장하는 계정</li>
+<li>Precision - 소수점 몇자리 까지 정할 (예를 들어 스팀은 3자리)</li>
+<li>Max Supply - 최대 토큰 수량</li>
+<li>Contribution Begin Time 이후의 세팅들은 ICO를 위한 값들입니다.</li>
+</ul>
+<h2 id="2-Voting-Parameters"><a href="#2-Voting-Parameters" class="headerlink" title="2. Voting Parameters"></a>2. Voting Parameters</h2><center>![](https://cdn.steemitimages.com/DQmQRKLF3xFQeHKVqNEAvtD4YfT9UerotG7w1kftJoUjvUK/image.png)</center>
+보팅에 관련된 세팅이 되는 곳입니다. POB  관련된 사항들입니다.
+* Cashout Window - 초단위로 언 보상을 수령하는지.
+* Allow Downvotes - 다운보팅을 가능하게 할 수 있음 (불가도 가능함)
+* Vote Regeneration Period - 보팅마나 회복 기간 초단위
+* Percent Curation Reward - 5:5 나 6:4  3:7 같은 세팅이 가능함.
+* Curve 세팅: 작가 보상과 큐레보상에 대한 선형/비선형 세팅 가능함.
+
+<h2 id="3-Token-Emissions"><a href="#3-Token-Emissions" class="headerlink" title="3. Token Emissions"></a>3. Token Emissions</h2><p>이 토큰의 예시는 토큰을 만들고 생성 계정이 그냥 다 가져가는 형태의 토큰을 생성하는 테스트로 시작했다가 추가로 토큰을 받을 계정들을 추가해서 실제 테스트넷상에서 생성을 했습니다. </p>
+<ul>
+<li>Schedule Time : 토큰 생성 기간</li>
+<li>Destination: 어느 계정으로 토큰이 생성되는지</li>
+</ul>
+<center>![](https://cdn.steemitimages.com/DQmUdFchcxaWSqGxRypXbBJSeuwHYeAP3ZxBLXGAup7QrxY/image.png)</center>
+이런식으로 키를 넣으면 토큰이 실제로 생성이됩니다.
+
+<center>![](https://cdn.steemitimages.com/DQmcniUb8HSgALYQiCM3NwThJY8NQYeoHsmDHH9rkigPeCc/image.png)</center>
+
+<h2 id="4-개인적인-생각"><a href="#4-개인적인-생각" class="headerlink" title="4. 개인적인 생각"></a>4. 개인적인 생각</h2><p>우선 SMT 가 점점 가까워지고 있네요. 실제로 테스트넷에서 코드 작성 없이 토큰 생성도 가능해지고요. 물론 더욱더 개발을 할것으로 보입니다. 중요 세팅들은 우선 손쉽게 비개발자도 진행이 가능할 것으로 보이고요, 상세 세팅으로 들어갔을때에는 아마도 코딩이 조금 더 필요하지 않을까 라는  생각이 현재의 진행상태를 봤을때 드는 발표네요.</p>
+<p>어여 와라 SMT~!</p>
+<h2 id="5-추가질문"><a href="#5-추가질문" class="headerlink" title="5. 추가질문"></a>5. 추가질문</h2><p>질문 시간에 나왔던 사항.</p>
+<h4 id="aggroed-스캠이름으로-나오는-토큰을-어떻게-할-것인가"><a href="#aggroed-스캠이름으로-나오는-토큰을-어떻게-할-것인가" class="headerlink" title="@aggroed: 스캠이름으로 나오는 토큰을 어떻게 할 것인가?"></a>@aggroed: 스캠이름으로 나오는 토큰을 어떻게 할 것인가?</h4><center>![](https://cdn.steemitimages.com/DQmQqTydgY1SLMSWPNuzFfLq798xj98VKf5oENUhj3W63H2/image.png)</center>
+* 답변: 생성을 하더라도 이름이 매칭이 되는 과정에서 스팀잇이 개입되어 이를 막을 예정임. (Numerical identifier로 초기 생성됨, 즉 이름이 아닌 숫자의 나열로 토큰 생성)
+
+<h4 id="aggroed-시큐리티-토큰을-만드는-프로젝트가-나오게-되면-스팀잇은-어떻게-하나"><a href="#aggroed-시큐리티-토큰을-만드는-프로젝트가-나오게-되면-스팀잇은-어떻게-하나" class="headerlink" title="@aggroed: 시큐리티 토큰을 만드는 프로젝트가 나오게 되면 스팀잇은 어떻게 하나?"></a>@aggroed: 시큐리티 토큰을 만드는 프로젝트가 나오게 되면 스팀잇은 어떻게 하나?</h4><ul>
+<li>답변: 이더리움의 경우도 STO를 하더라도 이더리움 자체에 영향이 가지는 않음. 스팀의 SMT도 같을 것으로 본다. </li>
+</ul>
+<h4 id="coingecko-erc-20처럼-거래소측에-연락을-해서-도움을-주고자-하거나-얘기를-했나-integration을-쉽게-해줄-수-있나"><a href="#coingecko-erc-20처럼-거래소측에-연락을-해서-도움을-주고자-하거나-얘기를-했나-integration을-쉽게-해줄-수-있나" class="headerlink" title="@coingecko: erc-20처럼 거래소측에 연락을 해서 도움을 주고자 하거나 얘기를 했나? integration을 쉽게 해줄 수 있나?"></a>@coingecko: erc-20처럼 거래소측에 연락을 해서 도움을 주고자 하거나 얘기를 했나? integration을 쉽게 해줄 수 있나?</h4><center>![](https://cdn.steemitimages.com/DQmQd815JRwAf9f6iMRiUDAxxPTmPwPkkZFNKgeHNxuz2y9/image.png)</center>
+* 답변: 아직 거래소랑 직접 SMT관련 이야기를 하지는 않았다. 하지만 거래소가 SMT를 추적하기 위해 쓰는 인터페이스는 현재 스팀을 추적하는 인터페이스와 동일합니다. 그래서 크게 문제가 될 것이 거래소 입장에서 없습니다.
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-image">
+        <a href="/2019/11/07/jayplayco.6lkgv4-coinnews/" class="image is-7by1">
+            <img class="thumbnail" src="https://cdn.steemitimages.com/DQmNiTMrvqaBEGnHQqAuQSmR2ZztQ4DsG2dEq1R2xWjTNKB/image.png" alt="[Coinnews] 아이콘 프로젝트를 들여다보다">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-11-06T17:53:03.000Z">2019-11-07</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    14 minutes membaca (Sekitar 2111 kata)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/11/07/jayplayco.6lkgv4-coinnews/">[Coinnews] 아이콘 프로젝트를 들여다보다</a>
+            
+        </h1>
+        <div class="content">
+            <center>![](https://cdn.steemitimages.com/DQmNiTMrvqaBEGnHQqAuQSmR2ZztQ4DsG2dEq1R2xWjTNKB/image.png)</center>
+
+<p>안녕하세요, @jayplayco입니다.</p>
+<p>이번 아이콘에서 주최하는 밋업에 스팀댑들이 같이 참여하면서 아이콘에 대해 좀더 자세하게 알아보게 되었습니다.<br>재미있는 생태계 구성과 아이콘의 지원과 더불어 실생활에도 쓰일 수 있을것으로 보이는 댑 생태계를 만들어가고 있어서 간단하게 소개를 해보고자 합니다.</p>
+<h2 id="0-배경"><a href="#0-배경" class="headerlink" title="0. 배경"></a>0. 배경</h2><p>아이콘은 인터체인이라는 키워드를 목표로 하는 블록체인 프로젝트이며 ICX라는 자체 코인이 있습니다. 2017년 10월달 암호화폐들이 한참 치고 올라갈때 시작을 했습니다. 코인마켓캡 최초 가격 등록은 0.40USD였으며, 그 이후 빠르게 오르면서 2018년 1월 암호화폐들의 전반적인 최고가를 기록할때 12.27USD까지 올라갔다가 다른 알트코인들과 마찬가지로 이후 지속적으로 가격이 빠지면서 현재는 상장가의 50%정도인 0.18USD 정도에 거래되고 있습니다.</p>
+<p>최고시절 시총 순위 31위까지 치고 올라갔으며 현재는 58위에 안착되어 있는 모습입니다. </p>
+<center>![](https://cdn.steemitimages.com/DQmRqL85zQS4duHjdTekQzuJkz4KS6bkd1Qei3Gkp59i6vV/image.png)
+[소스](https://coinmarketcap.com/currencies/icon/)</center>
+
+<p>2017년 9월에 스위스에서 진행되었던 ICO를 통해서 이더리움 약 15만개 정도를 확보한것으로 확인되었습니다. 2017년 9월 말일경  1 ETH 의 가격이 약 300불이였던 것을 바탕으로 계산했을때 약 4천5백만불을 모았습니다. (대략 450억원) 현재 이더 가격인 190불 정도를 기준으로 했을때도 2천8백만불 정도의 가치를 가지고 있습니다.</p>
+<p>현재까지 발행된 ICX 토큰 총 발행은 8억개 가량이며 시총은 9795BTC (약 9천만불)</p>
+<h2 id="1-아이콘의-현재"><a href="#1-아이콘의-현재" class="headerlink" title="1. 아이콘의 현재"></a>1. 아이콘의 현재</h2><p>아이콘은 다른 코인들과 같이 ERC-20으로 시작을 해서 이제는 자체적인 메인넷으로 전환을 완료한 상황입니다. 또한 스팀의 증인 제도와 비슷한 DPOS개념의 노드 운영및 선출 방식을 가지고 있습니다. 아이콘의 경우는 노드 구성에 따른 구분을 C-Node, C-Rep, Citizen Node등으로 구분을 지어서 노드의 성격에 따른 권한을 부여하기도 했습니다.</p>
+<p>실제 노드들의 선출과정과 보상 지급도 얼마전부터 시작되었다고 합니다. 메인은 20개정도이며 현재 40개가 약간 넘는 예비 노드들이 준비되어 안전하게 돌아가고 있습니다. </p>
+<center>![](https://cdn.steemitimages.com/DQmaW4D4K9VkUczXMbAdirvxpcueLoBhz2gr4xjotVNWkQa/image.png)</center>
+* 링크: https://tracker.icon.foundation/governance
+
+<h2 id="2-아이콘의-기술적-이해"><a href="#2-아이콘의-기술적-이해" class="headerlink" title="2. 아이콘의 기술적 이해"></a>2. 아이콘의 기술적 이해</h2><ul>
+<li><a href="https://medium.com/@matthewminseokkim/icon%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90-dc0feb97d468">소스: 미디엄 Matthew Minseok Kim</a></li>
+</ul>
+<p>미디엄에서 Matthew Kim분이 풀어쓴 아이콘의 전반적인 기술적 바탕이 백서보다는 훨씬 쉽게 되어 있어 소개를 합니다. 간단하게 요약을 하면, 아이콘은 범용적으로 다른 블록체인 통화끼리의 사용까지 가능하게 하면서 실생활에서 사용이 가능한 환경을 제공하고자 하는 프로젝트입니다. 이는 현재 아이콘에서 비교적 많은 댑들을 만들고 있고 추가로 따로 리뷰를 해볼 we@bloc이 만들어가는 댑들을 보면 알 수 있습니다.</p>
+<p>미래를 마구 앞당겨, 아이콘이 제대로 정착되어 범용적으로 많이 쓰인다고 했을대를 가정하면, 사용자 입장에서는 비트코인이던 이더리움이던 이오스던 ICX던 상관 없이 아이콘 블록체인을 지원하는 서비스를 이용시 상호간 거래를 쉽게 할 수 있습니다. 모두 결론적으로는 아이콘을 통해서 자동 전환되는 시스템을 가지기 때문입니다. </p>
+<center>![](https://cdn.steemitimages.com/DQmX4xEsWUHBPJJhEnHDsPkhVfJYNz8beudBQ9rXXJKWnEa/image.png)
+소스: [아이콘 백서](https://icon.foundation/resources/whitepaper/ICON_Whitepaper_EN.pdf)</center>
+
+<p>정말 쉽게 생각하시면, 해외 사이트에서 신용카드로 결제를 하면 원화가 아닌 USD로 결제를 할 수 있는데, 사실상 우리 통장에서 빠지는 것은 원화가 빠지는 것과 비슷한 현상입니다. 내가 가지고 있는 통화와는 상관 없이 결제를 담당하는 중앙화된 주체즉이 이를 관장해서 자동으로 전환하는 서비스를 제공해주는 것입니다. 아이콘은 이를 탈중앙화된 블록체인 기술로 블록체인간 구현을 하고자 하는 것입니다.</p>
+<h2 id="3-아이콘의-자금"><a href="#3-아이콘의-자금" class="headerlink" title="3. 아이콘의 자금"></a>3. 아이콘의 자금</h2><center>![](https://cdn.steemitimages.com/DQmaoM5qbDYPF7TVzQgkByiSxdTKETzhrhKpLYJyjUXMHrd/image.png)</center>
+얼마전 아이콘루프측은 100억 규모의 시리즈A 펀딩을 통해 자금을 추가로 조달했습니다. DID(탈중앙 아이디) 개발을 위한 박차를 가하기 위해서였습니다. 아이콘의 경우 국내 중요 거래소 (업비트, 빗썸등) 및 바이낸스, 크라켄등 중요 거래소에 상장이 되어 있으며, 가장 많은 거래량은 중국기반 거래소인 coinex에서 볼륨을 만들고 있습니다. 
+
+<p>필자가 기술적인 측면이나 생태계적인 측면으로 봤을때는 국내팀으로 상당히 좋은 추진력을 가지고 기관과 단체들을 포섭하기 위한 활동들을 전개하고 있으며 많은 거래소에 상장이 되었다는 것은 그만큼 상장을 위한 많은 리소스를 투자했으며, 투자하고 있다는 반증이 됩니다. </p>
+<p>초기 15만개의 ETH를 그대로 암호화폐로 들고 있었을지, 아니면 2018년초반에 그중 큰 %를 현금화해서 안전자산으로 바꿨는지도 중요한 부분중 하나가 될 것으로 보이긴 합니다. 수십명의 팀원들이 필요한 프로젝트 규모와 초기 ICO외에는 추가적인 수입원이 한동안은 있기가 쉽지 않은 블록체인 프로젝트의 현실을 직시했을때 지난 2년간의 burn rate는 상당했을것이라고 예상할 수 있기 때문입니다. (물론 자기 코인을 시장에 내다파는 살을 깎는 전략은 수입원이라고는 치지 않는 전제하에서 입니다.)</p>
+<p>이번 추가적인 펀딩 유치로 아이콘 프로젝트가 확실하게 자리를 잡을 수 있는 시간을 벌어들인 것은 맞다고 생각이 되기도 합니다.</p>
+<h2 id="4-아이콘의-미래"><a href="#4-아이콘의-미래" class="headerlink" title="4. 아이콘의 미래"></a>4. 아이콘의 미래</h2><p>아이콘의 프로젝트는 차근차근 진행이 되고 있으며 실제 제품이 형상화되면서 나아가고 있습니다. Burn Rate에 따른 생태계 조성이 얼마나 걸릴지가 관건입니다. 기관들이나 단체들이 곧바로 적용할 수 있는 BAAS나 DAAS (Dapp as a service)와 같은 형태로 조금더 빠르게 긍정적인 자금 유입을 만들 수 있다면 프로젝트에도 좋은 영향을 미치지 않을까 생각하기도 합니다. DID를 통한 펀딩 자금 유입도 DPASS 개발과 더불어 my-ID 서비스의 상용화를 위한 초석이니, 실제 블록체인이 실생활에 깊게 파고들어갈 수 있도록 킬러댑의 자체 개발까지 진행하고 있는 것으로 해석됩니다.</p>
+<ul>
+<li><a href="http://wiki.hash.kr/index.php/%EC%95%84%EC%9D%B4%EC%BD%98">소스: 해시넷 - 아이콘</a></li>
+<li><a href="https://medium.com/@matthewminseokkim/icon%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90-dc0feb97d468">소스: 미디엄 Matthew Minseok Kim</a></li>
+<li><a href="https://www.blockmedia.co.kr/archives/112741">기사 - 블록미어 - 아이콘루프, 100억원 규모 시리즈A 투자 유치</a></li>
+</ul>
+<h4 id="주의-이글은-투자를-위한-글이-아니며-정보-전달을-목적으로-하는-글입니다-투자는-개인의-판단하에-진행하셔야-합니다"><a href="#주의-이글은-투자를-위한-글이-아니며-정보-전달을-목적으로-하는-글입니다-투자는-개인의-판단하에-진행하셔야-합니다" class="headerlink" title="주의! 이글은 투자를 위한 글이 아니며 정보 전달을 목적으로 하는 글입니다. 투자는 개인의 판단하에 진행하셔야 합니다."></a>주의! 이글은 투자를 위한 글이 아니며 정보 전달을 목적으로 하는 글입니다. 투자는 개인의 판단하에 진행하셔야 합니다.</h4>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-image">
+        <a href="/2019/11/05/jayplayco.75j5u-coinnews/" class="image is-7by1">
+            <img class="thumbnail" src="https://cdn.steemitimages.com/DQmSge8VwnnDBy5Jq4ArRmvdyav7qTXBKfYb331k4bmHsNk/image.png" alt="[Coinnews] 영국 정부 비즈니스상 암호화폐 세금안 발표">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-11-04T15:39:12.000Z">2019-11-05</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    11 minutes membaca (Sekitar 1580 kata)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/11/05/jayplayco.75j5u-coinnews/">[Coinnews] 영국 정부 비즈니스상 암호화폐 세금안 발표</a>
+            
+        </h1>
+        <div class="content">
+            <p><img src="https://cdn.steemitimages.com/DQmSge8VwnnDBy5Jq4ArRmvdyav7qTXBKfYb331k4bmHsNk/image.png" alt=""></p>
+<p>안녕하세요, @jayplayco입니다.</p>
+<p>아직 국내 암호화폐 관련된 세금안이 정확하게 고지된 것이 없는 상태에서 주요 국가에서는 일반과 기업을 상대로 과세안을 하나둘씩 발표하고 있는 상황입니다.</p>
+<p>이번에는 영국이 작년에 개인 암호화폐 관련 과세안을 발표하고 이번에는 기업의 암호화폐 관련 과세를 발표를 했습니다. 다른 국가의 암호화폐 과세안이 국내에 그대로 반영되는 경우는 거의 없을 것으로 보이지만서도, 전세계적인 주요 국가의 동향을 살피면 국내의 움직임도 어느정도는 예상이 될것으로 보이기 때문에 관심이 가는 대목입니다. </p>
+<p>이번 영국에서 기업대상으로 내놓은 과세안에 대한 간략하고 핵심적인 요약 드립니다.</p>
+<h2 id="1-해당-과세항목"><a href="#1-해당-과세항목" class="headerlink" title="1. 해당 과세항목"></a>1. 해당 과세항목</h2><ul>
+<li>토큰 구매및 판매</li>
+<li>토큰 교환을 통한 재화 교환(다른 암호화폐 포함)</li>
+<li>채굴</li>
+<li>서비스나 재화를 토큰을 받고 제공시</li>
+</ul>
+<p>크게 보면 현재 토큰으로 할 수 있는 거의 모든 행위에 대한 범주를 잡은 것으로 보입니다. 중요한 것은 기본적으로 암호화폐의 경우는 화폐로의 가치를 측정하는 것이 아니라 재화로의 가치를 측정한다는 것입니다.</p>
+<p>추징될 수 있는 세금의 종류는</p>
+<ul>
+<li>자본이득세</li>
+<li>법인세</li>
+<li>소득세</li>
+<li>국민보험기여금</li>
+<li>우표세</li>
+<li>부가가치세</li>
+</ul>
+<p>입니다. 화폐가 아닌 재화로의 인지때문에 부가가치세까지 붙을 수 있게 되었네요.</p>
+<h2 id="2-몇몇-특이사항들"><a href="#2-몇몇-특이사항들" class="headerlink" title="2. 몇몇 특이사항들"></a>2. 몇몇 특이사항들</h2><h3 id="a-채굴"><a href="#a-채굴" class="headerlink" title="a. 채굴"></a>a. 채굴</h3><p>채굴의 경우는 규모에 따라서 과세를 할 것으로 보입니다. 단순 PC에 그래픽카드 하나 넣고 BTC 마이닝시 이를 기업 과세 대상으로는 지 않겠다는 언급이 있습니다. 이는 실제 마이닝 수익보다 비용이 높을것이라는 관점에서 나온 안인것으로 보입니다.</p>
+<p>하지만 여기서도 채굴을 통한 이익이 실현이 될 경우는 이는 과세 대상이 된다고 하면서 혹시나 발생할 구멍을 매꿨습니다.</p>
+<h3 id="b-법인세"><a href="#b-법인세" class="headerlink" title="b. 법인세"></a>b. 법인세</h3><p>토큰 거래를 통한 이익이 있을 경우 다른 재화를 판매/거래했던 것과 같이 이에 대한 세금이 부과됩니다. 중요한 것은 암호화폐의 경우는 통화나 화폐로 규정하지 않는다는 것입니다.</p>
+<h3 id="c-임금으로써의-암호화폐"><a href="#c-임금으로써의-암호화폐" class="headerlink" title="c. 임금으로써의 암호화폐"></a>c. 임금으로써의 암호화폐</h3><p>기업에서 임금이나 보너스로 암호화폐를 지급할 경우에는 암호화폐를 “화폐와 같은 가치”로 규정하고 각기 필요한 과세를 적용합니다.</p>
+<h3 id="d-하드포크"><a href="#d-하드포크" class="headerlink" title="d. 하드포크"></a>d. 하드포크</h3><p>하드포크를 통해 간단하게는 추가적인 암호화폐가 생성되어서 이에 대한 가치가 있을 시, 새롭게 발생한 암호화폐는 자체적인 Pool로 정의되어서 과세 대상이 됩니다.</p>
+<h3 id="e-에어드랍"><a href="#e-에어드랍" class="headerlink" title="e. 에어드랍"></a>e. 에어드랍</h3><p>새롭게 에어드랍된 토큰의 경우는 자체적인 pool로 계산이 되어야 하며, 기존의 토큰을 받을 경우는 이 역시 이전 Pool에 종속이 되면서 재화 자산으로 잡아야 합니다.</p>
+<h3 id="f-부가세"><a href="#f-부가세" class="headerlink" title="f. 부가세"></a>f. 부가세</h3><p>부가세의 경우는 암호화폐 자체에 대한 부가세보다는 암호화폐를 통한 서비스나 물품 교환시 발생하는 부가세에 대한 정의로 보는 것이 가깝다.  즉, 물품이나 서비스 암호화폐로 영국법안에서 판매할 경우 이에 해당하는 부가세를 추가해서 받아야 하며, 이는 추후 영국 정부에 해당 거래 시점에 해당하는 암호화폐 가치만큼의 영국 파운드로 내도록 되어 있습니다.</p>
+<p>예시) </p>
+<ul>
+<li>쌀을 암호화폐 BTC를 기업체로써 받고 판매합니다.   </li>
+<li>판매대금은 1 BTC와 부가세는 0.1BTC 총 1.1BTC에 판매합니다.</li>
+<li>판매시점 0.1 BTC는 1백만원입니다.</li>
+<li>추후 이거래에 대해 1백만원의 부가세를 내야 합니다. </li>
+</ul>
+<p>여기서 기업체 입장에서는 상당히 부담으로 다가오는 것은, 만약에라도 해당 거래의 부가세를 곧바로 암호화폐에서 FIAT으로 전환하지 않았을 경우 추후 부가세를 내야하는 시점의 암호화폐 가격에 따라 이익금보다 큰 금액을 세금으로 내야하는 상황이 발생합니다. 물론 그 사이에 암호화폐 가격이 오르면 실질적인 부가세 가격은 내려갈 것이고요.</p>
+<h2 id="3-개인적인-생각"><a href="#3-개인적인-생각" class="headerlink" title="3. 개인적인 생각"></a>3. 개인적인 생각</h2><p>이외에 영국 정부에서 내놓은 가이드는 조금더 많은 경우를 다루고 있는 관계로, 관심이 있으신 분들은 하기 링크를 참조하시면 될것으로 보입니다. </p>
+<p>각 국가별 세금안들이 하나둘 씩 나온느 것을 보면 조금씩은 차이가 있지만, 큰 그림의 틀은 유지가 되는 것으로 보입니다. 일반적으로는 암호화폐 자체를 화폐나 통화로 인정하지는 않으면서 재화로의 거래로 규정을 하고, 특히 암호화폐계에서 일어날 수 있는 특이사항인 하드포크로 인한 암호화폐 분리, 에어드랍 및 재화이나 통화처럼 사용되는 환경에 대한 세금 규제방안들이 그것입니다.</p>
+<p>한국은 언제쯤 개인과 기업들의 전반적인 가이드라인을 잡아줄지 궁금해지는 요즘입니다. </p>
+<ul>
+<li><a href="https://www.coindesk.com/uk-tax-authority-releases-crypto-guidance-for-businesses">기사 - 코인데스크 - UK Tax Authority Issues Crypto Guidance for Businesses</a></li>
+<li><a href="https://www.gov.uk/government/publications/tax-on-cryptoassets/cryptoassets-tax-for-businesses#contents">참조자료 - 영국정부 세금 가이드</a></li>
+</ul>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-image">
+        <a href="/2019/11/04/jayplayco.coinnews-vc/" class="image is-7by1">
+            <img class="thumbnail" src="https://cdn.steemitimages.com/DQmX7qf12gkoe5iWPdhCj1gUomBKbG3S1mSW2Fn8y5pSLRU/image.png" alt="[Coinnews] 중국 VC의 자금이 다시 움직이기 시작했다.">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-11-03T16:55:03.000Z">2019-11-04</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4 minutes membaca (Sekitar 647 kata)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/11/04/jayplayco.coinnews-vc/">[Coinnews] 중국 VC의 자금이 다시 움직이기 시작했다.</a>
+            
+        </h1>
+        <div class="content">
+            <center>![](https://cdn.steemitimages.com/DQmX7qf12gkoe5iWPdhCj1gUomBKbG3S1mSW2Fn8y5pSLRU/image.png)</center>
+
+<p>안녕하세요, @jayplayco입니다.</p>
+<p>2018년 1월의 호황기를 끝으로 지속적인 하락을 보이던 암호화폐 시장은 일반적으로 알트 코인들의 경우는 최소 90%이상의 손실이 2018년 1월에 비해 발생한 포트폴리오가 많습니다.</p>
+<p>암호화폐 시장의 가격은 고래들의 가격 펌핑도 큰 몫을 차지하는 것이 사실이지만, 결국은 외부의 자금이 유입이 되어야지 가치가 상승하는 것은 변함이 없습니다. 코인데스크의 글에 따르면 2018 불황기에 접어들고 나서 중국 VC의 90% 정도가  시장을 떠났던 상황이였다고 합니다. 하지만 이제 시진핑 주석의 블록체인 시장 활성화 발언 이후 중국 VC들의 자금이 다시 움직이기 시작했다는 보도입니다.</p>
+<p>그동안 중국의 VC들의 절대적인 수도 많이 줄었지만, 투자한 액수도 2018년과 2019년에 비교해서 맣이 줄었다고 합니다. 전년도 대비해서 60%넘게 줄어들었으나, 이제 다시 서서히 블록체인 기반 프로젝트에 자금이 투입될 수 있는 환경이 조성되고 있는 것으로 보입니다.</p>
+<p>10월말에 중국에서는 시진핑 주석의 발언 바로 다음날에 새로운 법안이 통과되어서 2020년 1월 1일부터 적용이 된다고 합니다. 기본적으로는 암호화폐 사용 사례에 대한 규제와 법적 문제를 해결하기 위해서 발표및 통과가 되었습니다.</p>
+<p>기본적으로는 상업용 암호화폐 기술과 연구에 대한 장려를 통해 규제를 가능하도록 하는 토대를 만든것입니다. </p>
+<p>절대적인 금지보다는 규제를 통한 장려와 발전을 선택한 중국의 행보가 자금의 흐름과 더불어 내년에는 어떤 방향으로 흘러갈지 주목이 됩니다. </p>
+<ul>
+<li><a href="https://www.coindesk.com/after-painful-2018-chinese-blockchain-vcs-are-getting-back-into-the-market">기사 - 코인데스크 -<br>After Painful 2018, Chinese Blockchain VCs Are Getting Back Into the Market</a></li>
+<li><a href="https://www.asiatimes.com/2019/11/article/chinese-vcs-take-another-look-at-blockchain/">기사 Asiatimes - Chinese VCs take another look at blockchain</a></li>
+<li><a href="https://cryptoslate.com/crypto-community-divided-over-chinas-blockchain-law/">기사 Cryptoslate.com - Crypto community divided over China’s blockchain law</a></li>
+<li><a href="https://www.coinpress.co.kr/2019/10/30/18380/">기사 Coinpress - 중국 의회, 암호화폐 법안 통과…2020년 1월 1일 발효</a></li>
+</ul>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-image">
+        <a href="/2019/11/02/jayplayco.jjm-airdrop-of-jjm/" class="image is-7by1">
+            <img class="thumbnail" src="https://cdn.steemitimages.com/DQmZRMmLo6qw24TmssHgz2JqGZWgAmq9sbX9piYcD6qNVYV/image.png" alt="[JJM] Airdrop of JJM">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-11-02T14:53:06.000Z">2019-11-02</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 minutes membaca (Sekitar 394 kata)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/11/02/jayplayco.jjm-airdrop-of-jjm/">[JJM] Airdrop of JJM</a>
+            
+        </h1>
+        <div class="content">
+            <center>![](https://cdn.steemitimages.com/DQmZRMmLo6qw24TmssHgz2JqGZWgAmq9sbX9piYcD6qNVYV/image.png)</center>
+
+<p>Hi, @jayplayco here.</p>
+<p>I would like to inform you that the project JJM is planning an Airdrop of JJM tokens for JJM token holders.<br>We have at the moment about 2Mil. tokens in circulation and do understand that we have to increase the circulation volume of tokens. The planned airdrop is not directly comparable to a stock parsing but does has a very similar function.</p>
+<h2 id="0-Background"><a href="#0-Background" class="headerlink" title="0. Background"></a>0. Background</h2><p>JJM is the token behind the project JJM.</p>
+<ul>
+<li><a href="https://steemit.com/jjm/@jayplayco/jjm-introducing-jjm-token-the-community-driven-token-economy">https://steemit.com/jjm/@jayplayco/jjm-introducing-jjm-token-the-community-driven-token-economy</a></li>
+</ul>
+<p>We have several projects running within JJM, including TripleA and came to the conclusion that we need a higher circulation volume of JJM based on our plans for future projects.</p>
+<h2 id="1-Main-Income-for-JJM-and-JJM-dividend-distribution"><a href="#1-Main-Income-for-JJM-and-JJM-dividend-distribution" class="headerlink" title="1. Main Income for JJM and JJM dividend distribution"></a>1. Main Income for JJM and JJM dividend distribution</h2><p>The JJM project has several investments, starting from manual TripleA curation, general curation from our main account @virus707, Investments in SCT (Steemcoinpan), Genesis BTC mining.<br>Based on our calculation the dividend distribution ROI and also the relative stable token price does allow a parsing styled airdrop for JJM holders.</p>
+<h2 id="2-How-are-the-rules-changed"><a href="#2-How-are-the-rules-changed" class="headerlink" title="2. How are the rules changed?"></a>2. How are the rules changed?</h2><p>The dividend rules will keep unchanged. Any voting rules changes will happen with more JJM tokens available on the market, but as always mentioned, JJM is always following the path to increase the value of the token economy itself.</p>
+<h2 id="3-When"><a href="#3-When" class="headerlink" title="3. When?"></a>3. When?</h2><p>We are planning to have the airdrop in ‘N’ times and will have unannounced snapshots for the airdrop including the distribution. Please be advised that any Qty. that is for sale on the market will not be counted for any snapshots.</p>
+<p>We are in the moment planning a Qty. of about 2 Mil. JJM for the first airdrop and there could be several of them.</p>
+<h2 id="4-How-do-we-get-value"><a href="#4-How-do-we-get-value" class="headerlink" title="4. How do we get value?"></a>4. How do we get value?</h2><p>The easiest way to understand JJM is, that we are investing in different projects and distributing part of the income to JJM holders. Value is created based on the output of these projects and also from self-developed projects (like TripleA and further coming projects) with the possibility to have positive sinkings for the economy.</p>
+<h2 id="5-Next-steps"><a href="#5-Next-steps" class="headerlink" title="5. Next steps"></a>5. Next steps</h2><p>The JJM project team is currently in talks for the next project, after TripleA, which would be in a totally different category than what we had before. It is going to be a very exciting 2020.</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-image">
+        <a href="/2019/11/02/jayplayco.6wz1rg-a/" class="image is-7by1">
+            <img class="thumbnail" src="https://cdn.steemitimages.com/DQmU7u9kFnTA2LyNQo7YXVdinWa4nqWQCFYTea9obwgwqKM/image.png" alt="[트리플A] 커뮤니티의 확장">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-11-01T16:41:39.000Z">2019-11-02</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    7 minutes membaca (Sekitar 1050 kata)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/11/02/jayplayco.6wz1rg-a/">[트리플A] 커뮤니티의 확장</a>
+            
+        </h1>
+        <div class="content">
+            <center>![](https://cdn.steemitimages.com/DQmU7u9kFnTA2LyNQo7YXVdinWa4nqWQCFYTea9obwgwqKM/image.png)</center>
+
+<p>안녕하세요, @jayplayco입니다.</p>
+<p>이제 매일 매일 트리플A에서 올라오는 모든 글을 읽고, 번역해서 읽고 큐레이션을 한지 한달이 넘어가고 있습니다.<br>일반적으로는 일일중 시간이 되는데로 접속을 해서 큐레이션을 하고 있는 상황이며 @triple.aaa 계정의 보팅파워는 85~90%정도로 유지를 하기 위해서 조절을 하면서 큐레이션을 하고 있습니다. 이제는 하루 새롭게 올라오는 리뷰의 수가 40개 정도를 상회하고 있는 상황입니다. </p>
+<p>특히 시간이 허락할 경우에는 트리플A 외에서의 큐레이션 활동을 영화나 드라마와 관련된 해외및 국내 태그를 찾으면서 댓글을 남기면서 프로젝트 소개를 하는 방식으로 진행하고 있습니다.</p>
+<p>약 한달이 지난 지금 그에 따른 프로젝트의 변화가 서서히 나타나고 있는 상황입니다.</p>
+<h2 id="1-커뮤니티의-확장"><a href="#1-커뮤니티의-확장" class="headerlink" title="1. 커뮤니티의 확장"></a>1. 커뮤니티의 확장</h2><p>초기에는 특히 해외 리뷰의 경우는 어뷰징이 많았습니다. 특정언어의 리뷰를 긁어서 이를 기계번역을 해서 올리는 표절 행위나, 심지어 한국어 리뷰를 영어 번역해서 곧바로 다시 올리는 등의 어뷰징도 있었습니다.</p>
+<p>모더레이션과 큐레이션의 매뉴얼화는 리소스가 많이 들어가는 단점이 있으나, 프로젝트및 커뮤니티의 성향과 컨텐츠의 방향을 잡아가는데는 큰 역학을 하는 것으로 보입니다.</p>
+<p>일반적으로는 표절의 경우는 무경고후 즉각 블랙리스트 처리가 되고 있으며, 태그 어뷰징의 경우는 일반적으로 1회 경고후 재발시 즉각 블랙리스트 처리로 인해 현재는 점점 어뷰징 적어지고 있는 상황입니다.</p>
+<p>또한 한국어의 경우는 새롭게 들어오는 반가운 리뷰어분들도 있고, 특히 해외 영문권과 스페인어권의 경우는 높은 수준의 독자적인 리뷰를 작성하는 리뷰어들이 점점 늘어나고 있는 추세입니다.</p>
+<h2 id="2-커뮤니티를-위한-놀이터"><a href="#2-커뮤니티를-위한-놀이터" class="headerlink" title="2. 커뮤니티를 위한 놀이터"></a>2. 커뮤니티를 위한 놀이터</h2><center>https://steemitimages.com/0x0/https://cdn.steemitimages.com/DQmdnGdgBnXv9vLAaFFaX8ftQbJ3KyQZfvfKjArjRU1Jo7m/AAA.gif
+[소스 @kifiwi]</center>
+
+<p>트리플A가 가장 중점을 두고 있는 것은 결국 커뮤니티가 어떤식으로 성장을 할 수 있는가입니다. 결국 트리플A의 운영진의 중점은 커뮤니티가 어떻게 하면 재미있고 즐겁게 놀 수 있는 놀이터를 제공해줄 수 있는지에 대한 연구와 커뮤니티에 대한 지원입니다. 앞으로 나아가야할 스텝들이 많이 남아있지만 현재 한가지 두가지씩 적용이 되면서 성장하고 있고 실제로 필자의 경우도 영화를 보기위한 영감을 많이 얻어가고 있는 트리플A로 발전하고 있는것으로 판단되고 있습니다.</p>
+<p>트리플A 유저분들의 지속적이고 자체적인 이벤트와 이제는 해외 유저들의 자체적인 컨텐츠 이벤트까지 확장되고 있어서 점점 더 리뷰어들의 놀이터로 자리잡을 수 있는 환경이 되고 있는 것 같습니다.</p>
+<ul>
+<li>해외 감독 기반 리뷰 이벤트 : <a href="https://www.triplea.reviews/contest/@wiseagent/for-your-consideration-01-favorite-directors-or-a-movie-contest-sponsored-by-me-and-the-triplea-project">https://www.triplea.reviews/contest/@wiseagent/for-your-consideration-01-favorite-directors-or-a-movie-contest-sponsored-by-me-and-the-triplea-project</a></li>
+</ul>
+<h2 id="3-다음스텝"><a href="#3-다음스텝" class="headerlink" title="3. 다음스텝"></a>3. 다음스텝</h2><p>다음 스텝은 우리의 마법사 @segyepark님께서 준비중입니다. 어떤 서비스의 얼굴이라고도 할 수 있는 메인 랜딩 페이지에 대한 논리적 Data의 재정렬을 통해서 컨텐츠를 조금더 즐겁게 즐길 수 있도록 조정이 될 예정입니다. </p>
+<p>앞으로도 트리플A에 많은 관심 부탁드립니다. ^^</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-image">
+        <a href="/2019/10/31/jayplayco.hunt-the-importance-of-a-partnership/" class="image is-7by1">
+            <img class="thumbnail" src="https://steemitimages.com/640x0/https://s3-us-west-2.amazonaws.com/steemhunt/production/steemhunt/2019-10-20/31406fd2-cyxkEVqiiLy2ofdgrJNxeZC3WCHPBwR7MjUDzY4kBNr81QaZqSLsxK985AjmvVYUnvHJYy7oCEfX3QaXwRdHKZGvCfQfkT4vRtqUZPp15dZ7aSxBJrZRhySHHc3vWwZ3ZK4.jpg" alt="[HUNT] The importance of a partnership">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-10-30T19:18:03.000Z">2019-10-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    12 minutes membaca (Sekitar 1836 kata)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/10/31/jayplayco.hunt-the-importance-of-a-partnership/">[HUNT] The importance of a partnership</a>
+            
+        </h1>
+        <div class="content">
+            <center>https://steemitimages.com/640x0/https://s3-us-west-2.amazonaws.com/steemhunt/production/steemhunt/2019-10-20/31406fd2-cyxkEVqiiLy2ofdgrJNxeZC3WCHPBwR7MjUDzY4kBNr81QaZqSLsxK985AjmvVYUnvHJYy7oCEfX3QaXwRdHKZGvCfQfkT4vRtqUZPp15dZ7aSxBJrZRhySHHc3vWwZ3ZK4.jpg</center>
+
+<p>Hi, @jayplayco here.</p>
+<p>A few days ago a news article had been released in Korea, announcing the official partnership between the HUNT platform and Lambda256 (Luniverse Blockchain as a service). I would like to get into the story of the startup behind the platform HUNT, how to startup on the Steem Blockchain and what this partnership means.</p>
+<h2 id="0-Background"><a href="#0-Background" class="headerlink" title="0. Background"></a>0. Background</h2><p>The team and startup behind Steemhunt and the Hunt platform is coming from a traditional startup and cooperate background. After starting to realize their idea to give the original Producthunt platform an upgrade and going back to the roots of ranking cool products, they bootstrapped Steemhunt for over a year with the support of Steemit Inc. ‘s delegation of 1 million Steem Power and from their personal budget. From May 2018 there have been more than 80K products reviewed, shared and ranked, which shows the immense success of Steemhunt. </p>
+<center>![](https://cdn.steemitimages.com/DQmTaMLocLeK42FYhceiiYJwhq51uF1SiqcW4Xb7A1TE7wS/image.png)</center>
+
+<h2 id="1-Running-a-community-based-project-on-Steem"><a href="#1-Running-a-community-based-project-on-Steem" class="headerlink" title="1. Running a community-based project on Steem"></a>1. Running a community-based project on Steem</h2><center>![](https://cdn.steemitimages.com/DQmbfnmiTh2vaHs2B7NUD27Aw5xuBQ7HTLvVq2G1RRxL5cE/image.png)</center>
+When you start a business that is based on the Steem blockchain, you will have to get familiar with the community at Steem and also about different kinds of rules based on Proof of brain (POB). Staked Steem Power(SP) gives you the possibility to distribute Steem from the reward pool. Compared as an example with Bitcoin, where you need a lot of hardware power to create Hashpower and running a node to be able to get rewarded in Bitcoin, Steem has also a reward pool that comes from staked Steem Power. 
+
+<p>The project Steemhunt was able in 2018 to get the attention of Steemit Inc. and a delegation of 1 million Steem Power. Including other delegations, Steemhunt was able to distribute based on a voting power of about 1.7 million Steem Power, which was on a higher Steem price about 2500 USD rewards per day. </p>
+<p>These high rewards attracted a lot of Steem users to the platform and also started the rally of abusers to milk the system. The team needed to start a few month-long battles with these abusers to adapt and develop a system to stop this behavior. Steemhunt has now one of the most sophisticated anti-abusing systems available.</p>
+<p>But the real difficulty came with the bear market, which had been affecting all kinds of Blockchain projects on the market. The general active user base was shrinking, not only for Steemhunt but in general for Steem. Not only the users but also Steemit Inc. had its backslashes and needed to release about 70% of their staff, which backfired the development of SMT.  <a href="https://www.coindesk.com/steemit-lays-off-70-of-its-staff-citing-crypto-bear-market">Source</a></p>
+<p>Nonetheless, the team decided to move on even in a bearish market with an IEO and launched the ERC-20 based HUNT token on the Daybit Exchange. The IEO had been successful and the team was able to gather funding to move on developing the HUNT platform.</p>
+<h2 id="2-Delegated-Steem-Power-is-not-a-Business-model-but-only-a-non-accessable-marketing-fund"><a href="#2-Delegated-Steem-Power-is-not-a-Business-model-but-only-a-non-accessable-marketing-fund" class="headerlink" title="2. Delegated Steem Power is not a Business model but only a non-accessable marketing fund."></a>2. Delegated Steem Power is not a Business model but only a non-accessable marketing fund.</h2><center>![](https://cdn.steemitimages.com/DQmUek5JdGMALWefT66taLBoMZcJvBKPDdsfuTWvgubB4b6/image.png)</center>
+If you are preparing a business based on the Steem blockchain, POB is a very powerful tool to increase the awareness of your project between Steem users. But if you understand the specifics of how the Steem economy works, you will have to understand that any kind of delegated Steem will not directly convert into a direct income to run your project. The team behind the Hunt platform is running Steemhunt as a company and a full-time project. It means that the business's purpose is to generate income to be able to run the service. Delegated Steem Power does not create any income unless you are going to power-down and sell your Steem Power. Let's see how Steemhunt used the Steem Power.
+
+<ul>
+<li>Rewarding users based on the ranking and internal levels</li>
+<li>Curation reward (started with 25%, now 50%) is getting rewarded also directly 100% in Steem Power.</li>
+<li>Steem Power needs 13 weeks to gets fully un-staked.</li>
+<li>Steemhunt staked most of the curation reward (93%) and used part of it for distribution to delegators or for marketing purposes.</li>
+</ul>
+<p>As you can see, as long as there is no funding from the outside, delegated Steem Power is a great tool for marketing your project but not directly useable as a business model for your project. At the end, you will need fundings either from customers or from investors.</p>
+<h2 id="3-Reaching-users"><a href="#3-Reaching-users" class="headerlink" title="3. Reaching users"></a>3. Reaching users</h2><center>![](https://cdn.steemitimages.com/DQmUxKKgLRSNGRHVjiBcFKLD5VAYJ56GTtxu23exJj2uPWB/image.png)</center>
+
+<p>The biggest strength that the Steem blockchain can offer is the community behind it. With a good product, marketing plan and a reasonable amount of (delegated) Steem Power, it is possible to have in a short amount of time a high number of user engagement, which has already a deep understanding of the environment of a blockchain and the rewarding mechanism. The bigger the Steem community is, the bigger the chance that your niche is going to have sophisticated users investing either time or money on your project. </p>
+<p>A very good example of a Steem based project is also Splinterlands (@steemmonsters), having already sold 7 figure dollars virtual NFT in several crowd fundings and general sales.</p>
+<center>![](https://cdn.steemitimages.com/DQmQNza9S4vXvJXFKyWv5P9W3oGfrGdfo1eN2cd3DFfQ2Wx/image.png)
+[Source: Untamed Kickstarter](https://www.kickstarter.com/projects/526764488/splinterlands-untamed-a-blockchain-trading-card-game/description)</center>
+
+<p>Due to the bearish market, the general number of Steem users has gone down under 3000 active accounts, but for a few months, Splinterlands has more active accounts on their platform than Steemit.com itself.</p>
+<center>![](https://cdn.steemitimages.com/DQma6CDgYcXyrfvUHstr5zEGpGdU4RSVPAcSBmdTZz56PXd/image.png)
+[Source: StateoftheDapps](https://www.stateofthedapps.com/platforms/steem)</center>
+
+<p>It means that more active users are using the Splinterlands platform than Steemit.com. One point needs to be mentioned here, as the Steem Social Media Front is not only available from Steemt.com but also from different other condensers like busy.org or Steempeak, etc. </p>
+<p>For Steem itself it is a very positive effect that more and more projects are leveraging the Steem blockchain to run their projects. But if we go into details, it is also an invisible barrier for any kind of Steem project, as it is going to need onboard new users on Steem to grow the project.</p>
+<h3 id="a-Direct-onboarding"><a href="#a-Direct-onboarding" class="headerlink" title="a. Direct onboarding"></a>a. Direct onboarding</h3><center>![](https://cdn.steemitimages.com/DQmWrxCb7vktj2oGGX6a5CLuLkfbPrWs7MrD9uotc2PdAvW/image.png)</center>
+
+<p>Steemhunt has one of the most convenient and easiest Steem onboarding system developed, that includes a 2-month min. Steem delegation. It reduces the hassle for an account for the Steem blockchain which is, in reality, a very high barrier for new users outside the Steem economy to onboard.</p>
+<p>This is the most direct way to increase the account numbers for the Steem blockchain.</p>
+<h3 id="b-Indirect-onboarding"><a href="#b-Indirect-onboarding" class="headerlink" title="b. Indirect onboarding"></a>b. Indirect onboarding</h3><p>An indirect way of onboarding is to expand the economy outside of Steem and bring active users to the chain. Splinterlands has already expanded to the Tron chain and it could be not the only chain Splinterlands is expanding. The biggest advantage of this strategy is, that you are targeting an audience that is already used to Blockchain technology and terms. In most cases, also this audience is used to invest in cryptocurrencies. </p>
+<p>The Hunt platform is also already running a multi-chain project, as the HUNT token itself is currently an ERC-20 token, which is planned to be swapped to a Luniverse based token. </p>
+<h2 id="4-Meaning-of-partnering-with-other-chains"><a href="#4-Meaning-of-partnering-with-other-chains" class="headerlink" title="4. Meaning of partnering with other chains"></a>4. Meaning of partnering with other chains</h2><center>![](https://cdn.steemitimages.com/DQmThUcUtSuTddimW9MnnZyeotUe9em4DCY5CWBfPwT4uWV/image.png)</center>
+
+<p>There are several beneficial facts about the Steem Blockchain and some hard facts are like below.</p>
+<ul>
+<li>Only chain to develop based on Proof of Brain</li>
+<li>Fast and almost free of charge use of Chain (Based on Resource Credits coming from Steem Power)</li>
+<li>One of the strongest Blockchain community<br><a href="https://steemit.com/palnet/@aggroed/top5-reasons">Related article link</a></li>
+</ul>
+<p>One downside of Steem is that Steemit Inc.’s main revenue source is selling its liquid Steem on the market which results in an endless spiral of price pressure on the cryptocurrency Steem. Additionally, the only way to for Steemit Inc. to push Steem based projects is delegated Steem, which is great as a marketing tool within the Steem community but also limiting the possibilities to outreach the Steem economy (and increase the user base for a project)</p>
+<p>On the other side, there are blockchains and projects that have fundings and also influence the cryptocurrency market that can help a project to get more visibility and also reach more users.</p>
+<p>It can start from direct funding to connecting the right contacts and could also mean help to find the right partners for business extensions like increasing the direct user base or listing on exchanges.</p>
+<h2 id="5-Halo-effect"><a href="#5-Halo-effect" class="headerlink" title="5. Halo effect"></a>5. Halo effect</h2><center>![](https://cdn.steemitimages.com/DQmeoZwyrq4UzRwnNy4swQMgaEm3X1PrbMZzAdm4RTEbq1A/image.png)</center>
+
+<p>All these kinds of partnerships will have halo effects on each other. Dapps are going to leverage the benefits from each chain for their projects and users. As multichain Dapps are tending to give exposure for all kinds of chains they are using, it will help to increase the visibility not only for the Dapp itself but also for the chains that are onboard of these Dapps. </p>
+<h2 id="6-Personal-thoughts"><a href="#6-Personal-thoughts" class="headerlink" title="6. Personal thoughts"></a>6. Personal thoughts</h2><p>The real use of Blockchain technology will come with the usage of Dapps that will surround our daily life. Blockchain is going to be an underlying technology like we use HTTP without knowing it. The first Killer App for HTTP was E-mail and the revolution came with E-commerce followed by different fields of businesses. </p>
+<p>As Blockchain technology comes today together with decentralized financial structures, the struggle from the current world is even higher than we had it from the E-commerce wave, but I am sure that the change has already started and it is going to be adapted even faster than E-commerce has.</p>
+<p>Many Steem based projects are showing the first view of the future we will see in Dapps based on Blockchain projects and I think the Hunt project is on a good way to create a successful path for following projects, “How to startup on Blockchain.”</p>
+<hr>
+<ul>
+<li><a href="https://blog.naver.com/no1writer/221638738828">Blog Source - Interview with Luniverse CEO Mr. Park (Korean)</a></li>
+<li><a href="https://decenter.kr/NewsView/1VPPKZC41O">Article - Decenter.kr - Hunt Platform is partnering with Lambda256</a></li>
+<li><a href="https://steemit.com/hunt/@steemhunt/steemhunt-2-0-and-new-hunt-platform-is-coming">Article - @steemhunt - Steemhunt 2.0</a></li>
+<li><a href="https://token.hunt.town/">About the Hunt platform</a></li>
+<li><a href="https://token.hunt.town/HUNT-Whitepaper-v2.0-EN.pdf">HUNT Platform Whitepaper</a></li>
+<li><a href="https://token.hunt.town/HUNT-Pitch-v3.0-EN.pdf">Hunt Platform Pitchdeck</a></li>
+<li><a href="https://steemit.com/palnet/@aggroed/top5-reasons">Article - @aggroed - Top 5 reasons to develop on Steem</a></li>
+</ul>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-image">
+        <a href="/2019/10/31/jayplayco.coinnews-kisa-2020/" class="image is-7by1">
+            <img class="thumbnail" src="https://cdn.steemitimages.com/DQme3xwYNjPSUHzjNezoywQ6JG8GfTW2EynHoDUqQzeeno4/image.png" alt="[Coinnews] KISA의 2020년 블록체인 지원 현황">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-10-30T15:55:12.000Z">2019-10-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    9 minutes membaca (Sekitar 1275 kata)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/10/31/jayplayco.coinnews-kisa-2020/">[Coinnews] KISA의 2020년 블록체인 지원 현황</a>
+            
+        </h1>
+        <div class="content">
+            <center>![](https://cdn.steemitimages.com/DQme3xwYNjPSUHzjNezoywQ6JG8GfTW2EynHoDUqQzeeno4/image.png)</center>
+
+<p>안녕하세요, @jayplayco입니다.</p>
+<p>한국 정부의 경우는 암호화폐 투기에 대해서는 가능한 선에서 제재를 하고 있고, 예상으로는 내년 6월달부터 시작될 FATF의 제재에 맞 현행법도 같이 바꿔야할 것으로 보입니다만, 그와는 별개로 다행이 블록체인 자체에 대해서는 어느정도 지원을 하고 있는 것을 볼 수 있습니다.</p>
+<p>이번 KISA에서는 블록체인 관련 시범 사업을 위해 간담회를 개최했는데, 기사에 의하면 약 9백만불 정도 (100억원)의 지원을 2020년에 할 예정이라고 하네요.</p>
+<p>프로젝트들은 각 도시나 도차원에서 필요한 프로젝트에 블록체인을 입히면서 이에 대한 개발을 의뢰하는 형태로 구성이 됩니다.</p>
+<ul>
+<li>신뢰기반 기록관리 플랫폼 구축 (국가기록원)</li>
+<li>방위사업 지원을 위한 플랫폼 구축 (방위사업청)</li>
+<li>인증서없는 민원 서비스 제공을 위한 플랫폼 구축 (병무청)</li>
+<li>재난재해 예방 및 대응 서비스 구축 (부산시)</li>
+<li>의료 융합서비스 시스템 구축 (서울 의료원)</li>
+<li>시간제 노동자 권익보호 (서울시)</li>
+<li>식품안전관인 서비스 플랫폼 구축 (식약처)</li>
+<li>전자우편사서함 (우정사업본부)</li>
+<li>전북도 스마트 투어리즘 플랫폼 구축 (전북)</li>
+<li>전기차 폐배터리 유통이력 관리 시스템 구축 (제주도)</li>
+<li>블록체인 기반 REC 거래소 서비 (한국남부전)</li>
+<li>탄소배출권 이력관리시스템 구축 (환경부)</li>
+<li>탈중앙화 기부 플랫폼 (이포넷)</li>
+<li>블록체인 ID/인증 네트워크 기반 금융, 통신, 교육 분야 서비스 개발 및 응용 확산 사업 (SK 텔레콤)</li>
+<li>블록체인 기반 중고차 서비스 플랫폼 개발 (현대 오토에버)<br><a href="http://www.kisa.or.kr/synap/doc.html?fn=201910281108460713.pdf&rs=/synapfile/">원본 PDF 링크</a></li>
+</ul>
+<h2 id="개인적인-생각"><a href="#개인적인-생각" class="headerlink" title="개인적인 생각"></a>개인적인 생각</h2><p>우선 정부 차원에서 블록체인 기반 기술에 대한 시도를 하기 위해서 재원을 태워서 각종 프로젝트를 지원하는 것은 좋은 현상이라고 평가해야합니다. 기본적인 관심을 가지고 블록체인에 대한 최소한의 이해를 통해서 앞으로의 먹거리 발전을 위해서 한걸음씩 나아가겠다는 이야기로 해석될 수 있습니다.</p>
+<p>한가지 우려되는 것은, 현재 여러 블록체인 관련 사업에 대한 지원을 추진중에 있는데, 많은 부분은 정부와 직접적인 연관이 있는 관계로 PBC (Private Blockchain)이 될 확률이 높을 것으로 보입니다. 만약 그렇다면, 우선 정부 차원에서 자원을 태워서 자체적인 블록체인망을 구성하고 노드를 돌려서 그 바탕으로 서비스들이 개발되도록 하는 것 좋지 않을까 라는 생각을 합니다. 그 이유는 해당 프로젝트들은 실제로 블록체인을 개발해야할 프로젝트라기 보다는 블록체인 기반의 DAPP을 개발하는 것이기 때문입니다. 이미 다른 기업들도 비슷하게 하듯이 기존에 존재하는 블록체인필요에 따라서 추가 개발하고 하드포크해서 운영하는 방식을 하던지,  아예   처음부터 개발을 할지는 정해져야하겠지만, 기업 단위의 서비스가 아닌 정부 사업의 블록체인 기반 서비스 (식약처, 방위사업청등)의 경우네는 통일된 블록체인을 바탕으로 운영이 되면 효율이 확실히 좋을 것으로 예상되기 때문입니다.</p>
+<p>하지만, 현실은 그렇지 않겠죠. 각 부서별로 각각 필요한 부분만 발췌해서 이중, 삼중, 사중으로 비용을 지불하면서 각기 서비스와 그에 따른 블록체인을 개발을 하면서 경쟁적으로 개발이 될 확률이 높을 것으로 판단되는 부분이긴 합니다. 이런 경우의 장점은 비용 지불은 높아질 수 있어도, 경쟁적, 비교적 개발이 되면서 추후 우수한 시스템 개발 될 확률도 있을 수 있다는 것입니다.</p>
+<p>앞으로는 특수한 기술이 아니라, 그냥 기본 layer로 깔려 있는 기술중 하나가 될 블록체인의 개발 미래를 한발 먼저 들여다보는 하루였습니다.  </p>
+<ul>
+<li><a href="https://www.coindesk.com/korean-government-to-back-blockchain-startups-with-9-million-fund-in-2020">코인데스크 - Korean Government to Back Blockchain Startups With $9 Million Fund in 2020</a></li>
+<li><a href="http://www.kisa.or.kr/synap/doc.html?fn=201910281108460713.pdf&rs=/synapfile/">Kisa - 블록체인 시범사업 참여기업 간담회 개최 </a></li>
+</ul>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-image">
+        <a href="/2019/10/28/jayplayco.mvhnp-coinnews/" class="image is-7by1">
+            <img class="thumbnail" src="https://cdn.steemitimages.com/DQmcnnYmuQy8hUgkLpuSCFRuGeeH5V5djtnT6ah1vSKVFiM/image.png" alt="[Coinnews] 양자컴퓨터와 블록체인">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-10-27T16:07:24.000Z">2019-10-28</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    9 minutes membaca (Sekitar 1313 kata)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/10/28/jayplayco.mvhnp-coinnews/">[Coinnews] 양자컴퓨터와 블록체인</a>
+            
+        </h1>
+        <div class="content">
+            <center>![](https://cdn.steemitimages.com/DQmcnnYmuQy8hUgkLpuSCFRuGeeH5V5djtnT6ah1vSKVFiM/image.png)</center>
+
+<p>안녕하세요, @jayplayco입니다.</p>
+<p>이번에 구글에서 Nature지에 실은 논문에는 최초로 양자학 컴퓨터를 개발해서 그들의 주장에 의하면 세계 최고의 슈퍼컴퓨터가 1만년이 걸릴 연산을 양자학 컴퓨터는 200초에 연산 했다고 발표했습니다. 물론 이들 주장에 반박을 하고자 IBM의 컴퓨터학자들은 그들의 슈퍼컴퓨터인 Summit의 경우는 1만년이 아니라 2.5일 정도면 연산이 될것이라고 했지만, 그래도 200초만 연산이 되었다는 것은 대단한 발전인 것은 명확합니다.</p>
+<p>이에 따라 한때 암호화폐 가격들도 잠깐 출렁이긴 했는데, 도대체 양자학 컴퓨터와 블록체인이 어떤 연관이 있는지 확인해보겠습니다.</p>
+<h2 id="1-양자학-컴퓨터란"><a href="#1-양자학-컴퓨터란" class="headerlink" title="1. 양자학 컴퓨터란"></a>1. 양자학 컴퓨터란</h2><p>간단하게는 일반 컴퓨터의 경우는 연산은 1 or 0으로 하는 형태를 취하는데 양자학 컴퓨터는 1과 0을 그리 0과 1의 조합을 동시에 나타내고 저장할 수 있는 양자 비트를 이용하여 데이터를 처리할 수 있는 관계로 연산의 접근방식이 완전히 다르며 이에 따른 연산의 속도차이가 확연하게 들어난다고 합니다. <a href="https://brownbears.tistory.com/381">소스</a></p>
+<h2 id="2-컴퓨터-연산과-블록체인의-연관성"><a href="#2-컴퓨터-연산과-블록체인의-연관성" class="headerlink" title="2. 컴퓨터 연산과 블록체인의 연관성"></a>2. 컴퓨터 연산과 블록체인의 연관성</h2><p>모든 블록체인이 그러한 것은 아니지만, 적어도 가장 중요하다고 할 수 있는 비트코인의 경우는 pow 방식으로 블록체인에 기록을 하기 위해서 복잡한 연산식을 풀어내는 노드에게 보상을 주는 형태를 가지고 있습니다. 초기 비트코인 연산시에는 CPU만으로 연산이 되어도 비교적 많으 비트코인 보상을 받을 수 있었습니다만, 이 이는 그래픽카드로 넘어가고 최종적으로는 비트코인이나 다른 암호화폐를 전용으로 채굴하기 위한 칩셋을 개발한 ASICS가 개발이 되면서 비트코인 채굴의 HASHRATE를 지배하게 되었습니다.</p>
+<p>이 배경으로 현재 ASICS의 대부분을 만들어내는 중국이 가증 높은 해쉬를 보유하고 있는 상황입니다.</p>
+<p>그러면 양자학 컴퓨터랑의 연관은?</p>
+<p>우선 ASICS의 경우도 결국은 비트코인의 보상을 받기 위해 계산해야할 연산식을 풀기 위해 최적화된 칩셋이라고 생각하시면 됩니다. 다른 기능은 없고, 오로지 비트코인의 연산식 계산을 위해 모든 기능들을 집중한 칩셋인 셈이죠. </p>
+<p>기존에도 슈퍼컴퓨터가 비트코인 채굴에 참여를 하게 된다면 사실상 51%이상을 순식간에 차지하게 될 것이기 때문에 비트코인이 무너진다는 우려가 있기는 했었습니다. 그보다도 더욱더 뛰어난 양자학 컴퓨터의 경우는 IBM의  주장대로 200초 대비 2.5일일 경우에도 1080배는 빠르기 때문에 비트코인 연산을 풀어내는데는 어려움이 없을 것으로 예상이 됩니다.</p>
+<h2 id="3-정말-양자학-컴퓨터-때문에-POW는-끝나는것인가"><a href="#3-정말-양자학-컴퓨터-때문에-POW는-끝나는것인가" class="headerlink" title="3. 정말 양자학 컴퓨터 때문에 POW는 끝나는것인가?"></a>3. 정말 양자학 컴퓨터 때문에 POW는 끝나는것인가?</h2><p>사실상 그럴 가능성은 적어보입니다. 스탠퍼드의 댄 보네 교수는 지난 <a href="https://www.mk.co.kr/news/it/view/2019/10/878419/">24일 발표된 인터뷰</a>에서 언급한것 처럼 사실상 양자학 컴퓨터를 이용해서 블록체인의 노드를 한꺼번에 바꾸려고 한다면 이를 위해서는 최소 30년 가량의 시간이 소요된다고 예상했습니다. 또한 그 기간동안 예를들어 비트코인의 연산 방식을 하드포크를 통해서 양자학 컴퓨터 수준으로 맞추 아런 문제가 없습니다. (실제 양자학 컴퓨터로 비트코인을 채굴했을 경우 채산성이 맞을지는 둘째치고서라도)</p>
+<h2 id="4-개인적인-생각"><a href="#4-개인적인-생각" class="headerlink" title="4. 개인적인 생각"></a>4. 개인적인 생각</h2><p>기술은 지속적으로 발전을 해왔습니다. 블록체인도 빠른 시간내에 계속적인 발전을 하고 있고, 사람들과 커뮤니티들은 블록체인 기반의 여러가지 실험들을 하면 발전 시키고 있는 상황입니다. 비트코인의 POW가 추후 하드포크되어서 어떠한 형태로 바뀔지 모르는 상황에서 무조건적으로 컴퓨터 연산의 획기적인 발전으로 인해서 블록체인 전체가 무너질것으로 본다는 듯한 예견은   조심스러울 필요가 있다고 생각합니다.</p>
+<ul>
+<li><a href="https://www.mk.co.kr/news/it/view/2019/10/878419/">기사 - 매일경제 - 핀도로 등 신기술 쏟아져 블록체인 양자컴 함께 발전</a></li>
+<li><a href="https://phys.org/news/2019-10-google-quantum-supremacy-future.html">기사 - Phys Org - What Google’s ‘quantum supremacy’ means for the future of computing</a></li>
+</ul>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-image">
+        <a href="/2019/10/26/jayplayco.7bweea-coinnews/" class="image is-7by1">
+            <img class="thumbnail" src="https://cdn.steemitimages.com/DQmSfq1TT3LkGu34z2jS1wYzmiRfK65GrVTWxQWFnJuHL59/image.png" alt="[Coinnews] 중국 국가주도 블록체인 드라이빙 가능성">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-10-26T14:21:18.000Z">2019-10-26</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    10 minutes membaca (Sekitar 1568 kata)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/10/26/jayplayco.7bweea-coinnews/">[Coinnews] 중국 국가주도 블록체인 드라이빙 가능성</a>
+            
+        </h1>
+        <div class="content">
+            <p><img src="https://cdn.steemitimages.com/DQmSfq1TT3LkGu34z2jS1wYzmiRfK65GrVTWxQWFnJuHL59/image.png" alt=""></p>
+<p>안녕하세요, @jayplayco입니다.</p>
+<p>작일 하루 암호화폐계는 크게 바람이 한번 불어왔습니다. 물론 이유는 여러가지가 있을 수 있지만, 중국 시진핑 주석의 언급이 비교적 큰 영향을 끼쳤다는 의견이 많습니다.</p>
+<p>그러면 현재 중국은 어떤 상황인지 알아보도록 하겠습니다.</p>
+<ul>
+<li>전세계 비트코인 Hashrate 50% 이상 운영 </li>
+<li>거래소와 트레이딩 플랫폼 2017년 말에 전격 금지 (중국발 거래소가 2018년 다 해외로 이주, 바이낸스 포함)</li>
+<li>Libra 발표 이후 중국 중앙은행 디지탈 화폐 출시 예고 (CBDC)</li>
+<li>시진핑 주석 “중국도 블록체인 기술 발전, 업적 혁신을 위한 발전 속도를 내야 한다” 고 언급</li>
+</ul>
+<p>기본적인 그림은 여전히 비트코인이나 다른 암호화폐용 Asics의 제조는 100% 다 중국에서 제조되고 있으며, 대부분의 Asics회사도 다 중국에 뿌리를 두고 있습니다. 거래규모의 경우는 중국내의 암호화폐 거래소가 금지된 이후에 제대로 잡히지는 않지만, 많은 암호화폐의 경우 중국의 고래들이 보유하고 있는 경우가 많다고 합니다. 실제로 프로젝트들도 중에 시작된 경우가 많고 (트론, 질리카, 네오등) 아니면 자산 보유량이 대부분 중국인들 손에 있는 경우도 있습니다. (EOS) </p>
+<p>이렇듯, 중국 주석의 블록체인 관련 긍정적인 언급은 암호화폐 커뮤니티에도 매우 긍정적인 신호로 받아들여졌을 확률이 높습니다. </p>
+<p>여기서 주의해야할 것이 한가지가 있긴 합니다.</p>
+<p>정책상 블록체인을 양성하자는 취지와 암호화폐 트레이딩에 대한 개방이나 지원등은 다르다는 이야기입니다. 큰 그림을 보면 현재 리브라의 경우는 페북이 진행한다는 미명하에 국가별 공격으로 주춤하고 있지만, 중국의 경우는 CBDC를 이번 시진핑 주석의 언급 이후 더욱 빠르게 밀고 나갈 것으로 보입니다.</p>
+<p>이때 주시해야하는 것은 실제로 중국의 finance market이 우리가 알고 있는 것과는 차이가 있다는 것입니다.</p>
+<p>우리나라와 같이 신용카드라는 금융제품이 널리 활용되고 정착된 곳에는 새로운 금융상품이 자리를 잡기는 쉽지 않습니다. 이는 기존 상품들의 ‘텃새’와도 비슷한 소비자들의 습관과 기업들의 혁신 의지가 없을때 일어나는 시너지 효과입니다.</p>
+<p>중국의 경우는 신용카드라는 금융제품이 자리를 잡기 전에 ‘바코드’ 결제라는 제품이 시장을 잠식했습니다. </p>
+<center>![](https://cdn.steemitimages.com/DQmTmHXUHKzDB3gNNP8DEaJ3AGrBf9h7yBCJY7CSFYex1Zh/image.png)
+[Source: South china Morning Post](https://www.scmp.com)</center>
+
+<p>실제로 일반 시장에서 결제가 바코드로 이루어지는것 뿐만 아니라 길거리의 상인들 조차도 바코드를 인쇄하고 결제를 받을 정도로 확산및 정착이 되어 있습니다. 이는 바코드 결제를 통해 중국내에 제 2의 화폐가 형성되었다고 할 수 있을 정도 사용이 보편화되어 있다는 것입니다.</p>
+<p>이와 같은 시장에서 중국 중앙은해엣어 블록체인 기반이나 디자탈 기반 CBDC는 충분히 정착을 할 수 있는 환경이 되며, 중국 내수정도의 규모로도 충분히 큰 금융시장을 형성 할 수 있습니다. 이에 CBDC는 스테이블 코인을 표항하는 관계로 가치적으로는 기업 규모가 아닌 중국 정부가 이를 보장할 것으로 가장 먼저 치고 나가는 대규모 스테이블 코인이 될 것으로 여겨집니다.</p>
+<h2 id="개인적인-생각"><a href="#개인적인-생각" class="headerlink" title="개인적인 생각"></a>개인적인 생각</h2><p>중국의 블록체인 관련 발돋움이 국제 금융 시장과 암호화폐 전체시장에 어떤 영향을 미칠 수 있을지에 대해서는 아직은 불투명하다고 보고 있습니다. CBDC가 발행되었을 시, 어떤 조건과 어떤 담보를 바탕으로 설계되는지에 따라 그 안전성과 가치가 만들어지기 때문입니다. 또한 아직은 위안화가 국제 화폐로의 공식적인 위치를 확고히 잡지 못한 상황이라서, 이를 바탕으로 스테이블하게 설계된 디지탈 화폐의 스테이블성과 환전성을 얼만큼 보장받으며 국제 금융 (암호화폐 시장)에서 받아들여질지도 두고 봐야할 것으로 보입니다.</p>
+<p>다만, 각 국가별 중앙은행들의 움직임이 바빠질것으로 보이기는 합니다. 중국이 먼저 치고 나갔을 경우, 리브라의 허용을 통해 대항마를 만들게 될지, 아니면 좀더 가능성이 높은 각 주요국의 중앙은행들도 각기 암호화폐/디지탈 화폐 프로젝트들을 더욱 빠르게 추진해서 정착시키려고 하는 움직임이 있을것으로 예상됩니다. </p>
+<ul>
+<li><a href="https://www.coindesk.com/president-xi-says-china-should-seize-opportunity-to-adopt-blockchain">기사 - 코인데스크 - President Xi Says China Should ‘Seize Opportunity’ to Adopt Blockchain</a></li>
+<li><a href="https://news.joins.com/article/23616002">기사 - 중앙일보 - “블록체인 중요” 시진핑 발언 다음 날 암호화폐 40% 폭등</a></li>
+<li><a href="https://thenextweb.com/hardfork/2018/10/08/china-means-intent-destroy-bitcoin/">기사 - Thenextweb - Research: China has the power to destroy Bitcoin</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Legality_of_bitcoin_by_country_or_territory">소스 - Wikipedia - Legality of bitcoin by country or territory</a></li>
+<li><a href="https://www.telegraph.co.uk/china-watch/technology/china-digital-currency/">기사 - The Telegraph -China’s digital currency may be world first</a></li>
+<li><a href="https://www.scmp.com/business/china-business/article/2080841/rise-qr-code-scams-china-puts-online-payment-security">기사 -South China Morning post - QR code scams rise in China, putting e-payment security in spotlight</a></li>
+</ul>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    
+<div class="card card-transparent">
+    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+        <div class="pagination-previous">
+            <a class="is-flex-grow has-text-black-ter" href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/page/6/">Sebelumnya</a>
+        </div>
+        <div class="pagination-next">
+            <a class="is-flex-grow has-text-black-ter" href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/page/8/">Berikutnya</a>
+        </div>
+        <ul class="pagination-list is-hidden-mobile">
+            
+            <li><a class="pagination-link has-text-black-ter" href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/">1</a></li>
+            
+            <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/page/6/">6</a></li>
+            
+            <li><a class="pagination-link is-current" href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/page/7/">7</a></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/page/8/">8</a></li>
+            
+            <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/page/26/">26</a></li>
+            
+        </ul>
+    </nav>
+</div>
+</div>
+                
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="제플코 제이의 블록체인" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 Jayplayco&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("kr");</script>
+
+
+<script>
+var IcarusThemeSettings = {
+    site: {
+        url: 'http://jayplayco.github.io',
+        external_link: {"enable":true,"exclude":[]}
+    },
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'true'
+        }
+    }
+};
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+
+<script src="/js/main.js" defer></script>
+
+    
+</body>
+</html>

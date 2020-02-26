@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html  lang="kr">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 4.2.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>[Snax] 스낵스 작동 원리 - 제플코 제이의 블록체인</title>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-1-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="[Snax] 스낵스 작동 원리" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-end">
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-12 has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-image">
+        <span  class="image is-7by1">
+            <img class="thumbnail" src="https://files.steempeak.com/file/steempeak/jayplay.cur/0LkglmkV-image.png" alt="[Snax] 스낵스 작동 원리">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-10T12:25:54.000Z">2019-06-10</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    9 minutes membaca (Sekitar 1403 kata)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                [Snax] 스낵스 작동 원리
+            
+        </h1>
+        <div class="content">
+            <center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/0LkglmkV-image.png)</center>
+
+<p>안녕하세요, @jayplayco입니다.</p>
+<p>작일이 Snax의 스팀 에어드랍을 받을 수 있는 마지막날이라고 해서 이미 커뮤니티에서는 많은 SNAX 등록글들이 보이네요 ^^.</p>
+<center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/FaGjF3e8-image.png)</center>
+
+<p>필자의 경우는 이미 5월중에 등록을 끝내고 <a href="https://steemit.com/kr/@jayplayco/snax">소개도 해드렸었는데</a> 그 사이에 스팀과 트위터를 연동해놔서 SNAX가 조금 쌓여있었네요.</p>
+<p>따로 한것이 없는데 받는게 있으니 좋기는 한데, 어떤 방식으로 작동하는지가 궁금해서 조금 파고 들어가봤습니다</p>
+<h2 id="1-SNAX-연동"><a href="#1-SNAX-연동" class="headerlink" title="1. SNAX 연동"></a>1. SNAX 연동</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/tcOGoeIj-image.png)</center>
+
+<p>스낵스는 현재 트위터와 스팀 이 두가지 SNS가 연동이 되고 있습니다. 그리고 각 SNS별 Attention Rate라고 하는 점수를 부여해줍니다. Attention Rate는 컨텐트가 일정 기간 갖고 있는 총 어탠션을 보여주고자 하는 값입니다. 예를 들어 저의 경우는 현재 514위입니다만, 저 등수는 스낵스와 연동된 계정뿐만 아니라 스팀 전체 계정을 다 포함하는 값입니다.</p>
+<p>이를 확인하기 위해서 잘 알고 있는 다른분의 계정이 눈에 띄어서 확인을 해봤습니다.</p>
+<center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/AvWAohSQ-image.png)</center>
+@segyepark님이 몇일전 현 JJM와  AAA 관련 개발 [현황에 대해서 공유를](https://steemit.com/aaa/@segyepark/jjm-aaa) 해주셨는데, 이 글이 지난 scoring round에서 어마무시한 영향력을 과시해서 현재 전체 유저의 어탠션레이트중 4위를 차지하고 있습니다. ~~그런데 함정이, 아직 세계님은 Snax연동을 하지 않으셨다는 사실.~~ (어제 알려드렸더니 설정하셨네요 ㅎ.) 그리고 지금까지 놓친 Snax 리워드가 무려 거의 10K이네요. 어쨌던 자랑스럽습니다. 전세계 스티미언 SNAX 어탠션 레이트 영광의 4위는 @segyepark님입니다. ^^
+<center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/1O5vzovy-image.png)</center>
+
+<h2 id="2-SNAX-리워드"><a href="#2-SNAX-리워드" class="headerlink" title="2. SNAX 리워드"></a>2. SNAX 리워드</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/t2lzn0NX-image.png)</center>
+
+<p>그렇다면 저의 경우는 어떤지 한번 보겠습니다. </p>
+<ul>
+<li>Scoring 라운드에 포함된 포스팅은 39개입니다. 즉, 작성한 지난 39개의 포스팅을 계산하는데 활용했다는 것입니다.</li>
+<li>리스팀은 2개, 댓글은 3개, 업보티은 총 76개가 카운팅 되었습니다.</li>
+</ul>
+<p>이때 예상되는 SNAX리워드는 총 2026SNAX 정도이며 이는 이전 Scoring 라운드의 저의 어탠션 레이트를 반영한 값입니다. 즉, 어탠션레이트가 올라가게 될 경우 같은 값일때 더 많은 리워드를 받을 수 있습니다.</p>
+<p>다만, 여기서 저 리스팀, 댓글과 업보팅은 무슨 기준으로 측정이 되는지는 잘 몰랐다가, 제 글을 찾아서 보니까 답이 나오는것 같습니다. </p>
+<center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/8QCs7zn6-image.png)</center>
+
+<p>즉, 정확히 8일전 이미 스팀 리워드가 완료된 직후의 글을 바탕으로 측정되는것으로 예상됩니다. 사실 업보팅 수가 완전히 일치하지 않고, 리스팀도 확인했을때 수가 완전히 일치하지는 않은데, 가장 근접하고 가장 논리적일것으로 예상되기는 합니다.</p>
+<p>마찬가지로 트위터도 활발하게 이용하시는 분들의 경우는 연동했을때 SNAX를 리워드로 받으실 수 있을것으로 예상됩니다. 트위터의 경우는 지난 7일간의 트윗을 바탕으로 라이크, 리트위트와 댓글을 확인을 합니다.</p>
+<h2 id="3-리워드-확인"><a href="#3-리워드-확인" class="headerlink" title="3. 리워드 확인"></a>3. 리워드 확인</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/MUflT1Eh-image.png)</center>
+스낵스 메뉴중 트랜스액션을 누르시면 그동안 글 쓴것에 대한 SNAX 보상이 나열됩니다. 거의 매일 리워드가 들어오고 있는것을 확인할 수 있습니다. 스팀에서 글을 쓰면 그에 따른 보상이 주어지는 상황입니다.
+
+<h2 id="4-스낵스-사용처"><a href="#4-스낵스-사용처" class="headerlink" title="4. 스낵스 사용처"></a>4. 스낵스 사용처</h2><ul>
+<li><strong>아직 특별히 없습니다.</strong> </li>
+</ul>
+<p>스낵스 페이지에서 다른 스낵스 계정, 트위터와 스팀계정에 까지 스낵스를 쉽게 전송할 수 있습니다. 즉, 팁이나 후원 개념으로 보낼 수 있는것이죠. 미국 전 대통령의 트위터 계정인 버락 오바마분의 트위터 계정이 어탠션 레이트가 2위입니다. 후원하기 위해서 100 Snax를 보내봅니다.</p>
+<center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/0kw5T7RB-image.png)</center>
+<center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/94GZkBA1-image.png)</center>
+<center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/W60pcFdZ-image.png)</center>
+
+<p>하고 보내고 나면, 오보마 전 대통령분께 알림까지 할 수 있습니다.</p>
+<center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/CH5wO468-image.png)</center>
+
+<p>우선 스낵스만 보내놓고 저 파란 버튼 눌러서 호출했다가 무슨 일이 벌어질지는 몰라서 우선 안눌렀습니다. ^^ 제 트위터 계정으로 송부한 계정을 호출하고 스낵스에 가입하라고 권유하는 형태의 트윗이 발송될 것으로 예상되기는 합니다. ㅎ</p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/" rel="tag">미지정</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/06/11/jayplayco.coinjoin-wasabi-wallet/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">[비트코인 전송 숨기기] CoinJoin을 가능하게 하는 Wasabi Wallet 소개</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/06/10/jayplayco.weiss-ratings/">
+                <span class="level-item">[크립토 레이팅]  Weiss Ratings의 역사와 암호화폐 레이팅의 의미</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="[Snax] 스낵스 작동 원리" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 jayplayco&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("kr");</script>
+
+
+<script>
+var IcarusThemeSettings = {
+    site: {
+        url: 'http://jayplayco.github.io',
+        external_link: {"enable":true,"exclude":[]}
+    },
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'true'
+        }
+    }
+};
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+
+<script src="/js/main.js" defer></script>
+
+    
+</body>
+</html>

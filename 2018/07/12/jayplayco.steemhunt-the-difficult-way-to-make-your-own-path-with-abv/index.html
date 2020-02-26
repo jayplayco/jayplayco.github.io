@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html  lang="kr">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 4.2.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>[Steemhunt] The difficult way to make your own path with ABV - 제플코 제이의 블록체인</title>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-1-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="[Steemhunt] The difficult way to make your own path with ABV" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-end">
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-12 has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-image">
+        <span  class="image is-7by1">
+            <img class="thumbnail" src="https://steemitimages.com/DQmNfeZGkKQJBrXDkZptuzunaHT6hZKXvcGQFyeiWW4VweN/LP-7-logo.jpg" alt="[Steemhunt] The difficult way to make your own path with ABV">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-07-11T23:52:33.000Z">2018-07-12</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/steem/">steem</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    12 minutes membaca (Sekitar 1727 kata)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                [Steemhunt] The difficult way to make your own path with ABV
+            
+        </h1>
+        <div class="content">
+            <p><a href="https://steemitimages.com/DQmNfeZGkKQJBrXDkZptuzunaHT6hZKXvcGQFyeiWW4VweN/LP-7-logo.jpg">https://steemitimages.com/DQmNfeZGkKQJBrXDkZptuzunaHT6hZKXvcGQFyeiWW4VweN/LP-7-logo.jpg</a></p>
+<p>Hi, @jayplayco here.<br>Steemhunt is a place where the changes are happening fast. It has different reasons, but one of them is definitely that there are always groups and users who try to play and milk the system. Building Steemhunt on the base of Steem and not on SMT is making the operation even more difficult, but if any other developer is out there to implement a fair ranking system based on a blockchain should have a look into the still continuous difficult path of Steemhunt and their account based voting (ABV).</p>
+<p><img src="https://cdn.steemitimages.com/DQmaD4aFVBcpFZSr288zL1ox3GD92oFhvMybFVxF4RujASM/image.png" alt=""><br><a href="https://unsplash.com/photos/Uz0_0RRaX3Q">Source : Isaac Quick</a></p>
+<p>To all readers who are new to <a href="https://steemhunt.com/">Steemhunt</a>, Steemhunt is a recently launched service build on Steem to enable Hunters to hunt new and cool products and get rewarded based on their rankings on a daily base.  If you are new to Steemhunt, you should try first this post. <a href="https://steemit.com/steemdev/@steemhunt/introducing-steemhunt-daily-ranking-of-effortlessly-cool-products-fueled-by-steem-blockchain">LINK</a></p>
+<p>This post is going into details why and how the team of Steemhunt has reacted to implement a fair ranking system on top of a blockchain and how difficult it is to be proactive or counteractive on different types of abusement of the system.</p>
+<h2> 0. Repository </h2>
+https://github.com/Steemhunt/web
+
+<h2> 1. Steemhunt and ABV</h2>
+![](https://cdn.steemitimages.com/DQmU6F6auQETstqz9tKQmeSTABeTLVqEMHFeWvoDGg6as2d/image.png)[Source : presentationgo](https://www.presentationgo.com/presentation/bubbles-tree-powerpoint-diagram/)
+
+<p>Above you have an overview of the measurements Steemhunt has taken to implement a fair ranking system. We will review each step and concentrate here why this kind of implementation had to be done.</p>
+<p>Another post from me is showing the evolution of about three weeks (mid of June 2018) ago and could be interesting to see the first steps of the system itself.<br>[Evolution of Steemhunt`s voting system](<a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-evolution-of-steemhunt-s-voting-system">https://steemit.com/utopian-io/@jayplayco/steemhunt-evolution-of-steemhunt-s-voting-system</a>)</p>
+<h4>a. Beginning with Steem</h4>
+![](https://cdn.steemitimages.com/DQmPtJ1EpKPdZTygvZfp2BuoqokbAav4ktUNuzaaVaHcbHy/image.png)
+[Source : Steemcenter](https://www.steem.center/images/archive/5/55/20160814202358%21Steem_Logo.png)
+
+<p><strong>Background</strong>: An optimal start for Steemhunt would have been that SMT has already launched but as this was not the case the team decided to go for it without SMT and use a temporary solution issuing ERC-20 Tokens in between until SMT is ready. This is a step Coins like EOS or TRON have taken to make the Tokens available before a main net launch or in this case the SMT launch.</p>
+<p><strong>Output</strong>: the First start without the coin itself was ok as Steemhunt could utilize the current Steem Network and ecosystem.</p>
+<h4>b. Introduction of Moderators</h4>
+![](https://cdn.steemitimages.com/DQmcHbuBPRDSXbNS31SR3nWig87DPiLsfyhxbEoA7bTdRzz/image.png)
+[Source : rawpixel](https://unsplash.com/photos/yx7MRPsTgss)
+
+
+<p><strong>Background</strong>: After reaching a level of about 1.5 million Steem in delegation a lot of new users joined the Steemhunt environment. Due to the numbers of new hunts, it was not anymore possible for the team to handle all the input and decided to implement moderators who can review and verify the hunts based on the Steemhunt posting guideline.</p>
+<p><strong>Output</strong>: Starting with six moderators this has been increased to 11 moderators (including two Guardians) The moderators have been an essential manual resource to fight against different kind of abusements like bot upvoting until a system was ready. Until now the moderators are handling over 200 hunts per day and guiding the hunters with their hunts.</p>
+<h4>c. Introduction of ABV Ver. 1</h4>
+![](https://cdn.steemitimages.com/DQma8v4DS7BaQSrcdreN9ViHLsB6DYe5LugGFKThNJoTnRe/image.png)[Source:Edwin Andrade](https://unsplash.com/photos/4V1dC_eoCwg)
+
+
+<p><strong>Background</strong>: With the big delegation user started to find ways to milk and abuse the ranking system. Moderators have been busy for almost two weeks to handle manually all kind of abusements coming from bots, as users started to boost their post with upvoting bots to get a higher ranking. After officially forbidding the usage of upvoting bots, other issues occurred. Curation Trails and Whales entered the Steemhunt platform and started to use their trail power or steem power to upvote their hunts for a higher ranking.</p>
+<p><strong>Output</strong>:<br>With the introduction of <a href="https://steemit.com/steemhunt/@steemhunt/steemhunt-initiates-account-based-voting-ranking-system">ABV Ver.1</a> including the multiplier for reputation, Steemhunt decided to allow almost all kind of actions steemians have done. Including self-voting, bot usage and also curation trails were officially permitted, as they had no more direct impact on the ranking for Steemhunt. Only Vote for Vote (V4V) was still forbidden.</p>
+<h4>d. Introduction of Guardians.</h4>
+![](https://cdn.steemitimages.com/DQmYKj6hDMqzSibh6K8yscnivqcGYQpaY12Bd7T7SfiPmdP/image.png)
+[Source : Paolo Nicolello](https://unsplash.com/photos/WzMgqz6NfA8)
+
+<p><strong>Background</strong>: As mentioned in one of my <a href="https://steemit.com/utopian-io/@jayplayco/steem-start-here">former post</a>, a big part of the communication for Steemhunt is happening outside of Steemhunt at the Discord Channel. As the moderators had a lot of workloads already with verifying more than 200 hunts per day, the team was not able to maintain the community on their own. Two moderators were chosen as guardians to keep the communication in the community upright and also to arbitrate if a hunter was not satisfied with a decision a moderator made. These functions had been before mainly the task of the team of Steemhunt, in detail for @project7 and @tabris.</p>
+<p><strong>Output</strong>: With the installation of guardians as a role within the community the team was able to concentrate on the strategic part and development of Steemhunt. Moderators also had another position to ask for arbitration if communication was not solvable.</p>
+<h4>e. ABV2 and Diversity Score (Ver. 1 & Ver. 2</h4>
+![](https://cdn.steemitimages.com/DQmNUPPqsAHVabM81gaW2y516mW61eEt3LF4ewWwMesk4AG/image.png)
+[Source: Providence Doucet](https://unsplash.com/photos/mE5MBZX5sko)
+
+<p><strong>Background</strong>: Even after the installation of ABV Ver. 1 and using bounties to encourage the community to find vote4vote activities there were still visible effects on the ranking board coming from different kind of groups. The ranking was filled with products which were not cool nor new nor innovative. The issue was that without any evidence from another hunter the team couldn’t just blacklist high ranked but suspicious hunts for V4V. With the introduction of the diversity score different kind of voting, behaviors have been penalized. This includes circle voting, dust voting, voting only for a specific group of people. Also, inactivity or extended activities are considered in the diversity score.</p>
+<p><strong>Output</strong>: These implementations minimized the impact of self-voting groups and helped to give active and good curators more influence on the ranking.</p>
+<h4>f. Introduction of Influencers</h4>
+![](https://cdn.steemitimages.com/DQme1bcjuKXESTVxMR1XPdLfnd2MpJF9ctuBebEePZU7oec/image.png)
+[Source: Adam Jang](https://unsplash.com/photos/8pOTAtyd_Mc)
+
+<p><strong>Background</strong>: Even with a system-wide implementation of ABV and DS, the ranking board was still partly overrun by numbers of very efficiently operating voting groups. Upvoting from the Steemhunt bot is in the current moment up to the 20th rank even on a level over 3.00$, and for the first place over 120.00$, it looks like that it is still too tempting for abusers not to game the system in the dark. (And yes, we have to count that the Steem value is shallow at this moment)</p>
+<p><strong>Output</strong>: As the influencers are implemented on a weekly base and given a higher voting power the ranking board started to look more natural, as the abusing groups now have a tough time to upvote their hunts to a meaningful ranking.</p>
+<h2>2. Conclusion</h2>
+![](https://cdn.steemitimages.com/DQmPrsawJzYm31mJ7pNS9PmwqxRKxZeLXHjGZKDEqg7eb2T/image.png)
+[Source: Todd Quackenbush](https://unsplash.com/photos/IClZBVw5W5A)
+
+<p>This is still not a final stage, but as you can see you have to put a lot of effort into the community and system to do just a simple task.</p>
+<blockquote>
+<p>Hunt great products, vote and reward them based on the ranking, so that the best hunter get rewarded.</p>
+</blockquote>
+<p>As resources are always limited the team is currently still behind their plan to push out other functions for Steemhunt, but I am sure that they will be able to establish a stable and fair platform for hunters. <a href="https://steemhunt.com/">The hunt is on~!</a></p>
+<p>I hope this will give a good insight into the problems and solutions Steemhunt is facing as an SMT project for a ranking function and inspire some of the upcoming projects to follow, adapt or pivot from this insights.</p>
+<hr>
+<p>Thanks for reading!</p>
+<p>Other articles about Steemhunt.</p>
+<ul>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steem-start-here#@utopian-io/re-steem-start-here-20180712t080009z">Steemhunt- Start here</a></li>
+<li><a href="https://steemit.com/steemit/@jayplayco/what-is-steemhunt-and-why-should-i-care">What is Steemhunt and why should I care?</a></li>
+<li><a href="https://steemit.com/steemit/@jayplayco/biggest-airdrop-ever-hunt-token-and-how-to-participate">Biggest Airdrop ever - HUNT token and how to participate</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-abv-account-based-voting-in-development">[Steemhunt] ABV (Account based voting) in development</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-update-for-upvoting-review-comments-and-other-developments">Update for Upvoting Review Comments &amp; Other Developments</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-most-asked-questions-from-steemhunt-newbies">Most asked questions from Steemhunt Newbies.</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-how-to-get-your-hunt-verified-on-steemhunt">How to get your hunt verified on Steemhunt</a></li>
+<li>[Evolution of Steemhunt`s voting system](<a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-evolution-of-steemhunt-s-voting-system">https://steemit.com/utopian-io/@jayplayco/steemhunt-evolution-of-steemhunt-s-voting-system</a>)</li>
+<li><a href="https://steemit.com/steemhunt/@fknmayhem/understanding-steemhunt-and-how-to-craft-a-good-hunt">Understanding Steemhunt and How to Craft a Good Hunt @fknmayhem</a></li>
+<li><a href="https://steemit.com/steemhunt/@fknmayhem/picking-apart-the-steemhunt-posting-guidelines-how-we-review-hunts">Picking Apart The Steemhunt Posting Guidelines - How We Review Hunts @fknmayhem</a></li>
+<li><a href="https://steemit.com/steemhunt/@fknmayhem/steemhunt-is-not-a-writing-curation-project">Steemhunt is NOT a Writing Curation Project@fknmayhem</a></li>
+</ul>
+<p>Join their chat channels if you need more information as the community,  team, and the moderators are answering very fast on any question:</p>
+<p>Discord: <a href="https://discord.gg/mWXpgks">https://discord.gg/mWXpgks</a> (this is where the magic happens)<br>Telegram: <a href="https://t.me/joinchat/AzcqGxCV1FZ8lJHVgHOgGQ">https://t.me/joinchat/AzcqGxCV1FZ8lJHVgHOgGQ</a></p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/steem/" rel="tag">steem</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2018/07/16/jayplayco.merge-cube-hold-a-hologram-in-your-hand/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">Merge Cube - Hold a hologram in your hand</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2018/07/11/jayplayco.3kcwqa/">
+                <span class="level-item">[스팀헌트] 시작하기</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="[Steemhunt] The difficult way to make your own path with ABV" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 jayplayco&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("kr");</script>
+
+
+<script>
+var IcarusThemeSettings = {
+    site: {
+        url: 'http://jayplayco.github.io',
+        external_link: {"enable":true,"exclude":[]}
+    },
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'true'
+        }
+    }
+};
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+
+<script src="/js/main.js" defer></script>
+
+    
+</body>
+</html>

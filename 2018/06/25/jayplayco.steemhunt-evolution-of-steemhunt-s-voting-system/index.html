@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html  lang="kr">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 4.2.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>[Steemhunt] Evolution of Steemhunt`s voting system - 제플코 제이의 블록체인</title>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-1-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="[Steemhunt] Evolution of Steemhunt`s voting system" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-end">
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-12 has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-image">
+        <span  class="image is-7by1">
+            <img class="thumbnail" src="https://steemitimages.com/DQmNfeZGkKQJBrXDkZptuzunaHT6hZKXvcGQFyeiWW4VweN/LP-7-logo.jpg" alt="[Steemhunt] Evolution of Steemhunt`s voting system">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-06-24T20:29:30.000Z">2018-06-25</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/steem/">steem</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    9 minutes membaca (Sekitar 1418 kata)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                [Steemhunt] Evolution of Steemhunt`s voting system
+            
+        </h1>
+        <div class="content">
+            <p><a href="https://steemitimages.com/DQmNfeZGkKQJBrXDkZptuzunaHT6hZKXvcGQFyeiWW4VweN/LP-7-logo.jpg">https://steemitimages.com/DQmNfeZGkKQJBrXDkZptuzunaHT6hZKXvcGQFyeiWW4VweN/LP-7-logo.jpg</a></p>
+<p>Hi, @jayplayco here.</p>
+<p>I am a moderator at Steemhunt, which is a platform launched in March 2018 as an alternative to the platform producthunt. Because Steemhunt is rewarding the hunters for their hunt, it is motivating to participate as product hunter at Steemhunt. As a moderator, I am seeing a lot of different questions about the system and hunters trying to understand how Steemhunt works.</p>
+<p>To all readers who are new to <a href="https://steemhunt.com/">Steemhunt</a>, Steemhunt is a recently launched service build on Steem to enable Hunters to hunt new and cool products and get rewarded based on their rankings on a daily base.  If you are new to Steemhunt, you should try first this post. <a href="https://steemit.com/steemdev/@steemhunt/introducing-steemhunt-daily-ranking-of-effortlessly-cool-products-fueled-by-steem-blockchain">LINK</a></p>
+<p>In this post, we are going to have a more in-depth look into the history and evolution of the voting system of Steemhunt as it is now independent of the voting system of Steem. </p>
+<h4> 0. Repository </h4>
+https://github.com/Steemhunt/api
+
+<h4> 1. Timeline for Steemhunt's Voting System</h4>
+
+<p><img src="https://cdn.steemitimages.com/DQmTGpDUGFywsgqVAR9hosaVLiNWVz1fzZn8iJhfRf4Sxoa/image.png" alt=""><br><a href="https://www.presentationgo.com/presentation/vertical-timeline-infographic-for-powerpoint/">Source: presentationgo.com</a></p>
+<h5>a. Starting with Steem Voting System</h5>
+
+<p><img src="https://cdn.steemitimages.com/DQmVV3bCLVukvk7jkyvWSgFox1vPwWQ54Cc9pq66vxGjLTm/image.png" alt=""><br><a href="https://pixabay.com/de/abstimmung-wort-buchstaben-scrabble-1804596/">Source: Wokandapix</a><br>When started in March 2018, Steemhunt adapted the same logic without any change from Steem. Self-voting, bot usage, the presence of whales, and curation trails had the same power as they had with Steem.</p>
+<p>Until Steemhunt was somewhat unknown, this was not a big issue, but after the lending power got bigger and bigger the DAU (Daily active user) number grow into a “J-Curve” the attempt of abusing also got higher. In the end, Steemhunt got officially lent 1 million steem from Steemit Inc. which ended with a whooping 1.3Mil. steem in power.</p>
+<h5>b. Bot usage forbidden</h5>
+![](https://cdn.steemitimages.com/DQmZQfpLC7pdJK2DHAj1v7D49b3z2mWG5LkmqYRG5SBe85M/image.png)
+[Source : rawpixel](https://unsplash.com/photos/wbu4q8xk2Kc)
+
+<p>Steemhunt decided very fast to approach to the community (end of May) to get moderators on board and a few days after the moderators were active the usage of Bots were forbidden (Date: 02.06.2018). Since there was no system behind the voting system to block this kind of Bots, it was handled manually by the team and moderators. All variety of hunts were bots used were de-listed manually. As users could spoil the real ranking with sending bots to the top rankings, the moderators also checked who initiated the bot. This system was not perfect and caused a lot of argumentation if a case was fair or not, but the team got most of the Bots from the ranking.</p>
+<h5>c. Account based Voting</h5>
+![](https://cdn.steemitimages.com/DQmXw8De2pve7YnaHGdK5YXAWCzifXtDZLsst9zxfMwuNeD/image.png)
+[Source : rawpixel](https://unsplash.com/photos/1I811IkRlKE)
+The ABV (Account based voting) from Steemhunt started with a very basic constellation. There have been different kind of simulations on how to make the voting system fair for hunters, but the team decided to go for the start as simple as possible. (https://github.com/Steemhunt/web/issues/135)
+
+<p>Newly launched ABV started at 14.06.2018 and had implemented following parts.</p>
+<p>1) one vote for one account (basic x1)<br>2) steem reputation-based leveling<br>    - x0 for under 34, x0.5 for 35-44, x1 for 45-54, x2 for 55-59, x3 for &gt;60<br>3) no self voting counted<br>4) only votes on Steemhunt platform counted.</p>
+<p>ABV had a direct effect on all self-voters, curation trails and bots, as their votes still counted on Steem but had no impact on the daily ranking.</p>
+<h5>d. Diversity Score </h5>
+![](https://cdn.steemitimages.com/DQmeAPrULBSWhzrxgs11Jz5H7LbQ8Gw4Co2jYDSDzU2Qe3g/image.png)[Source: rawpixel](https://unsplash.com/photos/-9xYJbJU2x4)
+
+<p>The latest introduction is the diversity score which is now active since 23th of June 2018 and influencing the upvotes. The Steemhunt team adopted a modified version of the Gini-Simpson index. (<a href="https://en.wikipedia.org/wiki/Diversity_index#Gini–Simpson_index">https://en.wikipedia.org/wiki/Diversity_index#Gini–Simpson_index</a>)<br>We could go into details about what the Gini-Simpson index is, but I would like to concentrate on what is implemented and how it is going to affect the voting.</p>
+<p>Additionally, to the ABV system, the Diversity Score calculates and analyses your upvoting behavior. </p>
+<p>1) Lowest would be an x0 and highest an x1.0.<br>2) If you always vote the same hunters, your Diversity Score will be low.<br>3) If you upvote other hunters but use a heavier voting weight (like example 100%) for a small number of hunters, this will also lower the score.<br>4) If you upvote a variety of hunters, the Diversity Score can move above x1.0 as the system will give it a bonus (above the Gini-Simpson Index)<br>5) When the user is new to the Steemhunt system, there will be a penalty-weighted Diversity Score applied until there is enough data.<br>6) Diversity Score x ABV =&gt; Your upvote power.</p>
+<p>There have been several vote4vote attempts by different groups to game the system. This kind of attack is now more challenging to execute, as new users can`t upvote as much as a hunter already well established in the Steemhunt system. Additionally, the whole V4V group would get penalized at the moment they are circle voting.</p>
+<h4> 2. Difference between Steem and Steemhunt Voting</h4>
+<center>![](https://cdn.steemitimages.com/DQmVTpKvoZ8UQsDynwvBgdPwv492nr3jVC6ircLCjax65yf/image.png)</center>
+
+<p>As you can see, unique parts of the Steem voting system are not any more valid for the Steemhunt platform. Self-voting, bots, and curation-trails do not have any effect on the ranking anymore. V4V attacks are still manually handled per report or investigation, but a big part of the effectiveness is gone, as voting for a circle group will be penalized and will not have the same effect as before for your hunters ranking.</p>
+<h4> 3. How to read the upvote value</h4>
+![](https://cdn.steemitimages.com/DQmdpuoFsA7dabu3vxk7AhgLniH4RCaEUEZLwEgfc4AZreP/image.png)
+When you see a hunt in the hunting list, you will find the upvote button on the right side. The number below this button is the current hunter score based on upvotes from other hunters. (Calculated with ABV and DS) Right to the mini-screenshot, there is a number with a $ sign. This is the actual upvote value at Steem.
+
+<p><img src="https://cdn.steemitimages.com/DQmdV2y8SJiexq78U4xrtQU8dGEWi96oCePkmBUmKASBARg/image.png" alt=""><br>If you have a look at the post itself, you can find more details. At the bottom, you can find the $ amount and if you mouse-over you will see each upvoter on this hunt. If you mouse-over the “votes” you can see the upvotes valid for this hunt. The example above shows that in total 4 upvotes have been done in the Steem system but only 2 upvotes been counted for the Steemhunt ranking.</p>
+<h4> 4. View into the future</h4>
+There is no system which can avoid all kind of attacks or where users can try to game the system. But as a young platform and community Steemhunt is evolving fast and matching the requirements very agile for a fair hunter environment. I am sure that there will be more iterations of the voting system at Steemhunt and it will be a pleasure to write about it.
+
+<h4>5. Github Account</h4>
+https://github.com/zionopia
+
+<hr>
+<p>Thanks for reading!</p>
+<p>Other articles about Steemhunt.</p>
+<ul>
+<li><a href="https://steemit.com/steemit/@jayplayco/what-is-steemhunt-and-why-should-i-care">What is Steemhunt and why should I care?</a></li>
+<li><a href="https://steemit.com/steemit/@jayplayco/biggest-airdrop-ever-hunt-token-and-how-to-participate">Biggest Airdrop ever - HUNT token and how to participate</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-abv-account-based-voting-in-development">[Steemhunt] ABV (Account based voting) in development</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-update-for-upvoting-review-comments-and-other-developments">Update for Upvoting Review Comments &amp; Other Developments</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-most-asked-questions-from-steemhunt-newbies">Most asked questions from Steemhunt Newbies.</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-how-to-get-your-hunt-verified-on-steemhunt">How to get your hunt verified on Steemhunt</a></li>
+</ul>
+<p>Join their chat channels if you need more information as the community, team, and the moderators are answering very fast on any question:</p>
+<p>Discord: <a href="https://discord.gg/mWXpgks">https://discord.gg/mWXpgks</a> (this is where the magic happens)<br>Telegram: <a href="https://t.me/joinchat/AzcqGxCV1FZ8lJHVgHOgGQ">https://t.me/joinchat/AzcqGxCV1FZ8lJHVgHOgGQ</a></p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/steem/" rel="tag">steem</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2018/06/27/jayplayco.5nez57/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">[스팀헌트] 스팀헌트의 업보팅 스코어 이해하기</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2018/06/22/jayplayco.sovuv/">
+                <span class="level-item">[스팀헌트] 스팀헌트에서 포스팅 승인받기</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="[Steemhunt] Evolution of Steemhunt`s voting system" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 jayplayco&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("kr");</script>
+
+
+<script>
+var IcarusThemeSettings = {
+    site: {
+        url: 'http://jayplayco.github.io',
+        external_link: {"enable":true,"exclude":[]}
+    },
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'true'
+        }
+    }
+};
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+
+<script src="/js/main.js" defer></script>
+
+    
+</body>
+</html>

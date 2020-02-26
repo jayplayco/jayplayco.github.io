@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html  lang="kr">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 4.2.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>[스팀잇] 하드포크 20, SMT와 스팀 생태계에 미칠 영향. - 제플코 제이의 블록체인</title>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-1-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="[스팀잇] 하드포크 20, SMT와 스팀 생태계에 미칠 영향." height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-end">
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-12 has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-image">
+        <span  class="image is-7by1">
+            <img class="thumbnail" src="https://cdn.steemitimages.com/DQmd2KquVNmj1SFvHwEtd8mQKiJvmzbHmzCEcqxurHTnwcX/image.png" alt="[스팀잇] 하드포크 20, SMT와 스팀 생태계에 미칠 영향.">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-08-09T22:29:24.000Z">2018-08-10</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/steem/">steem</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    11 minutes membaca (Sekitar 1631 kata)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                [스팀잇] 하드포크 20, SMT와 스팀 생태계에 미칠 영향.
+            
+        </h1>
+        <div class="content">
+            <p><img src="https://cdn.steemitimages.com/DQmd2KquVNmj1SFvHwEtd8mQKiJvmzbHmzCEcqxurHTnwcX/image.png" alt=""><br><a href="https://steemit.com/steem/@steemitblog/steem-velocity-hardfork-hardfork-20">Source: steemit</a></p>
+<p>금일 새벽에 <a href="https://steemit.com/steem/@steemitblog/steem-velocity-hardfork-hardfork-20">스팀잇잉크에서 하드포크 20관련 새로운 정리글</a>을 올리면서 8월 25일날 테스트넷웍과 9월 25일 스타트를 알리는 반가운 소식이 있었습니다.</p>
+<p>정말 간단한 요약은 증인이신 @clayop님의 글 참조를 추천드리며. </p>
+<ul>
+<li><a href="https://steemit.com/kr/@clayop/20-9-25">[단신] 스팀 하드포크 20은 9월 25일 예정입니다</a></li>
+</ul>
+<p>조금더 자세하게 보고자 한다면 @ayogom 님의 글을 참조,</p>
+<ul>
+<li><a href="https://steemit.com/kr/@ayogom/steem-velocity-hardfork-20">Steem Velocity Hardfork - 하드 포크 20</a></li>
+</ul>
+<p>그리고 언제나 가장 자세하게 자신의 생각과 함께 정리를 주시는 @wonsama 님의 글을 보시면 전체 요약을 다 보실 수 있습니다.</p>
+<ul>
+<li><a href="https://steemit.com/kr/@wonsama/20-steem-velocity-hardfork-hardfork-20">하드포크20 요약번역 : Steem Velocity Hardfork - Hardfork 20</a></li>
+</ul>
+<p>저의 경우는 이번 하드포크 20을 보면서 드는 생각은 많은 부분이 있지만, 특히 계정 생성을 조금더 쉽게 할 수 있다는 것에 집중조명을 하고자 합니다.</p>
+<h2> 계정생성 변경 사항 </h2>
+원사마님의 요약번역을 우선 살펴보도록 하겠습니다. 
+
+<blockquote>
+<ol>
+<li>계정생성 변경 (Updates to Account Creation)</li>
+</ol>
+</blockquote>
+<blockquote>
+<p>1.1<strong>할인된 계정 생성 (Discounted Account Creation)</strong></p>
+<ul>
+<li>기존) STEEM 지불(3스팀), SP임대(2주걸린것)</li>
+<li>HF20 이후 추가) RC를 사용하여 계정 생성이 가능해 짐.</li>
+</ul>
+<p><strong>1.2 할인된 계정생성 토큰 (Discount Account Creation Tokens)</strong></p>
+<ul>
+<li>매일 증인에 의해 할인계정 생성용 토큰이 발행됨(총량이 정해져 있음)</li>
+<li>계정 생성용 토큰 교환 수 또한 증인에 의해 통제됨</li>
+<li>RC를 소비하여 계정을 생성하는 경우 토큰이 사용됨(토큰이 다 소비되면 RC가 있어도 계정생성 불가)<br><a href="https://steemit.com/kr/@wonsama/20-steem-velocity-hardfork-hardfork-20">Source: @wonsama 님 번역</a></li>
+</ul>
+</blockquote>
+<p>우선 변경되는 것이 RC (Resource Credit)라는 것을 새로 발행하게 됩니다. 이를 이용해서 계정 생성시 1-3주까지 기다려야 계정이 생성되는 것을 거의 즉각 생성 가능하게 됩니다. RC라는 토큰을 이용해 스팀을 대체해서 할인된 계정을 생성할 수 있습니다. 즉, 스팀을 쓰지 않고 계정 생성이 된다는 것이죠. <a href="https://steemit.com/steem/@steemitblog/blockchain-update-4-resource-credit-implementation-details">Source: steemit</a></p>
+<p>여기서 한가지 걸리는 것은, 완전 외부의 사용자가 처음으로 스팀잇, 비지, 스팀kr이나 DAPP인 테이스팀이나 스팀헌트 같은 곳에 처음와서 계정 가입시도를 했을 때, 그 신규 가입자는 스팀도, RC도 없는 상태이기 때문에 결국 누군가가 RC를 대신 내줘야지 빠른 가입이 될 것으로 예상이 됩니다. 즉, 스팀잇이 그동안 계정을 새로 열었을 때 스팀을 델레게이션하던 방식에서 스팀파워에 따라 간접적으로 생성되는 RC로 일명 할인된 계정을 생성할 수 있는 상황이 될 것으로 보입니다.</p>
+<p><strong>예상시나리오</strong></p>
+<ul>
+<li>고래들은 알트를 쉽게 생성할 수 있을것이다. (또다시 파는 행위가 나올지도…?)</li>
+<li>프로젝트형 고래들은 (스팀잇, 유토피안, 테이스팀, 스팀헌트, 등) RC 발행에 따른 유저 유입을 위해 할인된 가입절차를 offer 할 확률이 높다. (이미 스팀잇, 유토피안등은 하고 있음) </li>
+<li>피라미사용자의 경우는 이전과 비슷하게 부계정이나 계정을 추가로 만드는 것은 쉽지 않을 것으로 보인다.</li>
+</ul>
+<p>결국은 이것은 스팀과 스팀달러를 쓰지 않고 계정생성이 가능할 수 있도록 계정 생성용 RC 토큰을 새로 만든것으로 사료되기는 합니다.</p>
+<h2> 그래도 이것이 왜 SMT를 위해 중요한가? </h2>![](https://cdn.steemitimages.com/DQmSNn8Cp1q7XcQTen4FVDWDuesQhLdbemjv1gxkZqkncAP/image.png)
+[Source: rawpixel](https://unsplash.com/photos/CBFVbE7OKoU)
+
+<p>스팀의 계정수는 1백만을 넘어섰지만서도 DAU를 따진다면 훨씬 적은 숫자가 될 것으로 보입니다. 한국 KR 커뮤니티도 상당히 활발한 것으로 알려져 있어 @Dan조차도 한국까지 날라왔지만, 이리 저리 따져봐도 500-700명 안팍의 유저들이 열심히 활동하고 키우고 있는것으로 추정됩니다.</p>
+<p>@lucky2님이 몇일전에 뉴비들의 접근은 더욱더 용이하게 하기 위해서 <a href="https://steemit.com/kr/@lucky2/2qrhh1">한국에서 가장 접근성이 좋은 네이x에 카페를</a> 차려서 뉴비들을 위한 정착소를 만드는 것도 이런 외부 사용자들의 유입을 늘리기 위한 노력의 일환중 하나입니다. </p>
+<p>하지만 현재와 같은 HF19상황에서는 가입을 하려고 해도 2주이상을 기다려야 하니, 관심을 갖다가도 지쳐서 잊고 지내게 됩니다. 사실상 생각해보면 인터넷에서 물건 주문하고 2주가 지나면 주문한지 조차 잊는 시간이기 때문입니다. ㅎㅎ..</p>
+<p>럭키님의 뉴비 정착및 유입을 위한 카페활동이던, 테이스팀이나 스팀헌트 같은 댑들이 성장을 위해 필수적으로 필요한 외부 사용자들의 쉬운 유입을 위해서는 HF20의 RC는 그래서 가입장벽을 없애지는 못하겠지만 현재와 비교해서는 거의 허물 수 있다고 볼 수 있습니다.</p>
+<p>아마도 미래 플랜으로 볼때는, 테이스팀과 스팀헌트도 RC 토큰 기반의 자체 계정 가입 프로세스를 (프로젝트형 고래이기 때문에 가능할것으로 보임, 아직 확실하지 않은 것은 델레게이션을 받은 스팀파워로도 같은 RC가 생성되는지는 100% 확신이 없음) 갖춰서 외부 유저 유입에 힘을 써야 할 것으로 보이며, 심지어 럭키님의 카페 프로젝트 조차도<br>외부 유저들의 유입을 더욱 쉽게 하기 위해서는 자체 가입용 계정을 운용하는 것도 고민을 해볼만 할 것으로 보입니다.</p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/steem/" rel="tag">steem</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2018/08/13/jayplayco.steemhunt-airdrop-for-sp-holders-and-faq/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">[Steemhunt] Airdrop for SP holders and FAQ</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2018/08/09/jayplayco.steemhunt-understanding-the-hunter-levels/">
+                <span class="level-item">[Steemhunt] Understanding the Hunter Levels</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="[스팀잇] 하드포크 20, SMT와 스팀 생태계에 미칠 영향." height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 jayplayco&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("kr");</script>
+
+
+<script>
+var IcarusThemeSettings = {
+    site: {
+        url: 'http://jayplayco.github.io',
+        external_link: {"enable":true,"exclude":[]}
+    },
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'true'
+        }
+    }
+};
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+
+<script src="/js/main.js" defer></script>
+
+    
+</body>
+</html>

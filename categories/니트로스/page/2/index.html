@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html  lang="kr">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 4.2.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>Kategori: 니트로스 - 제플코 제이의 블록체인</title>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-1-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="제플코 제이의 블록체인" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-end">
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-12 has-order-2 column-main"><div class="card">
+    <div class="card-content">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/categories">Kategori</a></li>
+            
+            <li class="is-active"><a href="#" aria-current="page">니트로스</a></li>
+        </ul>
+        </nav>
+    </div>
+</div>
+
+    
+<div class="card">
+    
+    <div class="card-image">
+        <a href="/2019/06/25/jayplayco.sct/" class="image is-7by1">
+            <img class="thumbnail" src="https://files.steempeak.com/file/steempeak/jayplayco/ntBOzU0d-image.png" alt="[SCT] 지분율 계산기">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-24T15:43:06.000Z">2019-06-25</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EB%8B%88%ED%8A%B8%EB%A1%9C%EC%8A%A4/">니트로스</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EB%8B%88%ED%8A%B8%EB%A1%9C%EC%8A%A4/SCT/">SCT</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    7 minutes membaca (Sekitar 1104 kata)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/25/jayplayco.sct/">[SCT] 지분율 계산기</a>
+            
+        </h1>
+        <div class="content">
+            <center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/ntBOzU0d-image.png)</center>
+안녕하세요, @jayplayco입니다.
+
+<h2 id="1-SCT-스테이킹-계산"><a href="#1-SCT-스테이킹-계산" class="headerlink" title="1. SCT 스테이킹 계산"></a>1. SCT 스테이킹 계산</h2><p>SCT를 스테이킹하시는 분들중에는 보통 많이 궁금해하시는게, 내 지분율을 유지하려면 과연 얼마나 스테이킹을 해야할까 입니다.<br>저도 궁금해서 가끔가다가 계산기를 두들기도 하는데요, 사실상 하루 나오는 SCT량과 한계정이 지속적으로 스테이킹해야할 수량을 어느정도 파악을 해야지 계획을 갖고 실천이 가능할것 같습니다.</p>
+<ul>
+<li>계산기 공유링크: <a href="https://docs.google.com/spreadsheets/d/1CoeC3eV8jvvno2kWgC2pEIbW42qdq-kTZWWlOk7sEqA/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1CoeC3eV8jvvno2kWgC2pEIbW42qdq-kTZWWlOk7sEqA/edit?usp=sharing</a></li>
+</ul>
+<p>물론 개발자가 아니라서 모두 수동으로 입력해야하는 아주 큰 불편함이 있지만, 그래도 매번 새로 계산하는것보다는 한번 세팅해놓으면 계산하기는 편할것 같아서 만들어봤습니다.</p>
+<p>상단 부분 수정가능 한 부분은 다음과 같고, 빨간색으로 표기를 해두었습니다. 나머지 Shell들은 공유버젼이라 막아두었습니다.</p>
+<ul>
+<li>현재유통물량: 6월 24일 기준입니다. 일자가 바뀌면서 수정하면 됩니다.</li>
+<li>일 : 현재는 1년을 기준으로 입력되어있습니다. 필요한 일자로 수정가능합니다.</li>
+<li>소각량: 현재 평균 소각량을 2000개로 보고 입력했습니다. 상황이 변하면 수정 가능합니다.</li>
+<li>현재 소유량: 자신의 현재 소유량을 입력하면 됩니다.</li>
+<li>하루 추가 SCT: 하루동안 추가로 스테이킹해야할 SCT를 입력합니다. 이에 따라 일 이후%가 일 이후 소유량보다 많은지 적은지 보면 됩니다.</li>
+</ul>
+<p>예시는, 현재 16,000SCT를 스테이킹한 계정은 현재 소유량은 1.2%입니다. 일년후 하루에 206SCT를 스테이킹하면 총 스테이킹된 량은 91,190SCT가 되며, 지분율을 그대로 유지해갈 수 있습니다.</p>
+<p>이때 한가지 가정은 소각량을 일 2000으로 균일하게 봤다는 것입니다. 소각량이 줄어들면 그만큼 스테이킹해야할 SCT가 많아집니다.</p>
+<h2 id="2-SCTM-스테이킹-계산"><a href="#2-SCTM-스테이킹-계산" class="headerlink" title="2. SCTM 스테이킹 계산"></a>2. SCTM 스테이킹 계산</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/uyGCmuyH-image.png)</center>
+
+<p>하단 부분에는 혹시 마이닝하시는 분들은 자신의 현재 스테이킹된 SCT와 큐레이션 제외하고 지분 유지를 위해 필요한 SCT의 양을 산출하기 위해서 만들었습니다. 즉, 큐레와 마이닝만을 통해서 지분 유지를 하기 위해서 필요한 비용 산출용입니다.</p>
+<ul>
+<li>SCTM 발행량은 총 판매량을 <a href="https://steem-engine.rocks/tokens/SCTM/richlist">https://steem-engine.rocks/tokens/SCTM/richlist</a> 에서 수정/참고</li>
+<li>소유 SCTM은 현재 SCTM을 스테이킹시 예상 일 SCT를 %로 산출 (절대 정확하지는 않음)</li>
+</ul>
+<p>상기의 기준으로 현재 SCTM 판매량을 입력해주고 필요한 SCTM을 입력하면 마이닝후 하루에 남는 SCT량이 보여지는 형식입니다. 즉, 저의 경우는 큐레이션으로 하루 약 92.11SCT를 16000SCT 스테이킹과 일 206SCT를 추가 스테이킹함으로써 얻을 수 있고, 큐레이션 제외 추가로 필요한 SCT는 일 총 113,89SCT입니다. 이에 따라서 만약에 마이닝만을 통해서 지분량을 유지하기 위해서는 마이닝풀의 전체 5.93%를 차지해야합니다. 이는 현재 약 13,000SCTM을 스테이킹한것과 같은 값입니다.</p>
+<h2 id="3-개인적인-생각"><a href="#3-개인적인-생각" class="headerlink" title="3. 개인적인 생각"></a>3. 개인적인 생각</h2><p>우선 지분율을 유지하기 위해서는 상당한 노력이 필요한 것이 사실입니다. 큐레이션을 게을리하지 않고, 마이닝도 일부 하면서 글도 지속적으로 비교적 높은 퀄러티로 작성하면서 홍보 소각도 해야지 하루 100SCT 이상을 스테이킹 할 수 있을것으로 보입니다. 개인적으로는 지분율도 중요하지만, 지분율이 낮아지더라도 보다 많은 사람들이 SCT를 소유하고 구매및 판매하고 스테이킹하는 것이 필요할것으로 여겨집니다. </p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-image">
+        <a href="/2019/05/25/jayplayco.zebjq-sct-ubi/" class="image is-7by1">
+            <img class="thumbnail" src="https://files.steempeak.com/file/steempeak/jayplayco/PE10fTue-image.png" alt="[SCT] UBI 기본소득 보팅 테스트 결과">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-05-25T02:21:45.000Z">2019-05-25</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EB%8B%88%ED%8A%B8%EB%A1%9C%EC%8A%A4/">니트로스</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EB%8B%88%ED%8A%B8%EB%A1%9C%EC%8A%A4/SCT/">SCT</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    7 minutes membaca (Sekitar 1045 kata)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/05/25/jayplayco.zebjq-sct-ubi/">[SCT] UBI 기본소득 보팅 테스트 결과</a>
+            
+        </h1>
+        <div class="content">
+            <center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/PE10fTue-image.png)
+[Source: Johny vino](https://unsplash.com/photos/9f7s4aLatpw)</center>
+
+<p>안녕하세요, @jayplayco 입니다.</p>
+<p>SCT 운영진 팀에서 26일 부터 공식적으로 조건부 UBI 업보팅을 실시하기로 되어 있습니다.<br>자세한 사항은 하기 링크를 참조하시면 되며, 502 SCT를 모아서 스테이킹 하셨다면 오늘 25일 한국시간 24시 까지는 등록이 가능하십니다.</p>
+<ul>
+<li>링크: <a href="https://www.steempeak.com/sct/@jayplayco/sct-ubi">기본소득- SCT의 UBI</a></li>
+</ul>
+<h2 id="1-기본소득-보팅-테스트-10-10-시-총-하루-100명에게-보팅-가능함"><a href="#1-기본소득-보팅-테스트-10-10-시-총-하루-100명에게-보팅-가능함" class="headerlink" title="1. 기본소득 보팅 테스트 10% (10%시 총 하루 100명에게 보팅 가능함)"></a>1. 기본소득 보팅 테스트 10% (10%시 총 하루 100명에게 보팅 가능함)</h2><p>우연찮게 톡방을 보다가 선무님께서 기본소득 시뮬레이션을 하신다고 해서 신청을 해봤습니다.</p>
+<center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/2NDx6UEH-image.png)</center>
+
+<p>@null 계정으로 10 SCT를 보내고 이미 약 500SCT를 보팅 받은 글에 @sct.down에서 (총 32K SCT 스테이킹) 10% 보팅을 받았습니다.</p>
+<center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/RueBVQEE-image.png)</center>
+
+<p>보팅받은 링크는 @steemhunt에 관련된 영문 포스팅이였으며 하루 전 글이였습니다.</p>
+<ul>
+<li><a href="https://www.steemcoinpan.com/steemhunt/@jayplayco/steemhunt-the-difficult-way-to-create-revenue-for-your-dapp">https://www.steemcoinpan.com/steemhunt/@jayplayco/steemhunt-the-difficult-way-to-create-revenue-for-your-dapp</a></li>
+</ul>
+<p>그럼 찍히전과 찍힌 후의 상황을 보겠습니다.</p>
+<ul>
+<li><p>찍히기전 : 총 513.43 SCT</p>
+<center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/4qzebbjv-image.png)</center>
+</li>
+<li><p>찍힌후 : 총 582.12 SCT</p>
+<center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/ef4bYz5G-image.png)</center>
+</li>
+<li><p>총 찍힌 SCT는 68.69 SCT로 이중 보상이 약간 변경된다고 해도 약 34 SCT 정도의 보상이 돌아올것으로 예상됩니다.</p>
+</li>
+</ul>
+<p>하루 기본 소득으로는 현재 SCT의 가격으로는 매우 괜찮은 보팅인것으로 사료됩니다.</p>
+<p>그 이후 @innovit님의 비교적 새롭게 올리신 글에 업보팅을 똑같이 했습니다.</p>
+<ul>
+<li><p>보팅전 1.62SCT 찍힘</p>
+<center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/dPnkxfiJ-image.png)</center>
+</li>
+<li><p>보팅후 30.23SCT 찍힘</p>
+<center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/eNW9Ljfc-image.png)<center>
+</li>
+<li><p>찍힌 금액은 28.61 SCT, 저자 보상은 예상했을 때 14.3 SCT 정도가 됩니다.</p>
+</li>
+</ul>
+<p>결국 하루 지나서 비교적 많은 SCT가 찍힌 제 글과 새롭게 작성한 @innovit님의 글은 19.7정도의 SCT가 차이가 났습니다.</p>
+<p>결국 이 말은 선형보상에 따른 기본보상의 경우는 당일 글 보다는 하루나 이틀정도 지난 글에 찍어주는것을 원칙으로 했을 때 보상의 규모가 커질 수 있을것이라고 보입니다.</p>
+<p>이 이유는 SCT의 비선형 보상이 1.3인 관계로, 이미 높은 SCT 가 찍히고 큐레이션이 된 글의 경우 더 많은 보상을 가져갈 수 있는 이유이기 때문입니다. 이에 관련된 분석글은 작일/금일 글로리7님(@glory7)이 정리하신 3개의 글을 꼭 참조하시기 부탁드립니다.</p>
+<ul>
+<li><a href="https://www.steempeak.com/sct/@glory7/3efuzs">“비선형 보상 = 고래가 보상을 더 챙겨가는 것” 이 아닙니다.</a></li>
+<li><a href="https://www.steempeak.com/sct/@glory7/3wv41g">선형 큐레이션 보상에서는 보팅 순서가 상관없다?</a></li>
+<li><a href="https://www.steempeak.com/sct/@glory7/1dwky">보상 승수란 무엇이며 그 영향은?</a></li>
+</ul>
+<h2 id="2-개인적인-생각"><a href="#2-개인적인-생각" class="headerlink" title="2. 개인적인 생각"></a>2. 개인적인 생각</h2><p>운영진측에서 현재 UBI 도입은 스테이킹을 장려하는 좋은 방향인것으로 보입니다. 톡방의 내용을 따라가보면 추후에 신청자들의 경우는 발행량의 xx%정도의 조건을 걸 것으로 보입니다만, 이를 위해서는 지속적인 스테이킹이 필요할 것으로 예상됩니다. 필자의 경우는 현재 모든 SCT가 부계정에 들어가 있는 관계로 부계정으로 글을 쓰지 않은 이상은 UBI를 받을 방법은 없네요 ^^. 개인적으로는 스코판팀의 경우는 제가 메인 계정으로 스테이킹을 할 경우 매달 추가적으로 임대료가 나가는 관계로 부계로 어떤 글을 써야 할지를 고민할 차례인것 같습니다.</p>
+<p>스코판의 순항을 기원합니다. <strong>화이팅!!</strong></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-image">
+        <a href="/2019/05/23/jayplayco.sct-ubi/" class="image is-7by1">
+            <img class="thumbnail" src="https://files.steempeak.com/file/steempeak/jayplayco/RPR4fByn-image.png" alt="[기본소득] SCT의 조건부 UBI 실행">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-05-22T16:24:03.000Z">2019-05-23</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EB%8B%88%ED%8A%B8%EB%A1%9C%EC%8A%A4/">니트로스</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EB%8B%88%ED%8A%B8%EB%A1%9C%EC%8A%A4/SCT/">SCT</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6 minutes membaca (Sekitar 841 kata)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/05/23/jayplayco.sct-ubi/">[기본소득] SCT의 조건부 UBI 실행</a>
+            
+        </h1>
+        <div class="content">
+            <center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/RPR4fByn-image.png)</center>
+안녕하세요, @jayplayco 입니다.
+
+<p>SCT의 활성화와 함께 스팀과 SCT 업보팅이 결론적으로는 같은 마나를 먹는 관계로, SCT 전용 큐레이션용 계정을 만들었습니다. 계정의 닉네임도 한눈에 제 계정인것이 보이도록 지정했습니다. 혹 @jayplay.cur 가 업보팅을 할 경우 제 SCT 큐레이션용 계정입니다. 현재 4200SCT를 스테이킹한 상태고요, 지속적으로 @jayplayco에서 나오는 SCT를 옮겨서 스테이킹을 할 예정입니다.</p>
+<p>사실 조용히 큐레이션만 하면서 다니려고 했는데, SCT팀에서 조건부 UBI를 선언했네요. 부계정에서도 글을 써야하나 급 고민중입니다. ^^</p>
+<p>해당링크 : <a href="https://www.steemcoinpan.com/notice/@sct/notice-sct-ubi-2019-05-23-05-25">https://www.steemcoinpan.com/notice/@sct/notice-sct-ubi-2019-05-23-05-25</a></p>
+<h2 id="1-배경"><a href="#1-배경" class="headerlink" title="1. 배경"></a>1. 배경</h2><p>현재 Nitrous와 스컷밧의 경우는 inflation이라는 개념이 없습니다. 이를 보충하기 위해서 조건부 UBI를 실행하기로 했습니다. 이로 인해 스테이킹에 대한 메리트를 주고자 하는 것입니다.</p>
+<h2 id="2-참여방법"><a href="#2-참여방법" class="headerlink" title="2. 참여방법"></a>2. 참여방법</h2><p>시간이 별로 없습니다. 5월25일 자정까지 신청 가능하십니다. 그때까지 SCT 500개 이상을 스테이킹하신 증명을 하셔야지만 기본소득 보팅을 받으실 수 있습니다.</p>
+<ul>
+<li>조건 : 502SCT 이상 스테이킹되어 있어야합니다.</li>
+<li>신청 : 상단 링크에 댓글을 달아야 하며, 스팀엔진 스샷을 찍어야 합니다. 이때 중요한 것은 계졍명이 같이 나와야 하며, SCT 스테이킹 수량도 같이 보여야 합니다.<center>![](https://cdn.steemitimages.com/DQmW84qxD85o4rkQtsihqbxswnp1zpeAyQvUFV7JjJJKRn7/image.png)</center></li>
+<li>보팅 비율: 스테이킹된 비율이 아닌 기본소득 신청자에 따라 유동적으로 할것으로 공지됨.</li>
+<li>@sct.down 계정에서 32K SCT로 1일 1회 보팅</li>
+<li>글 쓸때 조건 : SCT 태그와 더불어 SCT-UBI 태그도 같이 걸어주셔야 합니다.</li>
+<li>보팅 시작 일시: 2019년 5월 26일 이후</li>
+<li>특이사항: sct.down계정은 다운을 하기 위해 사용될 계정이였습니다. 현재는 운용이 직접적으로 되지 않고 있기 때문에 이 파워를 UBI로 돌린것입니다. 다운이 다시 시작되면 UBI는 제한됩니다.</li>
+</ul>
+<h2 id="3-개인적인-생각"><a href="#3-개인적인-생각" class="headerlink" title="3. 개인적인 생각"></a>3. 개인적인 생각</h2><p>우선 토큰 이코노미적으로 봤을때 SCT에 대한 수요를 일시적으로 만들어줄 수 있어서 좋은 것 같습니다. 실제 지인분들중에 급하게 UBI 신청을 위해서 거래소에서 SCT 구매에 나서는 분들도 계시니까요. 보팅이 제한되어 있어서 인원수를 무한로 늘릴 수는 없는 노릇이긴 합니다. (먼지 보팅이 되어버리는 관계로). 조건에 의한 UBI (시간및 스테이킹 물량 조건)가 실행후 어떤 영향을 끼칠지 궁금해지네요. </p>
+<p>Edit. @clayop님의 SCT 스테이킹 분석글리 올라왔네요.</p>
+<ul>
+<li><a href="https://www.steemcoinpan.com/sct/@clayop/sct">https://www.steemcoinpan.com/sct/@clayop/sct</a><br>이것을 바탕으로 하면 현재 스테이킹을 502이상 한 계정은 운영진 계정을 제외하고 약 50개정도입니다.</li>
+</ul>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-image">
+        <a href="/2019/05/20/jayplayco.aaa-starting-of-presale-of-triple-a-the-blockchain-based-movie-and-video-review-platform/" class="image is-7by1">
+            <img class="thumbnail" src="https://files.steempeak.com/file/steempeak/jjm13/MyetNIDV-image.png" alt="[AAA] Starting Presale of Triple A, the blockchain based Movie and Video review platform.">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-05-19T23:12:12.000Z">2019-05-20</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EB%8B%88%ED%8A%B8%EB%A1%9C%EC%8A%A4/">니트로스</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EB%8B%88%ED%8A%B8%EB%A1%9C%EC%8A%A4/AAA/">AAA</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4 minutes membaca (Sekitar 662 kata)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/05/20/jayplayco.aaa-starting-of-presale-of-triple-a-the-blockchain-based-movie-and-video-review-platform/">[AAA] Starting Presale of Triple A, the blockchain based Movie and Video review platform.</a>
+            
+        </h1>
+        <div class="content">
+            <center>![image.png](https://files.steempeak.com/file/steempeak/jjm13/MyetNIDV-image.png)</center>
+
+<p>As informed before we are in the preparation of a separate project that can bring new users into the Steem economy. The launching of Scot and Nitrous have been a huge success and shown what potential we will have already with Scotbot. </p>
+<p>Beside of the roadmap of JJM, we would therefore like to create a new token economy based on Scotbot and Nitrous and are announcing the presale of the Triple A (AAA) token.</p>
+<center>![](https://cdn.steemitimages.com/DQmdBZaj7YcRUAs9sixPETLZuU5anEDYLcQeZa7V4tB6AUx/image.png)</center>
+
+<h2 id="1-General-Data-about-the-Token"><a href="#1-General-Data-about-the-Token" class="headerlink" title="1. General Data about the Token"></a>1. General Data about the Token</h2><ul>
+<li>Name : TRIPLE A</li>
+<li>Symbol : AAA</li>
+<li>MAX / Presale = 1 Billion / 100 Million</li>
+<li>Presale: Only accepted in JJM, 1JJM = 100 AAA</li>
+<li>Softcap: 30K JJM (3 Million AAA) per account.</li>
+<li>Airdrop for JJM Holder: We will initiate a 1:1 Airdrop for JJM holders. (Timing of Snapshot will be announced directly before Airdrop)</li>
+<li>Selling period: 21th of May 2019 - 5th of June 2019 (23:59 KST)</li>
+<li>Referral system: For an existing Steem User 2%+2%, for a new user (including generation of a new Steem account) 3%+3%<br>Referral system will either work manually based on memos when transferring.<br> ex) when buying AAA and sending JJM for it, add “@jayplayco - referral” and both of the buyer and @jayplayco would get 2% of the buying amount as referral.</li>
+<li>Selling: As we will accept only JJM as payment, the selling will be handled on discord (<a href="https://discord.gg/v64srHX">https://discord.gg/v64srHX</a>) or with comments on Steem</li>
+<li>Left over Qty.: If we won’t sell the 100 Million tokens during the presale, we will NOT burn them but will evenly based on the % distribute it between the AAA token presale holders. </li>
+<li>Starting of sales on Steem-Engine : beginning of 5th of June 2019</li>
+</ul>
+<h2 id="2-Token-economy"><a href="#2-Token-economy" class="headerlink" title="2. Token economy"></a>2. Token economy</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jjm13/DvO4deWn-image.png)</center>
+
+<p>The rest of 900 Million tokens will be devided into 4 pools</p>
+<ul>
+<li>Development, Management and Promotion Pool</li>
+<li>Reward Pool (Payout 3 days, 4:6, where 6 is the Curator reward)</li>
+<li>Business Model Pool</li>
+<li>Unique Views Pool (need a separate development and is intended to generate rewards for unique views for up to 2 years)</li>
+<li>Staking: Unstaking will be 5 days. [Edited from 3 days 21th.05.2019]</li>
+</ul>
+<h2 id="3-What-is-Triple-A-about"><a href="#3-What-is-Triple-A-about" class="headerlink" title="3. What is Triple A about?"></a>3. What is Triple A about?</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jjm13/XO8Pozgq-image.png)</center>
+The project Triple A is to create a community around movies and video reviews. In an easy explanation, A is like B => We would like to create a Rotten Tomatoes style community on the Steem Blockchain. Based on the concept of SCOTbot and Nitrous, there are going to be a lot of changes needed to be able to create that kind of platform and community, but we wanted to catch the moment itself we have currently here at Steem. 
+
+<p>So, based on this the status with SCOTbot and Nitrous will be phase I and based on a customized condensor we are going to launch phase II.</p>
+<h3 id="a-Phase-I"><a href="#a-Phase-I" class="headerlink" title="a. Phase I"></a>a. Phase I</h3><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/hPwr5rIc-image.png)</center>
+* Condensor: only Nitrous with generic Steemit overview.
+* Community: starting to write review for movies and videos and add tags matching to the review.
+
+<h3 id="b-Phase-II"><a href="#b-Phase-II" class="headerlink" title="b. Phase II"></a>b. Phase II</h3><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/H2InuhLQ-image.png)</center>
+The main difference here is that Steemit is concentrated on each article, but that the Triple A project is going to be concentrated on the movie and we will place the related reviews about the movies below each video. Additionally, a second part of reward based on the unique views of each review is planned, which is needed to be developed separately.
+
+<h2 id="4-Next-Step"><a href="#4-Next-Step" class="headerlink" title="4. Next Step"></a>4. Next Step</h2><p>We are going to prepare more material and detailed information about the token economy, each Phase I and II, the estimated development time we see for Phase II, etc.</p>
+<p>If you have any questions, please feel free to join our discord channel for JJM, were we have prepared a separate discussion channel for the AAA token presale.</p>
+<ul>
+<li><a href="https://discord.gg/kN6FgwB">JJM Discord Link</a></li>
+</ul>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-image">
+        <a href="/2019/05/19/jayplayco.1-sct-ltaznptb/" class="image is-7by1">
+            <img class="thumbnail" src="https://d1vof77qrk4l5q.cloudfront.net/img/8592b0b9778af6abdf50ea7089cbfe3f4bd5f58c.jpg" alt="인플레이션, 스테이킹과 초기 마이닝 - 1백만 SCT 모으기 프로젝트">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-05-18T22:00:03.000Z">2019-05-19</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EB%8B%88%ED%8A%B8%EB%A1%9C%EC%8A%A4/">니트로스</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EB%8B%88%ED%8A%B8%EB%A1%9C%EC%8A%A4/SCT/">SCT</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    5 minutes membaca (Sekitar 773 kata)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/05/19/jayplayco.1-sct-ltaznptb/">인플레이션, 스테이킹과 초기 마이닝 - 1백만 SCT 모으기 프로젝트</a>
+            
+        </h1>
+        <div class="content">
+            <p><img src="https://d1vof77qrk4l5q.cloudfront.net/img/8592b0b9778af6abdf50ea7089cbfe3f4bd5f58c.jpg" alt=""></p>
+<p>안녕하세요, @jayplayco 입니다.</p>
+<p>주말에도 글을 올리기 위해서는 틈틈히 모바일용 파티코에서 글을 쓰는 방법외에는 없군요.^^</p>
+<p>현재 명일 12:00실 기점으로 스코판(스팀코인판) 첫 리워드가 풀리게 됩니다. 하루에 리워드를 통한 임플레가 49k 이니 3일동안 임플레가 150k가량 될 것으로 보입니다. </p>
+<p>이는 초기 프리세일을 통해 판매되었던 160k와 거의 맞먹는 물량입니다. 스팀처럼 50% 자동 스테킹이 되는 부분도 없어서 전 물량은 곧바로 현금화가 가능합니다. </p>
+<p>실제 그럼 저 모든 물량이 한꺼번에 시장에 나온다면 어떻게 될까요? 현재 가격으로는 가격 유지는 힘들것으로 보입니다. 그렇다면 방법이 없는 것일까?</p>
+<h2 id="1-스테이킹의-이점"><a href="#1-스테이킹의-이점" class="headerlink" title="1. 스테이킹의 이점"></a>1. 스테이킹의 이점</h2><p>KR유저분들 중에는 실제 스팀 초기 닌자마이닝에 참여한 분들은 없다고 봐도 무난할 것으로 생각됩니다. </p>
+<p>그렇다면 초기 마이닝은 어떤 이점이 있을까요? </p>
+<p>추후 커뮤니티가 횔상화 되고, 해외유저, 코인계 외부 유저등이 성공적으로 유입되었을 경우 이전 스팀과 같이 코인관련 정보장의 메인이 되었으면 하는 바램도 있습니다. 그러기 위해서는 초기에 진입하신 분들이 어떻게 대응하느냐에 따라 커뮤니티의 앞길이 정해질 것 같습니다.</p>
+<h3 id="a-SCT-스테이킹-이점"><a href="#a-SCT-스테이킹-이점" class="headerlink" title="a. SCT 스테이킹 이점"></a>a. SCT 스테이킹 이점</h3><ul>
+<li>3일만에 풀림. </li>
+<li>큐레 보상 50%로 업보팅으로 인한 토큰 늘리기에 용이</li>
+<li>완전 초기인 관계로 물량을 풀어도 시장이 큰 물량은 소화 못할 확률이 높아 큐레이션 보상을 득하는 것이 이득이 될것으로 판단</li>
+</ul>
+<h3 id="b-SCT-스테이킹의-단점"><a href="#b-SCT-스테이킹의-단점" class="headerlink" title="b. SCT 스테이킹의 단점"></a>b. SCT 스테이킹의 단점</h3><ul>
+<li>시장 가격은 어떻게 될지 아무도 모른다. </li>
+<li>프로젝트에 대한 믿음이 없을 경우 초기 판매가 답이긴 하다.</li>
+</ul>
+<h2 id="2-1백만-SCT-만들기-프로젝트"><a href="#2-1백만-SCT-만들기-프로젝트" class="headerlink" title="2. 1백만 SCT 만들기 프로젝트"></a>2. 1백만 SCT 만들기 프로젝트</h2><p> 앞으로 필자는 백만 SCT를 묶을 수 있을때 까지 큐레이션과 글 쓰기를 동행할 생각입니다. 제가 쓰는 글의 99%는 암호화폐 관련 글인 관계로 ^^</p>
+<p>이를 위해 모든 SCT를 스테이킹 할 수 있는 부계정을 생성해서 운영예정입니다. @jayplayco 계정에서 쌓이는 SCT위 경우도 같은 부계정으로 옮겨 점차적으로 스테이킹되는 SCT를 높일 계획입니다.</p>
+<p>필자 혼자만 했을 경우는 큰 효과를 볼 수 없겠지만 몇몇 분들이라도 비슷한 생각을 하시면 SCT가격 형성에 도움이 될것으로 생각됩니다.</p>
+<p>즐거운 남은 주말 보내세요!</p>
+<p>Posted using <a href="https://partiko.app/referral/jayplayco">Partiko iOS</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    
+<div class="card card-transparent">
+    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+        <div class="pagination-previous">
+            <a class="is-flex-grow has-text-black-ter" href="/categories/%EB%8B%88%ED%8A%B8%EB%A1%9C%EC%8A%A4/">Sebelumnya</a>
+        </div>
+        <div class="pagination-next is-invisible is-hidden-mobile">
+            <a class="is-flex-grow has-text-black-ter" href="/categories/%EB%8B%88%ED%8A%B8%EB%A1%9C%EC%8A%A4/page/3/">Berikutnya</a>
+        </div>
+        <ul class="pagination-list is-hidden-mobile">
+            
+            <li><a class="pagination-link has-text-black-ter" href="/categories/%EB%8B%88%ED%8A%B8%EB%A1%9C%EC%8A%A4/">1</a></li>
+            
+            <li><a class="pagination-link is-current" href="/categories/%EB%8B%88%ED%8A%B8%EB%A1%9C%EC%8A%A4/page/2/">2</a></li>
+            
+        </ul>
+    </nav>
+</div>
+</div>
+                
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="제플코 제이의 블록체인" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 Jayplayco&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("kr");</script>
+
+
+<script>
+var IcarusThemeSettings = {
+    site: {
+        url: 'http://jayplayco.github.io',
+        external_link: {"enable":true,"exclude":[]}
+    },
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'true'
+        }
+    }
+};
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+
+<script src="/js/main.js" defer></script>
+
+    
+</body>
+</html>

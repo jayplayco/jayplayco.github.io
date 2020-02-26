@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html  lang="kr">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 4.2.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>[Steemhunt] Open Source and Community - 제플코 제이의 블록체인</title>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-1-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="[Steemhunt] Open Source and Community" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-end">
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-12 has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-image">
+        <span  class="image is-7by1">
+            <img class="thumbnail" src="https://steemitimages.com/DQmNfeZGkKQJBrXDkZptuzunaHT6hZKXvcGQFyeiWW4VweN/LP-7-logo.jpg" alt="[Steemhunt] Open Source and Community">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-07-19T21:35:48.000Z">2018-07-20</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/steem/">steem</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    8 minutes membaca (Sekitar 1226 kata)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                [Steemhunt] Open Source and Community
+            
+        </h1>
+        <div class="content">
+            <p><a href="https://steemitimages.com/DQmNfeZGkKQJBrXDkZptuzunaHT6hZKXvcGQFyeiWW4VweN/LP-7-logo.jpg">https://steemitimages.com/DQmNfeZGkKQJBrXDkZptuzunaHT6hZKXvcGQFyeiWW4VweN/LP-7-logo.jpg</a></p>
+<p>Hi, @jayplayco here.<br>Steemhunt is evolving, and I just started my first week in the role as Guardian at Steemhunt. As always Steemhunt is continuously pivoting its way to keep a vital growth and make it for the community a fun place.</p>
+<p><img src="https://cdn.steemitimages.com/DQmdiCKw4bJbBmpJuUgZqaPWVG8Qy4mmdeWMcUrSXFGgP3v/image.png" alt=""><a href="https://unsplash.com/photos/I_pOqP6kCOI">Source: freestocks.org</a></p>
+<p>To all readers who are new to <a href="https://steemhunt.com/">Steemhunt</a>, Steemhunt is a service build on Steem to enable Hunters to hunt new and cool products and get rewarded based on their rankings on a daily base.  If you are new to Steemhunt, you should try first this post. <a href="https://steemit.com/steemdev/@steemhunt/introducing-steemhunt-daily-ranking-of-effortlessly-cool-products-fueled-by-steem-blockchain">LINK</a></p>
+<p>This post is going into details what the difficulty is to develop a fair ranking system in open source and why the community matters.</p>
+<h2> 0. Repository </h2>
+https://github.com/Steemhunt/web
+
+<h2> 1. Steemhunt is Opensource</h2>
+![](https://cdn.steemitimages.com/DQmNwZpJgx6zuKWZ9g2vnBkScrkJGsYE6EoseTHarbEeQCd/image.png)[Source : github/steemhunt](https://github.com/Steemhunt)
+
+<p>Like many other projects, Steemhunt is Opensource, and everybody can have a direct look into the development and even get the code and build it on their own if wanted. That is great but also holds the difficulty to create a fair ranking system which may be challenging to be gamed, as every coded parameter is visible to everybody.</p>
+<p>There might be a reason that companies like Facebook or Google are keeping their algorithm in a black box. In that way, as an example, it is not too easy to game the google ranking, but at the end, it is still able to manipulate it, and there are even so-called SEO specialists making their money improving the ranking with their knowledge about the black box.</p>
+<p>But still, even if you keep your algorithm in a black box, it is still possible to game the system, as the youngest event by looking for the word “idiot” in google and getting the image of the president of the US as the first search is proving it. <a href="https://www.theguardian.com/us-news/2018/jul/17/trump-idiot-google-images-search">Source: Guardian</a></p>
+<h2>2. Fight the gaming</h2>
+![](https://cdn.steemitimages.com/DQmdQN2V12Zjm45hA8cGo75r4vfkbJNAdTNsSzCgj6jDYsH/image.png)[Source: jeshoots.com](https://unsplash.com/photos/eCktzGjC-iU)
+
+<p>Currently, Steemhunt has implemented the following steps to fight the gaming on the platform.</p>
+<ul>
+<li>Account Based Voting</li>
+<li>Reputation-based Voting weight</li>
+<li>Diversity Score</li>
+<li>Influencer Boost</li>
+</ul>
+<p>A detailed overview of each step and what kind of effects they had, can be found <a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-the-difficult-way-to-make-your-own-path-with-abv">here</a> in my former post. </p>
+<p>With this implementations, a lot of Steem common gaming effects have been deleted (self-voting, upvoting effects from bots, curation trails), which would harm an organic ranking board. But there are still daily trials of manipulation of the ranking, mostly not from single users but different voting pools or groups.</p>
+<p>Next thing for the system would be to develop it further to make it even more difficult to cheat. </p>
+<h2>3. Importance of a viable community</h2>
+
+<p>After introducing the influencer boost, the general voice was that the ranking board looked much better than before. Better products and cooler hunts made it into the top ranking. In the end, as my fellow guardian mentioned it, </p>
+<blockquote>
+<p>it is like simulating a bigger community overriding a smaller abusing group.</p>
+</blockquote>
+<p><img src="https://cdn.steemitimages.com/DQmQSZpcBTFByyPgem49hiYPEAM2cFQ7qbLHXVu3fEvnyAY/image.png" alt=""><br><a href="https://unsplash.com/photos/anV_zgNDZhc">Source: Phil Coffman</a></p>
+<p>This simulation with Influencers is of course still not perfect and using more significant power in smaller groups also inherit always a risk. But with the Influencers, we could already see a direct impact what a viable community can do and what an open source algorithm couldn’t avoid alone.</p>
+<p>To get more interested hunters on board, we need to have at the moment Steemians on board, as we are coupled with Steem until SMT is launching. As an example, I was introducing Steemhunt to friends, and they were interested, but the barrier to get signed in was too big for newbie Non-Steemians. I think that with further developments and tweaks on ABV <a href="https://github.com/Steemhunt/web/issues/135">Github Link</a> and a faster and easier sign-up process based on Hardfork 20 will already help to attract new hunters. A full working SMT environment, hopefully soon, will increase the user base further as Steemhunt can then attract also a lot of users outside the Steem economy.</p>
+<h2>4. Conclusion</h2>
+![](https://cdn.steemitimages.com/DQmYxYQ4FpZiwkUzj8aLzLUQAfwfmTVxTY1CtJHQFRtdkQN/image.png)
+[Source:  rawpixel](https://unsplash.com/photos/PUyuhpHr9Z4)
+
+<p>As we can see either Opensource or a black box system, all kind of programs are gamed.  But for a ranking board and an implemented rewarding system, the first trials are showing that a viable community in combination with a “difficult to cheat” system could be the answer for a fair ranking board system on the blockchain.</p>
+<p>We will see what the next steps of the Steemhunt team will bring us and how it will be managed, but until then,</p>
+<p><strong><a href="https://steemhunt.com/">“Keep the hunt on”</a></strong></p>
+<hr>
+<p>Thanks for reading!</p>
+<p>Other articles about Steemhunt.</p>
+<ul>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steem-start-here#@utopian-io/re-steem-start-here-20180712t080009z">Steemhunt- Start here</a></li>
+<li><a href="https://steemit.com/steemit/@jayplayco/what-is-steemhunt-and-why-should-i-care">What is Steemhunt and why should I care?</a></li>
+<li><a href="https://steemit.com/steemit/@jayplayco/biggest-airdrop-ever-hunt-token-and-how-to-participate">Biggest Airdrop ever - HUNT token and how to participate</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-abv-account-based-voting-in-development">[Steemhunt] ABV (Account based voting) in development</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-update-for-upvoting-review-comments-and-other-developments">Update for Upvoting Review Comments &amp; Other Developments</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-most-asked-questions-from-steemhunt-newbies">Most asked questions from Steemhunt Newbies.</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-how-to-get-your-hunt-verified-on-steemhunt">How to get your hunt verified on Steemhunt</a></li>
+<li>[Evolution of Steemhunt`s voting system](<a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-evolution-of-steemhunt-s-voting-system">https://steemit.com/utopian-io/@jayplayco/steemhunt-evolution-of-steemhunt-s-voting-system</a>)</li>
+<li><a href="https://steemit.com/steemhunt/@fknmayhem/understanding-steemhunt-and-how-to-craft-a-good-hunt">Understanding Steemhunt and How to Craft a Good Hunt -@fknmayhem</a></li>
+<li><a href="https://steemit.com/steemhunt/@fknmayhem/picking-apart-the-steemhunt-posting-guidelines-how-we-review-hunts">Picking Apart The Steemhunt Posting Guidelines - How We Review Hunts @fknmayhem</a></li>
+<li><a href="https://steemit.com/steemhunt/@fknmayhem/steemhunt-is-not-a-writing-curation-project">Steemhunt is NOT a Writing Curation Project- @fknmayhem</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-the-difficult-way-to-make-your-own-path-with-abv">The difficult way to make your own path with ABV</a></li>
+<li><a href="https://steemit.com/steemhunt/@fknmayhem/being-a-trailblazing-smt-on-steem-pre-smts-not-for-the-faint-hearted">Being a Trailblazing SMT on Steem Pre-SMTs - @fknmayhem</a></li>
+</ul>
+<p>Join our chat channels if you need more information as the community,  team, and the moderators are answering very fast on any question:</p>
+<p>Discord: <a href="https://discord.gg/mWXpgks">https://discord.gg/mWXpgks</a> (this is where the magic happens)<br>Telegram: <a href="https://t.me/joinchat/AzcqGxCV1FZ8lJHVgHOgGQ">https://t.me/joinchat/AzcqGxCV1FZ8lJHVgHOgGQ</a></p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/steem/" rel="tag">steem</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2018/07/26/jayplayco.steemhunt-abv-2-0/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">[Steemhunt] ABV 2.0</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2018/07/17/jayplayco.3yogsz/">
+                <span class="level-item">[에어드랍] 스티미언 바이트볼 에어드랍 받자~</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="[Steemhunt] Open Source and Community" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 jayplayco&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("kr");</script>
+
+
+<script>
+var IcarusThemeSettings = {
+    site: {
+        url: 'http://jayplayco.github.io',
+        external_link: {"enable":true,"exclude":[]}
+    },
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'true'
+        }
+    }
+};
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+
+<script src="/js/main.js" defer></script>
+
+    
+</body>
+</html>

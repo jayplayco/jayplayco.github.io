@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html  lang="kr">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 4.2.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>[Steemhunt] ABV (Account based voting)  in development - 제플코 제이의 블록체인</title>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-1-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="[Steemhunt] ABV (Account based voting)  in development" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-end">
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-12 has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-image">
+        <span  class="image is-7by1">
+            <img class="thumbnail" src="https://cdn.steemitimages.com/DQmWpr3f9qrH8NPoANLdwigdnumsfi1n4V9qo7YDjqm1o2n/image.png" alt="[Steemhunt] ABV (Account based voting)  in development">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-05-30T15:09:18.000Z">2018-05-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B0%9C%EB%B0%9C/">개발</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6 minutes membaca (Sekitar 933 kata)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                [Steemhunt] ABV (Account based voting)  in development
+            
+        </h1>
+        <div class="content">
+            <p>Hi @jayplaco here! Some development news from @steemhunt</p>
+<h3>0. Repository</h3>
+https://github.com/Steemhunt/
+
+<p><img src="https://cdn.steemitimages.com/DQmWpr3f9qrH8NPoANLdwigdnumsfi1n4V9qo7YDjqm1o2n/image.png" alt=""><br>Today we are going to talk about the current situation at Steemhunt, where the quality of the content is not driving the community but the use of bots in the background for a successful hunt.</p>
+<p>The Steemhunt team is already aware about this issue and for that reason a github issue has been opened and after talking to the main dev. of Steemhunt (@tabris) the implementation is already planned for the next weeks.</p>
+<p>So let`s start to see what the issue is and what AVB would give the Steemhunt community.</p>
+<h3>1. Find the problem of voting  / Bug Fixes</h3>
+
+<p><a href="https://steemit.com/life/@exyle/ac2xvvfi">Steemhunt, vote bots, incentives and why they need SMT’s @exyle</a><br><a href="https://steemit.com/kr/@sirin418/4awf1l">Is Steemhunt Abusing? @sirin418 (Text in Korean)</a><br><a href="https://steemit.com/utopian-io/@tio/add-flag-feature-on-steemhunt">Add Flag Feature on steemhunt @tio</a></p>
+<p>Some users already have found that the current setting can be abused with bots to get easily a higher daily ranking. In fact, the users are doing it on daily base now and it comes to the same issue steemit has in background that not the content is speaking but the steempower.</p>
+<div class="pull-left">  
+https://steemitimages.com/400x300/https://cdn.steemitimages.com/DQmdUtcV2uLv5MBN5Hm6BSNasFkF58tkPbX7z1qWAYWC4xT/image.png
+<center>[Picture 1]</center>
+</div> 
+<div class="text-justify">  
+With "Picture 1" we can see the current No.1 of Today`s ranking from Steemhunt. There is almost no text (so no offence, but I don`t consider this as quality content...), a picture and that was it. How does it happen that this post is ranking No.1?  The answer is easy if you have a look who is actually voting<div><center>
+https://steemitimages.com/300x200/https://cdn.steemitimages.com/DQmW9GQNbeqCwcfLYRbQjhDbnR2TU94NhiZgSwoRp6Ha7S1/image.png</center></div>
+</div> 
+The highest voter here is called tribesteemup which is a collective voting bot. And with more than 80% of the total vote it is the highest voting power here. Using this strategy you can actually max out your ROI with relatively small or no investment (dependent on what kind of bot you are using.)
+
+<h3>2. Yeah, let`s use ABV, but what is that? </h3>
+
+<p><a href="https://steemit.com/steem/@liberosist/the-account-based-voting-revolution">The account-based voting revolution - @liberosist</a><br><a href="https://steemit.com/steemit/@nealmcspadden/account-based-voting-is-a-terrible-idea-for-steem">Account Based Voting is a Terrible Idea for STEEM - @nealmcspadden</a></p>
+<p>@ned has mentioned ABV (Account based voting) on his Korea tour and there are pros and cons on it, but to explain it easily see below,</p>
+<p><strong>A. Current voting system.</strong></p>
+<ul>
+<li>The more steem power you have, more voting power you get, which means you can give more money.</li>
+<li>problem : bots, curation groups, curation trails, voting pools.</li>
+</ul>
+<p><strong>B.  Account based voting</strong></p>
+<ul>
+<li>One account counts has only one voting power</li>
+<li>problem : without any weighting of an account a spam account has the same power as a whale account. This is what @nealmcspadden is talking about.</li>
+</ul>
+<h3>3. Approach from Steemhunt team / New Features</h3>
+github entry : https://github.com/Steemhunt/web/issues/135
+
+<p><strong>Logic</strong></p>
+<ul>
+<li>One upvote has 10 points with 100% vp.</li>
+<li>The point proportionally decrease based on the hunter’s set vp. For example, the hunter upvotes with 50% vp, the score will be 5 point.</li>
+<li>Whitelist: Scores are only be counted by the user who have hunted AT LEAST ONE TIME. </li>
+</ul>
+<p><strong>Possible Progress (Just examples and not fixed)</strong></p>
+<ul>
+<li>More intensive whitelist: counted by the hunters with at least three times, exclude blacklist hunters, etc.</li>
+<li>Hunter’s badge system: We can level the hunters based on their hunting history, from Lv.1 to Lv.5.</li>
+</ul>
+<p><strong>Lv.1: 1 hunts (1 full voting score: 10 poinst)</strong><br><strong>Lv.2: 10 days hunting + 10 times upvoting the hunting posts (1 full voting score: 20 poinst)</strong><br><strong>Lv.3: Lv.2 + at least 3 times on top 10 hunts (1 full voting score: 30 poinst)</strong><br><strong>Lv.4: Lv.2 + at least 5 times on top 10 hunts (1 full voting score: 50 poinst)</strong><br><strong>Lv.5: 30 days hunting + 30 times upvoting the hunting posts + at least 10 times on top 10 hunts. (1 full voting score: 100 poinst)</strong><br><strong>The Lv can be downgraded if the hunter does not have any hunting or voting activities more than 10 days. (Lv 5 -&gt; Lv 4 -&gt; …)</strong></p>
+<h3>4. So what does that mean? </h3>
+
+<p>@steemhunt will give only active Steemhunters the possibility to vote (whitelist) and level them with badges to differentiate the reputation within the community. Based on the given voting power% a vote can count from 0-100. (Based on your level) The badge system gives different levels to activate the hunters for better content.  All this steps are planned to give active hunters with high quality content the best chance for the highest rewards. </p>
+<h3>5. Roadmap</h3>
+
+<p>It is planned to test the first settings next week, but there is in this moment no official deadline from team @steemhunt , but the main dev. from Steemhunt mentioned that it is very a high priority before scaling to the next stage. So let`s see how this will change the quality of the content at steemhunt.</p>
+<h3>6. Github Account</h3>
+https://github.com/zionopia
+______
+Thanks for reading!
+
+<p>Other articles about Steemhunt.<br><a href="https://steemit.com/steemit/@jayplayco/what-is-steemhunt-and-why-should-i-care">What is Steemhunt and why should I care?</a><br><a href="https://steemit.com/steemit/@jayplayco/biggest-airdrop-ever-hunt-token-and-how-to-participate">Biggest Airdrop ever - HUNT token and how to participate</a></p>
+<p>Join their chat channels if you need more information as the team and the moderators are answering very fast on any question:</p>
+<p>Discord: <a href="https://discord.gg/mWXpgks">https://discord.gg/mWXpgks</a> (this is where the magic happens)<br>Telegram: <a href="https://t.me/joinchat/AzcqGxCV1FZ8lJHVgHOgGQ">https://t.me/joinchat/AzcqGxCV1FZ8lJHVgHOgGQ</a></p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/%EA%B0%9C%EB%B0%9C/" rel="tag">개발</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2018/05/31/jayplayco.abv/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">스팀헌드 - ABV (어카운트 베이스 보팅) 을 적용할 예정입니다.</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2018/05/30/jayplayco.ty6alwd0v/">
+                <span class="level-item">ty6alwd0v</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="[Steemhunt] ABV (Account based voting)  in development" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 jayplayco&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("kr");</script>
+
+
+<script>
+var IcarusThemeSettings = {
+    site: {
+        url: 'http://jayplayco.github.io',
+        external_link: {"enable":true,"exclude":[]}
+    },
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'true'
+        }
+    }
+};
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+
+<script src="/js/main.js" defer></script>
+
+    
+</body>
+</html>

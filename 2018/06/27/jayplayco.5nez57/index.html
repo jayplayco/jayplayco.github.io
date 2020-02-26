@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html  lang="kr">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 4.2.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>[스팀헌트] 스팀헌트의 업보팅 스코어 이해하기 - 제플코 제이의 블록체인</title>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-1-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="[스팀헌트] 스팀헌트의 업보팅 스코어 이해하기" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-end">
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-12 has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-image">
+        <span  class="image is-7by1">
+            <img class="thumbnail" src="https://steemitimages.com/DQmNfeZGkKQJBrXDkZptuzunaHT6hZKXvcGQFyeiWW4VweN/LP-7-logo.jpg" alt="[스팀헌트] 스팀헌트의 업보팅 스코어 이해하기">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-06-26T18:17:27.000Z">2018-06-27</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/steem/">steem</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    20 minutes membaca (Sekitar 3058 kata)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                [스팀헌트] 스팀헌트의 업보팅 스코어 이해하기
+            
+        </h1>
+        <div class="content">
+            <p><a href="https://steemitimages.com/DQmNfeZGkKQJBrXDkZptuzunaHT6hZKXvcGQFyeiWW4VweN/LP-7-logo.jpg">https://steemitimages.com/DQmNfeZGkKQJBrXDkZptuzunaHT6hZKXvcGQFyeiWW4VweN/LP-7-logo.jpg</a></p>
+<p>안녕하세요, @jayplayco 입니다.</p>
+<p><a href="https://steemhunt.com/">스팀헌트</a>가 생소하신 분들을 위해 간단히 설명을 드리면, 스팀헌트는 최근에 런칭한 서비스입니다. 스팀을 기반으로 만들어진 서비스이며 헌터들이 새롭고 멋진 제품을 헌팅하면서 매일 새롭게 결정되는 랭킹에 의해 보상을 받을 수 있는 곳입니다. 스팀헌트가 처음이시라면 <a href="https://steemit.com/steemhunt/@tabris/3pxhvz">이 공지부</a>터 읽고 시작하시는 것을 추천합니다.</p>
+<p>이번 포스팅은 이제는 스팀과는 많은 차이를 보이는 스팀헌트의 보팅시스템을 이해하고 그간의 개발과정을 살펴보도록 하겠습니다.</p>
+<h4> 0. 출처</h4>
+https://github.com/Steemhunt/api
+
+<h4> 1. 스팀헌트 보팅시스템의 타임라인</h4>
+
+<p><img src="https://cdn.steemitimages.com/DQmX7AdJWXV5wuS3pSLmDC328SWf9hp2jnP71S69CC1tesn/image.png" alt=""><br><a href="https://www.presentationgo.com/presentation/vertical-timeline-infographic-for-powerpoint/">Source: presentationgo.com</a></p>
+<h5>a. 스팀 보팅 시스템으로 시작하기</h5>
+
+<p><img src="https://cdn.steemitimages.com/DQmVV3bCLVukvk7jkyvWSgFox1vPwWQ54Cc9pq66vxGjLTm/image.png" alt=""><br><a href="https://pixabay.com/de/abstimmung-wort-buchstaben-scrabble-1804596/">Source: Wokandapix</a><br>2018년 3월달에 런칭할때는 스팀헌트의 보팅 시스템은 스팀의 보팅시스템을 그대로 쓰고 있었습니다. 이것은 셀프보팅, 봇 사용, 고래들의 존재와 큐레이션 트레일 같은 조직들이 스팀헌트에서 똑같은 파워를 갖고 있었던 것입니다.</p>
+<p>사실상 스팀헌트가 잘 알려지지 않았을때 까지만 해도 이것은 사실상 크게 문제가 되지는 않았습니다. 소수의 사람들이 서로 경쟁하면서 보상을 받으려고 했었으니까요. 렌딩되는 파워가 커지면 커질수록 이것을 악용하려는 유저가 점점 늘어나게 되었습니다. 하루 실제 사용자수도 증가하고 일명 J-커프를 그리면서 성장을 하는 스팀헌트는 백만 스팀을 넘어 현재는 약 1백5십만 스팀을 렌딩받고 있는 상황까지 되었습니다. 그래서 이것을 악용하려는 사람은 더욱더 많아졌었습니다.</p>
+<h5>b. 봇 사용 금지</h5>
+![](https://cdn.steemitimages.com/DQmZQfpLC7pdJK2DHAj1v7D49b3z2mWG5LkmqYRG5SBe85M/image.png)
+[Source : rawpixel](https://unsplash.com/photos/wbu4q8xk2Kc)
+
+<p>성장과 더불어 스팀헌트는 커뮤니티의 도움이 절실히 필요해서 5월말에 긴급하게 모드들을 선출하게 됩니다. (현재까지 총 9명입니다.) 6월 2일에는 결국 모드 선출 몇일 후에 봇 사용을 전면적으로 제제하기로 결정을 합니다.  사실상 봇 사용을 제제할 만한 시스템이 준비가 되지는 않은 상태여서 모드와 스팀헌트 팀은 봇 사용을 일일이 수동으로 체크하면서 리스팅에서 제외하거나 업보팅이 되었을 경우 다시 취소하는 것을 반복했습니다. 수동으로 하는 것이라 완벽할 수가 없었고 가장 중요한 것은 스케일링이 불가능한 방법이였습니다.</p>
+<h5>c. 계정당 보팅 (Account based Voting) 적용</h5>
+![](https://cdn.steemitimages.com/DQmXw8De2pve7YnaHGdK5YXAWCzifXtDZLsst9zxfMwuNeD/image.png)
+[Source : rawpixel](https://unsplash.com/photos/1I811IkRlKE)
+스팀헌트의 ABV (Account based voting)는 아직 기본적인 모델로 적용되어 런칭을 했습니다. 여러 종류의 모델들이 논의되었지만 스팀헌트의 팀은 결론적으로 심플한 것이 제일 좋겠다는 접근 방식으로 ABV를 런칭하게 됩니다. 여러 논의 사항들이 궁금하실 경우 깃헙에서 내용이 그대로 남아있습니다. (https://github.com/Steemhunt/web/issues/135)
+
+<p>새로 런칭한 ABV는 6월 14일날 기준으로 다음과 같은 논리로 적용되었습니다. </p>
+<p>1) 계정당 한개의 보팅 (기본  x1)<br>2) 스팀 레퓨테이션에 따른 레벨링<br>    - 34밑은 x0 , 35-44는 x0.5, 45-54는 x2, 그리고 60이상은 x3<br>3) 셀프보팅은 카운팅을 하지 않음<br>4) 스팀헌트에서 한 보팅만 카운팅함.</p>
+<p>ABV적용으로 셀프보팅, 봇, 큐레이션트레일의 경우는 스팀상에서는 그대로 보팅력을 유지했지만 스팀헌트 내에서 랭킹을 위해서 계산되는 스코에는 더이상 영향을 미치지 않게 되었습니다. </p>
+<h5>d. 다양성 지수 (Diversity Score )</h5>
+![](https://cdn.steemitimages.com/DQmeAPrULBSWhzrxgs11Jz5H7LbQ8Gw4Co2jYDSDzU2Qe3g/image.png)[Source: rawpixel](https://unsplash.com/photos/-9xYJbJU2x4)
+
+<p>ABV와 같이 발표되었으나 이번 6월 23일에 적용된 다양성 지수도 이제는 스팀헌트 내에서 업보팅에 영향을 줍니다. 스팀헌트 팀의 경우 Gini-Simpson index를 기반으로 적용된 다양성 지수를 썼습니다. (<a href="https://en.wikipedia.org/wiki/Diversity_index#Gini–Simpson_index">https://en.wikipedia.org/wiki/Diversity_index#Gini–Simpson_index</a>)<br>Gini-Simpson Index가 뭔지를 깊게 다룰 수 도 있겠지만, 비교적 어려운 내용인 관계로 그냥 스팀헌트업보팅에 어떤 영향을 미치는지를 보도록 하겠습니다. </p>
+<p>ABV시스템에 추가적으로 다양성 지수가 적용되면서 업보팅 파워가 계산이 됩니다. 다양성 지수는 헌터의 업보팅 패턴을 보고 그에 따른 패널티나 보너스를 주는 시스템입니다.</p>
+<p>1) 제일 낮은것이 x0 이며 제일 높은 것이 x1.0인게 지나 심슨 인덱스이나, 스팀헌트는 여기에 추가 보너스를 적용하여 실질적으로 x1 이상 올라갈 수 있음.<br>2) 같은 헌터에게 지속적으로 보팅을 할 경우 다양성 지수가 낮아짐.<br>3) 다른 헌터에게 업보팅을 하나 높은 보팅파워를 소수의 헌터에게 쓸 경우 (예를 들어 100%) 이것 또한 다양성 지수를 낮추게 됩니다.<br>4) 다양한 헌터에게 업보팅을 할 경우 시스템이 보너스를 줘서 다양성 지수는 (DS) x1.0이상으로 올라갈 수 있습니다.<br>5) 스팀헌트에 새롭게 온 헌터일 경우 페널티가 주어져서 충분한 데이터가 모일때까지 낮은 다양성 지수를 갖게 됩니다.<br>6) 다양성 지수 x ABV  =&gt;  각 헌터의 업보팅 파워임</p>
+<p>스팀헌트의 시스템을 어뷰징하기 위해 다양한 Vote4Vote 그룹의 시도가 있었습니다. 이런 종류의 공격은 이제는 신규 유저가 패널티로 인해 업보팅 파워가 낮아져서 조금더 어렵게된 상황압니다.또한 서클 보팅을 하는 V4V 그룹들의 특징상 추가적으로 패널티가 들어가는 관계로 어뷰징을 무력화합니다. </p>
+<h4> 2. 스팀과 스팀헌트 보팅 시스템의 차이 </h4>
+<center>![](https://cdn.steemitimages.com/DQmcwiTJXdCS5f5XjAGy6gwpiUe7jCwjvgEa3PtGuGRiAi2/image.png)</center>
+
+<p>보시는 바와 같이 스팀 보팅시스템중 중요한 부분들이 사실상 스팀헌트에서는 별다른 영향을 주지 않게 되었습니다. 셀프보팅, 봇, 큐레이션트레일은 더이상 스팀헌트 랭킹에 영향을 줄 수 없습니다. V4V의 경우는 아직도 수동으로 유저들의 레포트를 받는 형식이긴 하지만, 서클 보팅에 대한 패널티가 강한 만큼 효용성은 많이 줄어들 것으로 생각됩니다. </p>
+<h4> 3. 스팀헌트의 업보트 파워 읽기</h4>
+![](https://cdn.steemitimages.com/DQmZTGXURudmYUqkaKD6BhK5Dv2h7Cb3xY9SVD7qSgLZrPJ/image.png)
+스팀헌트에서 헌트리스트를 보실 경우 업보팅 버튼이 오른쪽에 보이실 겁니다. 그 업보팅 버튼 바로 밑에 있는 숫자가 현재 랭킹을 결정하는 스팀헌트 내의 업보팅 스코어입니다. 즉 다른 스팀헌트 헌터들이 이 헌트에 업보팅을 ABV와 DS를 적용후 계산된 스코어입니다. 조그마한 스킨샷 밑에 보이는 $로 표기된 수는 실제 스팀에서 업보팅이 된 값입니다. 
+
+<p><img src="https://cdn.steemitimages.com/DQmSx1qSCLvdscpvemPNxnSPro84MFAEp6u2UjXmbpRFPX5/image.png" alt=""><br>포스팅을 자세하게 들어가서 보면 바닥 부분에 자세하게 볼 수 있습니다. 바닥쪽에 $로 표시된 금액에 마우스를 올리게 되면 누가 얼마만큼의 업보팅을 했는지 보입니다. “vote”라고 되어있는 부분을 마우스 오버하시면 실제 스팀헌트에서 계산된 업보팅을 보실 수 있습니다. 예시의 경우는 스팀에서 총 4개의 업보팅을 받았으나, 스팀헌트 내에서는 2개의 업보팅만 계산된것을 보실 수 있습니다. </p>
+<h4> 4. 앞으로의 가능성</h4>
+현재 SMT가 개발되기 전으로 완전하게 스팀을 벗어난 보팅시스템은 불가하지만 많은 부분에서 유저들의 어뷰징을 막을 수 있는 기본 환경은 마련된것으로 보입니다. 물론 세상에는 완벽하게 어뷰징을 막을 수 있는 플랫폼이나 시스템은 없으나 앞으로도 빠르게 상황에 대응하는 스팀헌트 팀의 대처능력을 믿어보기로 합니다. 스팀헌트 보팅시스템에는 필자의 예상으로는 지속적으로 업데이터가 되면서 발전해나갈 것으로 여겨집니다.  추가로 크게 바뀌는 것이 있으면 다시 글로 찾아뵙겠습니다.
+
+
+<p>해피 헌팅하세요~!</p>
+<hr>
+<p>여기까지 읽어주셔서 감사합니다. 더욱더 많은 정보를 받기 원하시는 분들은 @jayplayco 팔로우 부탁드립니다. 현재는 한글과 영문으로 포스팅을 합니다.</p>
+<p>스팀헌트 관련 기사들.</p>
+<ul>
+<li><a href="https://steemit.com/steemit/@jayplayco/what-is-steemhunt-and-why-should-i-care">What is Steemhunt and why should I care?</a></li>
+<li><a href="https://steemit.com/steemit/@jayplayco/biggest-airdrop-ever-hunt-token-and-how-to-participate">Biggest Airdrop ever - HUNT token and how to participate</a></li>
+<li><a href="https://steemit.com/kr/@jayplayco/abv">스팀헌드 - ABV (어카운트 베이스 보팅) 을 적용할 예정입니다.</a></li>
+<li><a href="https://steemit.com/kr/@jayplayco/7qyah8">스팀헌트 -영어울렁증 극복하고 스팀헌트 고수되기</a></li>
+<li><a href="https://steemit.com/kr/@jayplayco/no-rejection-on-steemhunt">스팀헌트 - 노리젝준비하기</a></li>
+<li><a href="https://steemit.com/kr/@jayplayco/why-are-my-hunts-rejected">[스팀헌트] 내 헌트가 거절당하는 이유! Why are my hunts rejected?</a></li>
+<li><a href="https://steemit.com/kr/@jayplayco/us2xk-abv">ABV에 헌트 큐레이션 점수 적용과 헌트 지갑 오픈</a></li>
+<li><a href="https://steemit.com/kr/@jayplayco/6fa5dn">스팀헌트 뉴비들이 가장 자주 물어보는 질문들.</a></li>
+<li><a href="https://steemit.com/kr/@jayplayco/sovuv">스팀헌트에서 포스트 승인 받기</a></li>
+</ul>
+<p>@ayogom님 글들</p>
+<ul>
+<li><a href="https://steemit.com/kr/@ayogom/5nrr12-1">스팀헌트 프로젝트 알아보기 1편 “스팀헌트가 뭐야</a></li>
+<li><a href="https://steemit.com/kr/@ayogom/2z21he-2">스팀헌트 프로젝트 알아보기 2편 “스팀헌트 어떻게 포스팅 하면 되지?”</a></li>
+<li><a href="https://steemit.com/kr/@ayogom/3">스팀헌트 프로젝트 알아보기 3편 “스팀헌트 에어드랍을 받고 싶다면?”</a><br>상기 아요곰님 글들은 허락을 받고 링크를 걸었습니다. 일부 6월 1일부로 바뀐 제품정책이 있어 하기 프로젝7님 글도 같이 확인부탁드립니다.</li>
+<li><a href="https://steemit.com/kr/@project7/140-top10">[스팀헌트] 봇 사용 제제 + 정책 변경 + 스파 140만 돌파 + Top10 스팀디앱 등극</a></li>
+</ul>
+<p>더욱더 빠르고 정확한 정보를 원하시면 스팀헌트의 채팅 채널에 가입하시기 바랍니다. 운영자분들과 모더레이터들이 성실히 답변해주고 있으며, 영어의 압박이 두려우시면 디스코트에 한국어 방도 있으니, 운영자분들이나 저도 성심성의껏 답변해드리고 있습니다. </p>
+<p>Discord: <a href="https://discord.gg/mWXpgks">https://discord.gg/mWXpgks</a> (this is where the magic happens)<br>Telegram: <a href="https://t.me/joinchat/AzcqGxCV1FZ8lJHVgHOgGQ">https://t.me/joinchat/AzcqGxCV1FZ8lJHVgHOgGQ</a></p>
+<hr>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/steem/" rel="tag">steem</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2018/06/29/jayplayco.kr-smt/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">[KR-SMT] 새로운 태그의 탄생과 배경</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2018/06/25/jayplayco.steemhunt-evolution-of-steemhunt-s-voting-system/">
+                <span class="level-item">[Steemhunt] Evolution of Steemhunt`s voting system</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="[스팀헌트] 스팀헌트의 업보팅 스코어 이해하기" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 jayplayco&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("kr");</script>
+
+
+<script>
+var IcarusThemeSettings = {
+    site: {
+        url: 'http://jayplayco.github.io',
+        external_link: {"enable":true,"exclude":[]}
+    },
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'true'
+        }
+    }
+};
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+
+<script src="/js/main.js" defer></script>
+
+    
+</body>
+</html>

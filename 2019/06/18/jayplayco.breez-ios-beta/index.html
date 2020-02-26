@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html  lang="kr">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 4.2.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>[Breez] 비트코인 라이트닝 네트워크 기반 모바일 지갑 iOS Beta버젼 출시 - 제플코 제이의 블록체인</title>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-1-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="[Breez] 비트코인 라이트닝 네트워크 기반 모바일 지갑 iOS Beta버젼 출시" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-end">
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-12 has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-image">
+        <span  class="image is-7by1">
+            <img class="thumbnail" src="https://files.steempeak.com/file/steempeak/jayplayco/qJi16cbp-image.png" alt="[Breez] 비트코인 라이트닝 네트워크 기반 모바일 지갑 iOS Beta버젼 출시">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-17T15:20:24.000Z">2019-06-18</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    8 minutes membaca (Sekitar 1186 kata)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                [Breez] 비트코인 라이트닝 네트워크 기반 모바일 지갑 iOS Beta버젼 출시
+            
+        </h1>
+        <div class="content">
+            <center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/qJi16cbp-image.png)</center>
+안녕하세요, @jayplayco입니다.
+
+<p>이번에 Breez라는 곳에서 비트코인용 라이트닝 네트워크 지갑을 아이폰용 베타 버젼을 공개했습니다. 이에 따라 비트코인으로 소액결제를 이동중에도 쉽게 가능하게 되었습니다. 한번 파고 들어가보겠습니다.</p>
+<h2 id="0-라이트닝-네트워크란-Lighting-Network"><a href="#0-라이트닝-네트워크란-Lighting-Network" class="headerlink" title="0. 라이트닝 네트워크란? (Lighting Network)"></a>0. 라이트닝 네트워크란? (Lighting Network)</h2><p>스팀을 쓰시는 분들은 별로 큰 어려움을 느끼지 못하실텐데, 거래소 내에서 비트코인 거래가 아닌 실질적인 비트코인을 지갑에서 지갑으로 최근에 이동을 시켜보신 분들은 아시겠지만, 우선 비트코인을 전송하는데 기본적으로 비용이 들지는 않지만, 사실상 transaction이 실행이 되기 위해서는 transaction fee를 포함해야 하는것이 사실이며, 이는 많은 량의 비트코인을 이동할때는 어쩔 수 없다고 하지만, 커피값 정도되는 비트코인을 전송하는데는 문제가 될 수 있습니다.</p>
+<p>그 현재 비트코인은 블록당 1MB가 들어가게 되는데, 트랜스액션을 처리해야할 마이너(miner)의 경우에는 트랜스액션 fee가 높은 거래를 우선시하는경향이 있고, 소량의 비트코인의 경우에는 그만큼 트랜스액션 비용도 적은 관계로 우선순위가 밀릴 수 있습니다.</p>
+<p>이를 해결하기 위해서는 하트포크를 해서 1MB의 제한을 풀어버려서 스케일링을 할 수 있으나, 그에 따른 다른 문제점들이 발생하기도 합니다. (전송 속도, 처리 하드웨어등등)</p>
+<p>라이트닝 네트워크는 확장성을 위해 블록크기를 늘린것이 아닌 오프체인에서 수수료를 낮추고 소액거래가 가능하도록 하는 기술임. 즉, 약간 비트코인 오프체인의 사이드체인과 비슷한 느낌입니다.</p>
+<h2 id="1-Breez의-지갑"><a href="#1-Breez의-지갑" class="headerlink" title="1. Breez의 지갑"></a>1. Breez의 지갑</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/wHWt0cvm-image.png)</center>
+
+<p>브리즈의 지갑은 구매자와 판매자가 각각 설치를 하고 소액 결재를 할때 라이트닝 네트워크를 이용해서 쉽고 저렴한 비용으로 이용할 수 있게 구성이 되어 있습니다. 실제 결재를 할때는 Breeze의 허브를 통해 서로 연결되며, 이 허브는 Lightning 노드를 이용해서 진행됩니다. 각 지갑에 저장된 비토코인의 변화를 반영하기 위해 거래가 있을때 마다 당사자들의 Bitcoin의 변화하는 양을 반영하기 위해 거래가있을 때마다 대차 대조표에 서명을 하면서 증명을 합니다. 트랜잭션이 완료되면 잔액이 최종 비트코인 블록 체인에 등록됩니다. 분쟁이 일어날 경우에는 가장 최근 대차 대조표를 사용하여 지가분 분쟁 발생시, 양 당사자는 가장 최근에 서명 한 대차 대조표를 사용하여 잃어버린 부분을 되찾을 수 있습니다. </p>
+<p>기존 안드로이드 사용자들은 Breez의 지갑을 쓸 수 있었지만, 이번 iOS 베타 출시로 전체 모바일 시장의 약 98%를 커버하게 되었습니다.</p>
+<h2 id="2-Breez-지갑의-비젼"><a href="#2-Breez-지갑의-비젼" class="headerlink" title="2. Breez 지갑의 비젼"></a>2. Breez 지갑의 비젼</h2><p>브리즈 지갑의 경우는 100% 비트코인의 소액 결재를 위해 최적화되었습니다. 라이트닝 네트워크 사용이 그 단적인 증거이죠. 이제 소비자용 지갑은 완성이 되었으니 사실상 Breez측에서도 다음 단계로 필요한 것은 판매자를 위한 POS 클라이언트 라고 합니다. 이것까지 제공이 된다면, 손쉽게 비트코인으로 소액 결재를 확장할 수 있는 기반이 만들어질 것 같습니다. </p>
+<p><a href="https://en.wikipedia.org/wiki/Lightning_Network">소스: Lightning Network - Wikipedia</a><br><a href="https://banksalad.com/contents/%EC%89%BD%EA%B2%8C-%EC%84%A4%EB%AA%85%ED%95%98%EB%8A%94-%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8-%EB%9D%BC%EC%9D%B4%ED%8A%B8%EB%8B%9D-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-Lightning-Network-%EB%9E%80-g9nT6">소스: 쉽게설명하는 블록체인: 라이트닝 네트워크</a><br><a href="https://medium.com/breez-technology/breez-on-ios-a-big-step-towards-the-lightning-economy-and-a-giant-leap-for-breez-cbcf2db77acb">소스: Breez Medium 공지</a><br><a href="https://www.coindesk.com/breez-reveals-lightning-powered-bitcoin-payments-app-for-iphone">소스: 코인데스크 Breez 기사</a><br><a href="https://github.com/breez/breezmobile">소스: Breez Github</a></p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/" rel="tag">미지정</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/06/18/jayplayco.libra/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">[Libra] 페북 스테이블코인 리브라 백서 공개및 간편 요약</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/06/17/jayplayco.roadofrich-finding-about-the-team-and-project/">
+                <span class="level-item">[RoadofRich] Findings about the team and project</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="[Breez] 비트코인 라이트닝 네트워크 기반 모바일 지갑 iOS Beta버젼 출시" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 jayplayco&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("kr");</script>
+
+
+<script>
+var IcarusThemeSettings = {
+    site: {
+        url: 'http://jayplayco.github.io',
+        external_link: {"enable":true,"exclude":[]}
+    },
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'true'
+        }
+    }
+};
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+
+<script src="/js/main.js" defer></script>
+
+    
+</body>
+</html>

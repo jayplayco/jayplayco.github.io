@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html  lang="kr">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 4.2.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>[스팀잇] Mira 도입 시작 - 제플코 제이의 블록체인</title>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-1-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="[스팀잇] Mira 도입 시작" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-end">
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-12 has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-image">
+        <span  class="image is-7by1">
+            <img class="thumbnail" src="https://files.steempeak.com/file/steempeak/jayplayco/mp34er7M-image.png" alt="[스팀잇] Mira 도입 시작">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-05-06T18:13:12.000Z">2019-05-07</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/steem/">steem</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    5 minutes membaca (Sekitar 756 kata)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                [스팀잇] Mira 도입 시작
+            
+        </h1>
+        <div class="content">
+            <center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/mp34er7M-image.png)</center>
+안녕하세요, @jayplayco 입니다.
+
+<p>휴일들은 잘 보내셨습니다. @clayop님이 만드신 스팀잇 톡방에서 주말동안 많은 말들이 오고 갔더군요. 내용의 중점은 스팀잇이 개발을 하느냐, 안하느냐에 대한 것이였습니다. 스팀에 여전히 희망을 품고 잘 되기를 바라는 1인으로써 스팀잇 재단에 대한 비판적인 자세는 필자 역시 갖고 있습니다.하지만 해결책이 없는 비판은 사실 도움이 되지는 않습니다. 미라는 다음 단계로 가기 위한 필요한 절차였던 관계로 이제 roll-out을 시작한다니, 곧 다음 단계들이 올것이라고 기대해볼 수 있을 것 같습니다.</p>
+<p><a href="https://steemit.com/mira/@steemitblog/mira-soft-roll-out-begins">https://steemit.com/mira/@steemitblog/mira-soft-roll-out-begins</a></p>
+<h2 id="Mira는"><a href="#Mira는" class="headerlink" title="Mira는?"></a>Mira는?</h2><p>Multi Index RocksDB Adapter 의 약자로 기술적으로는 페북에서 개발한 Database 기술을 이용해서 노드들이 데이터를 RAM대신에 일반 하드웨어(HDD)에 저장할 수 있는 기술입니다. 이는 노드 운영 비용을 줄여주며, 또한 스팀이 스케일링 하기 위해 필수적으로 필요한 기능입니다. 스팀만큼이나 실시간 유저 interaction이 많은 블록체인도 적은 관계로, 이런 종류의 문제를 해결해야하는것은 필연적으로 스팀 블록체인 처음중 하나일거라는 생각이 듭니다.</p>
+<h2 id="Roll-Out-전략은"><a href="#Roll-Out-전략은" class="headerlink" title="Roll Out 전략은?"></a>Roll Out 전략은?</h2><p>soft roll out을 통해 점진적으로 스팀체인에 적용을 할 예정입니다. 즉, 문제가 발견될 경우 즉각 이전 버젼으로 회기해서 사용에 문제가 없도록 진행될 예정입니다.</p>
+<h2 id="SMT-오-SMT"><a href="#SMT-오-SMT" class="headerlink" title="SMT? 오~~ SMT!"></a>SMT? 오~~ SMT!</h2><p>현재 SMT의 경우는 github에 직접 등록되지 않고 private하게 개발을 진행하고 있어 외부에서는 진행 정도를 파악하기는 쉽지 않습니다. 또한 제한된 개발 인원으로 우선순위를 정하고 진행해야 하는 것도 맞는 전략이기에 우선은 MIRA를 런칭하고 그 후에 SMT에 집중을 한다고 합니다.</p>
+<p>한가지 특이한 점은, 공식 내용에 다음과 같은 text 입니다.</p>
+<blockquote>
+<p>launch their very own cryptocurrency with 3-second fee-less transfers and our revolutionary proof-of-brain algorithm which leverages the wisdom-of-the-crowd to autonomously reward engagement.</p>
+</blockquote>
+<p> 이전 공지에서는 업보팅에 대한 내용은 우선순위에 없었으나, 이번 공지에는 POB에 대한 내용을 같이 언급하면서 SMT를 런칭할때 POB와 inflation기능까지 탑재를 할 지도 모르겠다는 희망이 보입니다. ^^</p>
+<p>어쩌면 스팀엔진측의 발빠른 움직임이 자극이 되었을지도 모르겠다는 생각을 개인적으로 합니다. 만약에 되었다면 좋은 자극제인것으로~ ^^</p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/steem/" rel="tag">steem</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/05/08/jayplayco.7000/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">[해킹] 바이낸스 7000비트코인 해킹</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/05/03/jayplayco.2sfjab/">
+                <span class="level-item">[스팀엔진] 하드포크와 업보팅 가능한 토큰 시작</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="[스팀잇] Mira 도입 시작" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 jayplayco&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("kr");</script>
+
+
+<script>
+var IcarusThemeSettings = {
+    site: {
+        url: 'http://jayplayco.github.io',
+        external_link: {"enable":true,"exclude":[]}
+    },
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'true'
+        }
+    }
+};
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+
+<script src="/js/main.js" defer></script>
+
+    
+</body>
+</html>

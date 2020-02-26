@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html  lang="kr">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 4.2.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>[스팀-UA] Steem-ua 스팀의 새로운 레퓨시스템을 제시하다 - 그리고 레퓨가 높으면 업보팅이 높다! - 제플코 제이의 블록체인</title>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-1-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="[스팀-UA] Steem-ua 스팀의 새로운 레퓨시스템을 제시하다 - 그리고 레퓨가 높으면 업보팅이 높다!" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-end">
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-12 has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-image">
+        <span  class="image is-7by1">
+            <img class="thumbnail" src="https://cdn.steemitimages.com/DQmSREN1kFXbXoF4LesEBygzHfTEvuYByvwyPP5KPfHvnE8/image.png" alt="[스팀-UA] Steem-ua 스팀의 새로운 레퓨시스템을 제시하다 - 그리고 레퓨가 높으면 업보팅이 높다!">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-08-29T20:31:45.000Z">2018-08-30</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/steem/">steem</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    8 minutes membaca (Sekitar 1192 kata)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                [스팀-UA] Steem-ua 스팀의 새로운 레퓨시스템을 제시하다 - 그리고 레퓨가 높으면 업보팅이 높다!
+            
+        </h1>
+        <div class="content">
+            <p>안녕하세요, @jayplayco 입니다.</p>
+<p>오늘 <a href="https://open.kakao.com/o/g1MCypW">스팀몬스터 오픈챗방 홍보하고</a> 거기 계시는 멤버분들이랑 얘기하다가 어제 해외 소식통을 통해 들은 좋은 정보가 있어서 KR 커뮤니티에도 공유하고자 합니다.</p>
+<p>스팀의 utopian-io에서 왕성하게 활동하고 있는 @holger80 님과 @scipio 님이 개발하신 USER AUTHORITY 서비스 입니다.<br><img src="https://cdn.steemitimages.com/DQmSREN1kFXbXoF4LesEBygzHfTEvuYByvwyPP5KPfHvnE8/image.png" alt=""><br><a href="https://steemit.com/ua/@steem-ua/introducing-userauthority-ua-steem-ua-and-ua-api">Source: steem-ua</a></p>
+<p>공식 글은 여기에 있습니다. <a href="https://steemit.com/ua/@steem-ua/introducing-userauthority-ua-steem-ua-and-ua-api">HERE</a></p>
+<h2>UA Score 란</h2>
+이 서비스는 스팀에서 새로운 레퓨테이션을 정착시키고자 하는 서비스입니다. 실제 현재 스팀의 레퓨테이션은 업보팅봇을 풀로 몇번만 돌리면 확 올라가는 단순한 시스템인 관계로 신빙성이 조금 떨어지는것도 사실입니다.
+
+<p>그래서 steem-ua에서는 팔로워 그래프와 누가 누그를 팔로워 하는지를 보게 됩니다. 누가 얼만큼의 스팀을 갖고 있거나, 얼마나 오래되었거나 몇개의 포스팅을 했는지는 직접적으로 보지는 않으나 간접적으로는 UA Score에 영향을 준다고 합니다.</p>
+<p>계산방식은… 설명은 되었지만.. 간단하게는 지금의 레퓨보다는 공정할것이다.. 정도입니다. ^^;<br>그래도 관심있으신 분들을 위해서 하기와 같이 정리드립니다.</p>
+<ul>
+<li>팔로워 매트릭스를 추적해서 누가 누그를 팔로워하는지를 매 BC 블록당 계산함.</li>
+<li>트러스티드 증인에 의해 추가 알고리듬을 적용함.</li>
+<li>증인이 누구를 팔로워 하는지, 또 그사람들은 누구를 팔로워 하는지, 또 그 사람들은 누구를 팔로워 하는지..에 따라서 최종적으로 UA-Score가 계산됨.</li>
+</ul>
+<h2>그러면 UA Score를 늘리기 위해서는?</h2>
+* 사람들이 좋아할만한 컨텐츠를 생성해라
+* 스팀을 많이 갖고 있으면 다른 사람들에게 업보팅 해라.
+* 커뮤니티 같은 것을 만들어라 (예: dtube, steemhunt)
+* Top 증인이 되어라. 
+
+<p>음… 하기 2가지는. 정말 개인 혼자하기는 어렵네요.</p>
+<h2>Steem-UA의 업보팅 이해하기</h2>
+
+<p>스팀-UA는 현재 델레게이션을 비교적 많이 받은 상태이고 이를 좋은 포스팅에 쓰고 있는 상황입니다. 단 모든 좋은 포스팅을 일일이 찾아서 할 수 없으니 스팀-UA가 선택한 방식은 다음과 같습니다.</p>
+<ul>
+<li>최소 25SP를 델레게이션한 유저</li>
+<li>업보팅 weight는 각 유저의 Steem-UA Score 기반으로.</li>
+</ul>
+<p>저는 현재 100SP를 델레게이션을 한 상황입니다.<br><a href="https://steem-ua.com/">https://steem-ua.com/</a> 에 가서 <a href="https://v2.steemconnect.com/oauth2/authorize?client_id=steem-ua.app&redirect_uri=https%3A%2F%2Fsteem-ua.com%3A5000%2Fauth&scope=login">View your UA Score</a>를 누르면 스팀커넥트가 연결되면서 자기 스팀-UA 스코어를 볼 수 있습니다.</p>
+<p>저의 UA-Score를 공개하자면 다음과 같습니다.</p>
+<center>![](https://cdn.steemitimages.com/DQmbwobe15ZC7Yef5ahsiQqh7428pCSgJ1c1dtdxKZbE9n1/image.png)</center>
+
+<p>전체 계정수가 백만개가 넘는것으로 보면 3657등도 나쁘지 않은거겠죠?</p>
+<p>그리고 오늘 Steem-ua에서 찾아와서 찍어준 업보팅 공유드립니다.</p>
+<center>![](https://cdn.steemitimages.com/DQmfZwV9pbouKyhEfXwFC7ejzkJX1jxZUXV4HCeFMbRaYXk/image.png)</center>
+
+<p>아주 좋은 보상인것 같습니다. 사람들이 많아지면 그만큼 보상도 높아질것입니다. KR의 많은 분들이 정말 활동을 왕성하게 잘 하고 계셔서 좋은 것을 나누고자 합니다.</p>
+<p><strong>참고로 업보팅 제한은 다음과 같습니다.</strong></p>
+<table>
+<thead>
+<tr>
+<th>SP 델레</th>
+<th>스폰 혜택과 업보팅 주기</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>25 SP</td>
+<td>최대 주 x1회 @steem-ua 업보팅</td>
+</tr>
+<tr>
+<td>50 SP</td>
+<td>최대 주 x2회 @steem-ua 업보팅</td>
+</tr>
+<tr>
+<td>100 SP</td>
+<td>최대 주 x4회 @steem-ua 업보팅</td>
+</tr>
+<tr>
+<td>250 SP</td>
+<td>최대 주 x7회 @steem-ua 업보팅</td>
+</tr>
+<tr>
+<td>&gt;= 5,000 SP</td>
+<td>추가 스폰서 업보팅 + 최대 주 x7회 @steem-ua 업보팅</td>
+</tr>
+</tbody></table>
+<p>참고로 저 사항들은 @steem-ua팀의 결정에 의해 변경될 수 있습니다. 변경 사항 있음 추적해서 KR에 알릴 수 있도록 하겠습니다. </p>
+<p><strong>편의를 위해서 스팀-UA 델레게이션 링크 달아드립니다.</strong><br><a href="https://steemconnect.com/sign/delegateVestingShares?delegator=&delegatee=steem-ua&vesting_shares=25%20SP">25 SP</a> | <a href="https://steemconnect.com/sign/delegateVestingShares?delegator=&delegatee=steem-ua&vesting_shares=50%20SP">50 SP</a> | <a href="https://steemconnect.com/sign/delegateVestingShares?delegator=&delegatee=steem-ua&vesting_shares=100%20SP">100 SP</a> | <a href="https://steemconnect.com/sign/delegateVestingShares?delegator=&delegatee=steem-ua&vesting_shares=250%20SP">250 SP</a></p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/steem/" rel="tag">steem</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2018/08/30/jayplayco.steemhunt-a-new-guide-for-steemhunt-beginners/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">[Steemhunt] A new Guide for Steemhunt beginners</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2018/08/29/jayplayco.78wdzy/">
+                <span class="level-item">[스팀몬스터] 골드카드 나오는 쫄깃함!</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="[스팀-UA] Steem-ua 스팀의 새로운 레퓨시스템을 제시하다 - 그리고 레퓨가 높으면 업보팅이 높다!" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 jayplayco&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("kr");</script>
+
+
+<script>
+var IcarusThemeSettings = {
+    site: {
+        url: 'http://jayplayco.github.io',
+        external_link: {"enable":true,"exclude":[]}
+    },
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'true'
+        }
+    }
+};
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+
+<script src="/js/main.js" defer></script>
+
+    
+</body>
+</html>

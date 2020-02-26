@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html  lang="kr">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 4.2.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>[트리플A] Phase II의 시작을 알립니다. - 제플코 제이의 블록체인</title>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-1-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="[트리플A] Phase II의 시작을 알립니다." height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-end">
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-12 has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-image">
+        <span  class="image is-7by1">
+            <img class="thumbnail" src="https://cdn.steemitimages.com/DQmUkpZ2vtqnA2nhRgW78wcamtZBzmF6fbQsezPmzfBw56z/image.png" alt="[트리플A] Phase II의 시작을 알립니다.">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-10-04T15:48:15.000Z">2019-10-05</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    10 minutes membaca (Sekitar 1484 kata)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                [트리플A] Phase II의 시작을 알립니다.
+            
+        </h1>
+        <div class="content">
+            <center>![](https://cdn.steemitimages.com/DQmUkpZ2vtqnA2nhRgW78wcamtZBzmF6fbQsezPmzfBw56z/image.png)</center>
+
+<p>안녕하세요, @jayplayco입니다.</p>
+<p>드디어 우리의 마법사 @segyepark님께서 긴 준비끝에 새벽에 오픈 작업을 위한 마무리에 들어갔다는 연락이 왔습니다. 워낙 크리티컬한 업데이트인 관계로 새벽에 업데이트보다는 금일 아침에 재확인후 오픈을 예정하고 있습니다.</p>
+<p>간략하게 오픈되면서 유저 입장에서 좋아지는 점들만 짚어가겠습니다.</p>
+<h2 id="1-속도개선"><a href="#1-속도개선" class="headerlink" title="1. 속도개선"></a>1. 속도개선</h2><p>현재 AAA의 나이트로스의 경우는 최적화 없이 지속적인 기능만 추가되던 관계로 초기 로딩 속도가 엄청나게 길어지고 있습니다. 이는 사실상 현재 스팀잇의 UI를 그대로 가져와서 추가적으로 스팀엔진 관련 정보까지 전부다 긁어오는 관계로 트리플A뿐만 아니라 기능을 많이 붙인 경우일수록 참을 수 없을 정도의 속도 저하를 가져오는 현상이 있습니다.</p>
+<p>실제 PhaseII 전의 트리플A의 리스팅을 불러오려면 10초이상의 시간이 걸리기도 했습니다.</p>
+<p>새로운 트리플A의 Phase II는 로딩에 대한 전체적인 로직 자체를 변경함으로써 일반적인 홈페이지 이상의 속도를 체감하실 수 있습니다. 또한 불필요한 내용의 호출을 제거함으로써 모바일에서의 데이타 사용량도 줄이고 속도도 개선되어서 목록들을 볼때 매우 빠르게 로딩되는 것을 보실 수 있습니다.</p>
+<p>실제로 스팀잇의 정보를 불러오는 리뷰글에 들어갈때 직접적인 로딩이 발생하는 것으로 체감상 속도 개선은 매우 클것으로 보입니다.</p>
+<h2 id="2-무덤화되는-Data의-재해석"><a href="#2-무덤화되는-Data의-재해석" class="headerlink" title="2. 무덤화되는 Data의 재해석"></a>2. 무덤화되는 Data의 재해석</h2><p>리뷰글이 시간에 따라 Data무덤에 사라지는 형식이 아닌 실제로 다시 영화나 드라마중심으로 정보를 얻고 그에 따른 리뷰를 볼 수 있는 방식의 Data 접근 방식으로 실질적인 리뷰사이트를 구성했다고 볼 수 있습니다. 초기 버젼에는 검색 기능이 준비가 되어 있지 않지만, 점차적으로 Data간의 연관성과 검색기능 강화로 TV에서 zapping을 하는것이나 Netflix and chill을 하듯이 “Triple and watch”가 될 수 있는 환경 조성에 집중할 예정입니다. 즉, 보고 싶은 영화에 대한 영감을 받기 위해 트플A를 찾고 리뷰를 읽으면서 보고 싶은 영화 리스트를 만들어서 다른 리뷰어들과 커뮤니케이션을 할 수 있는 영화를 사랑하는 이들의 놀이터를 제공할 예정입니다.</p>
+<h2 id="3-큐레이션을-통한-리뷰어와-큐레이팅-문화-양성"><a href="#3-큐레이션을-통한-리뷰어와-큐레이팅-문화-양성" class="headerlink" title="3. 큐레이션을 통한 리뷰어와 큐레이팅 문화 양성"></a>3. 큐레이션을 통한 리뷰어와 큐레이팅 문화 양성</h2><p>현재 트플A 운영진은 AAA와 Steem 계정으로 매뉴얼 큐레이션이 진행되고 있습니다. ROI 최적화면에서 봤을 때는 자동화 시스템보다는 효율은 떨어지는 것은 사실이나, 실질적인 큐레이터 활동을 통해 글을 읽으면서 원천적으로 보상에 대한 어뷰징을 막고 리뷰어들이 재미있게 놀면서 보상도 받을 수 있는 공간으로 만들어져 가고자 합니다.</p>
+<p>현재 Top 리뷰어들의 경우는 리뷰작성후 실제로 다음 영화를 볼 영화표나 한달간 넷플릭스 구독권이 나올 수 있는 수준으로 성장했습니다. </p>
+<h2 id="4-Phase2-런칭후-목표"><a href="#4-Phase2-런칭후-목표" class="headerlink" title="4. Phase2 런칭후 목표"></a>4. Phase2 런칭후 목표</h2><p>기본적으로 트플A는 제품과 커뮤니티를 중심으로 움직이는 프로젝트입니다. 커뮤니티가 탄탄하고 제품이 탄탄하고, 외부 유저에 대한 접근성을 높인 후에 마케팅을 통해 커뮤니티를 키워나갈 예정입니다. 그렇기 위해서는 scaling을 위한 준비를 해야 하며, 이를 위해서 지속적으로 제품을 최적화하고 있는 중입니다.</p>
+<p>커뮤니티의 scaling이 만들어져가는 과정에서 B2B 비즈니스 접목이 가능해지며, 추가적으로 멀티체인에 대한 고민도 시작할 수 있습니다. 블록체인상에서 가장 큰 영화와 드라마 리뷰 커뮤니티로 성장해서 다음에 볼 영화나 드라마에 대한 영감을 받을 수 있는 영화와 드라마를 사랑하는 사람들의 진정한 놀이터가 되는것을 목표로 움직이고자 합니다. 많은 응원 부탁드리겠습니다.</p>
+<h2 id="5-개인적인-생각"><a href="#5-개인적인-생각" class="headerlink" title="5. 개인적인 생각"></a>5. 개인적인 생각</h2><p>스팀이 주는 매력은 여전히 엄청나게 크다고 생각합니다. 지금의 트플A정도의 서비스를 전통적인 스타트업으로 런칭하려고 했을 경우는 초기 자본을 최소한 4-5억정도는 잡고 투자를 했어야 합니다. 물론 투자가 들어가지 않은 것은 아닙니다. 트플A 팀원들이 무급을 넘어 자기 자본 투입으로 6개월 넘게 활동을 하고 있으며 미래가 보이는 신나고 재미있는 프로젝트를 열정으로 커뮤니티와 함께 채우고 있어서 가능한 것으로 생각됩니다. 그런 만큼 이런 종류의 프로젝트들이 더욱더 박차를 가하고 스팀 생태계에 긍정적인 영향을 가져다줄 수 있을 정도의 impact를 가질 수 있도록 성장을 했으면 좋겠습니다.</p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/" rel="tag">미지정</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/10/06/jayplayco.coinnews-cto-2/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">[Coinnews] 기업의 CTO 핸드폰 해킹으로 2백만불의 암호화폐 유실</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/10/04/jayplayco.42jna5-coinnews/">
+                <span class="level-item">[Coinnews] 리브라 참여 업체들의 최근 움직임</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="[트리플A] Phase II의 시작을 알립니다." height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 jayplayco&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("kr");</script>
+
+
+<script>
+var IcarusThemeSettings = {
+    site: {
+        url: 'http://jayplayco.github.io',
+        external_link: {"enable":true,"exclude":[]}
+    },
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'true'
+        }
+    }
+};
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+
+<script src="/js/main.js" defer></script>
+
+    
+</body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html  lang="kr">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 4.2.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>[Steemhunt] ABV 2.0 - 제플코 제이의 블록체인</title>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-1-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="[Steemhunt] ABV 2.0" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-end">
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-12 has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-image">
+        <span  class="image is-7by1">
+            <img class="thumbnail" src="https://steemitimages.com/DQmNfeZGkKQJBrXDkZptuzunaHT6hZKXvcGQFyeiWW4VweN/LP-7-logo.jpg" alt="[Steemhunt] ABV 2.0">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-07-26T11:36:54.000Z">2018-07-26</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/steem/">steem</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    11 minutes membaca (Sekitar 1675 kata)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                [Steemhunt] ABV 2.0
+            
+        </h1>
+        <div class="content">
+            <p><a href="https://steemitimages.com/DQmNfeZGkKQJBrXDkZptuzunaHT6hZKXvcGQFyeiWW4VweN/LP-7-logo.jpg">https://steemitimages.com/DQmNfeZGkKQJBrXDkZptuzunaHT6hZKXvcGQFyeiWW4VweN/LP-7-logo.jpg</a></p>
+<p>Hi, @jayplayco here.<br>As mentioned before, Steemhunt is making a ranking board based on Steem, tweaking it and trying and evolving, again and again, to achieve one simple goal, “Make a ranking board where you can find cool products and where the hunters can get rewarded based on the ranking.” Due to the fact that higher ranking = higher reward the system was continuedly played, milked, abused.<br><img src="https://cdn.steemitimages.com/DQmZeAgJFBsd5agGMpjC28MHKBpWSFtRpboFKJuVaJ6cn2f/image.png" alt=""><a href="https://unsplash.com/photos/gq-IUqXTvB4">Source: Mihail Macri</a></p>
+<p>To all readers who are new to <a href="https://steemhunt.com/">Steemhunt</a>, Steemhunt is a service build on Steem to enable Hunters to hunt new and cool products and get rewarded on a daily base.  If you are new to Steemhunt, you should try first this post. <a href="https://steemit.com/steemdev/@steemhunt/introducing-steemhunt-daily-ranking-of-effortlessly-cool-products-fueled-by-steem-blockchain">LINK</a></p>
+<p>This post is going into details what the pivotal approach change had been with ABV 2.0 for Steemhunt. The original announcement can be found <a href="https://steemit.com/steemhunt/@steemhunt/steemhunt-abv-2-0-introducing-hunter-level-based-steemhunt-upvotes-or-new-category-search-feature">here</a></p>
+<h2> 0. Repository </h2>
+https://github.com/Steemhunt/web
+
+<h2> 1. Steemhunt ABV 1.0 </h2>
+![](https://cdn.steemitimages.com/DQmPGSL3KN7pMfWXmSvXYwdxgUM26iX2Lfz8ZMCYnv2opdR/image.png)[Source: Arnaud Jaegers](https://unsplash.com/photos/IBWJsMObnnU)
+
+<p>The current development until the latest version of ABV 1.0 has been described in one of my <a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-the-difficult-way-to-make-your-own-path-with-abv">former posts</a>. The main idea here was to give each account one vote and add additional layers to prevent the abusing.</p>
+<p><img src="https://cdn.steemitimages.com/DQmU6F6auQETstqz9tKQmeSTABeTLVqEMHFeWvoDGg6as2d/image.png" alt=""><br><a href="https://presentationgo.com">Source : presentationgo</a><br>As you can see on the current history map of the voting system, different kind of measurements like diversity score and influencers helped the system to fight against abusement. But there were still issues with v4v actions and the ranking board does not have looked like a place where really cool products are listed but more than often products which had been pushed from different kind of groups to the top, abusing the system.</p>
+<h2>2. Think out of the box</h2>
+![](https://cdn.steemitimages.com/DQmej7qUwyASZTCB4hVLAp6aVET2ajbvHvgbJpqLk8vEkre/image.png)[Source: Erda Estremera](https://unsplash.com/photos/sxNt9g77PE0)
+
+<p>So what if we separate the actual ranking and upvoting. If there is no direct advantage to manipulate the ranking but still a reward to be an active hunter? Would it be still interesting for the abusers? So that happened just with ABV 2.0. We separated the upvote from the ranking itself. It was somehow a core mechanism but is not anymore.</p>
+<p>Of course, without leveling this action there will be still abusing attempts so the next chapter is about how ABV 2.0 works.</p>
+<h2>3. ABV 2.0 </h2>
+The core of ABV 2.0 is that the ranking does not affect the reward directly but only the new created hunter level. Hunter level equals the user score(Steemhunt voting weight) and the reward (upvote) is based on it and not the ranking.
+
+<p><img src="https://cdn.steemitimages.com/DQmS3d6CeUQ2Lf1opvFeZ5iviUhKv7SsL7HJF8tJYw2go1f/image.png" alt=""></p>
+<p>The hunter level is divided into total 6 different stages from Level 0 to Level 5 based on the User Score you currently have.<br><img src="https://cdn.steemitimages.com/DQmRYbEq1EnFuwhF3TKTsBwdD5gYTuWMrwCiSbyURf2wvgx/image.png" alt=""></p>
+<p>The calculation of your hunter level is done by multiplying each factor of the hunter level.</p>
+<blockquote>
+<p>Hunter level = “Account Credibility” x “Activity Score” x “Curation Score” x “Hunt Score”</p>
+</blockquote>
+<p>Based on this score the Steemhunt bot will upvote each hunter on their hunts and comments. The limitation is 1x approved hunt (content weight 10) and x10 comments (content weight 1) per day. This means that based on your current Hunter Level you can get in total 1 hunt and 5 comments upvoted.(edited 29th of July cause changed from 10 comments to 5 comments)</p>
+<p>The upvote weight from the bot will be differentiated based on your Hunter level.</p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>&gt;= User Score</th>
+<th>User Weight</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Lv.5</td>
+<td>8.0</td>
+<td>x5</td>
+</tr>
+<tr>
+<td>Lv.4</td>
+<td>5.0</td>
+<td>x4</td>
+</tr>
+<tr>
+<td>Lv.3</td>
+<td>3.0</td>
+<td>x3</td>
+</tr>
+<tr>
+<td>Lv.2</td>
+<td>2.0</td>
+<td>x2</td>
+</tr>
+<tr>
+<td>Lv.1</td>
+<td>1.0</td>
+<td>x1</td>
+</tr>
+<tr>
+<td>Lv.0</td>
+<td>Lower than 1.0</td>
+<td>x0</td>
+</tr>
+</tbody></table>
+<p>Additionally, remember that the Steemhunt bot will upvote based on the total voting weights units created on each day. Means when more hunters are active that day, your reward gets smaller.</p>
+<p><strong>Example</strong></p>
+<p><em>1x approved hunt, 5 comments, User Score 3.4=Hunter Level 3.</em></p>
+<ul>
+<li>Approved hunt = 10 content weight. </li>
+<li>comment = each 1 content weight</li>
+<li>Hunter level 3 = x3 user weight</li>
+</ul>
+<blockquote>
+<ul>
+<li>Calculation for hunt = 10(content weight)x3(user weight)= 30</li>
+<li>Calculation for comments = 1(content weight)x5(comments)x3(user weight)=15 (each comment is 3)</li>
+</ul>
+</blockquote>
+<p>In total, this is a voting weight of 45. So with what percentage the Bot is now voting? That depends on how many hunters were active that day and created in total what size of voting weight. Let`s imagine we had in total 100 hunters having the exact same specification (1 hunt, 5 comments, level 3). Not realistic, but easier to calculate :). In that case, the total weight of that day would be 4500.</p>
+<ul>
+<li>Hunt upvoting =&gt; 30(my weight)/4500(total weight)*100(%)=0.66%</li>
+<li>Comment upvoting =&gt; 3(my weight)/4500(total weight)*100(%)=0.066%</li>
+</ul>
+<p>So my hunt would be upvoted with a voting power of 0.66% and each comment would be upvoted with a voting power of 0.066%.</p>
+<h2>4. ABV 2.0 Dictionary</h2>
+![](https://cdn.steemitimages.com/DQmVp17TxbdScbJW7fxH4dw2G7roGcnTPZ3JMvCBzDGcKfj/image.png)
+[Source: Mikhail Pavstyuk](https://unsplash.com/photos/EKy2OTRPXdw)
+
+<p>There are a few new terms coming up here and it could be difficult to understand everything from the beginning. Here I would like to put all important terms together for a better overview.</p>
+<ul>
+<li><strong>ABV</strong>: Account-based voting means that each account has one voting power.</li>
+<li><strong>User Score</strong>: A combined score multiplied by the following sub-scores =&gt; Account Credibility, Activity Score, Curation Score, Hunt Score</li>
+<li><strong>Account Credibility</strong>: Calculated from Steem reputation and account age</li>
+<li><strong>Activity Score</strong>: Calculated from daily login record</li>
+<li><strong>Curation Score</strong>: Calculated based on the voting diversity and upvotes value</li>
+<li><strong>Hunt Score</strong>: Calculated by the number of approved hunts.</li>
+<li><strong>Voting Diversity</strong>: Calculated based on your voting pattern. More diverse the better.</li>
+<li><strong>Hunter Level</strong>: A Level classification based on the user score</li>
+<li><strong>Content Weight</strong>: Giving hunts (10 weight) and comments (1 weight) different weight</li>
+<li><strong>User Weight</strong>: different weight levels based on the hunter level.</li>
+<li><strong>Voting weight unit</strong>: content weight x user weight</li>
+</ul>
+<h2>5. Roadmap</h2>
+ABV 2.0 for Steemhunt is activated since 26th of July 2018.
+
+<h2>6. Conclusion</h2>
+So now it does not matter anymore directly to have a top ranking. But it does matter to regularly curate(upvote) good hunts (and not the hunter) and uses Steemhunt on a regular base. I think the real hunters can be motivated to play an active role in the community and level themselves up and do their best to keep that level. Until the active community grows to a relevant size the influencers will help to boost the cool products in ranking. For abusers, if they are thinking about creating an Alt account and trying to milk the system, the Steem reputation and also the age of the account will make this even more difficult. When needed additional credibility measurements like follower graphs or other social logins can be added as a layer to higher the barrier for an alt account. Also, it does not work anymore to create a big V4V group and circle jerk a hunt to the top, as the hunter is going to be rewarded based on their hunters level. 
+
+<p>It is for sure (based on the human nature) there will arise new kinds of abuser groups or attempts to milk the system, but the (difficult) way to create a fair ranking board based on a blockchain will continue and the Steemhunt team will keep the efforts high to make that possible.</p>
+<p><strong><a href="https://steemhunt.com/">“Keep the hunt on”</a></strong></p>
+<hr>
+<p>Thanks for reading!</p>
+<p>Other articles about Steemhunt.</p>
+<ul>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steem-start-here#@utopian-io/re-steem-start-here-20180712t080009z">Steemhunt- Start here</a></li>
+<li><a href="https://steemit.com/steemit/@jayplayco/what-is-steemhunt-and-why-should-i-care">What is Steemhunt and why should I care?</a></li>
+<li><a href="https://steemit.com/steemit/@jayplayco/biggest-airdrop-ever-hunt-token-and-how-to-participate">Biggest Airdrop ever - HUNT token and how to participate</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-abv-account-based-voting-in-development">[Steemhunt] ABV (Account based voting) in development</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-update-for-upvoting-review-comments-and-other-developments">Update for Upvoting Review Comments &amp; Other Developments</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-most-asked-questions-from-steemhunt-newbies">Most asked questions from Steemhunt Newbies.</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-how-to-get-your-hunt-verified-on-steemhunt">How to get your hunt verified on Steemhunt</a></li>
+<li>[Evolution of Steemhunt`s voting system](<a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-evolution-of-steemhunt-s-voting-system">https://steemit.com/utopian-io/@jayplayco/steemhunt-evolution-of-steemhunt-s-voting-system</a>)</li>
+<li><a href="https://steemit.com/steemhunt/@fknmayhem/understanding-steemhunt-and-how-to-craft-a-good-hunt">Understanding Steemhunt and How to Craft a Good Hunt -@fknmayhem</a></li>
+<li><a href="https://steemit.com/steemhunt/@fknmayhem/picking-apart-the-steemhunt-posting-guidelines-how-we-review-hunts">Picking Apart The Steemhunt Posting Guidelines - How We Review Hunts @fknmayhem</a></li>
+<li><a href="https://steemit.com/steemhunt/@fknmayhem/steemhunt-is-not-a-writing-curation-project">Steemhunt is NOT a Writing Curation Project- @fknmayhem</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-the-difficult-way-to-make-your-own-path-with-abv">The difficult way to make your own path with ABV</a></li>
+<li><a href="https://steemit.com/steemhunt/@fknmayhem/being-a-trailblazing-smt-on-steem-pre-smts-not-for-the-faint-hearted">Being a Trailblazing SMT on Steem Pre-SMTs - @fknmayhem</a></li>
+<li><a href="https://steemit.com/steemhunt/@fknmayhem/crowdfunded-products-are-validated-cool-products-for-steemhunt">Crowdfunded Products are Validated “Cool” Products For Steemhunt - @fknmayhem</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-open-source-and-community">[Steemhunt] Open Source and Community</a></li>
+</ul>
+<p>Join our chat channels if you need more information as the community,  team, and the moderators are answering very fast on any question:</p>
+<p>Discord: <a href="https://discord.gg/mWXpgks">https://discord.gg/mWXpgks</a> (this is where the magic happens)<br>Telegram: <a href="https://t.me/joinchat/AzcqGxCV1FZ8lJHVgHOgGQ">https://t.me/joinchat/AzcqGxCV1FZ8lJHVgHOgGQ</a></p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/steem/" rel="tag">steem</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2018/07/31/jayplayco.airvideo-hd-stream-videos-to-your-iphone-ipad-or-apple-tv/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">Airvideo HD - Stream videos to your iPhone, iPad or Apple TV</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2018/07/20/jayplayco.steemhunt-open-source-and-community/">
+                <span class="level-item">[Steemhunt] Open Source and Community</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="[Steemhunt] ABV 2.0" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 jayplayco&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("kr");</script>
+
+
+<script>
+var IcarusThemeSettings = {
+    site: {
+        url: 'http://jayplayco.github.io',
+        external_link: {"enable":true,"exclude":[]}
+    },
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'true'
+        }
+    }
+};
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+
+<script src="/js/main.js" defer></script>
+
+    
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html  lang="kr">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 4.2.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>[키체인] SteemWallet 앱을 통한 모바일 연동 시작 - 제플코 제이의 블록체인</title>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-1-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="[키체인] SteemWallet 앱을 통한 모바일 연동 시작" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-end">
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-12 has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-image">
+        <span  class="image is-7by1">
+            <img class="thumbnail" src="https://steemitimages.com/640x0/https://cdn.steemitimages.com/DQmV8sh6FwVoNW9CEUiZ8oHhLerYFmefmPUEkPSFJ2aywTf/steemwallet-updates-v2.png" alt="[키체인] SteemWallet 앱을 통한 모바일 연동 시작">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-13T14:10:39.000Z">2019-08-13</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/steem/">steem</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    7 minutes membaca (Sekitar 1124 kata)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                [키체인] SteemWallet 앱을 통한 모바일 연동 시작
+            
+        </h1>
+        <div class="content">
+            <center>https://steemitimages.com/640x0/https://cdn.steemitimages.com/DQmV8sh6FwVoNW9CEUiZ8oHhLerYFmefmPUEkPSFJ2aywTf/steemwallet-updates-v2.png</center>
+
+<p>안녕하세요, @jayplayco 입니다. </p>
+<p>스팀페스트를 주최하기도 하는 @roelandp라는 분이 만든 스팀월렛이라는 모바일 앱이 있습니다. 필자도 이전에 나왔을때 한번 설치해서 보다가, 크게 사용할 일이 없어 방치를 해두었던 상태였는데, 이번에 스팀엔진 측이랑 협업을 해서 키체인의 모바일 사용을 가능하게 했습니다.</p>
+<ul>
+<li>주소: <a href="https://steemwallet.app/">https://steemwallet.app/</a></li>
+<li>원본글: <a href="https://steemit.com/steemwallet/@roelandp/introducing-steemwallet-app-v2-many-enhancements-including-a-steemkeychain-supporting-dapp-browser">Introducing SteemWallet.app v2</a></li>
+</ul>
+<h2 id="0-배경"><a href="#0-배경" class="headerlink" title="0. 배경"></a>0. 배경</h2><p>약 두달전에 @aggroed측에서 접촉이 있어서 키체인의 모바일버젼 개발을 위한 협업을 위해 연락이 갔습니다. @roelandp 측에서도 관심이 있었으나, 이미 스팀월렛을 만든 상황이라, 키체인의 모바일 버젼을 스팀월렛에 포함시키는 절차로 해결을 하기로 했습니다.</p>
+<h2 id="1-작동방식"><a href="#1-작동방식" class="headerlink" title="1. 작동방식"></a>1. 작동방식</h2><p>Steemwallet 2.0 우선 기본적으로 스팀용 모바일 지갑입니다. 그 앱 안에 브라우저를 포함하면서 그 브라우저를 이용해서 각 댑들을 쓸때 키체인을 쓸 수 있도록 장치가 되어 있습니다.</p>
+<h2 id="2-사용방법"><a href="#2-사용방법" class="headerlink" title="2. 사용방법"></a>2. 사용방법</h2><ul>
+<li><p>우선 앱을 다운로드 받는다.</p>
+<center>
+<a href="https://apps.apple.com/app/steemwallet/id1428700017">![](https://cdn.steemitimages.com/DQmQmZV1m9YBYqHEuLrviXEszUmwnH69PMvA3wMTQcy5Y7S/image.png)</a><a href="https://play.google.com/store/apps/details?id=app.steemwallet.roelandp">![](https://cdn.steemitimages.com/DQmdpMDhdcCfvobfCAimMMfLRx11JKMPLHQUXviVR1zQxtc/image.png)</a></center>
+</li>
+<li><p>앱을 켜고 세팅으로 들어갑니다. IMPORT PRIVATE KEY를 누릅니다.</p>
+<center>![](https://cdn.steemitimages.com/DQmR9USXZK8WWNcMQEpxMyHJFB1LbUKcM7Li3zaDWKek3yD/image.png)</center></li>
+<li><p>자신이 입력하고자 하는 아이디를 입력합니다</p>
+<center>![](https://cdn.steemitimages.com/DQmUD1ByS245tLPvtQnLhuCdS6eCHhWo7A9LdsNpLJRoCX5/image.png)</center></li>
+<li><p>키체인과 비슷하게 키를 입력합니다. 마스터키를 입력하게 되면 각 포스팅, 액티브 메모키가 자동 입력되며, 그외에도 원할 경우 예를 들어 포스팅키만 따로 입력도 가능합니다.</p>
+<center>![](https://cdn.steemitimages.com/DQmRnrGQTGnuRzyLvw4KWvK5wgGMKbjc9seiM6Ki8UZsvRd/image.png)</center></li>
+<li><p>맨 밑에 있는 탭중에 Browser부분을 클릭하면 초기 화면에 각종 스팀 관련 서비스들이 뜹니다. 만약 이 로딩 시간이 길게 느껴진다면 https:// 부분까지 포함해서 직접 주소를 넣어도 됩니다.</p>
+<center>![](https://cdn.steemitimages.com/DQmQhckq5ZQ2dSC3meqtiYetLppdBJuHguHaP3nyJRroSCw/image.png)</center></li>
+<li><p>요청되는 스팀관련 서비스를 찾았으면, 클릭을 해서 로그인을 합니다. 키체인을 지원하는 곳이라면 현재 댑안에서 열린 브라우저에 키체인이 있다고 시뮬레이션을 해주기 때문에 키체인 사용이 가능합니다.</p>
+<center>![](https://cdn.steemitimages.com/DQmfC8oe8hBPm4JXKuqcFUoU7GniuG6vqk4zceRWvNTaCiJ/image.png)</center></li>
+<li><p>다음 화면은 <code>sign message</code>를 수락해야 합니다. 하단 부분에 “Do not prompt again to 계정명 for 스팀서비스 주소;sign message” 부분을 클릭하시면 해당 사이트를 사용하는 도중 다시 추가로 키를 입력하지 않아도 됩니다.</p>
+<center>![](https://cdn.steemitimages.com/DQmeaxcPbMVrvCaPSg4Nps9QvK7JwGmN9DDkA56QJiuHh2S/image.png)</center></li>
+<li><p>지문인식이나 애플의 얼굴 인식도 작동을 잘 합니다.</p>
+<center>![](https://cdn.steemitimages.com/DQmYFNtbA7rrJTdko4JBvY8qjbewXyTNrMseTukyWfSnkVu/image.png)</center></li>
+<li><p>서비스에 로그인된 모습이 확인됩니다.</p>
+<center>![](https://cdn.steemitimages.com/DQmQs6NrGLVttXjW5akoYsVRqvZUQkq1qPyj6rTiPoYcxjL/image.png)</center>
+
+</li>
+</ul>
+<h2 id="3-개인적인-생각"><a href="#3-개인적인-생각" class="headerlink" title="3. 개인적인 생각"></a>3. 개인적인 생각</h2><p>일반 모바일 브라우저에서 앱이 열리면서 로그인되는 모습이 아닌, 특수 앱내에서 브라우징을 통한 사용이라는 약간은 제한적인 느낌이 드는 해결방법이긴 합니다만, 에러 없이 사용할 수 있다면 사용환경을 많이 개선할 것으로 보입니다. 아직은 토큰클레임등 같은 행위는 에러가 나는 것을 확인했지만, 빠르게 대처해서 고쳐나가지기를 바라봅니다.</p>
+<p>스팀엔진팀의 탁월한 능력은 협상력과 사용자가의 관심밖에 있는 스팀상 프로젝트들의 패자부활전을 시켜주는 능력인듯 합니다. 약간의 새로운 기능 twist를 통해서 기존의 서비스들의 사용성을 확 늘려주는 능력과 그에 반응해서 따라주는 각 프로젝트들의 호응으로 스팀상에서 (가격을 제외한) 활기가 돌고 있음은 명백한것 같습니다.</p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/steem/" rel="tag">steem</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/08/14/jayplayco.jjftw/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">[리뷰헌트] 마케팅 채널의 최적화</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/08/13/jayplayco.hbkht/">
+                <span class="level-item">[트립스팀] 서포터즈 모집합니다</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="[키체인] SteemWallet 앱을 통한 모바일 연동 시작" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 jayplayco&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("kr");</script>
+
+
+<script>
+var IcarusThemeSettings = {
+    site: {
+        url: 'http://jayplayco.github.io',
+        external_link: {"enable":true,"exclude":[]}
+    },
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'true'
+        }
+    }
+};
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+
+<script src="/js/main.js" defer></script>
+
+    
+</body>
+</html>

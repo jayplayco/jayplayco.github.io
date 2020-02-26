@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html  lang="kr">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 4.2.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>[Steemhunt] Development of ABV and introduction of &#39;Hunt Curation Score&#39; and Hunt Token Wallet - 제플코 제이의 블록체인</title>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-1-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="[Steemhunt] Development of ABV and introduction of &#39;Hunt Curation Score&#39; and Hunt Token Wallet" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-end">
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-12 has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-image">
+        <span  class="image is-7by1">
+            <img class="thumbnail" src="https://cdn.steemitimages.com/DQmW2Y2SER7rUUJ8okrzVJu6XuFoLMNy8TZmqXCCHxttUr7/image.png" alt="[Steemhunt] Development of ABV and introduction of &#39;Hunt Curation Score&#39; and Hunt Token Wallet">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-06-08T06:03:42.000Z">2018-06-08</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B0%9C%EB%B0%9C/">개발</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    9 minutes membaca (Sekitar 1280 kata)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                [Steemhunt] Development of ABV and introduction of &#39;Hunt Curation Score&#39; and Hunt Token Wallet
+            
+        </h1>
+        <div class="content">
+            <p>Hi, @jayplayco here! Now officially a moderator at Steemhunt and still an evangelist I am using Steemhunt on a daily base but now more moderating users for their hunts.</p>
+<p>For all reading the first time about Steemhunt, here isthe elevator pitch.</p>
+<p><em>Elevator pitch : Steemhunt is a Steem based producthunt.</em></p>
+<p>And, some articles which will help the understanding about Steemhunt.</p>
+<p><a href="https://steemit.com/steemit/@jayplayco/what-is-steemhunt-and-why-should-i-care">What is Steemhunt and why should I care?</a><br><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-abv-account-based-voting-in-development">ABV(account based voting) in development</a><br><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-update-for-upvoting-review-comments-and-other-developments">Update for Upvoting Review Comments &amp; Other Developments</a></p>
+<p>As this project is moving really fast I am updating about the development status especially on ABV and the implementation of the Wallet for Hunt Tokens.</p>
+<h3> 0. Repository </h3>
+https://github.com/Steemhunt
+![](https://cdn.steemitimages.com/DQmW2Y2SER7rUUJ8okrzVJu6XuFoLMNy8TZmqXCCHxttUr7/image.png)
+
+
+<h3>1. What updates are we reading here?</h3>
+If you want to jump directly to the announcements, please press the links below.
+* [Account Based Voting/updated algorithm - Github Link](https://github.com/Steemhunt/web/issues/135#issuecomment-395373267)
+* [Hunt Token Wallet and Upvoting/Resteeem Airdrop - @steemhunt](https://steemit.com/steemhunt/@steemhunt/introducing-hunt-token-wallet-and-upvoting-resteem-airdrop)
+
+<h3>2. ABV Algorithm update </h3>
+![](https://cdn.steemitimages.com/DQmQSYK4fYt4X5uBa5VnUNMCXrrPpiRp6Nqq2PdFdntGNcz/image.png)
+[Source :Photo by rawpixel on Unsplash](https://unsplash.com/@rawpixel)
+</br>
+<h4>**a. Github repository**</h4>
+* [Account Based Voting/updated algorithm - Github Link](https://github.com/Steemhunt/web/issues/135#issuecomment-395373267) </br>
+
+<h4>**b. What is changing?**</h4>
+The ABV system planned to have a Leveling system implemented. It was giving Hunters with good hunting results a higher voting power than normal users. This Leveling system had also a max cap,  so that no real whales could be born.
+But the team behind Steemhunt has revised this Leveling system and introduced the "Hunt Curation Score(HCS) and changed the new Leveling system with following algorithm, 
+
+<p><strong>1. For the white-list (to become level 1) - we’ll use 2 conditions.</strong><br>The user need to be Steemhunt user (curation trail doesn’t count)<br>Steemit Reputation should be at least 35 (this is for filtering out alt accounts created for manual civil attacks)</p>
+<p><strong>2. Level by “Hunt Curation Score (HCS)”</strong><br>The only thing that affects on HCS is how much curation effort you put in into Steemhunt.</p>
+<p>It doesn’t matter:</p>
+<p>1) how much Steem Power you have<br>2) how many postings you made on Steemhunt<br>3) ranking of the postings you voted on</p>
+<p>The only thing that matter is:<br>The voting weight you used on Steemhunt curation.</p>
+<p>If you vote on hunt postings 10 times with 50% voting weight, you spend 500% voting weight in total.<br>Then your hunt score will be increased by 500 for that day.</p>
+<ol>
+<li>You can earn maximum 1000 HCS per day</li>
+<li>If you don’t have any voting activity on that day, you’ll lose 10 HCS per day</li>
+</ol>
+<p>Level    Voting Range    Conditions (HCS scores)<br>Lv.0    0 - 0    all users<br>Lv.1    1 - 10    Steemhunt user + Steemit Rep +35<br>Lv.2    1 - 20    3,000 HCS<br>Lv.3    1 - 30    10,000 HCS<br>Lv.4    1 - 50    30,000 HCS<br>Lv.5    1 - 100    100,000 HCS</p>
+<p><img src="https://cdn.steemitimages.com/DQmdcifc2d77nkGEGvuwfiWu6QANsrw4PVJKZn54rS1tWXe/image.png" alt=""></p>
+<h4>**c. What does that mean?**</h4>
+The ABV system is ensuring that Bots will have no more power on the voting system at Steemhunt, but only an ABV system is unfortunately not enough to avoid the abusers.
+So here enters the "Hunt Curation Score" short, HCS the game to support the ABV system. 
+
+<p>One of the issues you will have with an ABV system is that there are curation trails or spam bots with users just upvoting so you have to block them with a leveling system.<br>The system before was more rewarding hunters who are actively posting and quite good at it. <a href="https://github.com/Steemhunt/web/issues/135#issuecomment-393102793">Source</a> The issue with this leveling system was that it couldn`t prevent curation trails to join the game and upvote specific products.</p>
+<p>The new system starts whitelisting the beginning only users with a min. Steem reputation level (acutally 35) which makes it difficult for users with low reputation level to vote and therefore influence the rewarding system.<br>This is making it difficult for newbies to vote and influence the rank of a hunt, but it is still possible to join the community hunting products and writing review comments.<br>After getting into the HCS system, the only possibility to gain more voting power is to vote on a constant level. It would take about 3 1/2 month to gain the highest level, if you would vote the max of 10 times per day.</p>
+<p>At a level 5 you can upvote a hunt up to a voting power of 100, but this has also only the power of 10 Lv. 1 users, which keeps the power on a manageable level and stops the birth of whales within the Steemhunt community.</p>
+<p>The implementation of the ABV system with the announced algorithm is planned to be launched latest end of next week, so we are going to see the effects of this system very soon.</p>
+<h3>3. Hunt Token Wallet Opened</h3>
+![](https://cdn.steemitimages.com/DQmeaPdXGEj6XoE6BqcnBgPUQVcyjkGGkonsSw4btPPuHoX/image.png)
+
+<p>The Hunt Token wallet is now available and if you login to your account within Steemhunt you can find the beta version of the wallet. Just click on your Profile right upside and you will be able to see it on second (if you haven`t followed Steemhunt yet, on third) place.</p>
+<center>![](https://cdn.steemitimages.com/DQmfBTQMvA2XEoj95kuk4hxPRuRYayiXmGTkVH3nR7LSHuh/image.png)</center>
+
+<p>If you click the wallet you can see two additional buttons called “SP Claim” and “Withdraw”. These two buttons are not working yet, so it is actually only a wallet to show how many Tokens you have earned and the transaction history.</p>
+<p><img src="https://cdn.steemitimages.com/DQmReB5dxJhv4RzN4b7TmXhWCNJFG6EW4mG7ZuQzzMRX8kU/image.png" alt=""></p>
+<p>The SP Claim button is for all Steem Users to claim the Airdrop of same amount of Steem Power 1:1 to Hunt Tokens. The Withdraw button is for users who want to secure their Hunt Tokens (which will be before SMT launching Ethereum ERC-20 Tokens) on their own Wallet like Myetherwallet.com.<br>If transfering the tokens to an external wallet makes sense is up to the user, as it will cost gas to transfer the Tokens  and as the SMT is still not available there is no exact execution plan how the externalTokens are going to be swapped. My guess is that the user will have to transfer their Hunt tokens from their external wallet to a Steemhunt Wallet to be transfered to SMT Hunt Tokens.</p>
+<p>The transaction history is currently showing the history of “Daily rewards for resteem contribution”, “Daily rewards for voting contribution” and “Weekly reward for delegation sponsors”</p>
+<h3>4.Roadmap</h3>
+The Wallet is available right now and ABV should be ready latest 17th of June (end of next week).
+
+<h3>5. Github Account</h3>
+https://github.com/zionopia
+
+<hr>
+<p>Thanks for reading!</p>
+<p>Other articles about Steemhunt.</p>
+<ul>
+<li><a href="https://steemit.com/steemit/@jayplayco/what-is-steemhunt-and-why-should-i-care">What is Steemhunt and why should I care?</a></li>
+<li><a href="https://steemit.com/steemit/@jayplayco/biggest-airdrop-ever-hunt-token-and-how-to-participate">Biggest Airdrop ever - HUNT token and how to participate</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-abv-account-based-voting-in-development">[Steemhunt] ABV (Account based voting) in development</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-update-for-upvoting-review-comments-and-other-developments">Update for Upvoting Review Comments &amp; Other Developments</a></li>
+</ul>
+<p>Join their chat channels if you need more information as the team and the moderators are answering very fast on any question:</p>
+<p>Discord: <a href="https://discord.gg/mWXpgks">https://discord.gg/mWXpgks</a> (this is where the magic happens)<br>Telegram: <a href="https://t.me/joinchat/AzcqGxCV1FZ8lJHVgHOgGQ">https://t.me/joinchat/AzcqGxCV1FZ8lJHVgHOgGQ</a></p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/%EA%B0%9C%EB%B0%9C/" rel="tag">개발</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2018/06/08/jayplayco.us2xk-abv/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">[스팀헌트] ABV에 헌트 큐레이션 점수 적용과 헌트 지갑 오픈</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2018/06/07/jayplayco.why-are-my-hunts-rejected/">
+                <span class="level-item">[스팀헌트] 내 헌트가 거절당하는 이유! Why are my hunts rejected?</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="[Steemhunt] Development of ABV and introduction of &#39;Hunt Curation Score&#39; and Hunt Token Wallet" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 jayplayco&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("kr");</script>
+
+
+<script>
+var IcarusThemeSettings = {
+    site: {
+        url: 'http://jayplayco.github.io',
+        external_link: {"enable":true,"exclude":[]}
+    },
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'true'
+        }
+    }
+};
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+
+<script src="/js/main.js" defer></script>
+
+    
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html  lang="kr">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 4.2.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>[스팀엔진] ScotBot 속도 향상 - 제플코 제이의 블록체인</title>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-1-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="[스팀엔진] ScotBot 속도 향상" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-end">
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-12 has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-image">
+        <span  class="image is-7by1">
+            <img class="thumbnail" src="https://cdn.steemitimages.com/DQmVLEQz4R6TLspWojh1uHaiMhZ2w8125zWdBp1YeodBrzM/image.png" alt="[스팀엔진] ScotBot 속도 향상">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-07-10T14:47:12.000Z">2019-07-10</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B0%9C%EB%B0%9C/">개발</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    7 minutes membaca (Sekitar 1042 kata)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                [스팀엔진] ScotBot 속도 향상
+            
+        </h1>
+        <div class="content">
+            <p><img src="https://cdn.steemitimages.com/DQmVLEQz4R6TLspWojh1uHaiMhZ2w8125zWdBp1YeodBrzM/image.png" alt=""></p>
+<p>안녕하세요, @jayplayco입니다.</p>
+<p>아침에 확인해보니 스캇봇 개발자인 @holger80분께서 업데이트가 있어서 공유드립니다.</p>
+<ul>
+<li>원문: <a href="https://steemit.com/scotbot/@holger80/scotbot-faster-than-ever-tags-with-capital-letters-will-be-accepted-and-claimed-token-are-double-checked">https://steemit.com/scotbot/@holger80/scotbot-faster-than-ever-tags-with-capital-letters-will-be-accepted-and-claimed-token-are-double-checked</a></li>
+</ul>
+<p>언제나와 같이 핵심 요약드립니다.</p>
+<h2 id="1-바뀐-사항"><a href="#1-바뀐-사항" class="headerlink" title="1. 바뀐 사항"></a>1. 바뀐 사항</h2><h3 id="a-스캇봇-속도-향상"><a href="#a-스캇봇-속도-향상" class="headerlink" title="a. 스캇봇 속도 향상"></a>a. 스캇봇 속도 향상</h3><p>각 포스팅에 해당하는 예상 토큰의 값은 그동안 모든 펜딩되어 있는 포스팅의 해당 rshares의 합을 처음부터 계산해서 산출해야했습니다. 이제부터는 스캇봇이 이를 ‘pending_rshares”라는 값으로 기록을 합니다.</p>
+<p>스캇봇은 보통 업보팅을 하고 어느정도 시차를 두고 업보팅이 되는데, 이 작동 방식 변경으로 최소 15-20초정도의 시차를 줄일 수 있게 되었습니다.</p>
+<p>포스팅에 해당하는 리워드가 계산되는 방식은 다음과 같습니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">weight_rshares &#x2F; pending_rshares * reward_pool</span><br></pre></td></tr></table></figure>
+<p>즉, rshares를 현재 전체 pending하고 있는 rshares로 나누고 거기다가 리워드풀을 곱하게 됩니다.</p>
+<p>새롭게 포스팅이 보팅을 받을 때마다 (해당 토큰의 태그를 쓰는 어떠한 포스팅이던) 예전 rshares와 새로운 rshares가 계산이되며 pending_rshares가 수정이 됩니다. </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pending_rshares  &#x3D; pending_rshares  + weight_rshares - old_weight_rshares</span><br></pre></td></tr></table></figure>
+
+<p>페이아웃 시점에서는 해당 포스팅의 rshares를 <code>pending_rshares</code>에서 뺍니다.</p>
+<p>결론적으로는 이러한 계산방식의 변화로 시간과 계산 리소스가 많이 발생하는 매번 모든 포스팅의 rshares를 새롭게 산출하는 것을 방지하고 속도를 많이 개선 할 수 있습니다. </p>
+<h3 id="b-기타-사항"><a href="#b-기타-사항" class="headerlink" title="b. 기타 사항"></a>b. 기타 사항</h3><ul>
+<li>스캇봇이 대문자가 섞인 태그를 인식하지 못한 문제를 수정했습니다. (즉, Palnet 이라고 쓰면 인식못했음)</li>
+<li>토큰 클레임시 제대로 PAYOUT이 되었는지 이중 확인 절차를 만듬.</li>
+</ul>
+<h2 id="2-개인적인-생각"><a href="#2-개인적인-생각" class="headerlink" title="2. 개인적인 생각"></a>2. 개인적인 생각</h2><p>스캇봇이 업그레이드 되어서 좀더 쾌적한 환경에서 스팀엔진 스캇 서비스들을 이용할 수 있어서 좋습니다. ^^</p>
+<p>스캇봇이 블록체인에 스마트컨트렉트로 입력된 방식의 적용이 아닌 관계로 세팅값에 대한 변화가 아직은 다양하게 적용되고 있고, 일부분 봇이 다운 되었을 경우 전체 활성 커뮤니티가 영향을 받는, 현재는 스팀엔진 스캇 프로젝트들의 심장과도 같은 역할을 한다고 보면 될것 같습니다. 초기 단계로 인해 수정과 optimizing, 그리고 지속적인 테스트들로 인한 업그레이드가 스마트컨트렉트가 아닌 관계로 하드포크 없이 간편하게 이루어 지고 있는것도 사실입니다.</p>
+<p>스팀을 하시는 분들이 한동안 정신없이 쏟아지는 프로젝트들과 기능들 때문에 따라가기 어렵다고 느껴진 이유중 하나도, 완벽하게 블록체인에 올라가지 않고 우선 작동이 가능한 소프트웨어 솔류션을 만들어서 배포를 하기 때문에 속도가 그만큼 빠른것이라고 생각하시면 될 것 같습니다.</p>
+<p>여전히 모든 스캇 관련 프로젝트들의 가장 큰 리스크는 여전히 스팀엔진팀의 중앙화이기는 합니다만, 최종적인 목적은 모든 기능의 스마트컨트렉트화와 컨센서스 레이어를 이룬 노드운영입니다.</p>
+<p>사실상 블록체인을 쓰더라도 결국은 이조차도 사용하기 위해서는 결국 중앙화된 서비스들을 다시 사용하게 되는데 (예, 거래소등) 이것도 운영 주체를 신뢰를 하느냐 못 하느냐로 사용성과 환경이 갈라진다고 생각합니다.</p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/%EA%B0%9C%EB%B0%9C/" rel="tag">개발</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/07/11/jayplayco.6b9rhr-steempeak/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">[스팀픽] SteemPeak 업데이트 - 팔로우 추천 기능및 정리기능</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/07/10/jayplayco.steemit-com-ddos-protection/">
+                <span class="level-item">[스팀잇] Steemit.com 클라우드페어 DDOS protection 적용</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="[스팀엔진] ScotBot 속도 향상" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 jayplayco&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("kr");</script>
+
+
+<script>
+var IcarusThemeSettings = {
+    site: {
+        url: 'http://jayplayco.github.io',
+        external_link: {"enable":true,"exclude":[]}
+    },
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'true'
+        }
+    }
+};
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+
+<script src="/js/main.js" defer></script>
+
+    
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html  lang="kr">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 4.2.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>[스팀엔진] 스테이킹과 마이닝 기능 추가 - ENG Mining 가능 - 제플코 제이의 블록체인</title>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-1-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="[스팀엔진] 스테이킹과 마이닝 기능 추가 - ENG Mining 가능" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-end">
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-12 has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-image">
+        <span  class="image is-7by1">
+            <img class="thumbnail" src="https://files.steempeak.com/file/steempeak/jayplayco/8DMwHFIA-image.png" alt="[스팀엔진] 스테이킹과 마이닝 기능 추가 - ENG Mining 가능">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-02T15:53:09.000Z">2019-06-03</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B0%9C%EB%B0%9C/">개발</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    11 minutes membaca (Sekitar 1669 kata)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                [스팀엔진] 스테이킹과 마이닝 기능 추가 - ENG Mining 가능
+            
+        </h1>
+        <div class="content">
+            <center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/8DMwHFIA-image.png)</center>
+
+<p>안녕하세요, @jayplayco입니다. 현재 AAA의 준비를 위해 스팀엔진측과 열심히 논의중입니다만, 지속적으로 새로운 것을 내놓는 스팀엔진 측 때문에 쫓아가기가 바쁘네요 ^^.</p>
+<p>이미 @aggroed의 공지사항을 전달주신 @isaaclab이 계십니다. 하기를 링크 참조하시기 부탁드립니다.</p>
+<ul>
+<li><a href="https://www.steemcoinpan.com/sct/@isaaclab/sct-freeboard-staking-and-mining">스팀 엔진의 새로운 기능. STAKING &amp; MINING.- @isaaclab</a></li>
+</ul>
+<h2 id="0-TL-DR"><a href="#0-TL-DR" class="headerlink" title="0. TL;DR"></a>0. TL;DR</h2><p>스팀엔진에서 ScotBot의 기능을 강화했습니다. Mining과 Staking 기능을 추가했습니다. 예를 들어, A 토큰을 스테이킹 하면 자동으로 일정 수량의 A 토큰이 마이닝 가능하거나, A토큰을 스테이킹 했을때 B 토큰이 마이닝 가능하도록 하는 기능입니다.</p>
+<h2 id="1-ENG-토큰-마이닝-가능"><a href="#1-ENG-토큰-마이닝-가능" class="headerlink" title="1. ENG 토큰 마이닝 가능"></a>1. ENG 토큰 마이닝 가능</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/alt9ZP23-image.png)</center>
+현재 스팀엔진 측에서 첫 시도를 위해서 ENG 토큰을 마이닝 가능하도록 했습니다. ENG의 경우는 특히 스팀엔진에서 자체 커뮺니티를 생성해서 운영하고자 하는 분들에게 필수로 필요한 토큰입니다. 보통 기능및 비용은 다음과 같습니다.
+
+<ul>
+<li>토큰 생성 : 100 ENG</li>
+<li>스캇봇 세팅: 250 ENG</li>
+<li>Nitrous 페이지 생성: 650 ENG</li>
+<li>스캇봇 월 사용료 : 유저당 1 ENG</li>
+</ul>
+<p>즉, SCT팀이나 AAA와 같은 프로젝트들의 경우는 지속적으로 ENG를 구매해야하는 배경이 있습니다. 실제로 몇시간전 AAA 프로젝트를 위해 다량의 ENG를 구매해놓기도 했습니다.</p>
+<p>이에, 스팀엔진측은 ENG의 마이닝을 가능하게 하도록 해서 2가지 토큰을 새로 생성했습니다.</p>
+<ul>
+<li>EMFOUR = 가격 1 EMFOUR 당 300 스팀 (채굴량 x4)</li>
+<li>EM = 가격 1 EM 당 100 스팀 (채굴량 x 1)</li>
+<li>연간 가능 채굴량: 100K ENG</li>
+</ul>
+<p>채굴을 하기 위해서는 EMFOUR나 EM를 구매해서 스테이킹을 해야합니다. Unstaking은 4주간 1주일마다 1/4이 돌아옵니다. </p>
+<p>현재 100K를 기준으로 했을때 하루 채굴량은 273ENG 개정도로 예상이 되며, 채굴은 전체 채굴을 위해 스테이킹된 EMFOUR와 EM을 바탕으로 하지 않을까 싶습니다. 계산식은</p>
+<ul>
+<li>EMFOUR x 10000 x 4 = 40000</li>
+<li>EM x10000 = 10000<br>=&gt; 합 총 5만. 현재 판매량이 다 팔렸다고 가정했을때, 1 EM당 하루 0.0054 ENG가 채굴이 되고, 일년에 1.99 ENG가 채굴이 됩니다. 이는 연간 EM을 바탕으로 했을때 1.9%의 ROI입니다. EMFOUR 기준으로는 2.65%정도의 ROI입니다.</li>
+</ul>
+<p>물론 현재 EMFOUR와 EM이 많이 팔리지 않은 상황입니다. EM은 총 물량 1 EM정도, EMFOUR는 현재 25개정도가 팔렸습니다. 이는 다음과 같은 계산식으로 종결됩니다.</p>
+<ul>
+<li>1EM + 25x4 EMFOUR = 101EM 채굴량</li>
+<li>273ENG/101EM = 2.7 ENG</li>
+<li>2.7ENG * 365 = 985.5 ENG</li>
+<li>EM 기준 985.5%의 연간 ROI (당일 작성 기준) 과 EMFOUR 기준 1314%의 ROI 입니다.</li>
+</ul>
+<p>물론 지속적으로 팔려나가는 EM과 EMFOUR의 수량이 늘어날것인 관계로 저 ROI는 순식간에 떨어지며, 최저값인 1.9%나 2.65%로 떨어집니다. 또한 한가지 아직 확실하지 않은 것이, 현재 발행되어서 판매되고 있는 EM과 EMFOUR의 수량이 절대값인지, 아니면 추가로 발행이 될 것인지에 대한 언급이 없는 관계로 이것도 투자시 리스크로 남아있는 부분입니다.</p>
+<h2 id="2-스팀엔진의-방향"><a href="#2-스팀엔진의-방향" class="headerlink" title="2. 스팀엔진의 방향"></a>2. 스팀엔진의 방향</h2><p>현재 스팀엔진 측은 스캇봇과 나이트로를 쓰고 있는 운영진들에게 EM과 EMFOUR를 사야하도록 시스템을 조정하고자 한다고 합니다. 운영진들에게 추가적으로 부담이 되는 정책일지, 아니면 ENG 가격에 대한 안정화가 될지는 지켜봐야할것으로 보입니다.</p>
+<blockquote>
+<p>Pricing for all ongoing services (as opposed to initial setup) on Steem-Engine.com will be moving to a pricing model where you have to stake ENG in order for the services to continue operating. If you own the ENG you’ll soon be able to delegate it to projects that need the staked ENG to continue operating. We’ll be working with leasing sites to get a leasing marketgoing. @aggroed</p>
+</blockquote>
+<p>추가적으로 ENG를 갖고 있으면 임대 가능한 서비스와 리징이 가능한 사이트도 생성한다고 합니다. 즉, 커뮤니티 운영진이 아니더라도, ENG를 투자의 목적으로 소유하고 임대를 통한 수익을 얻을 수 있도록 가능하게 시스템을 정비하고 있다는 것입니다.</p>
+<h2 id="3-개인적인-생각"><a href="#3-개인적인-생각" class="headerlink" title="3. 개인적인 생각"></a>3. 개인적인 생각</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/poOjR7dG-image.png)
+[Source: Michał Parzuchowski](https://unsplash.com/photos/pvIVPYGM16o)</center>
+실제로 하드웨어를 통한 마이닝이 아닌 디지탈화된 마이닝 개념의 도입, 그리고 자체 토큰의 경계를 넘어가는 형태의 마이닝까지 가능하게 하는 기능 자체는 정말 스팀엔진팀이 이제는 SMT의 개념도 뛰어넘고 툴들을 마련하고 있는 것으로 보입니다.
+
+<p>실제로 AAA 프로젝트들을 운영을 하면서 느끼는 것은 토큰 이코노미가 생각보다 fragile한 생태계인 관계로 각 수학적인 값들이 실제로 유저의 행동 패턴에 어떤 긍정적인 아니면 부정적인 영향을 미칠지는 커뮤니티와 부딪히면서 그에 대한 Data가 쌓이는 것 같습니다. </p>
+<p>현재는 스캇봇이 스마트컨트렉이 아닌 상황입니다. 아마 처음부터 값을 지정해놓고 전혀 건들지 못했다면, 한번 잘못 튼 방향은 수정이 불가했을것으로 보입니다. 물론 추후 스캇봇도 스마트컨트렉트형태의 조건을 갖춘다고 했습니다. 이에 대한 발표는 기다려야할 것으로 보입니다.</p>
+<p>스테킹에 따른 토큰의 마이닝은 커뮤니티를 조성하고자 하시는 분들은 고민을 많이 하시고 다가가는 것이 좋을 것으로 보입니다. 토큰을 사실상 나눠주는 것은 (에어드랍, 발권력, 마이닝등) 비교적 쉬우나, 그에 따른 가치를 수반하면서 커뮤니티까지 동반해서 성장시키는 것은 또다른 이코노미의 자체적인 형성이 필요하기 때문입니다.</p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/%EA%B0%9C%EB%B0%9C/" rel="tag">개발</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/06/04/jayplayco.d-tube/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">[스팀엔진] D.Tube와 파트너쉽을 통한 커스텀 사이트 제공</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/06/02/jayplayco.eos-voice-sns/">
+                <span class="level-item">[EOS] Voice라는 SNS 발표</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="[스팀엔진] 스테이킹과 마이닝 기능 추가 - ENG Mining 가능" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 jayplayco&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("kr");</script>
+
+
+<script>
+var IcarusThemeSettings = {
+    site: {
+        url: 'http://jayplayco.github.io',
+        external_link: {"enable":true,"exclude":[]}
+    },
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'true'
+        }
+    }
+};
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+
+<script src="/js/main.js" defer></script>
+
+    
+</body>
+</html>
