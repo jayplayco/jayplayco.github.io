@@ -138,6 +138,65 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-17T15:20:24.000Z">2019-06-18</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    8분 읽기 (대략 1186 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/18/jayplayco.breez-ios-beta/">[Breez] 비트코인 라이트닝 네트워크 기반 모바일 지갑 iOS Beta버젼 출시</a>
+            
+        </h1>
+        <div class="content">
+            <center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/qJi16cbp-image.png)</center>
+안녕하세요, @jayplayco입니다.
+
+<p>이번에 Breez라는 곳에서 비트코인용 라이트닝 네트워크 지갑을 아이폰용 베타 버젼을 공개했습니다. 이에 따라 비트코인으로 소액결제를 이동중에도 쉽게 가능하게 되었습니다. 한번 파고 들어가보겠습니다.</p>
+<h2 id="0-라이트닝-네트워크란-Lighting-Network"><a href="#0-라이트닝-네트워크란-Lighting-Network" class="headerlink" title="0. 라이트닝 네트워크란? (Lighting Network)"></a>0. 라이트닝 네트워크란? (Lighting Network)</h2><p>스팀을 쓰시는 분들은 별로 큰 어려움을 느끼지 못하실텐데, 거래소 내에서 비트코인 거래가 아닌 실질적인 비트코인을 지갑에서 지갑으로 최근에 이동을 시켜보신 분들은 아시겠지만, 우선 비트코인을 전송하는데 기본적으로 비용이 들지는 않지만, 사실상 transaction이 실행이 되기 위해서는 transaction fee를 포함해야 하는것이 사실이며, 이는 많은 량의 비트코인을 이동할때는 어쩔 수 없다고 하지만, 커피값 정도되는 비트코인을 전송하는데는 문제가 될 수 있습니다.</p>
+<p>그 현재 비트코인은 블록당 1MB가 들어가게 되는데, 트랜스액션을 처리해야할 마이너(miner)의 경우에는 트랜스액션 fee가 높은 거래를 우선시하는경향이 있고, 소량의 비트코인의 경우에는 그만큼 트랜스액션 비용도 적은 관계로 우선순위가 밀릴 수 있습니다.</p>
+<p>이를 해결하기 위해서는 하트포크를 해서 1MB의 제한을 풀어버려서 스케일링을 할 수 있으나, 그에 따른 다른 문제점들이 발생하기도 합니다. (전송 속도, 처리 하드웨어등등)</p>
+<p>라이트닝 네트워크는 확장성을 위해 블록크기를 늘린것이 아닌 오프체인에서 수수료를 낮추고 소액거래가 가능하도록 하는 기술임. 즉, 약간 비트코인 오프체인의 사이드체인과 비슷한 느낌입니다.</p>
+<h2 id="1-Breez의-지갑"><a href="#1-Breez의-지갑" class="headerlink" title="1. Breez의 지갑"></a>1. Breez의 지갑</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/wHWt0cvm-image.png)</center>
+
+<p>브리즈의 지갑은 구매자와 판매자가 각각 설치를 하고 소액 결재를 할때 라이트닝 네트워크를 이용해서 쉽고 저렴한 비용으로 이용할 수 있게 구성이 되어 있습니다. 실제 결재를 할때는 Breeze의 허브를 통해 서로 연결되며, 이 허브는 Lightning 노드를 이용해서 진행됩니다. 각 지갑에 저장된 비토코인의 변화를 반영하기 위해 거래가 있을때 마다 당사자들의 Bitcoin의 변화하는 양을 반영하기 위해 거래가있을 때마다 대차 대조표에 서명을 하면서 증명을 합니다. 트랜잭션이 완료되면 잔액이 최종 비트코인 블록 체인에 등록됩니다. 분쟁이 일어날 경우에는 가장 최근 대차 대조표를 사용하여 지가분 분쟁 발생시, 양 당사자는 가장 최근에 서명 한 대차 대조표를 사용하여 잃어버린 부분을 되찾을 수 있습니다. </p>
+<p>기존 안드로이드 사용자들은 Breez의 지갑을 쓸 수 있었지만, 이번 iOS 베타 출시로 전체 모바일 시장의 약 98%를 커버하게 되었습니다.</p>
+<h2 id="2-Breez-지갑의-비젼"><a href="#2-Breez-지갑의-비젼" class="headerlink" title="2. Breez 지갑의 비젼"></a>2. Breez 지갑의 비젼</h2><p>브리즈 지갑의 경우는 100% 비트코인의 소액 결재를 위해 최적화되었습니다. 라이트닝 네트워크 사용이 그 단적인 증거이죠. 이제 소비자용 지갑은 완성이 되었으니 사실상 Breez측에서도 다음 단계로 필요한 것은 판매자를 위한 POS 클라이언트 라고 합니다. 이것까지 제공이 된다면, 손쉽게 비트코인으로 소액 결재를 확장할 수 있는 기반이 만들어질 것 같습니다. </p>
+<p><a href="https://en.wikipedia.org/wiki/Lightning_Network">소스: Lightning Network - Wikipedia</a><br><a href="https://banksalad.com/contents/%EC%89%BD%EA%B2%8C-%EC%84%A4%EB%AA%85%ED%95%98%EB%8A%94-%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8-%EB%9D%BC%EC%9D%B4%ED%8A%B8%EB%8B%9D-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-Lightning-Network-%EB%9E%80-g9nT6">소스: 쉽게설명하는 블록체인: 라이트닝 네트워크</a><br><a href="https://medium.com/breez-technology/breez-on-ios-a-big-step-towards-the-lightning-economy-and-a-giant-leap-for-breez-cbcf2db77acb">소스: Breez Medium 공지</a><br><a href="https://www.coindesk.com/breez-reveals-lightning-powered-bitcoin-payments-app-for-iphone">소스: 코인데스크 Breez 기사</a><br><a href="https://github.com/breez/breezmobile">소스: Breez Github</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-06-16T17:07:24.000Z">2019-06-17</time>
                 
                 <div class="level-item">
@@ -882,95 +941,6 @@ Wallet Explorer에 CoinJoin을 누르면 상단과 같은 창이 뜹니다. 여�
 
 
 
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-10T12:25:54.000Z">2019-06-10</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    9분 읽기 (대략 1403 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/06/10/jayplayco.76dbf8-snax/">[Snax] 스낵스 작동 원리</a>
-            
-        </h1>
-        <div class="content">
-            <center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/0LkglmkV-image.png)</center>
-
-<p>안녕하세요, @jayplayco입니다.</p>
-<p>작일이 Snax의 스팀 에어드랍을 받을 수 있는 마지막날이라고 해서 이미 커뮤니티에서는 많은 SNAX 등록글들이 보이네요 ^^.</p>
-<center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/FaGjF3e8-image.png)</center>
-
-<p>필자의 경우는 이미 5월중에 등록을 끝내고 <a href="https://steemit.com/kr/@jayplayco/snax">소개도 해드렸었는데</a> 그 사이에 스팀과 트위터를 연동해놔서 SNAX가 조금 쌓여있었네요.</p>
-<p>따로 한것이 없는데 받는게 있으니 좋기는 한데, 어떤 방식으로 작동하는지가 궁금해서 조금 파고 들어가봤습니다</p>
-<h2 id="1-SNAX-연동"><a href="#1-SNAX-연동" class="headerlink" title="1. SNAX 연동"></a>1. SNAX 연동</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/tcOGoeIj-image.png)</center>
-
-<p>스낵스는 현재 트위터와 스팀 이 두가지 SNS가 연동이 되고 있습니다. 그리고 각 SNS별 Attention Rate라고 하는 점수를 부여해줍니다. Attention Rate는 컨텐트가 일정 기간 갖고 있는 총 어탠션을 보여주고자 하는 값입니다. 예를 들어 저의 경우는 현재 514위입니다만, 저 등수는 스낵스와 연동된 계정뿐만 아니라 스팀 전체 계정을 다 포함하는 값입니다.</p>
-<p>이를 확인하기 위해서 잘 알고 있는 다른분의 계정이 눈에 띄어서 확인을 해봤습니다.</p>
-<center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/AvWAohSQ-image.png)</center>
-@segyepark님이 몇일전 현 JJM와  AAA 관련 개발 [현황에 대해서 공유를](https://steemit.com/aaa/@segyepark/jjm-aaa) 해주셨는데, 이 글이 지난 scoring round에서 어마무시한 영향력을 과시해서 현재 전체 유저의 어탠션레이트중 4위를 차지하고 있습니다. ~~그런데 함정이, 아직 세계님은 Snax연동을 하지 않으셨다는 사실.~~ (어제 알려드렸더니 설정하셨네요 ㅎ.) 그리고 지금까지 놓친 Snax 리워드가 무려 거의 10K이네요. 어쨌던 자랑스럽습니다. 전세계 스티미언 SNAX 어탠션 레이트 영광의 4위는 @segyepark님입니다. ^^
-<center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/1O5vzovy-image.png)</center>
-
-<h2 id="2-SNAX-리워드"><a href="#2-SNAX-리워드" class="headerlink" title="2. SNAX 리워드"></a>2. SNAX 리워드</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/t2lzn0NX-image.png)</center>
-
-<p>그렇다면 저의 경우는 어떤지 한번 보겠습니다. </p>
-<ul>
-<li>Scoring 라운드에 포함된 포스팅은 39개입니다. 즉, 작성한 지난 39개의 포스팅을 계산하는데 활용했다는 것입니다.</li>
-<li>리스팀은 2개, 댓글은 3개, 업보티은 총 76개가 카운팅 되었습니다.</li>
-</ul>
-<p>이때 예상되는 SNAX리워드는 총 2026SNAX 정도이며 이는 이전 Scoring 라운드의 저의 어탠션 레이트를 반영한 값입니다. 즉, 어탠션레이트가 올라가게 될 경우 같은 값일때 더 많은 리워드를 받을 수 있습니다.</p>
-<p>다만, 여기서 저 리스팀, 댓글과 업보팅은 무슨 기준으로 측정이 되는지는 잘 몰랐다가, 제 글을 찾아서 보니까 답이 나오는것 같습니다. </p>
-<center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/8QCs7zn6-image.png)</center>
-
-<p>즉, 정확히 8일전 이미 스팀 리워드가 완료된 직후의 글을 바탕으로 측정되는것으로 예상됩니다. 사실 업보팅 수가 완전히 일치하지 않고, 리스팀도 확인했을때 수가 완전히 일치하지는 않은데, 가장 근접하고 가장 논리적일것으로 예상되기는 합니다.</p>
-<p>마찬가지로 트위터도 활발하게 이용하시는 분들의 경우는 연동했을때 SNAX를 리워드로 받으실 수 있을것으로 예상됩니다. 트위터의 경우는 지난 7일간의 트윗을 바탕으로 라이크, 리트위트와 댓글을 확인을 합니다.</p>
-<h2 id="3-리워드-확인"><a href="#3-리워드-확인" class="headerlink" title="3. 리워드 확인"></a>3. 리워드 확인</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/MUflT1Eh-image.png)</center>
-스낵스 메뉴중 트랜스액션을 누르시면 그동안 글 쓴것에 대한 SNAX 보상이 나열됩니다. 거의 매일 리워드가 들어오고 있는것을 확인할 수 있습니다. 스팀에서 글을 쓰면 그에 따른 보상이 주어지는 상황입니다.
-
-<h2 id="4-스낵스-사용처"><a href="#4-스낵스-사용처" class="headerlink" title="4. 스낵스 사용처"></a>4. 스낵스 사용처</h2><ul>
-<li><strong>아직 특별히 없습니다.</strong> </li>
-</ul>
-<p>스낵스 페이지에서 다른 스낵스 계정, 트위터와 스팀계정에 까지 스낵스를 쉽게 전송할 수 있습니다. 즉, 팁이나 후원 개념으로 보낼 수 있는것이죠. 미국 전 대통령의 트위터 계정인 버락 오바마분의 트위터 계정이 어탠션 레이트가 2위입니다. 후원하기 위해서 100 Snax를 보내봅니다.</p>
-<center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/0kw5T7RB-image.png)</center>
-<center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/94GZkBA1-image.png)</center>
-<center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/W60pcFdZ-image.png)</center>
-
-<p>하고 보내고 나면, 오보마 전 대통령분께 알림까지 할 수 있습니다.</p>
-<center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/CH5wO468-image.png)</center>
-
-<p>우선 스낵스만 보내놓고 저 파란 버튼 눌러서 호출했다가 무슨 일이 벌어질지는 몰라서 우선 안눌렀습니다. ^^ 제 트위터 계정으로 송부한 계정을 호출하고 스낵스에 가입하라고 권유하는 형태의 트윗이 발송될 것으로 예상되기는 합니다. ㅎ</p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -1045,7 +1015,7 @@ Wallet Explorer에 CoinJoin을 누르면 상단과 같은 창이 뜹니다. 여�
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            585
+                            586
                         </p>
                     </a>
                 </div>
@@ -1057,7 +1027,7 @@ Wallet Explorer에 CoinJoin을 누르면 상단과 같은 창이 뜹니다. 여�
                     </p>
                     <a href="/categories">
                         <p class="title has-text-weight-normal">
-                            17
+                            18
                         </p>
                     </a>
                 </div>
@@ -1069,7 +1039,7 @@ Wallet Explorer에 CoinJoin을 누르면 상단과 같은 창이 뜹니다. 여�
                     </p>
                     <a href="/tags">
                         <p class="title has-text-weight-normal">
-                            15
+                            16
                         </p>
                     </a>
                 </div>
@@ -1143,6 +1113,14 @@ Wallet Explorer에 CoinJoin을 누르면 상단과 같은 창이 뜹니다. 여�
         <a class="level is-marginless" href="/categories/coinnews/">
             <span class="level-start">
                 <span class="level-item">coinnews</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/hexo/">
+            <span class="level-start">
+                <span class="level-item">hexo</span>
             </span>
             <span class="level-end">
                 <span class="level-item tag">1</span>
@@ -1286,7 +1264,7 @@ Wallet Explorer에 CoinJoin을 누르면 상단과 같은 창이 뜹니다. 여�
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/AAA/" style="font-size: 12.5px;">AAA</a> <a href="/tags/SCT/" style="font-size: 13.33px;">SCT</a> <a href="/tags/ZZAN/" style="font-size: 10.83px;">ZZAN</a> <a href="/tags/coinnews/" style="font-size: 10px;">coinnews</a> <a href="/tags/splinterlands/" style="font-size: 17.5px;">splinterlands</a> <a href="/tags/steem/" style="font-size: 19.17px;">steem</a> <a href="/tags/%EA%B0%80%EC%83%81%ED%99%94%ED%8F%90/" style="font-size: 15.83px;">가상화폐</a> <a href="/tags/%EA%B0%9C%EB%B0%9C/" style="font-size: 16.67px;">개발</a> <a href="/tags/%EA%B2%8C%EC%9E%84/" style="font-size: 18.33px;">게임</a> <a href="/tags/%EB%A6%AC%EB%B7%B0/" style="font-size: 15px;">리뷰</a> <a href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/" style="font-size: 20px;">미지정</a> <a href="/tags/%EC%8A%A4%EB%9E%9C/" style="font-size: 17.5px;">스랜</a> <a href="/tags/%EC%8A%A4%EB%AA%AC/" style="font-size: 17.5px;">스몬</a> <a href="/tags/%EC%9D%B4%EB%B2%A4%ED%8A%B8/" style="font-size: 14.17px;">이벤트</a> <a href="/tags/%ED%85%8C%EC%8A%A4%ED%8A%B8/" style="font-size: 11.67px;">테스트</a>
+        <a href="/tags/AAA/" style="font-size: 12.5px;">AAA</a> <a href="/tags/SCT/" style="font-size: 13.33px;">SCT</a> <a href="/tags/ZZAN/" style="font-size: 10.83px;">ZZAN</a> <a href="/tags/coinnews/" style="font-size: 10px;">coinnews</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/splinterlands/" style="font-size: 17.5px;">splinterlands</a> <a href="/tags/steem/" style="font-size: 19.17px;">steem</a> <a href="/tags/%EA%B0%80%EC%83%81%ED%99%94%ED%8F%90/" style="font-size: 15.83px;">가상화폐</a> <a href="/tags/%EA%B0%9C%EB%B0%9C/" style="font-size: 16.67px;">개발</a> <a href="/tags/%EA%B2%8C%EC%9E%84/" style="font-size: 18.33px;">게임</a> <a href="/tags/%EB%A6%AC%EB%B7%B0/" style="font-size: 15px;">리뷰</a> <a href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/" style="font-size: 20px;">미지정</a> <a href="/tags/%EC%8A%A4%EB%9E%9C/" style="font-size: 17.5px;">스랜</a> <a href="/tags/%EC%8A%A4%EB%AA%AC/" style="font-size: 17.5px;">스몬</a> <a href="/tags/%EC%9D%B4%EB%B2%A4%ED%8A%B8/" style="font-size: 14.17px;">이벤트</a> <a href="/tags/%ED%85%8C%EC%8A%A4%ED%8A%B8/" style="font-size: 11.67px;">테스트</a>
     </div>
 </div>
     
@@ -1298,6 +1276,19 @@ Wallet Explorer에 CoinJoin을 누르면 상단과 같은 창이 뜹니다. 여�
         <h3 class="menu-label">
             최근 글
         </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-26T19:48:51.000Z">2020-02-27</time></div>
+                    <a href="/2020/02/27/jayplayco.6aqfyp-steemit/" class="title has-link-black-ter is-size-6 has-text-weight-normal">스팀잇글의 블로그화 - 헥소와 깃헙 by jayplayco</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/hexo/">hexo</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -1351,19 +1342,6 @@ Wallet Explorer에 CoinJoin을 누르면 상단과 같은 창이 뜹니다. 여�
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-25T15:20:12.000Z">2020-02-26</time></div>
-                    <a href="/2020/02/26/jayplayco.triple-aaa-a-ending-of-the-manual-curation-project-from-the-account-triple-aaa/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Triple.aaa] 트리플a 메뉴얼 큐레이션 프로젝트 종료 / Ending of the manual curation project from the account @Triple.aaa</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%EB%8B%88%ED%8A%B8%EB%A1%9C%EC%8A%A4/">니트로스</a> / <a class="has-link-grey -link" href="/categories/%EB%8B%88%ED%8A%B8%EB%A1%9C%EC%8A%A4/AAA/">AAA</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
         
@@ -1381,7 +1359,7 @@ Wallet Explorer에 CoinJoin을 누르면 상단과 같은 창이 뜹니다. 여�
                     <span class="level-item">2월 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">51</span>
+                    <span class="level-item tag">52</span>
                 </span>
             </a>
         </li>
@@ -1659,6 +1637,13 @@ Wallet Explorer에 CoinJoin을 누르면 상단과 같은 창이 뜹니다. 여�
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/hexo/">
+                        <span class="tag">hexo</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/splinterlands/">
                         <span class="tag">splinterlands</span>
                         <span class="tag is-grey">55</span>
@@ -1761,6 +1746,19 @@ Wallet Explorer에 CoinJoin을 누르면 상단과 같은 창이 뜹니다. 여�
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-26T19:48:51.000Z">2020-02-27</time></div>
+                    <a href="/2020/02/27/jayplayco.6aqfyp-steemit/" class="title has-link-black-ter is-size-6 has-text-weight-normal">스팀잇글의 블로그화 - 헥소와 깃헙 by jayplayco</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/hexo/">hexo</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-26T19:17:39.000Z">2020-02-27</time></div>
                     <a href="/2020/02/27/jayplayco.6tcfwf-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 트위터 대표가 만든 캐쉬앱</a>
                     <p class="is-size-7 is-uppercase">
@@ -1809,19 +1807,6 @@ Wallet Explorer에 CoinJoin을 누르면 상단과 같은 창이 뜹니다. 여�
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-25T15:20:12.000Z">2020-02-26</time></div>
-                    <a href="/2020/02/26/jayplayco.triple-aaa-a-ending-of-the-manual-curation-project-from-the-account-triple-aaa/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Triple.aaa] 트리플a 메뉴얼 큐레이션 프로젝트 종료 / Ending of the manual curation project from the account @Triple.aaa</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%EB%8B%88%ED%8A%B8%EB%A1%9C%EC%8A%A4/">니트로스</a> / <a class="has-link-grey -link" href="/categories/%EB%8B%88%ED%8A%B8%EB%A1%9C%EC%8A%A4/AAA/">AAA</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
     
@@ -1839,7 +1824,7 @@ Wallet Explorer에 CoinJoin을 누르면 상단과 같은 창이 뜹니다. 여�
                     <span class="level-item">2월 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">51</span>
+                    <span class="level-item tag">52</span>
                 </span>
             </a>
         </li>
@@ -2112,6 +2097,13 @@ Wallet Explorer에 CoinJoin을 누르면 상단과 같은 창이 뜹니다. 여�
                 <div class="control">
                     <a class="tags has-addons" href="/tags/coinnews/">
                         <span class="tag">coinnews</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/hexo/">
+                        <span class="tag">hexo</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -2333,7 +2325,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
 
-<a id="back-to-top" title="Back to Top" href="javascript:;">
+<a id="back-to-top" title="Zurück nach oben" href="javascript:;">
     <i class="fas fa-chevron-up"></i>
 </a>
 <script src="/js/back-to-top.js" defer></script>

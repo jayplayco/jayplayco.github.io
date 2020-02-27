@@ -138,6 +138,204 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-08-08T19:52:48.000Z">2018-08-09</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/steem/">steem</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    16분 읽기 (대략 2375 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/08/09/jayplayco.steemhunt-understanding-the-hunter-levels/">[Steemhunt] Understanding the Hunter Levels</a>
+            
+        </h1>
+        <div class="content">
+            <p><img src="https://steemitimages.com/DQmNfeZGkKQJBrXDkZptuzunaHT6hZKXvcGQFyeiWW4VweN/LP-7-logo.jpg" alt=""></p>
+<p>Hi, @jayplayco here.<br>We are running the Hunter Level now for a few days, and a lot of parts have been tweaked in these days and still are tweaked. After two weeks of introduction hunters still, find it difficult to understand the hunter level itself and how they should adapt to it.</p>
+<p>To all readers who are new to <a href="https://steemhunt.com/">Steemhunt</a>, Steemhunt is a service built on the platform Steem to enable Hunters to hunt new and cool products and get rewarded on a daily base.  If you are new to Steemhunt, you should try first this post. <a href="https://steemit.com/steemdev/@steemhunt/introducing-steemhunt-daily-ranking-of-effortlessly-cool-products-fueled-by-steem-blockchain">LINK</a></p>
+<p>We will go into details about what the <a href="https://steemit.com/steemhunt/@steemhunt/steemhunt-abv-2-0-introducing-hunter-level-based-steemhunt-upvotes-or-new-category-search-feature">new Hunter Level</a> means and what kind of actions are counted for the score. A detailed post about ABV 2.0 can be found <a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-abv-2-0">here</a>.</p>
+<h2> 0. Repository </h2>
+https://github.com/Steemhunt/web
+
+<h2> 1. Hunters Level - Why?</h2>
+![](https://cdn.steemitimages.com/DQmYQaGSSwfJJsCS9fhjaXfkdTHjp9nbRJRXG8UbPTona2A/image.png)
+[Source: Vidar Nordli-Mathisen](https://unsplash.com/photos/IbaTONUx7BI)
+
+<p>Steemhunt is building on the Steem environment, and specific behaviors have been adapted which were not helpful to create a good ranking board. Circle voting, using Alt accounts to upvote your post and manipulate the ranking, V4V attempts from larger groups and much more made the ranking board a playground for abusers. Even the Pro-Con review rewards were abused by users working whole day making partly hundreds of comments to increase the chance of an upvote.</p>
+<p>At that time the first place on the ranking board from Steemhunt was able to get voting over 120$ for one post when getting the first rank. Few of the manipulation attempts were even quite successful, so the team needed to react to find a way to reduce or block this kind of manipulation. </p>
+<p>Unfortunately, until ABV 2.0 having the ranking board and rewards coupled together with, the abusers always found another way to manipulate the ranking board. It was seen from a social behavior point of view fascinating to look into it but still, an issue as it would make the ranking board not attractive and fun.</p>
+<p>After de-coupling the ranking board and rewards (upvoting) with ABV 2.0 there was a system needed to be able to reward the hunters still. So the Hunters Level based on the Steemhunt User Score was born. </p>
+<h2> 2. The four columns of User Score</h2>
+![](https://steemitimages.com/0x0/https://cdn.steemitimages.com/DQmS3d6CeUQ2Lf1opvFeZ5iviUhKv7SsL7HJF8tJYw2go1f/image.png)
+
+<p>Hunter Levels are based on the User Score, and the User Score is calculated based on different parameters. The User Score is also used as Voting Power on the Steemhunt platform.</p>
+<h3> 1) Account Credibility</h3>
+In the current moment, two factors are calculated, which is the reputation score from Steem (then number right to your nickname is representing it)  and the age of your account in Steemhunt.
+
+<h3> 2) Activity Score </h3>
+Also here in the moment, the login record is calculated on a daily base.  This record adds or deducts every day.
+
+<h3> 3) Curation Score  </h3>
+Curation activities are upvoting hunts from other hunters within Steemhunt (and not from Steemit or busy or somewhere else). This also includes the total curation weight and [voting diversity](https://steemit.com/steemhunt/@steemhunt/steemhunt-s-account-based-voting-ver-2-diversity-score). 
+
+<h3> 4) Hunt Score </h3>
+This point is related to the ranking of a hunted post, also if a hunt has been delisted is calculated and how good your hunt has been ranked.
+
+<h2> 3. How to understand the User Score?</h2>
+![](https://cdn.steemitimages.com/DQmbKqewpufBu2vTnLVJEobazVPUVAxh3FXTQZygyxB7Hbo/image.png)
+[Source: Element5 Digital](https://unsplash.com/photos/LTyDj7u_TU4)
+
+<p>The current status of the Steemhunt User Score is not made to continued level up to the highest rank and stay there, but is more a real-time activity score of your Steemhunt activities. The critical point is that the data to calculate your User Score is always from the last 30 days, so everything before that doesn`t count. This time limitation has been implemented to; </p>
+<p>1) Give newbies a fair chance to get established at Steemhunt<br>2) Avoid to level up and stay there (as the rewards are coupled with the User Score)<br>3) Make the User Score more an Activity Score</p>
+<p><img src="https://cdn.steemitimages.com/DQmSWGnoXL42HmA1iiFc1CoTv6jufDzhjedw4NiHNecbuAi/image.png" alt=""></p>
+<p><img src="https://cdn.steemitimages.com/DQmY3zwmSagYmQQqwKqBsiT1GGkKkFG5kAbktxAaXUcsZAt/image.png" alt=""></p>
+<p>As a result of this implementation, a User Score can vary from one point to another quite a lot based on the activities in the last 30 days. We will go into details in the next chapter but have to keep the 30 days in mind.</p>
+<h2> 4. Hacking the User Score</h2>
+![](https://cdn.steemitimages.com/DQmWxBsnbR7yfzx3HtSt6QL6xhF8eMP62R6MdiWiSY2gwkG/image.png)
+[Source: Dlanor S](https://unsplash.com/photos/2xEQDxB0ss4)
+
+<p>Hacking into the User Score is not that difficult if you have understood that the core is maintaining an excellent behavior to keep your level constant and that good results can affect your User Score positively for up to 30 days.</p>
+<p>Below is the explanation from @tabris what factors are affecting the User Score. </p>
+<blockquote>
+<p><strong>User Score (=Voting Power) can be</strong></p>
+<p>Increased</p>
+<ul>
+<li>When account credibility is increased (higher reputation, older accounts)</li>
+<li>When user login to Steemhunt more frequently</li>
+<li>When user vote on more hunt post</li>
+<li>When user vote with more weight and earlier timing on hunt posts (same curation penalty applied for the first 30 minutes of posting)</li>
+<li>When user hunted, and it’s on ranked high</li>
+</ul>
+<p>Decreased</p>
+<ul>
+<li>When a user’s reputation is decreased</li>
+<li>When user login to Steemhunt less frequently</li>
+<li>When user vote on the same group of people many times</li>
+<li>When a user does circle voting with a specific group</li>
+<li>When user hunted, and it’s on ranked low</li>
+</ul>
+</blockquote>
+<p>Let’s find the points for each of the columns in Steemhunt.</p>
+<h3> 1) Account Credibility</h3>
+![](https://cdn.steemitimages.com/DQmQoDHS43NrR1zQNdDWvnWsUQ4tABSk1zz7zf6CZwFRx9Z/image.png)
+>Increased
+>- When account credibility is increased (higher reputation, older accounts)
+
+<blockquote>
+<p>Decreased</p>
+<ul>
+<li>When a user’s reputation is decreased</li>
+</ul>
+</blockquote>
+<p>To increase this point, you need to work on your reputation on Steem. Having good Hunts and get upvotes from other Hunters does help and if you managed to get to a Level 1 at Steemhunt, your Reputation at Steem would also increase step by step, when having Hunts upvoted by the Steemhunt bot. Your account does get older day by day, so this is something you don`t need to worry.</p>
+<p>If you get flagged at Steem, and your reputation drops this will have a direct impact on your User Score in Steemhunt.<br>This Data is not based on the last 30 days but always on the current date when the Account Credibility is calculated.</p>
+<h3> 2) Activity Score </h3>
+![](https://cdn.steemitimages.com/DQmZyt1R46YkQbVfk8dBncBwBusC2GpJTnNrVputDyESXbF/image.png)
+>Increased
+>- When user login to Steemhunt more frequently
+
+<blockquote>
+<p>Decreased</p>
+<ul>
+<li>When user login to Steemhunt less frequently</li>
+</ul>
+</blockquote>
+<p>This explanation is quite simple. Your activity Score will increase when you log in and decrease when not on a daily base. The Activity Score is also calculated based on the last 30 days so that the max Activity Score would be logging in every single day for 30 days. :)</p>
+<h3> 3) Curation Score  </h3>
+![](https://cdn.steemitimages.com/DQmeKj4eSnd4vaCufYtRcsSMfdqtjvaBV5UjwXWLWZX3uNR/image.png)
+>Increased
+>- When user vote on more hunt post
+>- When user vote with more weight and earlier timing on hunt posts (same curation penalty applied for the first 30 minutes of posting)
+
+<blockquote>
+<p>Decreased</p>
+<ul>
+<li>When user vote on the same group of people many times</li>
+<li>When a user does circle voting with a specific group</li>
+</ul>
+</blockquote>
+<p>As we have seen being daily active at Steemhunt and increasing the reputation on Steem is substantial. But the Curation Score is something which is impacting your User Score based on your last 30 days activity.</p>
+<p>As explained above you need to vote with a sufficient vote weight early enough to gain Curation Scores. Also voting on multiple hunts does increase your Curation Score. But more important is that you have to be careful not to vote on people but actual hunts and products. Behavior from Steem like “I am trailing that person so upvoting…” will harm your curation score. Even if you are only curating products, it can still happen that you are voting on the same group of people, as hunters usually develop a taste for a specific type of products and hunters as curators also. But if you keep your upvotes broad enough for all cool and new products your curation score will settle to a stable status. So keep an eye on cool hunts on Steemhunt for curation.</p>
+<h3> 4) Hunt Score </h3>
+![](https://cdn.steemitimages.com/DQmerjqFCimgL6YgLjcrH68KFzZaY4gqia5yCRY2i1MLbLH/image.png)
+>Increased
+>- When user hunted, and it's on ranked high
+
+<blockquote>
+<p>Decreased</p>
+<ul>
+<li>When user hunted, and it’s on ranked low</li>
+</ul>
+</blockquote>
+<p>Especially some of the new hunters tend to start hunting, anything without knowing what they are doing and getting de-listed their hunts very fast. :)<br>If you are one of them, I would recommend reading the posting guideline <a href="https://github.com/Steemhunt/web/blob/master/POSTING_GUIDELINES.md">here</a> and my last post about how to understand the posting guideline <a href="https://steemit.com/steemhunt/@jayplayco/steemhunt-understanding-the-new-posting-guideline">here</a>. The reason is, the ranking of your hunt and also delisted hunts (not accepted hunts) affect your hunt score. An excellent ranked hunt will increase your Hunt Score, but a not good performed hunt will decrease your Hunt score. Currently, you are allowed to hunt as many hunts as you wish, but still, only one accepted hunt get upvoted if your Hunter Level is above 1. The best case would be to have a daily hunt verified and ranked high on the “today’s” board. For that, you will have to be clear about what the posting guideline requests when posting a hunt and that the specific hunt will get the attention from other hunters. </p>
+<p>The easy mentioned but very difficult to achieve task here is,<br><strong>“Find cool and new hunts, hunt them down before another hunter does and be sure that your hunt is matching to the posting guideline!”</strong></p>
+<h2>5. So what is a good user score?</h2>
+![](https://cdn.steemitimages.com/DQmWvPtD1J5WWxJDb4ZUgwiywnoLqmQtzyz5vuvxmZkYayX/image.png)
+[Source: Volkan Olmez](https://unsplash.com/photos/BVGMRRFQcf8)
+
+<p>If you can keep a user score between 2-4 (Hunter Level 2~3), you are already a very active member of Steemhunt. From my experience in the last 14 days, everything going over a User Score of 4 tends to be very fragile for dropping in a few days as usually there had been some boosting reasons (high ranked hunts, great curation) in the last 30 days. As soon as these boosting reasons are out of the 30 days windows, the score drops to a “normal” activity level.</p>
+<h2>2. Conclusion</h2>
+A lot of hunters are claiming that their User Score is dropping or increasing in big steps. But that happens because all four columns of the User Score are multiplied with each other. If you have only one column under 1.0, it is going to make a big change in your total score, and if you have a difference of 0.1 in one column, it can affect your User Score up to 10-20%. 
+
+<p>So the goal should be to maintain a Hunter Level above 1 and try to keep it between 2-3 and also to boost it with excellent activities temporarily to a higher level up to 4 or even 5. Verified Hunts on Level 4 or 5 does get a higher reward, so the motivation to boost the Level is given.</p>
+<p><strong><a href="https://steemhunt.com/">“Keep the hunt on”</a></strong></p>
+<hr>
+<p>Thanks for reading!</p>
+<p>Other articles about Steemhunt.</p>
+<ul>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steem-start-here#@utopian-io/re-steem-start-here-20180712t080009z">Steemhunt- Start here</a></li>
+<li><a href="https://steemit.com/steemit/@jayplayco/what-is-steemhunt-and-why-should-i-care">What is Steemhunt and why should I care?</a></li>
+<li><a href="https://steemit.com/steemit/@jayplayco/biggest-airdrop-ever-hunt-token-and-how-to-participate">Biggest Airdrop ever - HUNT token and how to participate</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-abv-account-based-voting-in-development">[Steemhunt] ABV (Account based voting) in development</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-update-for-upvoting-review-comments-and-other-developments">Update for Upvoting Review Comments &amp; Other Developments</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-most-asked-questions-from-steemhunt-newbies">Most asked questions from Steemhunt Newbies.</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-how-to-get-your-hunt-verified-on-steemhunt">How to get your hunt verified on Steemhunt</a></li>
+<li>[Evolution of Steemhunt`s voting system](<a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-evolution-of-steemhunt-s-voting-system">https://steemit.com/utopian-io/@jayplayco/steemhunt-evolution-of-steemhunt-s-voting-system</a>)</li>
+<li><a href="https://steemit.com/steemhunt/@fknmayhem/understanding-steemhunt-and-how-to-craft-a-good-hunt">Understanding Steemhunt and How to Craft a Good Hunt -@fknmayhem</a></li>
+<li><a href="https://steemit.com/steemhunt/@fknmayhem/picking-apart-the-steemhunt-posting-guidelines-how-we-review-hunts">Picking Apart The Steemhunt Posting Guidelines - How We Review Hunts @fknmayhem</a></li>
+<li><a href="https://steemit.com/steemhunt/@fknmayhem/steemhunt-is-not-a-writing-curation-project">Steemhunt is NOT a Writing Curation Project- @fknmayhem</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-the-difficult-way-to-make-your-own-path-with-abv">The difficult way to make your own path with ABV</a></li>
+<li><a href="https://steemit.com/steemhunt/@fknmayhem/being-a-trailblazing-smt-on-steem-pre-smts-not-for-the-faint-hearted">Being a Trailblazing SMT on Steem Pre-SMTs - @fknmayhem</a></li>
+<li><a href="https://steemit.com/steemhunt/@fknmayhem/crowdfunded-products-are-validated-cool-products-for-steemhunt">Crowdfunded Products are Validated “Cool” Products For Steemhunt - @fknmayhem</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-open-source-and-community">[Steemhunt] Open Source and Community</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-abv-2-0">Steemhunt- ABV 2.0</a></li>
+<li><a href="https://steemit.com/steemhunt/@jayplayco/steemhunt-understanding-the-new-posting-guideline">Understanding the new posting guideline</a></li>
+</ul>
+<p>Join our chat channels if you need more information as the community,  team, and the moderators are answering very fast on any question:</p>
+<p>Discord: <a href="https://discord.gg/mWXpgks">https://discord.gg/mWXpgks</a> (this is where the magic happens)<br>Telegram: <a href="https://t.me/joinchat/AzcqGxCV1FZ8lJHVgHOgGQ">https://t.me/joinchat/AzcqGxCV1FZ8lJHVgHOgGQ</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2018-08-02T03:59:03.000Z">2018-08-02</time>
                 
                 <div class="level-item">
@@ -1117,165 +1315,6 @@ https://github.com/Steemhunt/web
 
 
 
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-07-11T00:17:39.000Z">2018-07-11</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/steem/">steem</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    34분 읽기 (대략 5077 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/07/11/jayplayco.3kcwqa/">[스팀헌트] 시작하기</a>
-            
-        </h1>
-        <div class="content">
-            <p><a href="https://steemitimages.com/DQmNfeZGkKQJBrXDkZptuzunaHT6hZKXvcGQFyeiWW4VweN/LP-7-logo.jpg">https://steemitimages.com/DQmNfeZGkKQJBrXDkZptuzunaHT6hZKXvcGQFyeiWW4VweN/LP-7-logo.jpg</a></p>
-<p>안녕하세요, @jayplayco 입니다.<br>이번에는 스팀헌트에 아예 새롭게 시작하고 커뮤니티에 참여하고자 하는 분들을 위한 안내를 하고자 합니다. </p>
-<p><a href="https://steemhunt.com/">스팀헌트</a>가 생소하신 분들을 위해 간단히 설명을 드리면, 스팀헌트는 2018년 3월에 런칭한 서비스입니다. 스팀을 기반으로 만들어진 서비스이며 헌터들이 새롭고 멋진 제품을 헌팅하면서 매일 새롭게 결정되는 랭킹에 의해 보상을 받을 수 있는 곳입니다. 스팀헌트가 처음이시라면 이 <a href="https://steemit.com/steemhunt/@tabris/3pxhvz">공지</a>부터 읽고 시작하시는 것을 추천합니다.</p>
-<p>첫 시작은 언제나 어렵기 마련입니다. 특히 새로운 커뮤니티에 접근을 할 경우 기존 멤버들이 갖고 있는 지식 수준이 더 높은 관계로 다가가기 어려울때가 있습니다. 궁금한것이 있어도 어디서 시작을 해야할지 어디에서 물어봐야할지 몰라서 해멜때가 있습니다. 이번 가이드는 이런 정보갭을 줄이고자 간단한 스팀헌트 초보자 네비게이션 입니다.</p>
-<h2> 0. Repository </h2>
-https://github.com/Steemhunt/web
-
-<h2> 1. 스팀헌트, 어디서 시작을 해야 할까?</h2>
-
-<p><img src="https://ipfs.busy.org/ipfs/QmewH6TTm3hauhxGeGBk8GnK2bwA2KVJ8hPE71LA1yi3Dh" alt="image.png"> <a href="https://unsplash.com/photos/qDY9ahp0Mto">Source: Ben White</a><br>이제 막 스팀헌트를 시작하셨고 제품을 헌팅하고 싶은데 어디서 어떻게 시작해야 할지 모른다면 스팀헌트 커뮤니티에 스텝바이스텝으로 다가가보겠습니다. </p>
-<h4>a. 스팀헌트 커뮤니티.</h4>
-스팀헌트는 커뮤니티 기반의 플랫폼입니다. 글로벌 타겟으로 하다 보니 기본 언어는 영어인 것이 큰 장벽이긴 합니다. 스팀헌트에서는 헌터, 팀, 가디언, 인플루엔서와 모더레이터들이 같이 활동을 하면서 더욱더 좋은 커뮤니티와 스팀헌트를 만들기 위해서 노력하고 있습니다. 재미있는 사실은 스팀헌트의 경우는 다른 외국의 스팀기반 프로젝트와 비슷하게 커뮤니케이션의 많은 부분들이 스팀헌트 자체에서 일어나는 것이 아니라 (즉, 스텀헌트 내부의 댓글 시스테임이 아닌) 디스코트라는 (Discord) 외부의 채팅 프로그램을 이용해서 진행되고 있습니다. 한국분들에게는 그리고 스팀의 KR 커뮤니티에서는 약간 생소하기는 합니다만, 일종의 카카오톡 그룹채팅을 모아놓은 것이라고 생각하시면 됩니다. 실시간으로 진행되는 채팅인 관계로 스팀헌트상에서보다는 더욱 빠르게 정보를 얻고 줄 수 있습니다. 
-
-<p>디스코트는 문자와 음성 채팅이 가능한 프로그램으로 큰 그룹 규모의 단체가 원활하게 소통할 수 있도록 도와주는 플랫폼입니다. 웹앱을 통해서 이용할 수 도 있고, 데스크탑용 앱을 이용할 수 도 있고 모바일용 앱도 있습니다. <a href="https://discordapp.com/download">Source: Discord App</a> 스팀헌트 관련 디스코트 채널을 찾기 위해서는 일명 초대링크가 있어야 합니다. 불행히도 디스코트는 채널을 “찾기”하는 기능이 제공되지 않습니다. 스팀헌트 초대링크는 다음과 같습니다. <a href="https://discord.gg/mWXpgks">초대링크: https://discord.gg/mWXpgks </a> 혹 필요할 경우 제 모든 스팀헌트 관련 글 하단에도 표기가 되어 있습니다. </p>
-<h4>b. 스팀헌트 관련 포스팅</h4>
-스팀에 보면 스팀헌트 관련 많은 가이드들이 나와 있습니다. 그중에도 @ayogom님의 스팀헌트 관련 글이 특히 초보자분들에게는 좋은 출발점입니다. 관련 글들은 하단에 표기가 되어있습니다. 
-
-
-<h2> 2. 스팀헌트에 로그인하고 나서.</h2>
-![](https://cdn.steemitimages.com/DQmTDDVNpXGYKzQ2owsUtaTA82aE3JKbPaQbRydYm52vjM6/image.png)
-[Source:rawpixel](https://unsplash.com/photos/gRdWiTMbza8)
-스팀헌트에 로그인하고 나서 “하면서 배우기” 식으로 시작할 수 있겠으나 모더레이터를 몇주 하다보면서 느낀건 공부를 어느정도 하고 나서 시작하면 헌트 거부의 리스크를 어느정도 눌일 수 있는 것으로 판단되었습니다. 우선은 가이드라인을 숙지하시는 것이 좋습니다. 특히 가이드라인의 경우는 지속적으로 업데이트가 되는 관계로 확인을 계속 해줘야합니다. [가이드라인-영문](https://github.com/Steemhunt/web/blob/master/POSTING_GUIDELINES.md) 가이드라인을 읽기 전에 해야할일이 사실상 하나 더 있습니다. 제품을 찾는 헌터가 될 것이냐, 아니면 스팀헌트 내에서 큐레이션을 할것이냐 둘다 할것인가이다. 
-
-
-<h4>a.제품을 헌팅하는 헌터.</h4>
-스팀헌트의 시스템은 매우 빠르게 발전하고 있습니다. 이것은 그동안 스팀헌트의 랭킹 시스템을 업뷰징하는 단체와 사용자들이 지속적으로 발생해서 현실에 대응할 수 밖에 없어서 입니다. 물론 어뷰징이 완전 차단되는 시스템은 없겠지만 빠르게 어뷰징 형태에 따라 개발이 진행됨에 따라 스팀헌트가 표방하는 “멋지고 새로운 제품을 헌팅해서 보상을 받자~!”의 취지가 이루어질 수 있도록 개발진은 밤낮없이 일하고 있습니다. 현재는 매일 200개 이상의 헌트들이 올라오고 있으나 이 숫자도 가면 갈수록 적어질것으로 생각된다. 헌팅 가능한 새롭고 신선한 제품의 수 자체가 제한이 있기 때문이다. 결론적으로는 정말로 얼리 어댑터이고 신제품에 정말 관심이 많은 제품에 대한 촉을 여기저기 펼친 헌터들만 순위에 남지 않을까 라는 생각을 합니다. 
-*결과*: 승인된 헌트의 경우 스팀헌트 봇이 찾아와서 업보팅을 해줍니다. 추후에는 추가적으로 헌트 토큰도 에어드랍하는 것으로 예정되어 있습니다. 
-<h4>b.헌트 큐레이션</h4>
-스팀헌트내에서 마음에 들어서 랭킹이 좀더 높았으면 좋겠다고 생각하는 헌트를 업보팅을 할 수 있고 의미있는 장/단점 리뷰를 댓글로 달면서 다른 헌터들과 의견을 나눌 수 도 있습니다. 
-*결과*: 업보팅의 경우 SMT가 런칭되는 시점까지 헌트 토큰이 발행이 되고 있으며 의미있는 장/단점 리뷰는 매일 무작위로 100개의 커멘트가 업보팅을 받고 있습니다. 
-
-<h2>3. 자, 이제 뭔가를 해봅시다~!</h2>
-포스팅 가이드라인을 읽으셨고, [포스팅가이드라인](https://github.com/Steemhunt/web/blob/master/POSTING_GUIDELINES.md) 업보팅을 통한 큐레이션을 할지 아니면 제품을 헌팅할지를 결정했으면 자세하게 들어가보도록 하겠습니다. 
-
-
-<h4>a. 스팀헌트 큐레이터</h4>
-꼭 스팀헌트에 로그인이 되어 있는지를 확인해야 합니다. 스팀헌트 외부에서 한 업보팅 (예, 스팀잇, 비지, 스팀kr등)은 랭킹에 영향을 주지 않으며 헌트 에어드랍에도 해당사항이 없습니다. 자신의 계정이 갖고 있는 레퓨테이션에 따라 처음 로그인하고 나면 “스팀헌트 보팅 웨이트(Steemhunt voting weight)”가 정해집니다. 스팀헌트 보팅웨이트는 지속적으로 개발과 개선이 되고 있는 상황입니다만, 기본적인 룰을 다음과 같습니다. 
-* 레퓨테이션 34 이하는 스팀헌트 내에서 보팅 웨이트가 없습니다. => x0
-* 레퓨테이션 35-44 => x0.5 voting weight
-* 레퓨테이션 45-54 => x1.0 voting weight
-* 레퓨테이션 55-59 => x2.0 voting weight
-* 레퓨테이션 60~    => x3.0 voting weight
-
-<p>보팅웨이트에 추자적으로 다양성 지수(Diversity Score=DS)가 곱해지게 됩니다. 다양성 지수에 대해서는 <a href="https://steemit.com/kr/@project7/diversity-score">다음 링크</a>에 자세하게 소개되어 있습니다. 짧게 설명드리면, DS는 좋은 업보팅 패턴에는 보너스를 주고 나쁜 업보팅 패턴(예를 들어 써클 보팅, 즉 같은 그룹의 사람들에게만 계속 업보팅하기)에는 패널티를 주는 것입니다. 한국적인 정서에 의해 한국분들이라고 스팀헌트 내에서 스팀에서와 같이 그분들만 계속 업보팅을 하실 경우는 circle upvoting 패턴에 걸려서 스팀헌트 내부에서의 보팅 웨이트가 확 떨어질 확률이 높습니다. 좋은 업보팅 패턴은 최소한의 보팅 웨이트를 이용해서 여러 유저의 제품을 업보팅 하는 것입니다. DS는 현재 30일 기준으로 계산되고 있어 스팀헌트 내에서 보팅 웨이트를 단기간에 올리기는 불가능하나, 지속적으로 자기가 좋다고 생각하는 제품들에 다양하게 보팅을 하다보면 자연스럽게 올라갈 것입니다. </p>
-<center>**예시**</center>
-<center>![](https://cdn.steemitimages.com/DQmZpxC3LdBgUknQ9MRrQos4bdTw4aAwCQGSA9sLAGmftPK/image.png)</center>
-제 스팀 레퓨테이션은 현재 59이며, 스팀헌트내의 보팅웨이트는 그에 따라서 2.0입니다. 그러나 DS가 곱해지면서 최종적으로 1.77입니다. DS가 높을 경우는 x1.0이상으로 올라갈 수 있어서 실제로 보팅 웨이트가 3.0이상되는 헌터들도 있다. 
-
-<h4>b. 스팀헌트 제품 헌터</h4>
-제품헌터가 되기로 마음먹은 순간 즐겁게 신나는 작업이 되지만 처음에는 쉽지 않은 일입니다. 정말로 좋은 헌터가 되고 싶다면 스팀헌트내에서 가디언 역할을 하고 있는 @fnkmayhem 의 [어떻게 하면 좋은 헌트를 할 수 있을까](https://steemit.com/steemhunt/@fknmayhem/understanding-steemhunt-and-how-to-craft-a-good-hunt)를 추천합니다만, 원본 영어라서 영알못일 경우 번역기 돌리셔야 합니다. ^^ 그외에는 간단하게 헌터입장에서 절차를 하기와 같이 표기해드립니다.
-
-<ul>
-<li>스팀헌트 내부에서 제공하는 “찾기”기능을 써서 제품이 이미 헌팅이 되었는지 확인한다. (브랜드 이름, 제품이름, 키워드, 복합 사용으로 확인부탁드립니다.)</li>
-<li>제품이 카테고리에 맞는지 확인한다.<blockquote>
-<p>웹서비스, 모바일앱, API, IT 솔류션, Bots, 오픈소스나 다른 소프트웨어, Tech 가제트, 하드웨어, IoT/커넥티드/웨러벌 제품, 게임,혁신적인 엔지니어링/디자인 제품.<a href="https://github.com/Steemhunt/web/blob/master/POSTING_GUIDELINES.md#2-types-of-products-to-post">소스 가이드라인 2</a></p>
-</blockquote>
-</li>
-<li>게임일 경우 너무 오래되지 않은 게임인지 확인한다. (가장 좋은것은 런칭한지 3개월 이내정도임.))<a href="https://github.com/Steemhunt/web/blob/master/POSTING_GUIDELINES.md#8-quality-of-the-post">가이드라인 11</a></li>
-<li>앱일 경우 너무 일반적인 앱이 아닌지 확인한다. <a href="https://github.com/Steemhunt/web/blob/master/POSTING_GUIDELINES.md#12-mobileweb-extention-apps">가이드라인 12</a>)</li>
-<li>앱이나 게임일 경우 애플과 안드로이드 둘다 있을 경우 꼭 브랜드 페이지로 링크를 걸도록 한다. 다른 제품도 가능한 브랜드 페이지 링크를 건다. 이커머스 사이트는 더이상 허용이 안됨.<a href="https://github.com/Steemhunt/web/blob/master/POSTING_GUIDELINES.md#12-mobileweb-extention-apps">가이드라인 3</a></li>
-<li>제목은 제품 이름만 쓴다.</li>
-<li>짧은 설명은 추가적인 정보를 넣어준다.</li>
-<li>스크린샷은 고화질로 제품을 잘 설명할 수 있는것으로 준비한다.</li>
-<li>헌터 커멘트(메인글)은 복붙하지 않고 자기가 직접 쓴다. (영어에 대한 압박의 경우는 - <a href="https://steemit.com/kr/@jayplayco/7qyah8">영어울렁증 급곡하고 스팀헌트 고수되기</a> 참조 바랍니다.) 복붙은 헌트가 거부되는 가장 잦은 이유중 하나입니다. 만약에 스펙같은 부분을 일부 복붙할 경우는 일명 “quotation mark”와 원본 소스를 꼭 표기를 해줘야한다.예시는 하기와 같습니다.<br><img src="https://cdn.steemitimages.com/DQmeLigzTkLyZx5L3TW3q2H14FNTESQkYJREBhyubtWcRzL/image.png" alt=""><br>이것은 스팀헌트 에디터에서 보이는 것이고 “&gt;”를 써서 quotation mark를 만들어주고 끝에 소스를 정확하게 언급해줬습니다.<br><img src="https://cdn.steemitimages.com/DQmTps8338AUqA8YxwRmJWBQHYwwf7n3KJ3qPjGDp9YWtwV/image.png" alt=""><br>실제 포스팅을 하게 되면 마크다운을 이용한 표기는 위와 같이 표기가 됩니다. <a href="https://github.com/Steemhunt/web/blob/master/POSTING_GUIDELINES.md#5-plagiarism-and-copyrights">가이드라인 5</a></li>
-<li>헌트를 재확인하고 “POST NOW”를 누르면 헌트가 제출된다.</li>
-</ul>
-<p>꼭 기억해야할 것은, 정말 좋은 헌트를 하기위한 가장 쉬운(그리고 가장 어려운)것은 정말로 유니크하고 새롭고 혁신적인 제품을 찾는것이다. 어려운것 알고 있습니다, 그래서 “사냥, 즉 헌트”라고 부르는것이라고 생각합니다. ㅎㅎ</p>
-<h2> 4. 도움을 찾아 삼만리~</h2>
-다 잘했다고 생각해도 제품이 거부당할 수도 있고 아니면 포스팅 가이드라인에 있는 것들이 100% 확신이 서지 않는 것들이 있을때 도움을 청하고자 하면 스팀헌트의 디스코트 채널이 맞는 장소입니다. [스팀헌트 디스코트](https://discord.gg/mWXpgks) 
-![](https://cdn.steemitimages.com/DQmZShuMW1nAxjHBc6pqSgiASv92f2U2DAFYZCnPhycx64R/image.png)
-
-<p>서버를 처음 시작하게 되시면 “Start here.”에서 환영메세지를 받으시면서 시작합니다. 디스코트가 완전 처음일 경우, 오른쪽 윗부분에 하얀색 핀이 있습니다. 각 채널별로 중요한 메세지들은 여기에 저장이 되어 있으니 빨리 보시기에는 이 기능을 활용하는 것도 좋습니다. 참고로 디스코트의 대화내용은 영어로 진행됩니다. 단, 한국분들을 위해 한국어채널도 따로 마련되어 있어 다른 한국인 헌터분들이나 운영자분들 그리고 저도 답변을 드리고 있습니다.</p>
-<center>![](https://cdn.steemitimages.com/DQmXEyfVJiGQq3abzk5fj4kP8s9rJd1k2kxQc1iRJMGQpCA/image.png)</center>
-
-<p>스팀헌트 뉴비로는 다음 채널들이 볼만합니다. </p>
-<h4>a.#faq</h4>
-모든 일반적인 질문들이 여기에 모여있습니다. 또 스팀헌트의 공식적인 영문 기사들도 여기에 있습니다.
-<h4>b.#announcement</h4>
-중요한 공지사항들은 여기에 다 모여있고 가장 빠르게 공지를 받아볼 수 있는 곳입니다. 실제 스팀헌트는 무서운 속도로 개발이 되고 있는 상황으로 모더레이터인 필자의 경우도 지속적으로 확인해가면서 보고 있는 채널입니다. 
-<h4>c.#question</h4>
-질문이 있을 경우 공식적으로 여기에다가 주시면 가장 빠르게 커뮤니티 멤버들이다 팀, 가디언, 인플루엔서나 모드가 답변을 줍니다. 단, 여기도 물론 영어로 해주셔야합니다. 
-<h4>d.#mod-xxxxx</h4>
-헌트가 승인 거부되었을 경우 내 헌트에 글을 남겨준 모드의 채널을 찾아야합니다. 일부의 경우 수정을 해달라고 요청하는 경우가 있어 수정을 완성하고 모드에게 수정완료를 알리는 것을 이 디스코트 모더레이터 채널에서 하게 됩니다. 이때는 스팀헌트 링크와 수정한 내용을 같이 올리시면 됩니다. 또한 억울하게 승인 거부되었다고 생각되시면 경우도 마찬가지로 모더레이터 어필방에 가서 링크를 올려주시고 내용을 올려주시면 됩니다. 모더레이터도 사람이라 가끔 실수할 경우가 있기 때문입니다. 여기서도 물론 영문으로 어필을 하셔야하는 어려움이 있기는 합니다. 
-<h4>e.Korean</h4>
-아마도 한국분들에게는 가장 중요한 방중 하나이지 않을까 합니다. 우선 편하게 한국어로 소통을 할 수 있는 곳이기도 하고 영어때문에 막혔다면 시원하게 한국어로 답변을 받을 수 있기 때문입니다. ^^
-
-<h2>5. 결론</h2>
-이번 포스팅은 완전 스팀헌트 뉴비의 입장에서 작성하게 되었습니다. 스팀헌트에 대한 관심을 조금은 끌었는지 모르겠네요 ^^. 이 글을 읽고 스팀헌터가 되기를 결심하시는 분들이 많으시면 좋겠네요.
-
-<hr>
-<p>여기까지 읽어주셔서 감사합니다. 더욱더 많은 정보를 받기 원하시는 분들은 @jayplayco 팔로우 부탁드립니다. 현재는 한글과 영문으로 포스팅을 합니다.</p>
-<p>스팀헌트 관련 기사들.</p>
-<ul>
-<li><a href="https://steemit.com/steemit/@jayplayco/what-is-steemhunt-and-why-should-i-care">What is Steemhunt and why should I care?</a></li>
-<li><a href="https://steemit.com/steemit/@jayplayco/biggest-airdrop-ever-hunt-token-and-how-to-participate">Biggest Airdrop ever - HUNT token and how to participate</a></li>
-<li><a href="https://steemit.com/kr/@jayplayco/abv">스팀헌드 - ABV (어카운트 베이스 보팅) 을 적용할 예정입니다.</a></li>
-<li><a href="https://steemit.com/kr/@jayplayco/7qyah8">스팀헌트 -영어울렁증 극복하고 스팀헌트 고수되기</a></li>
-<li><a href="https://steemit.com/kr/@jayplayco/no-rejection-on-steemhunt">스팀헌트 - 노리젝준비하기</a></li>
-<li><a href="https://steemit.com/kr/@jayplayco/why-are-my-hunts-rejected">[스팀헌트] 내 헌트가 거절당하는 이유! Why are my hunts rejected?</a></li>
-<li><a href="https://steemit.com/kr/@jayplayco/us2xk-abv">ABV에 헌트 큐레이션 점수 적용과 헌트 지갑 오픈</a></li>
-<li><a href="https://steemit.com/kr/@jayplayco/6fa5dn">스팀헌트 뉴비들이 가장 자주 물어보는 질문들.</a></li>
-<li><a href="https://steemit.com/kr/@jayplayco/sovuv">스팀헌트에서 포스트 승인 받기</a></li>
-<li><a href="https://steemit.com/kr/@jayplayco/5nez57">스팀헌트의 업보팅 스코어 이해하기</a></li>
-</ul>
-<p>@ayogom님 글들</p>
-<ul>
-<li><a href="https://steemit.com/kr/@ayogom/5nrr12-1">스팀헌트 프로젝트 알아보기 1편 “스팀헌트가 뭐야</a></li>
-<li><a href="https://steemit.com/kr/@ayogom/2z21he-2">스팀헌트 프로젝트 알아보기 2편 “스팀헌트 어떻게 포스팅 하면 되지?”</a></li>
-<li><a href="https://steemit.com/kr/@ayogom/3">스팀헌트 프로젝트 알아보기 3편 “스팀헌트 에어드랍을 받고 싶다면?”</a><br>상기 아요곰님 글들은 허락을 받고 링크를 걸었습니다. 일부 6월 1일부로 바뀐 제품정책이 있어 하기 프로젝7님 글도 같이 확인부탁드립니다.</li>
-<li><a href="https://steemit.com/kr/@project7/140-top10">[스팀헌트] 봇 사용 제제 + 정책 변경 + 스파 140만 돌파 + Top10 스팀디앱 등극</a></li>
-</ul>
-<p>더욱더 많은 빠르고 정확한 정보를 원하시면 스팀헌트의 채팅 채널에 가입하시기 바랍니다. 운영자분들과 모더레이터들이 성실히 답변해주고 있으며, 영어의 압박이 두려우시면 디스코트에 한국어 방도 있으니, 운영자분들이나 저도 성심성의껏 답변해드리고 있습니다. </p>
-<p>Discord: <a href="https://discord.gg/mWXpgks">https://discord.gg/mWXpgks</a> (this is where the magic happens)<br>Telegram: <a href="https://t.me/joinchat/AzcqGxCV1FZ8lJHVgHOgGQ">https://t.me/joinchat/AzcqGxCV1FZ8lJHVgHOgGQ</a></p>
-<hr>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -1350,7 +1389,7 @@ https://github.com/Steemhunt/web
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            585
+                            586
                         </p>
                     </a>
                 </div>
@@ -1362,7 +1401,7 @@ https://github.com/Steemhunt/web
                     </p>
                     <a href="/categories">
                         <p class="title has-text-weight-normal">
-                            17
+                            18
                         </p>
                     </a>
                 </div>
@@ -1374,7 +1413,7 @@ https://github.com/Steemhunt/web
                     </p>
                     <a href="/tags">
                         <p class="title has-text-weight-normal">
-                            15
+                            16
                         </p>
                     </a>
                 </div>
@@ -1448,6 +1487,14 @@ https://github.com/Steemhunt/web
         <a class="level is-marginless" href="/categories/coinnews/">
             <span class="level-start">
                 <span class="level-item">coinnews</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/hexo/">
+            <span class="level-start">
+                <span class="level-item">hexo</span>
             </span>
             <span class="level-end">
                 <span class="level-item tag">1</span>
@@ -1591,7 +1638,7 @@ https://github.com/Steemhunt/web
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/AAA/" style="font-size: 12.5px;">AAA</a> <a href="/tags/SCT/" style="font-size: 13.33px;">SCT</a> <a href="/tags/ZZAN/" style="font-size: 10.83px;">ZZAN</a> <a href="/tags/coinnews/" style="font-size: 10px;">coinnews</a> <a href="/tags/splinterlands/" style="font-size: 17.5px;">splinterlands</a> <a href="/tags/steem/" style="font-size: 19.17px;">steem</a> <a href="/tags/%EA%B0%80%EC%83%81%ED%99%94%ED%8F%90/" style="font-size: 15.83px;">가상화폐</a> <a href="/tags/%EA%B0%9C%EB%B0%9C/" style="font-size: 16.67px;">개발</a> <a href="/tags/%EA%B2%8C%EC%9E%84/" style="font-size: 18.33px;">게임</a> <a href="/tags/%EB%A6%AC%EB%B7%B0/" style="font-size: 15px;">리뷰</a> <a href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/" style="font-size: 20px;">미지정</a> <a href="/tags/%EC%8A%A4%EB%9E%9C/" style="font-size: 17.5px;">스랜</a> <a href="/tags/%EC%8A%A4%EB%AA%AC/" style="font-size: 17.5px;">스몬</a> <a href="/tags/%EC%9D%B4%EB%B2%A4%ED%8A%B8/" style="font-size: 14.17px;">이벤트</a> <a href="/tags/%ED%85%8C%EC%8A%A4%ED%8A%B8/" style="font-size: 11.67px;">테스트</a>
+        <a href="/tags/AAA/" style="font-size: 12.5px;">AAA</a> <a href="/tags/SCT/" style="font-size: 13.33px;">SCT</a> <a href="/tags/ZZAN/" style="font-size: 10.83px;">ZZAN</a> <a href="/tags/coinnews/" style="font-size: 10px;">coinnews</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/splinterlands/" style="font-size: 17.5px;">splinterlands</a> <a href="/tags/steem/" style="font-size: 19.17px;">steem</a> <a href="/tags/%EA%B0%80%EC%83%81%ED%99%94%ED%8F%90/" style="font-size: 15.83px;">가상화폐</a> <a href="/tags/%EA%B0%9C%EB%B0%9C/" style="font-size: 16.67px;">개발</a> <a href="/tags/%EA%B2%8C%EC%9E%84/" style="font-size: 18.33px;">게임</a> <a href="/tags/%EB%A6%AC%EB%B7%B0/" style="font-size: 15px;">리뷰</a> <a href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/" style="font-size: 20px;">미지정</a> <a href="/tags/%EC%8A%A4%EB%9E%9C/" style="font-size: 17.5px;">스랜</a> <a href="/tags/%EC%8A%A4%EB%AA%AC/" style="font-size: 17.5px;">스몬</a> <a href="/tags/%EC%9D%B4%EB%B2%A4%ED%8A%B8/" style="font-size: 14.17px;">이벤트</a> <a href="/tags/%ED%85%8C%EC%8A%A4%ED%8A%B8/" style="font-size: 11.67px;">테스트</a>
     </div>
 </div>
     
@@ -1603,6 +1650,19 @@ https://github.com/Steemhunt/web
         <h3 class="menu-label">
             최근 글
         </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-26T19:48:51.000Z">2020-02-27</time></div>
+                    <a href="/2020/02/27/jayplayco.6aqfyp-steemit/" class="title has-link-black-ter is-size-6 has-text-weight-normal">스팀잇글의 블로그화 - 헥소와 깃헙 by jayplayco</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/hexo/">hexo</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -1656,19 +1716,6 @@ https://github.com/Steemhunt/web
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-25T15:20:12.000Z">2020-02-26</time></div>
-                    <a href="/2020/02/26/jayplayco.triple-aaa-a-ending-of-the-manual-curation-project-from-the-account-triple-aaa/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Triple.aaa] 트리플a 메뉴얼 큐레이션 프로젝트 종료 / Ending of the manual curation project from the account @Triple.aaa</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%EB%8B%88%ED%8A%B8%EB%A1%9C%EC%8A%A4/">니트로스</a> / <a class="has-link-grey -link" href="/categories/%EB%8B%88%ED%8A%B8%EB%A1%9C%EC%8A%A4/AAA/">AAA</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
         
@@ -1686,7 +1733,7 @@ https://github.com/Steemhunt/web
                     <span class="level-item">2월 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">51</span>
+                    <span class="level-item tag">52</span>
                 </span>
             </a>
         </li>
@@ -1964,6 +2011,13 @@ https://github.com/Steemhunt/web
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/hexo/">
+                        <span class="tag">hexo</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/splinterlands/">
                         <span class="tag">splinterlands</span>
                         <span class="tag is-grey">55</span>
@@ -2066,6 +2120,19 @@ https://github.com/Steemhunt/web
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-26T19:48:51.000Z">2020-02-27</time></div>
+                    <a href="/2020/02/27/jayplayco.6aqfyp-steemit/" class="title has-link-black-ter is-size-6 has-text-weight-normal">스팀잇글의 블로그화 - 헥소와 깃헙 by jayplayco</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/hexo/">hexo</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-26T19:17:39.000Z">2020-02-27</time></div>
                     <a href="/2020/02/27/jayplayco.6tcfwf-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 트위터 대표가 만든 캐쉬앱</a>
                     <p class="is-size-7 is-uppercase">
@@ -2114,19 +2181,6 @@ https://github.com/Steemhunt/web
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-25T15:20:12.000Z">2020-02-26</time></div>
-                    <a href="/2020/02/26/jayplayco.triple-aaa-a-ending-of-the-manual-curation-project-from-the-account-triple-aaa/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Triple.aaa] 트리플a 메뉴얼 큐레이션 프로젝트 종료 / Ending of the manual curation project from the account @Triple.aaa</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%EB%8B%88%ED%8A%B8%EB%A1%9C%EC%8A%A4/">니트로스</a> / <a class="has-link-grey -link" href="/categories/%EB%8B%88%ED%8A%B8%EB%A1%9C%EC%8A%A4/AAA/">AAA</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
     
@@ -2144,7 +2198,7 @@ https://github.com/Steemhunt/web
                     <span class="level-item">2월 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">51</span>
+                    <span class="level-item tag">52</span>
                 </span>
             </a>
         </li>
@@ -2417,6 +2471,13 @@ https://github.com/Steemhunt/web
                 <div class="control">
                     <a class="tags has-addons" href="/tags/coinnews/">
                         <span class="tag">coinnews</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/hexo/">
+                        <span class="tag">hexo</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -2638,7 +2699,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
 
-<a id="back-to-top" title="Back to Top" href="javascript:;">
+<a id="back-to-top" title="Zurück nach oben" href="javascript:;">
     <i class="fas fa-chevron-up"></i>
 </a>
 <script src="/js/back-to-top.js" defer></script>

@@ -138,6 +138,75 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-24T14:04:15.000Z">2019-06-24</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B0%9C%EB%B0%9C/">개발</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    7분 읽기 (대략 1061 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/24/jayplayco.postpromoter/">[스팀엔진] Postpromoter 서비스 타 토큰 오픈</a>
+            
+        </h1>
+        <div class="content">
+            <center>https://steemitimages.com/640x0/https://i.imgur.com/TYi4iS7.png</center>
+
+<p>안녕하세요, @jayplayco입니다.</p>
+<p>원본링크: <a href="https://steemit.com/bidbot/@aggroed/community-promotion-services-through-postpromoter-and-steem-engine-com">https://steemit.com/bidbot/@aggroed/community-promotion-services-through-postpromoter-and-steem-engine-com</a></p>
+<p>@aggroed측에서 또한번 @yabapmatt이랑 추가적인 스팀엔진 서비스를 선보입니다. 다름이 아닌 스팀엔진 토큰을 이용한 스팀 보팅입니다.</p>
+<p>가장 단적인 예는 현재 스플린터랜드에서 진행하고 있는 <a href="https://steemit.com/steemmonsters/@jayplayco/3nc9wf-dec">DEC를 @steemmonsters 계정으로 보내면 업보팅 해주는 서비스</a>입니다. @glory7님의 부계정에서 한번 효율 측정이 있었는데, 몇일전까지만 해도 상당히 효율적인 서비스입니다. <a href="https://steemit.com/sct/@deer3/dk4gv-dec">@deer3 포스팅 링크</a></p>
+<p>추가적으로 한국 커뮤니티는 많이는 쓰지 않는 PAL토큰을 @minnowsupport로 URL과 함께 보내면 이것 역시 스팀 업보팅을 해줍니다.</p>
+<h2 id="1-가격과-사용방법"><a href="#1-가격과-사용방법" class="headerlink" title="1. 가격과 사용방법"></a>1. 가격과 사용방법</h2><ul>
+<li>계정을 하나 세팅해서 포스팅키와 액티브키 권한을 @postpromoter 에게 양도합니다. (@aggroed가 필요시 도와줍니다.)</li>
+<li>1000 ENG를 @steem-eng로 보내고 @aggroed에게 DM을 합니다.</li>
+<li>@aggroed 에게 다음과 같은 정보를 전달해줍니다.<br>1) 사용될 스팀 계정<br>2) 어떤 스팀엔진 토큰으로 할지<br>3) 업보팅을 위한 토큰은 어떻게 활용할지</li>
+</ul>
+<p>@postpromoter봇은 자동으로 보팅에 사용된 토큰의 5%를 비용으로 가져갑니다.</p>
+<h2 id="2-예상-효과"><a href="#2-예상-효과" class="headerlink" title="2. 예상 효과"></a>2. 예상 효과</h2><p>우선 즉각적으로 토큰에 대한 최소 가치가 형성됩니다. 또한 토큰을 스팀으로 전환하는 효과도 있습니다. 사용된 토큰은 스파임대자분들에게 나눠줘도 되고, 일부 or 전량 소각을 해도 됩니다. </p>
+<h2 id="3-봇-세팅"><a href="#3-봇-세팅" class="headerlink" title="3. 봇 세팅"></a>3. 봇 세팅</h2><p>봇은 기본적으로 +/- 10%의 ROI를 바탕으로 설계되었습니다. 중요한 것은 -10%도 가능하다는 것입니다. 봇을 사용해보신 분들은 아시겠지만, 많이 밀릴때는 ROI는 떨어지고 한가할때는 ROI가 올라가는 현상을 볼 수 있습니다. 또한 자연스럽게 현재 소유한 토큰을 Steem과 스달로 전환할 수 있는 방법이기도 합니다.</p>
+<p>만약에 토큰을 만든측에서 @postpromoter가 가져가는 5%의 토큰을 제외하고 전량 소각을 결정한다면, 이것 또한 토큰의 가치를 향상시키는 방법중 하나일것입니다.</p>
+<ul>
+<li>스팀토큰이 충분한 가격을 형성을 위한 유동성이 없다면 fixed가격을 Steem이나 USD로 세팅할 수있음.</li>
+<li>너무 높거나 낮은 비딩은 다시 돌려주게 되며, 라운드가 꽉 차면 다음 라운드로 이관됩니다.</li>
+<li>다음 라운드까지 꽉 찼다면 비딩 금액은 다시 돌려줍니다.</li>
+<li>@themarkymark 분이 만든 블랙리스트 API를 사용할 예정입니다. 여기에 포함된 경우 봇 서비스 사용이 불가합니다.</li>
+</ul>
+<h2 id="4-Steembot-Tracker-리스팅"><a href="#4-Steembot-Tracker-리스팅" class="headerlink" title="4. Steembot Tracker 리스팅"></a>4. Steembot Tracker 리스팅</h2><p>스팀용 봇 사용을 위해서는 보통 steembot tracker라는 사이트를 이용합니다. 이 사이트도 역시 @yabapmatt이 만들어서 스팀엔진 토큰용 봇도 같이 리스팅이 될 예정입니다. (이 사이트가 봇 사용시 많이 편하긴 합니다, 가능한 ROI와 최대 옥션 금액 선정까지 같이 해주기 때문입니다.) <a href="https://steemit.com/sct/@jayplayco/2sfsqx">사용방법은 다른 포스팅에서 한번 다룬 적이 있습니다.</a></p>
+<h2 id="5-개인적인-생각"><a href="#5-개인적인-생각" class="headerlink" title="5. 개인적인 생각"></a>5. 개인적인 생각</h2><p>스팀임대를 통해 토큰을 받고 싶어하는 분들이 많으면 그 토큰 이코노미는 보팅후 임대자분들에게 토큰을 나눠주는 형태로 가도 되고, 어느정도 스팀을 모은 계정이 있다면 이를 바탕으로 토큰으로 보팅하고, 이를 소각해서 스팀으로 전환되는 과정을 만들어가면 토큰 이코노미에도 많은 도움이 될것으로 예상됩니다. AAA의 행보를 잘 지켜봐야할것 같습니다.</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-06-23T15:42:39.000Z">2019-06-24</time>
                 
                 <div class="level-item">
@@ -885,65 +954,6 @@ Hunt tokens can be traded on an exchange, but more importantly you will need to 
 
 
 
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-17T15:20:24.000Z">2019-06-18</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    8분 읽기 (대략 1186 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/06/18/jayplayco.breez-ios-beta/">[Breez] 비트코인 라이트닝 네트워크 기반 모바일 지갑 iOS Beta버젼 출시</a>
-            
-        </h1>
-        <div class="content">
-            <center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/qJi16cbp-image.png)</center>
-안녕하세요, @jayplayco입니다.
-
-<p>이번에 Breez라는 곳에서 비트코인용 라이트닝 네트워크 지갑을 아이폰용 베타 버젼을 공개했습니다. 이에 따라 비트코인으로 소액결제를 이동중에도 쉽게 가능하게 되었습니다. 한번 파고 들어가보겠습니다.</p>
-<h2 id="0-라이트닝-네트워크란-Lighting-Network"><a href="#0-라이트닝-네트워크란-Lighting-Network" class="headerlink" title="0. 라이트닝 네트워크란? (Lighting Network)"></a>0. 라이트닝 네트워크란? (Lighting Network)</h2><p>스팀을 쓰시는 분들은 별로 큰 어려움을 느끼지 못하실텐데, 거래소 내에서 비트코인 거래가 아닌 실질적인 비트코인을 지갑에서 지갑으로 최근에 이동을 시켜보신 분들은 아시겠지만, 우선 비트코인을 전송하는데 기본적으로 비용이 들지는 않지만, 사실상 transaction이 실행이 되기 위해서는 transaction fee를 포함해야 하는것이 사실이며, 이는 많은 량의 비트코인을 이동할때는 어쩔 수 없다고 하지만, 커피값 정도되는 비트코인을 전송하는데는 문제가 될 수 있습니다.</p>
-<p>그 현재 비트코인은 블록당 1MB가 들어가게 되는데, 트랜스액션을 처리해야할 마이너(miner)의 경우에는 트랜스액션 fee가 높은 거래를 우선시하는경향이 있고, 소량의 비트코인의 경우에는 그만큼 트랜스액션 비용도 적은 관계로 우선순위가 밀릴 수 있습니다.</p>
-<p>이를 해결하기 위해서는 하트포크를 해서 1MB의 제한을 풀어버려서 스케일링을 할 수 있으나, 그에 따른 다른 문제점들이 발생하기도 합니다. (전송 속도, 처리 하드웨어등등)</p>
-<p>라이트닝 네트워크는 확장성을 위해 블록크기를 늘린것이 아닌 오프체인에서 수수료를 낮추고 소액거래가 가능하도록 하는 기술임. 즉, 약간 비트코인 오프체인의 사이드체인과 비슷한 느낌입니다.</p>
-<h2 id="1-Breez의-지갑"><a href="#1-Breez의-지갑" class="headerlink" title="1. Breez의 지갑"></a>1. Breez의 지갑</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/wHWt0cvm-image.png)</center>
-
-<p>브리즈의 지갑은 구매자와 판매자가 각각 설치를 하고 소액 결재를 할때 라이트닝 네트워크를 이용해서 쉽고 저렴한 비용으로 이용할 수 있게 구성이 되어 있습니다. 실제 결재를 할때는 Breeze의 허브를 통해 서로 연결되며, 이 허브는 Lightning 노드를 이용해서 진행됩니다. 각 지갑에 저장된 비토코인의 변화를 반영하기 위해 거래가 있을때 마다 당사자들의 Bitcoin의 변화하는 양을 반영하기 위해 거래가있을 때마다 대차 대조표에 서명을 하면서 증명을 합니다. 트랜잭션이 완료되면 잔액이 최종 비트코인 블록 체인에 등록됩니다. 분쟁이 일어날 경우에는 가장 최근 대차 대조표를 사용하여 지가분 분쟁 발생시, 양 당사자는 가장 최근에 서명 한 대차 대조표를 사용하여 잃어버린 부분을 되찾을 수 있습니다. </p>
-<p>기존 안드로이드 사용자들은 Breez의 지갑을 쓸 수 있었지만, 이번 iOS 베타 출시로 전체 모바일 시장의 약 98%를 커버하게 되었습니다.</p>
-<h2 id="2-Breez-지갑의-비젼"><a href="#2-Breez-지갑의-비젼" class="headerlink" title="2. Breez 지갑의 비젼"></a>2. Breez 지갑의 비젼</h2><p>브리즈 지갑의 경우는 100% 비트코인의 소액 결재를 위해 최적화되었습니다. 라이트닝 네트워크 사용이 그 단적인 증거이죠. 이제 소비자용 지갑은 완성이 되었으니 사실상 Breez측에서도 다음 단계로 필요한 것은 판매자를 위한 POS 클라이언트 라고 합니다. 이것까지 제공이 된다면, 손쉽게 비트코인으로 소액 결재를 확장할 수 있는 기반이 만들어질 것 같습니다. </p>
-<p><a href="https://en.wikipedia.org/wiki/Lightning_Network">소스: Lightning Network - Wikipedia</a><br><a href="https://banksalad.com/contents/%EC%89%BD%EA%B2%8C-%EC%84%A4%EB%AA%85%ED%95%98%EB%8A%94-%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8-%EB%9D%BC%EC%9D%B4%ED%8A%B8%EB%8B%9D-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-Lightning-Network-%EB%9E%80-g9nT6">소스: 쉽게설명하는 블록체인: 라이트닝 네트워크</a><br><a href="https://medium.com/breez-technology/breez-on-ios-a-big-step-towards-the-lightning-economy-and-a-giant-leap-for-breez-cbcf2db77acb">소스: Breez Medium 공지</a><br><a href="https://www.coindesk.com/breez-reveals-lightning-powered-bitcoin-payments-app-for-iphone">소스: 코인데스크 Breez 기사</a><br><a href="https://github.com/breez/breezmobile">소스: Breez Github</a></p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -1018,7 +1028,7 @@ Hunt tokens can be traded on an exchange, but more importantly you will need to 
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            585
+                            586
                         </p>
                     </a>
                 </div>
@@ -1030,7 +1040,7 @@ Hunt tokens can be traded on an exchange, but more importantly you will need to 
                     </p>
                     <a href="/categories">
                         <p class="title has-text-weight-normal">
-                            17
+                            18
                         </p>
                     </a>
                 </div>
@@ -1042,7 +1052,7 @@ Hunt tokens can be traded on an exchange, but more importantly you will need to 
                     </p>
                     <a href="/tags">
                         <p class="title has-text-weight-normal">
-                            15
+                            16
                         </p>
                     </a>
                 </div>
@@ -1116,6 +1126,14 @@ Hunt tokens can be traded on an exchange, but more importantly you will need to 
         <a class="level is-marginless" href="/categories/coinnews/">
             <span class="level-start">
                 <span class="level-item">coinnews</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/hexo/">
+            <span class="level-start">
+                <span class="level-item">hexo</span>
             </span>
             <span class="level-end">
                 <span class="level-item tag">1</span>
@@ -1259,7 +1277,7 @@ Hunt tokens can be traded on an exchange, but more importantly you will need to 
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/AAA/" style="font-size: 12.5px;">AAA</a> <a href="/tags/SCT/" style="font-size: 13.33px;">SCT</a> <a href="/tags/ZZAN/" style="font-size: 10.83px;">ZZAN</a> <a href="/tags/coinnews/" style="font-size: 10px;">coinnews</a> <a href="/tags/splinterlands/" style="font-size: 17.5px;">splinterlands</a> <a href="/tags/steem/" style="font-size: 19.17px;">steem</a> <a href="/tags/%EA%B0%80%EC%83%81%ED%99%94%ED%8F%90/" style="font-size: 15.83px;">가상화폐</a> <a href="/tags/%EA%B0%9C%EB%B0%9C/" style="font-size: 16.67px;">개발</a> <a href="/tags/%EA%B2%8C%EC%9E%84/" style="font-size: 18.33px;">게임</a> <a href="/tags/%EB%A6%AC%EB%B7%B0/" style="font-size: 15px;">리뷰</a> <a href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/" style="font-size: 20px;">미지정</a> <a href="/tags/%EC%8A%A4%EB%9E%9C/" style="font-size: 17.5px;">스랜</a> <a href="/tags/%EC%8A%A4%EB%AA%AC/" style="font-size: 17.5px;">스몬</a> <a href="/tags/%EC%9D%B4%EB%B2%A4%ED%8A%B8/" style="font-size: 14.17px;">이벤트</a> <a href="/tags/%ED%85%8C%EC%8A%A4%ED%8A%B8/" style="font-size: 11.67px;">테스트</a>
+        <a href="/tags/AAA/" style="font-size: 12.5px;">AAA</a> <a href="/tags/SCT/" style="font-size: 13.33px;">SCT</a> <a href="/tags/ZZAN/" style="font-size: 10.83px;">ZZAN</a> <a href="/tags/coinnews/" style="font-size: 10px;">coinnews</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/splinterlands/" style="font-size: 17.5px;">splinterlands</a> <a href="/tags/steem/" style="font-size: 19.17px;">steem</a> <a href="/tags/%EA%B0%80%EC%83%81%ED%99%94%ED%8F%90/" style="font-size: 15.83px;">가상화폐</a> <a href="/tags/%EA%B0%9C%EB%B0%9C/" style="font-size: 16.67px;">개발</a> <a href="/tags/%EA%B2%8C%EC%9E%84/" style="font-size: 18.33px;">게임</a> <a href="/tags/%EB%A6%AC%EB%B7%B0/" style="font-size: 15px;">리뷰</a> <a href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/" style="font-size: 20px;">미지정</a> <a href="/tags/%EC%8A%A4%EB%9E%9C/" style="font-size: 17.5px;">스랜</a> <a href="/tags/%EC%8A%A4%EB%AA%AC/" style="font-size: 17.5px;">스몬</a> <a href="/tags/%EC%9D%B4%EB%B2%A4%ED%8A%B8/" style="font-size: 14.17px;">이벤트</a> <a href="/tags/%ED%85%8C%EC%8A%A4%ED%8A%B8/" style="font-size: 11.67px;">테스트</a>
     </div>
 </div>
     
@@ -1271,6 +1289,19 @@ Hunt tokens can be traded on an exchange, but more importantly you will need to 
         <h3 class="menu-label">
             최근 글
         </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-26T19:48:51.000Z">2020-02-27</time></div>
+                    <a href="/2020/02/27/jayplayco.6aqfyp-steemit/" class="title has-link-black-ter is-size-6 has-text-weight-normal">스팀잇글의 블로그화 - 헥소와 깃헙 by jayplayco</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/hexo/">hexo</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -1324,19 +1355,6 @@ Hunt tokens can be traded on an exchange, but more importantly you will need to 
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-25T15:20:12.000Z">2020-02-26</time></div>
-                    <a href="/2020/02/26/jayplayco.triple-aaa-a-ending-of-the-manual-curation-project-from-the-account-triple-aaa/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Triple.aaa] 트리플a 메뉴얼 큐레이션 프로젝트 종료 / Ending of the manual curation project from the account @Triple.aaa</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%EB%8B%88%ED%8A%B8%EB%A1%9C%EC%8A%A4/">니트로스</a> / <a class="has-link-grey -link" href="/categories/%EB%8B%88%ED%8A%B8%EB%A1%9C%EC%8A%A4/AAA/">AAA</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
         
@@ -1354,7 +1372,7 @@ Hunt tokens can be traded on an exchange, but more importantly you will need to 
                     <span class="level-item">2월 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">51</span>
+                    <span class="level-item tag">52</span>
                 </span>
             </a>
         </li>
@@ -1632,6 +1650,13 @@ Hunt tokens can be traded on an exchange, but more importantly you will need to 
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/hexo/">
+                        <span class="tag">hexo</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/splinterlands/">
                         <span class="tag">splinterlands</span>
                         <span class="tag is-grey">55</span>
@@ -1734,6 +1759,19 @@ Hunt tokens can be traded on an exchange, but more importantly you will need to 
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-26T19:48:51.000Z">2020-02-27</time></div>
+                    <a href="/2020/02/27/jayplayco.6aqfyp-steemit/" class="title has-link-black-ter is-size-6 has-text-weight-normal">스팀잇글의 블로그화 - 헥소와 깃헙 by jayplayco</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/hexo/">hexo</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-26T19:17:39.000Z">2020-02-27</time></div>
                     <a href="/2020/02/27/jayplayco.6tcfwf-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 트위터 대표가 만든 캐쉬앱</a>
                     <p class="is-size-7 is-uppercase">
@@ -1782,19 +1820,6 @@ Hunt tokens can be traded on an exchange, but more importantly you will need to 
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-25T15:20:12.000Z">2020-02-26</time></div>
-                    <a href="/2020/02/26/jayplayco.triple-aaa-a-ending-of-the-manual-curation-project-from-the-account-triple-aaa/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Triple.aaa] 트리플a 메뉴얼 큐레이션 프로젝트 종료 / Ending of the manual curation project from the account @Triple.aaa</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%EB%8B%88%ED%8A%B8%EB%A1%9C%EC%8A%A4/">니트로스</a> / <a class="has-link-grey -link" href="/categories/%EB%8B%88%ED%8A%B8%EB%A1%9C%EC%8A%A4/AAA/">AAA</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
     
@@ -1812,7 +1837,7 @@ Hunt tokens can be traded on an exchange, but more importantly you will need to 
                     <span class="level-item">2월 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">51</span>
+                    <span class="level-item tag">52</span>
                 </span>
             </a>
         </li>
@@ -2085,6 +2110,13 @@ Hunt tokens can be traded on an exchange, but more importantly you will need to 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/coinnews/">
                         <span class="tag">coinnews</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/hexo/">
+                        <span class="tag">hexo</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -2306,7 +2338,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
 
-<a id="back-to-top" title="Back to Top" href="javascript:;">
+<a id="back-to-top" title="Zurück nach oben" href="javascript:;">
     <i class="fas fa-chevron-up"></i>
 </a>
 <script src="/js/back-to-top.js" defer></script>
