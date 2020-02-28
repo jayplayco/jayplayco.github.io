@@ -138,6 +138,90 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-11T13:28:30.000Z">2019-06-11</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    12분 읽기 (대략 1767 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/11/jayplayco.coinjoin-wasabi-wallet/">[비트코인 전송 숨기기] CoinJoin을 가능하게 하는 Wasabi Wallet 소개</a>
+            
+        </h1>
+        <div class="content">
+            <center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/yIcaXw10-image.png)</center>
+안녕하세요, @jayplayco 입니다.
+
+<p>즐겨찾는 Coindesk에 코인조인 (Coinjoin)에 지금까지 <a href="https://www.coindesk.com/bitcoin-users-perform-what-might-be-the-largest-coinjoin-ever">최대 규모의 100명</a>이 참여한것에 대한 기사가 실리면서 사실 블록체인에 기록되는 모든 전송 기록이 추적이 가능해서 이를 숨기기 위한 방법에 대한 소개가 있어 자세하게 파고 들어가봤습니다.</p>
+<h2 id="0-코인조인-CoinJoin-이란"><a href="#0-코인조인-CoinJoin-이란" class="headerlink" title="0. 코인조인 (CoinJoin) 이란?"></a>0. 코인조인 (CoinJoin) 이란?</h2><p>코인조인은 간단하게 말하면 BTC를 전송할때 혼자 전송하지 않고, 여려명이 같이 모여서 전송을 했을때 누구의 코인이 누구에게 가는지를 모르게 해서 거래내역을 익명화하는 방법입니다. </p>
+<h2 id="1-코인조인의-작동-원리"><a href="#1-코인조인의-작동-원리" class="headerlink" title="1. 코인조인의 작동 원리"></a>1. 코인조인의 작동 원리</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/zP0MMaIU-image.png)
+[Source: https://en.bitcoin.it/wiki/CoinJoin]</center>
+
+<p>아, 기술적인 저런 분석은 역시 어렵네요. 설명을 드리기 위해서는 잠깐 파고 들어가봤습니다. 간단 명료 요약버젼으로 간추립니다. 상단에 있는 기술표는 실제 BTC의 트랜스액션이 작동하는 원리인데, 저기의 틈을 파고 코인조인이라는 기술을 응용했다고 보시면 됩니다.</p>
+<blockquote>
+<p>The signatures, one per input, inside a transaction are completely independent of each other. This means that it’s possible for Bitcoin users to agree on a set of inputs to spend, and a set of outputs to pay to, and then to individually and separately sign a transaction and later merge their signatures. The transaction is not valid and won’t be accepted by the network until all signatures are provided, and no one will sign a transaction which is not to their liking.<br>[Source: <a href="https://en.bitcoin.it/wiki/CoinJoin]">https://en.bitcoin.it/wiki/CoinJoin]</a></p>
+</blockquote>
+<blockquote>
+<p><strong>간단해석</strong></p>
+<ul>
+<li>하나의 트랜스액션안에 존재하는 여러개의 서명은 각각 별개의 것임.</li>
+<li>결국 비트코인 유저는 일정 지출 입력과 지불 입력에 대해 합의했을때, 각각 트랜스액션에 싸인인 하고 추후 서명이 통합가능함. </li>
+</ul>
+</blockquote>
+<p>풀어쓰면, 비트코인 전송에는 트랜스액션 (실제 송금 행위)와 시그너쳐 (서명)가 있는데, 한 트랜스액션안에 여러 서명이 존재할 수 있기 때문에, 이를 이용해 여러명이 같은 트랜스액션안에 각각의 서명을 넣어서 트랜스액션이 실행되고 지불될때 누가 누구에게 전송하는지를 알기 어려워짐. 그리고 이것을 코인조인이라고 부릅니다.</p>
+<p>그렇기 때문에 코인조인은 <strong>많은 사람이 모일수록 추적이 더욱더 어려워집니다.</strong> </p>
+<h2 id="2-코인조인을-위해-필요한것들"><a href="#2-코인조인을-위해-필요한것들" class="headerlink" title="2. 코인조인을 위해 필요한것들"></a>2. 코인조인을 위해 필요한것들</h2><p>우선 IP추적을 피하기 위해서 일반 인터넷이 아닌 TOR와 같은 privacy system이 이용되어야지 누가 어디서 무슨 BTC를 보내는지 알 수가 없습니다. 또한 사람을 알아서 모아보고 같이 코인조인을 해야할 사람들을 찾아야합니다. 이런 어려운 과정을 해결하기 위해서 오픈 소스 기반의 Wasabi 지갑이 나오게 되었습니다.</p>
+<h3 id="a-와사비-지갑-링크"><a href="#a-와사비-지갑-링크" class="headerlink" title="a. 와사비 지갑 링크"></a>a. 와사비 지갑 링크</h3><ul>
+<li>홈페이지: <a href="https://www.wasabiwallet.io/">https://www.wasabiwallet.io/</a></li>
+<li>깃헙: <a href="https://github.com/zkSNACKs/WalletWasabi/blob/master/WalletWasabi.Documentation/FAQ.md">https://github.com/zkSNACKs/WalletWasabi/blob/master/WalletWasabi.Documentation/FAQ.md</a></li>
+<li>윈도우 다운로드: <a href="https://github.com/zkSNACKs/WalletWasabi/releases/download/v1.1.5/Wasabi-1.1.5.msi.asc">https://github.com/zkSNACKs/WalletWasabi/releases/download/v1.1.5/Wasabi-1.1.5.msi.asc</a></li>
+<li>맥 다운로드: <a href="https://github.com/zkSNACKs/WalletWasabi/releases/download/v1.1.5/Wasabi-1.1.5.dmg.asc">https://github.com/zkSNACKs/WalletWasabi/releases/download/v1.1.5/Wasabi-1.1.5.dmg.asc</a></li>
+</ul>
+<h3 id="b-와사비-지갑-설명"><a href="#b-와사비-지갑-설명" class="headerlink" title="b. 와사비 지갑 설명"></a>b. 와사비 지갑 설명</h3><p>와사비 지갑은 오픈소스로 하드웨어 지갑기능을 갖고 있으며 빌트인으로 TOR 게이트웨이 (privacy service)가 탑재되어 있으며 코인조인(Coinjoin)을 할 수 있는 기능이 내장되어 있습니다. 즉, 혼자서 사람 찾아서 “코인조인” 하자 할 필요 없이, 와사비 지갑을 써서 기존에 올라와있는 코인조인 거래에 참여를 하는 방식으로 거래 흔적을 익명화할 수 있습니다.</p>
+<h3 id="c-윈도우-버젼-설치"><a href="#c-윈도우-버젼-설치" class="headerlink" title="c. 윈도우 버젼 설치"></a>c. 윈도우 버젼 설치</h3><center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/BRe5I4v0-image.png)</center>
+윈도우 버젼을 설치하면 우선 지갑 생성을 위해서 계정명 이름과 암호를 물어봅니다. 이 암호는 자기가 직접 입력할 수 있습니다. 승인을 하고 난 다음 다시 12개의 암호 단어가 생성이 됩니다. 이 12개의 암호 단어는 잘 기록해두어야지 추후 자신의 암호와 12개의 단어 암호를 이용해서 지갑이 복구가 가능합니다.
+
+<center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/ZhEtGf9O-image.png)</center>
+Wallet Explorer에 CoinJoin을 누르면 상단과 같은 창이 뜹니다. 여기서 중간에 녹색 방패모양에 Anonymity Set : 50으로 되어 있는 부분이 총 50명의 유저를 모집하고 있다는 내용입니다. 예를 들어 2명만 모집할때는 방패 모양이 빨간색으로 변합니다. (2명의 경우는 익명성이 보장이 안되기 때문입니다. ^^)
+
+<p>Tor연결도 되어 있어서 privacy도 보장이 되는것으로 보이고 저 상태에서 코인조인을 통해서 전송을 하면 자기 서명의 익명화가 가능합니다.</p>
+<h2 id="3-개인적인-생각"><a href="#3-개인적인-생각" class="headerlink" title="3. 개인적인 생각"></a>3. 개인적인 생각</h2><p>스팀의 경우는 익명화를 위해서는 스팀으로 계정을 구매해서 준비해놓고 (그래야지 누가 계정을 만들었는지 추적이 안됩니다), 기존 스팀 계정에서 거래소로 전송을 한번 하고 다시 새로만든 계정으로 시간차와 금액차이를 두고 전송하면 추적이 거래소의 도움 없이는 어렵습니다. 물론 지난 매다의 먹튀의 경우는 일부 <a href="https://steemit.com/magicdice/@themarkymark/magic-dice-exit-scam">스티미언들은 거래소에 연락을 하고</a> 협조를 구하기도 합니다. 즉, 거래 익명성의 경우는 스팀도 상기와 같이 가능합니다만, 불법일 경우는 거래소에서도 협조가 가능한 부분이라 익명화가 어렵습니다.</p>
+<p>BTC의 경우도 개인적으로 봤을때는 불법 대형물량을 코인조인으로 움직이기에는 확실히 무리가 있을것으로 판단됩니다. 즉, 불법적으로 탈취된 BTC를 코인조인으로 움직인다고 해도, 보통 flagging이 되어있는 계정들이라서 움직임에 대한 감지가 있어 코인조인을 하는 유저들이 해당 트랜스액션을 기피를 하거나, 물량의 차이가 커서 결국 추적이 될것으로 예상됩니다.</p>
+<p>그래도 실질적으로 저런 형태로 기술적인 거래 익명화가 가능하다는 점이 흥미롭고, 얼마만큼 쓰일지는 BTC의 앞날을 보면서 지켜봐야할것으로 생각됩니다.</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-06-10T12:25:54.000Z">2019-06-10</time>
                 
                 <div class="level-item">
@@ -883,68 +967,6 @@
 
 
 
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-01T16:28:24.000Z">2019-06-02</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2분 읽기 (대략 340 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/06/02/jayplayco.eos-voice-sns/">[EOS] Voice라는 SNS 발표</a>
-            
-        </h1>
-        <div class="content">
-            <center>![](https://cdn.steemitimages.com/DQmUjNm8sjHmpRbqccrjoFdBRphw8GY6MWP8jhK8rvWxWyb/image.png)</center>
-
-<p>안녕하세요, @jayplayco 입니다.</p>
-<p>금일 예상대로 EOS의 block.one측에서 발표를 하면서 VOICE라는 블록체인 기반 소셜 미디어를 공개했습니다.</p>
-<p>아직까지는 키노트정도밖에는 없습니다만, 전반적으로 핵심은 다음과 같습니다.</p>
-<p><a href="https://voice.com/">https://voice.com/</a></p>
-<ul>
-<li>앱기반의 SNS 소통 </li>
-<li>보상은 VOICE 토큰으로 합니다.</li>
-<li>EOS 기반이라 모든 내용은 EOS에 올라갑니다.</li>
-<li>자기의 글을 올리기 위해서 VOICE 토큰을 쓸 수 있으며, 일부 자신보다 더 많이 써서 올라가면 토큰을 돌려받을 수도 있다고 합니다</li>
-<li>댄측에서는 봇같은 것은 없다고 합니다. (상위 자기 글을 토큰 써서 올리는 행위 자체가 봇 비슷한 느낌은 지울 수 없는, 단지 중앙화된.)</li>
-</ul>
-<center>![](https://cdn.steemitimages.com/DQmaxWakmLrF6rsBQL4K6TXdJ6kaksUZ8eCETpMa4ReLGyn/image.png)</center>
-
-<p>현재는 베타 신청이 가능한 상황입니다. 기안자도 우선 실체를 보기 위해서 신청을 해두었습니다.<br>추후 Keynote를 상세하게 보고 다시 정리할 것이 있으면 하도록 하겠습니다.<br><a href="https://www.youtube.com/watch?v=KZpzcj_l8AA">https://www.youtube.com/watch?v=KZpzcj_l8AA</a></p>
-<p>주말동안 잠깐의 새소식 전달이였습니다.</p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -1019,7 +1041,7 @@
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            586
+                            587
                         </p>
                     </a>
                 </div>
@@ -1119,7 +1141,7 @@
                 <span class="level-item">coinnews</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">2</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/hexo/">
@@ -1268,7 +1290,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/AAA/" style="font-size: 12.5px;">AAA</a> <a href="/tags/SCT/" style="font-size: 13.33px;">SCT</a> <a href="/tags/ZZAN/" style="font-size: 10.83px;">ZZAN</a> <a href="/tags/coinnews/" style="font-size: 10px;">coinnews</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/splinterlands/" style="font-size: 17.5px;">splinterlands</a> <a href="/tags/steem/" style="font-size: 19.17px;">steem</a> <a href="/tags/%EA%B0%80%EC%83%81%ED%99%94%ED%8F%90/" style="font-size: 15.83px;">가상화폐</a> <a href="/tags/%EA%B0%9C%EB%B0%9C/" style="font-size: 16.67px;">개발</a> <a href="/tags/%EA%B2%8C%EC%9E%84/" style="font-size: 18.33px;">게임</a> <a href="/tags/%EB%A6%AC%EB%B7%B0/" style="font-size: 15px;">리뷰</a> <a href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/" style="font-size: 20px;">미지정</a> <a href="/tags/%EC%8A%A4%EB%9E%9C/" style="font-size: 17.5px;">스랜</a> <a href="/tags/%EC%8A%A4%EB%AA%AC/" style="font-size: 17.5px;">스몬</a> <a href="/tags/%EC%9D%B4%EB%B2%A4%ED%8A%B8/" style="font-size: 14.17px;">이벤트</a> <a href="/tags/%ED%85%8C%EC%8A%A4%ED%8A%B8/" style="font-size: 11.67px;">테스트</a>
+        <a href="/tags/AAA/" style="font-size: 13.08px;">AAA</a> <a href="/tags/SCT/" style="font-size: 13.85px;">SCT</a> <a href="/tags/ZZAN/" style="font-size: 11.54px;">ZZAN</a> <a href="/tags/coinnews/" style="font-size: 10.77px;">coinnews</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/splinterlands/" style="font-size: 17.69px;">splinterlands</a> <a href="/tags/steem/" style="font-size: 19.23px;">steem</a> <a href="/tags/%EA%B0%80%EC%83%81%ED%99%94%ED%8F%90/" style="font-size: 16.15px;">가상화폐</a> <a href="/tags/%EA%B0%9C%EB%B0%9C/" style="font-size: 16.92px;">개발</a> <a href="/tags/%EA%B2%8C%EC%9E%84/" style="font-size: 18.46px;">게임</a> <a href="/tags/%EB%A6%AC%EB%B7%B0/" style="font-size: 15.38px;">리뷰</a> <a href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/" style="font-size: 20px;">미지정</a> <a href="/tags/%EC%8A%A4%EB%9E%9C/" style="font-size: 17.69px;">스랜</a> <a href="/tags/%EC%8A%A4%EB%AA%AC/" style="font-size: 17.69px;">스몬</a> <a href="/tags/%EC%9D%B4%EB%B2%A4%ED%8A%B8/" style="font-size: 14.62px;">이벤트</a> <a href="/tags/%ED%85%8C%EC%8A%A4%ED%8A%B8/" style="font-size: 12.31px;">테스트</a>
     </div>
 </div>
     
@@ -1280,6 +1302,19 @@
         <h3 class="menu-label">
             최근 글
         </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-28T07:17:39.000Z">2020-02-28</time></div>
+                    <a href="/2020/02/28/jayplayco.6evlni-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 비트코인 반감기와 S19의 연관</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/coinnews/">coinnews</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -1333,19 +1368,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-25T21:01:57.000Z">2020-02-26</time></div>
-                    <a href="/2020/02/26/jayplayco.1typu-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 워린 버핏은 실제로 암호화폐를 소유하지 않습니다</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a> / <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EA%B0%80%EC%83%81%ED%99%94%ED%8F%90/">가상화폐</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
         
@@ -1363,7 +1385,7 @@
                     <span class="level-item">2월 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">52</span>
+                    <span class="level-item tag">53</span>
                 </span>
             </a>
         </li>
@@ -1636,7 +1658,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/coinnews/">
                         <span class="tag">coinnews</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -1750,6 +1772,19 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-28T07:17:39.000Z">2020-02-28</time></div>
+                    <a href="/2020/02/28/jayplayco.6evlni-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 비트코인 반감기와 S19의 연관</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/coinnews/">coinnews</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-26T19:48:51.000Z">2020-02-27</time></div>
                     <a href="/2020/02/27/jayplayco.6aqfyp-steemit/" class="title has-link-black-ter is-size-6 has-text-weight-normal">스팀잇글의 블로그화 - 헥소와 깃헙</a>
                     <p class="is-size-7 is-uppercase">
@@ -1798,19 +1833,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-25T21:01:57.000Z">2020-02-26</time></div>
-                    <a href="/2020/02/26/jayplayco.1typu-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 워린 버핏은 실제로 암호화폐를 소유하지 않습니다</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a> / <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EA%B0%80%EC%83%81%ED%99%94%ED%8F%90/">가상화폐</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
     
@@ -1828,7 +1850,7 @@
                     <span class="level-item">2월 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">52</span>
+                    <span class="level-item tag">53</span>
                 </span>
             </a>
         </li>
@@ -2101,7 +2123,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/coinnews/">
                         <span class="tag">coinnews</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -2331,7 +2353,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
 
-<a id="back-to-top" title="Back to Top" href="javascript:;">
+<a id="back-to-top" title="Zurück nach oben" href="javascript:;">
     <i class="fas fa-chevron-up"></i>
 </a>
 <script src="/js/back-to-top.js" defer></script>
