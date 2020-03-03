@@ -138,6 +138,114 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-06-24T20:29:30.000Z">2018-06-25</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/steem/">steem</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    9분 읽기 (대략 1418 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/06/25/jayplayco.steemhunt-evolution-of-steemhunt-s-voting-system/">[Steemhunt] Evolution of Steemhunt`s voting system</a>
+            
+        </h1>
+        <div class="content">
+            <p><a href="https://steemitimages.com/DQmNfeZGkKQJBrXDkZptuzunaHT6hZKXvcGQFyeiWW4VweN/LP-7-logo.jpg">https://steemitimages.com/DQmNfeZGkKQJBrXDkZptuzunaHT6hZKXvcGQFyeiWW4VweN/LP-7-logo.jpg</a></p>
+<p>Hi, @jayplayco here.</p>
+<p>I am a moderator at Steemhunt, which is a platform launched in March 2018 as an alternative to the platform producthunt. Because Steemhunt is rewarding the hunters for their hunt, it is motivating to participate as product hunter at Steemhunt. As a moderator, I am seeing a lot of different questions about the system and hunters trying to understand how Steemhunt works.</p>
+<p>To all readers who are new to <a href="https://steemhunt.com/">Steemhunt</a>, Steemhunt is a recently launched service build on Steem to enable Hunters to hunt new and cool products and get rewarded based on their rankings on a daily base.  If you are new to Steemhunt, you should try first this post. <a href="https://steemit.com/steemdev/@steemhunt/introducing-steemhunt-daily-ranking-of-effortlessly-cool-products-fueled-by-steem-blockchain">LINK</a></p>
+<p>In this post, we are going to have a more in-depth look into the history and evolution of the voting system of Steemhunt as it is now independent of the voting system of Steem. </p>
+<h4> 0. Repository </h4>
+https://github.com/Steemhunt/api
+
+<h4> 1. Timeline for Steemhunt's Voting System</h4>
+
+<p><img src="https://cdn.steemitimages.com/DQmTGpDUGFywsgqVAR9hosaVLiNWVz1fzZn8iJhfRf4Sxoa/image.png" alt=""><br><a href="https://www.presentationgo.com/presentation/vertical-timeline-infographic-for-powerpoint/">Source: presentationgo.com</a></p>
+<h5>a. Starting with Steem Voting System</h5>
+
+<p><img src="https://cdn.steemitimages.com/DQmVV3bCLVukvk7jkyvWSgFox1vPwWQ54Cc9pq66vxGjLTm/image.png" alt=""><br><a href="https://pixabay.com/de/abstimmung-wort-buchstaben-scrabble-1804596/">Source: Wokandapix</a><br>When started in March 2018, Steemhunt adapted the same logic without any change from Steem. Self-voting, bot usage, the presence of whales, and curation trails had the same power as they had with Steem.</p>
+<p>Until Steemhunt was somewhat unknown, this was not a big issue, but after the lending power got bigger and bigger the DAU (Daily active user) number grow into a “J-Curve” the attempt of abusing also got higher. In the end, Steemhunt got officially lent 1 million steem from Steemit Inc. which ended with a whooping 1.3Mil. steem in power.</p>
+<h5>b. Bot usage forbidden</h5>
+![](https://cdn.steemitimages.com/DQmZQfpLC7pdJK2DHAj1v7D49b3z2mWG5LkmqYRG5SBe85M/image.png)
+[Source : rawpixel](https://unsplash.com/photos/wbu4q8xk2Kc)
+
+<p>Steemhunt decided very fast to approach to the community (end of May) to get moderators on board and a few days after the moderators were active the usage of Bots were forbidden (Date: 02.06.2018). Since there was no system behind the voting system to block this kind of Bots, it was handled manually by the team and moderators. All variety of hunts were bots used were de-listed manually. As users could spoil the real ranking with sending bots to the top rankings, the moderators also checked who initiated the bot. This system was not perfect and caused a lot of argumentation if a case was fair or not, but the team got most of the Bots from the ranking.</p>
+<h5>c. Account based Voting</h5>
+![](https://cdn.steemitimages.com/DQmXw8De2pve7YnaHGdK5YXAWCzifXtDZLsst9zxfMwuNeD/image.png)
+[Source : rawpixel](https://unsplash.com/photos/1I811IkRlKE)
+The ABV (Account based voting) from Steemhunt started with a very basic constellation. There have been different kind of simulations on how to make the voting system fair for hunters, but the team decided to go for the start as simple as possible. (https://github.com/Steemhunt/web/issues/135)
+
+<p>Newly launched ABV started at 14.06.2018 and had implemented following parts.</p>
+<p>1) one vote for one account (basic x1)<br>2) steem reputation-based leveling<br>    - x0 for under 34, x0.5 for 35-44, x1 for 45-54, x2 for 55-59, x3 for &gt;60<br>3) no self voting counted<br>4) only votes on Steemhunt platform counted.</p>
+<p>ABV had a direct effect on all self-voters, curation trails and bots, as their votes still counted on Steem but had no impact on the daily ranking.</p>
+<h5>d. Diversity Score </h5>
+![](https://cdn.steemitimages.com/DQmeAPrULBSWhzrxgs11Jz5H7LbQ8Gw4Co2jYDSDzU2Qe3g/image.png)[Source: rawpixel](https://unsplash.com/photos/-9xYJbJU2x4)
+
+<p>The latest introduction is the diversity score which is now active since 23th of June 2018 and influencing the upvotes. The Steemhunt team adopted a modified version of the Gini-Simpson index. (<a href="https://en.wikipedia.org/wiki/Diversity_index#Gini–Simpson_index">https://en.wikipedia.org/wiki/Diversity_index#Gini–Simpson_index</a>)<br>We could go into details about what the Gini-Simpson index is, but I would like to concentrate on what is implemented and how it is going to affect the voting.</p>
+<p>Additionally, to the ABV system, the Diversity Score calculates and analyses your upvoting behavior. </p>
+<p>1) Lowest would be an x0 and highest an x1.0.<br>2) If you always vote the same hunters, your Diversity Score will be low.<br>3) If you upvote other hunters but use a heavier voting weight (like example 100%) for a small number of hunters, this will also lower the score.<br>4) If you upvote a variety of hunters, the Diversity Score can move above x1.0 as the system will give it a bonus (above the Gini-Simpson Index)<br>5) When the user is new to the Steemhunt system, there will be a penalty-weighted Diversity Score applied until there is enough data.<br>6) Diversity Score x ABV =&gt; Your upvote power.</p>
+<p>There have been several vote4vote attempts by different groups to game the system. This kind of attack is now more challenging to execute, as new users can`t upvote as much as a hunter already well established in the Steemhunt system. Additionally, the whole V4V group would get penalized at the moment they are circle voting.</p>
+<h4> 2. Difference between Steem and Steemhunt Voting</h4>
+<center>![](https://cdn.steemitimages.com/DQmVTpKvoZ8UQsDynwvBgdPwv492nr3jVC6ircLCjax65yf/image.png)</center>
+
+<p>As you can see, unique parts of the Steem voting system are not any more valid for the Steemhunt platform. Self-voting, bots, and curation-trails do not have any effect on the ranking anymore. V4V attacks are still manually handled per report or investigation, but a big part of the effectiveness is gone, as voting for a circle group will be penalized and will not have the same effect as before for your hunters ranking.</p>
+<h4> 3. How to read the upvote value</h4>
+![](https://cdn.steemitimages.com/DQmdpuoFsA7dabu3vxk7AhgLniH4RCaEUEZLwEgfc4AZreP/image.png)
+When you see a hunt in the hunting list, you will find the upvote button on the right side. The number below this button is the current hunter score based on upvotes from other hunters. (Calculated with ABV and DS) Right to the mini-screenshot, there is a number with a $ sign. This is the actual upvote value at Steem.
+
+<p><img src="https://cdn.steemitimages.com/DQmdV2y8SJiexq78U4xrtQU8dGEWi96oCePkmBUmKASBARg/image.png" alt=""><br>If you have a look at the post itself, you can find more details. At the bottom, you can find the $ amount and if you mouse-over you will see each upvoter on this hunt. If you mouse-over the “votes” you can see the upvotes valid for this hunt. The example above shows that in total 4 upvotes have been done in the Steem system but only 2 upvotes been counted for the Steemhunt ranking.</p>
+<h4> 4. View into the future</h4>
+There is no system which can avoid all kind of attacks or where users can try to game the system. But as a young platform and community Steemhunt is evolving fast and matching the requirements very agile for a fair hunter environment. I am sure that there will be more iterations of the voting system at Steemhunt and it will be a pleasure to write about it.
+
+<h4>5. Github Account</h4>
+https://github.com/zionopia
+
+<hr>
+<p>Thanks for reading!</p>
+<p>Other articles about Steemhunt.</p>
+<ul>
+<li><a href="https://steemit.com/steemit/@jayplayco/what-is-steemhunt-and-why-should-i-care">What is Steemhunt and why should I care?</a></li>
+<li><a href="https://steemit.com/steemit/@jayplayco/biggest-airdrop-ever-hunt-token-and-how-to-participate">Biggest Airdrop ever - HUNT token and how to participate</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-abv-account-based-voting-in-development">[Steemhunt] ABV (Account based voting) in development</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-update-for-upvoting-review-comments-and-other-developments">Update for Upvoting Review Comments &amp; Other Developments</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-most-asked-questions-from-steemhunt-newbies">Most asked questions from Steemhunt Newbies.</a></li>
+<li><a href="https://steemit.com/utopian-io/@jayplayco/steemhunt-how-to-get-your-hunt-verified-on-steemhunt">How to get your hunt verified on Steemhunt</a></li>
+</ul>
+<p>Join their chat channels if you need more information as the community, team, and the moderators are answering very fast on any question:</p>
+<p>Discord: <a href="https://discord.gg/mWXpgks">https://discord.gg/mWXpgks</a> (this is where the magic happens)<br>Telegram: <a href="https://t.me/joinchat/AzcqGxCV1FZ8lJHVgHOgGQ">https://t.me/joinchat/AzcqGxCV1FZ8lJHVgHOgGQ</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2018-06-22T14:45:27.000Z">2018-06-22</time>
                 
                 <div class="level-item">
@@ -1408,90 +1516,6 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
 
 
 
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-06-04T14:52:42.000Z">2018-06-04</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%ED%85%8C%EC%8A%A4%ED%8A%B8/">테스트</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    3분 읽기 (대략 396 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/06/04/jayplayco.keywe-the-smartest-lock-ever/">KeyWe - The smartest Lock ever!</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="KeyWe"><a href="#KeyWe" class="headerlink" title="KeyWe"></a>KeyWe</h1><p>The smartest Lock ever!</p>
-<hr>
-<h2 id="Screenshots"><a href="#Screenshots" class="headerlink" title="Screenshots"></a>Screenshots</h2><center>![keywe.png](https://i.imgur.com/OmGrgM6.png)</center>
-
-
-
-<hr>
-<h2 id="Hunter’s-comment"><a href="#Hunter’s-comment" class="headerlink" title="Hunter’s comment"></a>Hunter’s comment</h2><h3>Product Description</h3>
-A Door smart lock having safety as No1. priority. It is build with Ansi Grade 2 deadbolt and aluminium. Also a 128 bit AES encryption for the connection between the lock and the app.
-
-<h3>Unique Selling Proposition</h3>
--Auto Lock & Unlock
-- Touchpad with 20 passcodes
-- Onetime Passcode available
-- Guest Key available
-- NFC included
-- Also with Mechanical Key
-
-<h3> Use Scene</h3>
-https://ksr-ugc.imgix.net/assets/021/339/932/b72c3e01230f0c006982cb7b6b42b768_original.gif?w=680&fit=max&v=1527153958&auto=format&gif-q=50&q=92&s=053a2f251e62562ccef565df9bb6524a
-[Image Source : Kickstarter Campaign](https://www.kickstarter.com/projects/1067904566/keywe-the-smartest-lock-ever?ref=category_newest&ref=discovery)
-
-<p>If you are having a Guesthouse you can send your guests a Guestkey during their stay without having the guests needed to register to KeyWe. Also with Bluetooth it can be opened without inputting anything but having only a registered phone in your pocket and placing your hand over the key. (they call this function magic touch. haha)<br><a href="https://ksr-ugc.imgix.net/assets/021/339/921/120bc8c75e4023c24cc3b81d87942efe_original.gif?w=680&amp;fit=max&amp;v=1527153884&amp;auto=format&amp;gif-q=50&amp;q=92&amp;s=bafd8fab2d268ef9fbf30bd851455184">https://ksr-ugc.imgix.net/assets/021/339/921/120bc8c75e4023c24cc3b81d87942efe_original.gif?w=680&amp;fit=max&amp;v=1527153884&amp;auto=format&amp;gif-q=50&amp;q=92&amp;s=bafd8fab2d268ef9fbf30bd851455184</a><br><a href="https://www.kickstarter.com/projects/1067904566/keywe-the-smartest-lock-ever?ref=category_newest&ref=discovery">Image Source : Kickstarter Campaign</a><br>Of course you can open the door with your NFC enabled and registered phone.</p>
-<p>Personally I like that the smart door has still a mechanical key, but on the other side would rather prefer a fingerprint scan than bluetooth or nfc. </p>
-<h3>What is in the box? </h3>
-https://ksr-ugc.imgix.net/assets/021/430/513/7e2004afa9c07ca2919a18277d71abe4_original.png?w=680&fit=max&v=1527829195&auto=format&lossless=true&s=04a439662caba1b5c69800f9553cd8c8
-[Image Source : Kickstarter Campaign](https://www.kickstarter.com/projects/1067904566/keywe-the-smartest-lock-ever?ref=category_newest&ref=discovery)
-
-<h3>Price </h3>
-Super early bird at 99USD. (only 6 left at this moment :))
-
-<hr>
-<h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a href="https://www.kickstarter.com/projects/1067904566/keywe-the-smartest-lock-ever?ref=steemhunt">https://www.kickstarter.com/projects/1067904566/keywe-the-smartest-lock-ever?ref=steemhunt</a></p>
-<hr>
-<h2 id="Contributors"><a href="#Contributors" class="headerlink" title="Contributors"></a>Contributors</h2><p>Hunter: @jayplayco</p>
-<hr>
-<center><br/>![Steemhunt.com](https://i.imgur.com/jB2axnW.png)<br/>
-This is posted on Steemhunt - A place where you can dig products and earn STEEM.
-[View on Steemhunt.com](https://steemhunt.com/@jayplayco/keywe-the-smartest-lock-ever)
-</center>
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -1566,7 +1590,7 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            598
+                            599
                         </p>
                     </a>
                 </div>
@@ -1794,7 +1818,7 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
                 <span class="level-item">미분류</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">10</span>
+                <span class="level-item tag">11</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/%EC%9D%B4%EB%B2%A4%ED%8A%B8/">
@@ -1835,6 +1859,19 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
         <h3 class="menu-label">
             최근 글
         </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-02T19:09:03.000Z">2020-03-03</time></div>
+                    <a href="/2020/03/03/jayplayco.2nsdq4-steemit/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Steemit] 바이낸스의 스팀 거버넌스 투표 철회</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -1888,19 +1925,6 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-01T21:47:48.000Z">2020-03-02</time></div>
-                    <a href="/2020/03/02/jayplayco.7cmjph-coinnews%20(1)/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 세상에서 가장 부자들이 생각하는 암호화폐</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
         
@@ -1918,7 +1942,7 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
                     <span class="level-item">3월 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">11</span>
+                    <span class="level-item tag">12</span>
                 </span>
             </a>
         </li>
@@ -2258,7 +2282,7 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
                 <div class="control">
                     <a class="tags has-addons" href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/">
                         <span class="tag">미지정</span>
-                        <span class="tag is-grey">265</span>
+                        <span class="tag is-grey">266</span>
                     </a>
                 </div>
                 
@@ -2316,6 +2340,19 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-02T19:09:03.000Z">2020-03-03</time></div>
+                    <a href="/2020/03/03/jayplayco.2nsdq4-steemit/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Steemit] 바이낸스의 스팀 거버넌스 투표 철회</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-02T16:42:48.000Z">2020-03-03</time></div>
                     <a href="/2020/03/03/jayplayco.steemit-2/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Steemit] 스팀잇 주요 인사 2명 사표 제출</a>
                     <p class="is-size-7 is-uppercase">
@@ -2364,19 +2401,6 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-01T21:47:48.000Z">2020-03-02</time></div>
-                    <a href="/2020/03/02/jayplayco.7cmjph-coinnews%20(1)/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 세상에서 가장 부자들이 생각하는 암호화폐</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
     
@@ -2394,7 +2418,7 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
                     <span class="level-item">3월 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">11</span>
+                    <span class="level-item tag">12</span>
                 </span>
             </a>
         </li>
@@ -2734,7 +2758,7 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
                 <div class="control">
                     <a class="tags has-addons" href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/">
                         <span class="tag">미지정</span>
-                        <span class="tag is-grey">265</span>
+                        <span class="tag is-grey">266</span>
                     </a>
                 </div>
                 

@@ -148,6 +148,77 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-05T22:45:00.000Z">2019-08-06</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    7분 읽기 (대략 1117 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/06/jayplayco.smt-rc/">[SMT] RC 임대가 온다</a>
+            
+        </h1>
+        <div class="content">
+            <center>![](https://cdn.steemitimages.com/DQmVGLgLsLHcxqz32MEJdJZCx8MwKoV1Tr2aMZneW4iaQSC/image.png)</center>
+
+<p>안녕하세요, @jayplayco입니다.</p>
+<p>금일 스팀잇 측에서 SMT 관련 새로운 소식을 전달했습니다.  간단하게 소개와 이 의미에 대해 전달드리겠습니다.</p>
+<ul>
+<li>원본글: <a href="https://steemit.com/smt/@steemitblog/smt-burnup-rc-delegation-pools">https://steemit.com/smt/@steemitblog/smt-burnup-rc-delegation-pools</a></li>
+</ul>
+<center>![](https://cdn.steemitimages.com/DQmSwFYRzoHnJqAymS3ZTpZxYJ22xJ6RAmssiiF3uQAryRK/image.png)</center
+
+<h2 id="0-배경"><a href="#0-배경" class="headerlink" title="0. 배경"></a>0. 배경</h2><p>SMT 이슈중 <a href="https://github.com/steemit/steem/issues/2705">#2705</a>번의 경우는 RC를 다른 RC 풀로 임대할 수 있는 기능에 대한 것이였습니다. </p>
+<h2 id="1-기능적-설명"><a href="#1-기능적-설명" class="headerlink" title="1. 기능적 설명"></a>1. 기능적 설명</h2><p>RC임대에 대한 목소리는 지속적으로 나왔습니다. 실질적으로 이 부분은 그동안 힘들었던 계정 생성에 대한 부분을 해소할 수 있는 방안입니다.</p>
+<p>현재는 스팀 계정 생성을 위한 여러가지 방법들이 있습니다. </p>
+<ul>
+<li>스팀잇을 통해 무료 계정 신청 - 2-3주 걸림 (암도 걸림…)</li>
+<li>스팀닌자를 통한 유료 생성 (@steem.ninja)</li>
+<li>한국 휴대폰 소유의 경우 스팀피플을 통해 개인인증과 즉각 생성 가능 (@stpeople)</li>
+<li>스팀헌트를 통한 휴대폰 인증과 즉각 생성 가능 (@steemhunt)</li>
+<li>트립스팀을 통한 즉각 생성 가능 (@trips.teem)</li>
+</ul>
+<p>하지만 근본적으로 스팀닌자가 되었던 스팀헌트던 트립스팀이던 프로젝트 계정들이 갖고 있는 RC를 이용해서 토큰을 생성하고 필요시마다 계정을 생성하는 방식입니다. 문제는 현재까지는 이 RC 토큰을 생성하고 나서도 따른 계정으로 전환이 안되었고, RC 또한 스파랑 연동되어서 스파를 임대하지 않으면 RC가 가지 않는 단점이 있었습니다.</p>
+<p>그러나 실제로 10K정도만 되도 하루에 RC토큰을 2개정도 만들 수 있는 RC파워가 있으며 100K 정도되면 하루에 20개정도를 만들 수 있습니다. 다만 쓰이지 않는 RC가 많아 생성을 하지 않고, 생성을 하더라도 계정 생성 시스템이 있지 않으면 사실상 개인적으로 마스터키를 전달해주지 않고는 쓸 수 없는것도 사실입니다.</p>
+<p>또한 새로운 스팀유저가 왔을때 스파를 임대하지 않고 RC만 임대해도 실제로 글을 쓰고 활동하는데 이상이 없을 수가 있습니다.</p>
+<h2 id="2-가능한-시나리오"><a href="#2-가능한-시나리오" class="headerlink" title="2. 가능한 시나리오"></a>2. 가능한 시나리오</h2><p>프로젝트 A와 B와 C가 RC를 모아서 하나의 임대 생성 계정에 RC를 임대합니다. 이 임대된 RC를 바탕으로 계정 생성 서비스를 만들고, 프로젝트 A,B,C가 API로 연결해서 자기 서비스에서 계정생성이 쉽게 되도록 설정할 수 있다.</p>
+<p>생성된 계정의 경우는 각 프로젝트에서 설정이 필요할 경우 추가로 계정에 활동에 필요한 RC를 기간제로 임대해준다.</p>
+<p>실제 스팀헌트의 @steemhunt 경우 현재 계정생성후 최소 스파인 15SP를 1달간 무료 임대해주는 형식으로 지원해주고 있습니다. 이에 대한 경제적인 부담이 RC로 해결이 되기 때문에 훨씬 적어질 수 있습니다. 또한 다른 서비스의 경우 만약에 많은 계정을 생성하기 위한 스파가 부족할 경우 큰 프로젝트와 힘을 합쳐서 연합을 만들고 계정 생성부분만 RC를 임대를 통해 한 계정에서 공유하는 것도 방법입니다.</p>
+<h2 id="3-개인적인-생각"><a href="#3-개인적인-생각" class="headerlink" title="3. 개인적인 생각"></a>3. 개인적인 생각</h2><p>일부 분들은 SMT라는 말만 들어도 지치시는 분들도 계실겁니다. 필자의 경우는 스팀잇 생활을 시작하면서 SMT의 가능성을 보고 스팀에 정착하기로 결심하고 활동을 여전히 하고 있습니다. 생각했던 일정과 타이밍에 나오지는 않았지만, 그래도 스팀잇 재단측은 HF21 런칭을 사고없이 무사히 잘 하고 SMT 런칭까지 한걸음 달려나가주기를 기대해봅니다. 거기까지만 해도 그 다음은 커뮤니티와 비즈니스들이 끌고 갈 수 있는 환경의 최소조건은 만들어지는 것이기 때문입니다.</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-08-05T14:24:03.000Z">2019-08-05</time>
                 
                 <div class="level-item">
@@ -795,79 +866,6 @@
 
 
 
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-07-14T15:13:30.000Z">2019-07-15</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    6분 읽기 (대략 904 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/07/15/jayplayco.int-entrepreneur/">[INT] Entrepreneur를 위한 커뮤니티 런칭</a>
-            
-        </h1>
-        <div class="content">
-            <center>https://steemitimages.com/0x0/https://files.steempeak.com/file/steempeak/crystalhuman/Ms2tqf9r-intgif.gif</center>
-
-<p>안녕하세요, @jayplayco입니다.</p>
-<p>하루가 멀다 하고 새로운 niche 커뮤니티가 탄생하고 있습니다. 이번에는 개인적으로도 사업및 여러 프로젝트를 진행하는 필자로써 언제나 관심이 있는 entrepreneur즉, 사업을 하고자 하는 사람들의 커뮤니티가 시작될 예정입니다.<br>아직 페이지 세팅은 안되어 있으나, 언제나와 같이 우선 간단 요약 버젼으로 들어갑니다.</p>
-<h2 id="1-배경"><a href="#1-배경" class="headerlink" title="1. 배경"></a>1. 배경</h2><p>Nitrous 페이지와 Discord에서 활발하게 운영이 될 것으로 예상되는 Entrepreneur 관련 niche 커뮤니티입니다.</p>
-<h2 id="2-토큰-생태계"><a href="#2-토큰-생태계" class="headerlink" title="2. 토큰 생태계"></a>2. 토큰 생태계</h2><ul>
-<li>생성자: @crystalhuman</li>
-<li>태그: INT</li>
-<li>홈페이지: <a href="https://www.intrepreneur.life">https://www.intrepreneur.life</a> (아직은 작동하지 않음)</li>
-<li>총 생성 토큰 : 100 Mil. INT</li>
-<li>배분 예정 물량: 930K INT (300K 모더레이터 /운영진, 300K PAL 소유자 에어드랍, 230K 시장 판매 (100K가 부족한데..)</li>
-<li>운영진: 1.2K (중 500K 스테이킹)</li>
-<li>Genesis 예상물량: 1.53 M 가량 (에어드랍이 아직 이루어지지 않은 상황인데, issue를 할지, interpreneur 계정에서 배분할지 언급이 없음)</li>
-<li>베네 : 10%</li>
-<li>Mining : 없음</li>
-<li>일일 발행량: 254.86 INT (매우 적은 양임)</li>
-<li>비선형 보상: 1.1</li>
-<li>큐레  보상 : 0.5 (스팀과 동일)</li>
-<li>작가/큐레: 5:5</li>
-<li>보상 클레임 : 7일</li>
-<li>UNSTAKE:  84일 12회에 거쳐서</li>
-<li>인플레 : 10%, 연간 1% 줄여서 타겟 4%</li>
-</ul>
-<h2 id="3-BM"><a href="#3-BM" class="headerlink" title="3. BM"></a>3. BM</h2><p>비즈니스를 운영하기보다는 그냥 커뮤니티를 운영한다는 표현을 쓰고 있습니다.  상당 부분의 int는 모더레이터를 위해 쓰일 예정이며, 이러한 모더레이터는 일반적으로 discord에서 활동하는 분들의 payment로 쓰일 확률이 높습니다.</p>
-<p>토큰의 경우 사용처가 업보팅, 내부 광고 그리고 Discord에서 롤을 부여하는데도 쓰고자 한다고 합니다. </p>
-<h2 id="4-개인적인-생각"><a href="#4-개인적인-생각" class="headerlink" title="4. 개인적인 생각"></a>4. 개인적인 생각</h2><p>우선 토큰 이코노미는 개인적으로는 선호되지는 않습니다. 스팀과 거의 동일한 언스테이킹 기간과 현재는 유일한 차이점이 보상 비율이 5:5라는것 정도입니다.  사업에나 ENTREPRENEURSHIP에 대한 이야기를 다루는 것은 좋아합니다만, 저정도의 언스테이킹 기간이 후발주자로써 맞는것인지는 의문이 듭니다.</p>
-<p>비교적 괜찮은 아이디어는 해외에서는 활성화된 Discord의 롤이나 customization을 staking 된 INT등을 통해서 표현한다는 것인데, 이는 여러 프로젝트에서도 나오는 “배찌” 시스템을 nitrous에서 구현하는게 아니라, 이미 나와있는 툴을 이용해서 Discord에서 구현하겠다는 것으로 풀이됩니다.</p>
-<p>실제 한국에서는 많은 대화가 카톡방에서 이루어지는 것 처럼, 해외에서는 Discord에서 대부분의 실시간 대화가 오가고, 실제 빠르고 중요한 data를 보려면 각 Discord 채널에 가입되어 있어서 검토와 체크를 해야하는 것도 맞습니다. 또한 Discord의 강력한 기능들로 권한에 따라 세분화되어서 접근이 제한되는 방, 읽을 수만 있으나 쓸 수 없는 채널들 생성이 다양하게 되는 관계로, 이 기능들을 INT 등급에 따라 주어주면서 활성 유저들의 사기를 진작하는데 쓰고자 하는 것입니다.</p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -942,7 +940,7 @@
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            598
+                            599
                         </p>
                     </a>
                 </div>
@@ -1170,7 +1168,7 @@
                 <span class="level-item">미분류</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">10</span>
+                <span class="level-item tag">11</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/%EC%9D%B4%EB%B2%A4%ED%8A%B8/">
@@ -1211,6 +1209,19 @@
         <h3 class="menu-label">
             최근 글
         </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-02T19:09:03.000Z">2020-03-03</time></div>
+                    <a href="/2020/03/03/jayplayco.2nsdq4-steemit/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Steemit] 바이낸스의 스팀 거버넌스 투표 철회</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -1264,19 +1275,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-01T21:47:48.000Z">2020-03-02</time></div>
-                    <a href="/2020/03/02/jayplayco.7cmjph-coinnews%20(1)/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 세상에서 가장 부자들이 생각하는 암호화폐</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
         
@@ -1294,7 +1292,7 @@
                     <span class="level-item">3월 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">11</span>
+                    <span class="level-item tag">12</span>
                 </span>
             </a>
         </li>
@@ -1634,7 +1632,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/">
                         <span class="tag">미지정</span>
-                        <span class="tag is-grey">265</span>
+                        <span class="tag is-grey">266</span>
                     </a>
                 </div>
                 
@@ -1692,6 +1690,19 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-02T19:09:03.000Z">2020-03-03</time></div>
+                    <a href="/2020/03/03/jayplayco.2nsdq4-steemit/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Steemit] 바이낸스의 스팀 거버넌스 투표 철회</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-02T16:42:48.000Z">2020-03-03</time></div>
                     <a href="/2020/03/03/jayplayco.steemit-2/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Steemit] 스팀잇 주요 인사 2명 사표 제출</a>
                     <p class="is-size-7 is-uppercase">
@@ -1740,19 +1751,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-01T21:47:48.000Z">2020-03-02</time></div>
-                    <a href="/2020/03/02/jayplayco.7cmjph-coinnews%20(1)/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 세상에서 가장 부자들이 생각하는 암호화폐</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
     
@@ -1770,7 +1768,7 @@
                     <span class="level-item">3월 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">11</span>
+                    <span class="level-item tag">12</span>
                 </span>
             </a>
         </li>
@@ -2110,7 +2108,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/">
                         <span class="tag">미지정</span>
-                        <span class="tag is-grey">265</span>
+                        <span class="tag is-grey">266</span>
                     </a>
                 </div>
                 
