@@ -148,7 +148,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-14T14:28:24.000Z">2019-04-14</time>
+                <time class="level-item has-text-grey" datetime="2019-06-17T15:20:24.000Z">2019-06-18</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
@@ -158,7 +158,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2분 읽기 (대략 275 단어)
+                    8분 읽기 (대략 1186 단어)
                 </span>
                 
                 
@@ -167,114 +167,121 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/04/14/jayplayco.jjm-announcements-15th-april-2019-dividend-rules/">[JJM] Announcements 15th April 2019 - Dividend Rules</a>
+                <a class="has-link-black-ter" href="/2019/06/18/jayplayco.breez-ios-beta/">[Breez] 비트코인 라이트닝 네트워크 기반 모바일 지갑 iOS Beta버젼 출시</a>
             
         </h1>
         <div class="content">
-            <center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/2TAyAxqh-image.png)</center>
+            <center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/qJi16cbp-image.png)</center>
+안녕하세요, @jayplayco입니다.
 
-<p>Hi, @jayplayco here.</p>
-<p>The current dividend rule was that the dividends will be distributed in uncertain cycles with an uncertain amount. Beginning from today this rule is changing as below.</p>
+<p>이번에 Breez라는 곳에서 비트코인용 라이트닝 네트워크 지갑을 아이폰용 베타 버젼을 공개했습니다. 이에 따라 비트코인으로 소액결제를 이동중에도 쉽게 가능하게 되었습니다. 한번 파고 들어가보겠습니다.</p>
+<h2 id="0-라이트닝-네트워크란-Lighting-Network"><a href="#0-라이트닝-네트워크란-Lighting-Network" class="headerlink" title="0. 라이트닝 네트워크란? (Lighting Network)"></a>0. 라이트닝 네트워크란? (Lighting Network)</h2><p>스팀을 쓰시는 분들은 별로 큰 어려움을 느끼지 못하실텐데, 거래소 내에서 비트코인 거래가 아닌 실질적인 비트코인을 지갑에서 지갑으로 최근에 이동을 시켜보신 분들은 아시겠지만, 우선 비트코인을 전송하는데 기본적으로 비용이 들지는 않지만, 사실상 transaction이 실행이 되기 위해서는 transaction fee를 포함해야 하는것이 사실이며, 이는 많은 량의 비트코인을 이동할때는 어쩔 수 없다고 하지만, 커피값 정도되는 비트코인을 전송하는데는 문제가 될 수 있습니다.</p>
+<p>그 현재 비트코인은 블록당 1MB가 들어가게 되는데, 트랜스액션을 처리해야할 마이너(miner)의 경우에는 트랜스액션 fee가 높은 거래를 우선시하는경향이 있고, 소량의 비트코인의 경우에는 그만큼 트랜스액션 비용도 적은 관계로 우선순위가 밀릴 수 있습니다.</p>
+<p>이를 해결하기 위해서는 하트포크를 해서 1MB의 제한을 풀어버려서 스케일링을 할 수 있으나, 그에 따른 다른 문제점들이 발생하기도 합니다. (전송 속도, 처리 하드웨어등등)</p>
+<p>라이트닝 네트워크는 확장성을 위해 블록크기를 늘린것이 아닌 오프체인에서 수수료를 낮추고 소액거래가 가능하도록 하는 기술임. 즉, 약간 비트코인 오프체인의 사이드체인과 비슷한 느낌입니다.</p>
+<h2 id="1-Breez의-지갑"><a href="#1-Breez의-지갑" class="headerlink" title="1. Breez의 지갑"></a>1. Breez의 지갑</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/wHWt0cvm-image.png)</center>
+
+<p>브리즈의 지갑은 구매자와 판매자가 각각 설치를 하고 소액 결재를 할때 라이트닝 네트워크를 이용해서 쉽고 저렴한 비용으로 이용할 수 있게 구성이 되어 있습니다. 실제 결재를 할때는 Breeze의 허브를 통해 서로 연결되며, 이 허브는 Lightning 노드를 이용해서 진행됩니다. 각 지갑에 저장된 비토코인의 변화를 반영하기 위해 거래가 있을때 마다 당사자들의 Bitcoin의 변화하는 양을 반영하기 위해 거래가있을 때마다 대차 대조표에 서명을 하면서 증명을 합니다. 트랜잭션이 완료되면 잔액이 최종 비트코인 블록 체인에 등록됩니다. 분쟁이 일어날 경우에는 가장 최근 대차 대조표를 사용하여 지가분 분쟁 발생시, 양 당사자는 가장 최근에 서명 한 대차 대조표를 사용하여 잃어버린 부분을 되찾을 수 있습니다. </p>
+<p>기존 안드로이드 사용자들은 Breez의 지갑을 쓸 수 있었지만, 이번 iOS 베타 출시로 전체 모바일 시장의 약 98%를 커버하게 되었습니다.</p>
+<h2 id="2-Breez-지갑의-비젼"><a href="#2-Breez-지갑의-비젼" class="headerlink" title="2. Breez 지갑의 비젼"></a>2. Breez 지갑의 비젼</h2><p>브리즈 지갑의 경우는 100% 비트코인의 소액 결재를 위해 최적화되었습니다. 라이트닝 네트워크 사용이 그 단적인 증거이죠. 이제 소비자용 지갑은 완성이 되었으니 사실상 Breez측에서도 다음 단계로 필요한 것은 판매자를 위한 POS 클라이언트 라고 합니다. 이것까지 제공이 된다면, 손쉽게 비트코인으로 소액 결재를 확장할 수 있는 기반이 만들어질 것 같습니다. </p>
+<p><a href="https://en.wikipedia.org/wiki/Lightning_Network">소스: Lightning Network - Wikipedia</a><br><a href="https://banksalad.com/contents/%EC%89%BD%EA%B2%8C-%EC%84%A4%EB%AA%85%ED%95%98%EB%8A%94-%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8-%EB%9D%BC%EC%9D%B4%ED%8A%B8%EB%8B%9D-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-Lightning-Network-%EB%9E%80-g9nT6">소스: 쉽게설명하는 블록체인: 라이트닝 네트워크</a><br><a href="https://medium.com/breez-technology/breez-on-ios-a-big-step-towards-the-lightning-economy-and-a-giant-leap-for-breez-cbcf2db77acb">소스: Breez Medium 공지</a><br><a href="https://www.coindesk.com/breez-reveals-lightning-powered-bitcoin-payments-app-for-iphone">소스: 코인데스크 Breez 기사</a><br><a href="https://github.com/breez/breezmobile">소스: Breez Github</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-16T17:07:24.000Z">2019-06-17</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    10분 읽기 (대략 1506 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/17/jayplayco.roadofrich-finding-about-the-team-and-project/">[RoadofRich] Findings about the team and project</a>
+            
+        </h1>
+        <div class="content">
+            <center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/HlUCJukC-image.png)</center>
+Hi, @jayplayco here.
+
+<p>I’ve got a personal message with concerns about the project Road of Rich, which is claming to be a Steem based SRPG game and in the moment in Pre-sale for their tokens on Steem-Engine.</p>
+<p>I’ve written a posting a few days ago for the KR community and digged deeper into the team, as they were not well known on Steem, which resulted in a very fast sold out of their first pre-sale.</p>
+<p>Link: </p>
 <ul>
-<li>The current rule of an uncertain cycle and amount of the distribution will be deleted.</li>
-<li>The dividend amount is coming from the @jjm13 account.</li>
-<li>The dividend will be distributed when a 1000 JJM holders could get a dividend equivalent to 1 Steem.</li>
-<li>Information about will be also provided in “today’s JJM’ posts</li>
-<li>Steem Power (SP) and Steem will be calculated 1:1 and Steem Power value will follow the market price.</li>
-<li>As SP is difficult to convert directly into Steem, @virus707 will buy in @jjm13’s SP into Steem in 1:1.</li>
-<li>This rules can and will change based on the change of dividends amount.</li>
+<li><a href="https://steemit.com/sct/@jayplayco/rors-srpg">Korean Article about ROR from @jayplayco</a></li>
+<li><a href="https://steemit.com/sct/@deer3/rors">Korean Article about ROR from @glory7 (deer3)</a></li>
 </ul>
-<h1 id="5-Disclaimer"><a href="#5-Disclaimer" class="headerlink" title="5. Disclaimer"></a>5. Disclaimer</h1><ul>
-<li>Please be informed that these rules can change at any time, especially when the main account @virus707 is adding additional SP or the holder numbers are increasing.</li>
+<p>After the request I’ve decided to write a short post about my findings for the international community.</p>
+<h2 id="0-TL-DR"><a href="#0-TL-DR" class="headerlink" title="0. TL;DR"></a>0. TL;DR</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/MHPzjIiP-image.png)</center>
+Road of Rich is a SRPG game based on Steem and a Steem-Engine token called RORS. The team behind the game is organized from members of different companies, which include a blockchain agency (Useb), a HTML5 game maker company (ziplab) and a company that is responsible for the illustration. (AI-Channel)
+
+<h2 id="1-Are-they-real"><a href="#1-Are-they-real" class="headerlink" title="1. Are they real?"></a>1. Are they real?</h2><p>The Steem community has now seen a lot trials of games which partly resulted in disappointing or even runaway over night (like Magic Dice). A steady and continued player is @steemmonsters, now rebranded as Splinterlands and utilizing the advantages of other blockchains, using Steem as main layer and bringing therefore new Steem users on board.  </p>
+<p>As Road of Rich is a team based in Korea, the Korean Steem Community had also interest in the project, but was not sure because there was not a lot of information available about the team nor have been significant activities noticed before their announcement.</p>
+<p>@ai-channel, the account who is responsible for the marketing activities on the Korean Steem side is active on Steem since 2017 but was also not well known nor well integrated into the KR community.<br>So I got in contact with the team to be able to get more information about them. Please find the interview translation, which I had on Discord with one of the Cofounders Nia. The interview happened at 4th of June 2019.</p>
+<center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/j6D4q9QR-image.png)</center>
+
+<h3 id="a-Please-introduce-yourself"><a href="#a-Please-introduce-yourself" class="headerlink" title="a. Please introduce yourself."></a>a. Please introduce yourself.</h3><p>I am Nia and one of the co-founders of the project ROR. I am responsible for planning the game structure of ROR.</p>
+<h3 id="b-How-is-the-team-of-ROR-structured"><a href="#b-How-is-the-team-of-ROR-structured" class="headerlink" title="b. How is the team of ROR structured?"></a>b. How is the team of ROR structured?</h3><p>Link: <a href="http://roadofrich.com/team/">http://roadofrich.com/team/</a><br>We are key members from different companies gathered together to make ROR possible. In total 5 members including  Martin Kim from UseB and Oh-Hyun Kwon from Ziplab are driving the project but we are increasing the members based on the project needs out of our resource pools. (Based on the team introduction on @oadofrich, the team members had been increased since then)<br>The main companies involved are UseB (<a href="https://useb.co.kr/">https://useb.co.kr/</a>), which is a blockchain technic and marketing related company, Ziplab (<a href="http://zip-lab.co.kr/">http://zip-lab.co.kr/</a>) which is developing the game and AI-channel (@ai-channel) which is the company responsible for our illustrations and also the national marketing on Steem. Additionially, we have VC’s on board.</p>
+<h3 id="c-If-you-create-the-game-based-on-Steem-you-will-have-speed-issues"><a href="#c-If-you-create-the-game-based-on-Steem-you-will-have-speed-issues" class="headerlink" title="c. If you create the game based on Steem, you will have speed issues."></a>c. If you create the game based on Steem, you will have speed issues.</h3><p>Yes it is. We are also worried about the speed. When we experienced STEEM block chain based games, we felt it is a lot slower then conventional games. We are going to use Custom Json and use the Steem blockchain to relate to resource items and production related parts. Most of the parts to be utilized in the blockchain are likely to be included. In terms of speed, we are going to make it not too loose, but I think it is going to be unavoidable to centralize bigger parts. However, parts such as important item resource production facilities will use the STEEM blockchain.</p>
+<h3 id="e-Please-explain-your-token-economy"><a href="#e-Please-explain-your-token-economy" class="headerlink" title="e. Please explain your token economy."></a>e. Please explain your token economy.</h3><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/w7RqJWWw-image.png)</center>
+First, we are distributing 100% of the game revenue and put in a dividend pool because we believe and rely heavily on the token economy. Our goal is to maximize the company's profits by increasing the token value. In other words, gaming is the most important factor for us. We may add advertisement, but only if it is not hurting the playing experience of the user. 
+
+<p>We already started to develop the game with our capital and VC investment. In fact, it will cost more in the future. We want to overcome the shortage through sales. As you can see from the introduction of the game, the scale of the game is not much different from a regular RPG game, so it is also true that the expected development time has increased a lot.</p>
+<p>Payment is made with RORS token and STEEM OR SBD. This is because users who use the STEEM block chain can receive immediate payments and dividends into their account. 100% of paid items will get back to game players and token holders. The game player can collect game money, transfer it to the daily dividend pool and get a day’s dividend. Token holders can stake(hold) their tokens to receive dividends, players will keep their game money in the dividend pool or continue to develop themselves within the game. </p>
+<p><a href="https://steemit.com/roadofrich/@roadofrich/ror-test">Edit: an updated version of their token economy</a></p>
+<h3 id="f-When-will-the-dividend-payment-start"><a href="#f-When-will-the-dividend-payment-start" class="headerlink" title="f. When will the dividend payment start?"></a>f. When will the dividend payment start?</h3><p>It will start with the opening of the game.</p>
+<h3 id="g-Do-you-have-a-target-for-opening"><a href="#g-Do-you-have-a-target-for-opening" class="headerlink" title="g. Do you have a target for opening?"></a>g. Do you have a target for opening?</h3><p>The alpha test is targeted for latest August this year.</p>
+<h2 id="2-Other-Facts"><a href="#2-Other-Facts" class="headerlink" title="2. Other Facts"></a>2. Other Facts</h2><h3 id="a-Ziplab"><a href="#a-Ziplab" class="headerlink" title="a. Ziplab"></a>a. Ziplab</h3><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/lM8hATlt-image.png)</center>
+If you look at the company developing the game, you can find that they have a few days ago launched a game named called "The heritage of Mayhem" 
+
+<p>The game is only in Korean, but works on HTML 5 and is mobile optimized. </p>
+<p>Link: <a href="https://mayhem.zip-lab.co.kr/">https://mayhem.zip-lab.co.kr/</a></p>
+<p>So it looks like that the developers are able to deliver a game based on HTML5 and are also used to RPG like games. To make sure that company is really envolved I have personally called the number on their webpage and asked if their CEO Mr. Oh Hyun Kwon is involved in a Steem based game called Road of Rich. The person on the phone confirmed it.</p>
+<center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/gek1R3af-image.png)![image.png](https://files.steempeak.com/file/steempeak/jayplayco/Qb8ZtK2n-image.png)</center>
+
+<h3 id="b-UseB"><a href="#b-UseB" class="headerlink" title="b. UseB"></a>b. UseB</h3><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/8NjqvNUW-image.png)</center>
+I have called additionally the CEO of UseB Mr. Martin Kim and asked him several questions about the project. He is closely working together with Nia and Ziplab and also answers questions directly on the ROR discord server. UseB as a company is in the moment working on a solution for KYC to make it possible for companies to engage in cryptocurrency related business. He reconfimed that he is also involved with his team and that they are preparing the launch of ROR. They are also in contact with @birdinc (David from Steemit) who is in the moment in Korea and it is planned to meet with him this Wednesday. As you can see the latest post from @roadofrich is resteemed from the birdinc account.
+
+<center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/ZrtWoS1L-image.png)</center>
+
+<h2 id="3-Personal-thoughts"><a href="#3-Personal-thoughts" class="headerlink" title="3. Personal thoughts"></a>3. Personal thoughts</h2><p>First of all, it is a great sign that an external team outside of Steem is seeing the potential Steem-Engine can give and trying to start a funding for their game with a Steem-Engine based token. As far as I can see, there is a real team behind the project and trying to bring the promised game to us. The mastermind is Nia Yoon, holding and pushing the project forward together with UseB, AI-channel and Ziplab. </p>
+<p>I can not assure that the project will deliver as promised, as that is a risk that all kind of companies hold but based on the data I have got it looks good. I have asked to put additional Linkedin profiles on their key members on the Road of Rich page, so that international investors can also make their own picture about the team. The team is very responsive on feedback from the community and I hope also for the Steem economy that we can get the next blockbuster game on our Blockchain.</p>
+<h2 id="4-Contact-Points"><a href="#4-Contact-Points" class="headerlink" title="4. Contact Points."></a>4. Contact Points.</h2><ul>
+<li>ROR Discord : <a href="https://discord.gg/wbhQgkt">https://discord.gg/wbhQgkt</a></li>
+<li>Martin Kim Discord: Martin.kim#2324</li>
+<li>UseB homepage : <a href="https://useb.co.kr/">https://useb.co.kr/</a></li>
+<li>RoadofRich Homepage: <a href="http://roadofrich.com/">http://roadofrich.com/</a></li>
 </ul>
-<h1 id="3-Important-information"><a href="#3-Important-information" class="headerlink" title="3.  Important information"></a>3.  Important information</h1><ul>
-<li><a href="https://steempeak.com/steemmonsters/@jayplayco/jjm-steemmonsters-event-announcement-total-winning-10-000jjm-800-steem">JJM Steemmonsters Event announcement</a></li>
-<li><a href="https://steemit.com/jjm/@jayplayco/jjm-announcements-10th-april-2019-voting-rules">Newest Rules for upvoting for JJM holders - 2019.04.10</a></li>
-<li><a href="https://steempeak.com/jjm/@jayplayco/jjm-rules-for-upvoting-for-jjm-holders-beta">Old Rules for upvoting for JJM holders - Beta</a></li>
-<li><a href="https://steempeak.com/jjm/@jayplayco/jjm-introducing-jjm-token-the-community-driven-token-economy">Introducing JJM token</a></li>
-<li>Main Account for upvoting JJM holders: @virus707</li>
-<li>Main Account for Korean Updates about JJM: @jjm13, @virus707</li>
-<li>Main Account for English Updates about JJM: @jayplayco</li>
-</ul>
-<h2 id="STEEMMONSTERS-JJM-BLAST-Beyond-the-limits"><a href="#STEEMMONSTERS-JJM-BLAST-Beyond-the-limits" class="headerlink" title="STEEMMONSTERS , JJM BLAST ,Beyond the limits!"></a>STEEMMONSTERS , JJM BLAST ,Beyond the limits!</h2>
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-10T15:18:45.000Z">2019-04-11</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    3분 읽기 (대략 431 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/04/11/jayplayco.jjm-today-s-update-2019-04-11-jjm-holders-adjusted/">[JJM] Today&#39;s update 2019-04-11 - JJM holders adjusted</a>
-            
-        </h1>
-        <div class="content">
-            <center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/BoP4LAaQ-image.png)</center>
-The JJM Chart is showing the following data.
-* Price : 0.155 Steem / JJM
-* Compared before day: -3607 JJM
-   (JJM tokens added to the total volume compared to the day before)
-* Total Qty: 1,448,644 JJM
-   (Total Qty in Market holding without locked-up Qty and found Qty.)
-* JJM holders: 158 accounts (+2 account)
-   (except the founders' accounts) - we have adapted the holder number and eliminated the holders that hold 0 JJM
-* The current Market value (except founders Qty.) translates to a holders market cap of 224,539 STEEM.
-* Details can be found under https://passionbull.github.io/jjm-list/ made by @jacobyu
-
-<center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/QrzN870t-image.png)</center>
-
-<p>We have adapted the numbers of holders and deleted the holders that are showing 0 JJM. It has to be mentioned that even a holder with a bigger amount of JJM could show 0 JJM when all the tokens are currently in an order for sale. The price for JJM is still raising and now at a level of 0.155 Steem. The marketcap only for the JJM that are in circulation (except the founders accounts) is 224,539 Steem.</p>
-<center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/tUCJQ1js-image.png)</center>
-
-<p>The daily overview of the DEX <a href="https://steem-engine.com/">https://steem-engine.com/</a> is showing JJM as the highest volume in the last 24 hours with 6936USD volume. The latest price at the time writing this post is 0.15 STEEM. </p>
-<h2 id="Upcoming-Events"><a href="#Upcoming-Events" class="headerlink" title="Upcoming Events"></a>Upcoming Events</h2><ul>
-<li><a href="https://busy.org/@jayplayco/jjm-steemmonsters-tournament-2nd-round">Steemmonsters Tournament 2nd Round</a></li>
-</ul>
-<center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/DxLv948J-image.png)</center>
-As announced we are starting the second tournament (out of four) this Sunday. We changed the time to see if it would fit better for the players. During the last week the value of JJM went up, so the actual prizes in USD also increased. Additionally, we have redistributed the prize up to the 8th place. 
-
-
-<h2 id="STEEMMONSTERS-JJM-BLAST-Beyond-the-limits"><a href="#STEEMMONSTERS-JJM-BLAST-Beyond-the-limits" class="headerlink" title="STEEMMONSTERS , JJM BLAST ,Beyond the limits!"></a>STEEMMONSTERS , JJM BLAST ,Beyond the limits!</h2><h2 id="Important-information"><a href="#Important-information" class="headerlink" title="Important information"></a>Important information</h2><h1 id="3-Important-information"><a href="#3-Important-information" class="headerlink" title="3.  Important information"></a>3.  Important information</h1><ul>
-<li><a href="https://steempeak.com/steemmonsters/@jayplayco/jjm-steemmonsters-event-announcement-total-winning-10-000jjm-800-steem">JJM Steemmonsters Event announcement</a></li>
-<li><a href="https://steemit.com/jjm/@jayplayco/jjm-announcements-10th-april-2019-voting-rules">Newest Rules for upvoting for JJM holders - 2019.04.10</a></li>
-<li><a href="https://steempeak.com/jjm/@jayplayco/jjm-rules-for-upvoting-for-jjm-holders-beta">Old Rules for upvoting for JJM holders - Beta</a></li>
-<li><a href="https://steempeak.com/jjm/@jayplayco/jjm-introducing-jjm-token-the-community-driven-token-economy">Introducing JJM token</a></li>
-<li>Main Account for upvoting JJM holders: @virus707</li>
-<li>Main Account for Korean Updates about JJM: @jjm13, @virus707</li>
-<li>Main Account for English Updates about JJM: @jayplayco</li>
-</ul>
+<p>!! Disclaimer: I am not related nor involved with the team of ROR, but have invested personally into their token. This is not an advise for investment but only for entertainment purposes.</p>
 
         </div>
         
@@ -297,7 +304,7 @@ As announced we are starting the second tournament (out of four) this Sunday. We
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-09T15:16:24.000Z">2019-04-10</time>
+                <time class="level-item has-text-grey" datetime="2019-06-15T13:44:33.000Z">2019-06-15</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
@@ -307,7 +314,7 @@ As announced we are starting the second tournament (out of four) this Sunday. We
                 <span class="level-item has-text-grey">
                     
                     
-                    2분 읽기 (대략 334 단어)
+                    9분 읽기 (대략 1294 단어)
                 </span>
                 
                 
@@ -316,113 +323,40 @@ As announced we are starting the second tournament (out of four) this Sunday. We
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/04/10/jayplayco.jjm-announcements-10th-april-2019-voting-rules/">[JJM] Announcements 10th April 2019 - Voting Rules</a>
+                <a class="has-link-black-ter" href="/2019/06/15/jayplayco.crypterium/">[암호화폐 직불카드] Crypterium - 한국에서도 주문 가능</a>
             
         </h1>
         <div class="content">
-            <center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/2TAyAxqh-image.png)</center>
+            <center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/QenqrKBG-image.png)</center>
 
-<p>Hi, @jayplayco here.</p>
-<p>@jacobyu finally created an own JJM voting bot in lightning speed and the whole JJM team would like to thanks for this great work. Until now the voting process was a human run manual service from @virus707 which had the downside that it took a lot of time to vote all the relevant JJM tagged posts.</p>
-<p>Now with the new JJM bot, we are able to vote automatically based on the following rules.</p>
-<h1 id="0-TL-DR"><a href="#0-TL-DR" class="headerlink" title="0. TL;DR"></a>0. TL;DR</h1><ul>
-<li>You need more than 100 JJM to get a daily upvote.</li>
-<li>For an upvote you need to add the JJM tag</li>
-</ul>
-<h1 id="1-Voting-range"><a href="#1-Voting-range" class="headerlink" title="1. Voting range"></a>1. Voting range</h1><ul>
-<li>Max vote will be from now 1+45%=46%</li>
-<li>For each 1000JJM hold you will get additionally 1%</li>
-<li>This means for 45K JJM tokens you will get a 46% upvote, but also for 100K JJM tokens you will get a 46% upvote.</li>
-<li>Voting will be done from the account @virus707 (current SP 450K)</li>
-</ul>
-<h1 id="2-Voting-Time"><a href="#2-Voting-Time" class="headerlink" title="2. Voting Time"></a>2. Voting Time</h1><ul>
-<li>Our JJM bot will vote once a day. </li>
-<li>If you use more than one JJM tag within that 24hours window, only one post will be upvoted.</li>
-</ul>
-<h1 id="3-Min-needed-JJM"><a href="#3-Min-needed-JJM" class="headerlink" title="3. Min. needed JJM"></a>3. Min. needed JJM</h1><ul>
-<li>The minimum needed JJMs are 100 tokens to be able to get an upvote from the JJM bot.</li>
-<li>Please remind that only the Qty of JJM that are currently not under an open order is counted. </li>
-</ul>
-<h1 id="4-Additional-function"><a href="#4-Additional-function" class="headerlink" title="4. Additional function"></a>4. Additional function</h1><ul>
-<li>We are preparing to leave a comment after voting.</li>
-</ul>
-<h1 id="5-Disclaimer"><a href="#5-Disclaimer" class="headerlink" title="5. Disclaimer"></a>5. Disclaimer</h1><ul>
-<li>Please be informed that these rules can change at any time, especially when the main account @virus707 is adding additional SP or the holder numbers are increasing.</li>
-</ul>
-<h2 id="Important-information"><a href="#Important-information" class="headerlink" title="Important information"></a>Important information</h2><ul>
-<li><a href="https://steempeak.com/jjm/@jayplayco/jjm-rules-for-upvoting-for-jjm-holders-beta">Old Rules for upvoting for JJM holders - Beta</a></li>
-<li><a href="https://steempeak.com/jjm/@jayplayco/jjm-introducing-jjm-token-the-community-driven-token-economy">Introducing JJM token</a></li>
-<li>Main Account for upvoting JJM holders: @virus707</li>
-<li>Main Account for Korean Updates about JJM: @jjm13, @virus707</li>
-<li>Main Account for English Updates about JJM: @jayplayco</li>
-</ul>
-<h2 id="STEEMMONSTERS-JJM-BLAST-Beyond-the-limits"><a href="#STEEMMONSTERS-JJM-BLAST-Beyond-the-limits" class="headerlink" title="STEEMMONSTERS , JJM BLAST ,Beyond the limits!"></a>STEEMMONSTERS , JJM BLAST ,Beyond the limits!</h2>
-        </div>
-        
-        
-        
-    </div>
-</div>
+<p>안녕하세요, @jayplayco입니다.</p>
+<p>축구 다들 잘 보셨지요? 아쉽지만 대견합니다. ^^</p>
+<p>새벽에 뉴스를 코인계 뉴스를 보다가 관심이 가는 내용이 있어서 조금더 조사하고 관련 사항 전달드립니다. </p>
+<h2 id="0-간편요약-TL-DR"><a href="#0-간편요약-TL-DR" class="headerlink" title="0. 간편요약 (TL;DR)"></a>0. 간편요약 (TL;DR)</h2><p>UnionPay 기반 직불카드를 발급 받아 비트코인, 라이트코인, 이더리움을 충전해서 실생활에 결재를 하면서 쓸 수 있습니다. 다른 여러 서비스와 비교했을때 가장 큰 차이는 한국에서도 KYC이후 카드 주문이 가능하다는 것입니다.</p>
+<h2 id="1-Crypterium-배경"><a href="#1-Crypterium-배경" class="headerlink" title="1. Crypterium 배경"></a>1. Crypterium 배경</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/aenVaSya-image.png)</center>
+회사는 구 소련의 한 지역이였던 Estonia에 위치하고 있습니다. 에스토니아는 스타트업과 암호화폐 관련 비교적 오픈되어있는 있고, 심지어 "ESTCOIN"이라는 국가 단위 암호화폐를 발표까지 계획했으나, EU의 반대로(질타) 그만두었던 국가입니다. [소스](https://complyadvantage.com/knowledgebase/crypto-regulations/cryptocurrency-regulations-estonia/)
 
+<p>Crypterium OU는 A 시리즈때 1백만USD, B 시리즈때 7백만 USD (2015년), 그리고 2017년 ICO떄 5천1백만 USD를 펀딩했습니다. 현재 KPMG와 H2벤쳐가 펀딩을 하고 있습니다. </p>
+<p>CEO는 Steven Parker 라는 분으로 이전 동유럽 비자를 General Manager로 담당했던 분이 런던 주재하에 2018년 12월부터 하고 있습니다.</p>
+<center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/HKfA0fN0-image.png)![image.png](https://files.steempeak.com/file/steempeak/jayplayco/jyMMGInJ-image.png)![image.png](https://files.steempeak.com/file/steempeak/jayplayco/M9S5Eo8o-image.png)</center>
 
+<p>직불카드가 연동된 은행은 Coindesk의 기사에 의하면 필리핀에 있는 은행으로 확인된다고 합니다. </p>
+<h2 id="2-유니온페이-관련"><a href="#2-유니온페이-관련" class="headerlink" title="2. 유니온페이 관련"></a>2. 유니온페이 관련</h2><p>UnionPay는 중국의 은행들이 출자해서 2002년 설립된 중국 국영 독점 신용카드입니다. 현재는 2008년 이후 국내 BC카드와 제휴를 맺고 있다. <a href="https://terms.naver.com/entry.nhn?docId=938131&cid=43667&categoryId=43667">소스</a><br>Crypterium이 비자나 마스터를 선택하지 않고 유니온페이를 선택한 가장 중요한 이유는 지역관리때문에 그렇다. 보통 비자나 마스터는 지역을 영국, 유럽, 미국, 아시아, 등등으로 나눠서 관리하고 있는데, 유니온페이는 간단하게 중국, 중국외로 관리가 되기 때문입니다. 즉, 제외되는 국가를 가능한 줄일 수 있는 이유와 전세계 서비스를 오퍼할 수 있는 이유이기도 합니다.</p>
+<h2 id="3-사용관련-앱-연동"><a href="#3-사용관련-앱-연동" class="headerlink" title="3. 사용관련 (앱 연동)"></a>3. 사용관련 (앱 연동)</h2><p>Crypterium은 직불카드와 앱이 연동되어서 작동합니다. 아이폰이나 안드로이드앱이 있으며, 설치시 핸드폰번호로 로그인을 하도록 되어 있습니다.</p>
+<center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/hxmk6tpp-image.png)</center>
 
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-03-26T23:52:03.000Z">2019-03-27</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1분 읽기 (대략 198 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/03/27/jayplayco.jjm-rules-for-upvoting-for-jjm-holders-beta/">[JJM] Rules for upvoting for JJM holders - Beta</a>
-            
-        </h1>
-        <div class="content">
-            <center>https://steemitimages.com/640x0/https://files.steempeak.com/file/steempeak/jayplayco/s68xygU7-image.png
-[Source](https://www.freepik.com/free-photos-vectors/gold)</center>
-
-<p>Hi, @jayplayco here,</p>
-<p>from today on I will officially inform about important news and developments from JJM, especially for the international community.</p>
-<h2 id="1-The-upvoting-rule-when-using-the-JJM-Tag-for-JJM-token-holder"><a href="#1-The-upvoting-rule-when-using-the-JJM-Tag-for-JJM-token-holder" class="headerlink" title="1. The upvoting rule when using the JJM Tag for JJM token holder"></a>1. The upvoting rule when using the JJM Tag for JJM token holder</h2><h3 id="a-General-Rule"><a href="#a-General-Rule" class="headerlink" title="a. General Rule"></a>a. General Rule</h3><ul>
-<li>1% upvoting minium for JJM token holders</li>
-<li>‘+ 1% per 1000JJM </li>
-<li>Max 45% upvote (max 45% is in the moment about 4.5$ STU)</li>
-<li>1 upvote per day</li>
+<p>암호화폐를 보내고 전송하는것은 앱을 통해서 확인및 컨트롤을 하고 최초 사용시 KYC 없이는 150EUR까지 거래가 가능한것으로 나온다. 물론 카드를 받기 위해서는 결국 KYC를 실행해야 하며, 이를 위해서는 다음과 같은 자료를 제공해줘야 합니다.</p>
+<ul>
+<li>신분증 (면허 or 주민 or 여권)</li>
+<li>거주증명 (수도세, 관리세, 신용카드세등)</li>
+<li>전자서명 (종이에 서명하고 자신과 직접 사진찍기….)</li>
 </ul>
-<h3 id="b-Steem-Power-organization"><a href="#b-Steem-Power-organization" class="headerlink" title="b. Steem Power organization"></a>b. Steem Power organization</h3><ul>
-<li>When the Voting Mana is not enough (the % is not yet decided) the voting will be passed in the following order.</li>
-<li>JJM holders -&gt; @virus707 -&gt; @jjm13</li>
-<li>jjm13 is the account that will be used to provide the dividends</li>
-</ul>
-<h3 id="c-Voting-process"><a href="#c-Voting-process" class="headerlink" title="c. Voting process"></a>c. Voting process</h3><ul>
-<li>It is planned to vote once a day and at the same time. </li>
-<li>It is in planning that a comment could be left after upvoting</li>
-<li>The % JJM tokens is based on the following data  <a href="https://bloks.xyz/token/JJM">https://bloks.xyz/token/JJM</a></li>
-</ul>
-<h3 id="d-Disclaimer"><a href="#d-Disclaimer" class="headerlink" title="d. Disclaimer"></a>d. Disclaimer</h3><p>All rules can and will be changed during the process of building the token economy. Especially the rule for 1% per 1000 JJM tokens is going to be changed potentially as an exponential distribution.</p>
+<center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/Ylh4YIgA-image.png)</center>
+
+<p>직불카드를 사용하기 위해서는 암호화폐를 입금을 해야하며, 입금시 1.5%의 수수료가 붙습니다. 직불 카드 사용은 따로 수수료를 받지 않는다고 합니다만, 아마도 환전시 자동으로 차감을 어느정도 하지 않을까 예상은 합니다. 언제나 카드 환전의 경우는 직접 거래소같은 곳에서 전환하는것 보다는 손해일 확률이 높기 때문입니다. </p>
+<p>KYC를 끝내면 사용 제한은 하루에 10K USD (약 1천2백만원) 이고 한달에 60K USD (약 7천2백만원)정도 됩니다.</p>
+<h2 id="4-개인적인-생각"><a href="#4-개인적인-생각" class="headerlink" title="4. 개인적인 생각"></a>4. 개인적인 생각</h2><p>유럽에 살고 있으면 신청할 수 있는 카드의 종류의 비교적 많은데, 현재 한국에 거주시 비자나 마스터의 경우는 신청 불가능한 카드가 대부분입니다. 그만큰 이런 서비스가 이제 런칭해서 한국에서도 카드를 신청할 수 있는 곳이 있다는 것은 반가운 일입니다. UnionPay라는 것, 은행이 완벽하게 밝혀지지 않은 필리핀에 있다는 것과 막상 회사는 에스토니아에 있으면서 대표는 런던에서 활동하는 형태는 암호화폐계가 서비스를 만들어가기 위해서는 많은 법망과 제한들을 뚫고 가야하는 느낌을 받습니다. </p>
+<p><a href="https://www.coindesk.com/crypterium-introduces-global-crypto-payments-card">기사소스 Coindesk</a></p>
 
         </div>
         
@@ -445,7 +379,7 @@ As announced we are starting the second tournament (out of four) this Sunday. We
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-03-18T13:48:48.000Z">2019-03-18</time>
+                <time class="level-item has-text-grey" datetime="2019-06-13T11:45:21.000Z">2019-06-13</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
@@ -455,7 +389,7 @@ As announced we are starting the second tournament (out of four) this Sunday. We
                 <span class="level-item has-text-grey">
                     
                     
-                    9분 읽기 (대략 1382 단어)
+                    9분 읽기 (대략 1413 단어)
                 </span>
                 
                 
@@ -464,58 +398,218 @@ As announced we are starting the second tournament (out of four) this Sunday. We
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/03/18/jayplayco.jjm-jjm/">[JJM] 오치님의 JJM 토큰 정리</a>
+                <a class="has-link-black-ter" href="/2019/06/13/jayplayco.cryptocompare-research/">[거래소 벤치마킹] CryptoCompare Research의 암호화폐 거래소 벤치마킹</a>
             
         </h1>
         <div class="content">
-            <center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/cC7aSglZ-image.png)
- <a href="https://www.freepik.com/free-photos-vectors/gold">Gold vector created by freepik - www.freepik.com</a> </center>
+            <center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/HFJetBAV-image.png)</center>
+
+<p>안녕하세요, @jayplayco입니다.</p>
+<p>한국에서는 대형 거래소가 업비트나 빗썸같은 곳들을 떠올리게 되고, 해외는 한국에서 접근 가능한 바이낸스같은 거래소를 이용하기도 하지요. 중소형 거래소의 경우는 자금의 안정성부터 운영주체에 대한 신뢰가 될지 안될지에 대한 여러가지를 고려해서 거래를 하기도 하고요. </p>
+<p>몇일전 @skuld2000님의 <a href="https://steemit.com/sct/@skuld2000/4mfded">포스팅에서 언급된</a>  bte.top이라는 거래소의 대표는 BTC 마진거래로 돈 날리고 세상을 등진 소식도 들리고요. </p>
+<p>이번 CryptoCompare Research 사에서 발표된 거래소 벤치마킹 데이타와 더불어 벤치마킹 방법과 그 이유에 대해서 언급을 했습니다. 이 보고서를 조금 더 자세하게 들여다보도록 하겠습니다.</p>
+<ul>
+<li>원문 보고서 링크: <a href="https://www.cryptocompare.com/media/35650785/cryptocompare_exchange_benchmarking_2019_06.pdf">https://www.cryptocompare.com/media/35650785/cryptocompare_exchange_benchmarking_2019_06.pdf</a></li>
+<li>보고서에 나온 전체 순위: <a href="https://www.cryptocompare.com/external/research/exchange-ranking/">https://www.cryptocompare.com/external/research/exchange-ranking/</a></li>
+</ul>
+<h2 id="0-문제점-파악-잘못된-거래-볼륨"><a href="#0-문제점-파악-잘못된-거래-볼륨" class="headerlink" title="0. 문제점 파악 - 잘못된 거래 볼륨"></a>0. 문제점 파악 - 잘못된 거래 볼륨</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/rM2oAmGo-image.png)
+[Source: Cryptocompare Exchange Benchmarking Report](https://www.cryptocompare.com/media/35650785/cryptocompare_exchange_benchmarking_2019_06.pdf)</center>
+
+<p>많은 거래소에서는 자체 거래소 코인을 상장하고 거래소 거래시 채굴이 가능하게 하거나, 거래시 할인을 받을 수 있는 방법으로 쓰고 있습니다. 대표적으로 상당히 큰 시장규모를 형성하고 있는 바이낸스의 BNB가 그런 케이스죠. 하지만 이런 종류의 채굴은 사실상 거래 볼륨을 실체와는 조금 다르게 부풀리는 기능도 갖고 있는 것은 사실입니다. 또한 거래 수수료에 대한 경쟁적 할인으로도 거래볼륨이 비대해지는 효과가 있습니다.</p>
+<p>CryptoCompare에서는 투자자의 경우 암호화폐 거래소를 볼때 다음과 같은 고민을 갖고 거래를 할것으로 가정을 합니다.</p>
+<ul>
+<li>거래소가 제공하는 data를 믿을 수 있는가?</li>
+<li>거래소에서 시장 조작이 있을 수 있는가?</li>
+<li>거래소에 있는 내 자금은 안전한가?</li>
+<li>거래소 API가 좋은가?</li>
+</ul>
+<p>이는 사실상 거래소에서 거래 볼륨을 조작하기란 생각보다 너무 쉽기 때문에, 전반적인 거래소의 거래 볼륨과 서비스를 어느정도 신뢰를 할 수 있는지가 중요하다는것이 취지입니다.</p>
+<h2 id="1-벤치마킹과-랭킹에-쓰이는-수치"><a href="#1-벤치마킹과-랭킹에-쓰이는-수치" class="headerlink" title="1. 벤치마킹과 랭킹에 쓰이는 수치"></a>1. 벤치마킹과 랭킹에 쓰이는 수치</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/3jzttGei-image.png)[Source: Cryptocompare Exchange Benchmarking Report](https://www.cryptocompare.com/media/35650785/cryptocompare_exchange_benchmarking_2019_06.pdf)</center>
+
+<p>모든 거래소에서 다음과 같은 조건들을 검토하고 이에 따른 점수를 주어 %별로 나눴습니다. </p>
+<ul>
+<li>지리적 조검 : 13.3% (국가 rating, 암호화폐 규제)</li>
+<li>법적 / 규제 적 평가 : 13.3% (KYC여부, 손실보험, 라이센스, 법적 지위의 사업체등)</li>
+<li>투자 : 13.3% (VC펀팅, 비 암호화폐쪽 투자)</li>
+<li>팀 / 회사 : 13.3% (임원진 정보와 교육, 경험, 거래소 연혁등)</li>
+<li>데이터 제공 품질 : 13.3% (API, 과거 데이타 제공등)</li>
+<li>거래 감시 : 6.7% (거래 감시 시스템 여부)</li>
+<li>시장 품질 : 26.7* (유동성, 분단위 안정성, 거래량 표준 편차, 변동성 및 볼륨 상관관계등)</li>
+</ul>
+<h2 id="2-점수-집계및-채점"><a href="#2-점수-집계및-채점" class="headerlink" title="2. 점수 집계및 채점"></a>2. 점수 집계및 채점</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/zh02TN82-image.png)[Source: Cryptocompare Exchange Benchmarking Report](https://www.cryptocompare.com/media/35650785/cryptocompare_exchange_benchmarking_2019_06.pdf)</center>
+
+<p>점수는 0-100점사이의 점수로 계산이 되며, 90점 이상은 AA, 30점 이하는 F점수를 받게 됩니다.</p>
+<h2 id="3-거래소별-등수"><a href="#3-거래소별-등수" class="headerlink" title="3. 거래소별 등수"></a>3. 거래소별 등수</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/yTzvDF8l-image.png)[Source: CryptoCompare](https://www.cryptocompare.com/external/research/exchange-ranking/)</center>
+
+<p>현재 저 벤치마킹에 의하면 코인베이스, 폴로닉스와 비트스탬프가 1-3위고, 크라켄 7위, 바이낸스 8위입니다.</p>
+<p>한국 거래소중에는 빗썸이 10위를 차지했고요, 코빗이 15위, 업비트가 21위, 코인원이 27위를 했네요.</p>
+<ul>
+<li>빗썸: 10위, 53.1점, A Rating</li>
+<li>코빗: 15위, 47.2점, B Rating</li>
+<li>업빗: 21위, 43,3점, B Rating</li>
+<li>코인원: 27위, 38.6점, C Rating</li>
+</ul>
+<h2 id="4-개인적인-생각"><a href="#4-개인적인-생각" class="headerlink" title="4. 개인적인 생각"></a>4. 개인적인 생각</h2><p>이 레포트 뒷편에나오는 부분중 한가지가 각 거래소별 트레이딩 패턴에 이상이 있는지, 그리고 실제로 가짜 거래 볼륨이 만들어지는지에 대한 측정을 시도한 부분이 있습니다. 하지만 MM (마켓 메이커)들의 트레이딩 패턴 변경과 실제로 트레이딩 패턴조차도 거래소의 품질과 직접적인 연관을 짓기 어려워서, 분석만 해놓고 벤치마킹에는 반영이 되어있지는 않습니다.</p>
+<center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/KLf4YUQX-image.png)[Source: Cryptocompare Exchange Benchmarking Report](https://www.cryptocompare.com/media/35650785/cryptocompare_exchange_benchmarking_2019_06.pdf)</center>
+
+<p>그래서 그런지, 레포트가 제공하는 국내 벤치마킹 순위와 개인적으로 체감하는 순위에는 좀 차이가 많이 나는것도 있습니다.</p>
+<p>이런 종류의 벤치마킹은 언제니 참고정도를 할 수 있는 사항이라고 보면 될것 같고요, 막연하게, 아니면 여러 소스에서 보고 들었던 data를 바탕으로 각각 만들었던 거래소에 대한 기준점에 참고사항 정도로 활용하면 좋을것으로 보입니다.</p>
+<p>[기사원문 : <a href="https://www.coindesk.com/cryptocompare-launches-benchmark-rankings-for-cryptocurrency-exchanges]">https://www.coindesk.com/cryptocompare-launches-benchmark-rankings-for-cryptocurrency-exchanges]</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-11T14:40:15.000Z">2019-06-11</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    8분 읽기 (대략 1213 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/11/jayplayco.pmt-kr/">[피크몬] 토너먼트 사용을 위한 PMT토큰 런칭 - 피크몬KR 업데이트</a>
+            
+        </h1>
+        <div class="content">
+            <center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/9mCCE75T-image.png)</center>
 
 <p>안녕하세요, @jayplayco 입니다.</p>
-<p>어떤식으로 글을 쓸까 고민하다가, 그냥 지금 있는 그대로, 제가 생각하는 사항들을 적어볼까 합니다.<br>발단은, 스팀엔진 (<a href="https://steem-engine.com/?p=market&amp;t=JJM">https://steem-engine.com/?p=market&amp;t=JJM</a>) 이라는 곳이 생겨나면서 저같은 코알못(코드를 모르는 사람)도 10분만에 5만원을 들여서 코인을 생성할 수 있는 스팀생태계가 되어서 일어나는 현상에 대한 것입니다.</p>
-<p>스팀엔진을 통해 코인을 생성하신 KR 분들은 몇분 계시는데, @luckystrikes 님은 스팀엔지상에서 STEEM과 SBD를 선점하셔서 발행하시고 airdrop을 통해서 일부 배포를 하셨습니다. @yesjam 토큰도 발행되어서 백서까지 만들어서 진행중에 있습니다. 또한 선무님의 @stablewon 프로젝트도 이미 배당을 시작하고 있습니다. 그리고 @virus707 님이 JJM 토큰을 발행하고 프라이빗 세일까지 진행했습니다. 하기글은 JJM 토큰 관련하여 추후 History 추적이 될 수 있도록 정리를 했습니다.</p>
-<h3 id="주의-이-글은-절대-투자자문이-아닙니다-단지-현재-스팀상에서-스팀엔진의-쉬운-토큰-생성으로-인한-토큰-생태계가-탄생하는-과정을-지켜보는-글입니다"><a href="#주의-이-글은-절대-투자자문이-아닙니다-단지-현재-스팀상에서-스팀엔진의-쉬운-토큰-생성으로-인한-토큰-생태계가-탄생하는-과정을-지켜보는-글입니다" class="headerlink" title="주의 : 이 글은 절대 투자자문이 아닙니다. 단지 현재 스팀상에서 스팀엔진의 쉬운 토큰 생성으로 인한 토큰 생태계가 탄생하는 과정을 지켜보는 글입니다."></a>주의 : 이 글은 절대 투자자문이 아닙니다. 단지 현재 스팀상에서 스팀엔진의 쉬운 토큰 생성으로 인한 토큰 생태계가 탄생하는 과정을 지켜보는 글입니다.</h3><h2 id="1-JJM-토큰-배경과-정리"><a href="#1-JJM-토큰-배경과-정리" class="headerlink" title="1. JJM 토큰 배경과 정리"></a>1. JJM 토큰 배경과 정리</h2><h3 id="a-코인관련"><a href="#a-코인관련" class="headerlink" title="a. 코인관련"></a>a. 코인관련</h3><ul>
-<li>이름 : JJM 코인 (짱짱맨 코인)</li>
-<li>생성일시 : 2019년 3월 9일</li>
-<li>최초 생성시 가격 : 1 JJM = 0.01 STEEM</li>
-<li>ICO, 에어드랍 없음.</li>
-<li>총발행량 : 3억개 (Inflation 없음, 절대발행량임)</li>
-<li>발행이 : @virus707</li>
-<li>발행설명 : JJM 태그가 없어서.</li>
-<li>토큰 설명 : (현재까지는) 기능은 없고 토큰 이코노미만 있는 토큰, 코인홀더와 고민후 방향 개척.</li>
-</ul>
-<center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/2I7uN9ak-image.png)</center>
+<p>@aggroed가 스팀엔진을 통해 거의 하루단위로 새로운 소식을 내고 있습니다만, 사실상 @aggroed와 @yabapmatt의 주무대는 여전히 @steemmonsters의 Splinterlands.io입니다.  스플린터랜드를 애용하는 유저분들은 카드 구매및 트레이딩등을 위해서 그동안 peakmonsters.kr을 이용을 많이 하셨을 겁니다. 이는 @asgarth와 @jarvie라는 유저에 의해 운영되고 있으며 이들은 사실상  제가 애용하는 @steempeak을 운영하는 팀이기도 합니다. 개인적으로는 스팀상에서 열일하는 팀중 하나라고 생각합니다.</p>
+<p>피크몬팀과 스팀몬스터팀의 유대관계는 상당히 높은 편입니다. 사실상 유일한 스몬용 NFT마켓을 만들어서 운영하는게 피크몬이기 때문이기도 합니다. 이 유대관계는 스팀엔진의 거래마켓도 결국 @asgarth가 도와서 만들어진 사실을 보고도 알 수 있습니다.</p>
+<p>이에 따라 스플린터랜드 팀에서 토너먼트 입장료를 스팀과 스달로 받는것 말고도 스팀엔진 토큰으로도 받을 수 있도록 했습니다. 현재 입장료로 가능한 스팀엔진 토큰은 피크몬스터의 PMT 외에 DEC와 BATTLE이라는 토큰이 있습니다.</p>
+<center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/BAsTmkSe-image.png)</center>
 
-<h3 id="b-Private-Sale-완판"><a href="#b-Private-Sale-완판" class="headerlink" title="b. Private Sale 완판"></a>b. Private Sale 완판</h3><ul>
-<li>Privat Sales 일시 : 2019년 3월 </li>
-<li>Sales : Total 481,000JJM for 4810 STEEM</li>
-<li>3월 11일 2억 9천만개는 @goldenticket에 락업 - 1년후 수량 재정의후 재락업 예정 (2020년 3월 10일)</li>
+<h2 id="0-PMT-설명"><a href="#0-PMT-설명" class="headerlink" title="0. PMT 설명"></a>0. PMT 설명</h2><p>PMT는 스팀엔진 기반 토큰이며 피크몬스터에서 운영하는 토너먼트 입장료로 쓰이는 토큰입니다. 현재 피크몬KR을 2019년에서 한번이라도 1$이상의 거래가 있으신 분들은 각각 1 PMT가 피크몬팀에서 에어드랍 되었습니다. 이 PMT를 이용해서 현재 진행중인 피크몬 토너먼트에 에어드랍받으신 PMT를 사용하시면 무료로 참여가 가능하십니다.</p>
+<h2 id="1-피크몬-100K-DEC-토너먼트"><a href="#1-피크몬-100K-DEC-토너먼트" class="headerlink" title="1. 피크몬 100K DEC 토너먼트"></a>1. 피크몬 100K DEC 토너먼트</h2><ul>
+<li>토너먼트 링크 : <a href="https://splinterlands.io/?p=tournament&amp;id=7ed8f972430e051d8bbb17f928cc8d095fb472d4">https://splinterlands.io/?p=tournament&amp;id=7ed8f972430e051d8bbb17f928cc8d095fb472d4</a></li>
+<li>일시: 2019.06.17(월) 오전 06:30</li>
+<li>사용자 수: 무제한</li>
+<li>상금 - 512등까지 / 1등 19200DEC, 2등 9600DEC, 3등 4800DEC</li>
+<li>입장료: 1 PMT (에어드랍분 이용하시면 됩니다. ^^)</li>
+<li>리그: 실버리그</li>
+<li>방식: 싱글 엘리미네이션</li>
 </ul>
-<h3 id="c-현재까지-정리된-토큰-이코노미"><a href="#c-현재까지-정리된-토큰-이코노미" class="headerlink" title="c. 현재까지 정리된 토큰 이코노미"></a>c. 현재까지 정리된 토큰 이코노미</h3><ul>
-<li>짱짱맨과 같이 스팀 포스팅을 통해 보상을 받고 그 보상으로 시장가 매수 혹은 배당을 실시</li>
-<li>지속적인 시장가 매수 or 배당을 통해 가치 부양</li>
-<li>에어드랍 자제, 직접 매수 홀더들을 위한 프로모션</li>
-<li>짱짱맨과 연계 가능성 농후함 (확정은 아님)</li>
-<li>카톡 주소 : <a href="https://open.kakao.com/o/gpZy3Xhb">https://open.kakao.com/o/gpZy3Xhb</a></li>
-</ul>
-<h2 id="2-개인적인-생각"><a href="#2-개인적인-생각" class="headerlink" title="2. 개인적인 생각"></a>2. 개인적인 생각</h2><p><img src="https://files.steempeak.com/file/steempeak/jayplayco/S4gN3x0O-image.png" alt="image.png"></p>
-<h3 id="2019년-3월-19일-기준"><a href="#2019년-3월-19일-기준" class="headerlink" title="2019년 3월 19일 기준"></a>2019년 3월 19일 기준</h3><ul>
-<li>@virus707님의 스파 : 440K STEEM (그중 현재 임대 201K이나 금년중 회수 예정)</li>
-<li>440K SP 업보팅시 11.19STU</li>
-<li>Virus707 JJM토큰 구매시 -&gt; 11STU x 10(회) x 7(일)x 25%(큐레이션)=192.5STU</li>
-<li>JJM 토큰 보유자 구매시-&gt; 11STU x 10(회) x 7(일)x 75%(Author)x50%(SBD분)=288.75STU</li>
-<li>일주일에 토큰 이코노미 내에서만 총 481.25STU의 시장가 매수가 가능함.</li>
-<li>jjangjjangman 태그를 JJM 토큰 보유에 따른 JJM 태그로 전환 가능성 있음.</li>
-</ul>
-<p>시장가 매수 (or 배당)을 했을 경우 JJM 토큰의 실질적인 가격은 지속적으로 뛸 수 있는 가능성이 있습니다. 다만 모든 큐레이션및 업보팅을 JJM 토큰으로 전환시 STEEM inflation으로 인한 장기적인 하락은 예상할 수 있습니다. 물론 이는 스팀이 현재와 가격이 변동이 없을시에만 해당되는 사항이긴 합니다. (그럴리는 없겠죠? ^^)</p>
-<p>개발자 없이 움직이고 있는 상황에서 추후 JJM 태그에 대해 JJM 토큰 보유 현황 체크및 보팅을 추가로 하면 (개발자 JJM 토큰 지급을 통해??) 어느정도 선까지는 충분히 선순환될 수 있는 코인생태계가 만들어질 것이라고 보여집니다. 물량 락업에 대한 결정도 토큰의 기본적인 가치를 충분히 올려줄 수 있는 사항중 하나이고요. 또한 토큰 홀더들과 같이 의논을 실시간으로 하면서 의견 수렴해서 토큰 이코노미를 만들어가는 것도 신선합니다. 거래량이 거의 없는 스팀엔진에 맨손으로 활력과 거래량을 만들어가는 것도 흥미롭습니다.</p>
-<p>하지만 이 프로젝트에서 가장 중요한 것은 역시 “신뢰” 라는 코드입니다. JJM 토큰의 실질적인 가치는 한마디로 축약하자면 다음과 같습니다.</p>
+<p>사실상 토너먼트에 512명까지 참여한다는 것은 현재 스몬상에서는 가능성이 낮은 관계로 에어드랍받은 1PMT로 거의 무조건 DEC를 받을 수 있을것으로 보입니다. 현재 DEC 가격과 PMT의 시장가격 형성으로 봤을때는 128등 이내로만 들어와도 이득입니다. ^^ 월요일 아침에 새벽시간에 가능하신 분들은 꼭 고려해주시면 좋을 것 같습니다.</p>
+<center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/7seJTdrV-image.png)</center>
+
+<h2 id="2-피크몬스터-KR-업데이트"><a href="#2-피크몬스터-KR-업데이트" class="headerlink" title="2. 피크몬스터 KR 업데이트"></a>2. 피크몬스터 KR 업데이트</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/Vr2oIvUv-image.png)</center>
+
+<p>몇몇 KR 스모너분들께서 피크몬KR은 임대가 되지 않는다고 불편함을 호소하셨습니다. 피크몬팀과 확인해본 결과 현재 카드 임대 리징 마켓을 피크몬 자체적으로 개발을 했는데, 각각의 서비스로 운영되고 있는 피크몬.com 피크몬.kr 과 피크몬.cn 중에서 피크몬.com에만 오픈한 상황이라고 합니다. 코드 복붙으로 kr에도 열 수는  있으나, 그랬을 경우 임대는 kr내에서만 가능하다는 단점이 있습니다. 즉, 피크몬에서 현재 만든 임대 프로토콜이 피크몬.com, kr, cn 사이에 호환되지 않는다는 큰 단점이 있다는 것입니다.</p>
+<p>이를 해결하기 위해서 피크몬측과 협의한 결과 피크몬KR을 다시 피크몬.com내부로 통합하고, database도 다시 통합하기로 했습니다. 기존 피크몬kr에서 이루어진 내역등도 data는 같이 넘기기로 했습니다. 이 작업이 완료가 되면 피크몬.com내에서 임대를 하시면 됩니다. 물론 언어는 한국어를 계속 지원할 예정입니다.</p>
+<p>이 작업은 약 1주일을 full로 개발을 해서 테스트까지 해야할 것으로 예상되며, 이 개발시간은 다음달 중에 편성을 예정하고 있습니다. (추후 피크몬측의 개발 일정 변경으로 연기는 가능합니다, 개발은 @asgarth가 혼자서 해야되어서) 불편하시더라도 조금만 더 기다려주시면 감사드리겠습니다.</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-11T13:28:30.000Z">2019-06-11</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    12분 읽기 (대략 1767 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/11/jayplayco.coinjoin-wasabi-wallet/">[비트코인 전송 숨기기] CoinJoin을 가능하게 하는 Wasabi Wallet 소개</a>
+            
+        </h1>
+        <div class="content">
+            <center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/yIcaXw10-image.png)</center>
+안녕하세요, @jayplayco 입니다.
+
+<p>즐겨찾는 Coindesk에 코인조인 (Coinjoin)에 지금까지 <a href="https://www.coindesk.com/bitcoin-users-perform-what-might-be-the-largest-coinjoin-ever">최대 규모의 100명</a>이 참여한것에 대한 기사가 실리면서 사실 블록체인에 기록되는 모든 전송 기록이 추적이 가능해서 이를 숨기기 위한 방법에 대한 소개가 있어 자세하게 파고 들어가봤습니다.</p>
+<h2 id="0-코인조인-CoinJoin-이란"><a href="#0-코인조인-CoinJoin-이란" class="headerlink" title="0. 코인조인 (CoinJoin) 이란?"></a>0. 코인조인 (CoinJoin) 이란?</h2><p>코인조인은 간단하게 말하면 BTC를 전송할때 혼자 전송하지 않고, 여려명이 같이 모여서 전송을 했을때 누구의 코인이 누구에게 가는지를 모르게 해서 거래내역을 익명화하는 방법입니다. </p>
+<h2 id="1-코인조인의-작동-원리"><a href="#1-코인조인의-작동-원리" class="headerlink" title="1. 코인조인의 작동 원리"></a>1. 코인조인의 작동 원리</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/zP0MMaIU-image.png)
+[Source: https://en.bitcoin.it/wiki/CoinJoin]</center>
+
+<p>아, 기술적인 저런 분석은 역시 어렵네요. 설명을 드리기 위해서는 잠깐 파고 들어가봤습니다. 간단 명료 요약버젼으로 간추립니다. 상단에 있는 기술표는 실제 BTC의 트랜스액션이 작동하는 원리인데, 저기의 틈을 파고 코인조인이라는 기술을 응용했다고 보시면 됩니다.</p>
 <blockquote>
-<p>뭔지는 몰라도 @virus707님이면 뭐든 해주실 수 있을듯 (출처: 미상)</p>
+<p>The signatures, one per input, inside a transaction are completely independent of each other. This means that it’s possible for Bitcoin users to agree on a set of inputs to spend, and a set of outputs to pay to, and then to individually and separately sign a transaction and later merge their signatures. The transaction is not valid and won’t be accepted by the network until all signatures are provided, and no one will sign a transaction which is not to their liking.<br>[Source: <a href="https://en.bitcoin.it/wiki/CoinJoin]">https://en.bitcoin.it/wiki/CoinJoin]</a></p>
 </blockquote>
-<p>의 신뢰를 바탕으로 JJM토큰은 오늘도 최고가를 갱신하고 있습니다.</p>
-<h3 id="추신-2019년-3월-18일자로-100스팀으로-총-4-293JJM을-구매했음을-밝혀드립니다"><a href="#추신-2019년-3월-18일자로-100스팀으로-총-4-293JJM을-구매했음을-밝혀드립니다" class="headerlink" title="추신. 2019년 3월 18일자로 100스팀으로 총 4,293JJM을 구매했음을 밝혀드립니다."></a>추신. 2019년 3월 18일자로 100스팀으로 총 4,293JJM을 구매했음을 밝혀드립니다.</h3><hr>
-<h5 id="Sponsored-Powered-by-dclick"><a href="#Sponsored-Powered-by-dclick" class="headerlink" title=" Sponsored ( Powered by dclick ) "></a><sub> <strong>Sponsored ( Powered by <a href="https://www.dclick.io">dclick</a> )</strong> </sub></h5><h5 id="DCLICK-HTML-삽입형-광고-운영중인-블로그나-웹사이트를-이용해-수익을-얻으세요"><a href="#DCLICK-HTML-삽입형-광고-운영중인-블로그나-웹사이트를-이용해-수익을-얻으세요" class="headerlink" title="[DCLICK HTML 삽입형 광고] - 운영중인 블로그나 웹사이트를 이용해 수익을 얻으세요!"></a><a href="https://api.dclick.io/v1/c?x=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjIjoiamF5cGxheWNvIiwicyI6ImpqbS1qam0iLCJhIjpbInQtMTQ4NiJdLCJ1cmwiOiJodHRwczovL3N0ZWVtaXQuY29tL0BkY2xpY2svZGNsaWNrLWh0bWwtLTE1NTA1NDkxNDA0MDgiLCJpYXQiOjE1NTI5NjEzMDcsImV4cCI6MTg2ODMyMTMwN30.AfCMEudnI23UDtDd92z0F-nhWXUO1bnl0JsPMWm66HU">[DCLICK HTML 삽입형 광고] - 운영중인 블로그나 웹사이트를 이용해 수익을 얻으세요!</a></h5><p><sup>안녕하세요. DCLICK 입니다. 오늘은 새로 출시된 기능인 HTML 삽입형 광고에 대해서 소…</sup></p>
+<blockquote>
+<p><strong>간단해석</strong></p>
+<ul>
+<li>하나의 트랜스액션안에 존재하는 여러개의 서명은 각각 별개의 것임.</li>
+<li>결국 비트코인 유저는 일정 지출 입력과 지불 입력에 대해 합의했을때, 각각 트랜스액션에 싸인인 하고 추후 서명이 통합가능함. </li>
+</ul>
+</blockquote>
+<p>풀어쓰면, 비트코인 전송에는 트랜스액션 (실제 송금 행위)와 시그너쳐 (서명)가 있는데, 한 트랜스액션안에 여러 서명이 존재할 수 있기 때문에, 이를 이용해 여러명이 같은 트랜스액션안에 각각의 서명을 넣어서 트랜스액션이 실행되고 지불될때 누가 누구에게 전송하는지를 알기 어려워짐. 그리고 이것을 코인조인이라고 부릅니다.</p>
+<p>그렇기 때문에 코인조인은 <strong>많은 사람이 모일수록 추적이 더욱더 어려워집니다.</strong> </p>
+<h2 id="2-코인조인을-위해-필요한것들"><a href="#2-코인조인을-위해-필요한것들" class="headerlink" title="2. 코인조인을 위해 필요한것들"></a>2. 코인조인을 위해 필요한것들</h2><p>우선 IP추적을 피하기 위해서 일반 인터넷이 아닌 TOR와 같은 privacy system이 이용되어야지 누가 어디서 무슨 BTC를 보내는지 알 수가 없습니다. 또한 사람을 알아서 모아보고 같이 코인조인을 해야할 사람들을 찾아야합니다. 이런 어려운 과정을 해결하기 위해서 오픈 소스 기반의 Wasabi 지갑이 나오게 되었습니다.</p>
+<h3 id="a-와사비-지갑-링크"><a href="#a-와사비-지갑-링크" class="headerlink" title="a. 와사비 지갑 링크"></a>a. 와사비 지갑 링크</h3><ul>
+<li>홈페이지: <a href="https://www.wasabiwallet.io/">https://www.wasabiwallet.io/</a></li>
+<li>깃헙: <a href="https://github.com/zkSNACKs/WalletWasabi/blob/master/WalletWasabi.Documentation/FAQ.md">https://github.com/zkSNACKs/WalletWasabi/blob/master/WalletWasabi.Documentation/FAQ.md</a></li>
+<li>윈도우 다운로드: <a href="https://github.com/zkSNACKs/WalletWasabi/releases/download/v1.1.5/Wasabi-1.1.5.msi.asc">https://github.com/zkSNACKs/WalletWasabi/releases/download/v1.1.5/Wasabi-1.1.5.msi.asc</a></li>
+<li>맥 다운로드: <a href="https://github.com/zkSNACKs/WalletWasabi/releases/download/v1.1.5/Wasabi-1.1.5.dmg.asc">https://github.com/zkSNACKs/WalletWasabi/releases/download/v1.1.5/Wasabi-1.1.5.dmg.asc</a></li>
+</ul>
+<h3 id="b-와사비-지갑-설명"><a href="#b-와사비-지갑-설명" class="headerlink" title="b. 와사비 지갑 설명"></a>b. 와사비 지갑 설명</h3><p>와사비 지갑은 오픈소스로 하드웨어 지갑기능을 갖고 있으며 빌트인으로 TOR 게이트웨이 (privacy service)가 탑재되어 있으며 코인조인(Coinjoin)을 할 수 있는 기능이 내장되어 있습니다. 즉, 혼자서 사람 찾아서 “코인조인” 하자 할 필요 없이, 와사비 지갑을 써서 기존에 올라와있는 코인조인 거래에 참여를 하는 방식으로 거래 흔적을 익명화할 수 있습니다.</p>
+<h3 id="c-윈도우-버젼-설치"><a href="#c-윈도우-버젼-설치" class="headerlink" title="c. 윈도우 버젼 설치"></a>c. 윈도우 버젼 설치</h3><center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/BRe5I4v0-image.png)</center>
+윈도우 버젼을 설치하면 우선 지갑 생성을 위해서 계정명 이름과 암호를 물어봅니다. 이 암호는 자기가 직접 입력할 수 있습니다. 승인을 하고 난 다음 다시 12개의 암호 단어가 생성이 됩니다. 이 12개의 암호 단어는 잘 기록해두어야지 추후 자신의 암호와 12개의 단어 암호를 이용해서 지갑이 복구가 가능합니다.
+
+<center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/ZhEtGf9O-image.png)</center>
+Wallet Explorer에 CoinJoin을 누르면 상단과 같은 창이 뜹니다. 여기서 중간에 녹색 방패모양에 Anonymity Set : 50으로 되어 있는 부분이 총 50명의 유저를 모집하고 있다는 내용입니다. 예를 들어 2명만 모집할때는 방패 모양이 빨간색으로 변합니다. (2명의 경우는 익명성이 보장이 안되기 때문입니다. ^^)
+
+<p>Tor연결도 되어 있어서 privacy도 보장이 되는것으로 보이고 저 상태에서 코인조인을 통해서 전송을 하면 자기 서명의 익명화가 가능합니다.</p>
+<h2 id="3-개인적인-생각"><a href="#3-개인적인-생각" class="headerlink" title="3. 개인적인 생각"></a>3. 개인적인 생각</h2><p>스팀의 경우는 익명화를 위해서는 스팀으로 계정을 구매해서 준비해놓고 (그래야지 누가 계정을 만들었는지 추적이 안됩니다), 기존 스팀 계정에서 거래소로 전송을 한번 하고 다시 새로만든 계정으로 시간차와 금액차이를 두고 전송하면 추적이 거래소의 도움 없이는 어렵습니다. 물론 지난 매다의 먹튀의 경우는 일부 <a href="https://steemit.com/magicdice/@themarkymark/magic-dice-exit-scam">스티미언들은 거래소에 연락을 하고</a> 협조를 구하기도 합니다. 즉, 거래 익명성의 경우는 스팀도 상기와 같이 가능합니다만, 불법일 경우는 거래소에서도 협조가 가능한 부분이라 익명화가 어렵습니다.</p>
+<p>BTC의 경우도 개인적으로 봤을때는 불법 대형물량을 코인조인으로 움직이기에는 확실히 무리가 있을것으로 판단됩니다. 즉, 불법적으로 탈취된 BTC를 코인조인으로 움직인다고 해도, 보통 flagging이 되어있는 계정들이라서 움직임에 대한 감지가 있어 코인조인을 하는 유저들이 해당 트랜스액션을 기피를 하거나, 물량의 차이가 커서 결국 추적이 될것으로 예상됩니다.</p>
+<p>그래도 실질적으로 저런 형태로 기술적인 거래 익명화가 가능하다는 점이 흥미롭고, 얼마만큼 쓰일지는 BTC의 앞날을 보면서 지켜봐야할것으로 생각됩니다.</p>
 
         </div>
         
@@ -538,7 +632,7 @@ As announced we are starting the second tournament (out of four) this Sunday. We
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-02-25T17:34:57.000Z">2019-02-26</time>
+                <time class="level-item has-text-grey" datetime="2019-06-10T12:25:54.000Z">2019-06-10</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
@@ -548,7 +642,7 @@ As announced we are starting the second tournament (out of four) this Sunday. We
                 <span class="level-item has-text-grey">
                     
                     
-                    3분 읽기 (대략 519 단어)
+                    9분 읽기 (대략 1403 단어)
                 </span>
                 
                 
@@ -557,23 +651,54 @@ As announced we are starting the second tournament (out of four) this Sunday. We
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/02/26/jayplayco.busyorg-10--1551148496250/">[Busy.org] 10% 베네피셔리 자동 체크 버튼</a>
+                <a class="has-link-black-ter" href="/2019/06/10/jayplayco.76dbf8-snax/">[Snax] 스낵스 작동 원리</a>
             
         </h1>
         <div class="content">
-            <center>![image-1551148087243.png](https://s3.ap-northeast-2.amazonaws.com/dclick/image/jayplayco/1551148087968)</center>
+            <center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/0LkglmkV-image.png)</center>
 
-<p>안녕하세요 @jayplayco 입니다. </p>
-<p>인터페이스중에 busy를 쓰시는 분이 많으신것으로 알고 있습니다. Busy.org 측에서도 수익모델을 찾다가 현재 다른 댑들이 쓰고 있는 beneficiary를 자동 설정해두어서 알려드립니다. 정확히 수정된 시점은 알 수 가 없네요.</p>
-<p>일반적으로 busy에서 글을 쓰면 맨 마지막에 자기글을 자동 업보팅을 하겠냐는 세팅이 있어 보통 자동 선택되어 있어 그냥 쓰게 되면 셀봇이 자동적으로 되는 기능이였습니다. 이 기능이 지금은 busy.org에 베네피셔리 10%를 자동으로 주는 세팅으로 바뀌어 있습니다.</p>
-<p><img src="https://s3.ap-northeast-2.amazonaws.com/dclick/image/jayplayco/1551147902822" alt="image-1551147903020.png"></p>
-<p>즉, 글을 올렸을 경우 저 세팅을 해지하지 않을 경우 자동으로 리워드의 10%를 비지에게 돌려주도록 되어 있습니다. 인터페이스의 수익형 모델이 사실상 광고일텐데, 광고를 선택하지 않고 참여형 수익 공유모델을 선택하였네요.</p>
-<p>기본적으로는 좋은 현상이라고 생각합니다. 다만, 공식 공지도 없이 그냥 조용히 기능을 올려서 opt-in 형식도 아닌 기본 체크인 상태를 이용하는 것은 좀 보기가 좋지 않네요. 혹시나 해서 비지의 공홈계정에 가서 공지를 봤더니, 4개월전 스팀페스트 공지가 마지막이네요.</p>
-<center>![image-1551148258607.png](https://s3.ap-northeast-2.amazonaws.com/dclick/image/jayplayco/1551148259665)</center>
+<p>안녕하세요, @jayplayco입니다.</p>
+<p>작일이 Snax의 스팀 에어드랍을 받을 수 있는 마지막날이라고 해서 이미 커뮤니티에서는 많은 SNAX 등록글들이 보이네요 ^^.</p>
+<center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/FaGjF3e8-image.png)</center>
 
-<p>비지 업보팅이나 글 쓸때 이용하시는 분들은 참조하시면 좋을 것 같습니다. ^^</p>
-<hr>
-<h5 id="Sponsored-Powered-by-dclick"><a href="#Sponsored-Powered-by-dclick" class="headerlink" title=" Sponsored ( Powered by dclick ) "></a><sub> <strong>Sponsored ( Powered by <a href="https://www.dclick.io">dclick</a> )</strong> </sub></h5><p><a href="https://api.dclick.io/v1/c?x=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjIjoiamF5cGxheWNvIiwicyI6ImJ1c3lvcmctMTAtLTE1NTExNDg0OTYyNTAiLCJhIjpbImktMiJdLCJ1cmwiOiJodHRwczovL3d3dy5kY2xpY2suaW8iLCJpYXQiOjE1NTExNDg0OTYsImV4cCI6MTg2NjUwODQ5Nn0.MFqk4Z3opeOe8STA8Vk13F6s8Nc-jWYZVBp5k_O7qRM"><img src="https://steemitimages.com/0x0/https://cdn.steemitimages.com/DQmSwkE4cySARFCKdemZWVwyk8dxh7HeDNiqwuVmWR3RBXE/Group%205.png" alt="dclick-imagead"></a></p>
+<p>필자의 경우는 이미 5월중에 등록을 끝내고 <a href="https://steemit.com/kr/@jayplayco/snax">소개도 해드렸었는데</a> 그 사이에 스팀과 트위터를 연동해놔서 SNAX가 조금 쌓여있었네요.</p>
+<p>따로 한것이 없는데 받는게 있으니 좋기는 한데, 어떤 방식으로 작동하는지가 궁금해서 조금 파고 들어가봤습니다</p>
+<h2 id="1-SNAX-연동"><a href="#1-SNAX-연동" class="headerlink" title="1. SNAX 연동"></a>1. SNAX 연동</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/tcOGoeIj-image.png)</center>
+
+<p>스낵스는 현재 트위터와 스팀 이 두가지 SNS가 연동이 되고 있습니다. 그리고 각 SNS별 Attention Rate라고 하는 점수를 부여해줍니다. Attention Rate는 컨텐트가 일정 기간 갖고 있는 총 어탠션을 보여주고자 하는 값입니다. 예를 들어 저의 경우는 현재 514위입니다만, 저 등수는 스낵스와 연동된 계정뿐만 아니라 스팀 전체 계정을 다 포함하는 값입니다.</p>
+<p>이를 확인하기 위해서 잘 알고 있는 다른분의 계정이 눈에 띄어서 확인을 해봤습니다.</p>
+<center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/AvWAohSQ-image.png)</center>
+@segyepark님이 몇일전 현 JJM와  AAA 관련 개발 [현황에 대해서 공유를](https://steemit.com/aaa/@segyepark/jjm-aaa) 해주셨는데, 이 글이 지난 scoring round에서 어마무시한 영향력을 과시해서 현재 전체 유저의 어탠션레이트중 4위를 차지하고 있습니다. ~~그런데 함정이, 아직 세계님은 Snax연동을 하지 않으셨다는 사실.~~ (어제 알려드렸더니 설정하셨네요 ㅎ.) 그리고 지금까지 놓친 Snax 리워드가 무려 거의 10K이네요. 어쨌던 자랑스럽습니다. 전세계 스티미언 SNAX 어탠션 레이트 영광의 4위는 @segyepark님입니다. ^^
+<center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/1O5vzovy-image.png)</center>
+
+<h2 id="2-SNAX-리워드"><a href="#2-SNAX-리워드" class="headerlink" title="2. SNAX 리워드"></a>2. SNAX 리워드</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/t2lzn0NX-image.png)</center>
+
+<p>그렇다면 저의 경우는 어떤지 한번 보겠습니다. </p>
+<ul>
+<li>Scoring 라운드에 포함된 포스팅은 39개입니다. 즉, 작성한 지난 39개의 포스팅을 계산하는데 활용했다는 것입니다.</li>
+<li>리스팀은 2개, 댓글은 3개, 업보티은 총 76개가 카운팅 되었습니다.</li>
+</ul>
+<p>이때 예상되는 SNAX리워드는 총 2026SNAX 정도이며 이는 이전 Scoring 라운드의 저의 어탠션 레이트를 반영한 값입니다. 즉, 어탠션레이트가 올라가게 될 경우 같은 값일때 더 많은 리워드를 받을 수 있습니다.</p>
+<p>다만, 여기서 저 리스팀, 댓글과 업보팅은 무슨 기준으로 측정이 되는지는 잘 몰랐다가, 제 글을 찾아서 보니까 답이 나오는것 같습니다. </p>
+<center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/8QCs7zn6-image.png)</center>
+
+<p>즉, 정확히 8일전 이미 스팀 리워드가 완료된 직후의 글을 바탕으로 측정되는것으로 예상됩니다. 사실 업보팅 수가 완전히 일치하지 않고, 리스팀도 확인했을때 수가 완전히 일치하지는 않은데, 가장 근접하고 가장 논리적일것으로 예상되기는 합니다.</p>
+<p>마찬가지로 트위터도 활발하게 이용하시는 분들의 경우는 연동했을때 SNAX를 리워드로 받으실 수 있을것으로 예상됩니다. 트위터의 경우는 지난 7일간의 트윗을 바탕으로 라이크, 리트위트와 댓글을 확인을 합니다.</p>
+<h2 id="3-리워드-확인"><a href="#3-리워드-확인" class="headerlink" title="3. 리워드 확인"></a>3. 리워드 확인</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/MUflT1Eh-image.png)</center>
+스낵스 메뉴중 트랜스액션을 누르시면 그동안 글 쓴것에 대한 SNAX 보상이 나열됩니다. 거의 매일 리워드가 들어오고 있는것을 확인할 수 있습니다. 스팀에서 글을 쓰면 그에 따른 보상이 주어지는 상황입니다.
+
+<h2 id="4-스낵스-사용처"><a href="#4-스낵스-사용처" class="headerlink" title="4. 스낵스 사용처"></a>4. 스낵스 사용처</h2><ul>
+<li><strong>아직 특별히 없습니다.</strong> </li>
+</ul>
+<p>스낵스 페이지에서 다른 스낵스 계정, 트위터와 스팀계정에 까지 스낵스를 쉽게 전송할 수 있습니다. 즉, 팁이나 후원 개념으로 보낼 수 있는것이죠. 미국 전 대통령의 트위터 계정인 버락 오바마분의 트위터 계정이 어탠션 레이트가 2위입니다. 후원하기 위해서 100 Snax를 보내봅니다.</p>
+<center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/0kw5T7RB-image.png)</center>
+<center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/94GZkBA1-image.png)</center>
+<center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/W60pcFdZ-image.png)</center>
+
+<p>하고 보내고 나면, 오보마 전 대통령분께 알림까지 할 수 있습니다.</p>
+<center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/CH5wO468-image.png)</center>
+
+<p>우선 스낵스만 보내놓고 저 파란 버튼 눌러서 호출했다가 무슨 일이 벌어질지는 몰라서 우선 안눌렀습니다. ^^ 제 트위터 계정으로 송부한 계정을 호출하고 스낵스에 가입하라고 권유하는 형태의 트윗이 발송될 것으로 예상되기는 합니다. ㅎ</p>
 
         </div>
         
@@ -596,7 +721,7 @@ As announced we are starting the second tournament (out of four) this Sunday. We
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-02-18T17:53:33.000Z">2019-02-19</time>
+                <time class="level-item has-text-grey" datetime="2019-06-09T18:03:51.000Z">2019-06-10</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
@@ -606,7 +731,7 @@ As announced we are starting the second tournament (out of four) this Sunday. We
                 <span class="level-item has-text-grey">
                     
                     
-                    1분 읽기 (대략 143 단어)
+                    12분 읽기 (대략 1797 단어)
                 </span>
                 
                 
@@ -615,122 +740,94 @@ As announced we are starting the second tournament (out of four) this Sunday. We
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/02/19/jayplayco.bookmark-create-a-website-with-ai-in-30-seconds/">Bookmark - Create a website with AI in 30 seconds</a>
+                <a class="has-link-black-ter" href="/2019/06/10/jayplayco.weiss-ratings/">[크립토 레이팅]  Weiss Ratings의 역사와 암호화폐 레이팅의 의미</a>
             
         </h1>
         <div class="content">
-            <h1 id="Bookmark"><a href="#Bookmark" class="headerlink" title="Bookmark"></a>Bookmark</h1><p>Create a website with AI in 30 seconds</p>
-<hr>
-<h2 id="Screenshots"><a href="#Screenshots" class="headerlink" title="Screenshots"></a>Screenshots</h2><center><img alt="bookmark2.JPG" src="https://s3-us-west-2.amazonaws.com/steemhunt/production/steemhunt/2019-02-19/d9ae7096-bookmark2.JPG"/></center>
+            <center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/NcgBARCY-image.png)</center>
+안녕하세요, @jayplayco입니다.
+
+<p>몇일전 뉴스상에 떴던 내용중 EOS의 rating이 다운그레이드되었다는 소식이 있었습니다. 이에 대한 영향인지 6월 1일 이후 VOICE 발표후 예상했던 바와 같이 EOS가 뉴스 발표후 다시 폭락을 했다가 숨고르기를 하면서 올리가던참에 Weiss Ratings의 뉴스 이후로 다시 가격이 하락을 시작했습니다. (직접적인 연관이라기 보다는 전체적인 암화화폐시장의 영향에 따른것이라고 보기는 합니다.) </p>
+<center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/ZwVoEvcM-image.png)
+[소스: Weiss Ratings Twitter](https://twitter.com/WeissRatings/status/1137027785598427136)</center>
+<center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/oEGLlJZm-image.png)
+[소스: @coingecko]</center>
+
+<p>그런데 막상 Weiss Ratings는 암호화폐에 무슨 영향을 미치는지 궁금해질 것 같아 내용을 공유합니다.</p>
+<h2 id="0-Weiss-Ratings는"><a href="#0-Weiss-Ratings는" class="headerlink" title="0. Weiss Ratings는?"></a>0. Weiss Ratings는?</h2><p>1971년 Martin D. Weiss 박사에 의해서 만들어진 회사로, 미국 은행을 리뷰하는 것으로 시작했습니다. 1987년에는 T.J Holt&amp;Company를 인수하면서 레이팅 사업을 본격적으로 시작했습니다. 주로 은행에 대한 레이팅이였습니다. 추가적으로 최초로 보험회사 레이팅을 시작하면서 생명보험 회사들의 레이팅이 가능하도록 했습니다.</p>
+<p>또한 최근의 암호화폐 시장이 커져가면서 최초로 공식적인 암호화폐 레이팅도 시작을 했습니다.<br><a href="https://www.thebalance.com/weiss-ratings-comprehensive-ratings-and-analysis-1969750">소스: Weiss Ratings Analysis</a></p>
+<h2 id="1-Weiss-Ratings을-읽는-방법은"><a href="#1-Weiss-Ratings을-읽는-방법은" class="headerlink" title="1. Weiss Ratings을 읽는 방법은?"></a>1. Weiss Ratings을 읽는 방법은?</h2><p>레이팅 회사마다 뜻하고자 하는 바가 조금씩 달라 점수를 매겼을때 각각의 의미가 조금씩 달라질 수 있어, 해당 레이팅 회사가 주는 점수가 어떤 뜻인지를 알고 보면 조금더 정확하게 볼 수 있습니다.</p>
+<ul>
+<li>A = excellent (매우 좋음)</li>
+<li>B = good (좋음)</li>
+<li>C = fair (중간)</li>
+<li>D = weak (약함)</li>
+<li>E = very weak (매우 약함)</li>
+</ul>
+<p>그러나 이것도 투자 레이팅과 안전 레이팅에는 차이가 있습니다.</p>
+<center>**How Weiss Investment Ratings Differ from Weiss Safety Ratings**</center>
+![image.png](https://files.steempeak.com/file/steempeak/jayplayco/O7tlgGYr-image.png)
 
 <table>
 <thead>
 <tr>
-<th><center><img alt="bookmark.JPG" src="https://s3-us-west-2.amazonaws.com/steemhunt/production/steemhunt/2019-02-19/151549be-bookmark.JPG"/><br><a href="https://s3-us-west-2.amazonaws.com/steemhunt/production/steemhunt/2019-02-19/151549be-bookmark.JPG">View Image</a></center></th>
+<th>구분</th>
+<th>Weiss 투자 레이팅</th>
+<th>Weiss 안전 레이팅</th>
 </tr>
 </thead>
 <tbody><tr>
-<td></td>
+<td>A</td>
+<td>강한 구매 추천</td>
+<td>금융위기나 부채위기와 같은 상황에서도 안정성 높음</td>
+</tr>
+<tr>
+<td>B</td>
+<td>구매 추천</td>
+<td>불리한 비즈니스 환경이나 경제적인 환경에서도 안정적일 확률, 그러나 실제 상황에서는 재평가해야함.</td>
+</tr>
+<tr>
+<td>C</td>
+<td>홀드나 회피 추천</td>
+<td>유리한 환경에서는 안정적이나 불리한 환경에서는 경제적 어려움이 발생할 수 있음</td>
+</tr>
+<tr>
+<td>D</td>
+<td>매도 추천</td>
+<td>불리한 사업 환경에서는 실패를 포함하여 재정적 어려움을 겪을 수 있음.</td>
+</tr>
+<tr>
+<td>E</td>
+<td>강한 매도 추천</td>
+<td>우호적인 사업이나 경제환경에서도 실패를 포함한 재정적 어려움이 발생할 수 있음.</td>
 </tr>
 </tbody></table>
-<hr>
-<h2 id="Hunter’s-comment"><a href="#Hunter’s-comment" class="headerlink" title="Hunter’s comment"></a>Hunter’s comment</h2><p>Just answer 7 questions and your AI assistant is going to create your webpage based on it. Test created a website as IT consultant and the result is a good baseground. You still need to edit of course the text to match it to your desire, but even a fast wordpress template installation is not faster.<br><a href="https://www.youtube.com/watch?v=xH4eGJzDg50">https://www.youtube.com/watch?v=xH4eGJzDg50</a></p>
-<p><img src="https://steemitimages.com/0x0/https://s3-us-west-2.amazonaws.com/steemhunt/production/steemhunt/2019-02-19/d9e26c7f-image.png" alt="image.png">0</p>
-<hr>
-<h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a href="https://www.bookmark.com/">https://www.bookmark.com/</a></p>
-<hr>
-<center><br/>![Steemhunt.com](https://i.imgur.com/jB2axnW.png)<br/>
-This is posted on Steemhunt - A place where you can dig products and earn STEEM.
-[View on Steemhunt.com](https://steemhunt.com/@jayplayco/bookmark-create-a-website-with-ai-in-30-seconds)
+<p>즉, A를 받은 암호화폐는 현재 없으나, BTC, EOS, Ripple같은 경우는 주변환경이 좋지 않더라도 비교적 안정적이라고 판단을 하는것이나, 그때 그때 환경에 따라 재평가를 해야한다는 뜻이네요. 강력한 구매 추천까지는 아니더라도 구매 추천모드이고요.</p>
+<p>Tron과 같은 경우는 홀드를 해도 되나, 환경이 불리해질 경우 경제적으로 어려워질 수 있다고 판단을 하는 것이고요.</p>
+<h2 id="2-Weiss-Ratings-가-평가하는-방법은"><a href="#2-Weiss-Ratings-가-평가하는-방법은" class="headerlink" title="2. Weiss Ratings 가 평가하는 방법은?"></a>2. Weiss Ratings 가 평가하는 방법은?</h2><p>우선 기본적인 맥락은 매주 업데이트가 되고 있으며, 투자리스크, 투자 리워드, 기술과 실생활 연계를 기본으로 평가한다고 합니다.</p>
+<p>또한 총 5가지 레이어를 바탕으로 평가에 대한 상세한(?) 방향성을 제시해줍니다.</p>
+<ul>
+<li>Layer 1. 각 통화의 기술, 현실세계 연계, 위험 및 보상에 대한 최신 데이터<br>(Current data on each currency’s technology, adoption, risk and reward)</li>
+<li>Layer 2. 자체적인 계산공식을 통해 데이터를 전환해서 서로 비교하도록 가능하게 함.<br>(Proprietary formulas that convert the data into comparable ratios)</li>
+<li>Layer 3. 각 암호화폐에 대한 투자의 성공 또는 실패에 중요한 요인 및 주요 요소를 측정하기 위해 비율을 집계하는 자체적인 하위 모델 적용<br>(Proprietary sub-models that aggregate the ratios to measure key factors and features considered critical to the potential success or failure of investments in each cryptocurrency)</li>
+<li>Layer 4. 두가지 등급 :<br>  (1) 장기 잠재력을 평가할 수 있는 기술과 현실세계 연계<br>  (2) 시장 가격 패턴을 기본으로 한 단기 리스크/리워드<br>(Two grades: (1) the Tech/Adoption Grade which evaluates the long-term potential of each cryptocurrency and (2) a shorter-term Risk/Reward Grade based on market price patterns)</li>
+<li>Layer 5. 전반적인 Weiss의 암호화폐 레이팅. 이는 복잡한 알고리즘을 사용하여 레이어 3과 4를 결합합니다.<br>(The overall Weiss Crypto Rating, using a complex algorithm to combine the Tech/Adoption Grade and Risk/Reward Grade)</li>
+</ul>
+<p>어렵게 써있긴 한데, 결론적으로는 어떤 방식으로 실질적인 레이팅을 하는지는 블랙박스입니다. 자신들 말고는 아무도 모른다는 것이죠.<br> <a href="https://weisscrypto.com/en/about">소스: How we rate Cryptocurrencies</a></p>
+<h2 id="3-레이팅의-의미"><a href="#3-레이팅의-의미" class="headerlink" title="3. 레이팅의 의미"></a>3. 레이팅의 의미</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/iXcTdGLe-image.png)[소스: Chris Li](https://unsplash.com/photos/6Y6OnwBKk-o)
 </center>
-        </div>
-        
-        
-        
-    </div>
-</div>
+레이팅의 경우는 암호화폐뿐만 아니라, 은행, 기업, 국가까지도 레이팅을 합니다. 예를 들어 국가 레이팅의 경우는 Standard&Poor, Fitch와 Moodys에서 레이팅을 하는데 이 레이팅이 중요한 이유는 한 국가가 국제시장에서 돈을 빌릴때 이자율을 높게 받느냐, 낮게 받느냐가 이 레이팅에 의해서 정해진다고 해도 과언이 아닙니다.
 
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-02-18T13:35:57.000Z">2019-02-18</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    14분 읽기 (대략 2030 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/02/18/jayplayco.smt-daybit-smt/">[SMT] Daybit 거래소 SMT 관련 토큰 런칭 예정</a>
-            
-        </h1>
-        <div class="content">
-            <center>![](https://cdn.steemitimages.com/DQmVVd9s311VNFyXXgUwecrAPqtmfCQJjSFYyAsJZBermtT/image.png)</center>
-
-<p>안녕하세요, @jayplayco 입니다.</p>
-<p>몇시간전 <a href="https://steemhunt.com?ref=jayplayco">스팀헌트</a>에서 그간 <a href="https://daybit.page.link/eC9v48ERfH8XEwD57">데이빗에</a> SMT토큰 런칭에 관한 노력을 발표했습니다만, (한글 버젼은 <a href="https://steemit.com/kr/@project7/smt-mou">@project7 님의 글을</a> 참조) 간단히 요약하면 현재 국내외 스팀상에서 SMT를 지향하는 많은 댑들이 같이 참여를 결정했습니다. 해외의 반응도 좋아서 KR의 지지를 받고 토큰런칭들이 성공적으로 갈 수 있는 환경이 마련되어져 가서 좋은 것 같습니다.</p>
-<h2 id="1-MOU-체결이란"><a href="#1-MOU-체결이란" class="headerlink" title="1. MOU 체결이란?"></a>1. MOU 체결이란?</h2><p><a href="http://onepark.khu.ac.kr/Colmn/MOU.htm">MOU란</a> 실제 아직 계약화까지는 되지 않은 상태이나, 기업과 기업간 정해놓은 방향으로 같이 추진을 하자는 강한 의지를 표현한 것입니다. 즉, 아직은 갈길이 좀더 남았지만 매우 긍정적인 방향으로 가고 있는 것입니다.</p>
-<p>현재 스팀헌트팀이 주축이 되어서 <a href="https://daybit.page.link/eC9v48ERfH8XEwD57">데이빗</a>측과 협상을 하고 있는 상황입니다.<br>주요 내용은 </p>
+<h3 id="a-예시-대한민국-레이팅"><a href="#a-예시-대한민국-레이팅" class="headerlink" title="a. 예시 대한민국 레이팅"></a>a. 예시 대한민국 레이팅</h3><ul>
+<li>Standard &amp; Poor’s : AA (Stable)</li>
+<li>Fitch : AA- (Stable)</li>
+<li>Moody’s : Aa2 (Stable)<br><a href="https://en.wikipedia.org/wiki/List_of_countries_by_credit_rating">소스: Wikipedia</a><br>표시형식은 조금씩 다르지만 비슷하게 Stable한 레이팅으로 표현되어 있고 실제 저 레이팅의 변화가 있을 경우는 신문에서도 뉴스거리가 되기도 합니다. (이자율이 변동되기 때문에요)</li>
+</ul>
+<p>이렇게 Weiss Rating’s 측에서 EOS의 레이팅을 중앙화 문제로 낮추는 것이 <a href="https://finance.yahoo.com/news/weiss-crypto-ratings-downgrades-eos-175600299.html">기사화 되는것도</a> 직/간접적으로 block.one 회사에 대한 평가와 EOS라는 암호화폐의 전망에 대한 척도도 될 수 있기 때문입니다.</p>
+<p>Weiss Crypto Rating은 총 122개의 코인과 토큰을 레이팅합니다. 직접 가서 나의 포트폴리오의 암호화폐들이 어느정도의 레이팅인지를 확인하는것도 나름 재미가 있을것 같습니다.</p>
 <ul>
-<li>우선 스팀과 스달 상장</li>
-<li>ERC-20과 같은 SMT 임시 토큰을 스팀 기축으로 상장 =&gt; 스헌, 트립스팀, 테이스팀과 같은 토큰을 실제 거래할 수 있습니다.</li>
-<li>SMT 출시후 (스팀잇 재단 일해라~!) 스왑 지원 (매우 중요하죠)</li>
-<li>데이빗이 원화 FIAT 도 지원하기 때문에, 거래량이 되는 토큰은 KRW 거래 지원</li>
+<li><a href="https://weisscrypto.com/en/cryptos/screener/shared/coins-by-rating">https://weisscrypto.com/en/cryptos/screener/shared/coins-by-rating</a></li>
 </ul>
-<p>스팀헌트가 <a href="https://daybit.page.link/eC9v48ERfH8XEwD57">데이빗</a>과 성공적인 네고를 하기 위해서 필요한 것은 2가지 정도로 볼 수 있습니다.</p>
-<ul>
-<li>스팀 내에서 증인 순위 증명을 통한 입지 확보 =&gt; <a href="https://steemconnect.com/sign/account_witness_vote?approve=1&witness=steemhunt"><strong>스팀헌트 증인투표 하기</strong></a></li>
-<li>제품력을 바탕으로 하는 충분한 MAU/DAU (월간/일간 실 사용자) =&gt; 이를 위해 SMT 댑들이 힘을 합쳤습니다.</li>
-</ul>
-<h2 id="2-참여-SMT-관련-댑"><a href="#2-참여-SMT-관련-댑" class="headerlink" title="2. 참여 SMT 관련 댑"></a>2. 참여 SMT 관련 댑</h2><ul>
-<li><a href="https://token.steemhunt.com/">Steemhunt</a> (@steemhunt) - 제품 헌팅 사이트/ 댑순위 14위</li>
-<li><a href="https://esteem.app/">eSteem</a> (@esteemapp) -   모바일 스팀 인터페이서 / 댑순위 9위</li>
-<li><a href="https://join.utopian.io/">Utopian</a> (@utopian-io) - 오픈소스 리워드 / 댑순위 341위</li>
-<li><a href="https://actifit.io/">Actifit</a> (@actifit) -  액티비티 앱 / 댑순위 15위</li>
-<li><a href="https://purplepaper.fundition.io/">Fundition</a> (@fundition) -  크라우드펀딩 플랫폼 / 댑순위 25위</li>
-<li><a href="https://tasteem.io/">Tasteem</a> (@tasteem) - 음식, 식당 맛집 큐레이션 /댑순위 83위</li>
-<li><a href="https://en.tripsteem.com/">Tripsteem</a> (@trips.teem) - 여행 큐레이션 / 댑순위 125위</li>
-<li><a href="https://www.dclick.io/">Dclick</a> (@dclick) - 온라인 광고 / 댑순위 57위</li>
-<li><a href="https://www.ntopaz.com/">nTOPAZ</a> (@ntopaz) - 아트 큐레이션 / 댑순위 (아직 미등록)</li>
-<li><a href="https://kr.kpopsteem.com/">Kpop Steem</a> (@kpopsteem) - kpop 큐레이션 / 댑순위 (아직 미등록)</li>
-</ul>
-<p>상기 프로젝트들은 보면 국내의 주요 SMT 프로젝트들과 해외의 굵직한 프로젝트들이 포함되어 있습니다. 미포함된 프로젝트들의 경우는 게임쪽이나 도박쪽입니다.</p>
-<h2 id="3-왜-데이빗인가"><a href="#3-왜-데이빗인가" class="headerlink" title="3. 왜 데이빗인가?"></a>3. 왜 데이빗인가?</h2><p>우선 의문점이 들 수 있습니다. 왜 데이빗이여야 하는가? 이전 한번 언급한 바 있으나, 다시 정리드리겠습니다.</p>
-<p>실제 ERC-20의 토큰까지는 어떻게던 지원이 가능할 수 있겠으나, 우선 국내에서 실질적으로 whitelabel (소프프트웨어를 통으로 사서 이름만 바꾸는)이 아닌 거래소가 그렇기 많지 않습니다. 그래서 추후 실질적으로 SMT가 나오고 나서 swapping 이 가능한 거래소는 whitelabel이 지원하지 않을 경우 국내에서는 업비트와 Elixir기반의 데이빗 정도입니다. 물론 대형 거래소에 다이렉트로 런칭을 하면 좋을 것으로 보이지만, 실제 아직 스티미언에게도 실체가 잡히지 않는 SMT를 대형 거래소에 설득하기란….. (스팀잇 일하잣!!)</p>
-<p>데이빗의 경우 런칭시 촉망을 많이 받은 거래소였으나 (실제 아직도 찌라시를 받으면 DAY 코인이 추천으로 들어가있음둥..) 시장 논리(?)에 따르지 않고 투명하게(?) 운영을 해서 가격 방어, 펌핑등의 정책이 부재한채 사용자들의 외면을 받게 되어서 현재는 거래소 100위권 정도에 안착되어 있습니다. 결국 경쟁사는 이길 수 있어도, 소비자가 원하는것이 없으면 소비자를 절대 이길 수 없는 시장 읽기에 실패한 것은 사실입니다.</p>
-<p>현재 <a href="https://daybit.page.link/eC9v48ERfH8XEwD57">데이빗</a>은 시장을 제대로 보는 것으로 파악되면서 <a href="https://support.daybit.com/ko/support/home">DAY 코인의 소각 정책</a>, 원화 시장 런칭등을 시작으로 대대척으로 2/3월에 개편이 예정되어 있어 기대를 모으고 있습니다.</p>
-<p>실질적으로 현재 SMT나 스팀 관련 프로젝트 토큰에 대한 움직임은 크게 2가지로 나뉘고 있습니다. Daybit에 런칭하는 움직임 하나와 스팀엔진에 DEX로 런칭하고자 하는 움직임 둘. Daybit에 같이 상장을 추진하고자 하는 프로젝트들의 공통점을 보면 SMT의 Inflation기능이 절실하게 필요한 경우가 대부분입니다. 사실상 거래소 상장을 목표로 하지 않는다면 스팀 엔진에 저렴하게 런칭해서 추후 스와핑도 고려할 수 있으나, 스팀엔진의 한계는 그 시스템을 실제 거래소에 런칭, 즉 거래소를 설득하기란 정말 쉽지 않은 것이 현실입니다. </p>
-<p>이에따라 프로젝트 별로 스팀엔진으로 진행 가능한 프로젝트들이 있고, DEX가 아닌 거래소 상장이 필요한 프로젝트들은 Daybit 거래소 상장에 기대게 되는 것입니다.</p>
-<h2 id="4-코인게코는-또-뭐지"><a href="#4-코인게코는-또-뭐지" class="headerlink" title="4. 코인게코는 또 뭐지?"></a>4. 코인게코는 또 뭐지?</h2><p><a href="https://steemhunt.com?ref=jayplayco">스팀헌트</a> 측에서 발표한 것은 또한 @coingecko에서 Daybit에 상장하는 SMT 관련 토큰들을 지원하겠다고 했습니다. 코인게코는 <a href="https://www.coingecko.com/">https://www.coingecko.com/</a> 에서 coinmarketcap과 같이 각종 코인및 토큰에 대한 시장 현황을 실시간으로 보여주는 사이트이며 월간 약 9백만 방문자 정도를 기록합니다. </p>
-<center>![](https://cdn.steemitimages.com/DQmV3uwXoz5eYi3SWYvY2YoKKGneV1THZZxSeByGX8JKdCT/image.png)
-[Source: Similarweb.com](https://www.similarweb.com/website/coingecko.com#overview)</center>
-코인게코측은 최근 스팀에서 활동도 왕성하게 시작했으며, 외부 visibility를 위해서는 매우 좋은 파트너인 것으로 판단됩니다.
-
-<h2 id="5-결론"><a href="#5-결론" class="headerlink" title="5. 결론"></a>5. 결론</h2><p>우선 @steemhunt팀의 추진력에는 매번 다시 감탄을 하게 된다. 어려운 시장하에서 한단계식 제품개발, 커뮤니티 형성까지 해서 스팀잇 재단의 SMT 개발 delay로 로드맵에 이상이 생기자 곧바로 방향으로 틀어 스헌뿐만 아니라 SMT 프로젝트와 관련 커뮤니티 전체가 살아갈 수 있는 방향 제시및 추진을 해버리고 맙니다.</p>
-<p>Daybit을 시작으로 첫 거래소에서 성공을 거두게 되면, 자연스럽게 더욱 큰 거래소로 옮길 수 있습니다. 가장 중요한 것은 거래소 상장을 통해 외부 자금 유입이 될 수 있습니다. SMT 프로젝트들의 성공및 결론적으로는 스팀 생태계 업그레이트와 스팀의 가격 상향으로 모두가 웃는날이 멀지 않음을 느낍니다. 스팀헌트와 SMT 관련 프로젝트들에게 응원의 박수를 보냅니다.</p>
-<p>스팀헌트 아직도 증인 보팅 안하신분? =&gt; <a href="https://steemconnect.com/sign/account_witness_vote?approve=1&witness=steemhunt"><strong>스팀헌트 증인투표 하기</strong></a></p>
 
         </div>
         
@@ -753,7 +850,7 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-02-17T23:13:24.000Z">2019-02-18</time>
+                <time class="level-item has-text-grey" datetime="2019-06-08T13:45:30.000Z">2019-06-08</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
@@ -763,7 +860,7 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
                 <span class="level-item has-text-grey">
                     
                     
-                    10분 읽기 (대략 1460 단어)
+                    14분 읽기 (대략 2151 단어)
                 </span>
                 
                 
@@ -772,37 +869,42 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/02/18/jayplayco.utopian-io/">[Utopian-io] 유토피안 트레일로 큐레이션 리워드 최대화</a>
+                <a class="has-link-black-ter" href="/2019/06/08/jayplayco.binance-gbp/">[Binance] 자체 스테이블코인 GBP 런칭 예정과 그 의미</a>
             
         </h1>
         <div class="content">
-            <center>![](https://cdn.steemitimages.com/DQmVfQXeQLtAwNrVqGzmHHGp3hm2sY6evYnSpxpdLZ9mVhs/image.png)</center>
+            <center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/5DE6TqAU-image.png)
+[소스: 바이낸스 CEO 트위터]</center>
 
-<p>안녕하세요, @jayplayco 입니다.</p>
-<p>제 글을 보신 분들은 일주일 한번은 스팀헌트 관련 영문글을 기고하는데, 가능하면 이것을 utopian.io 의 태그와 연동해서 올립니다. KR분들중에서 여기서 가장 왕성하게 활동하시는 것은 @blockchainstudio 님이신데, 저같은 코드알못에게는 넘사벽이라 보통 blog 태그에서 활동을 합니다.</p>
-<p>결론부터 먼저 말씀드리면,</p>
-<p><strong>유토피안이 프런트런닝 할 수 있는 @utopian.trail 계정을 만들어서 이를 따라 업보팅 하시면 큐레이션 리워드 극대화가 가능합니다.</strong></p>
-<p>자 그럼 자세히 들어가볼까요?</p>
-<h2 id="0-유토피안-io란"><a href="#0-유토피안-io란" class="headerlink" title="0. 유토피안.io란?"></a>0. 유토피안.io란?</h2><p>지난 SBA 출범때도 잠시 언급드린 utopian.io는 오픈소스 관련 컨텐츠 크레이터들에게 무지막지한 스파파워로 글에 업보팅을 해주는 비즈니스 입니다. 스팀잇 재단에서 2백만 스파를 임대받은 상태이구요, 유토피안이 요청하는 양식과 수준의 글을 올리고 맞는 태그를 달았을 때 업보팅을 합니다. 저의 경우는 blog에 기고를 했을때 5-25STU$ 까지도 (현재) 받습니다.</p>
-<h2 id="1-utopian-trail을-따라-업보팅하면-뭐가-좋은가요"><a href="#1-utopian-trail을-따라-업보팅하면-뭐가-좋은가요" class="headerlink" title="1. @utopian.trail을 따라 업보팅하면 뭐가 좋은가요?"></a>1. @utopian.trail을 따라 업보팅하면 뭐가 좋은가요?</h2><p>큐레이션 리워드란 글 작성 후 15분 후 업보팅과 가장 주요한 것은 내 이후에 들어온 업보팅의 금액에 크게 영향을 받습니다. 그러면 큐레이션 리워드를 가장 극대화 하기 위해서는 많은 업보팅을 받을 것으로 예상되는 글에 딱 15분이 되어서 업보팅 하는 것이 가장 효과적입니다. 그러나 어떤 글이 고래의 업보팅을 많이 받을 지는 알 길이 없지요?</p>
-<p>utopian의 경우는 @steemhunt와 마찬가지로 모더레이션 시스템이 있습니다. 즉, 모더레이터가 글을 3일 이내로 확인을 하고 평가를 해서 댓글로 승인을 할 경우 그 이후 언젠가 utopian의 봇이 와서 업보팅을 하고 가는 형식입니다. </p>
-<p>이때 언제 모더레이터가 와서 댓글을 남길지 모르기 때문에 사실상 유토피안에 기고하는 분들의 글을 잘 보고 있다가 업보팅을 그냥 하고 가는 형식이였습니다. 하지만 이제는 utopian에서 만든 trail전용 계정을 쫓아다니면서 업보팅을 하면 됩니다. 제가 쓴 글에 보니, 유토피안 모더레이터 승인 댓글후 거의 곧바로 utopian.trail 계정이 와서 보팅을 하고 트레일이 쫓아오더군요.</p>
-<h2 id="2-설정방법-1-1-따라하기-Steemauto-설정하기"><a href="#2-설정방법-1-1-따라하기-Steemauto-설정하기" class="headerlink" title="2. 설정방법 (1:1 따라하기) - Steemauto 설정하기"></a>2. 설정방법 (1:1 따라하기) - Steemauto 설정하기</h2><p>*경로 : <a href="https://steemauto.com/">https://steemauto.com/</a></p>
-<ul>
-<li>로그인후 스팀커넥트에 아이디와 포스팅키 입력</li>
-<li>메인화면에서 최초 접속시 스팀커넥트로 연결<center>![](https://cdn.steemitimages.com/DQmXVSJaJ87EADJxM2rq7Rty8ypmEBAtFxVF9JCV1uWTz9t/image.png)</center></li>
-<li>스팀커넥트에 @steemauto 포스팅롤 승인해주기 (그래야지 나대신 업보팅 해주니까요)<center>![](https://cdn.steemitimages.com/DQmX71gDytqbVoBiNU9V7DXLXTePx33C2d38MuWwU3qm8Sb/image.png)</center></li>
-<li>스팀커넥트에 액티브키 입력하기<center>![](https://cdn.steemitimages.com/DQmNmBaaMZsYS4A2jjw24UhF1QqrKrQKb4qunh9WyuZizJE/image.png)</center></li>
-<li>왼쪽 메뉴에서 Curation Trail 찾아서 클릭<center>![](https://cdn.steemitimages.com/DQmReaoNhNucSjgnnRkny6ZJnmpnSUKJAHYS8pS4ud6zK6W/image.png)</center></li>
-<li>하단 부분 SEARCH FOR TRAIL에 직접 username 부분에 utopian.trail (골뱅이 없이) 입력하고 SEARCH 버튼 누르기<center>![](https://cdn.steemitimages.com/DQmQBXbUUpkXJYSm2ttcwzy3xUkGRWDhnYuV96KNgWqQVEF/image.png)</center></li>
-<li>utopian.trail 팔로우 누르기 (작성 당시 25 계정이 팔로우 하고 있네요. 아마 많아질듯요 ^^)<center>![](https://cdn.steemitimages.com/DQmVgkuFdWzmCdaycA7o5q3AsHuFiiJ3Bako5QXqk8WMLVb/image.png)</center></li>
-<li>버튼 누르면 “진짜로 할거야?”가 나오는데, “네”누르시면 되고요, 그이후 오른쪽 윗부분에 녹색으로 컨펌 메세지가 뜹니다.</li>
-<li>상세 세팅 바꿔주기 - 기본 세팅이 마음에 들지 않을 수 있기 때문에 상세 세팅 확인해서 자기 입맛에 맞게 고치기. 트레일링의 경우는 다른 계정이 업보팅을 했을 때 따라 업보팅 하는 것임으로, 꼭 시간차를 둘 필요는 없습니다. 보팅 웨이트는 FIX로 하는 경우와 상대적으로 하는 경우 2가지가 있는데, 이는 최초 trail을 시작하는 계정, 즉, utopian.trail계정이 몇%로 업보팅하는거에 따라 50으로 쓰면 그 반만큼 업보팅을 하는 것입니다. 예, utopian.trail이 100%로 업보팅을 하면 내가 50%로 세팅하면 저는 그것에 따라 50%로 업보팅을 하는 것입니다.<center>![](https://cdn.steemitimages.com/DQmcowSshq2uwZkXodD5AbdRFS5qqoB5nG7PHCQ44rBoFdC/image.png)</center></li>
-<li>이것 저장후 메인화면에서 세팅 하나를 더 바꿔줘야지 업보팅을 시작합니다. 몇%까지 떨어지면 업보팅을 그만둘지를 지정하는 세팅입니다.<center>![](https://cdn.steemitimages.com/DQmW8k3gFjEp3yTovPGqgFxZgEVZXctq9gJ3uuH9edUwvDL/image.png)</center>
+<p>바이낸스측은 늦어도 2달안에는 자체적은 스테이블 코인을 런칭한다고 공개했습니다. 코인의 이름은 GBP로 영국의 파운드에 패깅을 할것으로 예정되어 있습니다. 또한 추가적으로 다른 FIAT통화로 패깅된 Stable코인도 추가로 런칭 예정이라고 합니다. 이것이 왜 중요한지에 대한 배경과 전반적인 형상에 대해서 알아보도록 하겠습니다.</p>
+<h2 id="0-스테이블-코인이란"><a href="#0-스테이블-코인이란" class="headerlink" title="0. 스테이블 코인이란?"></a>0. 스테이블 코인이란?</h2><p>Stable 코인은 불안정한 시세를 보이고 있는 암호화폐에 안정적인 통화를 제공하기 위해서 재화나 다른 FIAT, 알고리듬등을 기반으로 안정적인 코인을 제공하기 위해서입니다. 스팀에서 쓰이고 있는 SBD도 스테이블 코인의 일종이라고 볼 수 있다.</p>
+<h2 id="1-스테이블-코인의-종류"><a href="#1-스테이블-코인의-종류" class="headerlink" title="1. 스테이블 코인의 종류"></a>1. 스테이블 코인의 종류</h2><h3 id="a-FIAT을-패깅한-코인"><a href="#a-FIAT을-패깅한-코인" class="headerlink" title="a. FIAT을 패깅한 코인"></a>a. FIAT을 패깅한 코인</h3><p>USD와 같은 비교적 안정적인 화폐에 패깅을 한 암화화폐들임. 일반적으로는 이런 암호화폐는 발행한 만큼 해당 통화를 보유하고 언제라도 다시 내줄 수 있는 논리에 의해 운영이 된다. 문제가 되는 것은 투명하지 않은 운영일 경우 발행해놓고 정말로 그만큼의 통화가 있는지가 의문이 있을 수 있다는 것과, 실제로 그만큼의 통화량을 보유하지 못할 경우 신뢰가 깨지면서 스테이블해야할 코인은 폭락을 한다는 것이다.</p>
+<h3 id="b-재화를-패킹한-코인"><a href="#b-재화를-패킹한-코인" class="headerlink" title="b. 재화를 패킹한 코인"></a>b. 재화를 패킹한 코인</h3><p>보통은 이런 재화는 가치를 가지고 있고 그 재화에 패깅을 하는 형태이다. 일반적으로 금과 같은 재화를 생각할 수 있다.</p>
+<h3 id="c-다른-암호화폐에-패킹된-코인"><a href="#c-다른-암호화폐에-패킹된-코인" class="headerlink" title="c. 다른 암호화폐에 패킹된 코인"></a>c. 다른 암호화폐에 패킹된 코인</h3><p>이는 말 그대로 예를 들어 JAY코인을 발행하는데, 발행된 수량은 1 BTC에 패깅을 시키면 BTC 패깅된 코인이 된다. 스팀의 사이드체인에서 돌아가는 스팀엔진의 경우는 STEEMP라는 스팀 패깅토큰이 있고, 최근에는 EOSP라고 EOS에 패깅된 토큰까지 발행이 되었다. 이는 발행 주체가 언제나 발행된 만큼의 패깅 코인을 언제라도 내주겠다는 표시의 패깅형태이다.</p>
+<h3 id="d-중앙은행-스타일의-스테이블-코인"><a href="#d-중앙은행-스타일의-스테이블-코인" class="headerlink" title="d. 중앙은행 스타일의 스테이블 코인"></a>d. 중앙은행 스타일의 스테이블 코인</h3><p>SBD도 어떻게 보면 그런 형태이다. 일정한 알고리듬을 적용해서 중앙은행에서 화폐를 발행하듯이 암호화폐를 발행해서 가격을 안정화 시키는 정책이다. 이때 중요한 것은 inflation이 있을때에는 추가로 발행을 해서 가격을 안정화 시키고, deflation을 있을시에는 소각을 해서 가격을 올려서 안정화를 시키는 정책을 보통 많이 실행한다. 실제 이런 종류의 스테이블코인은 정말로 스테이블하지는 않은것도 사실이다.</p>
+<h2 id="2-스테이블코인의-예시"><a href="#2-스테이블코인의-예시" class="headerlink" title="2. 스테이블코인의 예시"></a>2. 스테이블코인의 예시</h2><h3 id="a-USDT-테더"><a href="#a-USDT-테더" class="headerlink" title="a. USDT 테더"></a>a. USDT 테더</h3><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/pbaxGXYd-image.png)
+[Source: @coingecko](https://www.coingecko.com/en/coins/tether)</center>
 
-</li>
-</ul>
-<h2 id="3-마치면서"><a href="#3-마치면서" class="headerlink" title="3. 마치면서"></a>3. 마치면서</h2><p>Utopian에 올라는 글들의 경우 오픈소스 관련 유용하거나 유익한 글들이 많습니다. 프로젝트 자체가 모더레이션을 비교적 강하게 해서 저품질 글들은 업보팅을 받지 못하는 것이 현실이구요 ^^. 보팅 파워가 남는데 어디에다가 제대로 쓸지 모르겠는 분은 @utopian.trail을 따라다니면서 좋은 글에 업보팅 자동으로 해주고 큐레이션 리워드도 최대화 하는 좋은 기회라고 생각합니다.<br>리스팀으로 널리 퍼트려 주세요 ^^</p>
+<p>가장 잘 알려진 스테이블 코인은 테더이다. 현재 마켓캡이 20억불로 테더를 발행한 측에서는 20억불치의 미국 US달러를 예치하고 있다고 한다. 여기서 스테이블 코인과 더불어 언제나 문제가 되는 것이 정말 USD를 발행한 것 만큼 갖고 있느냐 없느냐가 핵심이다. 테더의 경우는 여러번 실제 발행한 만큼 USD를 소유하지 않는다는 의심을 받았고, 심사 의뢰를 한후, 심사기관이 도중하차까지 해버리는 바람에 여전히 의심을 많이 받고 있는 상황입니다.</p>
+<h3 id="b-Digix-Gold-Token-DGX"><a href="#b-Digix-Gold-Token-DGX" class="headerlink" title="b. Digix Gold Token (DGX)"></a>b. Digix Gold Token (DGX)</h3><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/VHvbC8fF-image.png)
+[Source: @coingecko](https://www.coingecko.com/en/coins/digix-gold?utm_content=digix-gold&utm_medium=search_coin&utm_source=coingecko)</center>
+
+<p>DGX의 경우는 실제로 싱가포르에 토큰이 발행된 만큼 금이 보관되어 있고 이더리움 기반의 토큰입니다. 이는 심사까지 성공적으로 되었다고 합니다. 하지만 이런 재화 패깅의 경우 보관및 관리에 대한 비용이 추가적으로 발생하고, 실제 금의 경우도 암호화폐보다는 덜하지만 가격적인 등락폭이 있는 관계로 토큰 자체에 장단점이 존재하기는 한다.</p>
+<h3 id="c-MakerDAO-DAI"><a href="#c-MakerDAO-DAI" class="headerlink" title="c. MakerDAO (DAI)"></a>c. MakerDAO (DAI)</h3><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/tO9oVIn3-image.png)
+[Source: @coingecko](https://www.coingecko.com/en/coins/dai?utm_content=dai&utm_medium=search_coin&utm_source=coingecko)</center>
+약간은 복잡한 탈중앙화된 스마트컨트렉트를 이용해서 마켓형성을 통한 가격 형성을 하나, 기본적으로는 ETH에 의해 패깅이된 코인이라고 생각하면 됩니다.
+
+<h3 id="d-Basis"><a href="#d-Basis" class="headerlink" title="d. Basis"></a>d. Basis</h3><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/P77YMcC3-image.png)</center>
+중앙은행 스타일의 코인을 설명하기 위해 가져온 예시이긴 하나, 사실상 2018년 12월에 프로젝트는 문을 닫았습니다. 펀딩으로 무려 133 Million USD (1억 3천만 USD)를 모았으나, 법적인 이슈때문에 돈을 다시 돌려주기로 했습니다.
+
+<p>기본 시스템은 중앙은행처럼 암호화폐를 발행하고 소각하는데, 이를 알고리듬 바탕으로 하고자 했던 것입니다.</p>
+<h2 id="3-바이낸스-GBP의-의미는"><a href="#3-바이낸스-GBP의-의미는" class="headerlink" title="3. 바이낸스 GBP의 의미는?"></a>3. 바이낸스 GBP의 의미는?</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/DmloWvC0-image.png)
+[소스: 바이낸스](https://beta.binance.com/kr)
+스테이블 코인으로 테더의 경쟁사인 TrueUSD (TUSD)가 있으나 현재 마켓캡은 2억 5천 USD 수준정도가 된다. 즉, 테더의 1/9정도밖에 안되는 것이다. 바이낸스가 전 세계에서 가장 큰 거래소라는 것을 감안을 하면, GBP를 바탕으로 런칭을 할때 상당히 빠른 시간내에 스테이블 코인을 장악할 수 있을것이라는 예상을 할 수 있다. 또한 그간 테더의 약점 (신뢰성)을 봐왔기 때문에 이미 바이낸스의 CFO인 Wei Zhou 분은 토큰이 100% Fiat에 패깅될 것이고 투명하게 운영을 하겠다고 선언을 한 상황입니다.
+
+<p>이때 왜 암호화폐거래 활성화를 위해 이런 종류의 스테이블 코인이 왜 필요한지를 이해하기 위해서는 한국의 암호화폐 시장을 잠깐 벗어나서 해외 시장과 거래량이라는 것을 봐야 한다. 암호화폐로 트레이딩을 하시는 분들은 잘 아시는것이지만, 암호화폐로 이익을 봤다고 할 수 있는 순간은 사실상 현금화를 해서 통장에 들어왔을때 라고 표현을 한다. 실제 EOS의 경우도 펀딩받았던 자금의 큰 부분은 현금화해서 가지고 있는 것도 사실이다. 한국에서는 예를 들어 BTC를 가지고 트레이딩을 할 경우 안전하게 다음 웨이브를 기다릴때는 현금화, 즉 원화로 바꿔놓고 기다린다. 한국의 거래소의 경우는 원화 pair가 비교적 많이 형성이 되어서 그렇다. </p>
+<p>하지만 해외에서는 예를 들어 BTC를 잠깐 USD로 바꿀 수 있는 수단이 특별히 없다. 만약에 있다면 테더정도로 바꿀 수 있다. 즉 거래 환경이 완전히 다르기 때문에 테더나 앞으로 나올 GBP와 같은 스테이블 코인이 없으면 암호화폐 거래는 조금더 어려워질 수 있다는 것이다. GBP와 같은 스테이블 코인이 세계에서 거래량이 가장 많은 거래소에서 런칭하고 pair를 많이 생성을 한다면, 그만큼 암호화폐 거래 활성화는 더욱 빠르게 진행될 것을 예상된다.</p>
+<p><a href="https://www.coindesk.com/binance-confirms-stablecoin-offerings-coming-soon-report">기사 소스 - 코인데스크</a><br><a href="https://medium.com/coinmonks/the-crypto-stable-coins-that-you-need-to-know-about-14f86f3bd68e">기사 소스- Coinmonks, Reece Barclay</a><br><a href="https://masterthecrypto.com/guide-to-stablecoin-types-of-stablecoins/">기사 소스 - Masterthecrypto.com</a></p>
 
         </div>
         
@@ -825,7 +927,7 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-02-17T15:33:36.000Z">2019-02-18</time>
+                <time class="level-item has-text-grey" datetime="2019-06-07T16:30:15.000Z">2019-06-08</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
@@ -835,7 +937,7 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
                 <span class="level-item has-text-grey">
                     
                     
-                    13분 읽기 (대략 1894 단어)
+                    5분 읽기 (대략 819 단어)
                 </span>
                 
                 
@@ -844,32 +946,22 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/02/18/jayplayco.ai/">[AI] 인공지능이 우리 일상에서 미칠 수 있는 영향</a>
+                <a class="has-link-black-ter" href="/2019/06/08/jayplayco.eos-block-one/">[EOS] Block.one의 경제적 기반</a>
             
         </h1>
         <div class="content">
-            <center>![](https://cdn.steemitimages.com/DQmVW3rSYi5v6Z5S4e8qpLCDatNwpeCmCHimy6DV5HJ7ibv/image.png)</center>
-> "단순한 체스 나 퀴즈 문제뿐만 아니라 수학과 엔지니어링에서부터 과학과 의학에 이르기까지 거의 모든 분야에서 기계가 이번 세기 말 이전에 우리보다 더 똑똑해질 확률이 높습니다."- Gary Marcus
+            <center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/sNmN7kmo-image.png)
+[소스:block.one]</center>
 
-
-<p>안녕하세요, @jayplayco 입니다.</p>
-<p>오늘은 스팀 관련이 아닌 그냥 일상적인 AI관련 이야기를 해보고자 합니다.<br>AI 기술이 발전하면서 이제는 정말 상상할 수 도 없던 것들이 가능해지고 있는데, 이에 따른 부작용도 있을것으로 생각됩니다. 한번 간단하게 들어가보죠.</p>
-<h2 id="0-AI-란"><a href="#0-AI-란" class="headerlink" title="0. AI 란?"></a>0. AI 란?</h2><p>AI는 실제 미디어에서도 많이 접해서 이제는 익숙한 약자입니다만 Artificial Intelligence, 즉 인공지능입니다. 주변에는 요즘 인공지능 스피커, 핸드폰에는 인공지능 비서등이 가깝게 다가오는 AI 제품들이죠. <a href="https://ko.wikipedia.org/wiki/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5">참조</a></p>
-<h2 id="1-이슈화되었던-인공지능-기능들"><a href="#1-이슈화되었던-인공지능-기능들" class="headerlink" title="1. 이슈화되었던 인공지능 기능들"></a>1. 이슈화되었던 인공지능 기능들</h2><h3 id="a-Deepfake"><a href="#a-Deepfake" class="headerlink" title="a. Deepfake"></a>a. Deepfake</h3><p>Deepfake란 AI 기반으로 사람의 이미지를 재생하는 기술입니다. 이를 이용해 예를 들어서 기존에 존재하는 사람의 얼굴을 따라 만들고 말하고 움직이게 할 수 도 있는 것입니다. 유명했던 예가 오바마 전 미국 대통령을 샘플로 만든 말도 안되는 연설을 하게 했던 영상입니다.</p>
-<p><a href="https://www.youtube.com/watch?v=cQ54GDm1eL0">https://www.youtube.com/watch?v=cQ54GDm1eL0</a></p>
-<p>부분적으로는 Nikolas Cage의 얼굴은 모든 영상에 넣어주는 것이 유행하는 현상이 발생한 것도 이 기술 덕분입니다.<br><a href="https://www.youtube.com/watch?v=BU9YAHigNx8">https://www.youtube.com/watch?v=BU9YAHigNx8</a></p>
-<p>그러나 이 기술이 문제가 되었던 것은 Deepfake 기술이 성인동영상에 입혀지면서 초상권 침해등 심각한 문제들을 야기했고, 심지어 마벨 어벤져스에서 활동하고 있는 Scarlett Johansson은 이에 대항해 법적으로 맞서 싸워봤지만, <a href="https://www.engadget.com/2019/01/01/scarlett-johansson-fighting-deepfake-porn-lost-cause/">실제로 승산할 가망성이 없다고 할 정도였습니다</a>. </p>
-<p>이는 2018년 1월에 런칭된 Fakeapp라는 Deepfake용 소프웨어가 공개되면서 일반 유저들도 손쉽게 Deepfake용 비디오를 생산할 수 있게 되면서 더욱 가속화 되었습니다. 현재는 대부분의 대형 외국 성인사이트들의 경우는 deepfake된 성인용 영상들을 금지하고 있습니다만, 우선 판도라의 상자는 열린것이라고 보면 됩니다.</p>
-<h3 id="b-ThisPersonDoesNotExist"><a href="#b-ThisPersonDoesNotExist" class="headerlink" title="b. ThisPersonDoesNotExist"></a>b. ThisPersonDoesNotExist</h3><p><a href="https://www.youtube.com/watch?v=B6mQhjPdy4o">https://www.youtube.com/watch?v=B6mQhjPdy4o</a><br>사실 이 글을 쓰게 된 배경이 이 앱입니다. 현재 해외 뉴스에서는 이슈화가 되고 있는데요, AI를 이용해서 실제 존재하지 않는 사람을 생성하는 사이트가 생겼습니다. 우리가 잘 아는 <a href="https://steemhunt.com/@vimukthi/this-person-does-not-exist-plugin-for-unique-ai-generated-faces?ref=jayplayco">@steemhunt에도 소개가 되었는데. (클릭)</a> 간단하게 설명하면 페이지를 오픈하면 사람 얼굴을 하나 보여주는데, 이것이 AI 기반으로 임의로 만들어진 허구의 인물입니다. 부분적으로 좀 에러나는 경우도 있는데, 사실 몇번 해보면 정말 어색함이라고는 느껴지기 어려울 정도로 일반인들의 사진인것 같은 초상화들이 F5를 누를때마다 생겨납니다.</p>
-<p>이런 서비스의 경우는 Stock photo가 필요한 분들을 위해서 초상권 침해 하지 않고 쓸 수 있는 사진들이라 유용할 것 같고요, 추후에는 영화에도 CG 처리 할때 엑스트라의 경우도 그냥 랜덤 처리할 수 있겠다는 생각이 드는군요.</p>
-<p><a href="https://thispersondoesnotexist.com/">랜덤 얼굴 생성하러 가기</a></p>
-<p>홈페이지에 들어가보시면 정말 아무것도 없고, 그냥 사진 하나 1024x1024로 보여줍니다. </p>
-<p>이런 기술의 경우는 추후 진짜 같은 가짜 계정들도 생겨날 수 있겠다는 생각이 들더군요. </p>
-<h3 id="c-글을-혼자-쓰는-AI"><a href="#c-글을-혼자-쓰는-AI" class="headerlink" title="c. 글을 혼자 쓰는 AI"></a>c. 글을 혼자 쓰는 AI</h3><p><a href="https://www.youtube.com/watch?v=XMJ8VxgUzTc">https://www.youtube.com/watch?v=XMJ8VxgUzTc</a><br>테슬라의 오너로 유명한 엘런 머스크가 투자했다는 OpenAI라는 회사에서는 얼마전 <a href="https://www.theguardian.com/technology/2019/feb/14/elon-musk-backed-ai-writes-convincing-news-fiction">Deepfake Text를 쓸 수 있는 AI 시스템을 개발 완료</a>했다고 하는데요, 중요한 것은 엘런 머스크는 <a href="https://www.cnbc.com/2018/03/13/elon-musk-at-sxsw-a-i-is-more-dangerous-than-nuclear-weapons.html">AI가 인류에는 위협이 될거라고 언급한 적도 있어</a> 흥미가 가더군요. 더국더 재미있는 사실은 혼자서 글을 쓰는 AI를 만들고 나서 알고리듬은 결국 악용할 위험이 있어 공개하지 않기로 했다고 합니다.</p>
-<p>실제로 작동하는 방식은, 몇줄 정도의 글을 시스템에 던져주면 그것을 바탕으로 분석을 해서 정말 사람이 쓴듯한 글을 계속 써준다는 것입니다. 미래에는 기자, 심지어 더욱 심하게는 책 쓰는 사람까지도 자리를 위협받을 수 있게 되는 날이 올 수 있는 것입니다.</p>
-<h3 id="d-알파고와-이세돌"><a href="#d-알파고와-이세돌" class="headerlink" title="d. 알파고와 이세돌"></a>d. 알파고와 이세돌</h3><p><a href="https://www.youtube.com/watch?v=vFr3K2DORc8&amp;t=1670">https://www.youtube.com/watch?v=vFr3K2DORc8&amp;t=1670</a></p>
-<p>이미 2016년도에 일어난 일이라 좀 되긴 했지만, 그때 당시 파장을 일으켰던 알파고와 이세돌의 격돌은 다들 기억하실 겁니다.  결국 알파고가 4:1로 이기는 현상이 발생하면서 절대 넘을 수 없을것이라고 예상되었던 바둑의 벽도 인공지능은 넘고 말았던 순간이 이미 3년이 넘었습니다. 알파고는 구글의 기술에 의해 만들어졌는데, 구글의 인공지능 개발 집중은 여러 방면에서 빛을 바라고 있습니다. 오픈 소스로 제공하는 <a href="https://www.tensorflow.org/">Tensor Flow</a>도 결국 구글 재력으로 만들어지는 작품이고 (위에 언급했던 Fakeapp도 Tensor Flow로 작동합니다.), 자율 주행등에 대한 연구도 지속적으로 하고 있는 것이 사실이기 때문입니다. 결국 미래를 봤을때 구글이 AI 시장의 큰 부분을 먹을 것으로 예상될 수 밖에 없는 것도 이러한 기술적 선두과정에서 나타난다고 봅니다.</p>
-<h2 id="2-마치면서"><a href="#2-마치면서" class="headerlink" title="2. 마치면서"></a>2. 마치면서</h2><p>AI가 우리에게 가져다 줄 수 있는 편리함은 정말 많은 것으로 생각됩니다. 한사람의 파워로는 해결 할 수 없는 것을 AI는 수많은 경우의 수를 순식간에 대입해 판단할 수 있고, 이것을 바탕으로 새로운 data를 생성하면서 성장이 가능하기 때문입니다. AI와 로보틱스의 결합으로 우리가 영화에서 봐왔던 인공지능 로보트의 시대도 AI의 발전으로 부분적으로 우리 일상으로 조금씩 스며들것으로 생각됩니다. 처음부터 사람의 형태가 아닌 귀여운 캐릭터를 등에 업은 스피커같은 형태로 말입니다. ^^</p>
+<p>암호화폐를 만들어서 운영할때 기본적으로 ICO나 presale등을 이용해서 가능한 많은 펀딩을 진행하고 합니다. 이중 작년에 가장 성공적인 펀딩중 하나가 바로 EOS의 펀딩이였습니다.</p>
+<p>EOS의 경우 Block.one 이라는 회사가 판매를 한 결과 약 4 Billion USD (4.7조원 정도)을 모금했습니다. 이는 Mozambique나 Malta의 1년 GDP에 해당하는 금액입니다. 물론 Block.one의 경우도 펀딩시 암호화폐로 펀딩을 받고 진행하였습니다만, 이때 중요한 것은 암호화폐 자산중 얼마만큼을 현금화해서 운용가능한지 입니다.</p>
+<p>최근에 Block.one 측에서 회사 지분을 가진 쉐어홀데드에게 보낸 이메일에 조금더 자세한 사항이 공개가 되었습니다. 현재 Block.one은 초기 4 Billion USD 펀딩금액중 반 이상을 현금화 하여 현재 안정적인 미국 국채에 투자되어 있습니다. (2.2 Billion USD / 2.6조원) 또한 일부 금액은 BTC로 들고 있으며 현재 그 규모는 140,000 BTC라고 공개했습니다. 이는 금일 환율로 계산했을때 약 1.12 Billion USD (약 1.3조원) 규모입니다. 한때 이 BTC 자산규모때문에 자산의 50% 가량이 줄었다가 최근의 BTC 불런에 의해 상당부분 회복되었다고 합니다. 140K BTC 규모는 현재 시장에서 가장 큰 고래중 하나로 단정지을 수 있습니다.</p>
+<p>Block.one은 펀딩 이후 지난 1년간 최근의 Voice 발표 후, 일부 지분을 다시 사들이고 있습니다. 이는 특히 seed funding으로 들어왔던 투자자분들의 지분을 일부 회수해서 block.one의 추후 로드맵에 도움을 줄 수 있는 투자자분들에게 재분배를 하기 위한 전략이라고 Block.one의 CEO인 Brendan Blumer가 언급했습니다. Block.one 투자자중 특히 유명한 <a href="https://block.one/news/block-one-closes-strategic-investment-round-led-by-peter-thiel-and-bitmain/">Peter Thiel의 경우는 2018년 7월에 투자자로</a> 합류를 해서 seed 투자자는 아니라고 하며, Thiel, Louis Bacon과 Alan Howard분들은 현재 block.one의 전략적 투자자분들이라고 알려져있습니다. </p>
+<blockquote>
+<p>“As Block.one prepares to announce its future plans, we’re excited to welcome key strategic investors aligned with our values of creating a more secure and connected world,” said Block.one CEO Brendan Blumer.</p>
+</blockquote>
+<p>결론적으로는 현재 block.one의 금고에는 수년간 무리없이 운영을 할 수 있는 자금이 마련되어 있으며, 앞으로 이 자금을 이용해서 어떤 방향으로 회사와 EOS를 이끌어갈지 주목해야할 것으로 보입니다. 특히 지분 회수후 재분배(판매)시 어떤 전략적 투자자들에게 판매가 되는지를 보면 EOS의 미래 지향점이 조금은 예상될것으로 생각합니다.</p>
+<p><a href="https://www.bloomberg.com/news/articles/2019-05-22/thiel-backed-crypto-startup-pays-out-6-567-return">기사 Bloomberg</a><br><a href="https://www.coindesk.com/eos-startup-block-one-is-using-its-billions-to-buy-back-more-equity">기사 Coindesk</a></p>
 
         </div>
         
@@ -909,7 +1001,7 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             
             <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
             
-            <li><a class="pagination-link has-text-black-ter" href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/page/32/">32</a></li>
+            <li><a class="pagination-link has-text-black-ter" href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/page/34/">34</a></li>
             
         </ul>
     </nav>
@@ -959,7 +1051,7 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            650
+                            677
                         </p>
                     </a>
                 </div>
@@ -1187,7 +1279,7 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
                 <span class="level-item">미분류</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">57</span>
+                <span class="level-item tag">84</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/%EC%9D%B4%EB%B2%A4%ED%8A%B8/">
@@ -1233,8 +1325,8 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-30T18:03:06.000Z">2020-03-31</time></div>
-                    <a href="/2020/03/31/jayplayco.62wutk-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 바이낸스 코리아 런칭</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-18T17:31:42.000Z">2020-04-19</time></div>
+                    <a href="/2020/04/19/jayplayco.3q78ij-steemit/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Steemit] 대기보상 순위</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
                     </p>
@@ -1246,8 +1338,8 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-30T17:48:39.000Z">2020-03-31</time></div>
-                    <a href="/2020/03/31/jayplayco.4ebqwz/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[코인잡설] 그들의 논리와 아쉬운 수준을 보면서</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-17T23:57:54.000Z">2020-04-18</time></div>
+                    <a href="/2020/04/18/jayplayco.36o3px-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 비트코인 반감기전 아식스간 전쟁</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
                     </p>
@@ -1259,8 +1351,8 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-30T16:48:57.000Z">2020-03-31</time></div>
-                    <a href="/2020/03/31/jayplayco.3f2f11/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[증인] 스팀의 현 증인</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-17T23:17:42.000Z">2020-04-18</time></div>
+                    <a href="/2020/04/18/jayplayco.3pzccb-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 젊은층과 여성이 가지는 블록체인에 대한 관심</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
                     </p>
@@ -1272,10 +1364,10 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-30T16:04:24.000Z">2020-03-31</time></div>
-                    <a href="/2020/03/31/jayplayco.coinnews-defi-djed/" class="title has-link-black-ter is-size-6 has-text-weight-normal">트론의 DeFi 시스템인 Djed 런칭</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-17T23:04:24.000Z">2020-04-18</time></div>
+                    <a href="/2020/04/18/jayplayco.49wfxe-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 정부의 블록체인 골든 타임 주장</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/coinnews/">coinnews</a>
+                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
                     </p>
                 </div>
             </div>
@@ -1285,8 +1377,8 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-30T15:41:39.000Z">2020-03-31</time></div>
-                    <a href="/2020/03/31/jayplayco.3fxwag-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 중국으로 활동을 조금씩 옮기는 바이낸스</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-17T22:23:45.000Z">2020-04-18</time></div>
+                    <a href="/2020/04/18/jayplayco.twctc-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 콘텐츠의 탈중앙화는 실질적으로 가능한가?</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
                     </p>
@@ -1306,12 +1398,23 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
         <ul class="menu-list">
         
         <li>
+            <a class="level is-marginless" href="/archives/2020/04/">
+                <span class="level-start">
+                    <span class="level-item">4월 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">26</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2020/03/">
                 <span class="level-start">
                     <span class="level-item">3월 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">63</span>
+                    <span class="level-item tag">64</span>
                 </span>
             </a>
         </li>
@@ -1651,7 +1754,7 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
                 <div class="control">
                     <a class="tags has-addons" href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/">
                         <span class="tag">미지정</span>
-                        <span class="tag is-grey">312</span>
+                        <span class="tag is-grey">339</span>
                     </a>
                 </div>
                 
@@ -1709,8 +1812,8 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-30T18:03:06.000Z">2020-03-31</time></div>
-                    <a href="/2020/03/31/jayplayco.62wutk-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 바이낸스 코리아 런칭</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-18T17:31:42.000Z">2020-04-19</time></div>
+                    <a href="/2020/04/19/jayplayco.3q78ij-steemit/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Steemit] 대기보상 순위</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
                     </p>
@@ -1722,8 +1825,8 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-30T17:48:39.000Z">2020-03-31</time></div>
-                    <a href="/2020/03/31/jayplayco.4ebqwz/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[코인잡설] 그들의 논리와 아쉬운 수준을 보면서</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-17T23:57:54.000Z">2020-04-18</time></div>
+                    <a href="/2020/04/18/jayplayco.36o3px-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 비트코인 반감기전 아식스간 전쟁</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
                     </p>
@@ -1735,8 +1838,8 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-30T16:48:57.000Z">2020-03-31</time></div>
-                    <a href="/2020/03/31/jayplayco.3f2f11/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[증인] 스팀의 현 증인</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-17T23:17:42.000Z">2020-04-18</time></div>
+                    <a href="/2020/04/18/jayplayco.3pzccb-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 젊은층과 여성이 가지는 블록체인에 대한 관심</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
                     </p>
@@ -1748,10 +1851,10 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-30T16:04:24.000Z">2020-03-31</time></div>
-                    <a href="/2020/03/31/jayplayco.coinnews-defi-djed/" class="title has-link-black-ter is-size-6 has-text-weight-normal">트론의 DeFi 시스템인 Djed 런칭</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-17T23:04:24.000Z">2020-04-18</time></div>
+                    <a href="/2020/04/18/jayplayco.49wfxe-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 정부의 블록체인 골든 타임 주장</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/coinnews/">coinnews</a>
+                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
                     </p>
                 </div>
             </div>
@@ -1761,8 +1864,8 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-30T15:41:39.000Z">2020-03-31</time></div>
-                    <a href="/2020/03/31/jayplayco.3fxwag-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 중국으로 활동을 조금씩 옮기는 바이낸스</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-17T22:23:45.000Z">2020-04-18</time></div>
+                    <a href="/2020/04/18/jayplayco.twctc-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 콘텐츠의 탈중앙화는 실질적으로 가능한가?</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
                     </p>
@@ -1782,12 +1885,23 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
         <ul class="menu-list">
         
         <li>
+            <a class="level is-marginless" href="/archives/2020/04/">
+                <span class="level-start">
+                    <span class="level-item">4월 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">26</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2020/03/">
                 <span class="level-start">
                     <span class="level-item">3월 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">63</span>
+                    <span class="level-item tag">64</span>
                 </span>
             </a>
         </li>
@@ -2127,7 +2241,7 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
                 <div class="control">
                     <a class="tags has-addons" href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/">
                         <span class="tag">미지정</span>
-                        <span class="tag is-grey">312</span>
+                        <span class="tag is-grey">339</span>
                     </a>
                 </div>
                 
@@ -2301,7 +2415,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
 
-<a id="back-to-top" title="Zurück nach oben" href="javascript:;">
+<a id="back-to-top" title="Kembali ke atas" href="javascript:;">
     <i class="fas fa-chevron-up"></i>
 </a>
 <script src="/js/back-to-top.js" defer></script>
