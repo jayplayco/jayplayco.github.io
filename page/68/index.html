@@ -138,6 +138,354 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-05-30T15:09:18.000Z">2018-05-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B0%9C%EB%B0%9C/">개발</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6분 읽기 (대략 933 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/05/31/jayplayco.steemhunt-abv-account-based-voting-in-development/">[Steemhunt] ABV (Account based voting)  in development</a>
+            
+        </h1>
+        <div class="content">
+            <p>Hi @jayplaco here! Some development news from @steemhunt</p>
+<h3>0. Repository</h3>
+https://github.com/Steemhunt/
+
+<p><img src="https://cdn.steemitimages.com/DQmWpr3f9qrH8NPoANLdwigdnumsfi1n4V9qo7YDjqm1o2n/image.png" alt=""><br>Today we are going to talk about the current situation at Steemhunt, where the quality of the content is not driving the community but the use of bots in the background for a successful hunt.</p>
+<p>The Steemhunt team is already aware about this issue and for that reason a github issue has been opened and after talking to the main dev. of Steemhunt (@tabris) the implementation is already planned for the next weeks.</p>
+<p>So let`s start to see what the issue is and what AVB would give the Steemhunt community.</p>
+<h3>1. Find the problem of voting  / Bug Fixes</h3>
+
+<p><a href="https://steemit.com/life/@exyle/ac2xvvfi">Steemhunt, vote bots, incentives and why they need SMT’s @exyle</a><br><a href="https://steemit.com/kr/@sirin418/4awf1l">Is Steemhunt Abusing? @sirin418 (Text in Korean)</a><br><a href="https://steemit.com/utopian-io/@tio/add-flag-feature-on-steemhunt">Add Flag Feature on steemhunt @tio</a></p>
+<p>Some users already have found that the current setting can be abused with bots to get easily a higher daily ranking. In fact, the users are doing it on daily base now and it comes to the same issue steemit has in background that not the content is speaking but the steempower.</p>
+<div class="pull-left">  
+https://steemitimages.com/400x300/https://cdn.steemitimages.com/DQmdUtcV2uLv5MBN5Hm6BSNasFkF58tkPbX7z1qWAYWC4xT/image.png
+<center>[Picture 1]</center>
+</div> 
+<div class="text-justify">  
+With "Picture 1" we can see the current No.1 of Today`s ranking from Steemhunt. There is almost no text (so no offence, but I don`t consider this as quality content...), a picture and that was it. How does it happen that this post is ranking No.1?  The answer is easy if you have a look who is actually voting<div><center>
+https://steemitimages.com/300x200/https://cdn.steemitimages.com/DQmW9GQNbeqCwcfLYRbQjhDbnR2TU94NhiZgSwoRp6Ha7S1/image.png</center></div>
+</div> 
+The highest voter here is called tribesteemup which is a collective voting bot. And with more than 80% of the total vote it is the highest voting power here. Using this strategy you can actually max out your ROI with relatively small or no investment (dependent on what kind of bot you are using.)
+
+<h3>2. Yeah, let`s use ABV, but what is that? </h3>
+
+<p><a href="https://steemit.com/steem/@liberosist/the-account-based-voting-revolution">The account-based voting revolution - @liberosist</a><br><a href="https://steemit.com/steemit/@nealmcspadden/account-based-voting-is-a-terrible-idea-for-steem">Account Based Voting is a Terrible Idea for STEEM - @nealmcspadden</a></p>
+<p>@ned has mentioned ABV (Account based voting) on his Korea tour and there are pros and cons on it, but to explain it easily see below,</p>
+<p><strong>A. Current voting system.</strong></p>
+<ul>
+<li>The more steem power you have, more voting power you get, which means you can give more money.</li>
+<li>problem : bots, curation groups, curation trails, voting pools.</li>
+</ul>
+<p><strong>B.  Account based voting</strong></p>
+<ul>
+<li>One account counts has only one voting power</li>
+<li>problem : without any weighting of an account a spam account has the same power as a whale account. This is what @nealmcspadden is talking about.</li>
+</ul>
+<h3>3. Approach from Steemhunt team / New Features</h3>
+github entry : https://github.com/Steemhunt/web/issues/135
+
+<p><strong>Logic</strong></p>
+<ul>
+<li>One upvote has 10 points with 100% vp.</li>
+<li>The point proportionally decrease based on the hunter’s set vp. For example, the hunter upvotes with 50% vp, the score will be 5 point.</li>
+<li>Whitelist: Scores are only be counted by the user who have hunted AT LEAST ONE TIME. </li>
+</ul>
+<p><strong>Possible Progress (Just examples and not fixed)</strong></p>
+<ul>
+<li>More intensive whitelist: counted by the hunters with at least three times, exclude blacklist hunters, etc.</li>
+<li>Hunter’s badge system: We can level the hunters based on their hunting history, from Lv.1 to Lv.5.</li>
+</ul>
+<p><strong>Lv.1: 1 hunts (1 full voting score: 10 poinst)</strong><br><strong>Lv.2: 10 days hunting + 10 times upvoting the hunting posts (1 full voting score: 20 poinst)</strong><br><strong>Lv.3: Lv.2 + at least 3 times on top 10 hunts (1 full voting score: 30 poinst)</strong><br><strong>Lv.4: Lv.2 + at least 5 times on top 10 hunts (1 full voting score: 50 poinst)</strong><br><strong>Lv.5: 30 days hunting + 30 times upvoting the hunting posts + at least 10 times on top 10 hunts. (1 full voting score: 100 poinst)</strong><br><strong>The Lv can be downgraded if the hunter does not have any hunting or voting activities more than 10 days. (Lv 5 -&gt; Lv 4 -&gt; …)</strong></p>
+<h3>4. So what does that mean? </h3>
+
+<p>@steemhunt will give only active Steemhunters the possibility to vote (whitelist) and level them with badges to differentiate the reputation within the community. Based on the given voting power% a vote can count from 0-100. (Based on your level) The badge system gives different levels to activate the hunters for better content.  All this steps are planned to give active hunters with high quality content the best chance for the highest rewards. </p>
+<h3>5. Roadmap</h3>
+
+<p>It is planned to test the first settings next week, but there is in this moment no official deadline from team @steemhunt , but the main dev. from Steemhunt mentioned that it is very a high priority before scaling to the next stage. So let`s see how this will change the quality of the content at steemhunt.</p>
+<h3>6. Github Account</h3>
+https://github.com/zionopia
+______
+Thanks for reading!
+
+<p>Other articles about Steemhunt.<br><a href="https://steemit.com/steemit/@jayplayco/what-is-steemhunt-and-why-should-i-care">What is Steemhunt and why should I care?</a><br><a href="https://steemit.com/steemit/@jayplayco/biggest-airdrop-ever-hunt-token-and-how-to-participate">Biggest Airdrop ever - HUNT token and how to participate</a></p>
+<p>Join their chat channels if you need more information as the team and the moderators are answering very fast on any question:</p>
+<p>Discord: <a href="https://discord.gg/mWXpgks">https://discord.gg/mWXpgks</a> (this is where the magic happens)<br>Telegram: <a href="https://t.me/joinchat/AzcqGxCV1FZ8lJHVgHOgGQ">https://t.me/joinchat/AzcqGxCV1FZ8lJHVgHOgGQ</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-05-29T23:53:51.000Z">2018-05-30</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    몇 초 읽기 (대략 30 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/05/30/jayplayco.ty6alwd0v/">ty6alwd0v</a>
+            
+        </h1>
+        <div class="content">
+            <p>Just downloaded the app and love it!<br>It is a great “out of the box” thinking to be able to add wanted users and get information based on their activities.</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-05-29T23:42:39.000Z">2018-05-30</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    몇 초 읽기 (대략 68 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/05/30/jayplayco.b9r2t0xmi/">b9r2t0xmi</a>
+            
+        </h1>
+        <div class="content">
+            <p>Thanks for this great overview about Steemhunt! Just found you over this vlog and it is really interesting to listen to the thoughts from a different view and insight.<br>Thanks a lot for that.</p>
+<p>It would be an honour if you could have a look at my post about steemhunt, if you find a moment.</p>
+<p><a href="https://steemit.com/steemit/@jayplayco/what-is-steemhunt-and-why-should-i-care">https://steemit.com/steemit/@jayplayco/what-is-steemhunt-and-why-should-i-care</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-05-29T23:40:36.000Z">2018-05-30</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    몇 초 읽기 (대략 56 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/05/30/jayplayco.usked6er9/">usked6er9</a>
+            
+        </h1>
+        <div class="content">
+            <p>Hi @exyle nice vlog about steemhunt and it is very interesting to see the thoughts from different views.<br>It would be an honour if you could have a look at one text from me about steemhunt written here.<br><a href="https://steemit.com/steemit/@jayplayco/what-is-steemhunt-and-why-should-i-care">https://steemit.com/steemit/@jayplayco/what-is-steemhunt-and-why-should-i-care</a></p>
+<p>Thanks and following your vlogs. :)</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-05-29T21:38:33.000Z">2018-05-30</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B0%80%EC%83%81%ED%99%94%ED%8F%90/">가상화폐</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    9분 읽기 (대략 1385 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/05/30/jayplayco.biggest-airdrop-ever-hunt-token-and-how-to-participate/">Biggest Airdrop ever - HUNT token and how to participate</a>
+            
+        </h1>
+        <div class="content">
+            <p>Hi, @jayplayco back here with another article about @Steemhunt !</p>
+<p>As a Steemian newbie it was really refreshing to see that there is a way to mine coins with writing good content at Steemit.</p>
+<p>Especially for Newbies like me I`ve found a good service based on Steemit called @steemhunt and available at <a href="http://steemhunt.com">http://steemhunt.com</a>.</p>
+<p>Long story short, <strong>Steemhunt is a steemit based producthunt. </strong><br>Read also : <a href="https://steemit.com/steemit/@jayplayco/what-is-steemhunt-and-why-should-i-care">Article about what Steemhunt is!</a></p>
+<p>This time we are going to learn about the airdrop Steemhunt is currently planning, as this will be one of the biggest airdrops available at Steemit.</p>
+<p><strong><h3>1. What is a Hunt Token?</h3></strong><br>Hunt Token is going to be a Smart Media Token (<a href="https://steemit.com/steem/@ned/announcing-smart-media-tokens-smts">SMT</a>) based Token, which means that it will be build based on the <a href="https://smt.steem.io/">Whitepaper</a> from Ned back in Sep 2017. It is going to be a decentralised token system to reward product influencers, buy kickstarted products and help makers and brands to reach out product influencers on the Steemhunt.com platform.</p>
+<p>At Steemhunt the HUNT Tokens can be earned being actively writing product reviews and on the other side there is are separate categories where makers can earn HUNT Tokens kickstarting projects (Ideahunt) and also can spend HUNT Tokens to recruite product reviewer (Reviewhunt)</p>
+<p>Steemhunt is going to issue 500M HUNT Tokens and 50% of them are going to be airdropped. Yes, you read it right, 50%, in total 250M HUNT Tokens are going to be distributed.</p>
+<p><strong><h3>2. What does the HUNT Token distribution looks like?</h3></strong><br><img src="https://cdn.steemitimages.com/DQmbX1bEMiEr5nXnQ9cdVfajGR8k9zy3YExeUBxSLMV1Pcf/image.png" alt=""><br><img src="https://cdn.steemitimages.com/DQmW7izfiQDcikYsaRuRrrRBPke77EPWcQudVwpt4JWzsSx/image.png" alt=""></p>
+<p><strong><h3>3. Give me HUNT Tokens! But how?</h3></strong></p>
+<p>There are in total 5 different ways to gain HUNT Tokens from the Airdrop for FREE! (20% of the volume are going to be into the private sale sector, so will not count them here!)</p>
+<ul>
+<li>Get it if you <strong>have Steem Power</strong> (beg. July 2018)</li>
+<li>Get it if you <strong>delegate Steem Power</strong> (available NOW)</li>
+<li>Get it if you <strong>collect Referrals</strong> (end July 2018)</li>
+<li>Get it if you <strong>Vote and resteem articles</strong> (beg. June 2018)</li>
+<li>Get if if you <strong>Hunt products and review them</strong> (end July 2018)</li>
+</ul>
+<p>So let`s get into it step by step. Be informed that most of the Airdrop schedules are still not prepared and we are going to wait for announcements from Steemhunt.</p>
+<h3>**a.Have Steem Power**</h3>
+Easy one. Just have a look if you have any Steem Power. (If not, you can buy some or just start writing good content or even better start steemhunting!) You can find it under https://steemit.com/@YOURNAMEHERE/transfers. If you have delegated some of your Steem Power, don`t worry. Steemhunt will count the original available Steempower.
+After that join Steemhunt.com at wait for their announcement. (Following @steemhunt will make it easier) Steemhunt is going to add a menu where you can APPLY for HUNT Tokens. It is very important that you ACTIVELY APPLY for HUNT Tokens at Steemhunt, so the best is to go to Steemhunt.com and just join the service for now. You need to have an active Steemit account. HUNT Tokens are going to be airdropped 1:1 to your Steem Power, based on "First Come First Serve", but Steemhunt has prepared about 100M, so there is a plenty of HUNT Tokens for almost everybody.
+
+<p><strong>How much do I get?</strong></p>
+<ul>
+<li>exactly the same amount of your Steem Power you own is going to be airdropped.</li>
+</ul>
+<h3>**b.Delegate Steem Power**</h3>
+This is the only Airdrop you can already join right now.  For that you have to delegate your Steem Power to @steemhunt. 
+
+<p><a href="https://steemconnect.com/sign/delegateVestingShares?delegator=&delegatee=steemhunt&vesting_shares=100%20SP">100 SP</a> | <a href="https://steemconnect.com/sign/delegateVestingShares?delegator=&delegatee=steemhunt&vesting_shares=500%20SP">500 SP</a> | <a href="https://steemconnect.com/sign/delegateVestingShares?delegator=&delegatee=steemhunt&vesting_shares=1000%20SP">1000 SP</a> </p>
+<p>Or just manually change the URL inputting the wanted amount below. Change the “vesting_shares=1000” to “vesting_shares=WANTEDAMOUNT”.<br><a href="https://steemconnect.com/sign/delegateVestingShares?delegator=&amp;delegatee=steemhunt&amp;vesting_shares=1000%20SP">https://steemconnect.com/sign/delegateVestingShares?delegator=&amp;delegatee=steemhunt&amp;vesting_shares=1000%20SP</a></p>
+<p><strong>How much do I get?</strong><br>This is difficult to say. Steemhunt has reserved a daily amount of 90K for all delegated Steem Power (They have actually have over 330K Steempower in this moment) You will get a daily amount of HUNT Tokens based on your Ratio you have delegated. On the last report this was about 190 HUNT Tokens for 100SP delegated. My guess is this will drop quite fast, as more people will join the Steemhunt community and are going to delegate SP to them. But the sooner the better, as the drops are planned for about 500 days, until the SMT will be ready. (Don`t think it will take that long, as Ned has announced it already for 2018)</p>
+<h3>**c.Collect Referrals**</h3>
+An often seen marketing method to engage users and give them benefits. The referral system is still under development. In total 90K Tokens are reserved per day and will be distributed to people who refer Steemhunt to others. So sign up for steemhunt.com, wait until the development for the referral system is done and get your referral link and spread the goods news! Max cap is 5000 per Person. 
+
+<p><strong>How much do I get?</strong><br>Important here is to be fast, as the days past on more and more people will have referrals and the total assigned tokens of 90K pcs. will shrink per day. Calculation is based on 90,000 Tokens assigned by 1/n (referrals)<br>If there are 90,000 referrals collected, you will get 1 HUNT Token per day.</p>
+<h3>**d.Vote and resteem**</h3>
+In total 60K Tokens per day will be distributed for Steemhunters who are upvoting or resteeming hunters posts located under the **"TODAY"** tap. Important is, only the TODAY Tab will be counted. 40K are for upvoters and 20K for resteemers. Airdrop starts when the wallet interface is ready.
+
+<p><strong>How much do I get?</strong><br>If at that day 2000 people are resteeming hunters post, you will get 10 HUNT tokens. If 2000 people are upvoting hunters posts from the Today tab, you will get 20 HUNT tokens and so on. Important is also that these activities have to be done AT steemhunt.com and not steemit.com.</p>
+<h3>**e.Hunt products and review them**</h3>
+
+<p>If you have been succesfully upvoted from @steemhunt you will be 60,000TOKENS/n of the daily airdrop. In total steemhunt upvotes the post itself, a review comment (pros and cons comments) and moderator comments. Additionally the voting power from steemhunt is also important how much of the distributed Tokens you will get.</p>
+<p><strong>How much do I get?</strong><br>This is going to be really difficult to give an exact amount, as it depends on the voting power of steemhunt (which also depends on how your post is ranked, etc.). At the current moment the daily total VP pool is about 1080%, so if you get a voting with 20% this will be about 880 HUNT TOKENS. So this means writing good steemhunter contents is essential!</p>
+<p><strong><h3>4. Conclusion</h3></strong></p>
+<p>HUNT Tokens are going to create an own economy based on the Steemit.com community. All kind of rewards are going to be paid later on as HUNT Tokens and seeing producthunt.com growing even under that kind of circumstances (not reawarding the actual hunters), I strongly believe that Steemhunt can replace this, as soon as enough people are getting used to this kind of system. As there is no max supply for HUNT, there WILL be an inflation which has been vital as example also for the Steem community.</p>
+<p>Be informed that the SMT from steemit is also still under development and that therefore the steemhunt team has decided to start as Ethereum ERC20 Token and then swap them afterwords when the SMT network is ready.</p>
+<p>Thanks for reading and I would be pleased to deliver more great information when you follow @jayplayco </p>
+<p>Also, please follow @steemhunt account and join their chat channels for more information:</p>
+<p>Discord: <a href="https://discord.gg/mWXpgks">https://discord.gg/mWXpgks</a> (this is where the magic happens)<br>Telegram: <a href="https://t.me/joinchat/AzcqGxCV1FZ8lJHVgHOgGQ">https://t.me/joinchat/AzcqGxCV1FZ8lJHVgHOgGQ</a> </p>
+<p><strong>REMARK</strong><br>NOT Professional advice, this is all just my own opinion and experience. Consult professionals for any tax, accounting or legal related questions you have.</p>
+<p>Source<br><a href="https://steemit.com/steemit/@steemhunt/announcing-hunt-token-airdrops-for-steemians-smart-media-token-project">https://steemit.com/steemit/@steemhunt/announcing-hunt-token-airdrops-for-steemians-smart-media-token-project</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2018-05-29T16:42:51.000Z">2018-05-30</time>
                 
                 <div class="level-item">
@@ -503,343 +851,6 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
 
 
 
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-29T06:21:24.000Z">2018-05-29</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1분 읽기 (대략 182 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/05/29/jayplayco.head-case-in-your-face-luggage-covers/">Head Case - &#39;In your face&#39; Luggage Covers</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="Head-Case"><a href="#Head-Case" class="headerlink" title="Head Case"></a>Head Case</h1><p>“In your face” Luggage Covers</p>
-<hr>
-<h2 id="Screenshots"><a href="#Screenshots" class="headerlink" title="Screenshots"></a>Screenshots</h2><center>![head-case_31651.jpg](https://i.imgur.com/9UsB21L.jpg)</center>
-
-
-
-<hr>
-<h2 id="Hunter’s-comment"><a href="#Hunter’s-comment" class="headerlink" title="Hunter’s comment"></a>Hunter’s comment</h2><p>Being on travel is (almost) always fun but I guess everybody remembers the time when standing at the luggage carousel and realizing that almost every luggage is either black or silver.</p>
-<p>This product is here to get you out of this kind of situation, as it is a luggage cover with your own face (or from someone else) printed on it. So nobody will be able to snug your luggage and claim it is theirs~.</p>
-<p>The head cases are made from polyester spandex so they stretch over the bag. </p>
-<p>All you need is a high quality photo from your (or from someone else) to be uploaded on the site.</p>
-<hr>
-<h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a href="https://www.firebox.com/Head-Case/p8279?ref=steemhunt">https://www.firebox.com/Head-Case/p8279?ref=steemhunt</a></p>
-<hr>
-<h2 id="Contributors"><a href="#Contributors" class="headerlink" title="Contributors"></a>Contributors</h2><p>Hunter: @jayplayco</p>
-<hr>
-<center><br/>![Steemhunt.com](https://i.imgur.com/jB2axnW.png)<br/>
-This is posted on Steemhunt - A place where you can dig products and earn STEEM.
-[View on Steemhunt.com](https://steemhunt.com/@jayplayco/head-case-in-your-face-luggage-covers)
-</center>
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-29T06:12:12.000Z">2018-05-29</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1분 읽기 (대략 153 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/05/29/jayplayco.unicorn-usb-fan-elodie-the-unicorn-usb-fan/">Unicorn USB Fan - Elodie the Unicorn USB Fan</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="Unicorn-USB-Fan"><a href="#Unicorn-USB-Fan" class="headerlink" title="Unicorn USB Fan"></a>Unicorn USB Fan</h1><p>Elodie the Unicorn USB Fan</p>
-<hr>
-<h2 id="Screenshots"><a href="#Screenshots" class="headerlink" title="Screenshots"></a>Screenshots</h2><center>![elodie-the-unicorn-usb-fan_32452.jpg](https://i.imgur.com/ccTWJzq.jpg)</center>
-
-
-
-<hr>
-<h2 id="Hunter’s-comment"><a href="#Hunter’s-comment" class="headerlink" title="Hunter’s comment"></a>Hunter’s comment</h2><p>Summer is coming and if you are living in a region where it gets really hot, than you could know that a small USB fan can help a lot to keep the heat away.</p>
-<p>A cute 3D Unicorn named Elodie with a USB plug a Fan.</p>
-<p>The tail is the on/off switch. (At least it has one. haha)</p>
-<center>https://media.firebox.com/product/8685/extra5_column_grid_10/elodie-the-unicorn-usb-fan_32457.jpg</center>
-
-<hr>
-<h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a href="https://www.firebox.com/Elodie-the-Unicorn-USB-Fan/p8685?ref=steemhunt">https://www.firebox.com/Elodie-the-Unicorn-USB-Fan/p8685?ref=steemhunt</a></p>
-<hr>
-<h2 id="Contributors"><a href="#Contributors" class="headerlink" title="Contributors"></a>Contributors</h2><p>Hunter: @jayplayco</p>
-<hr>
-<center><br/>![Steemhunt.com](https://i.imgur.com/jB2axnW.png)<br/>
-This is posted on Steemhunt - A place where you can dig products and earn STEEM.
-[View on Steemhunt.com](https://steemhunt.com/@jayplayco/unicorn-usb-fan-elodie-the-unicorn-usb-fan)
-</center>
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-29T06:01:45.000Z">2018-05-29</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1분 읽기 (대략 166 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/05/29/jayplayco.star-wars-tm-tie-desk-lamp-officially-licensed-star-wars-tm-tie-lighter-desk-lamp/">Star Wars™ TIE Desk Lamp - Officially licensed Star Wars™ TIE Lighter desk lamp</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="Star-Wars™-TIE-Desk-Lamp"><a href="#Star-Wars™-TIE-Desk-Lamp" class="headerlink" title="Star Wars™ TIE Desk Lamp"></a>Star Wars™ TIE Desk Lamp</h1><p>Officially licensed Star Wars™ TIE Lighter desk lamp</p>
-<hr>
-<h2 id="Screenshots"><a href="#Screenshots" class="headerlink" title="Screenshots"></a>Screenshots</h2><center>![New_Hero2_grande.jpg](https://i.imgur.com/bAEhOl9.jpg)</center>
-
-
-
-<hr>
-<h2 id="Hunter’s-comment"><a href="#Hunter’s-comment" class="headerlink" title="Hunter’s comment"></a>Hunter’s comment</h2><p>A desk lamp in the design of Starwars Tie fighter.</p>
-<p>Specification below are from the selling page.<br>-Officially licensed Star Wars™ TIE Lighter poseable desk lamp<br>-Take the fight to Red Squadron<br>-Stands approx. 60 cm tall when extended<br>-Based on the classic Anglepoise light design<br>-USB Powered (includes 3 metre micro USB cable)<br>-Great Star Wars gift for him<br>-Size: 31cm x 23.5cm x 5.5cm (12.2” x 9.25” x 2.16”)<br>-Shipping weight: 1.25 kg</p>
-<p>Now able to preorder.</p>
-<hr>
-<h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a href="https://www.thefowndry.com/products/tie-fighter-posable-desk-lamp?ref=steemhunt">https://www.thefowndry.com/products/tie-fighter-posable-desk-lamp?ref=steemhunt</a></p>
-<hr>
-<h2 id="Contributors"><a href="#Contributors" class="headerlink" title="Contributors"></a>Contributors</h2><p>Hunter: @jayplayco</p>
-<hr>
-<center><br/>![Steemhunt.com](https://i.imgur.com/jB2axnW.png)<br/>
-This is posted on Steemhunt - A place where you can dig products and earn STEEM.
-[View on Steemhunt.com](https://steemhunt.com/@jayplayco/star-wars-tm-tie-desk-lamp-officially-licensed-star-wars-tm-tie-lighter-desk-lamp)
-</center>
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-29T05:53:33.000Z">2018-05-29</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2분 읽기 (대략 303 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/05/29/jayplayco.pico-u-brew-everything/">Pico U - Brew Everything</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="Pico-U"><a href="#Pico-U" class="headerlink" title="Pico U"></a>Pico U</h1><p>Brew Everything</p>
-<hr>
-<h2 id="Screenshots"><a href="#Screenshots" class="headerlink" title="Screenshots"></a>Screenshots</h2><center>![picobrew-pico-u-1.jpg](https://i.imgur.com/1sHBMsA.jpg)</center>
-
-
-
-<hr>
-<h2 id="Hunter’s-comment"><a href="#Hunter’s-comment" class="headerlink" title="Hunter’s comment"></a>Hunter’s comment</h2><p>A machine that can brew coffee, tea, fusion beverages, CRAFT BEER, kombucha and dry soda.</p>
-<p>That is a crazy machine!</p>
-<center>https://ksr-ugc.imgix.net/assets/021/107/818/68cb5dcb0f13071bd11cc415b57843e6_original.gif?w=680&fit=max&v=1525367075&auto=format&gif-q=50&q=92&s=b91123fb888bbe8599484ddb3425f472</center>
-
-<p>The Pico U is a relatively small smart brewing appliance with the goal to make it easy to brew almost anything at home. </p>
-<p>They are also selling so called Picopaks, which are fully compostable ingredient bundles, designed to make an array of perfectly brewed beverages. </p>
-<center>https://ksr-ugc.imgix.net/assets/021/124/174/9fc04111d16e9ce34b3264bbb560229c_original.png?w=680&fit=max&v=1525474648&auto=format&lossless=true&s=57bc3b5999a2941594557667f00e8433</center>
-
-<p>HOW IT WORKS</p>
-<p>They are mainly controlling the temperature to control the taste of the beverage. Additionally the brewing mixture is send to the right place following the preprogrammed recipe. This is called fusion control.</p>
-<center>https://ksr-ugc.imgix.net/assets/021/191/237/2ea8577f6f458e40e266161f916766a7_original.gif?w=680&fit=max&v=1526007111&auto=format&gif-q=50&q=92&s=e1c261b899af627f0bcd4965457e96b2</center>
-
-<p>They are currently running a Kickstarter and the a basic is available at 179USD and a deluxe at 199USD. As the basic product can only handle coffee and tea it should be recommend to get the deluxe version for 20 bucks more.</p>
-<hr>
-<h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a href="https://www.kickstarter.com/projects/picobrew/pico-u-brew-everything?ref=steemhunt">https://www.kickstarter.com/projects/picobrew/pico-u-brew-everything?ref=steemhunt</a></p>
-<hr>
-<h2 id="Contributors"><a href="#Contributors" class="headerlink" title="Contributors"></a>Contributors</h2><p>Hunter: @jayplayco</p>
-<hr>
-<center><br/>![Steemhunt.com](https://i.imgur.com/jB2axnW.png)<br/>
-This is posted on Steemhunt - A place where you can dig products and earn STEEM.
-[View on Steemhunt.com](https://steemhunt.com/@jayplayco/pico-u-brew-everything)
-</center>
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-28T23:46:54.000Z">2018-05-29</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/steem/">steem</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    7분 읽기 (대략 1032 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/05/29/jayplayco.7amc8l/">스팀 배우기 - 보팅파워 알아보기 - 무조건 보팅은 좋지 않다</a>
-            
-        </h1>
-        <div class="content">
-            <p><img src="https://cdn.steemitimages.com/DQmUkAzS1F9bmyZiPxmnhrD6v2g4vviAXDGjieuj41ze5aM/image.png" alt=""><br>이제 스팀을 시작한지 얼마 안되어서 공부도 하고, 이 커뮤니티가 어떻게 작동하는지도 차차 알아가고 있는 중이다.<br>이해했던 바는 업보팅을 하게 되면 일명 큐레이션을 하면서 글이 모아오는 돈의 일부를 받을 수 있다는 이해였다.</p>
-<p>그래서 저는 열심히 많은 글에 보팅을 하였습니다. 하루에 시간날때만다 들어가서 마음에 드는 글에 보팅을 하였습니다. 조금 덜 마음에 들어도 보팅을 해보았지요. 잘 모르니까요.</p>
-<p>그런데 처음에 사들였던 스팀파워로 보팅시마다 글에 지급된다고 하는 $가 적어지는것을 보면서… 어랏.. 이라는 생각이 들더군요.</p>
-<p>자세히 알아보니, 보팅에도 보팅 파워라는 것이 있습니다. 원리는 다음과 같습니다.</p>
-<h4>1. 보팅 파워</h4>
-   토탈 100%를 기준으로 현재 자기가 가지고 있는 스팀파워 (steem power)를 기반으로 100% 보팅을 할때 마다 보팅 파워가 2% 떨어집니다. 이는 하드포크 19회차 이후로 갖춰진 것으로 보여집니다. 즉, 하루에 보팅을 약 50회정도 할 경우 자신의 보팅파워는 그날 0%가 되어버리며, 실제로 스팀파워를 많이 갖고 있는다고 해도 자신의 보팅은 큰 영향을 줄 수 없고, 가장 중요한 것은 큐레이션을 통한 자신의 보상도 없거나 매우 적다는 것입니다.
-
-<h4>2. 하루 100% 보팅 50회만?</h4>
-<center>![votingpercent.JPG](https://cdn.steemitimages.com/DQmdX1M1rYWwgiHNayzg8sRS5MgFx3ZEPorH7s9p6XDFW2h/votingpercent.JPG)</center></br> 보팅을 100%로 한다는 것은 보팅시 저런 작은 팝업 창이 떠서 자기의 스팀파워 100%로 보팅할지 50%로 할지 정할 수 있다는 것입니다. 일부 스팀파워가 부족한 뉴비의 경우에는 뜨지 않는다고도 하더군요. (필자는 그냥 스팀파워를 구매해버리니 저 바가 뜨더군요) 글이 마음에 드는데 보팅을 너무 많이 하면 안되니, 이 글은 조금만 마음에 들어서 예를 들어 10%로 보팅을 할 경우 하루에 500회 보팅을 하면 보팅 파워가 0%가 되겠죠.
-
-<h4>3. 보팅 파워 회복</h4>
-그러면 보팅 파워가 다음날 다시 100%가 되는가? 그렇지 않다!! 하루에 20%만 재충전이 되는 관계로 0%가 되었을때는 최소 5일이 지나야 보팅 파워가 다시 100%가 된다. (예로 현재 필자는 보팅파워가 25% 미만으로 떨어진 상태라, 약 4일 이상을 보내야 다시 100% 가 될것으로 보인다.
-
-<h4>4. 자기의 보팅파워 확인</h4>
-관리를 하고자 하면 보팅파워가 어떠게 되는지 확인이 가능해야겠죠
-
-<p><a href="https://steemd.com/@자기이름쓰기">https://steemd.com/@자기이름쓰기</a></p>
-<p>이렇게 주소창에 입력을 하게 되면 왼쪽 위에 안내창안에 보팅파워가 보입니다. </p>
-<center>![votingpower.JPG](https://cdn.steemitimages.com/DQmQoGHDHcEKKYjEesjiv9RQ7qDaktq6pgyLStBLoAx9fSZ/votingpower.JPG)</center>
-
-<h4>5. 현명한 보팅의 사용</h4>
-그러면 어떻게 하면 보팅을 잘 해서 큐레이션을 많이 받을 수 있을까? 가능하면 자신의 보팅 파워를 80% 이하로 떨어뜰이지 않는 것이 좋다. 이는 100% 보팅시 하루에 11번 이상 보팅하지 않는 것이 좋다는 것이다. 더 많은 보팅을 하고 싶다면 보팅 % 바가 있을 경우 100% 에서 50%던 10%던 낮춰서 보팅을 하면 보팅 수를 더욱더 늘릴 수 있을것이라고 생각된다.
-
-<p>필자도 앞으로는 무조건적인 보팅이 아닌 현명한 선택을 통한 보팅을 할 생각이다.</p>
-<p>그래도 이 글을 읽은 분들은 이 글에 보팅은 꼭 해주시면 정말 감사하겠습니다.~ ^^</p>
-<p>복받으세요~</p>
-<p>참조글 : <a href="https://steemit.com/steemit/@scrooger/voting-power-101-how-to-vote-when-to-vote-when-to-stop-simple-and-easy-explanation">https://steemit.com/steemit/@scrooger/voting-power-101-how-to-vote-when-to-vote-when-to-stop-simple-and-easy-explanation</a></p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -861,6 +872,8 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             <li><a class="pagination-link is-current" href="/page/68/">68</a></li>
             
             <li><a class="pagination-link has-text-black-ter" href="/page/69/">69</a></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/page/70/">70</a></li>
             
         </ul>
     </nav>
@@ -910,7 +923,7 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            690
+                            695
                         </p>
                     </a>
                 </div>
@@ -1010,7 +1023,7 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
                 <span class="level-item">coinnews</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">8</span>
+                <span class="level-item tag">13</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/hexo/">
@@ -1184,10 +1197,10 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-28T16:45:36.000Z">2020-04-29</time></div>
-                    <a href="/2020/04/29/jayplayco.5oedl9-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 바이낸스 풀 런칭</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-30T03:02:12.000Z">2020-04-30</time></div>
+                    <a href="/2020/04/30/jayplayco.coinnews-bnb/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] BNB 소유를 통한 커뮤니티 보팅과 보상 방법</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                        <a class="has-link-grey -link" href="/categories/coinnews/">coinnews</a>
                     </p>
                 </div>
             </div>
@@ -1197,10 +1210,10 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-28T16:29:42.000Z">2020-04-29</time></div>
-                    <a href="/2020/04/29/jayplayco.4zjtvk-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 암호화폐 채굴 바이러스를 통한 봇넷은 수익이 날까?</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-29T16:14:42.000Z">2020-04-30</time></div>
+                    <a href="/2020/04/30/jayplayco.coinnews-cto/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 리플 CTO의 유튜브 채널 정지</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                        <a class="has-link-grey -link" href="/categories/coinnews/">coinnews</a>
                     </p>
                 </div>
             </div>
@@ -1210,10 +1223,10 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-28T16:14:03.000Z">2020-04-29</time></div>
-                    <a href="/2020/04/29/jayplayco.36kl4b-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 금년도 채굴된 이더리움의 반을 구매한 곳</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-29T15:57:15.000Z">2020-04-30</time></div>
+                    <a href="/2020/04/30/jayplayco.4vbcrv-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 바이낸스의 트레이딩 볼륨 사상 최대</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                        <a class="has-link-grey -link" href="/categories/coinnews/">coinnews</a>
                     </p>
                 </div>
             </div>
@@ -1223,10 +1236,10 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-28T16:02:03.000Z">2020-04-29</time></div>
-                    <a href="/2020/04/29/jayplayco.coinnews-defi-dforce/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 해킹되었던 DeFi 프로젝트 dForce 고객 자금 환불</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-29T15:48:03.000Z">2020-04-30</time></div>
+                    <a href="/2020/04/30/jayplayco.2wffeq-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 유튜브의 암호화폐 내용 견제</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                        <a class="has-link-grey -link" href="/categories/coinnews/">coinnews</a>
                     </p>
                 </div>
             </div>
@@ -1236,10 +1249,10 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-28T15:51:48.000Z">2020-04-29</time></div>
-                    <a href="/2020/04/29/jayplayco.coinnews-btc/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 소액 BTC 소유 주소가 지속적 증가 추세</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-29T13:38:03.000Z">2020-04-29</time></div>
+                    <a href="/2020/04/29/jayplayco.3vdoz3-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 비트코인의 약진</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                        <a class="has-link-grey -link" href="/categories/coinnews/">coinnews</a>
                     </p>
                 </div>
             </div>
@@ -1262,7 +1275,7 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
                     <span class="level-item">4월 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">39</span>
+                    <span class="level-item tag">44</span>
                 </span>
             </a>
         </li>
@@ -1613,7 +1626,7 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
                 <div class="control">
                     <a class="tags has-addons" href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/">
                         <span class="tag">미지정</span>
-                        <span class="tag is-grey">352</span>
+                        <span class="tag is-grey">357</span>
                     </a>
                 </div>
                 
@@ -1671,10 +1684,10 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-28T16:45:36.000Z">2020-04-29</time></div>
-                    <a href="/2020/04/29/jayplayco.5oedl9-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 바이낸스 풀 런칭</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-30T03:02:12.000Z">2020-04-30</time></div>
+                    <a href="/2020/04/30/jayplayco.coinnews-bnb/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] BNB 소유를 통한 커뮤니티 보팅과 보상 방법</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                        <a class="has-link-grey -link" href="/categories/coinnews/">coinnews</a>
                     </p>
                 </div>
             </div>
@@ -1684,10 +1697,10 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-28T16:29:42.000Z">2020-04-29</time></div>
-                    <a href="/2020/04/29/jayplayco.4zjtvk-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 암호화폐 채굴 바이러스를 통한 봇넷은 수익이 날까?</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-29T16:14:42.000Z">2020-04-30</time></div>
+                    <a href="/2020/04/30/jayplayco.coinnews-cto/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 리플 CTO의 유튜브 채널 정지</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                        <a class="has-link-grey -link" href="/categories/coinnews/">coinnews</a>
                     </p>
                 </div>
             </div>
@@ -1697,10 +1710,10 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-28T16:14:03.000Z">2020-04-29</time></div>
-                    <a href="/2020/04/29/jayplayco.36kl4b-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 금년도 채굴된 이더리움의 반을 구매한 곳</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-29T15:57:15.000Z">2020-04-30</time></div>
+                    <a href="/2020/04/30/jayplayco.4vbcrv-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 바이낸스의 트레이딩 볼륨 사상 최대</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                        <a class="has-link-grey -link" href="/categories/coinnews/">coinnews</a>
                     </p>
                 </div>
             </div>
@@ -1710,10 +1723,10 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-28T16:02:03.000Z">2020-04-29</time></div>
-                    <a href="/2020/04/29/jayplayco.coinnews-defi-dforce/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 해킹되었던 DeFi 프로젝트 dForce 고객 자금 환불</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-29T15:48:03.000Z">2020-04-30</time></div>
+                    <a href="/2020/04/30/jayplayco.2wffeq-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 유튜브의 암호화폐 내용 견제</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                        <a class="has-link-grey -link" href="/categories/coinnews/">coinnews</a>
                     </p>
                 </div>
             </div>
@@ -1723,10 +1736,10 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-28T15:51:48.000Z">2020-04-29</time></div>
-                    <a href="/2020/04/29/jayplayco.coinnews-btc/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 소액 BTC 소유 주소가 지속적 증가 추세</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-29T13:38:03.000Z">2020-04-29</time></div>
+                    <a href="/2020/04/29/jayplayco.3vdoz3-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 비트코인의 약진</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                        <a class="has-link-grey -link" href="/categories/coinnews/">coinnews</a>
                     </p>
                 </div>
             </div>
@@ -1749,7 +1762,7 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
                     <span class="level-item">4월 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">39</span>
+                    <span class="level-item tag">44</span>
                 </span>
             </a>
         </li>
@@ -2100,7 +2113,7 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
                 <div class="control">
                     <a class="tags has-addons" href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/">
                         <span class="tag">미지정</span>
-                        <span class="tag is-grey">352</span>
+                        <span class="tag is-grey">357</span>
                     </a>
                 </div>
                 
