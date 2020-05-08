@@ -138,6 +138,146 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-24T14:04:15.000Z">2019-06-24</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B0%9C%EB%B0%9C/">개발</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    7분 읽기 (대략 1061 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/24/jayplayco.postpromoter/">[스팀엔진] Postpromoter 서비스 타 토큰 오픈</a>
+            
+        </h1>
+        <div class="content">
+            <center>https://steemitimages.com/640x0/https://i.imgur.com/TYi4iS7.png</center>
+
+<p>안녕하세요, @jayplayco입니다.</p>
+<p>원본링크: <a href="https://steemit.com/bidbot/@aggroed/community-promotion-services-through-postpromoter-and-steem-engine-com">https://steemit.com/bidbot/@aggroed/community-promotion-services-through-postpromoter-and-steem-engine-com</a></p>
+<p>@aggroed측에서 또한번 @yabapmatt이랑 추가적인 스팀엔진 서비스를 선보입니다. 다름이 아닌 스팀엔진 토큰을 이용한 스팀 보팅입니다.</p>
+<p>가장 단적인 예는 현재 스플린터랜드에서 진행하고 있는 <a href="https://steemit.com/steemmonsters/@jayplayco/3nc9wf-dec">DEC를 @steemmonsters 계정으로 보내면 업보팅 해주는 서비스</a>입니다. @glory7님의 부계정에서 한번 효율 측정이 있었는데, 몇일전까지만 해도 상당히 효율적인 서비스입니다. <a href="https://steemit.com/sct/@deer3/dk4gv-dec">@deer3 포스팅 링크</a></p>
+<p>추가적으로 한국 커뮤니티는 많이는 쓰지 않는 PAL토큰을 @minnowsupport로 URL과 함께 보내면 이것 역시 스팀 업보팅을 해줍니다.</p>
+<h2 id="1-가격과-사용방법"><a href="#1-가격과-사용방법" class="headerlink" title="1. 가격과 사용방법"></a>1. 가격과 사용방법</h2><ul>
+<li>계정을 하나 세팅해서 포스팅키와 액티브키 권한을 @postpromoter 에게 양도합니다. (@aggroed가 필요시 도와줍니다.)</li>
+<li>1000 ENG를 @steem-eng로 보내고 @aggroed에게 DM을 합니다.</li>
+<li>@aggroed 에게 다음과 같은 정보를 전달해줍니다.<br>1) 사용될 스팀 계정<br>2) 어떤 스팀엔진 토큰으로 할지<br>3) 업보팅을 위한 토큰은 어떻게 활용할지</li>
+</ul>
+<p>@postpromoter봇은 자동으로 보팅에 사용된 토큰의 5%를 비용으로 가져갑니다.</p>
+<h2 id="2-예상-효과"><a href="#2-예상-효과" class="headerlink" title="2. 예상 효과"></a>2. 예상 효과</h2><p>우선 즉각적으로 토큰에 대한 최소 가치가 형성됩니다. 또한 토큰을 스팀으로 전환하는 효과도 있습니다. 사용된 토큰은 스파임대자분들에게 나눠줘도 되고, 일부 or 전량 소각을 해도 됩니다. </p>
+<h2 id="3-봇-세팅"><a href="#3-봇-세팅" class="headerlink" title="3. 봇 세팅"></a>3. 봇 세팅</h2><p>봇은 기본적으로 +/- 10%의 ROI를 바탕으로 설계되었습니다. 중요한 것은 -10%도 가능하다는 것입니다. 봇을 사용해보신 분들은 아시겠지만, 많이 밀릴때는 ROI는 떨어지고 한가할때는 ROI가 올라가는 현상을 볼 수 있습니다. 또한 자연스럽게 현재 소유한 토큰을 Steem과 스달로 전환할 수 있는 방법이기도 합니다.</p>
+<p>만약에 토큰을 만든측에서 @postpromoter가 가져가는 5%의 토큰을 제외하고 전량 소각을 결정한다면, 이것 또한 토큰의 가치를 향상시키는 방법중 하나일것입니다.</p>
+<ul>
+<li>스팀토큰이 충분한 가격을 형성을 위한 유동성이 없다면 fixed가격을 Steem이나 USD로 세팅할 수있음.</li>
+<li>너무 높거나 낮은 비딩은 다시 돌려주게 되며, 라운드가 꽉 차면 다음 라운드로 이관됩니다.</li>
+<li>다음 라운드까지 꽉 찼다면 비딩 금액은 다시 돌려줍니다.</li>
+<li>@themarkymark 분이 만든 블랙리스트 API를 사용할 예정입니다. 여기에 포함된 경우 봇 서비스 사용이 불가합니다.</li>
+</ul>
+<h2 id="4-Steembot-Tracker-리스팅"><a href="#4-Steembot-Tracker-리스팅" class="headerlink" title="4. Steembot Tracker 리스팅"></a>4. Steembot Tracker 리스팅</h2><p>스팀용 봇 사용을 위해서는 보통 steembot tracker라는 사이트를 이용합니다. 이 사이트도 역시 @yabapmatt이 만들어서 스팀엔진 토큰용 봇도 같이 리스팅이 될 예정입니다. (이 사이트가 봇 사용시 많이 편하긴 합니다, 가능한 ROI와 최대 옥션 금액 선정까지 같이 해주기 때문입니다.) <a href="https://steemit.com/sct/@jayplayco/2sfsqx">사용방법은 다른 포스팅에서 한번 다룬 적이 있습니다.</a></p>
+<h2 id="5-개인적인-생각"><a href="#5-개인적인-생각" class="headerlink" title="5. 개인적인 생각"></a>5. 개인적인 생각</h2><p>스팀임대를 통해 토큰을 받고 싶어하는 분들이 많으면 그 토큰 이코노미는 보팅후 임대자분들에게 토큰을 나눠주는 형태로 가도 되고, 어느정도 스팀을 모은 계정이 있다면 이를 바탕으로 토큰으로 보팅하고, 이를 소각해서 스팀으로 전환되는 과정을 만들어가면 토큰 이코노미에도 많은 도움이 될것으로 예상됩니다. AAA의 행보를 잘 지켜봐야할것 같습니다.</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-23T15:42:39.000Z">2019-06-24</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    9분 읽기 (대략 1351 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/24/jayplayco.eth-2-0-2-0/">[ETH 2.0] 이더리움 2.0 의 핵심 키워드들과 영향</a>
+            
+        </h1>
+        <div class="content">
+            <center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/AveGsuRH-image.png)</center>
+안녕하세요, @jayplayco입니다.
+
+<p>몇일전 이더리움 2.0의 Phase Zero가 2020년 1월로 예정되었다는 발표와 함께 이더리움 블록체인에 커다란 변화를 예고했습니다. 핵심을 통해 무엇이 변하는지를 보고 어떤 영향력이 있을지에 대해 알아보겠습니다.</p>
+<h2 id="1-POS로-전환"><a href="#1-POS로-전환" class="headerlink" title="1. POS로 전환"></a>1. POS로 전환</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/9Pj966rP-image.png)</center>
+가장 큰 변화중 한가지는 이더리움이 POW (Proof of Work)에서 POS (Proof of Stake)를 지원할 예정입니다. 이는 현재 이더리움의 경우는 하드웨어의 (CPU, GPU등)의 계산 방식으로 이에 따른 채굴이 가능한것과 비교해서 이더리움을 staking (잠금)으로써 이 지분에 따른 증명과 보상이 주어질 예정이라고 합니다.
+
+<h2 id="2-Serenity"><a href="#2-Serenity" class="headerlink" title="2. Serenity"></a>2. Serenity</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/KhZA7xKH-image.png)
+[Source: Devcon4 Keynote - Vitalik Buterin](https://www.youtube.com/watch?v=Km9BaxRm1wA)</center>
+
+<p>실제 이더리움을 2015년에 런칭할시 사실 4단계로 런칭을 할 예정이였습니다. Frontier라는 첫 빌드, Homestead는 2018년에 런칭이 되었고, Metropolis는 Byzantium과 Constantinople이라는 2개의 하드포크로 나누어져서 진행이 되었습니다. 그리고 최종적으로 Serenity라는 마지막 하드포크가 일명 통칭으로는 이더리움 2.0으로 가게 됩니다. </p>
+<p>Serenity는 총 3단계로 나뉘며 2019-2021년 사이에 진행이 될 예정이라고 합니다. (시간은 개발여부에 따라 변경될 수 있습니다.) Serenity에는 상단 POS외에도 많은 추가적인 기능들이 포함되어 있습니다.</p>
+<ul>
+<li>eWASM: 코드가 더욱더 빨리 실행될 수 있는 기술. </li>
+<li>Sharding: 스케일링과 트랜스액션 속도를 위해 꼭 필요한 부분입니다. 기술적으로는 큰 databank를 작은 여러개로 나눠서 관리를 하는 것입니다.</li>
+<li>Plasma: 비트코인의 라이트네트워크와 같이 많은 트랜스액션을 처리하기 위한 이더리움 상위 레이어입니다.</li>
+<li>Raiden: Plasma와 비슷하나, On-chain이 아닌 Off-chain 스케일링 방식입니다.</li>
+</ul>
+<h2 id="3-현재의-문제점과-이더리움-2-0의-방향"><a href="#3-현재의-문제점과-이더리움-2-0의-방향" class="headerlink" title="3. 현재의 문제점과 이더리움 2.0의 방향"></a>3. 현재의 문제점과 이더리움 2.0의 방향</h2><p>실제 이더리움의 경우는 이미 네트워크가 현 상태로는 <a href="https://coingape.com/vitalik-buterin-on-ethereum-scaling-making-fast-progress/">더 이상 스케일링을 하지 못하는 한계에 </a> 도달하며 속도 역시 다른 블록체인에 비해 현저하게 떨어지는 관계로, 시대 흐름에 맞춰 모던한 기술들을 적용할 필요가 있다는 것은 인지하고 있는 상황입니다. 이에 따라 2세대 블록체인이라고 볼 수 있는 이더리움이 3세대와 그 이후의 블록체인들과 경쟁하기 위해서 핵심포인트들을 잘 건들고 있습니다. 이는 네트워크의 스케일링과 속도면에서 sharding Plasma와 같은 기술을 적용하는데에서 볼 수 있습니다. </p>
+<p>또한 POW에서는 마이닝 회사들과 asics를 저전력으로 돌릴 수 있는 측이 유리했다면, 이제는 일부의 PC 파워와 많은 ETH staking이 수반되어야지 mining이 되는 방식으로 전환됩니다. 최소 필요한 <a href="https://twitter.com/vitalikbuterin/status/1002914813578637312?lang=en">ETH가 32이고</a> 금일 기준 약 1200만원 정도가 필요합니다. 여기에 추가적으로 최소 Beacon Node와 Validator Client를 돌리기 위한 비용이 추가되어야 합니다. 물론 POS의 경우는 언제나 많이 staking이 되면 될수록 내가 상대적으로 같은 금액으로 가져갈 수 있는 금액은 줄어드는 경향이 있기 때문에 실질적으로 mining을 준하시고자 하시는 분들은 실질적인 ETH의 staking 상황과 최소 필요 경비 (ETH와 장비, 전기료등)을 계산하셔서 진행해야합니다.</p>
+<blockquote>
+<p>Assuming 10 million ETH are staked, a total incentive of staking corresponds to 3.80% + network fee per annum (minus operation cost). It is important to determine if staking ETH is worth by comparing net reward versus competition. <a href="https://medium.com/whaley-official/getting-prepared-for-ethereum-pos-staking-in-2019-3a3855e6a018">소스</a></p>
+</blockquote>
+<p>저 기사를 기반으로 했을때는 1천만 ETH가 스테이킹된다고 했을때 연간 3.8%의 ROI와 여기에 추가로 Network fee로 벌어드릴 수 있는 ETH가 있습니다. (이부분도 무시는 못하니). 물론 여기서 운영비용은 빼야합니다. Staking되는 ETH 물량에 비해 물론 또한 이더리움의 inflation rate도 염두해 두어야 하고요. </p>
+<p>결정적으로 마이닝을 위한 최소 비용이 현 시점 천만원 이상으로 올라간점과, 추후 불런시 이더가 더욱 뛰게 되면, 마이닝에 대한 진입 장벽은 더욱더 높아질것으로 여겨집니다.</p>
+<p><a href="https://cryptocurrencyfacts.com/ethereum-2-0-explained/">기사링크: Ethereum 2.0 explained</a><br><a href="https://www.coindeskkorea.com/ethereumphasezero/">기사링크: 코인데스크</a><br><a href="https://cointelegraph.com/news/ethereum-20s-phase-zero-scheduled-to-launch-on-january-3-2020-devs">기사링크: Ethereum 2.0 Pahse Zero</a><br><a href="https://www.coindesk.com/phase-zero-of-a-new-ethereum-blockchain-could-go-live-next-january">기사링크: Coindesk</a><br><a href="https://medium.com/whaley-official/getting-prepared-for-ethereum-pos-staking-in-2019-3a3855e6a018">기사링크: Getting prepared for ETH POS</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-06-22T16:51:06.000Z">2019-06-23</time>
                 
                 <div class="level-item">
@@ -814,162 +954,6 @@ Hunt tokens can be traded on an exchange, but more importantly you will need to 
 
 
 
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-17T15:20:24.000Z">2019-06-18</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    8분 읽기 (대략 1186 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/06/18/jayplayco.breez-ios-beta/">[Breez] 비트코인 라이트닝 네트워크 기반 모바일 지갑 iOS Beta버젼 출시</a>
-            
-        </h1>
-        <div class="content">
-            <center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/qJi16cbp-image.png)</center>
-안녕하세요, @jayplayco입니다.
-
-<p>이번에 Breez라는 곳에서 비트코인용 라이트닝 네트워크 지갑을 아이폰용 베타 버젼을 공개했습니다. 이에 따라 비트코인으로 소액결제를 이동중에도 쉽게 가능하게 되었습니다. 한번 파고 들어가보겠습니다.</p>
-<h2 id="0-라이트닝-네트워크란-Lighting-Network"><a href="#0-라이트닝-네트워크란-Lighting-Network" class="headerlink" title="0. 라이트닝 네트워크란? (Lighting Network)"></a>0. 라이트닝 네트워크란? (Lighting Network)</h2><p>스팀을 쓰시는 분들은 별로 큰 어려움을 느끼지 못하실텐데, 거래소 내에서 비트코인 거래가 아닌 실질적인 비트코인을 지갑에서 지갑으로 최근에 이동을 시켜보신 분들은 아시겠지만, 우선 비트코인을 전송하는데 기본적으로 비용이 들지는 않지만, 사실상 transaction이 실행이 되기 위해서는 transaction fee를 포함해야 하는것이 사실이며, 이는 많은 량의 비트코인을 이동할때는 어쩔 수 없다고 하지만, 커피값 정도되는 비트코인을 전송하는데는 문제가 될 수 있습니다.</p>
-<p>그 현재 비트코인은 블록당 1MB가 들어가게 되는데, 트랜스액션을 처리해야할 마이너(miner)의 경우에는 트랜스액션 fee가 높은 거래를 우선시하는경향이 있고, 소량의 비트코인의 경우에는 그만큼 트랜스액션 비용도 적은 관계로 우선순위가 밀릴 수 있습니다.</p>
-<p>이를 해결하기 위해서는 하트포크를 해서 1MB의 제한을 풀어버려서 스케일링을 할 수 있으나, 그에 따른 다른 문제점들이 발생하기도 합니다. (전송 속도, 처리 하드웨어등등)</p>
-<p>라이트닝 네트워크는 확장성을 위해 블록크기를 늘린것이 아닌 오프체인에서 수수료를 낮추고 소액거래가 가능하도록 하는 기술임. 즉, 약간 비트코인 오프체인의 사이드체인과 비슷한 느낌입니다.</p>
-<h2 id="1-Breez의-지갑"><a href="#1-Breez의-지갑" class="headerlink" title="1. Breez의 지갑"></a>1. Breez의 지갑</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/wHWt0cvm-image.png)</center>
-
-<p>브리즈의 지갑은 구매자와 판매자가 각각 설치를 하고 소액 결재를 할때 라이트닝 네트워크를 이용해서 쉽고 저렴한 비용으로 이용할 수 있게 구성이 되어 있습니다. 실제 결재를 할때는 Breeze의 허브를 통해 서로 연결되며, 이 허브는 Lightning 노드를 이용해서 진행됩니다. 각 지갑에 저장된 비토코인의 변화를 반영하기 위해 거래가 있을때 마다 당사자들의 Bitcoin의 변화하는 양을 반영하기 위해 거래가있을 때마다 대차 대조표에 서명을 하면서 증명을 합니다. 트랜잭션이 완료되면 잔액이 최종 비트코인 블록 체인에 등록됩니다. 분쟁이 일어날 경우에는 가장 최근 대차 대조표를 사용하여 지가분 분쟁 발생시, 양 당사자는 가장 최근에 서명 한 대차 대조표를 사용하여 잃어버린 부분을 되찾을 수 있습니다. </p>
-<p>기존 안드로이드 사용자들은 Breez의 지갑을 쓸 수 있었지만, 이번 iOS 베타 출시로 전체 모바일 시장의 약 98%를 커버하게 되었습니다.</p>
-<h2 id="2-Breez-지갑의-비젼"><a href="#2-Breez-지갑의-비젼" class="headerlink" title="2. Breez 지갑의 비젼"></a>2. Breez 지갑의 비젼</h2><p>브리즈 지갑의 경우는 100% 비트코인의 소액 결재를 위해 최적화되었습니다. 라이트닝 네트워크 사용이 그 단적인 증거이죠. 이제 소비자용 지갑은 완성이 되었으니 사실상 Breez측에서도 다음 단계로 필요한 것은 판매자를 위한 POS 클라이언트 라고 합니다. 이것까지 제공이 된다면, 손쉽게 비트코인으로 소액 결재를 확장할 수 있는 기반이 만들어질 것 같습니다. </p>
-<p><a href="https://en.wikipedia.org/wiki/Lightning_Network">소스: Lightning Network - Wikipedia</a><br><a href="https://banksalad.com/contents/%EC%89%BD%EA%B2%8C-%EC%84%A4%EB%AA%85%ED%95%98%EB%8A%94-%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8-%EB%9D%BC%EC%9D%B4%ED%8A%B8%EB%8B%9D-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-Lightning-Network-%EB%9E%80-g9nT6">소스: 쉽게설명하는 블록체인: 라이트닝 네트워크</a><br><a href="https://medium.com/breez-technology/breez-on-ios-a-big-step-towards-the-lightning-economy-and-a-giant-leap-for-breez-cbcf2db77acb">소스: Breez Medium 공지</a><br><a href="https://www.coindesk.com/breez-reveals-lightning-powered-bitcoin-payments-app-for-iphone">소스: 코인데스크 Breez 기사</a><br><a href="https://github.com/breez/breezmobile">소스: Breez Github</a></p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-16T17:07:24.000Z">2019-06-17</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    10분 읽기 (대략 1506 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/06/17/jayplayco.roadofrich-finding-about-the-team-and-project/">[RoadofRich] Findings about the team and project</a>
-            
-        </h1>
-        <div class="content">
-            <center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/HlUCJukC-image.png)</center>
-Hi, @jayplayco here.
-
-<p>I’ve got a personal message with concerns about the project Road of Rich, which is claming to be a Steem based SRPG game and in the moment in Pre-sale for their tokens on Steem-Engine.</p>
-<p>I’ve written a posting a few days ago for the KR community and digged deeper into the team, as they were not well known on Steem, which resulted in a very fast sold out of their first pre-sale.</p>
-<p>Link: </p>
-<ul>
-<li><a href="https://steemit.com/sct/@jayplayco/rors-srpg">Korean Article about ROR from @jayplayco</a></li>
-<li><a href="https://steemit.com/sct/@deer3/rors">Korean Article about ROR from @glory7 (deer3)</a></li>
-</ul>
-<p>After the request I’ve decided to write a short post about my findings for the international community.</p>
-<h2 id="0-TL-DR"><a href="#0-TL-DR" class="headerlink" title="0. TL;DR"></a>0. TL;DR</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/MHPzjIiP-image.png)</center>
-Road of Rich is a SRPG game based on Steem and a Steem-Engine token called RORS. The team behind the game is organized from members of different companies, which include a blockchain agency (Useb), a HTML5 game maker company (ziplab) and a company that is responsible for the illustration. (AI-Channel)
-
-<h2 id="1-Are-they-real"><a href="#1-Are-they-real" class="headerlink" title="1. Are they real?"></a>1. Are they real?</h2><p>The Steem community has now seen a lot trials of games which partly resulted in disappointing or even runaway over night (like Magic Dice). A steady and continued player is @steemmonsters, now rebranded as Splinterlands and utilizing the advantages of other blockchains, using Steem as main layer and bringing therefore new Steem users on board.  </p>
-<p>As Road of Rich is a team based in Korea, the Korean Steem Community had also interest in the project, but was not sure because there was not a lot of information available about the team nor have been significant activities noticed before their announcement.</p>
-<p>@ai-channel, the account who is responsible for the marketing activities on the Korean Steem side is active on Steem since 2017 but was also not well known nor well integrated into the KR community.<br>So I got in contact with the team to be able to get more information about them. Please find the interview translation, which I had on Discord with one of the Cofounders Nia. The interview happened at 4th of June 2019.</p>
-<center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/j6D4q9QR-image.png)</center>
-
-<h3 id="a-Please-introduce-yourself"><a href="#a-Please-introduce-yourself" class="headerlink" title="a. Please introduce yourself."></a>a. Please introduce yourself.</h3><p>I am Nia and one of the co-founders of the project ROR. I am responsible for planning the game structure of ROR.</p>
-<h3 id="b-How-is-the-team-of-ROR-structured"><a href="#b-How-is-the-team-of-ROR-structured" class="headerlink" title="b. How is the team of ROR structured?"></a>b. How is the team of ROR structured?</h3><p>Link: <a href="http://roadofrich.com/team/">http://roadofrich.com/team/</a><br>We are key members from different companies gathered together to make ROR possible. In total 5 members including  Martin Kim from UseB and Oh-Hyun Kwon from Ziplab are driving the project but we are increasing the members based on the project needs out of our resource pools. (Based on the team introduction on @oadofrich, the team members had been increased since then)<br>The main companies involved are UseB (<a href="https://useb.co.kr/">https://useb.co.kr/</a>), which is a blockchain technic and marketing related company, Ziplab (<a href="http://zip-lab.co.kr/">http://zip-lab.co.kr/</a>) which is developing the game and AI-channel (@ai-channel) which is the company responsible for our illustrations and also the national marketing on Steem. Additionially, we have VC’s on board.</p>
-<h3 id="c-If-you-create-the-game-based-on-Steem-you-will-have-speed-issues"><a href="#c-If-you-create-the-game-based-on-Steem-you-will-have-speed-issues" class="headerlink" title="c. If you create the game based on Steem, you will have speed issues."></a>c. If you create the game based on Steem, you will have speed issues.</h3><p>Yes it is. We are also worried about the speed. When we experienced STEEM block chain based games, we felt it is a lot slower then conventional games. We are going to use Custom Json and use the Steem blockchain to relate to resource items and production related parts. Most of the parts to be utilized in the blockchain are likely to be included. In terms of speed, we are going to make it not too loose, but I think it is going to be unavoidable to centralize bigger parts. However, parts such as important item resource production facilities will use the STEEM blockchain.</p>
-<h3 id="e-Please-explain-your-token-economy"><a href="#e-Please-explain-your-token-economy" class="headerlink" title="e. Please explain your token economy."></a>e. Please explain your token economy.</h3><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/w7RqJWWw-image.png)</center>
-First, we are distributing 100% of the game revenue and put in a dividend pool because we believe and rely heavily on the token economy. Our goal is to maximize the company's profits by increasing the token value. In other words, gaming is the most important factor for us. We may add advertisement, but only if it is not hurting the playing experience of the user. 
-
-<p>We already started to develop the game with our capital and VC investment. In fact, it will cost more in the future. We want to overcome the shortage through sales. As you can see from the introduction of the game, the scale of the game is not much different from a regular RPG game, so it is also true that the expected development time has increased a lot.</p>
-<p>Payment is made with RORS token and STEEM OR SBD. This is because users who use the STEEM block chain can receive immediate payments and dividends into their account. 100% of paid items will get back to game players and token holders. The game player can collect game money, transfer it to the daily dividend pool and get a day’s dividend. Token holders can stake(hold) their tokens to receive dividends, players will keep their game money in the dividend pool or continue to develop themselves within the game. </p>
-<p><a href="https://steemit.com/roadofrich/@roadofrich/ror-test">Edit: an updated version of their token economy</a></p>
-<h3 id="f-When-will-the-dividend-payment-start"><a href="#f-When-will-the-dividend-payment-start" class="headerlink" title="f. When will the dividend payment start?"></a>f. When will the dividend payment start?</h3><p>It will start with the opening of the game.</p>
-<h3 id="g-Do-you-have-a-target-for-opening"><a href="#g-Do-you-have-a-target-for-opening" class="headerlink" title="g. Do you have a target for opening?"></a>g. Do you have a target for opening?</h3><p>The alpha test is targeted for latest August this year.</p>
-<h2 id="2-Other-Facts"><a href="#2-Other-Facts" class="headerlink" title="2. Other Facts"></a>2. Other Facts</h2><h3 id="a-Ziplab"><a href="#a-Ziplab" class="headerlink" title="a. Ziplab"></a>a. Ziplab</h3><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/lM8hATlt-image.png)</center>
-If you look at the company developing the game, you can find that they have a few days ago launched a game named called "The heritage of Mayhem" 
-
-<p>The game is only in Korean, but works on HTML 5 and is mobile optimized. </p>
-<p>Link: <a href="https://mayhem.zip-lab.co.kr/">https://mayhem.zip-lab.co.kr/</a></p>
-<p>So it looks like that the developers are able to deliver a game based on HTML5 and are also used to RPG like games. To make sure that company is really envolved I have personally called the number on their webpage and asked if their CEO Mr. Oh Hyun Kwon is involved in a Steem based game called Road of Rich. The person on the phone confirmed it.</p>
-<center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/gek1R3af-image.png)![image.png](https://files.steempeak.com/file/steempeak/jayplayco/Qb8ZtK2n-image.png)</center>
-
-<h3 id="b-UseB"><a href="#b-UseB" class="headerlink" title="b. UseB"></a>b. UseB</h3><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/8NjqvNUW-image.png)</center>
-I have called additionally the CEO of UseB Mr. Martin Kim and asked him several questions about the project. He is closely working together with Nia and Ziplab and also answers questions directly on the ROR discord server. UseB as a company is in the moment working on a solution for KYC to make it possible for companies to engage in cryptocurrency related business. He reconfimed that he is also involved with his team and that they are preparing the launch of ROR. They are also in contact with @birdinc (David from Steemit) who is in the moment in Korea and it is planned to meet with him this Wednesday. As you can see the latest post from @roadofrich is resteemed from the birdinc account.
-
-<center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/ZrtWoS1L-image.png)</center>
-
-<h2 id="3-Personal-thoughts"><a href="#3-Personal-thoughts" class="headerlink" title="3. Personal thoughts"></a>3. Personal thoughts</h2><p>First of all, it is a great sign that an external team outside of Steem is seeing the potential Steem-Engine can give and trying to start a funding for their game with a Steem-Engine based token. As far as I can see, there is a real team behind the project and trying to bring the promised game to us. The mastermind is Nia Yoon, holding and pushing the project forward together with UseB, AI-channel and Ziplab. </p>
-<p>I can not assure that the project will deliver as promised, as that is a risk that all kind of companies hold but based on the data I have got it looks good. I have asked to put additional Linkedin profiles on their key members on the Road of Rich page, so that international investors can also make their own picture about the team. The team is very responsive on feedback from the community and I hope also for the Steem economy that we can get the next blockbuster game on our Blockchain.</p>
-<h2 id="4-Contact-Points"><a href="#4-Contact-Points" class="headerlink" title="4. Contact Points."></a>4. Contact Points.</h2><ul>
-<li>ROR Discord : <a href="https://discord.gg/wbhQgkt">https://discord.gg/wbhQgkt</a></li>
-<li>Martin Kim Discord: Martin.kim#2324</li>
-<li>UseB homepage : <a href="https://useb.co.kr/">https://useb.co.kr/</a></li>
-<li>RoadofRich Homepage: <a href="http://roadofrich.com/">http://roadofrich.com/</a></li>
-</ul>
-<p>!! Disclaimer: I am not related nor involved with the team of ROR, but have invested personally into their token. This is not an advise for investment but only for entertainment purposes.</p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -1044,7 +1028,7 @@ I have called additionally the CEO of UseB Mr. Martin Kim and asked him several 
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            714
+                            716
                         </p>
                     </a>
                 </div>
@@ -1272,7 +1256,7 @@ I have called additionally the CEO of UseB Mr. Martin Kim and asked him several 
                 <span class="level-item">미분류</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">116</span>
+                <span class="level-item tag">118</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/%EC%9D%B4%EB%B2%A4%ED%8A%B8/">
@@ -1407,7 +1391,7 @@ I have called additionally the CEO of UseB Mr. Martin Kim and asked him several 
                     <span class="level-item">4월 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">44</span>
+                    <span class="level-item tag">46</span>
                 </span>
             </a>
         </li>
@@ -1758,7 +1742,7 @@ I have called additionally the CEO of UseB Mr. Martin Kim and asked him several 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/">
                         <span class="tag">미지정</span>
-                        <span class="tag is-grey">376</span>
+                        <span class="tag is-grey">378</span>
                     </a>
                 </div>
                 
@@ -1905,7 +1889,7 @@ I have called additionally the CEO of UseB Mr. Martin Kim and asked him several 
                     <span class="level-item">4월 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">44</span>
+                    <span class="level-item tag">46</span>
                 </span>
             </a>
         </li>
@@ -2256,7 +2240,7 @@ I have called additionally the CEO of UseB Mr. Martin Kim and asked him several 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/">
                         <span class="tag">미지정</span>
-                        <span class="tag is-grey">376</span>
+                        <span class="tag is-grey">378</span>
                     </a>
                 </div>
                 

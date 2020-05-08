@@ -138,6 +138,162 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-17T15:20:24.000Z">2019-06-18</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    8분 읽기 (대략 1186 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/18/jayplayco.breez-ios-beta/">[Breez] 비트코인 라이트닝 네트워크 기반 모바일 지갑 iOS Beta버젼 출시</a>
+            
+        </h1>
+        <div class="content">
+            <center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/qJi16cbp-image.png)</center>
+안녕하세요, @jayplayco입니다.
+
+<p>이번에 Breez라는 곳에서 비트코인용 라이트닝 네트워크 지갑을 아이폰용 베타 버젼을 공개했습니다. 이에 따라 비트코인으로 소액결제를 이동중에도 쉽게 가능하게 되었습니다. 한번 파고 들어가보겠습니다.</p>
+<h2 id="0-라이트닝-네트워크란-Lighting-Network"><a href="#0-라이트닝-네트워크란-Lighting-Network" class="headerlink" title="0. 라이트닝 네트워크란? (Lighting Network)"></a>0. 라이트닝 네트워크란? (Lighting Network)</h2><p>스팀을 쓰시는 분들은 별로 큰 어려움을 느끼지 못하실텐데, 거래소 내에서 비트코인 거래가 아닌 실질적인 비트코인을 지갑에서 지갑으로 최근에 이동을 시켜보신 분들은 아시겠지만, 우선 비트코인을 전송하는데 기본적으로 비용이 들지는 않지만, 사실상 transaction이 실행이 되기 위해서는 transaction fee를 포함해야 하는것이 사실이며, 이는 많은 량의 비트코인을 이동할때는 어쩔 수 없다고 하지만, 커피값 정도되는 비트코인을 전송하는데는 문제가 될 수 있습니다.</p>
+<p>그 현재 비트코인은 블록당 1MB가 들어가게 되는데, 트랜스액션을 처리해야할 마이너(miner)의 경우에는 트랜스액션 fee가 높은 거래를 우선시하는경향이 있고, 소량의 비트코인의 경우에는 그만큼 트랜스액션 비용도 적은 관계로 우선순위가 밀릴 수 있습니다.</p>
+<p>이를 해결하기 위해서는 하트포크를 해서 1MB의 제한을 풀어버려서 스케일링을 할 수 있으나, 그에 따른 다른 문제점들이 발생하기도 합니다. (전송 속도, 처리 하드웨어등등)</p>
+<p>라이트닝 네트워크는 확장성을 위해 블록크기를 늘린것이 아닌 오프체인에서 수수료를 낮추고 소액거래가 가능하도록 하는 기술임. 즉, 약간 비트코인 오프체인의 사이드체인과 비슷한 느낌입니다.</p>
+<h2 id="1-Breez의-지갑"><a href="#1-Breez의-지갑" class="headerlink" title="1. Breez의 지갑"></a>1. Breez의 지갑</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/wHWt0cvm-image.png)</center>
+
+<p>브리즈의 지갑은 구매자와 판매자가 각각 설치를 하고 소액 결재를 할때 라이트닝 네트워크를 이용해서 쉽고 저렴한 비용으로 이용할 수 있게 구성이 되어 있습니다. 실제 결재를 할때는 Breeze의 허브를 통해 서로 연결되며, 이 허브는 Lightning 노드를 이용해서 진행됩니다. 각 지갑에 저장된 비토코인의 변화를 반영하기 위해 거래가 있을때 마다 당사자들의 Bitcoin의 변화하는 양을 반영하기 위해 거래가있을 때마다 대차 대조표에 서명을 하면서 증명을 합니다. 트랜잭션이 완료되면 잔액이 최종 비트코인 블록 체인에 등록됩니다. 분쟁이 일어날 경우에는 가장 최근 대차 대조표를 사용하여 지가분 분쟁 발생시, 양 당사자는 가장 최근에 서명 한 대차 대조표를 사용하여 잃어버린 부분을 되찾을 수 있습니다. </p>
+<p>기존 안드로이드 사용자들은 Breez의 지갑을 쓸 수 있었지만, 이번 iOS 베타 출시로 전체 모바일 시장의 약 98%를 커버하게 되었습니다.</p>
+<h2 id="2-Breez-지갑의-비젼"><a href="#2-Breez-지갑의-비젼" class="headerlink" title="2. Breez 지갑의 비젼"></a>2. Breez 지갑의 비젼</h2><p>브리즈 지갑의 경우는 100% 비트코인의 소액 결재를 위해 최적화되었습니다. 라이트닝 네트워크 사용이 그 단적인 증거이죠. 이제 소비자용 지갑은 완성이 되었으니 사실상 Breez측에서도 다음 단계로 필요한 것은 판매자를 위한 POS 클라이언트 라고 합니다. 이것까지 제공이 된다면, 손쉽게 비트코인으로 소액 결재를 확장할 수 있는 기반이 만들어질 것 같습니다. </p>
+<p><a href="https://en.wikipedia.org/wiki/Lightning_Network">소스: Lightning Network - Wikipedia</a><br><a href="https://banksalad.com/contents/%EC%89%BD%EA%B2%8C-%EC%84%A4%EB%AA%85%ED%95%98%EB%8A%94-%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8-%EB%9D%BC%EC%9D%B4%ED%8A%B8%EB%8B%9D-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-Lightning-Network-%EB%9E%80-g9nT6">소스: 쉽게설명하는 블록체인: 라이트닝 네트워크</a><br><a href="https://medium.com/breez-technology/breez-on-ios-a-big-step-towards-the-lightning-economy-and-a-giant-leap-for-breez-cbcf2db77acb">소스: Breez Medium 공지</a><br><a href="https://www.coindesk.com/breez-reveals-lightning-powered-bitcoin-payments-app-for-iphone">소스: 코인데스크 Breez 기사</a><br><a href="https://github.com/breez/breezmobile">소스: Breez Github</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-16T17:07:24.000Z">2019-06-17</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    10분 읽기 (대략 1506 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/17/jayplayco.roadofrich-finding-about-the-team-and-project/">[RoadofRich] Findings about the team and project</a>
+            
+        </h1>
+        <div class="content">
+            <center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/HlUCJukC-image.png)</center>
+Hi, @jayplayco here.
+
+<p>I’ve got a personal message with concerns about the project Road of Rich, which is claming to be a Steem based SRPG game and in the moment in Pre-sale for their tokens on Steem-Engine.</p>
+<p>I’ve written a posting a few days ago for the KR community and digged deeper into the team, as they were not well known on Steem, which resulted in a very fast sold out of their first pre-sale.</p>
+<p>Link: </p>
+<ul>
+<li><a href="https://steemit.com/sct/@jayplayco/rors-srpg">Korean Article about ROR from @jayplayco</a></li>
+<li><a href="https://steemit.com/sct/@deer3/rors">Korean Article about ROR from @glory7 (deer3)</a></li>
+</ul>
+<p>After the request I’ve decided to write a short post about my findings for the international community.</p>
+<h2 id="0-TL-DR"><a href="#0-TL-DR" class="headerlink" title="0. TL;DR"></a>0. TL;DR</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/MHPzjIiP-image.png)</center>
+Road of Rich is a SRPG game based on Steem and a Steem-Engine token called RORS. The team behind the game is organized from members of different companies, which include a blockchain agency (Useb), a HTML5 game maker company (ziplab) and a company that is responsible for the illustration. (AI-Channel)
+
+<h2 id="1-Are-they-real"><a href="#1-Are-they-real" class="headerlink" title="1. Are they real?"></a>1. Are they real?</h2><p>The Steem community has now seen a lot trials of games which partly resulted in disappointing or even runaway over night (like Magic Dice). A steady and continued player is @steemmonsters, now rebranded as Splinterlands and utilizing the advantages of other blockchains, using Steem as main layer and bringing therefore new Steem users on board.  </p>
+<p>As Road of Rich is a team based in Korea, the Korean Steem Community had also interest in the project, but was not sure because there was not a lot of information available about the team nor have been significant activities noticed before their announcement.</p>
+<p>@ai-channel, the account who is responsible for the marketing activities on the Korean Steem side is active on Steem since 2017 but was also not well known nor well integrated into the KR community.<br>So I got in contact with the team to be able to get more information about them. Please find the interview translation, which I had on Discord with one of the Cofounders Nia. The interview happened at 4th of June 2019.</p>
+<center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/j6D4q9QR-image.png)</center>
+
+<h3 id="a-Please-introduce-yourself"><a href="#a-Please-introduce-yourself" class="headerlink" title="a. Please introduce yourself."></a>a. Please introduce yourself.</h3><p>I am Nia and one of the co-founders of the project ROR. I am responsible for planning the game structure of ROR.</p>
+<h3 id="b-How-is-the-team-of-ROR-structured"><a href="#b-How-is-the-team-of-ROR-structured" class="headerlink" title="b. How is the team of ROR structured?"></a>b. How is the team of ROR structured?</h3><p>Link: <a href="http://roadofrich.com/team/">http://roadofrich.com/team/</a><br>We are key members from different companies gathered together to make ROR possible. In total 5 members including  Martin Kim from UseB and Oh-Hyun Kwon from Ziplab are driving the project but we are increasing the members based on the project needs out of our resource pools. (Based on the team introduction on @oadofrich, the team members had been increased since then)<br>The main companies involved are UseB (<a href="https://useb.co.kr/">https://useb.co.kr/</a>), which is a blockchain technic and marketing related company, Ziplab (<a href="http://zip-lab.co.kr/">http://zip-lab.co.kr/</a>) which is developing the game and AI-channel (@ai-channel) which is the company responsible for our illustrations and also the national marketing on Steem. Additionially, we have VC’s on board.</p>
+<h3 id="c-If-you-create-the-game-based-on-Steem-you-will-have-speed-issues"><a href="#c-If-you-create-the-game-based-on-Steem-you-will-have-speed-issues" class="headerlink" title="c. If you create the game based on Steem, you will have speed issues."></a>c. If you create the game based on Steem, you will have speed issues.</h3><p>Yes it is. We are also worried about the speed. When we experienced STEEM block chain based games, we felt it is a lot slower then conventional games. We are going to use Custom Json and use the Steem blockchain to relate to resource items and production related parts. Most of the parts to be utilized in the blockchain are likely to be included. In terms of speed, we are going to make it not too loose, but I think it is going to be unavoidable to centralize bigger parts. However, parts such as important item resource production facilities will use the STEEM blockchain.</p>
+<h3 id="e-Please-explain-your-token-economy"><a href="#e-Please-explain-your-token-economy" class="headerlink" title="e. Please explain your token economy."></a>e. Please explain your token economy.</h3><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/w7RqJWWw-image.png)</center>
+First, we are distributing 100% of the game revenue and put in a dividend pool because we believe and rely heavily on the token economy. Our goal is to maximize the company's profits by increasing the token value. In other words, gaming is the most important factor for us. We may add advertisement, but only if it is not hurting the playing experience of the user. 
+
+<p>We already started to develop the game with our capital and VC investment. In fact, it will cost more in the future. We want to overcome the shortage through sales. As you can see from the introduction of the game, the scale of the game is not much different from a regular RPG game, so it is also true that the expected development time has increased a lot.</p>
+<p>Payment is made with RORS token and STEEM OR SBD. This is because users who use the STEEM block chain can receive immediate payments and dividends into their account. 100% of paid items will get back to game players and token holders. The game player can collect game money, transfer it to the daily dividend pool and get a day’s dividend. Token holders can stake(hold) their tokens to receive dividends, players will keep their game money in the dividend pool or continue to develop themselves within the game. </p>
+<p><a href="https://steemit.com/roadofrich/@roadofrich/ror-test">Edit: an updated version of their token economy</a></p>
+<h3 id="f-When-will-the-dividend-payment-start"><a href="#f-When-will-the-dividend-payment-start" class="headerlink" title="f. When will the dividend payment start?"></a>f. When will the dividend payment start?</h3><p>It will start with the opening of the game.</p>
+<h3 id="g-Do-you-have-a-target-for-opening"><a href="#g-Do-you-have-a-target-for-opening" class="headerlink" title="g. Do you have a target for opening?"></a>g. Do you have a target for opening?</h3><p>The alpha test is targeted for latest August this year.</p>
+<h2 id="2-Other-Facts"><a href="#2-Other-Facts" class="headerlink" title="2. Other Facts"></a>2. Other Facts</h2><h3 id="a-Ziplab"><a href="#a-Ziplab" class="headerlink" title="a. Ziplab"></a>a. Ziplab</h3><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/lM8hATlt-image.png)</center>
+If you look at the company developing the game, you can find that they have a few days ago launched a game named called "The heritage of Mayhem" 
+
+<p>The game is only in Korean, but works on HTML 5 and is mobile optimized. </p>
+<p>Link: <a href="https://mayhem.zip-lab.co.kr/">https://mayhem.zip-lab.co.kr/</a></p>
+<p>So it looks like that the developers are able to deliver a game based on HTML5 and are also used to RPG like games. To make sure that company is really envolved I have personally called the number on their webpage and asked if their CEO Mr. Oh Hyun Kwon is involved in a Steem based game called Road of Rich. The person on the phone confirmed it.</p>
+<center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/gek1R3af-image.png)![image.png](https://files.steempeak.com/file/steempeak/jayplayco/Qb8ZtK2n-image.png)</center>
+
+<h3 id="b-UseB"><a href="#b-UseB" class="headerlink" title="b. UseB"></a>b. UseB</h3><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/8NjqvNUW-image.png)</center>
+I have called additionally the CEO of UseB Mr. Martin Kim and asked him several questions about the project. He is closely working together with Nia and Ziplab and also answers questions directly on the ROR discord server. UseB as a company is in the moment working on a solution for KYC to make it possible for companies to engage in cryptocurrency related business. He reconfimed that he is also involved with his team and that they are preparing the launch of ROR. They are also in contact with @birdinc (David from Steemit) who is in the moment in Korea and it is planned to meet with him this Wednesday. As you can see the latest post from @roadofrich is resteemed from the birdinc account.
+
+<center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/ZrtWoS1L-image.png)</center>
+
+<h2 id="3-Personal-thoughts"><a href="#3-Personal-thoughts" class="headerlink" title="3. Personal thoughts"></a>3. Personal thoughts</h2><p>First of all, it is a great sign that an external team outside of Steem is seeing the potential Steem-Engine can give and trying to start a funding for their game with a Steem-Engine based token. As far as I can see, there is a real team behind the project and trying to bring the promised game to us. The mastermind is Nia Yoon, holding and pushing the project forward together with UseB, AI-channel and Ziplab. </p>
+<p>I can not assure that the project will deliver as promised, as that is a risk that all kind of companies hold but based on the data I have got it looks good. I have asked to put additional Linkedin profiles on their key members on the Road of Rich page, so that international investors can also make their own picture about the team. The team is very responsive on feedback from the community and I hope also for the Steem economy that we can get the next blockbuster game on our Blockchain.</p>
+<h2 id="4-Contact-Points"><a href="#4-Contact-Points" class="headerlink" title="4. Contact Points."></a>4. Contact Points.</h2><ul>
+<li>ROR Discord : <a href="https://discord.gg/wbhQgkt">https://discord.gg/wbhQgkt</a></li>
+<li>Martin Kim Discord: Martin.kim#2324</li>
+<li>UseB homepage : <a href="https://useb.co.kr/">https://useb.co.kr/</a></li>
+<li>RoadofRich Homepage: <a href="http://roadofrich.com/">http://roadofrich.com/</a></li>
+</ul>
+<p>!! Disclaimer: I am not related nor involved with the team of ROR, but have invested personally into their token. This is not an advise for investment but only for entertainment purposes.</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-06-15T13:44:33.000Z">2019-06-15</time>
                 
                 <div class="level-item">
@@ -785,224 +941,6 @@ Wallet Explorer에 CoinJoin을 누르면 상단과 같은 창이 뜹니다. 여�
 
 
 
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-10T12:25:54.000Z">2019-06-10</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    9분 읽기 (대략 1403 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/06/10/jayplayco.76dbf8-snax/">[Snax] 스낵스 작동 원리</a>
-            
-        </h1>
-        <div class="content">
-            <center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/0LkglmkV-image.png)</center>
-
-<p>안녕하세요, @jayplayco입니다.</p>
-<p>작일이 Snax의 스팀 에어드랍을 받을 수 있는 마지막날이라고 해서 이미 커뮤니티에서는 많은 SNAX 등록글들이 보이네요 ^^.</p>
-<center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/FaGjF3e8-image.png)</center>
-
-<p>필자의 경우는 이미 5월중에 등록을 끝내고 <a href="https://steemit.com/kr/@jayplayco/snax">소개도 해드렸었는데</a> 그 사이에 스팀과 트위터를 연동해놔서 SNAX가 조금 쌓여있었네요.</p>
-<p>따로 한것이 없는데 받는게 있으니 좋기는 한데, 어떤 방식으로 작동하는지가 궁금해서 조금 파고 들어가봤습니다</p>
-<h2 id="1-SNAX-연동"><a href="#1-SNAX-연동" class="headerlink" title="1. SNAX 연동"></a>1. SNAX 연동</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/tcOGoeIj-image.png)</center>
-
-<p>스낵스는 현재 트위터와 스팀 이 두가지 SNS가 연동이 되고 있습니다. 그리고 각 SNS별 Attention Rate라고 하는 점수를 부여해줍니다. Attention Rate는 컨텐트가 일정 기간 갖고 있는 총 어탠션을 보여주고자 하는 값입니다. 예를 들어 저의 경우는 현재 514위입니다만, 저 등수는 스낵스와 연동된 계정뿐만 아니라 스팀 전체 계정을 다 포함하는 값입니다.</p>
-<p>이를 확인하기 위해서 잘 알고 있는 다른분의 계정이 눈에 띄어서 확인을 해봤습니다.</p>
-<center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/AvWAohSQ-image.png)</center>
-@segyepark님이 몇일전 현 JJM와  AAA 관련 개발 [현황에 대해서 공유를](https://steemit.com/aaa/@segyepark/jjm-aaa) 해주셨는데, 이 글이 지난 scoring round에서 어마무시한 영향력을 과시해서 현재 전체 유저의 어탠션레이트중 4위를 차지하고 있습니다. ~~그런데 함정이, 아직 세계님은 Snax연동을 하지 않으셨다는 사실.~~ (어제 알려드렸더니 설정하셨네요 ㅎ.) 그리고 지금까지 놓친 Snax 리워드가 무려 거의 10K이네요. 어쨌던 자랑스럽습니다. 전세계 스티미언 SNAX 어탠션 레이트 영광의 4위는 @segyepark님입니다. ^^
-<center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/1O5vzovy-image.png)</center>
-
-<h2 id="2-SNAX-리워드"><a href="#2-SNAX-리워드" class="headerlink" title="2. SNAX 리워드"></a>2. SNAX 리워드</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/t2lzn0NX-image.png)</center>
-
-<p>그렇다면 저의 경우는 어떤지 한번 보겠습니다. </p>
-<ul>
-<li>Scoring 라운드에 포함된 포스팅은 39개입니다. 즉, 작성한 지난 39개의 포스팅을 계산하는데 활용했다는 것입니다.</li>
-<li>리스팀은 2개, 댓글은 3개, 업보티은 총 76개가 카운팅 되었습니다.</li>
-</ul>
-<p>이때 예상되는 SNAX리워드는 총 2026SNAX 정도이며 이는 이전 Scoring 라운드의 저의 어탠션 레이트를 반영한 값입니다. 즉, 어탠션레이트가 올라가게 될 경우 같은 값일때 더 많은 리워드를 받을 수 있습니다.</p>
-<p>다만, 여기서 저 리스팀, 댓글과 업보팅은 무슨 기준으로 측정이 되는지는 잘 몰랐다가, 제 글을 찾아서 보니까 답이 나오는것 같습니다. </p>
-<center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/8QCs7zn6-image.png)</center>
-
-<p>즉, 정확히 8일전 이미 스팀 리워드가 완료된 직후의 글을 바탕으로 측정되는것으로 예상됩니다. 사실 업보팅 수가 완전히 일치하지 않고, 리스팀도 확인했을때 수가 완전히 일치하지는 않은데, 가장 근접하고 가장 논리적일것으로 예상되기는 합니다.</p>
-<p>마찬가지로 트위터도 활발하게 이용하시는 분들의 경우는 연동했을때 SNAX를 리워드로 받으실 수 있을것으로 예상됩니다. 트위터의 경우는 지난 7일간의 트윗을 바탕으로 라이크, 리트위트와 댓글을 확인을 합니다.</p>
-<h2 id="3-리워드-확인"><a href="#3-리워드-확인" class="headerlink" title="3. 리워드 확인"></a>3. 리워드 확인</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/MUflT1Eh-image.png)</center>
-스낵스 메뉴중 트랜스액션을 누르시면 그동안 글 쓴것에 대한 SNAX 보상이 나열됩니다. 거의 매일 리워드가 들어오고 있는것을 확인할 수 있습니다. 스팀에서 글을 쓰면 그에 따른 보상이 주어지는 상황입니다.
-
-<h2 id="4-스낵스-사용처"><a href="#4-스낵스-사용처" class="headerlink" title="4. 스낵스 사용처"></a>4. 스낵스 사용처</h2><ul>
-<li><strong>아직 특별히 없습니다.</strong> </li>
-</ul>
-<p>스낵스 페이지에서 다른 스낵스 계정, 트위터와 스팀계정에 까지 스낵스를 쉽게 전송할 수 있습니다. 즉, 팁이나 후원 개념으로 보낼 수 있는것이죠. 미국 전 대통령의 트위터 계정인 버락 오바마분의 트위터 계정이 어탠션 레이트가 2위입니다. 후원하기 위해서 100 Snax를 보내봅니다.</p>
-<center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/0kw5T7RB-image.png)</center>
-<center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/94GZkBA1-image.png)</center>
-<center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/W60pcFdZ-image.png)</center>
-
-<p>하고 보내고 나면, 오보마 전 대통령분께 알림까지 할 수 있습니다.</p>
-<center>![image.png](https://files.steempeak.com/file/steempeak/jayplay.cur/CH5wO468-image.png)</center>
-
-<p>우선 스낵스만 보내놓고 저 파란 버튼 눌러서 호출했다가 무슨 일이 벌어질지는 몰라서 우선 안눌렀습니다. ^^ 제 트위터 계정으로 송부한 계정을 호출하고 스낵스에 가입하라고 권유하는 형태의 트윗이 발송될 것으로 예상되기는 합니다. ㅎ</p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-09T18:03:51.000Z">2019-06-10</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    12분 읽기 (대략 1797 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/06/10/jayplayco.weiss-ratings/">[크립토 레이팅]  Weiss Ratings의 역사와 암호화폐 레이팅의 의미</a>
-            
-        </h1>
-        <div class="content">
-            <center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/NcgBARCY-image.png)</center>
-안녕하세요, @jayplayco입니다.
-
-<p>몇일전 뉴스상에 떴던 내용중 EOS의 rating이 다운그레이드되었다는 소식이 있었습니다. 이에 대한 영향인지 6월 1일 이후 VOICE 발표후 예상했던 바와 같이 EOS가 뉴스 발표후 다시 폭락을 했다가 숨고르기를 하면서 올리가던참에 Weiss Ratings의 뉴스 이후로 다시 가격이 하락을 시작했습니다. (직접적인 연관이라기 보다는 전체적인 암화화폐시장의 영향에 따른것이라고 보기는 합니다.) </p>
-<center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/ZwVoEvcM-image.png)
-[소스: Weiss Ratings Twitter](https://twitter.com/WeissRatings/status/1137027785598427136)</center>
-<center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/oEGLlJZm-image.png)
-[소스: @coingecko]</center>
-
-<p>그런데 막상 Weiss Ratings는 암호화폐에 무슨 영향을 미치는지 궁금해질 것 같아 내용을 공유합니다.</p>
-<h2 id="0-Weiss-Ratings는"><a href="#0-Weiss-Ratings는" class="headerlink" title="0. Weiss Ratings는?"></a>0. Weiss Ratings는?</h2><p>1971년 Martin D. Weiss 박사에 의해서 만들어진 회사로, 미국 은행을 리뷰하는 것으로 시작했습니다. 1987년에는 T.J Holt&amp;Company를 인수하면서 레이팅 사업을 본격적으로 시작했습니다. 주로 은행에 대한 레이팅이였습니다. 추가적으로 최초로 보험회사 레이팅을 시작하면서 생명보험 회사들의 레이팅이 가능하도록 했습니다.</p>
-<p>또한 최근의 암호화폐 시장이 커져가면서 최초로 공식적인 암호화폐 레이팅도 시작을 했습니다.<br><a href="https://www.thebalance.com/weiss-ratings-comprehensive-ratings-and-analysis-1969750">소스: Weiss Ratings Analysis</a></p>
-<h2 id="1-Weiss-Ratings을-읽는-방법은"><a href="#1-Weiss-Ratings을-읽는-방법은" class="headerlink" title="1. Weiss Ratings을 읽는 방법은?"></a>1. Weiss Ratings을 읽는 방법은?</h2><p>레이팅 회사마다 뜻하고자 하는 바가 조금씩 달라 점수를 매겼을때 각각의 의미가 조금씩 달라질 수 있어, 해당 레이팅 회사가 주는 점수가 어떤 뜻인지를 알고 보면 조금더 정확하게 볼 수 있습니다.</p>
-<ul>
-<li>A = excellent (매우 좋음)</li>
-<li>B = good (좋음)</li>
-<li>C = fair (중간)</li>
-<li>D = weak (약함)</li>
-<li>E = very weak (매우 약함)</li>
-</ul>
-<p>그러나 이것도 투자 레이팅과 안전 레이팅에는 차이가 있습니다.</p>
-<center>**How Weiss Investment Ratings Differ from Weiss Safety Ratings**</center>
-![image.png](https://files.steempeak.com/file/steempeak/jayplayco/O7tlgGYr-image.png)
-
-<table>
-<thead>
-<tr>
-<th>구분</th>
-<th>Weiss 투자 레이팅</th>
-<th>Weiss 안전 레이팅</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>A</td>
-<td>강한 구매 추천</td>
-<td>금융위기나 부채위기와 같은 상황에서도 안정성 높음</td>
-</tr>
-<tr>
-<td>B</td>
-<td>구매 추천</td>
-<td>불리한 비즈니스 환경이나 경제적인 환경에서도 안정적일 확률, 그러나 실제 상황에서는 재평가해야함.</td>
-</tr>
-<tr>
-<td>C</td>
-<td>홀드나 회피 추천</td>
-<td>유리한 환경에서는 안정적이나 불리한 환경에서는 경제적 어려움이 발생할 수 있음</td>
-</tr>
-<tr>
-<td>D</td>
-<td>매도 추천</td>
-<td>불리한 사업 환경에서는 실패를 포함하여 재정적 어려움을 겪을 수 있음.</td>
-</tr>
-<tr>
-<td>E</td>
-<td>강한 매도 추천</td>
-<td>우호적인 사업이나 경제환경에서도 실패를 포함한 재정적 어려움이 발생할 수 있음.</td>
-</tr>
-</tbody></table>
-<p>즉, A를 받은 암호화폐는 현재 없으나, BTC, EOS, Ripple같은 경우는 주변환경이 좋지 않더라도 비교적 안정적이라고 판단을 하는것이나, 그때 그때 환경에 따라 재평가를 해야한다는 뜻이네요. 강력한 구매 추천까지는 아니더라도 구매 추천모드이고요.</p>
-<p>Tron과 같은 경우는 홀드를 해도 되나, 환경이 불리해질 경우 경제적으로 어려워질 수 있다고 판단을 하는 것이고요.</p>
-<h2 id="2-Weiss-Ratings-가-평가하는-방법은"><a href="#2-Weiss-Ratings-가-평가하는-방법은" class="headerlink" title="2. Weiss Ratings 가 평가하는 방법은?"></a>2. Weiss Ratings 가 평가하는 방법은?</h2><p>우선 기본적인 맥락은 매주 업데이트가 되고 있으며, 투자리스크, 투자 리워드, 기술과 실생활 연계를 기본으로 평가한다고 합니다.</p>
-<p>또한 총 5가지 레이어를 바탕으로 평가에 대한 상세한(?) 방향성을 제시해줍니다.</p>
-<ul>
-<li>Layer 1. 각 통화의 기술, 현실세계 연계, 위험 및 보상에 대한 최신 데이터<br>(Current data on each currency’s technology, adoption, risk and reward)</li>
-<li>Layer 2. 자체적인 계산공식을 통해 데이터를 전환해서 서로 비교하도록 가능하게 함.<br>(Proprietary formulas that convert the data into comparable ratios)</li>
-<li>Layer 3. 각 암호화폐에 대한 투자의 성공 또는 실패에 중요한 요인 및 주요 요소를 측정하기 위해 비율을 집계하는 자체적인 하위 모델 적용<br>(Proprietary sub-models that aggregate the ratios to measure key factors and features considered critical to the potential success or failure of investments in each cryptocurrency)</li>
-<li>Layer 4. 두가지 등급 :<br>  (1) 장기 잠재력을 평가할 수 있는 기술과 현실세계 연계<br>  (2) 시장 가격 패턴을 기본으로 한 단기 리스크/리워드<br>(Two grades: (1) the Tech/Adoption Grade which evaluates the long-term potential of each cryptocurrency and (2) a shorter-term Risk/Reward Grade based on market price patterns)</li>
-<li>Layer 5. 전반적인 Weiss의 암호화폐 레이팅. 이는 복잡한 알고리즘을 사용하여 레이어 3과 4를 결합합니다.<br>(The overall Weiss Crypto Rating, using a complex algorithm to combine the Tech/Adoption Grade and Risk/Reward Grade)</li>
-</ul>
-<p>어렵게 써있긴 한데, 결론적으로는 어떤 방식으로 실질적인 레이팅을 하는지는 블랙박스입니다. 자신들 말고는 아무도 모른다는 것이죠.<br> <a href="https://weisscrypto.com/en/about">소스: How we rate Cryptocurrencies</a></p>
-<h2 id="3-레이팅의-의미"><a href="#3-레이팅의-의미" class="headerlink" title="3. 레이팅의 의미"></a>3. 레이팅의 의미</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/iXcTdGLe-image.png)[소스: Chris Li](https://unsplash.com/photos/6Y6OnwBKk-o)
-</center>
-레이팅의 경우는 암호화폐뿐만 아니라, 은행, 기업, 국가까지도 레이팅을 합니다. 예를 들어 국가 레이팅의 경우는 Standard&Poor, Fitch와 Moodys에서 레이팅을 하는데 이 레이팅이 중요한 이유는 한 국가가 국제시장에서 돈을 빌릴때 이자율을 높게 받느냐, 낮게 받느냐가 이 레이팅에 의해서 정해진다고 해도 과언이 아닙니다.
-
-<h3 id="a-예시-대한민국-레이팅"><a href="#a-예시-대한민국-레이팅" class="headerlink" title="a. 예시 대한민국 레이팅"></a>a. 예시 대한민국 레이팅</h3><ul>
-<li>Standard &amp; Poor’s : AA (Stable)</li>
-<li>Fitch : AA- (Stable)</li>
-<li>Moody’s : Aa2 (Stable)<br><a href="https://en.wikipedia.org/wiki/List_of_countries_by_credit_rating">소스: Wikipedia</a><br>표시형식은 조금씩 다르지만 비슷하게 Stable한 레이팅으로 표현되어 있고 실제 저 레이팅의 변화가 있을 경우는 신문에서도 뉴스거리가 되기도 합니다. (이자율이 변동되기 때문에요)</li>
-</ul>
-<p>이렇게 Weiss Rating’s 측에서 EOS의 레이팅을 중앙화 문제로 낮추는 것이 <a href="https://finance.yahoo.com/news/weiss-crypto-ratings-downgrades-eos-175600299.html">기사화 되는것도</a> 직/간접적으로 block.one 회사에 대한 평가와 EOS라는 암호화폐의 전망에 대한 척도도 될 수 있기 때문입니다.</p>
-<p>Weiss Crypto Rating은 총 122개의 코인과 토큰을 레이팅합니다. 직접 가서 나의 포트폴리오의 암호화폐들이 어느정도의 레이팅인지를 확인하는것도 나름 재미가 있을것 같습니다.</p>
-<ul>
-<li><a href="https://weisscrypto.com/en/cryptos/screener/shared/coins-by-rating">https://weisscrypto.com/en/cryptos/screener/shared/coins-by-rating</a></li>
-</ul>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -1077,7 +1015,7 @@ Wallet Explorer에 CoinJoin을 누르면 상단과 같은 창이 뜹니다. 여�
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            714
+                            716
                         </p>
                     </a>
                 </div>
@@ -1305,7 +1243,7 @@ Wallet Explorer에 CoinJoin을 누르면 상단과 같은 창이 뜹니다. 여�
                 <span class="level-item">미분류</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">116</span>
+                <span class="level-item tag">118</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/%EC%9D%B4%EB%B2%A4%ED%8A%B8/">
@@ -1440,7 +1378,7 @@ Wallet Explorer에 CoinJoin을 누르면 상단과 같은 창이 뜹니다. 여�
                     <span class="level-item">4월 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">44</span>
+                    <span class="level-item tag">46</span>
                 </span>
             </a>
         </li>
@@ -1791,7 +1729,7 @@ Wallet Explorer에 CoinJoin을 누르면 상단과 같은 창이 뜹니다. 여�
                 <div class="control">
                     <a class="tags has-addons" href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/">
                         <span class="tag">미지정</span>
-                        <span class="tag is-grey">376</span>
+                        <span class="tag is-grey">378</span>
                     </a>
                 </div>
                 
@@ -1938,7 +1876,7 @@ Wallet Explorer에 CoinJoin을 누르면 상단과 같은 창이 뜹니다. 여�
                     <span class="level-item">4월 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">44</span>
+                    <span class="level-item tag">46</span>
                 </span>
             </a>
         </li>
@@ -2289,7 +2227,7 @@ Wallet Explorer에 CoinJoin을 누르면 상단과 같은 창이 뜹니다. 여�
                 <div class="control">
                     <a class="tags has-addons" href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/">
                         <span class="tag">미지정</span>
-                        <span class="tag is-grey">376</span>
+                        <span class="tag is-grey">378</span>
                     </a>
                 </div>
                 
