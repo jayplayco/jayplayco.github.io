@@ -138,115 +138,6 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-30T15:09:18.000Z">2018-05-31</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%EA%B0%9C%EB%B0%9C/">개발</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    6분 읽기 (대략 933 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/05/31/jayplayco.steemhunt-abv-account-based-voting-in-development/">[Steemhunt] ABV (Account based voting)  in development</a>
-            
-        </h1>
-        <div class="content">
-            <p>Hi @jayplaco here! Some development news from @steemhunt</p>
-<h3>0. Repository</h3>
-https://github.com/Steemhunt/
-
-<p><img src="https://cdn.steemitimages.com/DQmWpr3f9qrH8NPoANLdwigdnumsfi1n4V9qo7YDjqm1o2n/image.png" alt=""><br>Today we are going to talk about the current situation at Steemhunt, where the quality of the content is not driving the community but the use of bots in the background for a successful hunt.</p>
-<p>The Steemhunt team is already aware about this issue and for that reason a github issue has been opened and after talking to the main dev. of Steemhunt (@tabris) the implementation is already planned for the next weeks.</p>
-<p>So let`s start to see what the issue is and what AVB would give the Steemhunt community.</p>
-<h3>1. Find the problem of voting  / Bug Fixes</h3>
-
-<p><a href="https://steemit.com/life/@exyle/ac2xvvfi">Steemhunt, vote bots, incentives and why they need SMT’s @exyle</a><br><a href="https://steemit.com/kr/@sirin418/4awf1l">Is Steemhunt Abusing? @sirin418 (Text in Korean)</a><br><a href="https://steemit.com/utopian-io/@tio/add-flag-feature-on-steemhunt">Add Flag Feature on steemhunt @tio</a></p>
-<p>Some users already have found that the current setting can be abused with bots to get easily a higher daily ranking. In fact, the users are doing it on daily base now and it comes to the same issue steemit has in background that not the content is speaking but the steempower.</p>
-<div class="pull-left">  
-https://steemitimages.com/400x300/https://cdn.steemitimages.com/DQmdUtcV2uLv5MBN5Hm6BSNasFkF58tkPbX7z1qWAYWC4xT/image.png
-<center>[Picture 1]</center>
-</div> 
-<div class="text-justify">  
-With "Picture 1" we can see the current No.1 of Today`s ranking from Steemhunt. There is almost no text (so no offence, but I don`t consider this as quality content...), a picture and that was it. How does it happen that this post is ranking No.1?  The answer is easy if you have a look who is actually voting<div><center>
-https://steemitimages.com/300x200/https://cdn.steemitimages.com/DQmW9GQNbeqCwcfLYRbQjhDbnR2TU94NhiZgSwoRp6Ha7S1/image.png</center></div>
-</div> 
-The highest voter here is called tribesteemup which is a collective voting bot. And with more than 80% of the total vote it is the highest voting power here. Using this strategy you can actually max out your ROI with relatively small or no investment (dependent on what kind of bot you are using.)
-
-<h3>2. Yeah, let`s use ABV, but what is that? </h3>
-
-<p><a href="https://steemit.com/steem/@liberosist/the-account-based-voting-revolution">The account-based voting revolution - @liberosist</a><br><a href="https://steemit.com/steemit/@nealmcspadden/account-based-voting-is-a-terrible-idea-for-steem">Account Based Voting is a Terrible Idea for STEEM - @nealmcspadden</a></p>
-<p>@ned has mentioned ABV (Account based voting) on his Korea tour and there are pros and cons on it, but to explain it easily see below,</p>
-<p><strong>A. Current voting system.</strong></p>
-<ul>
-<li>The more steem power you have, more voting power you get, which means you can give more money.</li>
-<li>problem : bots, curation groups, curation trails, voting pools.</li>
-</ul>
-<p><strong>B.  Account based voting</strong></p>
-<ul>
-<li>One account counts has only one voting power</li>
-<li>problem : without any weighting of an account a spam account has the same power as a whale account. This is what @nealmcspadden is talking about.</li>
-</ul>
-<h3>3. Approach from Steemhunt team / New Features</h3>
-github entry : https://github.com/Steemhunt/web/issues/135
-
-<p><strong>Logic</strong></p>
-<ul>
-<li>One upvote has 10 points with 100% vp.</li>
-<li>The point proportionally decrease based on the hunter’s set vp. For example, the hunter upvotes with 50% vp, the score will be 5 point.</li>
-<li>Whitelist: Scores are only be counted by the user who have hunted AT LEAST ONE TIME. </li>
-</ul>
-<p><strong>Possible Progress (Just examples and not fixed)</strong></p>
-<ul>
-<li>More intensive whitelist: counted by the hunters with at least three times, exclude blacklist hunters, etc.</li>
-<li>Hunter’s badge system: We can level the hunters based on their hunting history, from Lv.1 to Lv.5.</li>
-</ul>
-<p><strong>Lv.1: 1 hunts (1 full voting score: 10 poinst)</strong><br><strong>Lv.2: 10 days hunting + 10 times upvoting the hunting posts (1 full voting score: 20 poinst)</strong><br><strong>Lv.3: Lv.2 + at least 3 times on top 10 hunts (1 full voting score: 30 poinst)</strong><br><strong>Lv.4: Lv.2 + at least 5 times on top 10 hunts (1 full voting score: 50 poinst)</strong><br><strong>Lv.5: 30 days hunting + 30 times upvoting the hunting posts + at least 10 times on top 10 hunts. (1 full voting score: 100 poinst)</strong><br><strong>The Lv can be downgraded if the hunter does not have any hunting or voting activities more than 10 days. (Lv 5 -&gt; Lv 4 -&gt; …)</strong></p>
-<h3>4. So what does that mean? </h3>
-
-<p>@steemhunt will give only active Steemhunters the possibility to vote (whitelist) and level them with badges to differentiate the reputation within the community. Based on the given voting power% a vote can count from 0-100. (Based on your level) The badge system gives different levels to activate the hunters for better content.  All this steps are planned to give active hunters with high quality content the best chance for the highest rewards. </p>
-<h3>5. Roadmap</h3>
-
-<p>It is planned to test the first settings next week, but there is in this moment no official deadline from team @steemhunt , but the main dev. from Steemhunt mentioned that it is very a high priority before scaling to the next stage. So let`s see how this will change the quality of the content at steemhunt.</p>
-<h3>6. Github Account</h3>
-https://github.com/zionopia
-______
-Thanks for reading!
-
-<p>Other articles about Steemhunt.<br><a href="https://steemit.com/steemit/@jayplayco/what-is-steemhunt-and-why-should-i-care">What is Steemhunt and why should I care?</a><br><a href="https://steemit.com/steemit/@jayplayco/biggest-airdrop-ever-hunt-token-and-how-to-participate">Biggest Airdrop ever - HUNT token and how to participate</a></p>
-<p>Join their chat channels if you need more information as the team and the moderators are answering very fast on any question:</p>
-<p>Discord: <a href="https://discord.gg/mWXpgks">https://discord.gg/mWXpgks</a> (this is where the magic happens)<br>Telegram: <a href="https://t.me/joinchat/AzcqGxCV1FZ8lJHVgHOgGQ">https://t.me/joinchat/AzcqGxCV1FZ8lJHVgHOgGQ</a></p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2018-05-29T23:53:51.000Z">2018-05-30</time>
                 
                 <div class="level-item">
@@ -851,6 +742,70 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
 
 
 
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-05-29T06:21:24.000Z">2018-05-29</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    1분 읽기 (대략 182 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/05/29/jayplayco.head-case-in-your-face-luggage-covers/">Head Case - &#39;In your face&#39; Luggage Covers</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="Head-Case"><a href="#Head-Case" class="headerlink" title="Head Case"></a>Head Case</h1><p>“In your face” Luggage Covers</p>
+<hr>
+<h2 id="Screenshots"><a href="#Screenshots" class="headerlink" title="Screenshots"></a>Screenshots</h2><center>![head-case_31651.jpg](https://i.imgur.com/9UsB21L.jpg)</center>
+
+
+
+<hr>
+<h2 id="Hunter’s-comment"><a href="#Hunter’s-comment" class="headerlink" title="Hunter’s comment"></a>Hunter’s comment</h2><p>Being on travel is (almost) always fun but I guess everybody remembers the time when standing at the luggage carousel and realizing that almost every luggage is either black or silver.</p>
+<p>This product is here to get you out of this kind of situation, as it is a luggage cover with your own face (or from someone else) printed on it. So nobody will be able to snug your luggage and claim it is theirs~.</p>
+<p>The head cases are made from polyester spandex so they stretch over the bag. </p>
+<p>All you need is a high quality photo from your (or from someone else) to be uploaded on the site.</p>
+<hr>
+<h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a href="https://www.firebox.com/Head-Case/p8279?ref=steemhunt">https://www.firebox.com/Head-Case/p8279?ref=steemhunt</a></p>
+<hr>
+<h2 id="Contributors"><a href="#Contributors" class="headerlink" title="Contributors"></a>Contributors</h2><p>Hunter: @jayplayco</p>
+<hr>
+<center><br/>![Steemhunt.com](https://i.imgur.com/jB2axnW.png)<br/>
+This is posted on Steemhunt - A place where you can dig products and earn STEEM.
+[View on Steemhunt.com](https://steemhunt.com/@jayplayco/head-case-in-your-face-luggage-covers)
+</center>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
 
     
 <div class="card card-transparent">
@@ -923,7 +878,7 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            775
+                            774
                         </p>
                     </a>
                 </div>
@@ -1151,7 +1106,7 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
                 <span class="level-item">미분류</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">177</span>
+                <span class="level-item tag">176</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/%EC%9D%B4%EB%B2%A4%ED%8A%B8/">
@@ -1192,19 +1147,6 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
         <h3 class="menu-label">
             최근 글
         </h3>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-06-08T22:06:33.000Z">2020-06-09</time></div>
-                    <a href="/2020/06/09/jayplayco.4gcpwc-coinnews%20(1)/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 이더리움의 네트워크 비용이 비트코인을 앞섰다</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
-                    </p>
-                </div>
-            </div>
-        </article>
         
         <article class="media">
             
@@ -1258,6 +1200,19 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             </div>
         </article>
         
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-06-07T22:08:15.000Z">2020-06-08</time></div>
+                    <a href="/2020/06/08/jayplayco.coinnews-ada-50/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 크립토닷컴의 ADA 50% 할인판매</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
     </div>
 </div>
         
@@ -1275,7 +1230,7 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
                     <span class="level-item">6월 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">51</span>
+                    <span class="level-item tag">50</span>
                 </span>
             </a>
         </li>
@@ -1648,7 +1603,7 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
                 <div class="control">
                     <a class="tags has-addons" href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/">
                         <span class="tag">미지정</span>
-                        <span class="tag is-grey">437</span>
+                        <span class="tag is-grey">436</span>
                     </a>
                 </div>
                 
@@ -1707,19 +1662,6 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-06-08T22:06:33.000Z">2020-06-09</time></div>
-                    <a href="/2020/06/09/jayplayco.4gcpwc-coinnews%20(1)/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 이더리움의 네트워크 비용이 비트코인을 앞섰다</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-06-08T22:06:33.000Z">2020-06-09</time></div>
                     <a href="/2020/06/09/jayplayco.4gcpwc-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 이더리움의 네트워크 비용이 비트코인을 앞섰다</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
@@ -1767,6 +1709,19 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             </div>
         </article>
         
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-06-07T22:08:15.000Z">2020-06-08</time></div>
+                    <a href="/2020/06/08/jayplayco.coinnews-ada-50/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 크립토닷컴의 ADA 50% 할인판매</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
     </div>
 </div>
     
@@ -1784,7 +1739,7 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
                     <span class="level-item">6월 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">51</span>
+                    <span class="level-item tag">50</span>
                 </span>
             </a>
         </li>
@@ -2157,7 +2112,7 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
                 <div class="control">
                     <a class="tags has-addons" href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/">
                         <span class="tag">미지정</span>
-                        <span class="tag is-grey">437</span>
+                        <span class="tag is-grey">436</span>
                     </a>
                 </div>
                 
@@ -2331,7 +2286,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
 
-<a id="back-to-top" title="Back to Top" href="javascript:;">
+<a id="back-to-top" title="Zurück nach oben" href="javascript:;">
     <i class="fas fa-chevron-up"></i>
 </a>
 <script src="/js/back-to-top.js" defer></script>
