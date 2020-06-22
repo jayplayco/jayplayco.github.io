@@ -148,7 +148,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-07-15T19:02:39.000Z">2018-07-16</time>
+                <time class="level-item has-text-grey" datetime="2018-09-30T20:43:48.000Z">2018-10-01</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
@@ -158,7 +158,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1분 읽기 (대략 203 단어)
+                    5분 읽기 (대략 767 단어)
                 </span>
                 
                 
@@ -167,19 +167,652 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/07/16/jayplayco.merge-cube-hold-a-hologram-in-your-hand/">Merge Cube - Hold a hologram in your hand</a>
+                <a class="has-link-black-ter" href="/2018/10/01/jayplayco.hf-20-15-no/">[HF-20] 15분 이내 보팅 NO, 셀봇시 주의사항</a>
             
         </h1>
         <div class="content">
-            <h1 id="Merge-Cube"><a href="#Merge-Cube" class="headerlink" title="Merge Cube"></a>Merge Cube</h1><p>Hold a hologram in your hand</p>
+            <p><img src="https://cdn.steemitimages.com/DQmd2KquVNmj1SFvHwEtd8mQKiJvmzbHmzCEcqxurHTnwcX/image.png" alt=""></p>
+<p>안녕하세요, @jayplayco 입니다.</p>
+<p>@lucky2님이 이번 하드포크 20에 의한 보팅 규칙 변경된 사항에 대해서 정리를 요청하셔서 정리 들어갑니다. ^^</p>
+<center>![](https://cdn.steemitimages.com/DQmU5EA7mpupynrY9Tcc5aWUQpthGAiM71U73N7UN1WCepX/image.png)</center>
+
+<h2>1. 보팅은 언제부터?</h2>
+HF20이전에는 30분후에 보팅을 해야했습니다. **HF-20이후부터는 15분 후에 하시면 됩니다.**
+>Velocity Hardfork will reduce the curation window from 30 minutes to 15 minutes.
+
+<h2>2. 셀봇은? </h2>
+셀봇에 대해 맞다 틀리다를 떠나서 여기서는 그냥 기술적으로 적용시켜서 어떤 현상이 발생하는지만 보겠습니다. 이전에는 셀봇을 했을때 글을 올리자마자 셀봇하는 것이 가장 유리했습니다. 30분 이내로 셀봇시 큐레이션 리워드는 글 작성자, 즉 저자에게 돌아가게 되어있었습니다. 저는 그래서 가끔 저자에게 보상을 더 많이 주기 위해서 일부러 30분 이내로 업보팅 하는 경우가 많았습니다.
+
+<p>HF-20이후에는 15분 이내에 셀봇할 경우 큐레이션 리워드는 전체 풀로 돌아가게 됩니다. 즉,  큐레이션 리워드는 저자에게 안돌아갑니다.</p>
+<p><strong>그래서 셀봇시 최적화를 원하시는 분은 15분 후에 셀봇을 해야합니다.</strong></p>
+<blockquote>
+<p>the portion of curation rewards that is not given to the curators due to the early voting penalty will be returned to the rewards pool instead of being awarded to the author</p>
+</blockquote>
+<p>소스 : <a href="https://steemit.com/steem/@steemitblog/steem-velocity-hardfork-hardfork-20">https://steemit.com/steem/@steemitblog/steem-velocity-hardfork-hardfork-20</a></p>
+<p>하기는 하포20 스팀잇블로그 계정에서 언급했던 내용의 영문 전체본입니다.</p>
+<blockquote>
+<h2>Curation Updates</h2>
+<h3>30-minute Curation Window</h3>
+Steem account holders (including bot accounts) are currently disincentivized by the Steem blockchain from voting on a post within the first 30 minutes. The earlier a vote is made within the initial 30-minute window, the less curation rewards the voting account receives. This was originally introduced to even the playing field between human curators and bots during a time when the majority of the content on Steem was long-form written content.
+</blockquote>
+<blockquote>
+<p>While successful, much has changed on Steem since that time. Steem now hosts all kinds of content, and powers hundreds of decentralized applications which dramatically expand the types of content that can be consumed on Steem. Because of this, the community and the witnesses have come to a consensus that the 30-minute rule is taking curation rewards away from human voters who are actively consuming content and voting on material they like. For this reason, the Velocity Hardfork will reduce the curation window from 30 minutes to 15 minutes.</p>
+</blockquote>
+<blockquote>
+<p><a href="https://github.com/steemit/steem/issues/1878">GitHub Issue 1878</a></p>
+</blockquote>
+<blockquote>
+<h3>Self-Voting Rewards</h3>
+According to the current blockchain rules, if authors vote for themselves immediately, they get their author rewards, 100% of the curation rewards from their vote, and a portion of the curation rewards coming from everyone who votes for the post after them. Any other curator voting at the same time as the author would get 0% of the curation rewards. This gives the author an unfair advantage over other curators, because the author can earn additional curation rewards through self-voting.
+</blockquote>
+<blockquote>
+<p>In order to eliminate this advantage, the portion of curation rewards that is not given to the curators due to the early voting penalty will be returned to the rewards pool instead of being awarded to the author, thereby increasing the overall percentage of rewards paid to curators. This will better serve the original mission of the curation rewards budget: to ensure that the Steem blockchain distributes rewards to the most valuable content.</p>
+</blockquote>
+<blockquote>
+<p><a href="https://github.com/steemit/steem/issues/1877">GitHub Issue 1877</a></p>
+</blockquote>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-09-27T23:52:42.000Z">2018-09-28</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6분 읽기 (대략 841 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/09/28/jayplayco.kr/">[피크몬KR] 명일 마켓 재오픈 예정 - 거래내역 이전 안내</a>
+            
+        </h1>
+        <div class="content">
+            <p><img src="https://cdn.steemitimages.com/DQmaxpZ4PsqdaCoKjuWdNmJeVoKSDiZ6peQnN75moaF5he4/image.png" alt=""></p>
+<p>안녕하세요, @jayplayco 입니다.</p>
+<p>RC 마나 다 차지 않은 상태에서 열심히 글을 쓰네요. 내일 패치나오면 괞찮을거라고 생각하고 계속 쓰겠습니다. ㅎ..</p>
+<p><a href="https://peakmonsters.kr/">https://peakmonsters.kr/</a></p>
+<p>RC마나 적용후 많은 D’app들이 운영을 중단하거나 쉬고 있는 상황이였습니다. 피크몬KR도 마찬가지입니다. @peakmonsters-kr 계정의 경우는 총 100SP의 임대로 운영되고 있었는데, 아시겠지만 예상되는 하루 거래량이 200-1000단위까지도 올라갈 수 있어서, 턱없이 부족한 SP 임대량이였습니다.</p>
+<p>이에 대응하기 위해서 제가 우선 500SP를 피크몬KR 계정으로 임대해두었습니다. 명일 HF20.4패치가 적용되어 RF 풀이 10배로 커지면 다음과 같은 그림이 그려질것으로 보입니다.</p>
+<center>![](https://cdn.steemitimages.com/DQmQxCGXC59thidjXP3ejd22ae1LsvjU79BGTABV91pTcUx/image.png)</center>
+
+<p>현재 풀로 RC 마나가 채워졌을때 transfer를 451회 할 수 있기 때문에, 10배 늘어난다면 4500회정도가 될것으로 예상됩니다. 그정도이면 우선적으로 피크몬KR을 운영하는데 크게 무리는 없을 것으로 보입니다.</p>
+<h2>판매실적 이전 및 </h2>
+
+<p>추가적으로, peakmonsters.com 과 peakmonsters.kr 은 운영되는 스팀 계정이각 각각 @peakmonsters 와 @peakmonsters-kr 입니다. 이에 따라 저장되는 거래내역도 각각 있는 상황입니다. 문제는 이전에 이미 peakmonsters.com에서 구매를 하셨던 거래내역이 peakmonsters.KR에서 추후 시작될 보상 제도 레벨에 반영이 안되기 때문에 손해를 보실 수 있는데, 운영진과 협의한 결과 1회에 한해 요청하시는 분들은 peakmonsters.com의 거래내역을 peakmonsters.kr로 옮겨드리기로 했습니다. 그렇게 했을 경우 모든 보상내역이 한곳에 집중되어 이익이 될 것으로 보입니다. </p>
+<ul>
+<li><strong>요청하시는 분들은 “이전요청” 만 간단히 댓글로 부탁드립니다. (RC마나 아끼기 ㅎㅎ)</strong></li>
+</ul>
+<p>한가지를 더 말씀드릴 것은 현재 @jarvie 님이 (피크몬 운영자분) RC 마나 관련 카드및 팩 구매에 들어가는 RC를 계산하고 비교해봤습니다. (<a href="https://steemit.com/steemmonsters/@peakmonsters/hf20-fallout-rc-costs-for-steemmonsters">https://steemit.com/steemmonsters/@peakmonsters/hf20-fallout-rc-costs-for-steemmonsters</a>)</p>
+<h3> 스팀몬스터 RC 비용 (뒤 9자리수 삭제)</h3>
+* 카드 5장 합치기 (Combine 5 cards) = 0.8RC
+* 카드 5장 선물하기 (gift 5 cards) = 0.87RC
+* 카드 1장 리스팅 (List 1 card) = 0.8RC
+* 카드 한장 판매 (Sell 1 card) = ZERO RC
+* 카드 한장 구매 (BUY 1 card) = **4.07RC**
+* 부스터팩 1개 구매 (Buy 1 pack) = 3RC
+
+<h3>피크몬스터 RC 비용(뒤 9자리 삭제)</h3>
+
+<ul>
+<li>카드 한장 리스팅 (List 1 card) = 0.77RC</li>
+<li>카드 5장 리스팅 (List 5 cards)= 1.96RC</li>
+<li>카드 25장 리스팅 (List 25 cards) 7.8RC</li>
+<li>카드 한장 선물하기 (Gift 1 Card) = 0.63RC</li>
+<li>카드 5장 선물하기 (Gift 5 cards) = 0.87RC</li>
+<li>카드 25장 선물하기 (Gift 25 Cards) = 2.1RC</li>
+<li>부스터팩 1팩 구매하기 (Buy 1 pack) = 3RC</li>
+</ul>
+<p>결론은, 여러장 구매시, 리스팅시, 선물시 RC가 평균적으로 적게 들어 RC 마나 관리에도 이익일 것으로 판단됩니다.</p>
+<p><a href="https://peakmonsters.kr/">https://peakmonsters.kr/</a> 스몬 트레이딩과 팩 구매시 많은 이용 부탁드립니다. ^^</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-09-27T20:04:42.000Z">2018-09-28</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    5분 읽기 (대략 746 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/09/28/jayplayco.5ge3xa-hf-20-rc/">[HF-20] 희망이 보입니다. RC 값 수정들어갑니다.</a>
+            
+        </h1>
+        <div class="content">
+            <p><img src="https://cdn.steemitimages.com/DQmP4WUJhnoMS35q5yHEvTK1aEfWGWsauFJgtr1nq5w96qz/image.png" alt=""><br><a href="https://unsplash.com/photos/yua5-HkEZus">Source: Bailey Heedick</a></p>
+<p>안녕하세요, @jayplayco 입니다.</p>
+<p>스팀헌트 글을 쓰는 동안 스팀잇에서 발표한 글을 놓쳤네요. 다행이 @leeyh님이 이미 한국어로 공지를 해주셨네요. 감사합니다. ^^</p>
+<p>원본글 : <a href="https://steemit.com/steem/@steemitblog/hf20-update-restoring-continuity">https://steemit.com/steem/@steemitblog/hf20-update-restoring-continuity</a><br>@clayop님의 공지글 : <a href="https://steemit.com/witness-category/@clayop/rc-0-20-4">https://steemit.com/witness-category/@clayop/rc-0-20-4</a><br>@leeyh님의 공지: <a href="https://steemit.com/hf20/@leeyh/hf20">https://steemit.com/hf20/@leeyh/hf20</a></p>
+<p>저도 내용을 다시한번 들여다봤는데, 간단하게는 현재 RC 전체 풀을 10x 늘린다는것이 핵심입니다. 즉, 비용이 1/10로 줄어든다는 것입니다.</p>
+<p>작일 테스트를 한 결과 15SP와 100% Resource Credit를 가진 계정으로 중간 길이 댓글을 하나 쓰는데 약 50%의 Resource Credit 마나가 소요되었습니다.</p>
+<center>![](https://cdn.steemitimages.com/DQmawjs2r46paarVp27kuhYtJ2hHCovGyGBaWC3Y7uaVG91/image.png)</center>
+
+<p>현재 회복속도를 보면 댓글을 어제 오전 08시에 작성했고 지금 다음날 오후 2시경이니 약 30시간동안 약 25%정도 회복되었네요. 물론 RC가 안정되면 가격이 조금더 떨어질 것이라고 여겨집니다만, beem을 개발하신 @holger80님의 글을 보면 (<a href="https://steemit.com/steem/@holger80/how-strong-are-the-rc-costs-changing">https://steemit.com/steem/@holger80/how-strong-are-the-rc-costs-changing</a>) 실제로 transaction의 경우는 RC 비용이 떨어지고 있는데, 포스팅의 비용은 크게 움직이지 않고 있다는것을 볼 수 있습니다.</p>
+<center>![](https://cdn.steemitimages.com/DQma8dUY5qf5g3vLnDXMhKmMgEyjUovuPjtKNJHJXj9fdo2/image.png)</center>
+[Source: @holger80](https://steemit.com/steem/@holger80/how-strong-are-the-rc-costs-changing)
+
+<p>이것을 바탕으로 다음 15SP를 가진 @wunderpa 어카운트가 행할 수 있는 행동들을 예측해봅니다.</p>
+<center>![](https://cdn.steemitimages.com/DQmZeF1TaZAzJohXSG3xJWuoz2M2goAf5aLMag1h7qjpXWm/image.png)</center>
+[Source : steemd.com](https://steemd.com/@wunderpa)
+
+<p>현재와 패치후를 봤을때</p>
+<table>
+<thead>
+<tr>
+<th>SP 15</th>
+<th>HF20 no Patch</th>
+<th>HF20 Patch</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Comments</td>
+<td>1</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Votes</td>
+<td>8</td>
+<td>80</td>
+</tr>
+<tr>
+<td>Transfers/Powerups</td>
+<td>8</td>
+<td>80</td>
+</tr>
+</tbody></table>
+<p>이정도면 많지는 않아도 포스팅하고 업보팅하는데 크게 무리는 없을것으로 보입니다. 단, 댓글 쓰기는 좀 자제를 해야합니다.</p>
+<h3>일정</h3>
+
+<p>현재 패치를 제공하고 있는 상황에서 각 증인분들은 패치를 적용할지 안할지는 자유의사(????)에 맡겼습니다. 즉, 패치가 안전한지 안전하지 않은지는 각 증인들이 판단해서 적용하라고 되어 있습니다. (뭔소리야??) 어쨌던, 사용자 User experience를 위해서는 절대적으로 필요한 패치라고 보여지는 관계로 (처음부터 RC Pool 계산을 완전 잘못했다는것이네요…) 증인분들은 다음 24시간 동안 패치를 하나둘씩 적용할 것이라고 여겨집니다. 길게는 2일후 (즉, 우리의 RC와 보팅마나가 다 어느정도 차있을때) 패치가 작동해서 이전과 “비슷한” 스팀잇 사용이 가능할것이라고 보여집니다.</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-09-26T23:32:18.000Z">2018-09-27</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3분 읽기 (대략 481 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/09/27/jayplayco.hf-20/">[HF-20] 자기 보팅 마나 언제 정확하게 차는지 확인하는 방법</a>
+            
+        </h1>
+        <div class="content">
+            <p><img src="https://cdn.steemitimages.com/DQmP4WUJhnoMS35q5yHEvTK1aEfWGWsauFJgtr1nq5w96qz/image.png" alt=""><br><a href="https://unsplash.com/photos/yua5-HkEZus">Source: Bailey Heedick</a><br>안녕하세요, @jayplayco 입니다.</p>
+<p><strong>이 글에 현재 보팅하지 마세요.</strong> SP가 어느정도 있으신 분들은 차라리 리스팀을 부탁드리겠습니다. 보팅 파워 다들 최소 2일 이상 걸리실 겁니다 다 차는데. ^^</p>
+<p>이것 저것 써야할 글이 많긴 한데 우선 HF-20에 따른 후속 조치로 우선 많은 분들이 궁금해할<br>보팅 게이지가 언제 정확히 차는지를 볼 수 있는 방법을 공유드립니다.</p>
+<p>우선 Discord라는 채팅프로그램을 이용해야 하며, Minnow-Power라는 곳에서 운영하는 Gina Bot이 대답을 해줍니다.<br>작일 추가된 새로운 명령어입니다.</p>
+<ul>
+<li>디스코트 주소. <a href="https://discord.gg/QFk4VWp">https://discord.gg/QFk4VWp</a></li>
+<li>가야할 채널 : #bot-commands</li>
+<li>쳐야 할 명령어 “..power jayplayco” &lt;- 여기서 jayplayco를 궁금한 아이디로 치면 됩니다. power앞에 점점 두개 있습니다. 따옴표는 빼고 쳐야합니다. ^^</li>
+<li>그냥 “..power me”를 치시면 자기 아이디가 보입니다.</li>
+</ul>
+<p>그렇게 되면 다음과 같이 보이십니다.</p>
+<p><img src="https://cdn.steemitimages.com/DQmZAqH16YjQPTh8iknz4UfC82QDf8Eav8qxrXCSjwwxSkA/image.png" alt=""></p>
+<p>여기서 보시면 보팅마나와 RC마나가 차는 시점이 full로 표시되어 있어 몇일 몇시간이 걸리는지를 보실 수 있습니다.</p>
+<p>steemd 에서도 현재 몇%까지 찾는지는 볼 수 있지만 얼마나 걸리는지 궁금해하시는 분들이 저처럼 계실 것 같아서 공유드립니다.</p>
+<p>그럼 2일 6시간후부터 보팅 합니다. ㅋㅋㅋ</p>
 <hr>
-<h2 id="Screenshots"><a href="#Screenshots" class="headerlink" title="Screenshots"></a>Screenshots</h2><center>![cube-product-image_1200x.png](https://i.imgur.com/2iRPw50.png)</center>
+<p>HF20 관련글들</p>
+<ul>
+<li><a href="https://steemit.com/kr/@jayplayco/hf-20-rc">마나와 RC와 보팅파워의 빠른 설명 - 비전문가용</a></li>
+<li><a href="https://steemit.com/kr/@wonsama/rc">[초보자도 이해되는] RC 란 뭘까요? - @wonsama</a></li>
+</ul>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-09-26T13:31:42.000Z">2018-09-26</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    8분 읽기 (대략 1246 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/09/26/jayplayco.hf-20-rc/">[HF-20] 마나와 RC와 보팅파워의 빠른 설명 - 비전문가용</a>
+            
+        </h1>
+        <div class="content">
+            <p><img src="https://cdn.steemitimages.com/DQmaYFchb4PWVoj8gg6nHPa9TMDvGExw1mYxTgwXVSx7Ne9/image.png" alt=""></p>
+<p>안녕하세요, @jayplayco입니다. </p>
+<p>HF20 업데이트 이후 많은 분들이강제로 스팀잇을 쉰 경우가 생겼죠?</p>
+<p>저는 결국 가장 빠른 정보는 스팀몬스터 오픈챗방에서 얻네요. (<a href="https://open.kakao.com/o/g1MCypW)금일">https://open.kakao.com/o/g1MCypW)금일</a> 새벽에 @bbooaae @snackplus @wonsama @fenrir78 @jinuking @ayogom의 열띤 실시간 대화를 오늘 아침에 확인하고 글 쓰기가 된다는 것이 확인되었습니다.</p>
+<p>확인하셔야할 사항은 다음과 같습니다.</p>
+<h2>1.  도대체 무슨일이 벌어진건가?</h2>
+HF20 이후 새로운 Resource Credit (RC)와 마나라는 측정단위가 도입이 되었고, 일부 유저들은 이 마나가 마이너스로 가면서 활동이 불가능했던 것입니다. 실제로 100K 이상의 스파를 소유한 사람정도가 마나가 플러스로 되어 있어서 글을 쓸 수 있는 상황이였습니다.
+
+<p>스팀잇은 이것은 버그가 아니라 실제 이렇게 되라고 프로그래밍 한것이라고 해명을 했고, 단지 이번 1회에 한해 마이너스 마나인것을 리셋하는 패치를 하겠다고 해서 이것이 한국시간 금일 새벽에 적용되어 글을 다시 쓸 수 있습니다.</p>
+<h2>2. 내 마나와 RC 확인하기</h2>
+이제 HF20이전에 썼던 보팅 웨이트의 밴드위지는 잠깐 잊으시고, 그냥 새롭게 마나와 RC를 알고 가야한다고 생각하시면 됩니다.
+
+<ul>
+<li><p>RC : Resource Credit의 약자로 스팀파워와 연관이 있으며 (많으면 많을 수록 좋음) 댓글, 글쓰기, 보팅씨 RC의 유닛인 마나가 줄어들고 기다리면 다시 충전됨.</p>
+</li>
+<li><p>마나 (Mana) RC의 유닛이라고 생각하시면 되고 RC의 측정단위로 쓰입니다.</p>
+</li>
+</ul>
+<p>나의 마나와 리소스 크레딧을 확인하기 위해서는?</p>
+<p>우선<a href="https://steemd.com/@jayplayco">https://steemd.com/@jayplayco</a> 로 갑니다. 그리고 jayplayco부분을 자기 아이디로 바꿔줍니다.</p>
+<center>![](https://cdn.steemitimages.com/DQmVKSpcdK5XYZMnzRoa3D4QxyD75SrMiaNvDPGv4nFYdma/image.png)</center>
+
+<p>여기서 이부분을 찾아 가장 중요한 부분인 estimated_pct 가 몇%인지 확인하시면 됩니다. 이 부분이 글쓰고, 댓글쓰고 하는데 필요한 %입니다.</p>
+<center>![](https://cdn.steemitimages.com/DQmSZ7QJPAHxDbe9cMBS53sYLhjVzMTJXkPqxEHqFeP8dU3/image.png)</center>
+
+<p>요 부분이 보팅할때 필요한 마나인데 current_mana_pct %를 확인하시기 바랍니다. 저의 경우는 지금 30%대라서 이전에 썼던 보팅파워 30%라고 생각하시면 됩니다.</p>
+<p>즉, 글쓰기와 댓글쓰기를 조심스럽게 시작하면서 마나 떨어기는것을 보고 다시 회복하는것을 보면 되겠지만, 보팅파워를 써보신 분들을 아시겠지만 30%의 보팅파워시에는 몇일 쉬셔야 합니다.</p>
+<p>(그래서 이 글에 보팅하지 마세요!!.  스파가 어느정되 되시면 차라리 리스팀을. 그것도 안되시면 그냥 참조만.. ^^) (세팅을 바꾸지 못해서 이렇게 글로 쓰네요, 현재 보팅하시면 마나 충전이 많이 늦어지셔서~)</p>
+<p><strong>주의</strong><br>스파가 아주 적은 분들 (100SP이하)는 보팅 뿐만 아니라 글 쓰는것도 매우 주의를 하셔야 합니다. 현재 테스트를 한 결과 100% RC를 가진 15SP의 계정으로 댓글을 한번 다니까 더이상의 활동이 불가하네요… ㅠㅠ 우선은 계속 지켜보겠습니다.</p>
+<h2>3. 앞으로 스팀잇을 하면서</h2>
+
+<p>우선 다음 3-4일간은 보팅시 보팅파워가 (즉 마나가) 다시 올라오는 것을 확인하고 보팅 마나가 정상으로 (80~90%)로 돌아오면 정상적인 보팅을 시작하면 되실것으로 여겨집니다. 글쓰기는 현재 얼마만큼의 마나가 소비되는지 지켜보고 알려드리겠습니다.</p>
+<p>참고로 @wonsama닙이 언급하신 내용으로 RC,VP 둘다 스파가 높을수록 최대 수지가 높아지고, 회복기간은 0으로 떨어졌을때 5일 걸립니다.</p>
+<p>EDIT</p>
+<center>![](https://cdn.steemitimages.com/DQmRSACbx2tdatkhYvemFs5yeUeFqGmtK3Eo8HLnp5EMTmH/image.png)</center>
+글을 쓰고 나서 마나를 확인해보니 34.79% 에서 34.67%로 조금 떨어졌네요.  글쓰는데는 큰 문제 없을것으로 보입니다. 단 스파가  부족하신 경우는  글 쓰시는것도 주의하셔야합니다.  또한 고쳐쓰기도 마찬가지로 RC가 소비됨으로 가능한 처음부터 제대로 써야하는데.. (저는 이미 이글만 6번 고쳐쓰네요 ㅎㅎ..)
+
+<p>추가로 원사마님께서 RC에 대한 쉬운 설명글을 쓰셨으니 자세하게 보고 싶으신 분들은 꼭 확인부탁드립니다.</p>
+<p><a href="https://steemit.com/kr/@wonsama/rc">https://steemit.com/kr/@wonsama/rc</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-09-20T15:07:00.000Z">2018-09-21</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6분 읽기 (대략 924 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/09/21/jayplayco.peakmonsters-kr/">[피크몬스터] 한국어 사이트 오픈! Peakmonsters.kr</a>
+            
+        </h1>
+        <div class="content">
+            <p><img src="https://files.steempeak.com/file/steempeak/jayplayco/O55Jv6e9-image.png" alt="image.png"></p>
+<p>안녕하세요, @jayplayco 입니다.</p>
+<p>스팀몬스터 관련 카드 구매나 판매를 할때는 막상 스팀몬스터 메인 페이지보다는 피크몬스터를 주로 이용하게 되는것이 사실입니다. 스팀픽을 만든 팀에서 제공하고 있는 관계로 유저 인터페이스나 실제 필요한 기능들을 한발 빠르게 고민하고 제공하고 있는것으로 잘 알려져있습니다.</p>
+<p>@jarvie 와 @asgarth님의 지원으로 이번에 피크몬 한국어 서비스를 런칭하게 되었습니다. </p>
+<p><a href="https://peakmonsters.kr/">https://peakmonsters.kr/</a></p>
+<p>공식적인 담당 계정은 @peakmonsters-kr 입니다. 이 계정이 공식적인 판매/구매시 중개자 역할을 합니다. </p>
+<p>자, 그러면 피크몬 코리아를 이용하면 장점이 무엇인가를 알아보겠습니다.</p>
+<ul>
+<li>한국어로 이용할 수 있음. ^^</li>
+<li>KR만의 로열티 프로그램 진행 (피크몬KR에서 구매한 팩과 카드에서 발생한 일부 수익을 유저에게 돌려주는 시스템 ^^)</li>
+<li>피크몬 KR도 피크몬.com과 똑같이 개발됨. <ul>
+<li>벌크로 30장 이상 구매 준비중</li>
+<li>자동 옥션 기능 준비중   </li>
+<li>게임 시작후 카드 게임플레이 stat 제공 예정</li>
+<li>카드 stat 비교 페이지 준비</li>
+<li>등등 많은 준비를 하고 있습니다. ^^</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://files.steempeak.com/file/steempeak/jayplayco/yuERqgtt-image.png" alt="image.png"></p>
+<p>이렇게 피크몬 KR에서 내정보를 확인하시면 앞으로(그동안) 구매할 팩이나 카드에 대한 정보가 보이며, 이것을 바탕으로 추후 보상 레벨과 보상이 지급될 예정입니다. 많은 이용 부탁드립니다. ㅎ</p>
+<p>번역에 아직 문제가 있을 수 있습니다. 혹시 번역 에러 발견되시면 댓글 남겨주시면 곧바로 수정 들어가도록 하겠습니다. ^^</p>
+<hr>
+<p>다른 스모모너들을 만나고 싶으시면 오픈챗방도 운영하고 있습니다. 익명으로 steem아이디로 로그인 가능하십니다. ^^ </p>
+<center>![](https://cdn.steemitimages.com/DQmXuexHXyyA4FYiNcrSRWCVqm5eUHrnnFmnW5ZyvzA52aB/image.png)</center>
+
+<p><a href="https://open.kakao.com/o/g1MCypW">https://open.kakao.com/o/g1MCypW</a></p>
+<hr>
+<h2>**스팀몬스터 관련 글들.**</h2>
+최근 글까지 업데이트 했습니다. 스몬 관련 스모너가 알아야할 사항들은 다 있는 것 같습니다. ^^
+
+<ul>
+<li><a href="https://steemit.com/kr/@jayplayco/40">스팀몬스터란</a></li>
+<li><a href="https://steemit.com/kr/@jayplayco/7fn3vs">스팀몬스터 카드카테고리 이해하기</a></li>
+<li><a href="https://steemit.com/kr/@ayogom/4yjwyp">스팀몬스터 카드 기본 개념 정리 - @ayogom</a></li>
+<li><a href="https://steemit.com/kr/@ayogom/5okuaj">스팀몬스터 팀 구성 - @ayogom</a></li>
+<li><a href="https://steemit.com/kr/@ayogom/7rtzvj">스팀몬스터 팀 구성 예시 - @ayogom</a></li>
+<li><a href="https://steemit.com/steemmonsters/@fenrir78/5rr4ug-steemmonsters">카드 벨류에이션 - @fenrir78</a></li>
+<li><a href="https://steemit.com/kr/@starjuno/5gnsaw">해외권 스팀몬스터 소식 -@starjuno</a></li>
+<li><a href="https://steemit.com/kr/@lucky2/steemmonsters">반짝반짝 골드카드구경 -@lucky2</a></li>
+<li><a href="https://steemit.com/steemmonsters/@haejin/steemmonsters-a-completed-gold-foil-common-rare-epic-and-legendaries">가장  빨리 풀덱 만드신 해진님 카드 구경 - @haejin</a></li>
+<li><a href="https://steemit.com/kr/@ayogom/life">팀구성 라이프편 - @ayogom</a></li>
+<li><a href="https://steemit.com/steemmonsters/@fenrir78/5rr4ug-steemmonsters">카드밸류에이션 1편 - @fenrir78</a></li>
+<li><a href="https://steemit.com/steemmonsters/@fenrir78/5znqgq-steemmonsters-2">카드밸류에이션 2편 - @fenrir78</a></li>
+<li><a href="https://steemit.com/kr/@tradingideas/5qprx5-1">스몬 대전 실제 중계 1편 - @tradingideas</a></li>
+<li><a href="https://steemit.com/kr/@tradingideas/3i8kld-2">스몬 대전 실제 중계 2편 - @tradingideas</a></li>
+<li><a href="https://steemit.com/steemmonsters/@fenrir78/steemmonsters-1">게임방법 시리즈 1 - @fenrir78</a></li>
+<li><a href="https://steemit.com/steemmonsters/@fenrir78/7zv6y-steemmonsters-2">게임방법 시리즈 2 - @fenrir78</a></li>
+<li><a href="https://steemit.com/steemmonsters/@fenrir78/6oes7w-steemmonsters-3">게임방법 시리즈 3 - @fenrir78</a></li>
+<li><a href="https://steemit.com/steemmonsters/@fenrir78/steemmonsters-4">게임방법 시리즈 4 - @fenrir78</a></li>
+</ul>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-09-09T23:25:48.000Z">2018-09-10</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2분 읽기 (대략 259 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/09/10/jayplayco.smt-2/">[일산] SMT 번개 2차</a>
+            
+        </h1>
+        <div class="content">
+            <p><a href="https://i.imgur.com/0ydhlkx.gif">https://i.imgur.com/0ydhlkx.gif</a></p>
+<p>안녕하세요, @jayplayco 입니다.</p>
+<p>지난 1차 일산 SMT 번개 이후 이미 한달이 지나고 있어 2차 번개를 실시하고자 합니다. ^^</p>
+<p>장소는 이전과 마찬가지로 정발역 주변에서 진행하고자 합니다. 지난번에 확인해보니 일산 근처분들이 많이 안계시는 것 같아 많이 아쉬운데, SMT 번개라고 해도 스티미언이던, 비스티미언이던 상관없이 같이 모이시면 좋을 것 같네요! ^^</p>
+<p>시간과 장소 다음과 같이 공지드립니다.</p>
+<ol>
+<li>일시 : 2018년 9월 20일 (목)</li>
+<li>시간 : 오후 6-7시경</li>
+<li>장소 : 정발산역 스타벅스 (경기도 고양시 일산동구 정발산로 38 장항동 이스턴시티)</li>
+<li>회비 같은것 없고요 그냥 같이 모여서 커피한잔, 맥주한잔 하면서 오손도손 이야기 나눕니다. ^^</li>
+<li>오실분은 댓글 남겨주세요. </li>
+</ol>
+<p>오늘도 다들 즐거운 월요일~~</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-09-03T19:55:54.000Z">2018-09-04</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    5분 읽기 (대략 752 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/09/04/jayplayco.fast-reply-20/">[Fast-reply] 댓글 달기 20초 제한 풀자!</a>
+            
+        </h1>
+        <div class="content">
+            <p>안녕하세요 @jayplayco 입니다.</p>
+<p>약 3개월전에 버젼 0.1로 소개되어서 현재는 버젼 0.2로 돌아가고 있는 패스트 리플라이에 대해서 소개해드리겠습니다.</p>
+<p>영문 공식 글은 <a href="https://steemit.com/utopian-io/@roxane/fast-reply-v0-1-never-miss-to-answer-a-comment-again-and-do-it-faster-than-ever">요기</a></p>
+<p>홈페이지는 : <a href="http://fast-reply.surge.sh/#/">http://fast-reply.surge.sh/#/</a></p>
+<h2>1. Fast-Reply란</h2>
+대댓글 다는것이 스팀에서는 HF-19까지는 20초 제한이 있고, 물론 HF-20으로 가더라도 3초제한은 있습니다. 그런데 사실상 빠른 분들은 댓글 쓰시고 다음 댓글 쓰시는데 3초조차 안걸리는 경우가... 특히 20초는 안걸리는 관계로 에러 메세지 뜨고 하면 정말 귀찮기도 합니다.
+
+<p>스팀몬스터 이벤트를 돌리면서 댓글을 많이 달아야 하는 상황이 왔었는데, 20초씩 기다리니까 시간을 다 잡아먹게 되더라고요. 이때 스팀헌트 모더레이터분께 배운 fast-reply라는 서비스를 소개받았습니다.</p>
+<p>@roxane 과 @oroger님이 만드신 시스템인데, 스팀커넥트 통해서 접속을 하면 댓글과 댓글에 대한 업보팅을 20초 제한 없이 할 수 있습니다. 어떻게요? 블록체인 규칙을 바꾸는 것이 아니라, 자체 브라우저 캐쉬를 이용해서 20초를 기다렸다가 대신 업보팅과 댓글을 순차적으로 해주는것입니다. 예약 기능같은 것이라고 생각하시면 됩니다. </p>
+<h2>2. Fast-Reply쓰는 방법</h2>
+
+<ul>
+<li>우선 <a href="http://fast-reply.surge.sh/#/">http://fast-reply.surge.sh/#/</a> 으로 갑니다. 그리고 스팀커넥트로 로그인을 합니다.</li>
+</ul>
+<center>![](https://cdn.steemitimages.com/DQmdzqakAT8A97E1ixNe3YVHq1hK3T2FDSaz8McyK3K6piZ/image.png)</center>
+
+<ul>
+<li>그러면 다음과 같은 창이 뜨면서 댓글을 달아주시면 됩니다. 달면 알아서 예약 걸려서 시간에 따라 댓글이나 업보팅을 해줍니다.</li>
+</ul>
+<p><img src="https://cdn.steemitimages.com/DQmRQ1GKY75yuJxMyquj2tCqzcsfBKnViDETRt4iArUKaSY/image.png" alt=""></p>
+<ul>
+<li>오른쪽 위에 또 메뉴가 있는데, 저는 특히 댓글 리로드와 지운 댓글 지우기는 뻑이나더라구요. (무시하기/지우기를 누르고 새로고치기 하면 다 다시 뜨더라구요.. –;) 뭐 그래도 댓글 안놓치고 빨리 쓸 수 있어서 업무 효율은 확실히늘더군요.<br><img src="https://cdn.steemitimages.com/DQmcCNmtXooTwucQSFJMPxPCBdQqLFGoV1hrQEPdWPyAqo5/image.png" alt=""></li>
+</ul>
+<h2>3. 마치면서</h2>
+
+<p>KR의 경우는 거의 모든 소통을 댓글을 통해서 하다보니 댓글 달 일이 비교적 많습니다. 그런데 KR에는 이 툴이 아직 잘 알려지지는 않은듯합니다. 많은 댓글, 놓치는 소통 없이 한꺼번에 빨리 하고 싶은신 분들께는 적극 추천~!</p>
+<p>KR에도 많이 알려야할 툴인듯 해서 많이들 리스팀 부탁드립니다. 널리널리 알려서 KR에게도 편한 세상을 ^^</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-08-30T22:38:42.000Z">2018-08-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    1분 읽기 (대략 221 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/08/31/jayplayco.namoo-wonderful-ar-app-that-let-kids-grow-trees-in-their-room/">Namoo - Wonderful AR app that let kids learn about plants</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="Namoo"><a href="#Namoo" class="headerlink" title="Namoo"></a>Namoo</h1><p>Wonderful AR app that let kids learn about plants</p>
+<hr>
+<h2 id="Screenshots"><a href="#Screenshots" class="headerlink" title="Screenshots"></a>Screenshots</h2><center>![namoo1.JPG](https://huntimages.s3.us-west-2.amazonaws.com/production/steemhunt/2018-08-31/b1a3e056-namoo1.JPG)</center>
 
 <table>
 <thead>
 <tr>
-<th><center><img src="https://i.imgur.com/44c8yzV.jpg" alt="merge02.JPG"><br><a href="https://i.imgur.com/44c8yzV.jpg">View Image</a></center></th>
-<th><center><img src="https://i.imgur.com/5JgXEbW.jpg" alt="merge03.JPG"><br><a href="https://i.imgur.com/5JgXEbW.jpg">View Image</a></center></th>
+<th><center><img src="https://huntimages.s3.us-west-2.amazonaws.com/production/steemhunt/2018-08-31/7744efd3-namoo2.JPG" alt="namoo2.JPG"><br><a href="https://huntimages.s3.us-west-2.amazonaws.com/production/steemhunt/2018-08-31/7744efd3-namoo2.JPG">View Image</a></center></th>
+<th><center><img src="https://huntimages.s3.us-west-2.amazonaws.com/production/steemhunt/2018-08-31/a02b36b1-namoo3.JPG" alt="namoo3.JPG"><br><a href="https://huntimages.s3.us-west-2.amazonaws.com/production/steemhunt/2018-08-31/a02b36b1-namoo3.JPG">View Image</a></center></th>
 </tr>
 </thead>
 <tbody><tr>
@@ -188,16 +821,18 @@
 </tr>
 </tbody></table>
 <hr>
-<h2 id="Hunter’s-comment"><a href="#Hunter’s-comment" class="headerlink" title="Hunter’s comment"></a>Hunter’s comment</h2><p>With the addition of an App (which the parents have to activate) you can use the Merge Cube to activate different kind of AR scenarios on your hand or table. Starting from a Sun in your hand to a planet. This can be seen over the screen of your smartphone or also in VR mode. Fun for kids to explorer the possibility of AR and VR.<br><img src="https://cdn.steemitimages.com/DQmWMrrbk7As1YyFUmJXdieK6f9xqj8Z479oVGAWHUGpWEp/image.png" alt=""><br><a href="https://www.miniverse.io/cube">Source</a></p>
-<p><a href="https://www.youtube.com/watch?time_continue=3&amp;v=L-ya-h062zc">https://www.youtube.com/watch?time_continue=3&amp;v=L-ya-h062zc</a></p>
+<h2 id="Hunter’s-comment"><a href="#Hunter’s-comment" class="headerlink" title="Hunter’s comment"></a>Hunter’s comment</h2><p>A fun tool to let your kids learn about plants, how they grow, how they look inside with a detailed explanation. </p>
+<p>With the ability of AR your kid can grow a tree in their room and get explained how the roots work or the flowers and fruits.</p>
+<p>Everything is animated in detail and 3D, so the viewer can get a good feeling how it would look like and how it works.</p>
+<p><a href="https://www.youtube.com/watch?v=5YZx7zU31lc">https://www.youtube.com/watch?v=5YZx7zU31lc</a></p>
 <hr>
-<h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a href="https://www.miniverse.io/cube">https://www.miniverse.io/cube</a></p>
+<h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a href="http://namooapp.com/">http://namooapp.com/</a></p>
 <hr>
 <h2 id="Contributors"><a href="#Contributors" class="headerlink" title="Contributors"></a>Contributors</h2><p>Hunter: @jayplayco</p>
 <hr>
 <center><br/>![Steemhunt.com](https://i.imgur.com/jB2axnW.png)<br/>
 This is posted on Steemhunt - A place where you can dig products and earn STEEM.
-[View on Steemhunt.com](https://steemhunt.com/@jayplayco/merge-cube-hold-a-hologram-in-your-hand)
+[View on Steemhunt.com](https://steemhunt.com/@jayplayco/namoo-wonderful-ar-app-that-let-kids-grow-trees-in-their-room)
 </center>
         </div>
         
@@ -220,7 +855,7 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-07-04T16:56:39.000Z">2018-07-05</time>
+                <time class="level-item has-text-grey" datetime="2018-08-25T02:00:15.000Z">2018-08-25</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
@@ -230,7 +865,7 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
                 <span class="level-item has-text-grey">
                     
                     
-                    3분 읽기 (대략 487 단어)
+                    1분 읽기 (대략 202 단어)
                 </span>
                 
                 
@@ -239,618 +874,38 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/07/05/jayplayco.ys9yp/">[아마존] 한국 무료배송 시작</a>
+                <a class="has-link-black-ter" href="/2018/08/25/jayplayco.severed-a-clash-based-light-rpg-adventure/">Severed - A clash based light RPG adventure</a>
             
         </h1>
         <div class="content">
-            <p><img src="https://cdn.steemitimages.com/DQmcBmAoruECZdhEx72tAKommhCuiZfM6ZU5j5peMGGzQME/image.png" alt=""></p>
-<p>아침에 일어나고 나니 대란이 일어났네요. 주변 지인들이 갑자기 미국 아마존에서 피씨 케이스니 매트리스같은 것들을 주문하기 시작했답니다. 이유인즉, 이전 싱가폴에서 아마존 프라임을 소개하기 전에 얼마 이상 구매시 무료배송을 했었는데, 이 서비스가 한국으로 확대되었다는 것입니다.</p>
-<p>현재는 90불 이상 주문시 무료배송이 가능하며, 일부 제품은 크기때문에 (예, TV 65”인치) 배송이 거부되는 경우도 있습니다.</p>
-<p>예를 들어 노트북을 하나 담아보겠습니다.<br><img src="https://cdn.steemitimages.com/DQmUa78tS3Zb2Z6qtviKcDfugpwkzQ1Jv3oV41Z46LYCWB5/image.png" alt=""></p>
-<p>위 사진을 보시면 한국으로 배송 비용이 68.85불이 들어가네요.</p>
-<p><img src="https://cdn.steemitimages.com/DQmYFA9RhuVJh8WU7MBwA9hrjASgAmz3faAccPJx6FBPDm4/image.png" alt=""></p>
-<p>위에 보시면 옵션이 하나 새로 생겼습니다. FREE Amazon Global shipping 이라는 항목을 선택하시면 배송비용이 무료가 됩니다. </p>
-<p>미국에서는 200불 밑으로 구매를 할 경우 관세를 부과하지 않기 때문에 더욱더 싸게 구매할 수 있구요, 제품 한개가 90불이여야 하는것은 아니고 장바구니가 90불 이상일 경우 가능합니다.</p>
-<p>아, 이제 배대지들은 큰일이네요~</p>
-<p>금일부터 시작해서 아마존이 언제까지 유지를 할지는 모르는 것이나, 싱가폴의 경우는 아마존 프라임을 시작하기 전 시장을 테스트하는 용도로 썼던 것으로 보입니다. 프라임 도입 이후에는 서비스가 프라임으로 대체되었습니다. 한국도 아마존 프라임이 도입될 가능성이 있는 것으로 보입니다. ^^</p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-06-29T00:06:09.000Z">2018-06-29</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    8분 읽기 (대략 1215 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/06/29/jayplayco.kr-smt/">[KR-SMT] 새로운 태그의 탄생과 배경</a>
-            
-        </h1>
-        <div class="content">
-            <p>안녕하세요 @jayplayco입니다.</p>
-<p>이제 스팀이 조금씩 익숙해지면서 점점 재미있어지는 것 같습니다. 스팀헌트와의 인연으로 이 프로젝트에 모드로 참여를 하고 있고, 스팀헌트 관련된 글들도 많이 소개해드리고 있었습니다.</p>
-<p><img src="https://cdn.steemitimages.com/DQmVPHV3oVQgy5vCtY1YHdyies5uzGphvSTjPB167MXSLu5/image.png" alt=""><br><a href="https://unsplash.com/photos/B0AoqUagQlM">Source : Sticker Mule</a></p>
-<p>초기부터 새로운것을 발견하면 가슴이 뛰기 시작하면서 좋은 사람들도 알게 되어 정말 즐겁게 글을 쓸 수 있는 것 같습니다.<br>스팀헌트가 그렇고 이번에는 다른 한국의 SMT 프로젝트들이 꿈틀꿈틀 거리고 있어서 그 탄생 과정을 어떻게 하면 지켜볼 수 있을까 하다가 @ayogom님의 @steemhotdeals를 접하면서 자세히 들여다보게 되었습니다.</p>
-<p>결국 작일 (6월 28일) SMT 프로젝트 개발관련 분들이 같이 모여서 텔레그램방을 오픈하고 새로운 태그 kr-smt를 열기로 했습니다.<br>필자의 경우는 non-dev과 non-projectowner이나 텔레그램방에서 반갑게 맞이해주었답니다. ^^</p>
+            <h1 id="Severed"><a href="#Severed" class="headerlink" title="Severed"></a>Severed</h1><p>A clash based light RPG adventure</p>
 <hr>
-<p>텔레그램 링크<br><a href="https://t.me/joinchat/GIfJNw8B5Mcr7kyND5mjGw">https://t.me/joinchat/GIfJNw8B5Mcr7kyND5mjGw</a></p>
-<p>@virus707 오치님의 SMT준비 단톡방- 현재는 방이 좀 얼어있다고는 합니다만 꽤 많은 분들이 계시는 방인 관계로 공유드립니다.<br><a href="https://open.kakao.com/o/gdJmiFI">https://open.kakao.com/o/gdJmiFI</a></p>
+<h2 id="Screenshots"><a href="#Screenshots" class="headerlink" title="Screenshots"></a>Screenshots</h2><center>![severed_screenshot_02.jpg](https://huntimages.s3.us-west-2.amazonaws.com/production/steemhunt/e3fbaa6d-severed_screenshot_02.jpg)</center>
+
+<table>
+<thead>
+<tr>
+<th><center><img src="https://huntimages.s3.us-west-2.amazonaws.com/production/steemhunt/cc2c550b-severed_screenshot_05.jpg" alt="severed_screenshot_05.jpg"><br><a href="https://huntimages.s3.us-west-2.amazonaws.com/production/steemhunt/cc2c550b-severed_screenshot_05.jpg">View Image</a></center></th>
+<th><center><img src="https://huntimages.s3.us-west-2.amazonaws.com/production/steemhunt/d5d743bc-severed_screenshot_06.jpg" alt="severed_screenshot_06.jpg"><br><a href="https://huntimages.s3.us-west-2.amazonaws.com/production/steemhunt/d5d743bc-severed_screenshot_06.jpg">View Image</a></center></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
 <hr>
-<h3>1. SMT란? </h3>
-![](https://cdn.steemitimages.com/DQmVQhujhT9EMxuduiaBtGfornqM6yNmgP668Tx835nK94H/image.png)
-[Source : William Iven](https://unsplash.com/photos/dAmHWsRYP9c)
-@twinbraid님의 6개월전 글이 아직도 유효하며 재미있고 쉽게 써주셨습니다.
-https://steemkr.com/kr/@twinbraid/smt-01
-https://steemkr.com/kr/@twinbraid/smt-02
-
-<p>여기서 단순하게 설명을 하자면 컨텐트 바탕의 토큰 ICO를 할 수 있는 제도입니다. 즉 제가 예를 들어 SMT기반 JAY토큰을 발행하고, jayplayco관련 컨텐츠를 만드시는 분들은 JAY토큰을 받을 수 있게 가능한 것입니다. 그것 다른분들이 jayplayco에 대한 컨텐츠에 “좋아요(업보팅)”를 누르면 JAY 토큰을 지급한다는 것입니다.</p>
-<p>음.. 예시로는 아무도 저 토큰을 필요하지도 원하지도 않겠죠? 그러나 사람들이 원하는 컨텐츠를  만드려고 하거나 플랫폼을 만들고자 한다면 스팀의 기반을 이용해서 토큰 이코노미를 만들 수 있다는 것이죠.</p>
-<p>정말 깊게 들어가고 싶으신 분들은 SMT 백서를 번역하신 @kimhyuckjun 님의 글을 파고 들어가시는 것도 추천합니다. ^^<br><a href="https://steemkr.com/kr/@kimhyuckjun/kr-steem-smt">https://steemkr.com/kr/@kimhyuckjun/kr-steem-smt</a> </p>
-<p>한국에서 진행하고 있는 잘 알려진 SMT를 지향하는 프로젝트중에는 @tasteem 과 @steemhunt 가 있지요, 이미 스팀잇의 델레게이션도 성공적으로 받고 있고 글로벌 진출을 힘차게 진행하고 있는 멋진 프로젝트들이죠. 하지만 이미 성공가도를 달리고 있는 프로젝트 말고 준비중이거나 구상중인 프로젝트들도 많이 있습니다.</p>
-<h3>2. KR-SMT 태그는?</h3>
-![](https://cdn.steemitimages.com/DQmThGrwipwpk1VoSpvq9trDyHTdo8eZ5X6TeUfXrL5FdnW/image.png)
-[Source:Manuel Cosentino](https://unsplash.com/photos/M3fhZSBFoFQ)
-
-<p>기본적인 취지는 SMT 관련된 글들을 태그하자는 것입니다. 물론 앞에 KR을 붙였기 때문에 한국과 관련된 SMT 프로젝트면 좋겠죠. 그렇다고 룰이 따로 있는 것은 아니니 SMT 관련된 글들 쓰실 때 같이 써주시면 좋을 것 같습니다. 현재 이 태그에 참여를 하는 프로젝트는 SMT기반 서비스를 준비중인 @steemhotdeals @trips.teem @devdevil0625 @koinbot 입니다. 더욱더 많은 SMT 프로젝트들이 태그 사용으로 준비중이거나 진행중인 서비스를 알리시면 좋겠습니다.</p>
-<p>댓글로 준비중이신 SMT 프로젝트가 있거나 생각중이시라면 남겨주세요. 텔레그램방에 오셔서 다른 개발자분들이랑 얘기하시는것도 좋은 방법인것 같습니다.</p>
-<p>각 프로젝트에 대한 소개글을 팀마다 했는데 하기와 같이 정리드립니다. </p>
-<p><a href="https://steemkr.com/kr/@trips.teem/trips-teem">트립스팀</a><br><img src="https://cdn.steemitimages.com/DQmVoSj9QWpyyNqCUSA8cRXNDkLAiQHBKEnKxCGBeZUhQqH/image.png" alt=""></p>
-<p><a href="https://steemkr.com/dapp/@devdevil0625/4-dapp">이펙트몰</a><br><a href="https://steemitimages.com/0x0/https://cdn.steemitimages.com/DQmTsWbosYF1be8tDARm1iagytFctkhD5BNw8ty2XuKzYk1/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202018-06-28%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%209.06.54.png">https://steemitimages.com/0x0/https://cdn.steemitimages.com/DQmTsWbosYF1be8tDARm1iagytFctkhD5BNw8ty2XuKzYk1/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202018-06-28%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%209.06.54.png</a></p>
-<p><a href="https://steemit.com/kr/@steemhotdeals/smt-steemhotdeals">스팀핫딜스</a><br><img src="https://cdn.steemitimages.com/DQmRsX7v8jkGSwvrwttBdy79e6mGFk559ebkK4vZRxKCbdt/image.png" alt=""></p>
-<p>앞으로 KR-SMT 태크에 많은 프로젝트들의 참여가 기대되네요~ ^^</p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-06-04T19:05:45.000Z">2018-06-05</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1분 읽기 (대략 166 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/06/05/jayplayco.nitrokey-open-source-hardware-security-usb/">Nitrokey - Open Source Hardware Security USB</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="Nitrokey"><a href="#Nitrokey" class="headerlink" title="Nitrokey"></a>Nitrokey</h1><p>Open Source Hardware Security USB</p>
+<h2 id="Hunter’s-comment"><a href="#Hunter’s-comment" class="headerlink" title="Hunter’s comment"></a>Hunter’s comment</h2><p>Beautiful animated graphics and touch and clash based fighting system with RPG elements.</p>
+<p>Upgrade to fight the monster bosses and use their body parts… yes their body parts to upgrade yourself for the next battle.</p>
+<p><a href="https://www.youtube.com/watch?time_continue=60&amp;v=-ygx4zaMhkk">https://www.youtube.com/watch?time_continue=60&amp;v=-ygx4zaMhkk</a><br><a href="http://severedgame.com/">Source: drinkbox studios</a><br>Available on iOS and also Switch.</p>
 <hr>
-<h2 id="Screenshots"><a href="#Screenshots" class="headerlink" title="Screenshots"></a>Screenshots</h2><center>![how-nitrokey-works-min.jpg](https://i.imgur.com/OiwPNKh.jpg)</center>
-
-
-
-<hr>
-<h2 id="Hunter’s-comment"><a href="#Hunter’s-comment" class="headerlink" title="Hunter’s comment"></a>Hunter’s comment</h2><p>After looking into different types of Open source projects, I finally arrived at Open Source Hardware.</p>
-<h3>Product explanation</h3>
-Nitrokey is a USB Stick which can protect emails,files, hardrives, certificates and also online account. This is managed with cryptography storing the secret keys in the Nitrokey hardware. There is a Pin protection and also a protect against loss.
-
-<h3>Unique Selling Proposition</h3>
-- High Security with RSA keys up to 4096 bit and AES-256support
-- Open Source Hardware
-- No Backdoor
-- Hidden encrypted storage 
-
-<h3>Specification</h3>
-https://cdn.steemitimages.com/DQmTZRj9wSo1hsfYsrG3JUhfrCDz2gZ19sJoREvrytn95tQ/image.png
-[Source : nitrokey.com]
-
-<hr>
-<h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a href="https://www.nitrokey.com/?ref=steemhunt">https://www.nitrokey.com/?ref=steemhunt</a></p>
+<h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a href="http://severedgame.com/">http://severedgame.com/</a></p>
 <hr>
 <h2 id="Contributors"><a href="#Contributors" class="headerlink" title="Contributors"></a>Contributors</h2><p>Hunter: @jayplayco</p>
 <hr>
 <center><br/>![Steemhunt.com](https://i.imgur.com/jB2axnW.png)<br/>
 This is posted on Steemhunt - A place where you can dig products and earn STEEM.
-[View on Steemhunt.com](https://steemhunt.com/@jayplayco/nitrokey-open-source-hardware-security-usb)
-</center>
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-06-04T04:55:39.000Z">2018-06-04</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2분 읽기 (대략 344 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/06/04/jayplayco.time-since-launch-single-use-forever-launch-clock/">Time Since Launch - Single use forever launch clock</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="Time-Since-Launch"><a href="#Time-Since-Launch" class="headerlink" title="Time Since Launch"></a>Time Since Launch</h1><p>Single use forever launch clock</p>
-<hr>
-<h2 id="Screenshots"><a href="#Screenshots" class="headerlink" title="Screenshots"></a>Screenshots</h2><center>![timesincelaunch.png](https://i.imgur.com/qd6oNbW.png)</center>
-
-<center>![timesincelaunch2.png](https://i.imgur.com/EONL0fW.png)</center>
-
-<center>![timesincelaunch3.png](https://i.imgur.com/zwBzw8U.png)</center>
-
-
-
-<hr>
-<h2 id="Hunter’s-comment"><a href="#Hunter’s-comment" class="headerlink" title="Hunter’s comment"></a>Hunter’s comment</h2><h4>Product Story</h4>
-A really analog product was born. Don't you often try to remember a special moment? This product was really born for such a moment. Pull the handle to start an analog clock and remember the moment until 2738. Of course, the batteries last only 20 years, but since the batteries can be replaced at any time without losing time, it would be great if the astronauts could remember this moment until they come.
-
-<p>The product has a handle that ends with a pull and two LCDs. The preceding LCD indicates the year, and the latter shows the time.</p>
-<p><a href="https://ksr-ugc.imgix.net/assets/021/175/471/f5e23f1397b05dba61a43a9d87c511d3_original.gif?w=680&amp;fit=max&amp;v=1525896059&amp;auto=format&amp;gif-q=50&amp;q=92&amp;s=6ab17537179224ca9f5913a9cb62fa5f">https://ksr-ugc.imgix.net/assets/021/175/471/f5e23f1397b05dba61a43a9d87c511d3_original.gif?w=680&amp;fit=max&amp;v=1525896059&amp;auto=format&amp;gif-q=50&amp;q=92&amp;s=6ab17537179224ca9f5913a9cb62fa5f</a></p>
-<h4>Unique Selling Proposition</h4>
-*Building a 2,738 year timepiece.
-*Materials selected for durability and legibility.
-*Electronics specified for longevity and low power consumption
-*A 20+ year battery life
-*A real time chip with ±2ppm accuracy.
-*Safely change batteries without losing time.
-
-<p><a href="https://cdn.steemitimages.com/DQmdLUA55tPyTQpAt53EZsPxyLjpUp8u3cbDMu1fSy5b7gV/image.png">https://cdn.steemitimages.com/DQmdLUA55tPyTQpAt53EZsPxyLjpUp8u3cbDMu1fSy5b7gV/image.png</a></p>
-<h4>Specifications.</h4>
-Dimensions 174mm (6.85”) x 38mm (1.5”)
-
-<p>Weight 285g (10oz)</p>
-<p>Materials Anodized aluminum (6061-T6), stainless steel (303) launch pin, borosilicate glass (Pyrex) tube with a 4mm (0.1575”) thick wall, Buna-N o-rings, PCB and electronic components.</p>
-<p>Ships w/ 2 x AA Energizer L91 Ultimate Lithium batteries.</p>
-<h4>Price</h4>
-150USD - Wow~
-
-<p>*Remark : Specifications, USP`s and photos owned by creators Che-Wei Wang + Taylor Levy (CW&amp;T)</p>
-<hr>
-<h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a href="https://www.kickstarter.com/projects/cwandt/time-since-launch?ref=steemhunt">https://www.kickstarter.com/projects/cwandt/time-since-launch?ref=steemhunt</a></p>
-<hr>
-<h2 id="Contributors"><a href="#Contributors" class="headerlink" title="Contributors"></a>Contributors</h2><p>Hunter: @jayplayco</p>
-<hr>
-<center><br/>![Steemhunt.com](https://i.imgur.com/jB2axnW.png)<br/>
-This is posted on Steemhunt - A place where you can dig products and earn STEEM.
-[View on Steemhunt.com](https://steemhunt.com/@jayplayco/time-since-launch-single-use-forever-launch-clock)
-</center>
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-06-03T15:27:06.000Z">2018-06-04</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    5분 읽기 (대략 693 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/06/04/jayplayco.font-awesome-icons-easy-done/">Font Awesome - Icons. Easy. Done</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="Font-Awesome"><a href="#Font-Awesome" class="headerlink" title="Font Awesome"></a>Font Awesome</h1><p>Icons. Easy. Done</p>
-<hr>
-<h2 id="Screenshots"><a href="#Screenshots" class="headerlink" title="Screenshots"></a>Screenshots</h2><center>![font.JPG](https://i.imgur.com/W0JkuMG.jpg)</center>
-
-<center>![font01.JPG](https://i.imgur.com/V7Dut6y.jpg)</center>
-
-
-
-<hr>
-<h2 id="Hunter’s-comment"><a href="#Hunter’s-comment" class="headerlink" title="Hunter’s comment"></a>Hunter’s comment</h2><h3>0. Repository</h3>
-  https://github.com/FortAwesome/Font-Awesome
-</br>
-Hi, @jayplayco here.
-
-<p>When surfing around the web I`m quite sure that almost everybody has seen the implemented icons in different web pages. Font Awesome is, like the name indicates, an awesome Open source project making it available for everybody and implement it easily into each projects.<br></br></p>
-<h3>1. What is is for? Why Icons and why Font Awesome?</h3>
-Icons, Logos, etc are an fast and direct way to communicate without knowing the language in behind. You can compress the meaning of a category or an action easily with an icon.
-The difficulty is that not everybody is an graphic designer and able to create their own icon. On the other side license and ownership about icons makes it difficult to use icons out there. 
-https://cdn.steemitimages.com/DQmdwBC7qHh16rHsnhd2QgDc8ZPtAzpFR3ie33FKsK11azP/image.png
-
-<p>Font Awesome is solving two issues at ones, at it is not making over 1,109 Free Icons in a a lot of different categories available, it also solves the issue that you have to bind the icons as image into your web projects, as it is going to be used as a Font. That is really great (and also saving a lot of bandwidth~!)</p>
-<h3>2. How to use it?</h3>
-
-<p>Font awesome is now in the 5th version and there are different ways to implement it into your projects.<br><strong>a. Web Fonts with CSS</strong><br>   Use the Free CDN for web fonts and CSS<br>  This is great for persons who don<code>t want or can</code>t host files, like wordpress sites.<br><strong>b. SVG with JS</strong><br>  Also with Font Awesome CDN.<br><strong>c. Desktop Use</strong><br>  Download the OTF file to use the fonts on your desktop. Find the Files <a href="https://use.fontawesome.com/releases/v5.0.13/fontawesome-free-5.0.13.zip">here</a>. They are in the /advanced/options/raw-svg folder included.<br><a href="https://cdn.steemitimages.com/DQmPNjs5brcNchJPbDhZd9y9y1r2UyMtAFRfyTtEyXAyUEG/image.png">https://cdn.steemitimages.com/DQmPNjs5brcNchJPbDhZd9y9y1r2UyMtAFRfyTtEyXAyUEG/image.png</a><br><strong>d. Advanced Use</strong><br>  Font Awesome has prepackaged files also for React and Vue.js. Angular, Ember, Ruby and Phoenix are also in preparation. Find it <a href="https://fontawesome.com/get-started/advanced-options">here</a></p>
-<p>Font Awesome has also a very good categorized overview about their Icons which can be accessed <a href="https://fontawesome.com/icons?d=gallery">here</a><br><a href="https://cdn.steemitimages.com/DQmaqGavLDqJazLvw8cqqD994YGShDzxa1xktQcWNvv9nH9/image.png">https://cdn.steemitimages.com/DQmaqGavLDqJazLvw8cqqD994YGShDzxa1xktQcWNvv9nH9/image.png</a><br></br></p>
-<h3>3. What is the difference between Free vs Pro?</h3>
-With the free version you get access to total 1,109 icons mostly in Solid. (Which is by the way more than enough for any usual private and commercial use). With Font Awesome 5 Pro, you get 1,877 More Icons in different styles (Solid, Regular, Light) and a Private NPM Repository and soon a dedicated Pro CDN. The license starts for 60USD per year.
-https://cdn.steemitimages.com/DQmZi9LwemN2Vyy9jKuNCkzFwHLK1HvFNxC1RmLQFoYgZyv/image.png
-</br>
-<h3>4. But there is no Steem Logo~!</h3>
-Yes, in the original Font Awesome library there is no Steem logo included. But the great thing about Open Source is that it is Open Source :)
-@bhj has made about 6 month ago an own git version with a Steemit Logo included. You can find the text and explanation [here](https://steemit.com/steemit/@bhj/updating-steemit-logo-in-font-awesome)~! Thanks to @bhj for this great work!.
-
-<p><a href="https://steemitimages.com/0x0/https://steemitimages.com/DQmQ7sBrjpshdDCdVsLYXmuSWnWRWFAQTqGSYQVGP1HFsRh/image.png">https://steemitimages.com/0x0/https://steemitimages.com/DQmQ7sBrjpshdDCdVsLYXmuSWnWRWFAQTqGSYQVGP1HFsRh/image.png</a><br></br></p>
-<h3>5.Conclusion </h3>
-If you need some icons to explain or compress your meanings Font Awesome is a great place to start, as they can be used either private or commercial and with over 1,000 Icons you can find almost every normal icon you can think of. The icon numbers are also growing steadily and getting updates in regular base, so it should be bookmarked by every interested content creator.
-
-<hr>
-<h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a href="https://fontawesome.com/?ref=steemhunt">https://fontawesome.com/?ref=steemhunt</a></p>
-<hr>
-<h2 id="Contributors"><a href="#Contributors" class="headerlink" title="Contributors"></a>Contributors</h2><p>Hunter: @jayplayco</p>
-<hr>
-<center><br/>![Steemhunt.com](https://i.imgur.com/jB2axnW.png)<br/>
-This is posted on Steemhunt - A place where you can dig products and earn STEEM.
-[View on Steemhunt.com](https://steemhunt.com/@jayplayco/font-awesome-icons-easy-done)
-</center>
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-06-02T06:19:51.000Z">2018-06-02</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2분 읽기 (대략 369 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/06/02/jayplayco.chibi-figthers-warriors-on-the-ethereum-blockchain-fight-to-win/">Chibi Fighters - Warriors on the Ethereum Blockchain. Fight to win!</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="Chibi-Fighters"><a href="#Chibi-Fighters" class="headerlink" title="Chibi Fighters"></a>Chibi Fighters</h1><p>Warriors on the Ethereum Blockchain. Fight to win!</p>
-<hr>
-<h2 id="Screenshots"><a href="#Screenshots" class="headerlink" title="Screenshots"></a>Screenshots</h2><center>![chibi01.JPG](https://i.imgur.com/Pc09bXJ.jpg)</center>
-
-<center>![chibi02.JPG](https://i.imgur.com/RI7hQY1.jpg)</center>
-
-
-
-<hr>
-<h2 id="Hunter’s-comment"><a href="#Hunter’s-comment" class="headerlink" title="Hunter’s comment"></a>Hunter’s comment</h2><p>After writing an <a href="https://steemit.com/steemhunt/@jayplayco/steemhunt-hunt-curation-crypto-collectibles">article</a> about Crypto Collectibles I started to look for new ones on my own, as Steemhunt should have all available ones listed and also voted (or not), so we can see and find them later.</p>
-<p>This one came up after a google search for Crypto Collectibles.<br><img src="https://scontent-icn1-1.xx.fbcdn.net/v/t31.0-8/28516364_187676041961525_5814690396478437098_o.png?_nc_cat=0&oh=d5d7e5f2f25578537a82d4eeac9b1367&oe=5B8766B8"><br>Chibi Fighters is also on the Ethereum blockchain based on ERC721 non-fungible tokens and as the name is mentioning it already, the focus is on fighting each other.</p>
-<p>1) You can find Chibi fighters only if you purchased so called founder tokens. If you have not been a early founding member, than you have to buy them on their open market. Current checked price was about 40USD..</p>
-<p>2) Chibi fighters can be bought, sold, traded or even be fused. Accessories are also available like swords or daggers, crowns, etc.</p>
-<p>3) Fighting<br>  a) Ring of Death : winner takes all style fight. The loser Chibi fighter will die. At least it will be shown at a so called “halls of the fallen”. (For 40 USD bought.. that is harsh…. but high risk… high return)<br>  b) Battle System : quick and easy on a battlefield. Moves are solved by the server. Winner gets Ether and the owner gets their Chibi back. A save game :)</p>
-<p>4) Future Roadmap<br>   There are real time battles planned in the future, which should be fun to do. <p><img src="https://steemitimages.com/0x0/https://steemitimages.com/DQmVSxXDBaTJNh5Jg2EdodaVHcZdQoADTNXaijPVFr8s4WC/Screenshot-2018-3-1%20Chibi%20Fighters%20%E2%80%93%20Cute%20Chibi%20Fighters%20at%20your%20service(2).png" width="874" height="538"/></p></p>
-<h4>**Where to buy?**</h4>
-  Chibi is available at opensea.io 's marketplace. 
-
-
-<hr>
-<p><strong>Thoughts</strong><br>Quick and casual is the main feeling. Design of characters are ok, not the highest standard but the possibility to play quick and easy seems to appeal. The death match is really scary, as it has a bit feeling of gambling 50%/50%.</p>
-<hr>
-<h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a href="https://chibigame.io/?ref=steemhunt">https://chibigame.io/?ref=steemhunt</a></p>
-<hr>
-<h2 id="Contributors"><a href="#Contributors" class="headerlink" title="Contributors"></a>Contributors</h2><p>Hunter: @jayplayco</p>
-<hr>
-<center><br/>![Steemhunt.com](https://i.imgur.com/jB2axnW.png)<br/>
-This is posted on Steemhunt - A place where you can dig products and earn STEEM.
-[View on Steemhunt.com](https://steemhunt.com/@jayplayco/chibi-figthers-warriors-on-the-ethereum-blockchain-fight-to-win)
-</center>
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-06-01T05:26:00.000Z">2018-06-01</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    몇 초 읽기 (대략 1 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/06/01/jayplayco.australian-wagu-barbecue-2018-06-01-14-25-59/">*deleted*</a>
-            
-        </h1>
-        <div class="content">
-            <p><em>deleted</em></p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-31T16:32:06.000Z">2018-06-01</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    3분 읽기 (대략 378 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/06/01/jayplayco.earth-an-immersive-ar-ai-experience-and-model-of-our-planet/">EARTH - An immersive AR/AI experience &amp; model of our planet</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="EARTH"><a href="#EARTH" class="headerlink" title="EARTH"></a>EARTH</h1><p>An immersive AR/AI experience &amp; model of our planet</p>
-<hr>
-<h2 id="Screenshots"><a href="#Screenshots" class="headerlink" title="Screenshots"></a>Screenshots</h2><center>![a7dedf5ae4b110397d327e03e56f0bd6_original.gif](https://i.imgur.com/wsLmynM.gif)</center>
-
-
-
-<hr>
-<h2 id="Hunter’s-comment"><a href="#Hunter’s-comment" class="headerlink" title="Hunter’s comment"></a>Hunter’s comment</h2><p>Earth globes are something really fascinating. </p>
-<p>EARTH has taken this to the next level adding AR and AI per App looking into the globe.</p>
-<p>So you can explorer the globe not only in 3D but also 4D within time. That is really cool.</p>
-<ol>
-<li>Earth globe scaled at 1:106,300,000</li>
-<li>A lot of data points for AI and AR</li>
-<li>Carbon Dioxide Distribution across time</li>
-<li>Migration of animals in time</li>
-<li>Biomes and crops and key plants in the world</li>
-<li>changing geology</li>
-<li>Climate change</li>
-<li>Anthropology and human experience</li>
-<li>Weather system.</li>
-</ol>
-<p><a href="https://cdn.steemitimages.com/DQmP6AAnNeSDb6rZnRc8dfieneTy5cE29WSpuZZ7oDXYBak/image.png">https://cdn.steemitimages.com/DQmP6AAnNeSDb6rZnRc8dfieneTy5cE29WSpuZZ7oDXYBak/image.png</a></p>
-<p><a href="https://ksr-ugc.imgix.net/assets/021/314/475/617656307c02d79d32ced8af8b83b244_original.gif?w=680&amp;fit=max&amp;v=1526990435&amp;auto=format&amp;gif-q=50&amp;q=92&amp;s=60299eb0cb32a12cafd5480733116315">https://ksr-ugc.imgix.net/assets/021/314/475/617656307c02d79d32ced8af8b83b244_original.gif?w=680&amp;fit=max&amp;v=1526990435&amp;auto=format&amp;gif-q=50&amp;q=92&amp;s=60299eb0cb32a12cafd5480733116315</a><br><a href="https://ksr-ugc.imgix.net/assets/021/314/490/5fbc94d947b50f0b7cd7d0a3e3fdb41a_original.gif?w=680&amp;fit=max&amp;v=1526990495&amp;auto=format&amp;gif-q=50&amp;q=92&amp;s=5d2efd548ea8a99d6adc27e17c58f552">https://ksr-ugc.imgix.net/assets/021/314/490/5fbc94d947b50f0b7cd7d0a3e3fdb41a_original.gif?w=680&amp;fit=max&amp;v=1526990495&amp;auto=format&amp;gif-q=50&amp;q=92&amp;s=5d2efd548ea8a99d6adc27e17c58f552</a></p>
-<p>The app has also an intergrated voice system (like alexa or siri) called Gaya. It helps to ask different questions about the EARTH.</p>
-<p><a href="https://cdn.steemitimages.com/DQmV6Bk9QZT92kfvN9LNpFaK5FTcU3u8wZq5APXRUWoKFXx/image.png">https://cdn.steemitimages.com/DQmV6Bk9QZT92kfvN9LNpFaK5FTcU3u8wZq5APXRUWoKFXx/image.png</a></p>
-<p>Specification of EARTH are like followed.<br><a href="https://cdn.steemitimages.com/DQmWZwTE66vL3RZFZnwN5wNaPC3aTbd7bjPuKZ2nZ2s8Ued/image.png">https://cdn.steemitimages.com/DQmWZwTE66vL3RZFZnwN5wNaPC3aTbd7bjPuKZ2nZ2s8Ued/image.png</a></p>
-<p>At a price level of 199USD for an earth globe, the price looks like heavy, but with all the AR and AI information in the backhand per APP it is a great education tool for your kids and a nice nice nice toy for yourself.</p>
-<p>This project is saying “Shut up and take my money~!”</p>
-<p>*Note : I REALLY love earth globes :)</p>
-<hr>
-<h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a href="https://www.kickstarter.com/projects/2125055134/earth-an-immersive-learning-experience-of-our-worl?ref=steemhunt">https://www.kickstarter.com/projects/2125055134/earth-an-immersive-learning-experience-of-our-worl?ref=steemhunt</a></p>
-<hr>
-<h2 id="Contributors"><a href="#Contributors" class="headerlink" title="Contributors"></a>Contributors</h2><p>Hunter: @jayplayco</p>
-<hr>
-<center><br/>![Steemhunt.com](https://i.imgur.com/jB2axnW.png)<br/>
-This is posted on Steemhunt - A place where you can dig products and earn STEEM.
-[View on Steemhunt.com](https://steemhunt.com/@jayplayco/earth-an-immersive-ar-ai-experience-and-model-of-our-planet)
-</center>
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-30T22:00:15.000Z">2018-05-31</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1분 읽기 (대략 188 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/05/31/jayplayco.april-paint-by-numbers-ios-app/">April - Paint by Numbers iOS App</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="April"><a href="#April" class="headerlink" title="April"></a>April</h1><p>Paint by Numbers iOS App</p>
-<hr>
-<h2 id="Screenshots"><a href="#Screenshots" class="headerlink" title="Screenshots"></a>Screenshots</h2><center>![april.jpg](https://i.imgur.com/GCQh9Lk.jpg)</center>
-
-<center>![april01.JPG](https://i.imgur.com/HEdnS5U.jpg)</center>
-
-<center>![april02.JPG](https://i.imgur.com/LxIsh33.jpg)</center>
-
-
-
-<hr>
-<h2 id="Hunter’s-comment"><a href="#Hunter’s-comment" class="headerlink" title="Hunter’s comment"></a>Hunter’s comment</h2><p>Get stressed? No time at all?<br>Stop what you are doing and just relax for a second.</p>
-<p>There are a lot of coloring books and apps outside, but this one is giving a bit of guidance with numbering on each part. This means that you get better results as when you just start to paint whatever you want.</p>
-<p>The basic app is for free and it offers In-App purchases.</p>
-<p>You have in the free version hundreds of illustrations which are separated in galleries and also levels. A sharing mode is also available to show what you have done.</p>
-<hr>
-<h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a href="https://itunes.apple.com/us/app/april/id1360270159?mt=8&amp;ref=steemhunt">https://itunes.apple.com/us/app/april/id1360270159?mt=8&amp;ref=steemhunt</a></p>
-<hr>
-<h2 id="Contributors"><a href="#Contributors" class="headerlink" title="Contributors"></a>Contributors</h2><p>Hunter: @jayplayco</p>
-<hr>
-<center><br/>![Steemhunt.com](https://i.imgur.com/jB2axnW.png)<br/>
-This is posted on Steemhunt - A place where you can dig products and earn STEEM.
-[View on Steemhunt.com](https://steemhunt.com/@jayplayco/april-paint-by-numbers-ios-app)
+[View on Steemhunt.com](https://steemhunt.com/@jayplayco/severed-a-clash-based-light-rpg-adventure)
 </center>
         </div>
         
@@ -888,7 +943,9 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             
             <li><a class="pagination-link has-text-black-ter" href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/page/48/">48</a></li>
             
-            <li><a class="pagination-link has-text-black-ter" href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/page/49/">49</a></li>
+            <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/page/51/">51</a></li>
             
         </ul>
     </nav>
@@ -938,7 +995,7 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            828
+                            841
                         </p>
                     </a>
                 </div>
@@ -1166,7 +1223,7 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
                 <span class="level-item">미분류</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">230</span>
+                <span class="level-item tag">243</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/%EC%9D%B4%EB%B2%A4%ED%8A%B8/">
@@ -1212,8 +1269,8 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-06-17T22:42:09.000Z">2020-06-18</time></div>
-                    <a href="/2020/06/18/jayplayco.4cdwfy-steemit/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Steemit] 스팀잇을 시작해야 하는 이유!</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-06-21T20:11:54.000Z">2020-06-22</time></div>
+                    <a href="/2020/06/22/jayplayco.75ezep-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 바이낸스와 코박이 인플루엔서를 찾습니다.</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
                     </p>
@@ -1225,8 +1282,8 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-06-17T22:06:36.000Z">2020-06-18</time></div>
-                    <a href="/2020/06/18/jayplayco.why-blogging-on-steemit-com/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Why blogging on Steemit.com?</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-06-21T00:13:45.000Z">2020-06-21</time></div>
+                    <a href="/2020/06/21/jayplayco.jjm-kates-choice-the-first-choice-starts-at-22nd-of-june-2020-kst-0-00/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[JJM] Kates&#39; Choice- The first Choice starts at 22nd of June 2020 KST 0:00</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
                     </p>
@@ -1238,8 +1295,8 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-06-17T21:44:57.000Z">2020-06-18</time></div>
-                    <a href="/2020/06/18/jayplayco.steemit-100daysofsteem/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Steemit] 지금이 왜 스팀을 시작하기 좋은지 - 재단 이벤트 100daysofSteem</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-06-20T23:52:30.000Z">2020-06-21</time></div>
+                    <a href="/2020/06/21/jayplayco.rtukj-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 파일코인 채굴이란</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
                     </p>
@@ -1251,8 +1308,8 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-06-17T21:34:30.000Z">2020-06-18</time></div>
-                    <a href="/2020/06/18/jayplayco.coinnews-unicef-nft-ubisoft/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] UNICEF의 NFT - Ubisoft의 블록체인기</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-06-19T15:55:39.000Z">2020-06-20</time></div>
+                    <a href="/2020/06/20/jayplayco.2z7syp-coinnews-cbdc/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 태국의 CBDC 파일럿 런칭</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
                     </p>
@@ -1264,8 +1321,8 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-06-17T21:22:48.000Z">2020-06-18</time></div>
-                    <a href="/2020/06/18/jayplayco.2kfj9m-coinnews-cz/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 바이낸스의 CZ과 트위터</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-06-19T15:33:57.000Z">2020-06-20</time></div>
+                    <a href="/2020/06/20/jayplayco.4f17rw-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 이더 거액 수수료의 진실은?</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
                     </p>
@@ -1290,7 +1347,7 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
                     <span class="level-item">6월 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">104</span>
+                    <span class="level-item tag">117</span>
                 </span>
             </a>
         </li>
@@ -1663,7 +1720,7 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
                 <div class="control">
                     <a class="tags has-addons" href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/">
                         <span class="tag">미지정</span>
-                        <span class="tag is-grey">490</span>
+                        <span class="tag is-grey">503</span>
                     </a>
                 </div>
                 
@@ -1721,8 +1778,8 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-06-17T22:42:09.000Z">2020-06-18</time></div>
-                    <a href="/2020/06/18/jayplayco.4cdwfy-steemit/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Steemit] 스팀잇을 시작해야 하는 이유!</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-06-21T20:11:54.000Z">2020-06-22</time></div>
+                    <a href="/2020/06/22/jayplayco.75ezep-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 바이낸스와 코박이 인플루엔서를 찾습니다.</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
                     </p>
@@ -1734,8 +1791,8 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-06-17T22:06:36.000Z">2020-06-18</time></div>
-                    <a href="/2020/06/18/jayplayco.why-blogging-on-steemit-com/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Why blogging on Steemit.com?</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-06-21T00:13:45.000Z">2020-06-21</time></div>
+                    <a href="/2020/06/21/jayplayco.jjm-kates-choice-the-first-choice-starts-at-22nd-of-june-2020-kst-0-00/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[JJM] Kates&#39; Choice- The first Choice starts at 22nd of June 2020 KST 0:00</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
                     </p>
@@ -1747,8 +1804,8 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-06-17T21:44:57.000Z">2020-06-18</time></div>
-                    <a href="/2020/06/18/jayplayco.steemit-100daysofsteem/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Steemit] 지금이 왜 스팀을 시작하기 좋은지 - 재단 이벤트 100daysofSteem</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-06-20T23:52:30.000Z">2020-06-21</time></div>
+                    <a href="/2020/06/21/jayplayco.rtukj-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 파일코인 채굴이란</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
                     </p>
@@ -1760,8 +1817,8 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-06-17T21:34:30.000Z">2020-06-18</time></div>
-                    <a href="/2020/06/18/jayplayco.coinnews-unicef-nft-ubisoft/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] UNICEF의 NFT - Ubisoft의 블록체인기</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-06-19T15:55:39.000Z">2020-06-20</time></div>
+                    <a href="/2020/06/20/jayplayco.2z7syp-coinnews-cbdc/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 태국의 CBDC 파일럿 런칭</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
                     </p>
@@ -1773,8 +1830,8 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-06-17T21:22:48.000Z">2020-06-18</time></div>
-                    <a href="/2020/06/18/jayplayco.2kfj9m-coinnews-cz/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 바이낸스의 CZ과 트위터</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-06-19T15:33:57.000Z">2020-06-20</time></div>
+                    <a href="/2020/06/20/jayplayco.4f17rw-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 이더 거액 수수료의 진실은?</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
                     </p>
@@ -1799,7 +1856,7 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
                     <span class="level-item">6월 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">104</span>
+                    <span class="level-item tag">117</span>
                 </span>
             </a>
         </li>
@@ -2172,7 +2229,7 @@ This is posted on Steemhunt - A place where you can dig products and earn STEEM.
                 <div class="control">
                     <a class="tags has-addons" href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/">
                         <span class="tag">미지정</span>
-                        <span class="tag is-grey">490</span>
+                        <span class="tag is-grey">503</span>
                     </a>
                 </div>
                 
@@ -2346,7 +2403,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
 
-<a id="back-to-top" title="Zurück nach oben" href="javascript:;">
+<a id="back-to-top" title="Back to Top" href="javascript:;">
     <i class="fas fa-chevron-up"></i>
 </a>
 <script src="/js/back-to-top.js" defer></script>
