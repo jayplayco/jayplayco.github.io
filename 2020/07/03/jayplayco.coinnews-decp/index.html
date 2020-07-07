@@ -1,0 +1,1804 @@
+<!DOCTYPE html>
+<html  lang="ko">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 4.2.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>[Coinnews] DECP와 자금의 익명성 - 제플코 제이의 블록체인</title>
+
+
+    <meta name="description" content="안녕하세요, @jayplayco입니다.  중국에서 현금거래에 대한 사전 신고제 도입과 함께 1천7백만원이상의 현금 입출금시사전 신고, 출처 및 용도 사용에 대한 보고를 하도록 하는 규제 방안을 마련한다고 합니다. 일부는 이를 DECP도입을 위한 사전 준비 운동이라는 견해도 있지만, 우선 중국 당국 자체는 이를 부인하고 있습니다. 이때 생각해봐야할것은 우리가">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[Coinnews] DECP와 자금의 익명성">
+<meta property="og:url" content="http://jayplayco.github.io/2020/07/03/jayplayco.coinnews-decp/index.html">
+<meta property="og:site_name" content="제플코 제이의 블록체인">
+<meta property="og:description" content="안녕하세요, @jayplayco입니다.  중국에서 현금거래에 대한 사전 신고제 도입과 함께 1천7백만원이상의 현금 입출금시사전 신고, 출처 및 용도 사용에 대한 보고를 하도록 하는 규제 방안을 마련한다고 합니다. 일부는 이를 DECP도입을 위한 사전 준비 운동이라는 견해도 있지만, 우선 중국 당국 자체는 이를 부인하고 있습니다. 이때 생각해봐야할것은 우리가">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="http://jayplayco.github.io/images/og_image.png">
+<meta property="article:published_time" content="2020-07-02T18:42:06.000Z">
+<meta property="article:modified_time" content="2020-07-07T05:41:06.282Z">
+<meta property="article:author" content="Jayplayco">
+<meta property="article:tag" content="미지정">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://jayplayco.github.io/images/og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/logo.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+<style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+    
+    
+    
+    
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159211538-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-159211538-1');
+</script>
+
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="[Coinnews] DECP와 자금의 익명성" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item"
+                href="/">Home</a>
+                
+                <a class="navbar-item"
+                href="/archives">Archives</a>
+                
+                <a class="navbar-item"
+                href="/categories">Categories</a>
+                
+                <a class="navbar-item"
+                href="/tags">Tags</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    <a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                <a class="navbar-item is-hidden-tablet catalogue" title="카탈로그" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
+                
+                <a class="navbar-item search" title="검색" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-07-02T18:42:06.000Z">2020-07-03</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    10분 읽기 (대략 1552 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                [Coinnews] DECP와 자금의 익명성
+            
+        </h1>
+        <div class="content">
+            <p>안녕하세요, @jayplayco입니다.</p>
+<p><img src="https://cdn.steemitimages.com/DQmZaytfUV3DuFThsPe9anKUeAiN6M4xYPaYSbSm2BZPTDG/image.png" alt="image.png"></p>
+<p>중국에서 현금거래에 대한 사전 신고제 도입과 함께 1천7백만원이상의 현금 입출금시사전 신고, 출처 및 용도 사용에 대한 보고를 하도록 하는 규제 방안을 마련한다고 합니다. 일부는 이를 DECP도입을 위한 사전 준비 운동이라는 견해도 있지만, 우선 중국 당국 자체는 이를 부인하고 있습니다.</p>
+<p>이때 생각해봐야할것은 우리가 흔히 알고 있는 DECP가 가지고올 장점과 단점들입니다.</p>
+<p>우선 장점으로는 현금을 들고 다닐 필요 없이, 댑을 통한 비접촉 결제를 비롯해 자금에 대한 이동 자체가 쉬워진다는 것입니다. </p>
+<p>하지만 반대로 지금도 블록체인의 암호화폐를 쓰고 있는 분들이라면 아시겠지만, 익명성 보장이라는 암호화폐가 사실상은 현금화가 되는 시점에서는 익명성 보장이 풀린다는 것을 인지를 하실 겁니다.</p>
+<p>또한, 블록체인이라는 모든 거래 내역이 저장및 추적이 된다는 장점이자 익명성을 위해서는 단점으로 작용한다는 부분이 있기 때문에 실제로 국가가 컨트롤하는 DECP의 경우는 원했을 경우 1원 단위로 AI와 빅데이터를 이용해서 추적을 할 수 있다는 것입니다.</p>
+<h2 id="1-현금의-장점과-국가적-의미의-단점"><a href="#1-현금의-장점과-국가적-의미의-단점" class="headerlink" title="1. 현금의 장점과 국가적 의미의 단점"></a>1. 현금의 장점과 국가적 의미의 단점</h2><p><img src="https://cdn.steemitimages.com/DQmSnxDSfHPjumP4cZn1hnXKQQ9F5tXUSXJGLxkCiq8JYEG/image.png" alt="image.png"></p>
+<p>실제로 인쇄를 해서 찍어서 유통시키는 화폐의 경우는 물론 화폐마다 시리얼넘버가 있기는 하지만,이 시리얼 넘버의 의미 자체는 변/위조를 위한 방지일 뿐이지 추적을 위한 용도로는 DB 부재로 잘 쓰이지는 않는다. 특정 범죄 추적을 위해서 가끔 이용되기는 하나, 일반적인 화폐의 시리얼 넘버로 자금 흐름의 추적은 거의 불가능하다고 보면 됩니다.</p>
+<p>그렇기 때문에 지하경제에서는 Cash, 적 현금으로 거래되는 양이 절대적으로 많으며, 이 현금을 다시 일반 금융 흐름에 편입시키기 위한 자금 세탁이라는 과정이 있는것이다. </p>
+<p><img src="https://cdn.steemitimages.com/DQmSAoyrd5c6jqTF5CNYoAqamj8GmuiWRMQtQKTsFhqf3MZ/image.png" alt="image.png"><br><a href="https://www.donga.com/news/article/all/20180212/88645042/1">소스</a></p>
+<p>카드 거래 규모가 전세계적으로 가장 높은 우리나라임에도 지하 경제 규모는 2015년도 기준으로 GDP 대비 여전히 20% 정도였습니다. 물론 이것도 짧은 시간내에 많이 줄인 상황이며, 카드 사용으로 인해 현 시점에 다시 측정을 한다면 더욱 많이 감소되었을 것입니다.</p>
+<p>이만큼 국가차원에서는 자금 추적이용이할 수록 지하 경제를 축소시키는 장점을 가지게 됩니다. </p>
+<p>하지만 반대로 자금의 익명성을 원하는 소비자나 단체, 프로젝트등의 경우는 그만큼 “비자금” 이라는 것을 만들기 어려워지는 것도 사실입니다.</p>
+<h2 id="2-DECP-도입과-익명성"><a href="#2-DECP-도입과-익명성" class="headerlink" title="2. DECP 도입과 익명성"></a>2. DECP 도입과 익명성</h2><p>DECP의 도입과 함께 적어도 DECP와 함께 결제가 된 부분은 익명성 부분은 정부가 원할 경우 언제라도 걷어갈 수 있게 되는 것으로 판단됩니다. DECP가 탑재된 지갑이던 트랜스액션이던 결국은 프라이빗 체인상에서 움직이게 될 것이며, 그에 대한 실질적 접근 권한은 국가 단위, 기관단위 정도만 있을것이기 때문입니다. (노드 운영) </p>
+<p>세금에 대한 투명성, 거래를 통해 만들어지는 자금에 대한 투명성및 해외로 반출될 수 있을 가능성의 컨트롤 역시 가능해집니다. 그렇다면 익명성이 전혀 만들어질 수 없는 것인가? 그렇지는 않다.</p>
+<p>현재도 이미 금융세상은 투명하지만은 않기 때문입니다. 멀티 법인 설립및 잉여투자와 회수등을 통해서 자금의 세탁과정을 거치고 출처에 대한 정당성을 부여하는 것은 현금이던, 자산이던 가능하기 때문입니다. 접근 방식과 방법의 차이일 뿐입니다. 다만, 모든 것이 컨트롤되고 중앙화되었는 DECP도입으로 어려워질 뿐 불가능해지는 것은 아니기 때문입니다.</p>
+<h2 id="3-개인적인-생각"><a href="#3-개인적인-생각" class="headerlink" title="3. 개인적인 생각"></a>3. 개인적인 생각</h2><p>한국의 경우는 신용카드 보급이 상당히 앞서있어서 사실상 DECP에대한 필요성 자체가 다른 나라에 비해서 적은것이 사실입니다. 하지만 중국의 경우는 신용카드 보급률이 낮아 그만큼 QR코드에 의한 비접촉 결제가 빠르게 전파가 되었고, 중국 당국의 중앙화된 드라이빙으로 DECP도 어느나라보다 빠르게 정착을 시킬 것으로 보입니다.</p>
+<p>일반인들에게는 긍정적인 효과가 많은 부분도 있지만, 투명성이 가져다주는 익명성 보장의 자유에 대한 침해도 있을 수 있다는 견해가 있어서, 이에 대한 인지도 필요할 것으로 보입니다.</p>
+<ul>
+<li>기사: <a href="https://www.decenter.kr/NewsView/1Z55B0AO1G/GZ01">https://www.decenter.kr/NewsView/1Z55B0AO1G/GZ01</a></li>
+<li>기사: <a href="https://www.donga.com/news/article/all/20180212/88645042/1">https://www.donga.com/news/article/all/20180212/88645042/1</a></li>
+</ul>
+<hr>
+<p><strong>암호화폐 관련 뉴스들 빨리 받아보고 싶은신 분들은 팔로우 부탁드립니다~ 꼭~. ^^</strong> </p>
+<ul>
+<li><a href="www.binance.com/en/register?ref=OPU3FXVA">바이낸스 가입하고 수수료 20% 할인받기</a> / <a href="https://bit.ly/3aPFbzE">바이낸스 앱 다운로드</a> / <a href="https://bit.ly/3fYMNTp">바낸에서 코인 가격 확인하기</a></li>
+<li><a href="https://platinum.crypto.com/r/jayplayco">크립토닷컴 앱 레퍼럴 가입하고 50USD치 MCO 받기</a></li>
+</ul>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/" rel="tag">미지정</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">Like this article? Support the author with</h3>
+        <div class="buttons is-centered">
+            
+        </div>
+    </div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/07/03/jayplayco.steemit-3r/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">[Steemit] 스팀잇의 3R 전략</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/07/03/jayplayco.5okz8l-coinnews/">
+                <span class="level-item">[Coinnews] 엘런머스크와 이더리움은 관계가 없다</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered" style="flex-shrink: 1">
+                <div>
+                    
+                    <figure class="image is-128x128 has-mb-6">
+                        <img class="" src="/images/avatar.png" alt="Jayplacyo">
+                    </figure>
+                    
+                    <p class="is-size-4 is-block">
+                        Jayplacyo
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        Blockchain Blogger
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>South Korea</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        포스트
+                    </p>
+                    <a href="/archives">
+                        <p class="title has-text-weight-normal">
+                            895
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        카테고리
+                    </p>
+                    <a href="/categories">
+                        <p class="title has-text-weight-normal">
+                            19
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        태그
+                    </p>
+                    <a href="/tags">
+                        <p class="title has-text-weight-normal">
+                            16
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://steemit.com/@jayplayco" target="_blank" rel="noopener">
+                팔로우</a>
+        </div>
+        
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" rel="noopener"
+                title="Github" href="https://github.com/jayplayco">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" rel="noopener"
+                title="Twitter" href="https://twitter.com/jayplayco">
+                
+                <i class="fab fa-twitter"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+
+    <div class="card widget" id="toc">
+        <div class="card-content">
+            <div class="menu">
+                <h3 class="menu-label">
+                    카탈로그
+                </h3>
+                <ul class="menu-list"><li>
+        <a class="is-flex" href="#1-현금의-장점과-국가적-의미의-단점">
+        <span class="has-mr-6">1</span>
+        <span>1. 현금의 장점과 국가적 의미의 단점</span>
+        </a></li><li>
+        <a class="is-flex" href="#2-DECP-도입과-익명성">
+        <span class="has-mr-6">2</span>
+        <span>2. DECP 도입과 익명성</span>
+        </a></li><li>
+        <a class="is-flex" href="#3-개인적인-생각">
+        <span class="has-mr-6">3</span>
+        <span>3. 개인적인 생각</span>
+        </a></li></ul>
+            </div>
+        </div>
+    </div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            링크
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="https://steemit.com/@jayplayco" target="_blank" rel="noopener">
+                    <span class="level-left">
+                        <span class="level-item">Steem Blog</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">steemit.com</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                카테고리
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/coinnews/">
+            <span class="level-start">
+                <span class="level-item">coinnews</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">13</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/hexo/">
+            <span class="level-start">
+                <span class="level-item">hexo</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/steem/">
+            <span class="level-start">
+                <span class="level-item">steem</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">180</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/%EA%B0%80%EC%83%81%ED%99%94%ED%8F%90/">
+            <span class="level-start">
+                <span class="level-item">가상화폐</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">13</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/%EA%B0%9C%EB%B0%9C/">
+            <span class="level-start">
+                <span class="level-item">개발</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">31</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/%EA%B2%8C%EC%9E%84/">
+            <span class="level-start">
+                <span class="level-item">게임</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">62</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/%EA%B2%8C%EC%9E%84/%EC%8A%A4%ED%94%8C%EB%A6%B0%ED%84%B0%EB%9E%9C%EC%A6%88/">
+            <span class="level-start">
+                <span class="level-item">스플린터랜즈</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">55</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/%EA%B8%B0%ED%83%80/">
+            <span class="level-start">
+                <span class="level-item">기타</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">262</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/%EA%B8%B0%ED%83%80/%EA%B0%80%EC%83%81%ED%99%94%ED%8F%90/">
+            <span class="level-start">
+                <span class="level-item">가상화폐</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">
+            <span class="level-start">
+                <span class="level-item">미분류</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">255</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/%EA%B8%B0%ED%83%80/%ED%85%8C%EC%8A%A4%ED%8A%B8/">
+            <span class="level-start">
+                <span class="level-item">테스트</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">4</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/%EB%8B%88%ED%8A%B8%EB%A1%9C%EC%8A%A4/">
+            <span class="level-start">
+                <span class="level-item">니트로스</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">15</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/%EB%8B%88%ED%8A%B8%EB%A1%9C%EC%8A%A4/AAA/">
+            <span class="level-start">
+                <span class="level-item">AAA</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">5</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/%EB%8B%88%ED%8A%B8%EB%A1%9C%EC%8A%A4/SCT/">
+            <span class="level-start">
+                <span class="level-item">SCT</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">7</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/%EB%8B%88%ED%8A%B8%EB%A1%9C%EC%8A%A4/ZZAN/">
+            <span class="level-start">
+                <span class="level-item">ZZAN</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/%EB%A6%AC%EB%B7%B0/">
+            <span class="level-start">
+                <span class="level-item">리뷰</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">12</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">
+            <span class="level-start">
+                <span class="level-item">미분류</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">297</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/%EC%9D%B4%EB%B2%A4%ED%8A%B8/">
+            <span class="level-start">
+                <span class="level-item">이벤트</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">9</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/%EC%9D%B4%EB%B2%A4%ED%8A%B8/%EC%A7%80%EB%82%9C-%EC%9D%B4%EB%B2%A4%ED%8A%B8/">
+            <span class="level-start">
+                <span class="level-item">지난 이벤트</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">9</span>
+            </span>
+        </a></li></ul></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            태그 클라우드
+        </h3>
+        <a href="/tags/AAA/" style="font-size: 12.31px;">AAA</a> <a href="/tags/SCT/" style="font-size: 13.08px;">SCT</a> <a href="/tags/ZZAN/" style="font-size: 10.77px;">ZZAN</a> <a href="/tags/coinnews/" style="font-size: 13.85px;">coinnews</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/splinterlands/" style="font-size: 17.69px;">splinterlands</a> <a href="/tags/steem/" style="font-size: 19.23px;">steem</a> <a href="/tags/%EA%B0%80%EC%83%81%ED%99%94%ED%8F%90/" style="font-size: 16.15px;">가상화폐</a> <a href="/tags/%EA%B0%9C%EB%B0%9C/" style="font-size: 16.92px;">개발</a> <a href="/tags/%EA%B2%8C%EC%9E%84/" style="font-size: 18.46px;">게임</a> <a href="/tags/%EB%A6%AC%EB%B7%B0/" style="font-size: 15.38px;">리뷰</a> <a href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/" style="font-size: 20px;">미지정</a> <a href="/tags/%EC%8A%A4%EB%9E%9C/" style="font-size: 17.69px;">스랜</a> <a href="/tags/%EC%8A%A4%EB%AA%AC/" style="font-size: 17.69px;">스몬</a> <a href="/tags/%EC%9D%B4%EB%B2%A4%ED%8A%B8/" style="font-size: 14.62px;">이벤트</a> <a href="/tags/%ED%85%8C%EC%8A%A4%ED%8A%B8/" style="font-size: 11.54px;">테스트</a>
+    </div>
+</div>
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+            <div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            최근 글
+        </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-06T20:02:39.000Z">2020-07-07</time></div>
+                    <a href="/2020/07/07/jayplayco.diarygame-2020-7-7/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Diarygame] 2020년 7월 7일 - 다이어리게임 재미있는 통계들</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-06T19:14:33.000Z">2020-07-07</time></div>
+                    <a href="/2020/07/07/jayplayco.51vq5w-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 바이낸스 관련된 몇가지 사실들</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-06T18:00:15.000Z">2020-07-07</time></div>
+                    <a href="/2020/07/07/jayplayco.6jmjuc-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 텔레그램을 통한 사기수법</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-05T22:11:51.000Z">2020-07-06</time></div>
+                    <a href="/2020/07/06/jayplayco.5q4qk7-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 크립토 월세의 개념</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-05T20:56:00.000Z">2020-07-06</time></div>
+                    <a href="/2020/07/06/jayplayco.2wkdgf-steemit/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Steemit] 코인마켓캡의 스팀잇 연재 시작</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            아카이브
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/07/">
+                <span class="level-start">
+                    <span class="level-item">7월 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">19</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/06/">
+                <span class="level-start">
+                    <span class="level-item">6월 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">152</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/05/">
+                <span class="level-start">
+                    <span class="level-item">5월 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">27</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/04/">
+                <span class="level-start">
+                    <span class="level-item">4월 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">46</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/03/">
+                <span class="level-start">
+                    <span class="level-item">3월 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">64</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/02/">
+                <span class="level-start">
+                    <span class="level-item">2월 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">53</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/01/">
+                <span class="level-start">
+                    <span class="level-item">1월 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">14</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/12/">
+                <span class="level-start">
+                    <span class="level-item">12월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">16</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/11/">
+                <span class="level-start">
+                    <span class="level-item">11월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">30</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/10/">
+                <span class="level-start">
+                    <span class="level-item">10월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">45</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/09/">
+                <span class="level-start">
+                    <span class="level-item">9월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">31</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/08/">
+                <span class="level-start">
+                    <span class="level-item">8월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">44</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/07/">
+                <span class="level-start">
+                    <span class="level-item">7월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">39</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">6월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">40</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">5월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">35</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/04/">
+                <span class="level-start">
+                    <span class="level-item">4월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">31</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/03/">
+                <span class="level-start">
+                    <span class="level-item">3월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">16</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/02/">
+                <span class="level-start">
+                    <span class="level-item">2월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">16</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/01/">
+                <span class="level-start">
+                    <span class="level-item">1월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">18</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/12/">
+                <span class="level-start">
+                    <span class="level-item">12월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">24</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/11/">
+                <span class="level-start">
+                    <span class="level-item">11월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">14</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/10/">
+                <span class="level-start">
+                    <span class="level-item">10월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">16</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/09/">
+                <span class="level-start">
+                    <span class="level-item">9월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">27</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/08/">
+                <span class="level-start">
+                    <span class="level-item">8월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">15</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/07/">
+                <span class="level-start">
+                    <span class="level-item">7월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">12</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/06/">
+                <span class="level-start">
+                    <span class="level-item">6월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">23</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/05/">
+                <span class="level-start">
+                    <span class="level-item">5월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">28</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                태그
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/AAA/">
+                        <span class="tag">AAA</span>
+                        <span class="tag is-grey">5</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/SCT/">
+                        <span class="tag">SCT</span>
+                        <span class="tag is-grey">7</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/ZZAN/">
+                        <span class="tag">ZZAN</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/coinnews/">
+                        <span class="tag">coinnews</span>
+                        <span class="tag is-grey">8</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/hexo/">
+                        <span class="tag">hexo</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/splinterlands/">
+                        <span class="tag">splinterlands</span>
+                        <span class="tag is-grey">55</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/steem/">
+                        <span class="tag">steem</span>
+                        <span class="tag is-grey">180</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%EA%B0%80%EC%83%81%ED%99%94%ED%8F%90/">
+                        <span class="tag">가상화폐</span>
+                        <span class="tag is-grey">16</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%EA%B0%9C%EB%B0%9C/">
+                        <span class="tag">개발</span>
+                        <span class="tag is-grey">31</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%EA%B2%8C%EC%9E%84/">
+                        <span class="tag">게임</span>
+                        <span class="tag is-grey">62</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%EB%A6%AC%EB%B7%B0/">
+                        <span class="tag">리뷰</span>
+                        <span class="tag is-grey">12</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/">
+                        <span class="tag">미지정</span>
+                        <span class="tag is-grey">557</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%EC%8A%A4%EB%9E%9C/">
+                        <span class="tag">스랜</span>
+                        <span class="tag is-grey">55</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%EC%8A%A4%EB%AA%AC/">
+                        <span class="tag">스몬</span>
+                        <span class="tag is-grey">55</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%EC%9D%B4%EB%B2%A4%ED%8A%B8/">
+                        <span class="tag">이벤트</span>
+                        <span class="tag is-grey">9</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%ED%85%8C%EC%8A%A4%ED%8A%B8/">
+                        <span class="tag">테스트</span>
+                        <span class="tag is-grey">4</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
+    
+        <div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            최근 글
+        </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-06T20:02:39.000Z">2020-07-07</time></div>
+                    <a href="/2020/07/07/jayplayco.diarygame-2020-7-7/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Diarygame] 2020년 7월 7일 - 다이어리게임 재미있는 통계들</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-06T19:14:33.000Z">2020-07-07</time></div>
+                    <a href="/2020/07/07/jayplayco.51vq5w-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 바이낸스 관련된 몇가지 사실들</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-06T18:00:15.000Z">2020-07-07</time></div>
+                    <a href="/2020/07/07/jayplayco.6jmjuc-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 텔레그램을 통한 사기수법</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-05T22:11:51.000Z">2020-07-06</time></div>
+                    <a href="/2020/07/06/jayplayco.5q4qk7-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 크립토 월세의 개념</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-05T20:56:00.000Z">2020-07-06</time></div>
+                    <a href="/2020/07/06/jayplayco.2wkdgf-steemit/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Steemit] 코인마켓캡의 스팀잇 연재 시작</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            아카이브
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/07/">
+                <span class="level-start">
+                    <span class="level-item">7월 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">19</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/06/">
+                <span class="level-start">
+                    <span class="level-item">6월 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">152</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/05/">
+                <span class="level-start">
+                    <span class="level-item">5월 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">27</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/04/">
+                <span class="level-start">
+                    <span class="level-item">4월 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">46</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/03/">
+                <span class="level-start">
+                    <span class="level-item">3월 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">64</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/02/">
+                <span class="level-start">
+                    <span class="level-item">2월 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">53</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/01/">
+                <span class="level-start">
+                    <span class="level-item">1월 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">14</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/12/">
+                <span class="level-start">
+                    <span class="level-item">12월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">16</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/11/">
+                <span class="level-start">
+                    <span class="level-item">11월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">30</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/10/">
+                <span class="level-start">
+                    <span class="level-item">10월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">45</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/09/">
+                <span class="level-start">
+                    <span class="level-item">9월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">31</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/08/">
+                <span class="level-start">
+                    <span class="level-item">8월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">44</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/07/">
+                <span class="level-start">
+                    <span class="level-item">7월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">39</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">6월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">40</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">5월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">35</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/04/">
+                <span class="level-start">
+                    <span class="level-item">4월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">31</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/03/">
+                <span class="level-start">
+                    <span class="level-item">3월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">16</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/02/">
+                <span class="level-start">
+                    <span class="level-item">2월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">16</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/01/">
+                <span class="level-start">
+                    <span class="level-item">1월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">18</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/12/">
+                <span class="level-start">
+                    <span class="level-item">12월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">24</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/11/">
+                <span class="level-start">
+                    <span class="level-item">11월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">14</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/10/">
+                <span class="level-start">
+                    <span class="level-item">10월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">16</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/09/">
+                <span class="level-start">
+                    <span class="level-item">9월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">27</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/08/">
+                <span class="level-start">
+                    <span class="level-item">8월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">15</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/07/">
+                <span class="level-start">
+                    <span class="level-item">7월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">12</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/06/">
+                <span class="level-start">
+                    <span class="level-item">6월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">23</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/05/">
+                <span class="level-start">
+                    <span class="level-item">5월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">28</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                태그
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/AAA/">
+                        <span class="tag">AAA</span>
+                        <span class="tag is-grey">5</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/SCT/">
+                        <span class="tag">SCT</span>
+                        <span class="tag is-grey">7</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/ZZAN/">
+                        <span class="tag">ZZAN</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/coinnews/">
+                        <span class="tag">coinnews</span>
+                        <span class="tag is-grey">8</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/hexo/">
+                        <span class="tag">hexo</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/splinterlands/">
+                        <span class="tag">splinterlands</span>
+                        <span class="tag is-grey">55</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/steem/">
+                        <span class="tag">steem</span>
+                        <span class="tag is-grey">180</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%EA%B0%80%EC%83%81%ED%99%94%ED%8F%90/">
+                        <span class="tag">가상화폐</span>
+                        <span class="tag is-grey">16</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%EA%B0%9C%EB%B0%9C/">
+                        <span class="tag">개발</span>
+                        <span class="tag is-grey">31</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%EA%B2%8C%EC%9E%84/">
+                        <span class="tag">게임</span>
+                        <span class="tag is-grey">62</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%EB%A6%AC%EB%B7%B0/">
+                        <span class="tag">리뷰</span>
+                        <span class="tag is-grey">12</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/">
+                        <span class="tag">미지정</span>
+                        <span class="tag is-grey">557</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%EC%8A%A4%EB%9E%9C/">
+                        <span class="tag">스랜</span>
+                        <span class="tag is-grey">55</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%EC%8A%A4%EB%AA%AC/">
+                        <span class="tag">스몬</span>
+                        <span class="tag is-grey">55</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%EC%9D%B4%EB%B2%A4%ED%8A%B8/">
+                        <span class="tag">이벤트</span>
+                        <span class="tag is-grey">9</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%ED%85%8C%EC%8A%A4%ED%8A%B8/">
+                        <span class="tag">테스트</span>
+                        <span class="tag is-grey">4</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="[Coinnews] DECP와 자금의 익명성" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 jayplayco&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("ko");</script>
+
+
+<script>
+var IcarusThemeSettings = {
+    site: {
+        url: 'http://jayplayco.github.io',
+        external_link: {"enable":true,"exclude":[]}
+    },
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'unfolded'
+        }
+    }
+};
+</script>
+
+<script data-ad-client="ca-pub-9412782798997990" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+
+
+<script src="/js/animation.js"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+<script src="/js/gallery.js" defer></script>
+
+
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="입력 하세요..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '포스트',
+                PAGES: '페이지',
+                CATEGORIES: '카테고리',
+                TAGS: '태그',
+                UNTITLED: '(제목없음)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
