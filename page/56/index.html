@@ -138,7 +138,77 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-07-23T13:58:09.000Z">2019-07-23</time>
+                <time class="level-item has-text-grey" datetime="2019-08-15T14:12:30.000Z">2019-08-15</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B0%9C%EB%B0%9C/">개발</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    9분 읽기 (대략 1373 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/15/jayplayco.rc/">[스팀엔진] RC 계정 클레임, 계정 생성과 광고</a>
+            
+        </h1>
+        <div class="content">
+            <center>https://steemitimages.com/640x0/https://cdn.steemitimages.com/DQmfCQ3NwsBbB9nNGM9vVGgaiDYpWAefPr6D1LkaeWbpYr8/image.png</center>
+
+<p>안녕하세요, @jayplayco 입니다. 어그로드가 미국 시간 늦은 밤에 스팀엔진 관련 계획들을 공개했습니다. 이는 여러가지 주제를 다루고 있습니다만, 그중 계정 토큰 생성, 계정 생성과 광고에 대한 내용입니다. 간단하게 요약 들어갑니다.</p>
+<ul>
+<li>원본글: <a href="https://steemit.com/steem-eng/@aggroed/tribes-notice-account-claim-account-creation-and-ads">https://steemit.com/steem-eng/@aggroed/tribes-notice-account-claim-account-creation-and-ads</a><h2 id="1-RC-계정-토큰-생성"><a href="#1-RC-계정-토큰-생성" class="headerlink" title="1. RC 계정 토큰 생성"></a>1. RC 계정 토큰 생성</h2>현재 스파가 약 5천 정도 있을 경우 하루에 1개 정도의 RC 계정 생성 토큰을 만들 수 있습니다. 스파가 많으면 많을 수록 하루에 생성할 수 있는 수량은 많아지고요. RC는 물론 시간이 지나면서 다시 차는 관계로 응용을 스파를 많이 갖고 있을때 잘 하면 계정생성권을 비교적 많이 생성해둘 수 있습니다.</li>
+</ul>
+<p>실제로 기존의 스팀 기반 서비스인 스팀헌트, 트립스팀과 같은 곳들은 이미 이런 방식으로 자동으로 생성을 하면서 계정 생성을 하고 있으며, 트리플A의 경우도 @virus707계정과 @triplea.bot 계정에서는 지속적으로 RC 관리를 하면서 계정 생성을 하고 있는 상황입니다. </p>
+<p>스팀엔진에서 현재 이러한 서비스를 250ENG로 제공을 하고자 합니다. 만약 스캇봇을 쓰는 메인 계정일 경우에는 ENG 지불과 허락만 있으면 되고, 타 계정일 경우는 액티브키나 액티브 authority를 제공해줘야 합니다.</p>
+<p>사실 조금더 흥미로운 것은 계정 생성입니다. 계정 생성은 Frontend 개발이 없을 경우 수동 생성이 되는데, 스팀엔진 측에서 이를 해결하기 위해 작업을 할 것으로 보입니다. 최종적인 목적은 해당 프로젝트의 토큰을 이용해서 계정을 생성할 수 있도록 하고, 가능하면 해당 토큰은 소각을 하는 방향으로 세팅을 하고자 한다고 합니다.</p>
+<p>이 계정 생성 부분은 추가로 개발이 필요한 관계로 어그로드가 예상하기로는 몇주 정도의 개발기간이 필요할 것이라고 본다고 합니다. </p>
+<h2 id="2-광고"><a href="#2-광고" class="headerlink" title="2. 광고"></a>2. 광고</h2><p>현재 스코판이 이미 광고를 도입했고, 스팀잇도 광고를 도입해서 운영중에 있습니다. 스팀엔진 자체적으로도 광고 세팅을 통한 도입을 계속 검토하고 있었는데, 이번에 좀더 구체적인 그림이 나왔습니다.</p>
+<p>간단하게는 다음과 같습니다.</p>
+<ul>
+<li>시작은 구글 애드가 아니라 자체 광고를 띄움. 시작은 스몬광고로 하고 1불/cpm 으로 세팅함.</li>
+<li>추후 구글 애드도 붙일 예정</li>
+<li>광고비의 15%는 스팀엔진이 수수료로 받아감.</li>
+<li>광고비로 들어오는 수익은 스팀엔진에서 알아서 해당 프로젝트의 토큰으로 전환후 소각</li>
+<li>최소 수익선을 만들어서 진행 (예를 들어 광고비 100불 정도 모였을때)</li>
+</ul>
+<p>이는 보통 어그로드가 주장하고 있는 코인 이코노미의 설계상 sinking 모델을 외부 자금 유입을 통해 진행하겠다는 뜻입니다. </p>
+<p>광고는 이미 시작을 8월 이내로 예정하고 있으며 nitrous를 세팅하기 위해 이것 역시 비용을 요구할 예정이나, 아직 정확한 비용 산정은 안되었습니다. </p>
+<h2 id="3-개인적인-생각"><a href="#3-개인적인-생각" class="headerlink" title="3. 개인적인 생각"></a>3. 개인적인 생각</h2><p>계정 생성의 경우는 프로젝트 내에서 개발리소스가 안되어 직접 RC로 계정생성이 안될 경우 충분히 250ENG로 신청해볼만한 건입니다. 1회성 비용인 관계로, 지속적으로 봇이 돌아가야 하는 것을 감안하면 스파가 충분할 경우 매력적입니다. 어차피 나이트로스나 프로모터 봇의 경우는 액티브 권한이 넘어가 있는 상태이기 때문입니다.</p>
+<p>더 중요한 것은 계정생성을 자체 토큰 판매를 통해 가능하게 하는 frontend 개발이 된다는 것이고, 이를 통해 추가적으로 자체 토큰 소각이 가능하다는 점입니다. </p>
+<p>다만, 여기서 잠깐 고민을 해야하는 것은 안그래도 어려운 스팀 가입인데, 자체 토큰 구매를 통해 계정 생성을 할 경우는 결국 이것도 이미 스팀에 가입되어 있는 제 3자의 도움을 받거나, 토큰을 지불하고 가입을 못하거나 한다는 논리적인 모순이 있다는 것에 있습니다.</p>
+<p>광고의 경우는 초기 시작을 위해 스팀몬스터에서 광고주로 나서서 광고를 하고 각 트라이브에 뿌리는 전략으로 시작했다는 것과, 실제로 추후 구글 애드까지 붙으면 여기서 스팀엔진에게는 어느정도의 BM을 제공해주고, 각 프로젝트들은 따로 개발이나 관리 없이 광고를 붙이고 토큰 소각을 통한 가치 부양도 되는 좋은 방식으로 판단이 됩니다.</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-14T15:24:33.000Z">2019-08-15</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
@@ -148,7 +218,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    13분 읽기 (대략 1877 단어)
+                    8분 읽기 (대략 1214 단어)
                 </span>
                 
                 
@@ -157,55 +227,201 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/07/23/jayplayco.coinnews-2-50/">[Coinnews] 독일의 금융감독원 총 2백 50십만 유로의 부동산 채권성 암호화폐 출시 허가</a>
+                <a class="has-link-black-ter" href="/2019/08/15/jayplayco.coinnews-irs/">[Coinnews] 미국 IRS의 움직임을 통해 보는 우리의 세금 미래</a>
             
         </h1>
         <div class="content">
-            <center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/zVPeH7D9-image.png)</center>
+            <center>![](https://cdn.steemitimages.com/DQmPxRQVLJTU2VvqFFRKFsT1EPQyYr8ce2BeNUaBuj3xtJ6/image.png)</center>
 
+<p>안녕하세요, @jayplayco입니다.</p>
+<p>대한민국의 경우는 아직 암호화폐에 대한 자산 인정이 되지 않아 예를 들어 법인에서 암호화폐를 소유하더라도 자산으로 잡지를 못하고, 개인의 경우도 암호화폐 거래에 따른 이익이 있더라도 사실상 아직까지는 거래차이익에 대한 세금 징수, 즉 양도소득세도 아직 이루어지지 않고 있습니다. 이를 위해서는 법 개정이 필요할 것으로 보입니다.</p>
+<p>깊숙하게 비틀어 들어간다면 암호화폐를 재화로 볼지 화폐로 볼지도 중요한 요소가 됩니다. 세금의 종류에는 여러가지가 있으니까요. 화폐로 봤을때는 부가가치세를 매길 수 없을 것이고, 재화로 봤을때는 가능합니다. 이는 또한 암호화폐라고 퉁 쳐서 볼 수 있는 것도 아닌 관계로 암호화폐 성격에 따라 나뉠 수 도 있을것으로 여겨집니다. </p>
+<p>내년 6월달부터 시작될 FATF의 권고안에 따라 AML와 KYC가 강화된 암호화폐 거래를 통한 제도권 편입을 기대할 수 있습니다만, 이때 한국에서도 법 개정을 통해 규제가 시작될지 지켜봐야할 것입니다. 법 개정이 될 경우 이와 같이 따라올 것은 세금이라는 부분입니다.</p>
+<h2 id="1-미국의-금융당국-행보"><a href="#1-미국의-금융당국-행보" class="headerlink" title="1. 미국의 금융당국 행보"></a>1. 미국의 금융당국 행보</h2><p>현재 우리에게 다가올 암호화폐 관련 세금의 미래 모습을 알아보기 위해서는 이미 규제를 시행하고 있는 미국과 같은 국가의 행보를 보면 된다고 생각합니다.</p>
+<p>현재 미국의 금융감독원인 IRS는 암호화폐 거래에 대한 차익에서 발생하는 세금을 징수를 하고 있으며, 이를 위해 거래소에 등록된 미국 시민권자들의 (미국에 살지 않아도 내야 합니다) 정보를 바탕으로 지속적으로 warning letter를 보내고 있는 상황입니다. </p>
+<p>지난달에 이미 3개의 암호화폐 트레이터에게 보낸 상황이며, 다음과 같은 것에 유의하면서 서류 작성을 당부했습니다.</p>
+<ul>
+<li>거래가 일어났던 정확한 일시와 실제 거래 환율 (이전에는 그냥 당일 거래의 임의 가격을 표기하도록 했음)</li>
+</ul>
+<p>이말은 실제 미국의 IRS도 이제서야 암호화폐 하루 거래중 차이가 많이 날 수 있고, 하루에도 여러번 거래시 오류가 있음을 깨달았다는 것입니다.</p>
+<p>또한 이번에 새로 보낸 warning letter의 경우는 일부 트레이더에게 보낸 편지에는 암호화폐 거래 내역을 잘못 보고한 관계로 추가 세금을 내야 한다고도 보냈습니다.</p>
+<p>여기서 봐야할 중요한 사실은 미 금융당국에서 능동적으로 암화화폐 거래를 찾아서 이에 따른 세금 징수를 위해 노력하고 있다는 것입니다.</p>
+<h2 id="2-개인적인-생각"><a href="#2-개인적인-생각" class="headerlink" title="2. 개인적인 생각"></a>2. 개인적인 생각</h2><p>암호화폐에 양도소득세와 같은 세금이 붙는것은 아마도 불가피할 것으로 보이긴 합니다. 하지만 부동산 처럼 매 거리시마다 양도소득세를 따로 내는 방안은 사실상 불가능할것으로 보이고, 그러기에는 너무 많은 거래가 일어나는 것도 사실입니다. 아마도 주식처럼 거래차익에 대한 양도소득세와 비삿한 규정으로 다가가지 않을까 싶기는 합니다. 다만, 암호화폐 성격상 해외 거래소에서도 쉽게 거래가 되는 것은 감안했을때 추후 우리가 연말 세금정산시 한꺼번에 정산을 하게 될지, 아니면 적어도 국내 거래소에서 자동으로 매 거래시 양도소득세를 자동으로 떼어서 실질적인 차익만 입금해줄지는 지켜봐야할 것 같습니다.</p>
+<ul>
+<li><a href="https://www.coindesk.com/new-irs-warning-letters-target-crypto-investors-who-misreported-trades">기사- 코인데스크: New IRS Warning Letters Target Crypto Investors Who Misreported Trades </a></li>
+<li><a href="https://www.coindeskkorea.com/cryptolaw_taxforbitcoinprofit/">기사 - 코인데스크: 비트코인으로 1억 벌었는데 세금 내야 하나요?</a></li>
+<li><a href="http://www.thebchain.co.kr/news/articleView.html?idxno=4668">기사 - 체인비: 안갯속 ‘암호화폐 세금’…국세청 기준 여전히 모호</a></li>
+<li><a href="https://www.coindesk.com/irs-warning-letters-to-crypto-traders-hint-at-whats-in-coming-guidance">기사 - 코인데스크: RS Warnings to Bitcoin Traders Offer Clues to Coming Tax Guidance</a></li>
+</ul>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-13T19:55:24.000Z">2019-08-14</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EB%8B%88%ED%8A%B8%EB%A1%9C%EC%8A%A4/">니트로스</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EB%8B%88%ED%8A%B8%EB%A1%9C%EC%8A%A4/AAA/">AAA</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3분 읽기 (대략 474 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/14/jayplayco.aaa/">[실물경제] AAA 토큰으로 옥수수 구매하기</a>
+            
+        </h1>
+        <div class="content">
+            <center>![](https://cdn.steemitimages.com/DQmVLpgNrhxvK2Kggnm63t2tvDCzkY7qKs49rBMzfgW6Vv3/image.png)
+
+<ul>
+<li>원문: <a href="https://steemit.com/busy/@rokyupjung/steem-zzan-aaa-sct">https://steemit.com/busy/@rokyupjung/steem-zzan-aaa-sct</a></li>
+</ul>
+<p>안녕하세요, @jayplayco입니다.</p>
+<p>사실 영화 리뷰와는 직접적인 연관은 없으나, 토큰이코노미상에서 AAA를 통해 최초로 실물경제에 영향을 미치는 제품을 구매해서 공유를 하고자 합니다.</p>
+<p>작일 @rokyupjung님께서 포스팅을 올리셨는데 직접 키우신 무농약 옥수수를 판매하신다는 것이였습니다.  판매는 AAA, ZZAN, SCT, STEEM으로 받으시고 원화 가격으로 기본 개당 1000원입니다. 대량 구매시  약간의 할인도 있습니다. 배송비는 4000원으로 따로 받고 계십니다.</p>
+<p>그래서 30개짜리를 주문하기 위해서 배송비 포함 총 20,812AAA를 시장에서 매수해서 @rokyupjung님께 송부해드리고 카톡 1:1 대화방에서 이름, 전화번호, 주소를 알려드리고 이번 금요일날 받기로 했습니다.</p>
+<ul>
+<li><a href="https://open.kakao.com/o/si4Rp7zb">https://open.kakao.com/o/si4Rp7zb</a></li>
+</ul>
+<p>현재 옥수수는 약 2000개 정도 중에서 이미 25%는 순삭 판매를 하셨다고 했고, 어제 오늘 판매된 수량이 추가되면 비교적 많이 판매가 완료되었을것이라고 예상되긴 합니다.</p>
+<p>[수정] 현재 50%이상 팔리고 예약분까지 하면 약 500-700개 정도 밖에 안남았다고 하네요. 서둘러 움직이셔야 할듯요 ㅎㅎ.</p>
+<p>구매 목표를 가지고 계실 경우 꼭 먼저 톡방에 재고여부를 문의하시고 구매 진행하시길 당부드립니다.</p>
+<p>하기는 실제 수확물 사진으로 추정되는 옥수수입니다. ^^<br><img src="https://cdn.steemitimages.com/DQmQXNDSDFqajespZ9FF3sd1BuZHQA9kThYGwkeSeBE5mY4/image.png" alt=""></p>
+<p>받아서 맛있게 먹겠습니다~!</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-13T16:24:30.000Z">2019-08-14</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EB%A6%AC%EB%B7%B0/">리뷰</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    16분 읽기 (대략 2412 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/14/jayplayco.jjftw/">[리뷰헌트] 마케팅 채널의 최적화</a>
+            
+        </h1>
+        <div class="content">
+            <center><a href="https://review.hunt.town/i/19"><img src="https://steemitimages.com/640x0/https://cdn.steemitimages.com/DQmPp1wwSeZfWc4BDLYi5gyJArWht9sa7DyAJump2cJaZdT/image.png"></a></center>
+
+<ul>
+<li>원본글: <a href="https://steemit.com/kr/@project7/5-or">https://steemit.com/kr/@project7/5-or</a></li>
+</ul>
 <p>안녕하세요 @jayplayco 입니다.</p>
-<p>한국에도 없는 부동산, 해외에서 소유하면 얼마나 좋을까 라는 생각을 다들 한번 해보셨나요?</p>
-<p>이번에 독일의 금융감독원에서 최종 허가가난 부동산 채권성 암호화폐가 출시가 되어 이에 대한 소식을 전달하고자 합니다.</p>
-<h2 id="1-배경"><a href="#1-배경" class="headerlink" title="1. 배경"></a>1. 배경</h2><p>독일 금융감독원과 일을해본 사람은 알지만, 이들의 조건에 맞춰서 요구사항들을 만족시기키는 것은 쉽지 않습니다. 특히 새로운 매체인 암호화폐에 대한 판매및 허가를 받기 위해서는 지난 7개월간 노력을 해서 결국 최종적으로 판매를 위한 허가를 받았다고 합니다. ERC-20 바탕의 토큰이 발행되며 개당 1유료에 판매하면서 총 250 Mil. EUR 치의 토큰을 판매하게 됩니다. 판매한 토큰은 부동산에 대한 채권성 성격을 갖고 있으나, 실질적으로 회사에 대한 주식성 성격은 갖지 못합니다.</p>
-<h2 id="2-회사"><a href="#2-회사" class="headerlink" title="2. 회사"></a>2. 회사</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/JxhGe9Ho-image.png)</center>
-회사 자체는 Ermel 형제에 의해 세워졌으며 운영되고 있습니다. CEO 격인 Thomas Ermel의 경우는 2013년부터 2017년까지 ONE Group이라는 회사를 통해 부동산 프로젝트를 위해 3백만 유로 이상의 펀딩에 성공을 했습니다. 
-<center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/uokDbLSH-image.png)
-[소스](https://www.xing.com/profile/Thomas_Ermel/cv)</center>
+<p>이번 헌트팀에서 그간 클로즈드 베타로 리뷰헌트에서 캠페인을 운영한 업체의 중간 성과를 발표했습니다. 이 숫자들이 마케팅을 운영하는 기업들에게 어떤 의미를 가지는지를 살펴보도록 하겠습니다.<br>리뷰헌트는 테크업체들의 laser targeting된 Task 기반 마케팅을 매우 효율적이고 저비용으로 진행이 가능하도록 하면서, 캠페인 비용의 대부분은 리뷰어들에게 자체 헌트 토큰으로 지급되는 방식의 Influencer 마케팅 플랫폼입니다.</p>
+<h2 id="0-배경"><a href="#0-배경" class="headerlink" title="0. 배경"></a>0. 배경</h2><center>https://steemitimages.com/640x0/https://cdn.steemitimages.com/DQmTzT2W8CSBTrvcsj1TALf31MAwsiLZqPkqQzLkrS1575K/Screenshot%202019-08-12%2015.08.33.png</center>
 
-<p>현재는 Silver Lining 유한책임회사의 대표이사로 지내고 있으며, 이 회사는 현재 토큰을 발행하는 회사의 모회사입니다.</p>
-<center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/5RC7qIqP-image.png)
-[소스: 독일 금융감독원 보고서 4.4](https://portal.mvp.bafin.de/database/VPInfo/prospekt.do?cmd=downloadProspekt&id=25958886) </center>
-
-<p>복잡하게 얽힌것으로 보이지만, 결국 연관된 모든 회사는 지분율 50:50 으로 Ernel 형제가 소유하면서 컨트롤 하고 있습니다.</p>
-<h2 id="3-토큰의-성격"><a href="#3-토큰의-성격" class="headerlink" title="3. 토큰의 성격"></a>3. 토큰의 성격</h2><p>토큰은 ERC-20의 이더베이스 토큰이 될 것이며, Fundamemt RE Germany GmbH가 소유하고 관리하면서 이익을 낼 부동산에 대한 채권성 성격을 가지게 됩니다. 토큰을 소유할 경우 지분에 따라 회사가 구매/소유/관리하는 부동산에서 나오는 이익에 대한 배분이 가능하며 Exit 시점에는 프로젝트가 가진 전체 가치에 대한 배분이 이루어집니다.</p>
-<h2 id="4-금융감독원-paper-핵심정리"><a href="#4-금융감독원-paper-핵심정리" class="headerlink" title="4. 금융감독원 paper 핵심정리"></a>4. 금융감독원 paper 핵심정리</h2><center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/O50DsqUK-image.png)</center>
-
+<p>테크업체, 즉 소프트웨어나 앱, 게임개발, 테그 제품등을 개발하는 업체의 경우는 제품의 완성도, 개발비용및 프로젝트내의 마일스톤 달성등도 중요하지만, 제품 출시 직/전후의 마케팅이 매우 중요한 역할을 한다는 것을 알고 있습니다. 물론 대기업의 자본력이 있거나, 수십억을 펀딩받아서 고민없이 인기 연예인 마케팅을 할 수 있을 정도의 저력이 있다면 어떤 대형 마케팅 에이전시에게 돈을 줘야할지, 아니면 몇몇 에이전시에 나눠서 뿌리면 리스크를 줄일지를 고민하게 될겁니다. 작일 전화받았던 한 케이블 방송의 B급 연예인이 진행하는 쇼의 제품 협찬및 소개에 따른 “출연료”로 1천마원을 요구하더군요. 해외 유튜버의 경우 niche를 차지할 경우 1만 팔로워를 바탕으로 리뷰 비디오 편당 10K USD를 요청하고, 이것도 제품이 마음에 들어서 반값 할인이라고 하더군요. 저런 가격들이 일반화되어 있지는 않기 때문에 각 Influencer나 채널과 따로 협상을 해야하는 부분이기도 합니다.</p>
+<p>이때, 중간에서 일을 따로 해주는 마케팅 에이전시가 없을 경우 각 채널별로 직접 커뮤니케이션을 해야하는 어려움이 있고, 또한 비용적으로도 내가 홍보하고자 하는 제품과 예산과 맞는지를 꼭 확인해야 합니다. 심지어 유명 Influencer의 경우는 (유튜버, Twitcher, BJ등)은 아예 자체 에이전시가 있어 본사 차원에서 그 에이전시와 직접 커뮤니케이션을 해서 조율을 해야합니다.</p>
+<h2 id="1-Reviewhunt"><a href="#1-Reviewhunt" class="headerlink" title="1. Reviewhunt"></a>1. <a href="https://review.hunt.town/i/19">Reviewhunt</a></h2><h3 id="a-기존-문제점"><a href="#a-기존-문제점" class="headerlink" title="a. 기존 문제점"></a>a. 기존 문제점</h3><ul>
+<li>Targeting된 마케팅을 하기 위해서 시간 리소스가 많이 들어간다.</li>
+<li>일반 Ad 광고는 타게킹은 되나 원하는 Action을 취할때까지 비용이 너무 높다.</li>
+<li>일반 Ad 광고로는 Influencer 마케팅이 되지 않는다.</li>
+<li>Influencer 관리에 시간 리소스가 많이 들어간다.</li>
+</ul>
+<h3 id="b-Reviewhunt의-캠페인-방식"><a href="#b-Reviewhunt의-캠페인-방식" class="headerlink" title="b. Reviewhunt의 캠페인 방식"></a>b. Reviewhunt의 캠페인 방식</h3><p>제품 설명과 더불어 리뷰헌트의 사용자들이 실행했으면 하는 Task를 일명 “퀘스트”로  나눠서 올릴 수 있고, 각 퀘스트별로 보상을 나눠서 줄 수 있습니다. 이때 퀘스트는 예를 들어,</p>
 <ul>
-<li>회사 위치: 독일 Hamburg</li>
-<li>토큰당 가격: 1유로</li>
-<li>청산시점: 2033년 12월 31일 / 최대 2043년까지 연장 가능 / 조기청산 가능 시점 2025년</li>
-<li>이자 배분: 연단위, ETHEREUM으로 지급</li>
+<li>앱 다운로드하고 설치하기</li>
+<li>웹페이지 가입하기</li>
+<li>앱이나 웹페이지 사용하기 인증</li>
+<li>앱이나 웹페이지를 이용하면서 특정 행동 패턴 유발하기 (예, 좋아요 최소 10개 받기)</li>
 </ul>
-<h2 id="5-장점-단점과-리스크"><a href="#5-장점-단점과-리스크" class="headerlink" title="5. 장점, 단점과 리스크"></a>5. 장점, 단점과 리스크</h2><p>우선 Thomas Ermel의 히스토리를 추적하면 이미 독일쪽 부동산쪽에 긴 기간동안 활동을 하면서 3백만 유로 이상을 펀딩한 이력이 있습니다. 또한 이전 회사는 EXIT를 통해 팔아서 새로운 회사를 열어서 진행하는 것으로 보입니다. 독일 금융감독원 페이퍼에는 현재 구매할 부동산에 대한 언급이 따로 없으나, 코인데스크의 기사에 따르면 <a href="https://www.coindesk.com/german-regulators-approve-280-million-ethereum-token-sale">소스</a> Hamburg에 3개, Frankfurt에 1개 와 대학 도시인 동독의 Jena에 1개의 부동산이 될것이며, 이는 주거, 상업과 호텔관련 부동산이 될 예정입니다.</p>
-<p>자체적인 판단으로는 토큰홀더에게 연간 4-8%의 이자를 줄 수 있을것으로 전망한다고 합니다.</p>
-<h3 id="a-장점"><a href="#a-장점" class="headerlink" title="a. 장점"></a>a. 장점</h3><ul>
-<li>실질적인 부동산이 패깅되어 있다</li>
-<li>암호화폐로 부동산 채권을 살 수 있다 (BTC, 이더와 더불어 유로와 USD도 받을 예정임)</li>
-<li>이자는 매년 이더리움으로 자동 지급된다.</li>
+<p>같은 것들이 있습니다.</p>
+<p>추가적으로 Review와 버즈 캠페인까지 세팅이 가능하며, 여기는 앱스토어 내의 리뷰를 요청할 수 도 있고, 리뷰헌트 사용자들이 자신의 채널에서 (유튜브, 미디엄, 스팀잇, 인스타그램, 트위터등) 제품을 소개하는 것도 요청하면서 보상할 수 있습니다. 또한 리뷰의 경우는 이전의 퀘스트를 마무리 해야지만 실행을 할 수 있도록 세팅되어 있어, 리뷰가 나오기전 기본 Task수행에 대한 보장이 되는 형태입니다.</p>
+<p>가장 좋은 것은, 마케팅 비용으로 책정한 예산의 대부분이 직접적으로 리뷰헌트에서 원하는 Task를 수행하는 사용자들에게 보상으로 주어지는 관계로, 투명하게 운영이 되고 있는 점입니다.</p>
+<p>캠페인 결제는 미화, 한화로 할 수 있으며, 필요하실 경우 암호화폐로도 결제가 가능합니다. (HUNT, STEEM, BTC, ETH)</p>
+<h3 id="c-비용-대비-효율"><a href="#c-비용-대비-효율" class="headerlink" title="c. 비용 대비 효율"></a>c. 비용 대비 효율</h3><center>https://steemitimages.com/640x0/https://cdn.steemitimages.com/DQmTETf9fZ2VYmwKYXEHsf9ve6CroCGJqwRyKpLoVaj7RZi/Screenshot%202019-08-12%2015.12.50.png</center>
+
+<p>클로즈드 베타에서 현재 캠페인을 실제로 진행중인 업체의 Data가 공개되어 분석해보겠습니다.</p>
+<ul>
+<li>사용 비용: 472.94 USD</li>
+<li>171명 앱 다운로드 /  1명당 약 4.23USD 소요 (개별 이벤트로 쳤을때)</li>
+<li>27명 플레이스토어 리뷰 남김 / 리뷰당 17.51USD 소요 (개별 이벤트로 쳤을때)</li>
+<li>39명이 유튜브등 채널에서 소개리뷰 / 리뷰당 12.12USD 소요 (개별 이벤트로 쳤을때)</li>
 </ul>
-<h3 id="b-단점"><a href="#b-단점" class="headerlink" title="b. 단점"></a>b. 단점</h3><ul>
-<li>모든 부동산 채권이 가지는 리스크를 똑같이 갖고 있다. (회사 부도, 운영실패, 부동산 가치 하락, 공시률등)</li>
-<li>부동산 가치가 뛰지 않으면 사실상 패깅된 토큰의 가치가 뛰지 않는다</li>
-<li>Security성이라 KYC와 AML(Anti money laundering)에 부합하기 위한 개인정보 필수 연동</li>
-<li>개인정보 필수 연동으로 인한 토큰의 세컨드 마켓 판매가 어려워질 수 도 있음.</li>
-<li>전적으로 Ermel형제가 만든 회사 운영을 믿어야 한다. </li>
-<li>미국 시민은 구매할 수 없음 (유럽법에만 맞췄기 때문에 미국법에는 맞추지 않았음)</li>
+<p>여기서 우선 앱다운로드 까지는 팩트 베이스의 CVR (타겟행동 전환)이 계산될 수 있지만 <a href="https://www.wordstream.com/blog/ws/2017/02/28/facebook-advertising-benchmarks">소스</a> 페북 Ad의 Data를 기본으로 보면 다음과 같습니다.</p>
+<center>![](https://cdn.steemitimages.com/DQmZ1FRkMmQ6CMiccqyS4bJifAL2EEkmv3XTCwQHTYvToDk/image.png)</center>
+
+<p>결론적으로는, 페북에서 같은 결과인 테크 분야에서 171개의 다운로드를 실행하기 위해서는 약 9400 USD정도의 광고비가 평균적으로 필요했다는 계산이 산출됩니다. 이는 앱 다운로드만으로 봤을때 페북의 광고 비용의 5%정도 밖에 되지 않습니다. 헌트팀의 <a href="https://steemit.com/kr/@project7/5-or">원본글은</a> 페북 Ads의 평균 CVR과 CTR을 응용했지만, 필자의 경우는 실제 리뷰헌트가 타겟 하고 있는 technology 분야의 값들을 이용해 조금더 현실에 가까운 계산을 했습니다. 저 표를 쉽게 설명하면,</p>
+<ul>
+<li>171명이 앱을 다운로드를 받기 위해서 171/2.31%(CVR)= 7402명이 페북에서 최소한 클릭을 해야지만 행동으로 전환된다는 것입니다.</li>
+<li>7402명이 클릭에 대한 평균 technology 분야의 비용은 1.27USD 이기 때문에, 7402*1.27USD= 약 9,400USD의 광고비용이 책정이 됩니다.</li>
 </ul>
-<h3 id="c-리스크"><a href="#c-리스크" class="headerlink" title="c. 리스크"></a>c. 리스크</h3><p>우선 금융감독의 페이퍼를 보면 Ermel형제는 펀딩만으로도 충분한 이익을 취할 수 있도록 조치를 해두었습니다. 총 2백50만 유로의 펀딩중에서 13%를 컨설팅 비용, 소프웨어 개발, 마케팅과 세일즈 비용등으로 책정을 해두었습니다. 즉, 실질적으로 부동산을 구매할 수 있는 (loss 없이 현금화가 가능할시) 금액은 2백 20만 유로라는 것입니다. 관리비로 처음부터 펀딩에서 13%를 떼고 시작합니다. </p>
-<p>추가적으로 코인데스크의 기사에서는 부동산에 대한 언급이 나오지만, 실질적으로 회사 홈페이지에서는 구매 전의 부동산인 관계로 장소나 정확한 부동산 위치등이 언급되어 있지 않습니다. 부동산의 경우는 같은 도시라도, 그 지역과 특성, 유동인구등에 따라 수익률이 천차만별인 관계로, 독일 금융감독원의 페이퍼에도 “Blind-Pool” 이라고 경고를 하고 있습니다.</p>
-<h2 id="6-개인적인-생각"><a href="#6-개인적인-생각" class="headerlink" title="6. 개인적인 생각"></a>6. 개인적인 생각</h2><p>이와 비슷한 프로젝트가 다른 회사에서 이미 진행된 이력은 있습니다. 260 Mil. USD 규모의 펀딩으로 미국에 있는 4개의 부동산을 토큰화한 프로젝트가 이번 해 3월달에 있었습니다. <a href="https://www.coindesk.com/66-million-building-to-be-tokenized-on-ethereum-blockchain-in-record-deal">소스</a> 이 Deal의 경우는 참여 최소 조건이 500K USD 였으며 최소 보유 암호화폐가 1천만 USD치 만큰 있어야 했기때문에 고래들의 놀이터였습니다.</p>
-<p>이번 독일 회사에서 진행하는 건의 경우는 고래만 참여할 수 있는 조건이 아닌, 일반 사용자가 0.01이더 규모부터 참여할 수 있는 조건이라 조금더 쉽게 접근이 가능합니다. 하지만 실질적인 부동산의 가치를 모르는 Blind Pool이라는 점에서는 4-8%의 예상 ROI를 감안했을때 차라리 국내의 P2P 단기 프로젝트 투자가 더 매력적일 수 있을 것으로 여겨집니다. </p>
-<p><a href="https://www.coindesk.com/german-regulators-approve-280-million-ethereum-token-sale">기사: Coindesk - German Regulators Approve $280 Million Ethereum Token Sale </a><br><a href="https://portal.mvp.bafin.de/database/VPInfo/prospekt.do?details=true&id=25958886&typId=40&bereich=3&cmd=zeigeProspektEmittentenSuche">소스: 독일 금융감독원 허가서(독일어)</a><br><a href="https://fundament.group/en/">소스: 판매 업체 홈페이지</a><br><a href="https://www.london-wealth.com/mr-thomas-ermel-2/">소스: Thomas Ermel 배경</a></p>
+<p>리뷰헌트는 이를 472.94USD의 비용으로 만들어냈기 때문에, 실제 페북 광고비용의 5%로 같은 효율은 낸 것입니다.</p>
+<p>여기서 CVR로는 추적도 실현도 사실상 불가능한 27개의 플레이스토어 리뷰나 39개의 채널별 리뷰의 경우까지는 직접적인 비교는 불가능하나, 실제 페북 마케팅 비용의 1% 대비로 가능할 수 있다는 시나리오가 나옵니다. </p>
+<h2 id="2-레퍼럴-Referral-제도를-통한-지속적인-Influencer와-Maker-유입"><a href="#2-레퍼럴-Referral-제도를-통한-지속적인-Influencer와-Maker-유입" class="headerlink" title="2. 레퍼럴(Referral) 제도를 통한 지속적인 Influencer와 Maker 유입"></a>2. 레퍼럴(Referral) 제도를 통한 지속적인 Influencer와 Maker 유입</h2><center><a href="https://review.hunt.town/i/19"><img src="https://steemitimages.com/640x0/https://cdn.steemitimages.com/DQmUxBkFTNnvEPCyRbwxREBi6jjA3bGmqkYuJhjqfytBdmw/image.png"></a></center>
+
+
+<p>리뷰헌트는 또한 지속적인 Influencer와 메이커 유입을 위해 상당히 매력적인 레퍼럴 제도를 도입하고 있습니다. 이는 사용자던 캠페인을 하고자하는 기업이던 소개하는 사람의 링크를 타고 가입후 리뷰헌트를 사용했을 경우 그에 따른 보상을 리뷰헌트에서 제공하는 것입니다. </p>
+<ul>
+<li>사용자가 가입할 경우: 캠페인에 참여하면서 얻는 보상의 5%를 평생 지급받습니다.</li>
+<li>기업이 가입할 경우: 캠페인을 집행할때 예산의 5%를 지급받습니다.</li>
+</ul>
+<p>보상은 USD 기준 해당 시기 HUNT 토큰으로 지급이 됩니다. </p>
+<p>사용 방법은 리뷰헌트 가입후 DASHBOARD에서 Referral 탭을 찾으면 중간에 자신만의 URL을 찾아서 복사해서 홍보하면 됩니다. </p>
+<center><a href="https://review.hunt.town/i/19"><img src="https://cdn.steemitimages.com/DQmYzQCMe94fqnk7y4WiKVZHEmYoo3yWvAM3RMwGaWh2f1h/image.png"></a></center>
+
+<p>헌터들이 받는 보상의 5%도 매력적이지만 사실상 기업 소개를 통한 레퍼럴이 실질적으로 많은 보상을 가져올 것으로 예상됩니다.</p>
+<h2 id="3-개인적인-생각"><a href="#3-개인적인-생각" class="headerlink" title="3. 개인적인 생각"></a>3. 개인적인 생각</h2><p>앱이나 웹서비스 리뷰, 블록체인 댑 업체등, 다양한 분야의 기업들이 효율대비 아웃풋을 중요시 여기는 마케팅 기법들을 찾고는 있으나, 사실상 해당 분야에서는 마땅한 대안이 없었던 것도 사실입니다. 대안이 있다고 한들, 비용 대비 효율이 너무 낮거나, 비용부분이 너무 높아서 사실상 사용이 가능한 <code>자기들만의 리그</code>의 솔류션이 경우가 많았습니다. 실제 페북 광고 효율로 계산을 해보고 필자도 해당 비용대비 효율을 보고 놀라기는 했습니다.</p>
+<p>Laser Targeting이 가능한 사용자층이 제품을 사용하면서 곧 유저가 될 수 있는 것도 Influencer 마케팅의 중요한 부분이며, 보상이 HUNT 토큰이라는 암호화폐를 통해 이루어지는 관계로 블록체인과 같은 새로운 기술에 대해서도 매우 오픈되어 있는 테크 유저를 가장 효율적으로 reach 할 수 있는 곳이 리뷰헌트라고 생각됩니다.</p>
 
         </div>
         
@@ -228,562 +444,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-07-22T14:01:00.000Z">2019-07-22</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%EA%B0%9C%EB%B0%9C/">개발</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    5분 읽기 (대략 709 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/07/22/jayplayco.npf7s/">[스팀엔진] 스팀엔진에서 은을 사자</a>
-            
-        </h1>
-        <div class="content">
-            <center>![](https://cdn.steemitimages.com/DQmZgM84tTHonXWEvdbQEsxfRKhhsKANGZUiwnnLnARr1fD/image.png)</center>
-
-<p>안녕하세요, @jayplayco입니다.</p>
-<p>스팀엔진팀을 리드하고 있는 @aggroed의 경우는 스팀몬스터뿐만아니라 스팀엔진에서도 매번 새로운 아이디어로 생태계에 활력을 불어넣고 있습니다.</p>
-<ul>
-<li>원본글: <a href="https://steemit.com/steem-eng/@aggroed/aggroedian-silver-agag">https://steemit.com/steem-eng/@aggroed/aggroedian-silver-agag</a></li>
-</ul>
-<p>약 1시간전에 @aggroed의 글에서는 이제 스팀엔진을 통해서 은을 팔겠다고 선언했습니다. 은ㅇㄹ 토큰화해서 1토큰이 1oz의 은을 대신합니다. </p>
-<ul>
-<li>링크: <a href="https://steem-engine.com/?p=market&amp;t=AGAG">https://steem-engine.com/?p=market&amp;t=AGAG</a></li>
-</ul>
-<p>현재 가격은 1oz 은에 70.3125 Steem으로 책정되었습니다. </p>
-<center>![](https://cdn.steemitimages.com/DQmekeUdP8qGZAUVwr6fMbBZbFCQbEiXGeW7ipufdNtWuvC/image.png)
-[소스](https://silverprice.org/)</center>
-
-<p>현재 스팀 가격이 0.25088USD이라서 1oz당 약 17.64USD 라서 좀 높게 책정된 상태입니다.</p>
-<p>현재 이 토큰의 경우는 실물 은에 패깅이 된 상태이며 1 bar에 10oz입니다. 실제로 10개 토큰을 구매하고 aggroed에게 실물 은을 받고자 한다면 Discord에서 DM으로 각 Bar 당 2불 + 물류및 핸들링 비용을 부담하면 보내준답니다.</p>
-<p>이미 글을 게시하고 나서 3.6oz의 은이 팔린 상태입니다.</p>
-<center>https://steemitimages.com/640x0/https://cdn.steemitimages.com/DQmcUR2qQPeDLEZ8bWGi8LPYRVKb887nfjJigWWQAhhrbPe/IMG_0148.JPG</center>
-
-<h2 id="1-요약"><a href="#1-요약" class="headerlink" title="1. 요약"></a>1. 요약</h2><ul>
-<li>1 AGAG Token = 1oz 은 으로 패깅</li>
-<li>실물 수령 원할시 @aggroed에게 연락및 전달 지불</li>
-<li>현재 총 50개의 토큰이 판매되고 있으며, 완판시 추가로 판매예정. 총 200oz 판매 예정 (200개 토큰)</li>
-</ul>
-<h2 id="2-개인적인-생각"><a href="#2-개인적인-생각" class="headerlink" title="2. 개인적인 생각"></a>2. 개인적인 생각</h2><p>USD의 초기 가치 생성이 금을 보유한것으로 했다가, 나중에 오일 머니로 확정하면서 기축통화로 정착을 했던 이력이 있습니다. 물론 그 뒤에는 미국의 국방력과 국가력이 바탕이 된것도 큰 부분을 차지하긴 했었습니다. </p>
-<p>@aggroed가 한 국가의 파워를 가지지는 못했으나, vault (금고)로의 기능에 대한 신뢰를 한다면 가격이 어느정도 패깅된 토큰이 또하나 생성된것이라고 볼 수 있습니다. 물론 이것은 @aggroed측에서 매수벽도 안정적으로 만들어줘야지 가능한 부분이긴 합니다. 물론 토큰을 교환해서 실제 은으로 교환할 수 이는 “매수벽”이 만들어지긴 했지만, 한국에서는 실제 물류 비용때문이라도 이용을 하기는 어려울 것으로 보입니다.</p>
-<p>재미있는 실험들이 계속되면서 스팀엔진 생태계에 계속 활력을 불어넣고 있는 것으로 보입니다.</p>
-<p><strong>이글은 투자를 위한 글이 아닌 단지 재미와 정보 전달을 위한 글입니다.</strong></p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-07-21T18:26:12.000Z">2019-07-22</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%EC%9D%B4%EB%B2%A4%ED%8A%B8/">이벤트</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EC%9D%B4%EB%B2%A4%ED%8A%B8/%EC%A7%80%EB%82%9C-%EC%9D%B4%EB%B2%A4%ED%8A%B8/">지난 이벤트</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    4분 읽기 (대략 611 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/07/22/jayplayco.steemhunt-join-the-launch-event-for-reviewhunt-and-get-some-hunt-tokens/">[Steemhunt] Join the Launch Event for Reviewhunt and get some Hunt tokens</a>
-            
-        </h1>
-        <div class="content">
-            <center>![](https://cdn.steemitimages.com/DQmfY7zbrBcnwoXQriwhtmM8Cfz4RSfxNoxiuisAkuWUQvT/image.png)</center>
-
-<p>Hi, @jayplayco here.</p>
-<p>The start for ReviewHunt is coming and @monajam, who is one of the moderators of @steemhunt started a Launch Event with a total reward of 210 Steem and HUNT tokens. Let’s dive into the Event to see how and if you can participate.</p>
-<ul>
-<li>Original Link: <a href="https://steemit.com/steemhunt/@monajam/reviewhunt-launch-event-hunt-token-airdrop-210-steem-reward">https://steemit.com/steemhunt/@monajam/reviewhunt-launch-event-hunt-token-airdrop-210-steem-reward</a></li>
-</ul>
-<h2 id="0-Background"><a href="#0-Background" class="headerlink" title="0. Background"></a>0. Background</h2><p>The article and event post from @monajam gives a great overview about the event and background from ReviewHunt itself, so I would like to recommend to check the post for it. To be able to participate on this event there are a few quests to master, so let’s have a look at it.</p>
-<h2 id="1-Contest-Quests"><a href="#1-Contest-Quests" class="headerlink" title="1. Contest Quests"></a>1. Contest Quests</h2><p>You will need to have a Steemhunt wallet, so please make sure that you have logged in to <a href="https://steemhunt.com/">https://steemhunt.com/</a> with steemconnect and check that your wallet is activated. The HUNT bounty is not send to an ETH wallet but only to the Steemhunt wallet. All quests must be done by orders: Quest 1 -&gt; Quest 2 -&gt; Quest 3 -&gt; Buzz Quest, so without Quest 1, Quest 2 will not be accepted. :) You will need to post a separate posting on Steemit or Youtube and keep the form.</p>
-<h4 id="a-Quest-1-Preregister-on-Reviewhunt-and-leave-a-comment-on-monajam-‘s-article"><a href="#a-Quest-1-Preregister-on-Reviewhunt-and-leave-a-comment-on-monajam-‘s-article" class="headerlink" title="a. Quest 1, Preregister on Reviewhunt and leave a comment on @monajam ‘s article."></a>a. Quest 1, Preregister on Reviewhunt and leave a comment on @monajam ‘s article.</h4><ul>
-<li>Register here as hunter or maker <a href="https://review.hunt.town/">HERE</a></li>
-<li>Leave the your email address on your post. You can leave it as ja***o@mail.com. You can hide the details, but the team should be able to find your email in their database. <a href="https://steemit.com/steemhunt/@monajam/reviewhunt-launch-event-hunt-token-airdrop-210-steem-reward">HERE THE POST</a></li>
-<li>Now that was already 10 HUNT tokens.</li>
-</ul>
-<h4 id="b-Quest-2-Join-Steemhunts-Discord-group-and-say-hi-Leave-a-Screenshot-on-monajam-‘s-article"><a href="#b-Quest-2-Join-Steemhunts-Discord-group-and-say-hi-Leave-a-Screenshot-on-monajam-‘s-article" class="headerlink" title="b. Quest 2, Join Steemhunts Discord group and say hi! Leave a Screenshot on @monajam ‘s article."></a>b. Quest 2, Join Steemhunts Discord group and say hi! Leave a Screenshot on @monajam ‘s article.</h4><ul>
-<li>Join the Discord Server <a href="https://discordapp.com/invite/mWXpgks">HERE</a></li>
-<li>Move to the channel #coffee-lounge and say “HI~!”</li>
-<li>Leave a screenshot of your discord screen on your post</li>
-<li>Now that was again 10 HUNT tokens.</li>
-</ul>
-<h4 id="c-Quest-3-Tag-your-friends-on-monajam-‘s-article"><a href="#c-Quest-3-Tag-your-friends-on-monajam-‘s-article" class="headerlink" title="c. Quest 3, Tag your friends on @monajam ‘s article."></a>c. Quest 3, Tag your friends on @monajam ‘s article.</h4><ul>
-<li>Tag up to 10 friends on your post and get 2 HUNTS per tagged friend. (Max. 20 Hunts) </li>
-<li>BTW, the team is going to check if the accounts are real.</li>
-</ul>
-<h4 id="d-Buzz-Quest"><a href="#d-Buzz-Quest" class="headerlink" title="d. Buzz Quest"></a>d. Buzz Quest</h4><ul>
-<li>Write about Reviewhunt, what it is about, what it is for and what the benefits are.</li>
-<li>Write it on different channels like Steemit, Medium, Twitch, Instagram, Twitter, Reddit, Youtube, etc.</li>
-<li>Leave the URL of your Buzz on your post.</li>
-<li>Now you have earned additionally 50 Hunt tokens.</li>
-<li>Buzz Quests are going to be addtionally rewarded with Steem for the top 10 winners. (1st place 35 Steem, in total 210 Steem)</li>
-</ul>
-<h2 id="2-Example"><a href="#2-Example" class="headerlink" title="2. Example"></a>2. Example</h2><p>Start your posting with the following words “This is my entry for the sponsored contest organized by @monajam. You can find the contest here” and paste the requested tasks for each Quest.</p>
-<center>![image.png](https://files.steempeak.com/file/steempeak/jayplayco/OmwdelZa-image.png)</center>
-
-
-<p><code>This is my entry for the sponsored contest organized by @monajam. You can find the contest here</code><br><code>* Quest 1: jaypl******o@webmail.com</code><br><code>* Quest 2: Screenshot of Discord</code><br><code>&lt;center&gt;![](https://cdn.steemitimages.com/DQmRrkXJ2nv8CALpW5M9fnXS71BCQGtetDWt2bbM8g8ikVb/image.png)&lt;/center&gt;</code><br><code>* Quest 3: @tabris @project7 @ggomaeng @mtimetraveller</code><br><code>* Buzz Quest : https://steemit.com/steemhunt/@jayplayco/steemhunt-getting-into-details-of-reviewhunt</code></p>
-<h2 id="3-Other-data"><a href="#3-Other-data" class="headerlink" title="3. Other data"></a>3. Other data</h2><ul>
-<li>Deadline is the 28th of July 2019</li>
-<li><a href="https://steemit.com/reviewhunt/@steemhunt/introducing-reviewhunt-a-launching-hub-for-makers-pre-sign-up-is-live">Link about Reviewhunt</a></li>
-<li><a href="https://steemit.com/reviewhunt/@steemhunt/introducing-reviewhunt-a-launching-hub-for-makers-pre-sign-up-is-live">Link to Steemhunt</a></li>
-<li><a href="https://token.hunt.town/HUNT_Whitepaper_v1.1_EN.pdf">Hunt Platform Whitepaper</a></li>
-</ul>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-07-21T15:54:24.000Z">2019-07-22</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    8분 읽기 (대략 1168 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/07/22/jayplayco.coinnews-2-2-7/">[Coinnews] 암호화폐 범죄 피해액 지난 2년간 2조7천억원</a>
-            
-        </h1>
-        <div class="content">
-            <center>![](https://cdn.steemitimages.com/DQmWx4jkunizFHM97m82ZbbhTmdj1Lx1dkFRh3YHqQJqkH6/image.png)</center>
-
-<p>안녕하세요, @jayplayco입니다.</p>
-<p>암호화폐계가 아직은 춘추전국시대인것은 그만큼 범죄와 사기가 난무하고 있어서 그런것도 있는 것 같습니다.<br>이번 21일 일요일날에 법무부는 국내 2년간 암호화폐 범죄에 대한 내용을 발표를 했습니다만, 그 피해가 상당히 큰것 같습니다.</p>
-<ul>
-<li>총 사범 420명</li>
-<li>132명 구속</li>
-<li>288명 불구속 기소</li>
-<li>피해 규모액 2조 7천억원 (2.28 Billion USD 규모)</li>
-</ul>
-<p>이 피해규모액은 2018년도 중앙 아프리카 공화국 GDP와 비슷한 정도의 피해액입니다. </p>
-<p>발표된 피해방식은 많은 경우는 암호화폐와 다단계적인 행태를 섞어서 한 경우가 많으며, 일부는 거래소 운영을 통한 고객의 암호화폐를 빼돌리는 형식으로 이루어진 경우가 많습니다.</p>
-<p>이렇듯 암호화폐는 고숙익을 안겨다줄 수 있는 희망에 정확한 프로젝트의 형태나 상황을 고려하지 않고 고액 투자후 손실을 보는 경우를 많이 볼 수 있습니다.</p>
-<p>이외에도 사실상 국내 뿐만 아니라 해외의 암호화폐 프로젝트들을 보면 <a href="https://www.coingecko.com/">https://www.coingecko.com/</a> 에 등록되어 있는 암호화폐가 5246개입니다. 이들중 실제로 프로젝트 관련 지속적인 업데이트를 하는 곳이 적다는 것은 Coingecko의 Developer 탭을 확인해보면 알 수 있습니다.</p>
-<p>이 Developer 탭의 경우 지난 4주간 암호화폐에 대한 개발이 이루어졌는지, 즉 프로젝트가 계속 개발되고 있는지를 볼 수 있습니다만, 1위~100위까지만 하더라도 약 60%는 개발을 하고 있는 것이 보입니다. 500위권으로 들어가게 되면 각 코인 프로젝트들중 20%만 개발을 하고 있는 상황이며, 1000위권 밖으로 가면 실제 아직 개발을 하고 있는 코인은 프로젝트는 5%대로 떨어지는 것으로 확인될 수 있습니다. </p>
-<center>![](https://cdn.steemitimages.com/DQmWwfERGwKnu6nppfnrnNVFPC1SbVcLyNApXKFWniYhPLk/image.png)</center>
-
-<p>즉, 지난 몇년간 소개된 수많은 프로젝트들 중에 아직 드라이빙이 되고 있는 프로젝트들은 극히 소수라는 것이라고 볼 수 있는 대목입니다.</p>
-<p>소규모로는 게임기반 먹튀 프로젝트들도 비교적 많습니다. 한순간에 문을 닫은 매직다이스나, 작년에 도지독 채굴 프로그램의 먹튀, 지난달 트론빌딩과 같은 프로젝트들도 있습니다.</p>
-<p>특히 도지독 채굴이나 트론빌딩의 경우는 다단계성 먹튀가 확정된 프로젝트임에도 불구하고 “선방필승”을 외치며 리스크를 안고 들어갔던 투자자들도 대부분 손해를 보고 나온 경우가 많습니다. 이유는 폭탄 돌리기에 자기 손에서 폭탄이 터지지 않기를 바라는 마음에서 비롯되는데, 언젠가 터질 폭탄은 거의 절대적으로 내손에서 터지게 되어 있는 진리를 인정해야 하지 않을 까 싶습니다. ^^</p>
-<p>트론빌딩의 경우는 이미 단톡방에 공식적으로 먹튀를 선언하고 철수를 했는데, 막상 홈페이지는 그대로 유지를 하면서 아직도 입금을 받고 있는 상태입니다. (절대 투자하지 마세요, 이미 끝났습니다. 출금안됩니다.) 이곳이 사실 특이한 것은 당당하게 먹튀를 하면서 다음에 또다른(?) 프로젝트로 오겠다고 했다는 후문이 있습니다. </p>
-<center>![](https://cdn.steemitimages.com/DQmbxyeUHeYuGRJeDw5HezZet7F7QtwYtyKGFXMo99H2r9f/image.png)</center>
-
-<p>암호화폐계가 잠깐 기지개를 켜고 다시 숨고르기를 하고 있는 중입니다만, 장기적으로는 다시 올 불(Bull)시장과 더불어 또다시 투자자분들의 돈을 노리는 사기 프로젝트들이 날뛸 것으로 예상됩니다. 각 프로젝트의 장기적인 가능성을 보시고 조금은 긴 안목으로 투자를 하시면 리스크를 어느정도 줄일 수 있지 않을까 하는 생각이 드는 대목입니다.</p>
-<p><a href="http://www.koreaherald.com/view.php?ud=20190721000067">기사내용: Korean herold</a><br><a href="https://cointelegraph.com/news/south-korea-crypto-crimes-cost-228b-since-july-2017">기사내용: cointelegraph</a><br><a href="http://www.zdnet.co.kr/view/?no=20190721150840">기사내용: Zdnet</a></p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-07-20T15:40:51.000Z">2019-07-21</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%EA%B0%9C%EB%B0%9C/">개발</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    7분 읽기 (대략 1109 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/07/21/jayplayco.3jgcpa/">[스팀엔진] 스파와 토큰 파워 구분해서 업보팅 하기</a>
-            
-        </h1>
-        <div class="content">
-            <center>![](https://cdn.steemitimages.com/DQmREGAQEhEFxPg1FnsmUGAJCjp1ZSphExahBsCMdb3j47n/image.png)</center>
-
-<p>안녕하세요, @jayplayco 입니다.</p>
-<p>작일 스캇봇 개발자분인 @holger80분께서 매우 반가운 소식을 내놓았습니다. 이것은 스파대비 스팀엔진 토큰을 업보팅 할때 차등해서 업보팅이 가능하도록 하는 세팅이 개발되었습니다.</p>
-<p>방법은 custom json으로 세팅해서 쓰는 형식인데, 어렵게 들려도 툴이 있어서 비교적 쉽게 세팅이 가능합니다.<br>필자의 경우도 비개발자인데 현재 SCT의 업보팅을 스파의 10배로 해놔서, 스파는 10%만 업보팅이 되고 SCT는 100% 업보팅이 되도록 설정을 해두었습니다.</p>
-<p>이렇게 하면 스파 마나가 부족하는 현상은 없을것으로 예상됩니다. 하기와 같이 step by step으로 따라할 수 있는 설명서 첨부합니다.</p>
-<ul>
-<li>원본글: <a href="https://steemit.com/scot/@holger80/scotbot-it-is-now-possible-to-set-vote-downvote-weight-multiplier-to-balance-the-all-the-different-vote-power">https://steemit.com/scot/@holger80/scotbot-it-is-now-possible-to-set-vote-downvote-weight-multiplier-to-balance-the-all-the-different-vote-power</a></li>
-</ul>
-<h2 id="1-사용방법"><a href="#1-사용방법" class="headerlink" title="1. 사용방법"></a>1. 사용방법</h2><p>예) 큐레이션 계정에서 AAA의 업보팅은 100%가 되고 스파 마나는 10%만 써도 되도록 설정을 하고자 할때.</p>
-<h3 id="a-이동-링크"><a href="#a-이동-링크" class="headerlink" title="a.  이동 링크"></a>a.  이동 링크</h3><ul>
-<li><a href="https://eonwarped.github.io/steem/sk/main.html">https://eonwarped.github.io/steem/sk/main.html</a></li>
-<li>홈페이지를 보면 Custom_JSON 이라고 되어 있는 부분이 있습니다.<center>![](https://cdn.steemitimages.com/DQmSbQPqaSq6LpCQSCneFx7HKHjZLMXNPsHtPzZrqfa33SB/image.png)
-</center>
-
-</li>
-</ul>
-<h3 id="b-세팅"><a href="#b-세팅" class="headerlink" title="b. 세팅"></a>b. 세팅</h3><p>해당 Custom_JSON칸에는 총 5가지를 세팅할 수 있습니다. 다운보팅에 대한 설정값도 가능합니다. 여기서 필자는 업보팅, 다운보팅 둘다 같은 값으로 설정할 예정입니다.</p>
-<ul>
-<li>message: 그냥 비워둡니다.</li>
-<li>username: 설정을 변경하고자 하는 계정명</li>
-<li>Posting/Active: 이것은 그냥 posting으로 둡니다.</li>
-<li>id: <code>scot_set_vote</code>으로 꼭 해야합니다. (고정값)</li>
-<li>custom_json:  {“symbol”: “AAA”, “vote_weight_multiplier”: 10, “downvote_weight_multiplier”: 10}</li>
-</ul>
-<center>![](https://cdn.steemitimages.com/DQmeUe3nsQruxcubhNM7JCkTFeLAqc2EDeaPU3uP9o2ttAx/image.png)</center>
-
-<ul>
-<li>SEND 버튼을 누르면 키체인이 뜨면서 포스팅키를 요구하며 전송을 합니다.</li>
-<li>이제 jayplay.aaa 라는 계정으로 AAA를 업보팅할때는 업보팅시 10%만 해도 AAA는 100% 업보팅이 됩니다.</li>
-</ul>
-<h3 id="c-Custom-JSON-값-상세-설명"><a href="#c-Custom-JSON-값-상세-설명" class="headerlink" title="c. Custom_JSON 값 상세 설명"></a>c. Custom_JSON 값 상세 설명</h3><ul>
-<li>custom_json:  {“symbol”: “AAA”, “vote_weight_multiplier”: 10, “downvote_weight_multiplier”: 10}</li>
-</ul>
-<p>값을 넣어줄때 { 표시를 포함해서 싹다 복붙해서 넣어서 줘야합니다. 한계정에 여러 스팀엔진 스캇토큰을 쓰고 있다면 저 값들을 변경하면서 여러번 반복해줘야합니다.</p>
-<ul>
-<li>symbol : 토큰 명을 넣어야 합니다. AAA, SCT, ZZAN 등</li>
-<li>vote_weight_multiplier : 2로 했을때는 2배, 5로 했을때는 5배, 10으로 했을때는 10배로 업보팅이 됩니다. 즉, 2로 했을때는 50%로 업보팅시 AAA가 100% 업보팅이 되는것이고, 5로 했을때는 20%로 업보팅시 AAA는 100% 업보팅이 됩니다. 이렇게 세팅하고 10%이상으로 업보팅시 100%가 넘으면 예상으로는 AAA는 그냥 100% 업보팅이 될것으로 예상됩니다.</li>
-<li>downvote_weight_multiplier : 업보팅과 마찬가지입니다만, 차이는 다운보팅에 대한 설정값.</li>
-</ul>
-<h2 id="2-실사용테스트"><a href="#2-실사용테스트" class="headerlink" title="2. 실사용테스트"></a>2. 실사용테스트</h2><h3 id="a-TripleA-테스트"><a href="#a-TripleA-테스트" class="headerlink" title="a. TripleA 테스트"></a>a. TripleA 테스트</h3><center>![](https://cdn.steemitimages.com/DQmNvogamMewaJEyZTaybSD1mx1ZqsmP2oRzd333XYAjcPW/image.png)
-</center>
-
-<ul>
-<li>TripleA 홈페이지로 이동해서 아직 업보팅하지 않은 @hodolbak님의 글을 클릭합니다.</li>
-</ul>
-<center>![](https://cdn.steemitimages.com/DQmQNGt4nqvGFSrLi2ZxmtXRyqZVzYkHBPSxDQmdniBQF6m/image.png)</center>
-
-<ul>
-<li>10%의 보팅 마나로 업보팅 합니다. 업보팅이 반영되기를 잠깐 기다립니다.<center>![](https://cdn.steemitimages.com/DQmRViDuqnY4EdHR2N9kacUrrbADCNU71UsxAdBBkhpkQbd/image.png)</center></li>
-<li>10%로 업보팅시 보팅 밸류가 예상이 58AAA였는데 실제 찍힌것은 473AAA입니다. 즉, 100% 업보팅이 반영된 것입니다.</li>
-</ul>
-<h3 id="b-SCT-테스트"><a href="#b-SCT-테스트" class="headerlink" title="b. SCT 테스트"></a>b. SCT 테스트</h3><p>SCT로도 테스트를 했습니다만, @morning님의 글에 10%로 업보팅후 SCT는 100%가 찍힌것을 확인할 수 있습니다.</p>
-<center>![](https://cdn.steemitimages.com/DQmT9X3GV1oJHBASNVNNqW5KFgxKLLVJtvKHiPgFBgDJAR8/image.png)</center>
-<center>![](https://cdn.steemitimages.com/DQmaxEHe9eKqRjJ5jMo5ktufWsXF8Xb5pRc375ikjd5gUWT/image.png)</center>
-
-<h2 id="3-개인적인-생각"><a href="#3-개인적인-생각" class="headerlink" title="3. 개인적인 생각"></a>3. 개인적인 생각</h2><p>필자의 경우는 TripleA용 전용 부계정을 쓰고 있고, 큐레이션용 부계정에 많은 토큰을 넣어서 큐레이션을 하고 있습니다. 메인 계정에도 일부 토큰이 쌓여있는데, 이 설정을 활용하면 적당하게 차별을 두고 각 스팀엔진 토큰들이 업보팅 가능할것으로 보입니다.</p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-07-19T17:40:06.000Z">2019-07-20</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%EB%8B%88%ED%8A%B8%EB%A1%9C%EC%8A%A4/">니트로스</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EB%8B%88%ED%8A%B8%EB%A1%9C%EC%8A%A4/SCT/">SCT</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    4분 읽기 (대략 631 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/07/20/jayplayco.sct1004/">[sct1004] 뉴비정착과 비홍보 계정 지원 임대 안내</a>
-            
-        </h1>
-        <div class="content">
-            <center>![](https://cdn.steemitimages.com/DQmTVyadvF2zpgrjNaFd5wgRzmuQAVUUhAezHqUJG3jFG6L/image.png)</center>
-
-<p>안녕하세요 @jayplayco입니다.</p>
-<p>스팀잇에서 지속적인 뉴비 정착 활동을 지난 1여년간 해온 @lucky2분께서 SCT 천사 계정을 운영하기로 결정하셔서 이렇게 홍보차원에서 널리 전파합니다.</p>
-<p>현재 SCT의 경우는 빈익빈 부익부부부 현상이 일어나고 있고, 이것은 물론 정책상 운영진이 결정하여 홍보/소각에 의한 정책을 유지하고 있는 상황이라 어쩔 수 없는 부분입니다.</p>
-<ul>
-<li>원본글: <a href="https://www.steemcoinpan.com/sct/@lucky2/7mgtcz">https://www.steemcoinpan.com/sct/@lucky2/7mgtcz</a></li>
-</ul>
-<h2 id="0-배경"><a href="#0-배경" class="headerlink" title="0. 배경"></a>0. 배경</h2><p>대형 계정들이 대부분 홍보 포스팅에 집중해서 큐레를 하는 관계로 SCT 분배 쏠림 현상이 극심하게 나타는 현상에 따라 뉴비 정착이나 비홍보글의 경우 상대적으로 보팅이 적게 가는 현상을 보완하고자 함.</p>
-<h2 id="1-방법"><a href="#1-방법" class="headerlink" title="1. 방법"></a>1. 방법</h2><p>@lucky2님께서 @sct1004계정으로 생성하심. 이 계정의 임대를 받아 큐레이팅도 큐레 보상도 모두 뉴비를 위해 쓰일 예정입니다.</p>
-<p>방법은 @sct1004로 SCT를 임대해주시면 됩니다.</p>
-<h2 id="2-조건"><a href="#2-조건" class="headerlink" title="2. 조건"></a>2. 조건</h2><ul>
-<li>임대주신 SCT는 개인에게 돌아가는 보상이 전혀 없습니다. (자원봉사)</li>
-<li>임대받은 SCT로 @lucky2는 개인적인 보상을 전혀 취하지 않으심 (자원봉사)</li>
-<li>임대받은 SCT로 큐레는 뉴비및 비홍보글에 할예정임.</li>
-<li>임대받은 SCT로 취해진 큐레이션 보상은 뉴비 정착을 위해 쓰일 예정임.</li>
-</ul>
-<h2 id="3-현재-상황"><a href="#3-현재-상황" class="headerlink" title="3. 현재 상황"></a>3. 현재 상황</h2><ul>
-<li>작성시점 SCT 파워: 7126.3SCT (전체 0.44%)</li>
-<li>Staking 순위: 29위</li>
-<li>방향 예상: 최소 10K SCT 이상 모집될것으로 예상됩니다.</li>
-</ul>
-<h2 id="4-임대-참가인원"><a href="#4-임대-참가인원" class="headerlink" title="4. 임대 참가인원"></a>4. 임대 참가인원</h2><p>따로 정확한 현황이 추적되는 곳이 없어서 메인글 댓글 의사표현과 sct1004의 글 홍보를 바탕으로 작성.</p>
-<ul>
-<li>@lucky2 - 운영자</li>
-<li>@menerva</li>
-<li>@deer3</li>
-<li>@lovelyyeon.sct</li>
-<li>@seraphim502</li>
-<li>@dozam</li>
-<li>@kibumh</li>
-<li>@tradingideas</li>
-<li>@jayplay.cur</li>
-</ul>
-<h2 id="5-개인적인-생각"><a href="#5-개인적인-생각" class="headerlink" title="5. 개인적인 생각"></a>5. 개인적인 생각</h2><p>커뮤니티의 운영은 운영자가 방향을 정하지만, 그안에서 활동을 영휘하는 것은 그 커뮤니티에 적극적으로 참여하는 키 유저들입니다. @lucky2님의 방향이 옳다는 개인적인 생각에 적극적으로 지원합니다. 대신 럭키님의 호의가 권리라고 생각되지 않은 운영을 원활히 하셨으면 하는 바램입니다.</p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-07-18T14:01:33.000Z">2019-07-18</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%EA%B0%9C%EB%B0%9C/">개발</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    4분 읽기 (대략 568 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/07/18/jayplayco.2wafbf/">[스팀엔진] 토큰 클레임 한꺼번에</a>
-            
-        </h1>
-        <div class="content">
-            <center>https://steemitimages.com/640x0/https://cdn.steemitimages.com/DQmVLEQz4R6TLspWojh1uHaiMhZ2w8125zWdBp1YeodBrzM/image.png</center>
-
-<p>안녕하세요, @jayplayco 입니다.</p>
-<h2 id="1-클레임-All-Script"><a href="#1-클레임-All-Script" class="headerlink" title="1. 클레임 All Script"></a>1. 클레임 All Script</h2><p>스팀엔진팀에서 스캇봇을 담당하고 있는 @holger80님이 모든 토큰을 한꺼번에 클레임할 수 있는 파이튼 (Phython) 스크립트를 공개했습니다. 이를 위해 스캇봇의 custom_json을 수정하였습니다.</p>
-<p>현재는 파이튼 스크립트인 관계로 이 스크립트를 돌리기 위해서는 beem과 스팀엔진이 설치되어 있어야 합니다.<br>상세한 스크립트 설명은 하단의 원본 링크 참조를 부탁드립니다.</p>
-<ul>
-<li>@holger80님의 claim all script : <a href="https://steemit.com/scot/@holger80/how-to-claim-all-pending-token-rewards-at-once-improved-claim-command">https://steemit.com/scot/@holger80/how-to-claim-all-pending-token-rewards-at-once-improved-claim-command</a></li>
-</ul>
-<h2 id="2-Scotauto"><a href="#2-Scotauto" class="headerlink" title="2. Scotauto"></a>2. Scotauto</h2><ul>
-<li>@blockchainstudio 님의 오토 클레임 : <a href="https://steemit.com/kr/@blockchainstudio/scotauto">https://steemit.com/kr/@blockchainstudio/scotauto</a></li>
-</ul>
-<p>이미 그 전에 블록체인 스튜디오님께서 이보다 더 편한 서비스인 스캇 오토클레임 기능을 만들어서 운영중이십니다.</p>
-<p>프로그래밍이 익숙하지 않은 일반 사용자들도 사용할 수 있어 방법을 소개합니다.</p>
-<ul>
-<li>서비스 링크를 클릭합니다 : <a href="https://economicstudio.github.io/scotauto/">https://economicstudio.github.io/scotauto/</a></li>
-<li><img src="https://cdn.steemitimages.com/DQmc1bnEJf8WWCQoRz7J8AC3bT7hHN1q3PEHtMJTQPQPdby/image.png" alt=""></li>
-<li>사용자 계정을 입력하고 Authorize를 입력합니다.</li>
-<li><a href="https://steemit.com/kr/@blockchainstudio/scotauto">https://steemit.com/kr/@blockchainstudio/scotauto</a> 글에 가서 신청했다고 댓글을남깁니다. (아직 작동 시작은 자동화가 안되어있습니다.)</li>
-<li>상단 @blockchainstudio님 설명글 아직 payout 안되어 있으면 보팅을 시원하게 합니다. (이것은 자율 ㅎㅎ ^^)</li>
-</ul>
-<h2 id="3-개인적인-생각"><a href="#3-개인적인-생각" class="headerlink" title="3. 개인적인 생각"></a>3. 개인적인 생각</h2><p>Scot 서비스가 나오면서 사람들의 부계정 사용이 급증했습니다. 필자의 경우만 해도 현재 추가로 2개의 부계정으로 큐레이션을 따로 운영하고 있는 상황입니다. 이에 따라 클레임을 일일이 하는 것도 하나의 즐거움이 되고 있지만, 바쁠때는 손과 시간이 많이 가는 작업이기도 합니다. @holger80님의 claim all 스크립트나 @blockchainstudio님의 스캇오토같은 기능들이 사용을 조금더 편하게 해줄 것으로 생각됩니다.</p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-07-17T15:31:12.000Z">2019-07-18</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%EA%B2%8C%EC%9E%84/">게임</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    6분 읽기 (대략 878 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/07/18/jayplayco.skyweaver-3-75-usd/">[SkyWeaver] 새로운 블록체인 기반 카드게임  3백 75만 USD 펀딩</a>
-            
-        </h1>
-        <div class="content">
-            <center>![](https://cdn.steemitimages.com/DQmWLg8fytxycp3SoziHAjh4oec6UZoW62QRg4KsjorjRxi/image.png)</center>
-
-<p><a href="https://www.youtube.com/watch?v=tAbtJx32aKQ">https://www.youtube.com/watch?v=tAbtJx32aKQ</a></p>
-<ul>
-<li>링크: <a href="https://www.skyweaver.net">https://www.skyweaver.net</a></li>
-</ul>
-<p>안녕하세요, @jayplayco입니다.</p>
-<p>블록체인 기반 게임들이 하나둘씩 출시되면서 이번에는 Reddit의 초파운더가 주도한 <a href="https://www.skyweaver.net/">Skyweaver</a>의 펀딩이 3백 75만불을 모집하면서 성공적으로 마무리 되었습니다.</p>
-<p>Seed 펀딩으로는 비교적 높은 금액이며 이미 2018년도 여름에 마무리가 되었다고 합니다. 이것이 뉴스상에 나온 이유는 Skyweaver 라는 게임이 이제 베타를 런칭한지 1달이 되었고 약 330명의 플레이어를 사용하고 있다고 합니다.</p>
-<p>몇가지 fact 체크 들어가겠습니다.</p>
-<h2 id="0-배경"><a href="#0-배경" class="headerlink" title="0. 배경"></a>0. 배경</h2><p>이더리움을 기반으로 한 NFT를 이용한 카드 베이스 턴 배틀 방식의 게임입니다. 직접적인 경쟁사는 “Hearthstone”이라고 기사가 나는 만큼 많은 부분에서 비슷한 느낌을 받을 수 있을것으로 생각됩니다.</p>
-<h2 id="1-게임-설명"><a href="#1-게임-설명" class="headerlink" title="1. 게임 설명"></a>1. 게임 설명</h2><center>![](https://cdn.steemitimages.com/DQmcxkfU2eJbRsXLdfrQPyeLRiVAXW9nEGTTtRmPHcY4Anx/image.png)</center>
-1대1 카드 배틀을 통해 전투가 가능하며 전투를 통해 새로운 카드를 얻을 수 있습니다.
-
-<ul>
-<li>Free to Play</li>
-<li>마나 제한 없음</li>
-<li>이중 댁 컴비네이션</li>
-</ul>
-<center>![](https://cdn.steemitimages.com/DQmWbTZ7RYZGGQEc26SpbFh3BHhCXoHtwTyQ6kNqJDq6XXC/image.png)</center>
-
-<h2 id="2-베타-플레이"><a href="#2-베타-플레이" class="headerlink" title="2. 베타 플레이"></a>2. 베타 플레이</h2><center>![](https://cdn.steemitimages.com/DQmZkTpYuRB2HLWCbnytKHy6AspRmTfTi6ELo5BcuUqF7Lz/image.png)</center>
-현재는 이메일을 등록하면 매주 새로운 베타플레이어를 등록한다고 합니다. 
-
-<h2 id="3-카드-판매"><a href="#3-카드-판매" class="headerlink" title="3. 카드 판매"></a>3. 카드 판매</h2><p>카드는 현재 이더리움의 ERC-1155 토큰 방식으로 발급됩니다. 기본적으로 게임은 Free-to-Play라서 따로 돈을 들여서 게임을 꼭 할 필요는 없습니다. Skyweaver측에서는 부스터팩 판매가 아닌 각 카드를 정가에 판매하는 방식을 취하기로 했습니다. 가격은 각 1 DAI라는 스테이블 암화화폐가 책정되어 있습니다.</p>
-<h2 id="4-앞으로의-방향"><a href="#4-앞으로의-방향" class="headerlink" title="4. 앞으로의 방향"></a>4. 앞으로의 방향</h2><p>현재 이번해 말을 런칭으로 예정하고 있으며 플랫폼은 윈도우, 맥, 리눅스, iOS, 안드로이드등 모든 일반적인 플랫폼에서는 런칭을 할 예정입니다. 런칭 시점에는 약 350개의 카드가 준비가 되어 있을것이라고 합니다.</p>
-<h2 id="5-커뮤니케이션"><a href="#5-커뮤니케이션" class="headerlink" title="5. 커뮤니케이션"></a>5. 커뮤니케이션</h2><ul>
-<li>디스코트 : <a href="https://skyweaver.chat/">https://skyweaver.chat/</a></li>
-</ul>
-<h2 id="6-개인적인-생각"><a href="#6-개인적인-생각" class="headerlink" title="6. 개인적인 생각"></a>6. 개인적인 생각</h2><p>약 1년간 스플린터랜드를 하면서 느낀것은 펀딩의 차이가 많은 차별화를 가져올 수 있구나 라는 것입니다. 게임상의 게임 플레이나 접근성, UI, UX와 디자인등이 상당히 중요한 요소인데 스플린터랜드는 겜임성, 토큰 이코노미등을 지난 1년동안 300명이 아닌 지속적으로 3000명이 넘는 플레이어들로 실력을 다진 상태입니다. 그러나 이번에 베타 서비스에 들어간 Skyweaver의 디자인 완성도의 경우는 스플린터랜드와는 많은 차이가 나는것도 사실입니다. ERC 기반이라 따로 구매를 해서 테스트를 해볼지는 두고봐야겠지만, 우선 베타신청은 해놓고 들여다보는 것은 꼭 해볼 예정입니다. ^^</p>
-<p><a href="https://www.coindesk.com/reddit-co-founder-ohanian-leads-3-75-million-round-in-hearthstone-competitor">기사: Coindesk- Reddit Co-Founder Ohanian Leads $3.75 Million Round in ‘Hearthstone’ Competitor</a></p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-07-16T16:09:48.000Z">2019-07-17</time>
+                <time class="level-item has-text-grey" datetime="2019-08-13T14:10:39.000Z">2019-08-13</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/steem/">steem</a>
@@ -793,7 +454,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    13분 읽기 (대략 1902 단어)
+                    7분 읽기 (대략 1124 단어)
                 </span>
                 
                 
@@ -802,59 +463,46 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/07/17/jayplayco.7nx8ww/">[스팀잇] 스팀잇 재단의 임대 프로그램 변경</a>
+                <a class="has-link-black-ter" href="/2019/08/13/jayplayco.steemwallet/">[키체인] SteemWallet 앱을 통한 모바일 연동 시작</a>
             
         </h1>
         <div class="content">
-            <center>https://steemitimages.com/640x0/https://cdn.steemitimages.com/DQmQfxdVEEYVBTnFBxrnRrSVBepuEQhjEmW2vcRp4QXfrTs/del%20app%20process%20thumb.jpg</center>
+            <center>https://steemitimages.com/640x0/https://cdn.steemitimages.com/DQmV8sh6FwVoNW9CEUiZ8oHhLerYFmefmPUEkPSFJ2aywTf/steemwallet-updates-v2.png</center>
 
-<p>안녕하세요, @jayplayco입니다.</p>
-<p>스팀 기반 프로젝트들이 일년전까지만 해도 스팀상에서 댑을 만들고 그 이후는 @ned를 컨텍트 해서 어떻게던 스파 투자를 받고자 설득을 해야 했습니다. 필자가 마지막으로 봤던 스팀잇 재단의 스파 투자는 스팀헌트와 그 후 테이스팀이 마지막으로 받고 더이상의 스프 임대 프로그램은 운영되지 않았습니다. 이후 나왔던 프로젝트들인 트립스팀이나 @trips.teem 엔토파즈 @ntopaz (당시 아티스팀)들은 닫힌 스파 임대문 때문에 스파 임대분을 알아서 끌어와야 하는 어려움이 있었습니다.</p>
-<p>원문: <a href="https://steemit.com/steemit/@steemitblog/announcing-steemit-s-new-delegation-application-process">https://steemit.com/steemit/@steemitblog/announcing-steemit-s-new-delegation-application-process</a></p>
-<p>스팀잇 재단의 MD를 @elipowell으로 임명후 여러가지 프로세스가 생기고 있습니다.  그중 한가지가 어느정도 투명성을 가진 스팀잇 재단의 스파 임대 프로그램입니다.</p>
-<p>원문이 상당히 긴 관계로 언제나와 같이 간략하게 요약하겠습니다.</p>
-<h2 id="0-배경"><a href="#0-배경" class="headerlink" title="0. 배경"></a>0. 배경</h2><p>이전 스팀잇 재단의 스파임대가 별다른  프로세스 없이 임대되거나 다시 회수되었는데, 이에 대한 프로세스를 확립하면서 투명성과 정당성을 부여하고자 함.  이를 위해 프로세스를 세팅하고 스팀의 장기적인 성장에 도움이 될 프로젝트에 투입이 될 예정입니다.</p>
-<h2 id="1-임대-프로세스"><a href="#1-임대-프로세스" class="headerlink" title="1. 임대 프로세스"></a>1. 임대 프로세스</h2><h3 id="a-Tiers의-정의"><a href="#a-Tiers의-정의" class="headerlink" title="a. Tiers의 정의"></a>a. Tiers의 정의</h3><p>총 3가지 Tier를 정해서 받을 수 있는 SP를 정의한다.</p>
+<p>안녕하세요, @jayplayco 입니다. </p>
+<p>스팀페스트를 주최하기도 하는 @roelandp라는 분이 만든 스팀월렛이라는 모바일 앱이 있습니다. 필자도 이전에 나왔을때 한번 설치해서 보다가, 크게 사용할 일이 없어 방치를 해두었던 상태였는데, 이번에 스팀엔진 측이랑 협업을 해서 키체인의 모바일 사용을 가능하게 했습니다.</p>
 <ul>
-<li>Tier 1: 1백만 SP (1,000,000 SP)</li>
-<li>Tier 2: 50만 SP (500,000 SP)</li>
-<li>Tier 3: 10만 SP (100,000 SP)</li>
+<li>주소: <a href="https://steemwallet.app/">https://steemwallet.app/</a></li>
+<li>원본글: <a href="https://steemit.com/steemwallet/@roelandp/introducing-steemwallet-app-v2-many-enhancements-including-a-steemkeychain-supporting-dapp-browser">Introducing SteemWallet.app v2</a></li>
 </ul>
-<p>저 Tier의 대한 정의는 물론 스팀잇 재단의 재량하에 만들어 졌으며 임대신청 수에 따라 변경될 수 있습니다. 임대는 주어진 후 언제라도 이유없이  회수될 수 있습니다. </p>
-<p>모든 임대는 분기별로 재평가되어 필요시 재분배가 될 예정입니다. 임대를 지속하기 위해서는 “Delegation Renewal Form (임대 갱신 폼)”을 매 분기 첫날에 포스팅을 해야합니다. 매 분기마다 이 폼을 바탕으로 <strong>새로 신청하는</strong> 프로젝트처럼 평가해서 임대를 결정하게 됩니다.</p>
-<h3 id="b-임대에-따른-기본적은-Agreement-GAA"><a href="#b-임대에-따른-기본적은-Agreement-GAA" class="headerlink" title="b. 임대에 따른 기본적은 Agreement (GAA)"></a>b. 임대에 따른 기본적은 Agreement (GAA)</h3><p>임대를 스팀잇 재단에서 받은 자는 임대를 받은 기간과 그 이후 최소 1년동안 비즈니스를 Steem Blockchain상에서 영속해야합니다. </p>
-<ul>
-<li>개인적인 생각: 이전에 스팀임대를 받고 결국 스팀을 떠난 프로젝트들 때문에 넣은 조항인것으로 판단됩니다.</li>
+<h2 id="0-배경"><a href="#0-배경" class="headerlink" title="0. 배경"></a>0. 배경</h2><p>약 두달전에 @aggroed측에서 접촉이 있어서 키체인의 모바일버젼 개발을 위한 협업을 위해 연락이 갔습니다. @roelandp 측에서도 관심이 있었으나, 이미 스팀월렛을 만든 상황이라, 키체인의 모바일 버젼을 스팀월렛에 포함시키는 절차로 해결을 하기로 했습니다.</p>
+<h2 id="1-작동방식"><a href="#1-작동방식" class="headerlink" title="1. 작동방식"></a>1. 작동방식</h2><p>Steemwallet 2.0 우선 기본적으로 스팀용 모바일 지갑입니다. 그 앱 안에 브라우저를 포함하면서 그 브라우저를 이용해서 각 댑들을 쓸때 키체인을 쓸 수 있도록 장치가 되어 있습니다.</p>
+<h2 id="2-사용방법"><a href="#2-사용방법" class="headerlink" title="2. 사용방법"></a>2. 사용방법</h2><ul>
+<li><p>우선 앱을 다운로드 받는다.</p>
+<center>
+<a href="https://apps.apple.com/app/steemwallet/id1428700017">![](https://cdn.steemitimages.com/DQmQmZV1m9YBYqHEuLrviXEszUmwnH69PMvA3wMTQcy5Y7S/image.png)</a><a href="https://play.google.com/store/apps/details?id=app.steemwallet.roelandp">![](https://cdn.steemitimages.com/DQmdpMDhdcCfvobfCAimMMfLRx11JKMPLHQUXviVR1zQxtc/image.png)</a></center>
+</li>
+<li><p>앱을 켜고 세팅으로 들어갑니다. IMPORT PRIVATE KEY를 누릅니다.</p>
+<center>![](https://cdn.steemitimages.com/DQmR9USXZK8WWNcMQEpxMyHJFB1LbUKcM7Li3zaDWKek3yD/image.png)</center></li>
+<li><p>자신이 입력하고자 하는 아이디를 입력합니다</p>
+<center>![](https://cdn.steemitimages.com/DQmUD1ByS245tLPvtQnLhuCdS6eCHhWo7A9LdsNpLJRoCX5/image.png)</center></li>
+<li><p>키체인과 비슷하게 키를 입력합니다. 마스터키를 입력하게 되면 각 포스팅, 액티브 메모키가 자동 입력되며, 그외에도 원할 경우 예를 들어 포스팅키만 따로 입력도 가능합니다.</p>
+<center>![](https://cdn.steemitimages.com/DQmRnrGQTGnuRzyLvw4KWvK5wgGMKbjc9seiM6Ki8UZsvRd/image.png)</center></li>
+<li><p>맨 밑에 있는 탭중에 Browser부분을 클릭하면 초기 화면에 각종 스팀 관련 서비스들이 뜹니다. 만약 이 로딩 시간이 길게 느껴진다면 https:// 부분까지 포함해서 직접 주소를 넣어도 됩니다.</p>
+<center>![](https://cdn.steemitimages.com/DQmQhckq5ZQ2dSC3meqtiYetLppdBJuHguHaP3nyJRroSCw/image.png)</center></li>
+<li><p>요청되는 스팀관련 서비스를 찾았으면, 클릭을 해서 로그인을 합니다. 키체인을 지원하는 곳이라면 현재 댑안에서 열린 브라우저에 키체인이 있다고 시뮬레이션을 해주기 때문에 키체인 사용이 가능합니다.</p>
+<center>![](https://cdn.steemitimages.com/DQmfC8oe8hBPm4JXKuqcFUoU7GniuG6vqk4zceRWvNTaCiJ/image.png)</center></li>
+<li><p>다음 화면은 <code>sign message</code>를 수락해야 합니다. 하단 부분에 “Do not prompt again to 계정명 for 스팀서비스 주소;sign message” 부분을 클릭하시면 해당 사이트를 사용하는 도중 다시 추가로 키를 입력하지 않아도 됩니다.</p>
+<center>![](https://cdn.steemitimages.com/DQmeaxcPbMVrvCaPSg4Nps9QvK7JwGmN9DDkA56QJiuHh2S/image.png)</center></li>
+<li><p>지문인식이나 애플의 얼굴 인식도 작동을 잘 합니다.</p>
+<center>![](https://cdn.steemitimages.com/DQmYFNtbA7rrJTdko4JBvY8qjbewXyTNrMseTukyWfSnkVu/image.png)</center></li>
+<li><p>서비스에 로그인된 모습이 확인됩니다.</p>
+<center>![](https://cdn.steemitimages.com/DQmQs6NrGLVttXjW5akoYsVRqvZUQkq1qPyj6rTiPoYcxjL/image.png)</center>
+
+</li>
 </ul>
-<h3 id="c-임대의-목적"><a href="#c-임대의-목적" class="headerlink" title="c. 임대의 목적"></a>c. 임대의 목적</h3><p>스파임대의 메인 목적은 결론적으로 스팀 생태계에 도움이 되는 것입니다. 비즈니스가 임대가 있어야지만 살아나는 BM을 갖고 있을 경우 임대를 주지 않을 것으로 여겨집니다. 스팀유저와 스팀잇 재단에 둘다 도움이 되는 프로젝트에만 임대가 나가도록 할 예정입니다.</p>
-<h3 id="d-Tiers의-정의"><a href="#d-Tiers의-정의" class="headerlink" title="d. Tiers의 정의"></a>d. Tiers의 정의</h3><ul>
-<li>Tier 1 = Top Tier: 진행하는 프로젝트 이상 스팀 생태계에 도움이 되는 프로젝트</li>
-<li>Tier 2 = Growth Tier : 커뮤니티의 서포트를 받고 BM이 증명된 모델</li>
-<li>Tier 3 = Test Tier : 커뮤니티 피드백을 받기 위한 Lean Startup. 3개월후 임대 자동 종료</li>
-</ul>
-<h3 id="e-임대-사용처"><a href="#e-임대-사용처" class="headerlink" title="e. 임대 사용처"></a>e. 임대 사용처</h3><ul>
-<li>임대는 셀봇을 통한 자기 자본 증대에 쓰이면 안된다.</li>
-<li>계정 생성을 위한 이용을 해도 된다.</li>
-<li>스팀 유저를 증대하기 위한 보상으로 쓰여도 된다.</li>
-<li>스팀 유저의 보상증대및 그 이후 파워업에 쓰이는 것은 된다.</li>
-</ul>
-<h3 id="f-KPI"><a href="#f-KPI" class="headerlink" title="f. KPI"></a>f. KPI</h3><p>일부 프로젝트의 경우는 임대를 위해 KPI를 정해줄 수 도 있다.</p>
-<h3 id="g-기존-프로젝트의-임대"><a href="#g-기존-프로젝트의-임대" class="headerlink" title="g. 기존 프로젝트의 임대"></a>g. 기존 프로젝트의 임대</h3><p>기존 임대를 받던 프로젝트들도 최대 1백만 스파로 조정이 되며 또한 상단의 프로세스에 따라 재평가될 예정입니다.</p>
-<h2 id="2-임대-방법"><a href="#2-임대-방법" class="headerlink" title="2. 임대 방법"></a>2. 임대 방법</h2><p>임대를 받는 방법은 상당히 상세하게 설명이 되어 있으나, 어차피 신청하고자 하는 팀들이 있을 경우 영문으로 해야하는 관계로  핵심들만 정리드립다. 분기별로 정리해야할 data가 비교적 많습니다.</p>
-<ul>
-<li>프로젝트 정보 (회사명, 국가, 존재할 경우 토큰명, 토큰 기술/ ERC20, Steem-Engine등)</li>
-<li>프로젝트 설명: 어떤 시장을 타겟하고 있는지</li>
-<li>팀 설명 : 각 팀 멤버들의 설명과 Linkedin 계정 링크 (한국분들의 경우 Linkedin 계정은 새로 생성해야할 경우가 많을겁니다.)</li>
-<li>MVP : 제품이 최소한도로 작동하는 링크를 제공해야합니다. 제품이 없을 경우 설명을 해줘야합니다.</li>
-<li>BM : Fiat기준으로 매출 규모 예정및 스팀잇에 어떠한 인센티브를 줄 것인가? (예, token share, revenue share등), 또한 임대를 회수후 어떻게 살아남을 것인가?</li>
-<li>KPI : 최소 3개의 KPI를 설명해야합니다.</li>
-<li>토큰 : 토큰이 있거나 런칭할 예정이 있을 경우 이에 대한 상세 정보</li>
-</ul>
-<p>저 정보를 종합해서 추가적으로 임대 요청서를 작성하고 (양식 있음) 매 분기마다 임대 갱신 폼을 작성해야합니다.</p>
-<h2 id="3-개인적인-생각"><a href="#3-개인적인-생각" class="headerlink" title="3. 개인적인 생각"></a>3. 개인적인 생각</h2><p>우선 이전에는 어떻게던 @ned에게 접근하거나 친하거나 해서 스파 임대를 받을 수 있었다면 이제는 어떠한 프로젝트도 투명하게 스파를 임대받을 수 있는 경로가 생겼습니다. 일반적으로 VC들이 하는 성공할만한 프로젝트에 투자하는 방식으로 프로젝트를 걸러서 투자하겠다는 것이고, 임대를 통한 스파의 기회비용을 revenue share나 토큰 share같은 절차를 통해서 받겠다는 의지도 표명되어 있습니다.</p>
-<p>스팀잇 재단의글에서 거의 처음으로 토큰을 언급하면서 ERC-20이나 <strong>스팀엔지</strong> 이라는 말을 쓰면서, 스팀엔진 토큰에 한번더 힘을 실어준격이기도 합니다. 즉, 스팀엔진 토큰을 받아도 스팀잇 재단에 도움이 되겠다는 생각이 있다는 것으로 풀이됩니다.</p>
-<p>기존 스파임대를 받던 팀들은 1백만 이상일 경우는 최종 1백만으로 줄어드는 임대가 되며, 추가적으로 매 분기마다 심사를 받아야하는 변화가 생겼으며, 스파 임대를 받지 못했던 프로젝트들의 경우는 이제 다시 스파 임대를 받아 자기 Dapp에 힘을 실어줄 수 있는 기회가 생겼습니다.</p>
-<p>투명성에 대한 부분은 칭찬을 하고 싶고, 스팀잇 재단이 가지고 있던 거래소 스팀과 스달을 다시 스파업해서 각종 프로젝트 임대를 통해 얻은 수익으로 스팀 판매가 불필요하게 되는 날이 왔으면 좋겠습니다. (희망사항이긴 합니다.)</p>
+<h2 id="3-개인적인-생각"><a href="#3-개인적인-생각" class="headerlink" title="3. 개인적인 생각"></a>3. 개인적인 생각</h2><p>일반 모바일 브라우저에서 앱이 열리면서 로그인되는 모습이 아닌, 특수 앱내에서 브라우징을 통한 사용이라는 약간은 제한적인 느낌이 드는 해결방법이긴 합니다만, 에러 없이 사용할 수 있다면 사용환경을 많이 개선할 것으로 보입니다. 아직은 토큰클레임등 같은 행위는 에러가 나는 것을 확인했지만, 빠르게 대처해서 고쳐나가지기를 바라봅니다.</p>
+<p>스팀엔진팀의 탁월한 능력은 협상력과 사용자가의 관심밖에 있는 스팀상 프로젝트들의 패자부활전을 시켜주는 능력인듯 합니다. 약간의 새로운 기능 twist를 통해서 기존의 서비스들의 사용성을 확 늘려주는 능력과 그에 반응해서 따라주는 각 프로젝트들의 호응으로 스팀상에서 (가격을 제외한) 활기가 돌고 있음은 명백한것 같습니다.</p>
 
         </div>
         
@@ -877,7 +525,82 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-07-15T13:04:45.000Z">2019-07-15</time>
+                <time class="level-item has-text-grey" datetime="2019-08-12T21:36:21.000Z">2019-08-13</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/steem/">steem</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    5분 읽기 (대략 814 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/13/jayplayco.hbkht/">[트립스팀] 서포터즈 모집합니다</a>
+            
+        </h1>
+        <div class="content">
+            <center>![](https://cdn.steemitimages.com/DQmVgmeHk3fSgEAoscPXcSmZrYy3nn5CodHJePWqVbgmyto/image.png)</center>
+
+<p>안녕하세요, @jayplayco입니다.</p>
+<p>얼마전 트립스팀에서 프리세일을 끝내고 스캇봇이 알파모드로 운영중에 있습니다. 초기 TMT 제네시스 물량을 보시면 운영진측에 포섭된 물량이 상당히 많았던 것을 기억하실텐데요, 결국 트립스팀은 POB라는 개념보다는 POT (Proof of Task)의 개념으로 접근하는 DAPP인 관계로 프로젝트가 가고자 하는 방향으로 드라이빙해서 발권이 되는 형태입니다.</p>
+<ul>
+<li>원본글: <a href="https://kr.tripsteem.com/main/tt20190813t050627543z">https://kr.tripsteem.com/main/tt20190813t050627543z</a></li>
+</ul>
+<p>방근 공지가 나온 상황입니다만, 트립스팀에서 서포터즈를 공개 모집하고 있습니다. 가장 중요한 핵심은 분야별로 약 1-2백만 TMT 정도를 스테이킹 임대로 지원을 해주며, 큐레이터 보상의 경우는 <strong>전량</strong> 서포터의 몫이 되는 형태라, 매우 괜찮은 조건의 운영입니다. 총 모집인원은 최대 10~20명 사이입니다. (가변적 모집)</p>
+<p>아마 스판이나 짠쪽 서포터즈를 해보신 분들은 아시겠지만, 나름대로 책임과 해야할 일들이 많이 있긴 하지만, 그만큼 보람도 있고 TMT의 경우는 보상도 큐레 전체를 가져갈 수 있는 부분이라 나쁘지 않은 제안이라고 여겨집니다.</p>
+<p>상세한 사항은 원문 공지를 참조하시기 바라며, 하기와 같이 모집분야와 지원 좌표를 알려드립니다. </p>
+<h2 id="1-모집분야"><a href="#1-모집분야" class="headerlink" title="1. 모집분야"></a>1. 모집분야</h2><ul>
+<li>여행 뉴스/기사/정보 공유 서비스 부문 : 2명</li>
+<li>대외홍보/트립스팀 외부 채널 활성화/뉴비지원 : 2명</li>
+<li>트립스팀 마켓 지원 : 2명</li>
+<li>트래블 게임 지원 : 1명</li>
+<li>트립스팀 출간 사업 지원 : 1명</li>
+<li>전문 큐레이션 : 1명</li>
+<li>지역 전문가 : 지역수에 따라 변동</li>
+<li>기타 활성화 아이디어 : 1~2명</li>
+</ul>
+<h2 id="2-운영"><a href="#2-운영" class="headerlink" title="2. 운영"></a>2. 운영</h2><ul>
+<li>분야에 따라 1-2백만 TMT 임대지원. 임대 활용은 자유롭게.</li>
+<li>커뮤니케이션: 월 1회 온/오프라인 소통을 통해 진행. 트립스팀 운영에 실질적으로 참여할 수 있는 기회</li>
+<li>추가임대: 활발한 활동으로 인한 추가 임대가 필요할 경우 최대 2백만 TMT 범위내 추가지원 가능</li>
+</ul>
+<h2 id="3-지원"><a href="#3-지원" class="headerlink" title="3. 지원"></a>3. 지원</h2><ul>
+<li>시기: 오늘부터 마감시까지</li>
+<li>지원방법: 단톡방 지원 -&gt; <a href="https://open.kakao.com/o/gAKCPXY">https://open.kakao.com/o/gAKCPXY</a><pre><code>개인톡 지원 -&gt;http://pf.kakao.com/_IxoxlKT/chat</code></pre></li>
+</ul>
+<h2 id="4-개인적인-생각"><a href="#4-개인적인-생각" class="headerlink" title="4. 개인적인 생각"></a>4. 개인적인 생각</h2><p>우선 서포터즈의 경우는 속도전도 중요합니다. 즉, 정보를 알고 지원을 해야 가능하기 때문에, 시기를 놓치시는 일이 없으시길 당부드립니다. 혹 자신이 잘 하는 분야가 여럿일 경우에는 여러 분야에 우선 지원을 해두는 것도 나쁘지 않을 것으로 여겨집니다. (운영진 의도가 그런지는 모르겠으나, 우선 필자는 지원지 입장에서 쓰는 관계로 ^^) 저도 자격은 안되겠지만 살짝 지원을 해보는것으로 ^^</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-12T13:24:39.000Z">2019-08-12</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
@@ -887,7 +610,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    8분 읽기 (대략 1171 단어)
+                    4분 읽기 (대략 608 단어)
                 </span>
                 
                 
@@ -896,33 +619,253 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/07/15/jayplayco.4gh8hs/">[신한은행] 카드 신용결제 블록체인 특허 획득</a>
+                <a class="has-link-black-ter" href="/2019/08/12/jayplayco.coinnews-2019-3-7/">[Coinnews] 2019년도 암호화폐 스캠 규모 3조 7천억원 가량</a>
             
         </h1>
         <div class="content">
-            <center>![](https://cdn.steemitimages.com/DQmaK95tciCRbkkuhWgTzBVhsxzyyzC4keHTcEsToZbRz53/image.png)</center>
+            <center>![](https://cdn.steemitimages.com/DQmXrm4kfGRLpHw2Ky8Gtd1t8CrJBDK7hsEBN4AMunTRoXm/image.png)</center>
 
 <p>안녕하세요, @jayplayco 입니다.</p>
-<p>해외 암호화폐계 뉴스를 보면서 한국 관련 소식이 있으면 조금더 자세하게 보는 경향이 있기는 합니다.<br>이번에도 신한은행이 블록체인관련 뉴스가 나와서 소개드리고자 합니다.</p>
-<h2 id="1-배경"><a href="#1-배경" class="headerlink" title="1. 배경"></a>1. 배경</h2><p>기존의 블록체인 기술의 경우 송금과 개인인증의 용도로 많이 활용이 되었습니다. 이러한 한정적 사용을 넘어서 실제로 은행권에서 신용카드 사용시 적용되는 방법들을 블록체인에 적용시켜 이 기술에 대한 특허를 취득했습니다.</p>
-<h2 id="2-설명"><a href="#2-설명" class="headerlink" title="2. 설명"></a>2. 설명</h2><p>일반적으로 비트코인과 같은 암호화폐가 해결하고자 하는 것은 탈중앙화되어 체인상의 인증을 통한 개인간의 거래가 가능하도록 하는데 중점이 있습니다. 즉, 사실 은행이나 제 3자의 개입없이 송금을 하고자 하는 자와 송금을 받고자 하는 자간의 거래가 가능하도록 하는데 있습니다. 신한은행의 특허는 일반적으로 신용카드에서 많이 쓰이는 추가적인 기능들을 결합했습니다.</p>
+<p>암호화폐에 대한 소식을 전하면서 끊임없이 다가오는 것은 스캡이나 해킹에 대한 소식입니다. 일반 은행털이도 있고, FIAT에 대한 자금 세탁도 존재하지만, 암호화폐의 경우는 아직도 극초기라는 것을 증명하듯이 여전히 잦은 스캠 소식이나 해킹 소식들이 들려옵니다.</p>
+<p>이번 2019년도에 총 스캠에 의한 피해 규모가 3조 7천억원  (3.1 Billion USD) 이고 총 암호화폐 피해액은 해킹을 포함할 경우 4.3Billion USD에 이른다고 합니다.</p>
+<p>이는 Ciphers Trade라는 곳에서 발표하는 분기별 레포트에 의거합니다만, 해당 Data는 2분기용 데이터라고 합니다. 인터넷상에서는 1분기 레포트만 접근이 가능한 상태입니다 </p>
+<p>Ciphers Trade의 레포트는 피해분야를 거래소 피해, Exit 스캠 (즉, 먹튀) 와 “사기 또는 횡령등”의 분야로 나눠서 보여줍니다. 이중 <a href="https://steemit.com/sct/@jayplayco/plustoken-4-usd-46">Plus Token의 Exit 스캠이 포함</a>되어 있는데, 2.9Billion USD의 규모로 가장 크기는 합니다. </p>
+<p>2분기 레포트가 외부에도 공개되고 나면 상세하게 들여다보면서 금년도 2분기때까지 있었던 전반적인 암호화폐계의 사기/횡령건에 대해 짚어보는것도 괜찮을 것으로 보입니다. </p>
+<p>한가지 눈여겨볼 만한 것은 Cipher Trace역시 AML 레포트를 작성하는 입장에서 FATF측의 내년 하반기부터 시작할 권고안에 따른 규제로 불법 자금은 이후 더욱더 강도높은 조사를 받을 것으로 전망했습니다. 역시 FATF의 권고안 규제 이후부터는 암호화폐 자금의 현금화가 상당히 어려워질 것으로 여겨집니다.</p>
 <ul>
-<li>신용한도 발급</li>
-<li>일시불이나 할부같은 신용 결제</li>
-<li>가맹점 정산과 같은 신용 거래 프로세스</li>
-<li>카드없는 스마트폰 모바일 결제</li>
-<li>PG (payment gateway)없이 어플에서 직접 결제가능한 앱투 앱 결제</li>
+<li><a href="https://steemit.com/sct/@jayplayco/plustoken-4-usd-46">스팀잇- Plustoken 4억 USD의 (46조원) 자산 들고 잠적?</a></li>
+<li><a href="https://www.coindesk.com/exit-scams-swindled-3-1-billion-from-crypto-investors-in-2019-report">기사 코인데스크 - Exit Scams Swindled $3.1 Billion From Crypto Investors in 2019: Report</a></li>
+<li><a href="https://ciphertrace.com/articles/q1-2019-cryptocurrency-anti-money-laundering-report/">소스 CipherTrace AML report Q1</a></li>
+<li><a href="https://venturebeat.com/2019/08/12/ciphertrace-cryptocurrency-thefts-scams-and-fraud-could-hit-4-3-billion-in-2019/">기사 venturebeat.com-CipherTrace: Cryptocurrency thefts, scams, and fraud could hit $4.3 billion in 2019 </a></li>
 </ul>
-<h2 id="3-기술의-이해"><a href="#3-기술의-이해" class="headerlink" title="3. 기술의 이해"></a>3. 기술의 이해</h2><p>한국의 경우 일반적으로 많이 사용하는 신용카드의 경우 실제로 신용카드 회사가 한 사람의 신용도를 평가해서 보통은 약 30일동안 미리 돈을 쓰고 추후에 한꺼번에 갚도록 만든 시스템이다. 신한은행은 블록체인에 이 시스템을 심어서 간단하게 예를 들어, 신용도를 평가할 수 있는 기반을 마련해서 이를 블록체인에 기록하고 사용이 가능하도록 해서 (아마도 해당 블록체인 주소에 KYC는 무조건 적용될 것으로 보입니다.) 비트코인 거래를 할때 1 비트코인만큼 거래를 하고 싶을때 이를 할부해서 거래가 가능하도록 만들어주는 기술입니다.</p>
-<h2 id="4-적용-가능-영역"><a href="#4-적용-가능-영역" class="headerlink" title="4. 적용 가능 영역"></a>4. 적용 가능 영역</h2><p>사실상 현재로썬 암호화폐가 실경제에 할부까지 해서 사는 거래는 거래소의 마진 거래정도가 떠오릅니다. 이는 Bittrex나 이제는 Binance같은 곳에서도 이미 제공을 하는 서비스인 관계로 굳이 신한은행의 기술을 써야할 이유는 따로 없습니다. 하지만 리브라와 같은 프로젝트들이 성공했을 경우 신한은행이 특허까지 받은 이 기술들의 경우는 폭넓게 활용될 수 있다.</p>
-<p>현재는 특허를 추가적으로 미국, 일본, 중국, EU, 베트남, 인도네시아등 전세계에 특허를 출원중인 신한은행의 발빠른 움직임은 제도권 업체들의 준비도 한발자국씩 마련이 되고 있는 것을 느끼는 대목입니다.</p>
-<h2 id="5-개인적인-생각"><a href="#5-개인적인-생각" class="headerlink" title="5. 개인적인 생각"></a>5. 개인적인 생각</h2><p>신한은행이 해외 뉴스에 암호화폐 관련 비교적 자주 등장하는 편입니다. 5월달에는 비대면 대출에 블록체인 기술을 적용한 사례가 발표되었고, 또한 FATF의 규제 방안에도 가장 빠르게 움직임이 포착된것도 신한은행입니다.</p>
-<p>이번 신용결제를 블록체인에 올리고 이에 대한 특허까지 미리 신청해서 전세계에 출원한 것은 추후 암호화폐가 Payment가 되는 단계를 미리 준비했다고 생각합니다. 지속적으로 신한은행측에서 블록체인 관련 기술들을 은행권 실생활에 적용하고 미리 준비하는 속도를 유지한다면, 추후 블록체인 기술이 금융권 혁신을 강요했을 때 앞장 서는 기업중 하나가 될 것으로 짐작됩니다.</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-11T14:48:30.000Z">2019-08-11</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B0%80%EC%83%81%ED%99%94%ED%8F%90/">가상화폐</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    7분 읽기 (대략 1031 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/11/jayplayco.2jy8vn-coinnews/">[Coinnews] 중국 중앙은행 가상화폐 준비 완료되었다고 함</a>
+            
+        </h1>
+        <div class="content">
+            <center>![](https://cdn.steemitimages.com/DQmTPKcx8ZwTm4nR8ytqYT4bc5d7pJtAfr47TNTwXpSvocz/image.png)</center>
+
+<p>안녕하세요, @jayplayco 입니다. </p>
+<p>이번 China Finance 40 Forum 중국 정부는 5년의 개발기간을 거친 블록체인 설계의 프로토타입이 완성되었다고 합니다. </p>
+<h2 id="1-중국-정부의-가상화폐"><a href="#1-중국-정부의-가상화폐" class="headerlink" title="1. 중국 정부의 가상화폐"></a>1. 중국 정부의 가상화폐</h2><p>이 시스템은 Tier를 2개를 거친 시스템입니다. 이유로는 중국과 같은 규모의 나라가 가상화폐를 쓰고자 하는 블록체인의 경우는 1 티어로는 감당이 되지 않을것이기 때문이라고 합니다. 이때 2 티어의 구성은 다음과 같습니다.</p>
 <ul>
-<li><a href="https://www.coindesk.com/koreas-biggest-credit-card-firm-wins-patent-for-blockchain-credit-system">기사 Coindesk- Korea’s Biggest Credit Card Firm Wins Patent for Blockchain Credit System</a></li>
-<li><a href="http://www.koreatimes.co.kr/www/biz/2019/07/175_272321.html">기사 The Korea times - Shinhan Card develops blockchain-based payment system</a></li>
-<li><a href="http://www.koreatimes.co.kr/www/biz/2019/07/175_272321.html">기사 서울경제- 블록체인에 꽂힌 신한</a></li>
+<li>Upper Level : PBoC가 주최가 되는 (중국 중앙은행)</li>
+<li>Second Level: 일반 시중 은행</li>
 </ul>
+<p>현재 이 의미가 기술적으로 Tier가 나뉘었는지 아니면 사용 형식상 나눴는지는 확실하게 나와있지는 않습니다. 그러나 큰 그림으로 봤을때는 아마도 현재 일반 화폐의 중앙은행 개념처럼, 블록체인 1Tier의 경우 (중국 중앙은행)은 해당 블록체인 화폐의 발권력을 컨트롤을 하고, Tier2의 일반 중국의 시중 은행 (이나 외국은행도 참여 가능성이 있음) 이 발권된 가상화폐로 거래를 할 수있도록 세팅되어졌을 것으로 예상됩니다.</p>
+<p>이번 중국 중앙은행의 가상화폐는 많은 사람들이 이용하는 소규모 리테일에 최적화되어 있어서, 소액결제가 빠르게 가능하도록 설계가 되었을 것으로 예상됩니다.</p>
+<h2 id="2-페북-리브라와의-차이점"><a href="#2-페북-리브라와의-차이점" class="headerlink" title="2. 페북 리브라와의 차이점"></a>2. 페북 리브라와의 차이점</h2><p>페북의 리브라는 현재 미국을 비롯한 각 국가의 역풍을 맞으면서 스테이블 코인을 세팅하는데 어려움이 있는 상황입니다. 개인적으로 정말로 블록체인 개발을 위해 중국과 같은 자본과 인력을 움직이는 나라에서 5년씩이나 개발을 했을까 하는 의구점이 들지만, 기술적으로는 충분히 실용가능성이 있는 제품이 나왔을 확률이 높을것으로 보입니다.</p>
+<p>또한 중앙화된 국가가 받혀주는 블록체인과 가상화폐의 경우는 엄청난 내수시장을 바탕으로 빠르게 중국내에서 확산이 가능할 것으로 보입니다. </p>
+<p>이를 바탕으로 과연 이 통화가 리브라를 대체를 할 수 있겠느냐를 고민해보면, 현재의 위안화와 비슷한 처지에 있습니다. 결국은 화폐의 가치는 기준 자체는 운영주체의 신뢰에서 오기 마련인데, 어차피 중국 중앙은행의 컨트롤하에 있는 가상화폐의 경우는 위안화와 크게 다를 것은 없을 것으로 보입니다. 또한 현재는 스테이블 코인으로 세팅이 되어야 겠지만, 페북처럼 자산가치를 바탕으로 하는 설계일지, 단순히 중국 중앙은행의 신뢰를 바탕으로 스테이블화를 이룰지도 관건이 될 것으로 보입니다.</p>
+<h2 id="3-개인적인-생각"><a href="#3-개인적인-생각" class="headerlink" title="3. 개인적인 생각"></a>3. 개인적인 생각</h2><p>확실히 리브라 프로젝트가 주춤거리는 사이를 치고 들어가는 모습이 보이는 것은 확실합니다. 우선 정부 차원의 지원하에 치고 나가는 블록체인 프로젝트중 가장 자본의 <code>화력</code>을 뒷받침해줄 수 있는 국가 프로젝트이기 때문에 눈여겨 봐야할것으로 보이긴 합니다.</p>
+<p>다만, 내수 경제사용으로 끝나게될 수단일지 (널리 사용되고 있는 Wechat Pay와 비슷하게) 아니면 암호화폐중 세계의 한 자리를 차지하게 될지는 지켜봐야할 것으로 보입니다.</p>
+<ul>
+<li><a href="https://cointelegraph.com/news/chinas-digital-currency-is-ready-central-bank-says">기사 코인텔레그래프 - China’s Digital Currency Is Ready, Central Bank Says</a></li>
+</ul>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-10T14:45:12.000Z">2019-08-10</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/steem/">steem</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    7분 읽기 (대략 1087 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/10/jayplayco.morpheus-lab/">[스팀잇] Morpheus Lab과 스팀재단 파트너쉽과 그 의미</a>
+            
+        </h1>
+        <div class="content">
+            <center>https://steemitimages.com/640x0/https://cdn.steemitimages.com/DQmWnsEmdAMmZBMV7da9daQqDATRfMVYbSfzGCV1hum131C/Screen%20Shot%202019-08-09%20at%2011.04.29%20AM.png</center>
+
+<p>안녕하세요, @jayplayco입니다.</p>
+<p>스팀재단에서 Morpheus Lab이라는 곳과 전략적 파트너쉽을 맺었다는 소식이 @steem.marketing 계정으로 통해 알려저셨습니다. 이에 대한 기본적인 취지는 스팀기반 댑들의 진입을 더욱더 쉽게 할 수 있도록 하고자 하는 장치입니다.</p>
+<h2 id="1-배경"><a href="#1-배경" class="headerlink" title="1. 배경"></a>1. 배경</h2><center>![](https://cdn.steemitimages.com/DQmamYCdhgWjWB5JKYHCyibj9LN5FVmydaxdb6Ge6QpPSeE/image.png)</center>
+Morpheus Labs는 일명 SAAS (Software as a Service)가 아닌 BPaaS (Blockchain Platform as a Service)라는 새로운 용어를 세팅하면서 서비스를 제공하고 있습니다. 이는 결국 블록체인관련 개발을 할때 사실 읽어야 할 내용도 많고, 보통은 그에 대한 정보들도 흩어져있기 때문에 개발을 위해서는 많은 시간이 필요하고 또한 해당 블록체인에서 사용하는 언어도 새로 배워야 할 경우도 있습니다.
+
+<p>Morpheus Labs의 경우는 이를 해결하기 위해 자체적인 플랫폼을 제공해서 조금더 간편하게 원하는 블록체인에 댑을 개발하기 위한 기반을 제공한다고 생각하시면 됩니다.</p>
+<h2 id="2-Morpheus-Labs가-주는-의미"><a href="#2-Morpheus-Labs가-주는-의미" class="headerlink" title="2. Morpheus Labs가 주는 의미"></a>2. Morpheus Labs가 주는 의미</h2><p><a href="https://www.youtube.com/watch?v=k9KVww6rGzk">https://www.youtube.com/watch?v=k9KVww6rGzk</a><br>원문에 있는 댓글에 달린 cryptodaily의 인터뷰가 사실상 Morpheus Labs가 하는 일을 좀더 자세히 설명을 해주기는 합니다. 쉽게 얘기해서는 Morpheus Labs는 블록체인 개발에 조금더 쉽게 다가가기 위해서 완벽한 솔류션을 제공한다기 보다는 하나의 블록체인 작업대와 비슷한 것을 제공한다고 생각하면 될 것입니다.</p>
+<p>그래도 이해가 어렵기는 한데, 기업의 투자입장에서 보면, 스팀 블록체인에 접근하기 위해 들어가는 개발 리소스를 일부 Morpheus Labs를 이용해서 줄일 수 있는 장점이 있을 수 있습니다. 물론 SaaS와 마찬가지로, 완전 맞춤형으로 했을 경우에느 분명히 한계가 있기는 할것입니다.</p>
+<h2 id="3-이-파트너쉽이-갖는-의미"><a href="#3-이-파트너쉽이-갖는-의미" class="headerlink" title="3. 이 파트너쉽이 갖는 의미"></a>3. 이 파트너쉽이 갖는 의미</h2><center>![](https://cdn.steemitimages.com/DQmZqWvmZd3mWJLWWPbRb4G5Jqf5DtS1QiH52CWzVGUq2CX/image.png)</center>
+Morpheus Labs는 싱가폴에 본사를 두고 약 20명이 넘는 직원이 있는것으로 예상됩니다. 실제로 스팀 외에도 Wanchain, KardiaChain과 같은 곳과도 파트너쉽을 최근에 맺고 활동을 확장해나가고 있는 상태입니다.
+
+<p>다만, 외부에서는 확인이 안되는 것은 실제로 이 서비스를 이용해서 각 블록체인들에서 유료서비스를 이용해서 개발을 하고 있는 업체의 종류나 규모에 대해서는 알 수 있는 길이 없습니다. 또한 개발자가 아니라서 이 서비스가 Morpheus Labs의 주장대로 70%의 비용절감이 될지는 판단이 되지는 않습니다.</p>
+<p>스팀 입장에서는 외부적으로 스팀 블록체인이 한군데라도 더 쓰임이 있다면 이점으로 작용하는 관계로 특별히 반대해야 할 이유는 없습니다. 결국은 Morpheus Labs가 걷어들이는 사용료의 일부를 스팀재단에 떼어주지 않는 한은 마케팅적인 수단이고, 그 효용성이 있을지 없을지를 떠나서 지속적을 움직이고 활동을 하고 있는것을 반겨야 할 것으로 보입니다. STEEM이라는 5글자가 사실상 언론보도상 사라진지도 이제 꽤 오래된 상태이기 때문에, 현재는 어떠한 종류의 노이즈라도 좋은 마케팅의 시기가 되었습니다.</p>
+<ul>
+<li><a href="https://steemit.com/steemit/@steem.marketing/steemit-partners-with-morpheus-labs-for-steem-as-a-service">스팀재단 기사- Steemit Partners with Morpheus Labs for Steem-as-a-Service</a></li>
+<li><a href="https://medium.com/@morpheuslabs_io/morpheus-labs-and-steem-announce-partnership-415815c062f8">Morpheus Labs 미디엄 기사</a></li>
+<li><a href="https://morpheuslabs.io/about-us">Morpheus Labs 홈페이지</a></li>
+<li><a href="https://www.linkedin.com/company/morpheuslabs-io">Morpheus Labs Linkedin</a></li>
+<li><a href="https://cryptodaily.co.uk/2019/04/morpheus-labs-ceo-pei-han-chuang-interviewed-by-randy-hilarski-of-cryptodaily">cryptodaily.co.uk - The CEO Of Morpheus Labs Pei-Han Chuang Is Trying To Make Adoption Of Blockchain Easier For The Corporate World. </a></li>
+</ul>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-10T02:03:24.000Z">2019-08-10</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    5분 읽기 (대략 711 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/10/jayplayco.hunt-how-to-use-reviewhunt-part-i-dashboard/">[Hunt] How to use Reviewhunt Part I. Dashboard</a>
+            
+        </h1>
+        <div class="content">
+            <center>![](https://cdn.steemitimages.com/DQmcyzCfAw7FXnFnFX5eNALmbACB1T4cfWGNWdP9NiHxYYj/image.png)</center>
+
+<p>Hi, @jayplayco here.</p>
+<p>It is now already a few days ago that Reviewhunt has launched, but I would like to give some tips on how you can optimize it or just start it. This tutorial is made for Hunters who want to review and take part in Reviewhunt.</p>
+<h2 id="0-The-beginning"><a href="#0-The-beginning" class="headerlink" title="0. The beginning."></a>0. The beginning.</h2><ul>
+<li><a href="https://review.hunt.town/i/19">Go to Reviewhunt</a><br>First of all, you will need to have an account at Reviewhunt.  Don’t worry, almost anybody can register to Reviewhunt just with an email and releasing some core information about you.</li>
+</ul>
+<center>![](https://cdn.steemitimages.com/DQmd1d3ZH6truTLExLLGY3fkMyES9mzsug5p8WrnaGNxYj9/image.png)</center>
+
+<p>Choose to <code>Sign Up</code> and input the following information.</p>
+<ul>
+<li>Full Name</li>
+<li>Email address (is needed to log in) and password </li>
+<li>Country of Residence (is needed if a maker is targeting a specific market)</li>
+<li>Gender</li>
+<li>Age</li>
+</ul>
+<p>If you have been familiar with Steemhunt, you will see that you don’t need any Steem information at this stage.</p>
+<h2 id="1-The-Dashboard"><a href="#1-The-Dashboard" class="headerlink" title="1. The Dashboard"></a>1. The Dashboard</h2><p>After the Sign-up and Login, you will see a new menu on the top. </p>
+<center>![](https://cdn.steemitimages.com/DQmdNTPeUTQg27J15a8gspGAYau33PL9LhGYwux2r8x2khc/image.png)</center>
+
+<p>Press the Dashboard to move to your own account information.</p>
+<center>![](https://cdn.steemitimages.com/DQmRqv6VXedPQuqh8oLJfwCZXJuMjanJbpHTnASw38Wc1qh/image.png)</center>
+
+<p>Under profile, you will see your basic information, how many HUNT tokens you have already received with bounties and how your performance is. As you can see, there are more than 11% that are performing much better than myself on different channels at Reviewhunt.</p>
+<ul>
+<li><p>Profile: Here you can match you Steem Account with the Reviewhunt account. The background here is, that you will need a Steem account to be able to transfer your HUNT bounties later out of your account. The process is easy to understand if you have been used to log in with Steemconnect.</p>
+</li>
+<li><p>Quest Dashboard</p>
+<center>![](https://cdn.steemitimages.com/DQmf9bW47628N1JRNX5dta7BTCXKfkezHDhEmYX5Sfr3t9G/image.png)</center>
+Here you can see what kind of quests you have currently joined and in with phase you are on each quest.
+You can see that I have almost finished the Reviewhunt Quest and not yet started the Buzzi Quest. It gives you a fast overview and also direct access when you click on each quest to the task you need to do.
+</li>
+<li><p>Wallet</p>
+<center>![](https://cdn.steemitimages.com/DQmUcs5hRN9SyyYcsr8F9ktFtwyLhkf1ntfGYptqHSTTHpS/image.png)</center>
+You may have a Deja Vu feeling when you see this wallet if you are Steemhunt user. The design and function are the same and you can connect the internal off-chain wallet to your Steem account and also to an external wallet. Additionally, you will see the whole history of your rewards you have got within the HUNT economy.
+
+<ul>
+<li>Buzz Channels<center>![](https://cdn.steemitimages.com/DQmWMHyztNUJEzWbbVf4v3NQ4XT5SgSjtVPsMf87tLAWqQR/image.png)</center>
+Here you can add your social media channels you have direct control of. You can add almost any channel you want, as Reviewhunt as the part `others`. On the main channels Reviewhunt is targeting, you can get directly the information about how many followers you have there, what the engagement rate is and an estimated rate how many HUNT tokens you could theoretically earn per posting. The numbers are calculated at the moment mainly on the information based on each channel, like followers, resteems, retweets, views, etc. but will get more accurate when Reviewhunt will have more data on each Hunters activity. 
+You can see that my main channel is Steem and that I am not that active on other channels.
+</li>
+</ul>
+</li>
+<li><p>Referral</p>
+<center>![](https://cdn.steemitimages.com/DQmZaiAJZLtGKdBzBNSSkFBGRzu55ZR2QdRtRQBbxKdtyxf/image.png)</center>
+If you are very active in acquiring people, you will like this part. Reviewhunt is offering each 5% Bonus for getting not only Hunters but also Makers on board. For Hunters, you will get always 5% of the earned HUNT rewards and for makers, you will get 5% from the Makers campaign budget, which can be quite high.
+Each hunter will get a separate referral link, which you can find under the tab `Referral`.
+
+</li>
+</ul>
+<p>If you haven’t yet signed up at <a href="https://review.hunt.town/i/19">Reviewhunt</a>, you are free to use my link to join :)</p>
 
         </div>
         
@@ -962,7 +905,7 @@
             
             <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
             
-            <li><a class="pagination-link has-text-black-ter" href="/page/90/">90</a></li>
+            <li><a class="pagination-link has-text-black-ter" href="/page/93/">93</a></li>
             
         </ul>
     </nav>
@@ -1012,7 +955,7 @@
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            895
+                            925
                         </p>
                     </a>
                 </div>
@@ -1240,7 +1183,7 @@
                 <span class="level-item">미분류</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">297</span>
+                <span class="level-item tag">327</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/%EC%9D%B4%EB%B2%A4%ED%8A%B8/">
@@ -1286,8 +1229,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-06T20:02:39.000Z">2020-07-07</time></div>
-                    <a href="/2020/07/07/jayplayco.diarygame-2020-7-7/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Diarygame] 2020년 7월 7일 - 다이어리게임 재미있는 통계들</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-21T21:38:24.000Z">2020-07-22</time></div>
+                    <a href="/2020/07/22/jayplayco.94wf3-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 비트베리 지갑 해킹</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
                     </p>
@@ -1299,8 +1242,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-06T19:14:33.000Z">2020-07-07</time></div>
-                    <a href="/2020/07/07/jayplayco.51vq5w-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 바이낸스 관련된 몇가지 사실들</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-20T21:40:45.000Z">2020-07-21</time></div>
+                    <a href="/2020/07/21/jayplayco.wb253-coinnews-btc/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 사토시의 BTC</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
                     </p>
@@ -1312,8 +1255,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-06T18:00:15.000Z">2020-07-07</time></div>
-                    <a href="/2020/07/07/jayplayco.6jmjuc-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 텔레그램을 통한 사기수법</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-20T03:00:09.000Z">2020-07-20</time></div>
+                    <a href="/2020/07/20/jayplayco.7r4cpj-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 흔한 소셜 미디어 사기들</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
                     </p>
@@ -1325,8 +1268,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-05T22:11:51.000Z">2020-07-06</time></div>
-                    <a href="/2020/07/06/jayplayco.5q4qk7-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 크립토 월세의 개념</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-19T22:03:24.000Z">2020-07-20</time></div>
+                    <a href="/2020/07/20/jayplayco.5txpuz-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 카이버 네트워크 신디케이트</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
                     </p>
@@ -1338,8 +1281,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-05T20:56:00.000Z">2020-07-06</time></div>
-                    <a href="/2020/07/06/jayplayco.2wkdgf-steemit/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Steemit] 코인마켓캡의 스팀잇 연재 시작</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-19T21:47:57.000Z">2020-07-20</time></div>
+                    <a href="/2020/07/20/jayplayco.coinnews-ceo/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 바이낸스 CEO가 바라보는 좋은 토큰이란?</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
                     </p>
@@ -1364,7 +1307,7 @@
                     <span class="level-item">7월 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">19</span>
+                    <span class="level-item tag">49</span>
                 </span>
             </a>
         </li>
@@ -1748,7 +1691,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/">
                         <span class="tag">미지정</span>
-                        <span class="tag is-grey">557</span>
+                        <span class="tag is-grey">587</span>
                     </a>
                 </div>
                 
@@ -1806,8 +1749,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-06T20:02:39.000Z">2020-07-07</time></div>
-                    <a href="/2020/07/07/jayplayco.diarygame-2020-7-7/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Diarygame] 2020년 7월 7일 - 다이어리게임 재미있는 통계들</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-21T21:38:24.000Z">2020-07-22</time></div>
+                    <a href="/2020/07/22/jayplayco.94wf3-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 비트베리 지갑 해킹</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
                     </p>
@@ -1819,8 +1762,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-06T19:14:33.000Z">2020-07-07</time></div>
-                    <a href="/2020/07/07/jayplayco.51vq5w-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 바이낸스 관련된 몇가지 사실들</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-20T21:40:45.000Z">2020-07-21</time></div>
+                    <a href="/2020/07/21/jayplayco.wb253-coinnews-btc/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 사토시의 BTC</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
                     </p>
@@ -1832,8 +1775,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-06T18:00:15.000Z">2020-07-07</time></div>
-                    <a href="/2020/07/07/jayplayco.6jmjuc-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 텔레그램을 통한 사기수법</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-20T03:00:09.000Z">2020-07-20</time></div>
+                    <a href="/2020/07/20/jayplayco.7r4cpj-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 흔한 소셜 미디어 사기들</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
                     </p>
@@ -1845,8 +1788,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-05T22:11:51.000Z">2020-07-06</time></div>
-                    <a href="/2020/07/06/jayplayco.5q4qk7-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 크립토 월세의 개념</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-19T22:03:24.000Z">2020-07-20</time></div>
+                    <a href="/2020/07/20/jayplayco.5txpuz-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 카이버 네트워크 신디케이트</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
                     </p>
@@ -1858,8 +1801,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-05T20:56:00.000Z">2020-07-06</time></div>
-                    <a href="/2020/07/06/jayplayco.2wkdgf-steemit/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Steemit] 코인마켓캡의 스팀잇 연재 시작</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-19T21:47:57.000Z">2020-07-20</time></div>
+                    <a href="/2020/07/20/jayplayco.coinnews-ceo/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 바이낸스 CEO가 바라보는 좋은 토큰이란?</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
                     </p>
@@ -1884,7 +1827,7 @@
                     <span class="level-item">7월 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">19</span>
+                    <span class="level-item tag">49</span>
                 </span>
             </a>
         </li>
@@ -2268,7 +2211,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/">
                         <span class="tag">미지정</span>
-                        <span class="tag is-grey">557</span>
+                        <span class="tag is-grey">587</span>
                     </a>
                 </div>
                 
@@ -2442,7 +2385,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
 
-<a id="back-to-top" title="Back to Top" href="javascript:;">
+<a id="back-to-top" title="Kembali ke atas" href="javascript:;">
     <i class="fas fa-chevron-up"></i>
 </a>
 <script src="/js/back-to-top.js" defer></script>

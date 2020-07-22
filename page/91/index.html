@@ -1,0 +1,2408 @@
+<!DOCTYPE html>
+<html  lang="ko">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 4.2.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>제플코 제이의 블록체인</title>
+
+
+    <meta property="og:type" content="website">
+<meta property="og:title" content="제플코 제이의 블록체인">
+<meta property="og:url" content="http://jayplayco.github.io/page/91/index.html">
+<meta property="og:site_name" content="제플코 제이의 블록체인">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="http://jayplayco.github.io/images/og_image.png">
+<meta property="article:author" content="Jayplayco">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://jayplayco.github.io/images/og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/logo.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+<style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+    
+    
+    
+    
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159211538-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-159211538-1');
+</script>
+
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="제플코 제이의 블록체인" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item"
+                href="/">Home</a>
+                
+                <a class="navbar-item"
+                href="/archives">Archives</a>
+                
+                <a class="navbar-item"
+                href="/categories">Categories</a>
+                
+                <a class="navbar-item"
+                href="/tags">Tags</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    <a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                
+                <a class="navbar-item search" title="검색" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-05-30T15:09:18.000Z">2018-05-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B0%9C%EB%B0%9C/">개발</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6분 읽기 (대략 933 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/05/31/jayplayco.steemhunt-abv-account-based-voting-in-development/">[Steemhunt] ABV (Account based voting)  in development</a>
+            
+        </h1>
+        <div class="content">
+            <p>Hi @jayplaco here! Some development news from @steemhunt</p>
+<h3>0. Repository</h3>
+https://github.com/Steemhunt/
+
+<p><img src="https://cdn.steemitimages.com/DQmWpr3f9qrH8NPoANLdwigdnumsfi1n4V9qo7YDjqm1o2n/image.png" alt=""><br>Today we are going to talk about the current situation at Steemhunt, where the quality of the content is not driving the community but the use of bots in the background for a successful hunt.</p>
+<p>The Steemhunt team is already aware about this issue and for that reason a github issue has been opened and after talking to the main dev. of Steemhunt (@tabris) the implementation is already planned for the next weeks.</p>
+<p>So let`s start to see what the issue is and what AVB would give the Steemhunt community.</p>
+<h3>1. Find the problem of voting  / Bug Fixes</h3>
+
+<p><a href="https://steemit.com/life/@exyle/ac2xvvfi">Steemhunt, vote bots, incentives and why they need SMT’s @exyle</a><br><a href="https://steemit.com/kr/@sirin418/4awf1l">Is Steemhunt Abusing? @sirin418 (Text in Korean)</a><br><a href="https://steemit.com/utopian-io/@tio/add-flag-feature-on-steemhunt">Add Flag Feature on steemhunt @tio</a></p>
+<p>Some users already have found that the current setting can be abused with bots to get easily a higher daily ranking. In fact, the users are doing it on daily base now and it comes to the same issue steemit has in background that not the content is speaking but the steempower.</p>
+<div class="pull-left">  
+https://steemitimages.com/400x300/https://cdn.steemitimages.com/DQmdUtcV2uLv5MBN5Hm6BSNasFkF58tkPbX7z1qWAYWC4xT/image.png
+<center>[Picture 1]</center>
+</div> 
+<div class="text-justify">  
+With "Picture 1" we can see the current No.1 of Today`s ranking from Steemhunt. There is almost no text (so no offence, but I don`t consider this as quality content...), a picture and that was it. How does it happen that this post is ranking No.1?  The answer is easy if you have a look who is actually voting<div><center>
+https://steemitimages.com/300x200/https://cdn.steemitimages.com/DQmW9GQNbeqCwcfLYRbQjhDbnR2TU94NhiZgSwoRp6Ha7S1/image.png</center></div>
+</div> 
+The highest voter here is called tribesteemup which is a collective voting bot. And with more than 80% of the total vote it is the highest voting power here. Using this strategy you can actually max out your ROI with relatively small or no investment (dependent on what kind of bot you are using.)
+
+<h3>2. Yeah, let`s use ABV, but what is that? </h3>
+
+<p><a href="https://steemit.com/steem/@liberosist/the-account-based-voting-revolution">The account-based voting revolution - @liberosist</a><br><a href="https://steemit.com/steemit/@nealmcspadden/account-based-voting-is-a-terrible-idea-for-steem">Account Based Voting is a Terrible Idea for STEEM - @nealmcspadden</a></p>
+<p>@ned has mentioned ABV (Account based voting) on his Korea tour and there are pros and cons on it, but to explain it easily see below,</p>
+<p><strong>A. Current voting system.</strong></p>
+<ul>
+<li>The more steem power you have, more voting power you get, which means you can give more money.</li>
+<li>problem : bots, curation groups, curation trails, voting pools.</li>
+</ul>
+<p><strong>B.  Account based voting</strong></p>
+<ul>
+<li>One account counts has only one voting power</li>
+<li>problem : without any weighting of an account a spam account has the same power as a whale account. This is what @nealmcspadden is talking about.</li>
+</ul>
+<h3>3. Approach from Steemhunt team / New Features</h3>
+github entry : https://github.com/Steemhunt/web/issues/135
+
+<p><strong>Logic</strong></p>
+<ul>
+<li>One upvote has 10 points with 100% vp.</li>
+<li>The point proportionally decrease based on the hunter’s set vp. For example, the hunter upvotes with 50% vp, the score will be 5 point.</li>
+<li>Whitelist: Scores are only be counted by the user who have hunted AT LEAST ONE TIME. </li>
+</ul>
+<p><strong>Possible Progress (Just examples and not fixed)</strong></p>
+<ul>
+<li>More intensive whitelist: counted by the hunters with at least three times, exclude blacklist hunters, etc.</li>
+<li>Hunter’s badge system: We can level the hunters based on their hunting history, from Lv.1 to Lv.5.</li>
+</ul>
+<p><strong>Lv.1: 1 hunts (1 full voting score: 10 poinst)</strong><br><strong>Lv.2: 10 days hunting + 10 times upvoting the hunting posts (1 full voting score: 20 poinst)</strong><br><strong>Lv.3: Lv.2 + at least 3 times on top 10 hunts (1 full voting score: 30 poinst)</strong><br><strong>Lv.4: Lv.2 + at least 5 times on top 10 hunts (1 full voting score: 50 poinst)</strong><br><strong>Lv.5: 30 days hunting + 30 times upvoting the hunting posts + at least 10 times on top 10 hunts. (1 full voting score: 100 poinst)</strong><br><strong>The Lv can be downgraded if the hunter does not have any hunting or voting activities more than 10 days. (Lv 5 -&gt; Lv 4 -&gt; …)</strong></p>
+<h3>4. So what does that mean? </h3>
+
+<p>@steemhunt will give only active Steemhunters the possibility to vote (whitelist) and level them with badges to differentiate the reputation within the community. Based on the given voting power% a vote can count from 0-100. (Based on your level) The badge system gives different levels to activate the hunters for better content.  All this steps are planned to give active hunters with high quality content the best chance for the highest rewards. </p>
+<h3>5. Roadmap</h3>
+
+<p>It is planned to test the first settings next week, but there is in this moment no official deadline from team @steemhunt , but the main dev. from Steemhunt mentioned that it is very a high priority before scaling to the next stage. So let`s see how this will change the quality of the content at steemhunt.</p>
+<h3>6. Github Account</h3>
+https://github.com/zionopia
+______
+Thanks for reading!
+
+<p>Other articles about Steemhunt.<br><a href="https://steemit.com/steemit/@jayplayco/what-is-steemhunt-and-why-should-i-care">What is Steemhunt and why should I care?</a><br><a href="https://steemit.com/steemit/@jayplayco/biggest-airdrop-ever-hunt-token-and-how-to-participate">Biggest Airdrop ever - HUNT token and how to participate</a></p>
+<p>Join their chat channels if you need more information as the team and the moderators are answering very fast on any question:</p>
+<p>Discord: <a href="https://discord.gg/mWXpgks">https://discord.gg/mWXpgks</a> (this is where the magic happens)<br>Telegram: <a href="https://t.me/joinchat/AzcqGxCV1FZ8lJHVgHOgGQ">https://t.me/joinchat/AzcqGxCV1FZ8lJHVgHOgGQ</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-05-29T23:53:51.000Z">2018-05-30</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    몇 초 읽기 (대략 30 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/05/30/jayplayco.ty6alwd0v/">ty6alwd0v</a>
+            
+        </h1>
+        <div class="content">
+            <p>Just downloaded the app and love it!<br>It is a great “out of the box” thinking to be able to add wanted users and get information based on their activities.</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-05-29T23:42:39.000Z">2018-05-30</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    몇 초 읽기 (대략 68 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/05/30/jayplayco.b9r2t0xmi/">b9r2t0xmi</a>
+            
+        </h1>
+        <div class="content">
+            <p>Thanks for this great overview about Steemhunt! Just found you over this vlog and it is really interesting to listen to the thoughts from a different view and insight.<br>Thanks a lot for that.</p>
+<p>It would be an honour if you could have a look at my post about steemhunt, if you find a moment.</p>
+<p><a href="https://steemit.com/steemit/@jayplayco/what-is-steemhunt-and-why-should-i-care">https://steemit.com/steemit/@jayplayco/what-is-steemhunt-and-why-should-i-care</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-05-29T23:40:36.000Z">2018-05-30</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    몇 초 읽기 (대략 56 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/05/30/jayplayco.usked6er9/">usked6er9</a>
+            
+        </h1>
+        <div class="content">
+            <p>Hi @exyle nice vlog about steemhunt and it is very interesting to see the thoughts from different views.<br>It would be an honour if you could have a look at one text from me about steemhunt written here.<br><a href="https://steemit.com/steemit/@jayplayco/what-is-steemhunt-and-why-should-i-care">https://steemit.com/steemit/@jayplayco/what-is-steemhunt-and-why-should-i-care</a></p>
+<p>Thanks and following your vlogs. :)</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-05-29T21:38:33.000Z">2018-05-30</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B0%80%EC%83%81%ED%99%94%ED%8F%90/">가상화폐</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    9분 읽기 (대략 1385 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/05/30/jayplayco.biggest-airdrop-ever-hunt-token-and-how-to-participate/">Biggest Airdrop ever - HUNT token and how to participate</a>
+            
+        </h1>
+        <div class="content">
+            <p>Hi, @jayplayco back here with another article about @Steemhunt !</p>
+<p>As a Steemian newbie it was really refreshing to see that there is a way to mine coins with writing good content at Steemit.</p>
+<p>Especially for Newbies like me I`ve found a good service based on Steemit called @steemhunt and available at <a href="http://steemhunt.com">http://steemhunt.com</a>.</p>
+<p>Long story short, <strong>Steemhunt is a steemit based producthunt. </strong><br>Read also : <a href="https://steemit.com/steemit/@jayplayco/what-is-steemhunt-and-why-should-i-care">Article about what Steemhunt is!</a></p>
+<p>This time we are going to learn about the airdrop Steemhunt is currently planning, as this will be one of the biggest airdrops available at Steemit.</p>
+<p><strong><h3>1. What is a Hunt Token?</h3></strong><br>Hunt Token is going to be a Smart Media Token (<a href="https://steemit.com/steem/@ned/announcing-smart-media-tokens-smts">SMT</a>) based Token, which means that it will be build based on the <a href="https://smt.steem.io/">Whitepaper</a> from Ned back in Sep 2017. It is going to be a decentralised token system to reward product influencers, buy kickstarted products and help makers and brands to reach out product influencers on the Steemhunt.com platform.</p>
+<p>At Steemhunt the HUNT Tokens can be earned being actively writing product reviews and on the other side there is are separate categories where makers can earn HUNT Tokens kickstarting projects (Ideahunt) and also can spend HUNT Tokens to recruite product reviewer (Reviewhunt)</p>
+<p>Steemhunt is going to issue 500M HUNT Tokens and 50% of them are going to be airdropped. Yes, you read it right, 50%, in total 250M HUNT Tokens are going to be distributed.</p>
+<p><strong><h3>2. What does the HUNT Token distribution looks like?</h3></strong><br><img src="https://cdn.steemitimages.com/DQmbX1bEMiEr5nXnQ9cdVfajGR8k9zy3YExeUBxSLMV1Pcf/image.png" alt=""><br><img src="https://cdn.steemitimages.com/DQmW7izfiQDcikYsaRuRrrRBPke77EPWcQudVwpt4JWzsSx/image.png" alt=""></p>
+<p><strong><h3>3. Give me HUNT Tokens! But how?</h3></strong></p>
+<p>There are in total 5 different ways to gain HUNT Tokens from the Airdrop for FREE! (20% of the volume are going to be into the private sale sector, so will not count them here!)</p>
+<ul>
+<li>Get it if you <strong>have Steem Power</strong> (beg. July 2018)</li>
+<li>Get it if you <strong>delegate Steem Power</strong> (available NOW)</li>
+<li>Get it if you <strong>collect Referrals</strong> (end July 2018)</li>
+<li>Get it if you <strong>Vote and resteem articles</strong> (beg. June 2018)</li>
+<li>Get if if you <strong>Hunt products and review them</strong> (end July 2018)</li>
+</ul>
+<p>So let`s get into it step by step. Be informed that most of the Airdrop schedules are still not prepared and we are going to wait for announcements from Steemhunt.</p>
+<h3>**a.Have Steem Power**</h3>
+Easy one. Just have a look if you have any Steem Power. (If not, you can buy some or just start writing good content or even better start steemhunting!) You can find it under https://steemit.com/@YOURNAMEHERE/transfers. If you have delegated some of your Steem Power, don`t worry. Steemhunt will count the original available Steempower.
+After that join Steemhunt.com at wait for their announcement. (Following @steemhunt will make it easier) Steemhunt is going to add a menu where you can APPLY for HUNT Tokens. It is very important that you ACTIVELY APPLY for HUNT Tokens at Steemhunt, so the best is to go to Steemhunt.com and just join the service for now. You need to have an active Steemit account. HUNT Tokens are going to be airdropped 1:1 to your Steem Power, based on "First Come First Serve", but Steemhunt has prepared about 100M, so there is a plenty of HUNT Tokens for almost everybody.
+
+<p><strong>How much do I get?</strong></p>
+<ul>
+<li>exactly the same amount of your Steem Power you own is going to be airdropped.</li>
+</ul>
+<h3>**b.Delegate Steem Power**</h3>
+This is the only Airdrop you can already join right now.  For that you have to delegate your Steem Power to @steemhunt. 
+
+<p><a href="https://steemconnect.com/sign/delegateVestingShares?delegator=&delegatee=steemhunt&vesting_shares=100%20SP">100 SP</a> | <a href="https://steemconnect.com/sign/delegateVestingShares?delegator=&delegatee=steemhunt&vesting_shares=500%20SP">500 SP</a> | <a href="https://steemconnect.com/sign/delegateVestingShares?delegator=&delegatee=steemhunt&vesting_shares=1000%20SP">1000 SP</a> </p>
+<p>Or just manually change the URL inputting the wanted amount below. Change the “vesting_shares=1000” to “vesting_shares=WANTEDAMOUNT”.<br><a href="https://steemconnect.com/sign/delegateVestingShares?delegator=&amp;delegatee=steemhunt&amp;vesting_shares=1000%20SP">https://steemconnect.com/sign/delegateVestingShares?delegator=&amp;delegatee=steemhunt&amp;vesting_shares=1000%20SP</a></p>
+<p><strong>How much do I get?</strong><br>This is difficult to say. Steemhunt has reserved a daily amount of 90K for all delegated Steem Power (They have actually have over 330K Steempower in this moment) You will get a daily amount of HUNT Tokens based on your Ratio you have delegated. On the last report this was about 190 HUNT Tokens for 100SP delegated. My guess is this will drop quite fast, as more people will join the Steemhunt community and are going to delegate SP to them. But the sooner the better, as the drops are planned for about 500 days, until the SMT will be ready. (Don`t think it will take that long, as Ned has announced it already for 2018)</p>
+<h3>**c.Collect Referrals**</h3>
+An often seen marketing method to engage users and give them benefits. The referral system is still under development. In total 90K Tokens are reserved per day and will be distributed to people who refer Steemhunt to others. So sign up for steemhunt.com, wait until the development for the referral system is done and get your referral link and spread the goods news! Max cap is 5000 per Person. 
+
+<p><strong>How much do I get?</strong><br>Important here is to be fast, as the days past on more and more people will have referrals and the total assigned tokens of 90K pcs. will shrink per day. Calculation is based on 90,000 Tokens assigned by 1/n (referrals)<br>If there are 90,000 referrals collected, you will get 1 HUNT Token per day.</p>
+<h3>**d.Vote and resteem**</h3>
+In total 60K Tokens per day will be distributed for Steemhunters who are upvoting or resteeming hunters posts located under the **"TODAY"** tap. Important is, only the TODAY Tab will be counted. 40K are for upvoters and 20K for resteemers. Airdrop starts when the wallet interface is ready.
+
+<p><strong>How much do I get?</strong><br>If at that day 2000 people are resteeming hunters post, you will get 10 HUNT tokens. If 2000 people are upvoting hunters posts from the Today tab, you will get 20 HUNT tokens and so on. Important is also that these activities have to be done AT steemhunt.com and not steemit.com.</p>
+<h3>**e.Hunt products and review them**</h3>
+
+<p>If you have been succesfully upvoted from @steemhunt you will be 60,000TOKENS/n of the daily airdrop. In total steemhunt upvotes the post itself, a review comment (pros and cons comments) and moderator comments. Additionally the voting power from steemhunt is also important how much of the distributed Tokens you will get.</p>
+<p><strong>How much do I get?</strong><br>This is going to be really difficult to give an exact amount, as it depends on the voting power of steemhunt (which also depends on how your post is ranked, etc.). At the current moment the daily total VP pool is about 1080%, so if you get a voting with 20% this will be about 880 HUNT TOKENS. So this means writing good steemhunter contents is essential!</p>
+<p><strong><h3>4. Conclusion</h3></strong></p>
+<p>HUNT Tokens are going to create an own economy based on the Steemit.com community. All kind of rewards are going to be paid later on as HUNT Tokens and seeing producthunt.com growing even under that kind of circumstances (not reawarding the actual hunters), I strongly believe that Steemhunt can replace this, as soon as enough people are getting used to this kind of system. As there is no max supply for HUNT, there WILL be an inflation which has been vital as example also for the Steem community.</p>
+<p>Be informed that the SMT from steemit is also still under development and that therefore the steemhunt team has decided to start as Ethereum ERC20 Token and then swap them afterwords when the SMT network is ready.</p>
+<p>Thanks for reading and I would be pleased to deliver more great information when you follow @jayplayco </p>
+<p>Also, please follow @steemhunt account and join their chat channels for more information:</p>
+<p>Discord: <a href="https://discord.gg/mWXpgks">https://discord.gg/mWXpgks</a> (this is where the magic happens)<br>Telegram: <a href="https://t.me/joinchat/AzcqGxCV1FZ8lJHVgHOgGQ">https://t.me/joinchat/AzcqGxCV1FZ8lJHVgHOgGQ</a> </p>
+<p><strong>REMARK</strong><br>NOT Professional advice, this is all just my own opinion and experience. Consult professionals for any tax, accounting or legal related questions you have.</p>
+<p>Source<br><a href="https://steemit.com/steemit/@steemhunt/announcing-hunt-token-airdrops-for-steemians-smart-media-token-project">https://steemit.com/steemit/@steemhunt/announcing-hunt-token-airdrops-for-steemians-smart-media-token-project</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-05-29T16:42:51.000Z">2018-05-30</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2분 읽기 (대략 250 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/05/30/jayplayco.lg-rolly-keyboard-2-second-version-of-rollable-portable-keyboard-from-lg/">LG Rolly Keyboard 2 - Second version of rollable portable keyboard from LG</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="LG-Rolly-Keyboard-2"><a href="#LG-Rolly-Keyboard-2" class="headerlink" title="LG Rolly Keyboard 2"></a>LG Rolly Keyboard 2</h1><p>Second version of rollable portable keyboard from LG</p>
+<hr>
+<h2 id="Screenshots"><a href="#Screenshots" class="headerlink" title="Screenshots"></a>Screenshots</h2><center>![lg_rolly.jpg](https://i.imgur.com/41XOx2y.jpg)</center>
+
+
+
+<hr>
+<h2 id="Hunter’s-comment"><a href="#Hunter’s-comment" class="headerlink" title="Hunter’s comment"></a>Hunter’s comment</h2><p>If you are using a laptop, tablet or even a bigger smartphone, sometimes you need to write longer text on this products. A laptop should be not a problem, but as soon as we start to type longer text on touch screens my productivity is going down quite fast.</p>
+<p>Bluetooth keyboards are normaly very bulky, so I don`t carry them around but this Rolly Keyboard from LG can be rolled and it means that the product is really small and easy to carry around.</p>
+<p><img src="https://cdn.steemitimages.com/DQmT7a4TsJjKmNuRKbowejXiE9p6KhNcbGamrWZUKDByrds/image.png" alt=""></p>
+<p>Based on Bluetooth HD profie and a rolled out dimension of 10.78”x1.24”x1.20” it runs up to 3.5 month with one AAA battery.</p>
+<p>The first version of this product was quite expensive for a bluetooth keyboard and the official retail price is 100USD, but you can get it now also on amazon for about 45USD, which is OK.<br><img src="https://cdn.steemitimages.com/DQmSXanSntrbwW2puFR4oU3HTA4VXcpmoqnYZfHRmM8LRSa/image.png" alt=""></p>
+<hr>
+<h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a href="http://www.lg.com/us/mobile-accessories/lg-KBB-710-rolly-keyboard-2?ref=steemhunt">http://www.lg.com/us/mobile-accessories/lg-KBB-710-rolly-keyboard-2?ref=steemhunt</a></p>
+<hr>
+<h2 id="Contributors"><a href="#Contributors" class="headerlink" title="Contributors"></a>Contributors</h2><p>Hunter: @jayplayco</p>
+<hr>
+<center><br/>![Steemhunt.com](https://i.imgur.com/jB2axnW.png)<br/>
+This is posted on Steemhunt - A place where you can dig products and earn STEEM.
+[View on Steemhunt.com](https://steemhunt.com/@jayplayco/lg-rolly-keyboard-2-second-version-of-rollable-portable-keyboard-from-lg)
+</center>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-05-29T16:35:27.000Z">2018-05-30</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    1분 읽기 (대략 123 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/05/30/jayplayco.edc-multitool-knife-7-in-1-outdoor-emergency-multitoo/">EDC Multitool Knife - 7 in 1 Outdoor Emergency Multitoo</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="EDC-Multitool-Knife"><a href="#EDC-Multitool-Knife" class="headerlink" title="EDC Multitool Knife"></a>EDC Multitool Knife</h1><p>7 in 1 Outdoor Emergency Multitoo</p>
+<hr>
+<h2 id="Screenshots"><a href="#Screenshots" class="headerlink" title="Screenshots"></a>Screenshots</h2><center>![freehawk.jpg](https://i.imgur.com/6Qnkrwh.jpg)</center>
+
+
+
+<hr>
+<h2 id="Hunter’s-comment"><a href="#Hunter’s-comment" class="headerlink" title="Hunter’s comment"></a>Hunter’s comment</h2><p>In total 7 tools in a small Multitool knife.</p>
+<ul>
+<li>Knife</li>
+<li>Bottle Opener</li>
+<li>Slotted screwdriver (2sizes)</li>
+<li>Philips Screwdriver</li>
+<li>LED Flashlight</li>
+<li>Key Ring.</li>
+</ul>
+<p>Works great as a keychain, but is not TSA friendly as it carries a knife on it.</p>
+<p>Size : 58x30x15mm<br>Weight : about 70g</p>
+<hr>
+<h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a href="https://www.amazon.com/Freehawk-Tactical-Emergency-Survival-Multitool/dp/B013UI5DOG/?ref=steemhunt&amp;tag=steemhunt-20">https://www.amazon.com/Freehawk-Tactical-Emergency-Survival-Multitool/dp/B013UI5DOG/?ref=steemhunt&amp;tag=steemhunt-20</a></p>
+<hr>
+<h2 id="Contributors"><a href="#Contributors" class="headerlink" title="Contributors"></a>Contributors</h2><p>Hunter: @jayplayco</p>
+<hr>
+<center><br/>![Steemhunt.com](https://i.imgur.com/jB2axnW.png)<br/>
+This is posted on Steemhunt - A place where you can dig products and earn STEEM.
+[View on Steemhunt.com](https://steemhunt.com/@jayplayco/edc-multitool-knife-7-in-1-outdoor-emergency-multitoo)
+</center>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-05-29T14:28:33.000Z">2018-05-29</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2분 읽기 (대략 272 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/05/29/jayplayco.ezpz-mini-bowl-an-all-in-one-placemat-bowl-from-silicone/">Ezpz Mini Bowl - An all-in-one placemat + bowl from Silicone</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="Ezpz-Mini-Bowl"><a href="#Ezpz-Mini-Bowl" class="headerlink" title="Ezpz Mini Bowl"></a>Ezpz Mini Bowl</h1><p>An all-in-one placemat + bowl from Silicone</p>
+<hr>
+<h2 id="Screenshots"><a href="#Screenshots" class="headerlink" title="Screenshots"></a>Screenshots</h2><center>![ezpz-web-product-shots-Mini-Bowl-Blush-3__02106.1513114649.1280.800.jpg](https://i.imgur.com/fGV0hm8.jpg)</center>
+
+
+
+<hr>
+<h2 id="Hunter’s-comment"><a href="#Hunter’s-comment" class="headerlink" title="Hunter’s comment"></a>Hunter’s comment</h2><p>Ezpz has been introduced 2014 and started at that time with a successful Kickstarter.</p>
+<p>The main idea behind it is to combine the placemat with the bowl. Due to the suction the bowl is not anymore removeable for children and so mom and dad can give the food without having any concerns.</p>
+<p>Due to the fact that this product is out of pure high quality food grade silicone, you can dishwash it, get in into the oven or even boil it in water for disinfection if needed.</p>
+<center>https://cdn.steemitimages.com/DQmXuJSFRYdei1jwDLtzKsw19VKAeejn7FFZ3VrpV5qN391/image.png</center>
+<strong>Product Details + Benefits:</strong>
+- Dimensions: 8.5 x 7 x 1.25
+- Portion sized at 8oz
+- Perfect for purees, baby cereal, oatmeal and pasta
+- Mat fits most highchair trays, including 'space saver' models
+- Promotes self-feeding and develops fine motor skills
+- Compact and lightweight, so it is perfect for dinners out and travel
+- Packaged in a reusable bag that is ezpz to pop in your diaper bag
+- Dishwasher, microwave and oven safe (up to 350 degrees)
+- Easy to store
+- Built to last (silicone is bendable and flexible and doesn't fade, corrode or deteriorate)
+
+<hr>
+<h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a href="http://www.ezpzfun.com/mini-bowl-in-blush/?ref=steemhunt">http://www.ezpzfun.com/mini-bowl-in-blush/?ref=steemhunt</a></p>
+<hr>
+<h2 id="Contributors"><a href="#Contributors" class="headerlink" title="Contributors"></a>Contributors</h2><p>Hunter: @jayplayco</p>
+<hr>
+<center><br/>![Steemhunt.com](https://i.imgur.com/jB2axnW.png)<br/>
+This is posted on Steemhunt - A place where you can dig products and earn STEEM.
+[View on Steemhunt.com](https://steemhunt.com/@jayplayco/ezpz-mini-bowl-an-all-in-one-placemat-bowl-from-silicone)
+</center>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-05-29T07:50:24.000Z">2018-05-29</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/steem/">steem</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    5분 읽기 (대략 819 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/05/29/jayplayco.what-is-steemhunt-and-why-should-i-care/">What is Steemhunt and why should I care?</a>
+            
+        </h1>
+        <div class="content">
+            <html>
+<p>Hi this is @jayplayco and today I would like to write about a relatively new service called @steemhunt&nbsp;</p>
+<p>I am personally using Steemhunt since a few days but as a newbie the system itself is interesting, as it rewards the content directly without using any bot, which has to be paid directly. (Yes, I learned also that a lot of bots are available to push your content, but that should be something what I would like to write about later)</p>
+<h3><strong>1. What is Steemhunt?</strong></h3>
+<p>Steemhunt started about 5month ago as a competitor to producthunt (https://www.producthunt.com/). Producthunt started similar as steemhunt as a platform to encourage the users to find services and products which are mentionable. But now this platform has been transferred to a place where the "makers" can advertise their products.<br>
+<br>
+<em><strong>Elevator pitch : Steemhunt is a steemit based producthunt.</strong></em></p>
+<p>The main idea behind it is to give the revenue stream back to the hunters who are actually looking for great products to introduce using the steemit economy. You can already use this service under http://steemhunt.com<br>
+<br>
+The enthusiastic team behind this project are @tabris (for development) and @project7 (for design). It seems that they are working day and night to make this project successful. Especially due to the great mix of development and design the page steemhunt.com looks very elegant and the userinterface is very easy to use. Additionally each single post from steemhunt is also well curated and designed, so you can get the information very fast and the graphics are making it easy to understand.</p>
+<p>The project is still heavily under development and the final stage could take more than another year, but the Steemhunt function itself is already live for the last 2 month.<br>
+https://steemit.com/steemdev/@steemhunt/steemhunt-for-all-product-enthusiasts-on-steemit</p>
+<p>Steemhunt is planning to have in total 3 different catagories, which are Steemhunt, Reviewhunt and Ideahunt.</p>
+<p><img src="https://steemitimages.com/DQmYpmd8mG6uAeFCLtuZ3WxpYZsGDddPgA2KHxGN2f28zFQ/token-flow.jpg" width="2016" height="1700"/></p>
+<p>&nbsp;a. Steemhunt : Hunters can upload new products and get rewarded with HUNT tokens (this Hunt Tokens are going to be Smart Media Tokens, also called SMT's). The reward is going to be on a daily competition.</p>
+<p>b. Reviewhunt : So called makers (or companies) can call a bounty to activate hunters and ask them to write product reviews or app reviews, etc. The companies will have to reward them in HUNT tokens.</p>
+<p>c. Ideahunt : A mini crowdfunding site payable in HUNT Tokens. As soon as the HUNT Tokens get established people could buy new products or service with Ideahunt. This would be a steemit base "kickstarter" or "Indieogogo"</p>
+<h3><strong>2. What can we do now?</strong></h3>
+<p>As the platform Steemhunt is going to be a merger of 3 services (steemhunt, reviewhunt and ideahunt) you can currently use only the function steemhunt at the site. For this you are going to have a Steemit account and use this account to login on http://steemhunt.com . After that you are able to post a new product.&nbsp;<br>
+<br>
+As soon as you successfully uploaded a product it will be listed in the "Today" tab. Please be sure to upload within the posting guidelines. Otherwise your product review will be denied. Steemhunt has a very well functioning team with so called Moderators, so EVERY single post will get a review and will be accepted or denied. If it gets denied, they will leave you a reply why.<br>
+<br>
+Important rules for writing a product review are like below.</p>
+<blockquote>&nbsp;a. Only products, no business (No Apple or Microsoft)</blockquote>
+<blockquote>&nbsp;b. Unique IT hardware or services</blockquote>
+<blockquote>&nbsp;c. Only ENGLISH</blockquote>
+<blockquote>&nbsp;d. Product Link has to be valid website with the availability to BUY the product.&nbsp;</blockquote>
+<blockquote>&nbsp;e. No Plagiarism - no copy and paste from the site itself. Steemhunt is checking this.</blockquote>
+<blockquote>&nbsp;f. Only New and Cool products.</blockquote>
+<blockquote>&nbsp;g. Unique product description in your OWN words.</blockquote>
+<p><br></p>
+<p>In short, Steemhunt is checking if the products are really unique and innovative and if the description is also unique.</p>
+<p><img src="https://cdn.steemitimages.com/DQmdTSutcEyZTaVjQHbsHeD3qDHBgYQbs7XroxwwwRNMG7H/image.png" width="1380" height="898"/></p>
+<h3><strong>3. What happens after posting?</strong></h3>
+<p>Your post is going to compete with other posts for the day (Ends 00:00 KST Time) After that @Steemhunt is going to upvote each single post based on the popularity (upvotes). Additionally Steemhunt is also upvoting comments with so called "Pros and Cons". At the current day I have got about 0.60USD for one post and most of the amount has been coming from Steemhunt. Additionally I have got 0.28USD for a comment to my own article.</p>
+<blockquote><br>
+<img src="https://cdn.steemitimages.com/DQmcCqfWSVtsm5Czn2LjztN7o3XFdC98hdZkyeDK9duXSNx/image.png" width="836" height="421"/></blockquote>
+<p>You can find these on most Steemhunt posts as example. Below you can see that Steemhunt has voted for the comment with Pros and Cons.</p>
+<p><img src="https://cdn.steemitimages.com/DQmXngwciegan3Z3Q2iN8mMPcMgHBoNmQpxCANeQeauK9UL/image.png" width="477" height="387"/></p>
+<p><br></p>
+<p>I am sure that you will have fun while steemhunting, so don`t wait and write your first steemhunt post!<br>
+<br>
+<a href="https://steemhunt.com">STEEMHUNT</a></p>
+<p>[Source]<br>
+https://steemit.com/steemit/@steemhunt/announcing-hunt-token-airdrops-for-steemians-smart-media-token-project</p>
+<p>Many thanks to @ayogom who has been an inspiration for this post!<br>
+https://steemit.com/kr/@ayogom/5nrr12-1</p>
+<p><br></p>
+</html>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-05-29T06:54:06.000Z">2018-05-29</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/">기타</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    1분 읽기 (대략 191 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/05/29/jayplayco.grip-strip-sticks-sunglasses-smartphones-pens-keys-and-more/">Grip Strip - Sticks sunglasses, smartphones, pens, keys and more</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="Grip-Strip"><a href="#Grip-Strip" class="headerlink" title="Grip Strip"></a>Grip Strip</h1><p>Sticks sunglasses, smartphones, pens, keys and more</p>
+<hr>
+<h2 id="Screenshots"><a href="#Screenshots" class="headerlink" title="Screenshots"></a>Screenshots</h2><center>![grip-strip_5775.jpg](https://i.imgur.com/76VAUV8.jpg)</center>
+
+
+
+<hr>
+<h2 id="Hunter’s-comment"><a href="#Hunter’s-comment" class="headerlink" title="Hunter’s comment"></a>Hunter’s comment</h2><p>Using polymer compound silicone this material grips everything flat on the surface. Ideal for using it in the car and stick your phone, cards or keys on it.</p>
+<p>The stickiness can be recovered when flushing it in clean water.</p>
+<p>For a price of 6.99 UK Pounds it looks like a bit pricy gadget, but if you are not using high quality silicone on this kind of product, I have seen melting grip strips in the car.</p>
+<p>Guess for this price this grip strip will be alright.</p>
+<center>https://media.firebox.com/product/6599/s19901_column_grid_10/grip-strip-3-x-black_24044.jpg</center>
+<center>https://media.firebox.com/product/6599/s19904_column_grid_10/grip-strip-1-x-black-1-x-blue-1-x-red_24047.jpg</center>
+
+<hr>
+<h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a href="https://www.firebox.com/Grip-Strip/p6599?ref=steemhunt">https://www.firebox.com/Grip-Strip/p6599?ref=steemhunt</a></p>
+<hr>
+<h2 id="Contributors"><a href="#Contributors" class="headerlink" title="Contributors"></a>Contributors</h2><p>Hunter: @jayplayco</p>
+<hr>
+<center><br/>![Steemhunt.com](https://i.imgur.com/jB2axnW.png)<br/>
+This is posted on Steemhunt - A place where you can dig products and earn STEEM.
+[View on Steemhunt.com](https://steemhunt.com/@jayplayco/grip-strip-sticks-sunglasses-smartphones-pens-keys-and-more)
+</center>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    
+<div class="card card-transparent">
+    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+        <div class="pagination-previous">
+            <a class="is-flex-grow has-text-black-ter" href="/page/90/">이전</a>
+        </div>
+        <div class="pagination-next">
+            <a class="is-flex-grow has-text-black-ter" href="/page/92/">다음</a>
+        </div>
+        <ul class="pagination-list is-hidden-mobile">
+            
+            <li><a class="pagination-link has-text-black-ter" href="/">1</a></li>
+            
+            <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/page/90/">90</a></li>
+            
+            <li><a class="pagination-link is-current" href="/page/91/">91</a></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/page/92/">92</a></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/page/93/">93</a></li>
+            
+        </ul>
+    </nav>
+</div>
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered" style="flex-shrink: 1">
+                <div>
+                    
+                    <figure class="image is-128x128 has-mb-6">
+                        <img class="" src="/images/avatar.png" alt="Jayplacyo">
+                    </figure>
+                    
+                    <p class="is-size-4 is-block">
+                        Jayplacyo
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        Blockchain Blogger
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>South Korea</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        포스트
+                    </p>
+                    <a href="/archives">
+                        <p class="title has-text-weight-normal">
+                            925
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        카테고리
+                    </p>
+                    <a href="/categories">
+                        <p class="title has-text-weight-normal">
+                            19
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        태그
+                    </p>
+                    <a href="/tags">
+                        <p class="title has-text-weight-normal">
+                            16
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://steemit.com/@jayplayco" target="_blank" rel="noopener">
+                팔로우</a>
+        </div>
+        
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" rel="noopener"
+                title="Github" href="https://github.com/jayplayco">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" rel="noopener"
+                title="Twitter" href="https://twitter.com/jayplayco">
+                
+                <i class="fab fa-twitter"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            링크
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="https://steemit.com/@jayplayco" target="_blank" rel="noopener">
+                    <span class="level-left">
+                        <span class="level-item">Steem Blog</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">steemit.com</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                카테고리
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/coinnews/">
+            <span class="level-start">
+                <span class="level-item">coinnews</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">13</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/hexo/">
+            <span class="level-start">
+                <span class="level-item">hexo</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/steem/">
+            <span class="level-start">
+                <span class="level-item">steem</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">180</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/%EA%B0%80%EC%83%81%ED%99%94%ED%8F%90/">
+            <span class="level-start">
+                <span class="level-item">가상화폐</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">13</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/%EA%B0%9C%EB%B0%9C/">
+            <span class="level-start">
+                <span class="level-item">개발</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">31</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/%EA%B2%8C%EC%9E%84/">
+            <span class="level-start">
+                <span class="level-item">게임</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">62</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/%EA%B2%8C%EC%9E%84/%EC%8A%A4%ED%94%8C%EB%A6%B0%ED%84%B0%EB%9E%9C%EC%A6%88/">
+            <span class="level-start">
+                <span class="level-item">스플린터랜즈</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">55</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/%EA%B8%B0%ED%83%80/">
+            <span class="level-start">
+                <span class="level-item">기타</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">262</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/%EA%B8%B0%ED%83%80/%EA%B0%80%EC%83%81%ED%99%94%ED%8F%90/">
+            <span class="level-start">
+                <span class="level-item">가상화폐</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/%EA%B8%B0%ED%83%80/%EB%AF%B8%EB%B6%84%EB%A5%98/">
+            <span class="level-start">
+                <span class="level-item">미분류</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">255</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/%EA%B8%B0%ED%83%80/%ED%85%8C%EC%8A%A4%ED%8A%B8/">
+            <span class="level-start">
+                <span class="level-item">테스트</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">4</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/%EB%8B%88%ED%8A%B8%EB%A1%9C%EC%8A%A4/">
+            <span class="level-start">
+                <span class="level-item">니트로스</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">15</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/%EB%8B%88%ED%8A%B8%EB%A1%9C%EC%8A%A4/AAA/">
+            <span class="level-start">
+                <span class="level-item">AAA</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">5</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/%EB%8B%88%ED%8A%B8%EB%A1%9C%EC%8A%A4/SCT/">
+            <span class="level-start">
+                <span class="level-item">SCT</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">7</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/%EB%8B%88%ED%8A%B8%EB%A1%9C%EC%8A%A4/ZZAN/">
+            <span class="level-start">
+                <span class="level-item">ZZAN</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/%EB%A6%AC%EB%B7%B0/">
+            <span class="level-start">
+                <span class="level-item">리뷰</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">12</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">
+            <span class="level-start">
+                <span class="level-item">미분류</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">327</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/%EC%9D%B4%EB%B2%A4%ED%8A%B8/">
+            <span class="level-start">
+                <span class="level-item">이벤트</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">9</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/%EC%9D%B4%EB%B2%A4%ED%8A%B8/%EC%A7%80%EB%82%9C-%EC%9D%B4%EB%B2%A4%ED%8A%B8/">
+            <span class="level-start">
+                <span class="level-item">지난 이벤트</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">9</span>
+            </span>
+        </a></li></ul></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            태그 클라우드
+        </h3>
+        <a href="/tags/AAA/" style="font-size: 12.31px;">AAA</a> <a href="/tags/SCT/" style="font-size: 13.08px;">SCT</a> <a href="/tags/ZZAN/" style="font-size: 10.77px;">ZZAN</a> <a href="/tags/coinnews/" style="font-size: 13.85px;">coinnews</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/splinterlands/" style="font-size: 17.69px;">splinterlands</a> <a href="/tags/steem/" style="font-size: 19.23px;">steem</a> <a href="/tags/%EA%B0%80%EC%83%81%ED%99%94%ED%8F%90/" style="font-size: 16.15px;">가상화폐</a> <a href="/tags/%EA%B0%9C%EB%B0%9C/" style="font-size: 16.92px;">개발</a> <a href="/tags/%EA%B2%8C%EC%9E%84/" style="font-size: 18.46px;">게임</a> <a href="/tags/%EB%A6%AC%EB%B7%B0/" style="font-size: 15.38px;">리뷰</a> <a href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/" style="font-size: 20px;">미지정</a> <a href="/tags/%EC%8A%A4%EB%9E%9C/" style="font-size: 17.69px;">스랜</a> <a href="/tags/%EC%8A%A4%EB%AA%AC/" style="font-size: 17.69px;">스몬</a> <a href="/tags/%EC%9D%B4%EB%B2%A4%ED%8A%B8/" style="font-size: 14.62px;">이벤트</a> <a href="/tags/%ED%85%8C%EC%8A%A4%ED%8A%B8/" style="font-size: 11.54px;">테스트</a>
+    </div>
+</div>
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+            <div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            최근 글
+        </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-21T21:38:24.000Z">2020-07-22</time></div>
+                    <a href="/2020/07/22/jayplayco.94wf3-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 비트베리 지갑 해킹</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-20T21:40:45.000Z">2020-07-21</time></div>
+                    <a href="/2020/07/21/jayplayco.wb253-coinnews-btc/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 사토시의 BTC</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-20T03:00:09.000Z">2020-07-20</time></div>
+                    <a href="/2020/07/20/jayplayco.7r4cpj-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 흔한 소셜 미디어 사기들</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-19T22:03:24.000Z">2020-07-20</time></div>
+                    <a href="/2020/07/20/jayplayco.5txpuz-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 카이버 네트워크 신디케이트</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-19T21:47:57.000Z">2020-07-20</time></div>
+                    <a href="/2020/07/20/jayplayco.coinnews-ceo/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 바이낸스 CEO가 바라보는 좋은 토큰이란?</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            아카이브
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/07/">
+                <span class="level-start">
+                    <span class="level-item">7월 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">49</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/06/">
+                <span class="level-start">
+                    <span class="level-item">6월 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">152</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/05/">
+                <span class="level-start">
+                    <span class="level-item">5월 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">27</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/04/">
+                <span class="level-start">
+                    <span class="level-item">4월 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">46</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/03/">
+                <span class="level-start">
+                    <span class="level-item">3월 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">64</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/02/">
+                <span class="level-start">
+                    <span class="level-item">2월 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">53</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/01/">
+                <span class="level-start">
+                    <span class="level-item">1월 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">14</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/12/">
+                <span class="level-start">
+                    <span class="level-item">12월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">16</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/11/">
+                <span class="level-start">
+                    <span class="level-item">11월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">30</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/10/">
+                <span class="level-start">
+                    <span class="level-item">10월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">45</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/09/">
+                <span class="level-start">
+                    <span class="level-item">9월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">31</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/08/">
+                <span class="level-start">
+                    <span class="level-item">8월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">44</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/07/">
+                <span class="level-start">
+                    <span class="level-item">7월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">39</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">6월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">40</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">5월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">35</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/04/">
+                <span class="level-start">
+                    <span class="level-item">4월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">31</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/03/">
+                <span class="level-start">
+                    <span class="level-item">3월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">16</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/02/">
+                <span class="level-start">
+                    <span class="level-item">2월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">16</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/01/">
+                <span class="level-start">
+                    <span class="level-item">1월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">18</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/12/">
+                <span class="level-start">
+                    <span class="level-item">12월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">24</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/11/">
+                <span class="level-start">
+                    <span class="level-item">11월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">14</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/10/">
+                <span class="level-start">
+                    <span class="level-item">10월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">16</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/09/">
+                <span class="level-start">
+                    <span class="level-item">9월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">27</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/08/">
+                <span class="level-start">
+                    <span class="level-item">8월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">15</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/07/">
+                <span class="level-start">
+                    <span class="level-item">7월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">12</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/06/">
+                <span class="level-start">
+                    <span class="level-item">6월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">23</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/05/">
+                <span class="level-start">
+                    <span class="level-item">5월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">28</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                태그
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/AAA/">
+                        <span class="tag">AAA</span>
+                        <span class="tag is-grey">5</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/SCT/">
+                        <span class="tag">SCT</span>
+                        <span class="tag is-grey">7</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/ZZAN/">
+                        <span class="tag">ZZAN</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/coinnews/">
+                        <span class="tag">coinnews</span>
+                        <span class="tag is-grey">8</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/hexo/">
+                        <span class="tag">hexo</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/splinterlands/">
+                        <span class="tag">splinterlands</span>
+                        <span class="tag is-grey">55</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/steem/">
+                        <span class="tag">steem</span>
+                        <span class="tag is-grey">180</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%EA%B0%80%EC%83%81%ED%99%94%ED%8F%90/">
+                        <span class="tag">가상화폐</span>
+                        <span class="tag is-grey">16</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%EA%B0%9C%EB%B0%9C/">
+                        <span class="tag">개발</span>
+                        <span class="tag is-grey">31</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%EA%B2%8C%EC%9E%84/">
+                        <span class="tag">게임</span>
+                        <span class="tag is-grey">62</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%EB%A6%AC%EB%B7%B0/">
+                        <span class="tag">리뷰</span>
+                        <span class="tag is-grey">12</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/">
+                        <span class="tag">미지정</span>
+                        <span class="tag is-grey">587</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%EC%8A%A4%EB%9E%9C/">
+                        <span class="tag">스랜</span>
+                        <span class="tag is-grey">55</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%EC%8A%A4%EB%AA%AC/">
+                        <span class="tag">스몬</span>
+                        <span class="tag is-grey">55</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%EC%9D%B4%EB%B2%A4%ED%8A%B8/">
+                        <span class="tag">이벤트</span>
+                        <span class="tag is-grey">9</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%ED%85%8C%EC%8A%A4%ED%8A%B8/">
+                        <span class="tag">테스트</span>
+                        <span class="tag is-grey">4</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
+    
+        <div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            최근 글
+        </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-21T21:38:24.000Z">2020-07-22</time></div>
+                    <a href="/2020/07/22/jayplayco.94wf3-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 비트베리 지갑 해킹</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-20T21:40:45.000Z">2020-07-21</time></div>
+                    <a href="/2020/07/21/jayplayco.wb253-coinnews-btc/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 사토시의 BTC</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-20T03:00:09.000Z">2020-07-20</time></div>
+                    <a href="/2020/07/20/jayplayco.7r4cpj-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 흔한 소셜 미디어 사기들</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-19T22:03:24.000Z">2020-07-20</time></div>
+                    <a href="/2020/07/20/jayplayco.5txpuz-coinnews/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 카이버 네트워크 신디케이트</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-07-19T21:47:57.000Z">2020-07-20</time></div>
+                    <a href="/2020/07/20/jayplayco.coinnews-ceo/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[Coinnews] 바이낸스 CEO가 바라보는 좋은 토큰이란?</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%EB%AF%B8%EB%B6%84%EB%A5%98/">미분류</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            아카이브
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/07/">
+                <span class="level-start">
+                    <span class="level-item">7월 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">49</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/06/">
+                <span class="level-start">
+                    <span class="level-item">6월 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">152</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/05/">
+                <span class="level-start">
+                    <span class="level-item">5월 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">27</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/04/">
+                <span class="level-start">
+                    <span class="level-item">4월 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">46</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/03/">
+                <span class="level-start">
+                    <span class="level-item">3월 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">64</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/02/">
+                <span class="level-start">
+                    <span class="level-item">2월 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">53</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/01/">
+                <span class="level-start">
+                    <span class="level-item">1월 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">14</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/12/">
+                <span class="level-start">
+                    <span class="level-item">12월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">16</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/11/">
+                <span class="level-start">
+                    <span class="level-item">11월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">30</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/10/">
+                <span class="level-start">
+                    <span class="level-item">10월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">45</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/09/">
+                <span class="level-start">
+                    <span class="level-item">9월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">31</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/08/">
+                <span class="level-start">
+                    <span class="level-item">8월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">44</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/07/">
+                <span class="level-start">
+                    <span class="level-item">7월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">39</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">6월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">40</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">5월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">35</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/04/">
+                <span class="level-start">
+                    <span class="level-item">4월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">31</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/03/">
+                <span class="level-start">
+                    <span class="level-item">3월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">16</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/02/">
+                <span class="level-start">
+                    <span class="level-item">2월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">16</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/01/">
+                <span class="level-start">
+                    <span class="level-item">1월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">18</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/12/">
+                <span class="level-start">
+                    <span class="level-item">12월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">24</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/11/">
+                <span class="level-start">
+                    <span class="level-item">11월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">14</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/10/">
+                <span class="level-start">
+                    <span class="level-item">10월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">16</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/09/">
+                <span class="level-start">
+                    <span class="level-item">9월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">27</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/08/">
+                <span class="level-start">
+                    <span class="level-item">8월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">15</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/07/">
+                <span class="level-start">
+                    <span class="level-item">7월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">12</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/06/">
+                <span class="level-start">
+                    <span class="level-item">6월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">23</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/05/">
+                <span class="level-start">
+                    <span class="level-item">5월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">28</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                태그
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/AAA/">
+                        <span class="tag">AAA</span>
+                        <span class="tag is-grey">5</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/SCT/">
+                        <span class="tag">SCT</span>
+                        <span class="tag is-grey">7</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/ZZAN/">
+                        <span class="tag">ZZAN</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/coinnews/">
+                        <span class="tag">coinnews</span>
+                        <span class="tag is-grey">8</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/hexo/">
+                        <span class="tag">hexo</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/splinterlands/">
+                        <span class="tag">splinterlands</span>
+                        <span class="tag is-grey">55</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/steem/">
+                        <span class="tag">steem</span>
+                        <span class="tag is-grey">180</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%EA%B0%80%EC%83%81%ED%99%94%ED%8F%90/">
+                        <span class="tag">가상화폐</span>
+                        <span class="tag is-grey">16</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%EA%B0%9C%EB%B0%9C/">
+                        <span class="tag">개발</span>
+                        <span class="tag is-grey">31</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%EA%B2%8C%EC%9E%84/">
+                        <span class="tag">게임</span>
+                        <span class="tag is-grey">62</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%EB%A6%AC%EB%B7%B0/">
+                        <span class="tag">리뷰</span>
+                        <span class="tag is-grey">12</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%EB%AF%B8%EC%A7%80%EC%A0%95/">
+                        <span class="tag">미지정</span>
+                        <span class="tag is-grey">587</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%EC%8A%A4%EB%9E%9C/">
+                        <span class="tag">스랜</span>
+                        <span class="tag is-grey">55</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%EC%8A%A4%EB%AA%AC/">
+                        <span class="tag">스몬</span>
+                        <span class="tag is-grey">55</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%EC%9D%B4%EB%B2%A4%ED%8A%B8/">
+                        <span class="tag">이벤트</span>
+                        <span class="tag is-grey">9</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%ED%85%8C%EC%8A%A4%ED%8A%B8/">
+                        <span class="tag">테스트</span>
+                        <span class="tag is-grey">4</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="제플코 제이의 블록체인" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 Jayplayco&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("ko");</script>
+
+
+<script>
+var IcarusThemeSettings = {
+    site: {
+        url: 'http://jayplayco.github.io',
+        external_link: {"enable":true,"exclude":[]}
+    },
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'unfolded'
+        }
+    }
+};
+</script>
+
+<script data-ad-client="ca-pub-9412782798997990" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+
+
+<script src="/js/animation.js"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+<script src="/js/gallery.js" defer></script>
+
+
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+
+<a id="back-to-top" title="Kembali ke atas" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="입력 하세요..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '포스트',
+                PAGES: '페이지',
+                CATEGORIES: '카테고리',
+                TAGS: '태그',
+                UNTITLED: '(제목없음)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
